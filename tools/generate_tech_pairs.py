@@ -346,7 +346,7 @@ pairs = [
     }
 ]
 
-out_path = Path("/Users/jangtrinh/Products/design-os-vietnamese/evals/vietnamese-tech-writing/pairs.jsonl")
+out_path = Path(__file__).resolve().parent.parent / "evals" / "vietnamese-tech-writing" / "pairs.jsonl"
 out_path.parent.mkdir(parents=True, exist_ok=True)
 with out_path.open("w", encoding="utf-8") as f:
     for p in pairs:

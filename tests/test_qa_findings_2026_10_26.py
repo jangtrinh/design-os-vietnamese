@@ -41,16 +41,22 @@ class F02QuickStartBroken(unittest.TestCase):
         r = run(SHARED, FIX / "calque_readme_example.md", "--domain", "ux",
                 "--register", "ux-microcopy")
         self.assertNotIn("unrecognized arguments", r.stderr)
+        self.assertNotIn("Traceback", r.stderr)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("CAL001", r.stdout)
 
     def test_documented_i18n_parity_flags_accepted(self):
         r = run(ROOT / "shared/scripts/check_i18n_parity.py",
                 "--source", "skills/vn-design-system-ux/assets/en.sample.json",
                 "--target", "skills/vn-design-system-ux/assets/vi.sample.json", "--json")
         self.assertNotIn("unrecognized arguments", r.stderr)
+        self.assertNotIn("Traceback", r.stderr)
 
     def test_documented_output_flag_is_accepted(self):
         r = run(SHARED, FIX / "calque_readme_example.md", "--output", "/dev/null")
         self.assertNotIn("unrecognized arguments", r.stderr)
+        self.assertNotIn("Traceback", r.stderr)
+        self.assertEqual(r.returncode, 1)
 
     def test_no_personal_absolute_paths_in_docs(self):
         for text in (README, README_VI):

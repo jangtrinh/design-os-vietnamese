@@ -21,27 +21,27 @@
     <rect x="0" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
     <text x="14" y="28" fill="#10B981" font-size="10.5" font-weight="700">01 · UI/UX &amp; DESIGN TOKENS</text>
     <text x="14" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vn-design-system-ux</text>
-    <text x="14" y="74" fill="#9CA3AF" font-size="10.5">UX001–UX010 · i18n &amp; Font Gates</text>
+    <text x="14" y="74" fill="#9CA3AF" font-size="10.5">UX001–UX007 · i18n &amp; Font Gates</text>
 
     <rect x="228" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
     <text x="242" y="28" fill="#10B981" font-size="10.5" font-weight="700">02 · LANDING &amp; E-COMMERCE</text>
     <text x="242" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-landing-copy</text>
-    <text x="242" y="74" fill="#9CA3AF" font-size="10.5">LND001–LND007 · Luật 75/2025</text>
+    <text x="242" y="74" fill="#9CA3AF" font-size="10.5">LND001–LND004 · Luật 75/2025</text>
 
     <rect x="456" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#0EA5E9" stroke-width="1.5"/>
     <text x="470" y="28" fill="#38BDF8" font-size="10.5" font-weight="700">03 · TECH DOCS &amp; RUNBOOKS</text>
     <text x="470" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-tech-writing</text>
-    <text x="470" y="74" fill="#9CA3AF" font-size="10.5">TECH001–TECH006 · ADR &amp; API</text>
+    <text x="470" y="74" fill="#9CA3AF" font-size="10.5">ENG001–ENG008, PROD002–004 · ADR &amp; API</text>
 
     <rect x="684" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#0EA5E9" stroke-width="1.5"/>
     <text x="698" y="28" fill="#38BDF8" font-size="10.5" font-weight="700">04 · B2B &amp; NĐ 30/2020</text>
     <text x="698" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-business-comms</text>
-    <text x="698" y="74" fill="#9CA3AF" font-size="10.5">BIZ001–BIZ007 · NĐ 13/2023</text>
+    <text x="698" y="74" fill="#9CA3AF" font-size="10.5">ADMIN001, ZNS001–ZNS002, SALES001–004 · NĐ 13/2023</text>
 
     <rect x="912" y="0" width="216" height="98" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
     <text x="926" y="28" fill="#FBBF24" font-size="10.5" font-weight="700">05 · BANKING &amp; TT 99/2025</text>
     <text x="926" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-finance-copy</text>
-    <text x="926" y="74" fill="#9CA3AF" font-size="10.5">FIN001–FIN006 · Napas / VietQR</text>
+    <text x="926" y="74" fill="#9CA3AF" font-size="10.5">FIN001–FIN009 · Napas / VietQR</text>
   </g>
 
   <!-- Row 2: 7-Tier Pedagogy, Healthcare, Legal, Hospitality, HR -->

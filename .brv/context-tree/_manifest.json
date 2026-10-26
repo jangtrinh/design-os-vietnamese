@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "path": "features/qa-issue-2-hardening/_index.md",
+      "importance": 95,
+      "tokens": 320
+    },
+    {
+      "path": "reviews/qa-issue-2-hardening/_index.md",
+      "importance": 90,
+      "tokens": 260
+    }
+  ]
+}

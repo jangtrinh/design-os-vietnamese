@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (7426b966dd6ca0b1) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (2c214edf9a77a802) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -39,7 +39,8 @@ EXCLUDED_DIRS = frozenset({
 })
 
 SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-REF_DIR = SCRIPT_DIR.parent / "references"
+SKILL_DIR = SCRIPT_DIR.parent
+REF_DIR = SKILL_DIR / "references"
 
 DEFAULT_EXTENSIONS = (
     ".md", ".mdx", ".markdown", ".txt", ".json", ".html", ".htm",
@@ -227,6 +228,16 @@ class Blocklists:
         self.superlatives: List[tuple] = []
         self.registers: Dict[str, dict] = dict(DEFAULT_REGISTERS)
         self.missing: List[str] = []
+        for candidate_shared in (
+            SKILL_DIR / "references" if SKILL_DIR.name == "shared" else None,
+            SKILL_DIR.parent / "shared" / "references",
+            SKILL_DIR.parent.parent / "shared" / "references",
+        ):
+            if candidate_shared is not None and candidate_shared.is_dir():
+                if candidate_shared.resolve() != ref_dir.resolve():
+                    self._load_glossary(candidate_shared / "glossary.md")
+                    self._load_banned(candidate_shared / "banned-phrases.md")
+                break
         self._load_glossary(ref_dir / "glossary.md")
         self._load_banned(ref_dir / "banned-phrases.md")
         self._load_registers(ref_dir / "register-matrix.md")
@@ -520,6 +531,7 @@ RULE_DOCS: Dict[str, str] = {
     "PRO002": "pronoun does not match the declared register",
 }
 
+BASE_RULE_DOCS: Dict[str, str] = dict(RULE_DOCS)
 DOMAIN_MODULES: List = []
 DOCTYPES: Dict[str, str] = {}
 
@@ -537,10 +549,26 @@ class Context:
         self.is_markdown = is_markdown
 
 
+def _resolve_domain_skill_dir(domain: str) -> Optional[pathlib.Path]:
+    skill_slug = DOMAIN_SKILL_MAP.get(domain, domain)
+    candidates = (
+        SKILL_DIR if SKILL_DIR.name == skill_slug else None,
+        SKILL_DIR.parent / "skills" / skill_slug,
+        SKILL_DIR.parent / skill_slug,
+    )
+    for cand in candidates:
+        if cand is not None and cand.is_dir():
+            return cand
+    return None
+
+
 def load_domain_rules(directory: Optional[pathlib.Path] = None) -> List:
     import importlib.util
 
     directory = directory or SCRIPT_DIR
+    RULE_DOCS.clear()
+    RULE_DOCS.update(BASE_RULE_DOCS)
+    DOCTYPES.clear()
     modules = []
     for path in sorted(directory.glob("rules_*.py")):
         spec = importlib.util.spec_from_file_location(path.stem, path)
@@ -629,12 +657,13 @@ class Validator:
         for i, line in enumerate(masked, 1):
             raw = lines[i - 1]
 
-            # 1. Calque blocklist (longest span wins)
+            # 1. Calque blocklist (longest span wins, one finding per winning span)
             hits = [
                 (m.start(), m.end(), phrase, suggestion, source, declared)
                 for regex, phrase, suggestion, source, declared in self.calques
                 for m in regex.finditer(line)
             ]
+            winning_spans: Dict[Tuple[int, int], List[Tuple[str, str, str, Optional[str]]]] = {}
             for start, end, phrase, suggestion, source, declared in hits:
                 if any(
                     other_start <= start and end <= other_end
@@ -642,10 +671,30 @@ class Validator:
                     for other_start, other_end, *_ in hits
                 ):
                     continue
+                winning_spans.setdefault((start, end), []).append(
+                    (phrase, suggestion, source, declared)
+                )
+            for (start, end), group in sorted(winning_spans.items()):
                 matched = line[start:end]
-                severity = declared or (WARN if " " not in phrase else ERROR)
-                hint = f"use “{suggestion}”" if suggestion else ""
-                if source == "glossary.md":
+                severities = [
+                    d or (WARN if " " not in p else ERROR)
+                    for p, _s, _src, d in group
+                ]
+                severity = ERROR if ERROR in severities else WARN
+                merged_suggestions: List[str] = []
+                seen_lower: set = set()
+                has_glossary = False
+                for _p, sugg, src, _d in group:
+                    if src == "glossary.md":
+                        has_glossary = True
+                    for part in (x.strip() for x in sugg.split("/") if x.strip()):
+                        key = part.lower()
+                        if key not in seen_lower:
+                            seen_lower.add(key)
+                            merged_suggestions.append(part)
+                merged_str = " / ".join(merged_suggestions)
+                hint = f"use “{merged_str}”" if merged_str else ""
+                if has_glossary:
                     hint += " (glossary.md)" if hint else "see glossary.md"
                 emit("CAL001", severity, i, start + 1, matched, f"calque “{matched}”", hint)
 
@@ -974,11 +1023,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     refs_dir = pathlib.Path(args.refs) if args.refs else REF_DIR
     if args.domain:
-        skill_slug = DOMAIN_SKILL_MAP[args.domain]
-        candidate_skill_dir = SKILL_DIR.parent / "skills" / skill_slug
-        if not candidate_skill_dir.is_dir():
-            candidate_skill_dir = SKILL_DIR.parent / skill_slug
-        if candidate_skill_dir.is_dir():
+        candidate_skill_dir = _resolve_domain_skill_dir(args.domain)
+        if candidate_skill_dir is not None:
             load_domain_rules(candidate_skill_dir / "scripts")
             if not args.refs and (candidate_skill_dir / "references").is_dir():
                 refs_dir = candidate_skill_dir / "references"
@@ -1023,13 +1069,21 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         )
         return 2
 
+    target_files = files
     if args.output:
+        if len(files) > 1:
+            print("validate_copy.py: error: --output requires a single input file", file=sys.stderr)
+            return 2
         out_path = pathlib.Path(args.output)
+        if out_path.parent and not out_path.parent.exists():
+            out_path.parent.mkdir(parents=True, exist_ok=True)
         src_text = files[0].read_text(encoding="utf-8")
         out_text = unicodedata.normalize("NFC", src_text)
         if args.fix_tone:
             out_text = convert_tone_style(out_text, args.fix_tone)
         out_path.write_text(out_text, encoding="utf-8")
+        if (args.fix or args.fix_tone) and out_path.is_file():
+            target_files = [out_path]
     else:
         if args.fix:
             for path in files:
@@ -1043,7 +1097,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     validator = Validator(blocklists, args.register, args.doctype)
     findings: List[Finding] = []
-    for path in files:
+    for path in target_files:
         findings.extend(validator.check_file(path))
 
     errors = sum(1 for f in findings if f.severity == ERROR)

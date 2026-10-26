@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -78,6 +79,25 @@ def main() -> int:
         sf = ROOT / "skills" / slug / "SKILL.md"
         if not sf.is_file():
             issues.append(f"missing skill entrypoint: skills/{slug}/SKILL.md")
+
+    # Smoke-check --domain loading and sync_shared parity
+    r_dom = subprocess.run(
+        [sys.executable, str(ROOT / "shared/scripts/validate_copy.py"), "--domain", "ux", "--list-rules"],
+        capture_output=True,
+        text=True,
+        cwd=ROOT,
+    )
+    if r_dom.returncode != 0 or "Traceback" in r_dom.stderr or "UX001" not in r_dom.stdout:
+        issues.append(f"validate_copy.py --domain ux smoke check failed: {r_dom.stderr}")
+
+    r_sync = subprocess.run(
+        [sys.executable, str(ROOT / "tools/sync_shared.py"), "--check"],
+        capture_output=True,
+        text=True,
+        cwd=ROOT,
+    )
+    if r_sync.returncode != 0:
+        issues.append(f"sync_shared.py --check failed: {r_sync.stdout} {r_sync.stderr}")
 
     if issues:
         for item in issues:

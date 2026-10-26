@@ -22,12 +22,16 @@ This directory contains the cryptographically provenance-pinned **Universal Know
 ## Verification Commands
 
 ```bash
-PYTHONPATH=/Users/jangtrinh/Products/design-os-knowledge-builder/src \
-  python3 -m knowledge_builder.cli verify /Users/jangtrinh/Products/design-os-vietnamese/knowledge --claims
+# 1. Self-contained UKMC.v1 verifier (zero external dependencies)
+python3 tools/verify_ukmc.py
 
-PYTHONPATH=/Users/jangtrinh/Products/design-os-knowledge-builder/src \
-  python3 -m knowledge_builder.cli index --root /Users/jangtrinh/Products/design-os-vietnamese/knowledge
+# 2. Optional: verify/index/gate via external design-os-knowledge-builder checkout
+PYTHONPATH="${KNOWLEDGE_BUILDER_SRC:-../design-os-knowledge-builder}/src" \
+  python3 -m knowledge_builder.cli verify ./knowledge --claims
 
-PYTHONPATH=/Users/jangtrinh/Products/design-os-knowledge-builder/src \
-  python3 -m knowledge_builder.cli gate --root /Users/jangtrinh/Products/design-os-vietnamese/knowledge --run-id vn-design-os-261026
+PYTHONPATH="${KNOWLEDGE_BUILDER_SRC:-../design-os-knowledge-builder}/src" \
+  python3 -m knowledge_builder.cli index --root ./knowledge
+
+PYTHONPATH="${KNOWLEDGE_BUILDER_SRC:-../design-os-knowledge-builder}/src" \
+  python3 -m knowledge_builder.cli gate --root ./knowledge --run-id vn-design-os-261026
 ```

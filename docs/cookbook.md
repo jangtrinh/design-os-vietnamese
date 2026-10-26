@@ -7,7 +7,7 @@ Copy-paste prompt recipes for Claude Code, OpenAI Codex, Gemini CLI, and Google 
 ## 1. UI/UX Microcopy, Design Tokens & i18n (`vn-design-system-ux`)
 
 ```text
-"Audit our Vietnamese localization catalog (vi.json against en.json) using check_i18n_parity.py and validate_copy.py --domain ux --register ux-microcopy. Fix any decomposed NFD characters, ICU 'one' plural branches, and button labels exceeding 28 characters."
+"Audit our Vietnamese localization catalog (vi.json against en.json) using check_i18n_parity.py and validate_copy.py --domain ux --register ux-microcopy. Fix any decomposed NFD characters, ICU 'one' plural branches, and button labels exceeding 24 characters (hard cap 28)."
 ```
 
 ## 2. Landing Pages & Advertising Law 75/2025 (`vietnamese-landing-copy`)
