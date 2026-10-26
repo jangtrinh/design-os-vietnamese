@@ -50,8 +50,9 @@ def verify_knowledge(knowledge_root: pathlib.Path, run_id: str) -> int:
             continue
         item = json.loads(line)
         atoms.append(item)
-        if item.get("source_sha256"):
-            sources_seen.add(item["source_sha256"])
+        digest = item.get("source_sha256") or item.get("source_digest")
+        if digest:
+            sources_seen.add(digest)
 
     md_files = sorted(
         p for p in knowledge_root.glob("*.md")
@@ -90,7 +91,7 @@ def verify_knowledge(knowledge_root: pathlib.Path, run_id: str) -> int:
         anchors = EASE_SOURCE_RE.findall(body)
         if not anchors:
             failures.append(f"{md.name}: zero <!-- ease:source ... --> anchors in body")
-        for uri, expected_sha, _quote in anchors:
+        for uri, expected_sha, quote_text in anchors:
             total_anchors += 1
             src_file = (md.parent / uri).resolve()
             if not src_file.is_file():
@@ -99,12 +100,20 @@ def verify_knowledge(knowledge_root: pathlib.Path, run_id: str) -> int:
                 actual_sha = hashlib.sha256(src_file.read_bytes()).hexdigest()
                 if actual_sha != expected_sha:
                     failures.append(f"{md.name}: anchor sha256 mismatch for {uri}")
+                src_text = src_file.read_text(encoding="utf-8")
+                if quote_text not in src_text:
+                    failures.append(f"{md.name}: anchor quote not found in {uri}: {quote_text[:60]}...")
 
     state = json.loads(state_path.read_text(encoding="utf-8"))
     review = json.loads(review_path.read_text(encoding="utf-8"))
 
-    req_claims = set(state.get("required_claims", []))
-    covered_claims = {a.get("claim_id") for a in atoms if a.get("status") == "verified"}
+    req_claims = set(state.get("required_claim_ids") or state.get("required_claims") or [])
+    covered_claims = {
+        a.get("claim_id") or a.get("metadata", {}).get("claim") or a.get("id")
+        for a in atoms
+        if a.get("status") == "verified" or a.get("confidence") in ("HIGH", "VERIFIED")
+    }
+    covered_claims.discard(None)
     missing_claims = sorted(req_claims - covered_claims)
     if missing_claims:
         failures.append(f"unverified required claims: {missing_claims}")

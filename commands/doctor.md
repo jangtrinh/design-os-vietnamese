@@ -1,5 +1,5 @@
 ---
-description: Diagnose DESIGN:OS Vietnamese installation, plugin manifests, 10 skill packs, and local verification gates
+description: Diagnose DESIGN:OS Vietnamese installation, plugin manifests, 16 skill packs, and local verification gates
 allowed-tools: Bash, Read, Glob
 ---
 
@@ -24,6 +24,6 @@ Run a read-only diagnostic check of the `design-os-vietnamese` installation and 
    - Cross-agent `.agents`: `~/.agents/skills/vn-design-system-ux/SKILL.md`
 4. **Report a concise health table** covering:
    - Manifest integrity (`.claude-plugin`, `.codex-plugin`, `.agents/plugins`, `.factory-plugin`)
-   - All 10 production skills (`skills/*/SKILL.md`)
+   - All 16 production skills (`skills/*/SKILL.md`)
    - Trust & privacy governance (`PRIVACY.md`, `SECURITY.md`, `LICENSE`)
    - Deterministic linter readiness (`python3 shared/scripts/validate_copy.py --list-rules`)

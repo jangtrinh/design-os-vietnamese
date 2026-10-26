@@ -53,6 +53,12 @@ EXPECTED_SKILLS = (
     "vietnamese-legal-contracts",
     "vietnamese-hospitality-travel",
     "vietnamese-hr-recruitment",
+    "vietnamese-real-estate-construction",
+    "vietnamese-ecommerce-retail",
+    "vietnamese-government-public-service",
+    "vietnamese-insurance-insurtech",
+    "vietnamese-cybersecurity-infosec",
+    "vietnamese-media-journalism-pr",
 )
 
 
@@ -104,7 +110,7 @@ def main() -> int:
             print(f"FAIL: {item}", file=sys.stderr)
         return 1
 
-    print("ok: design-os-vietnamese self-check passed (10 skills, 12 UKMC.v1 modules)")
+    print("ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)")
     return 0
 
 

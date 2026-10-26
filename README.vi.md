@@ -1,15 +1,15 @@
-# DESIGN:OS Vietnamese (`vi-VN`) — Phiên bản v4.0 Đa Ngành Nghề
+# DESIGN:OS Vietnamese (`vi-VN`) — Phiên bản v5.0 Đa Ngành Nghề (16 Kỹ Năng)
 
-> **Hệ sinh thái Kỹ năng Ngôn ngữ, Hệ thống Thiết kế Giao diện (Design System), Copywriting Đa Ngành, Sư phạm 7 Bậc học (Mầm non → Tiến sĩ) & Kiểm định Pháp lý Tự động cho AI Agent**
-> Xây dựng độc lập trên nền tảng **DESIGN:OS** và chuẩn tri thức **Universal Knowledge Master Contract (`UKMC.v1`)**.
+> **Hệ sinh thái 16 Kỹ năng Ngôn ngữ, Hệ thống Thiết kế Giao diện (Design System), Copywriting Đa Ngành, Sư phạm 7 Bậc học (Mầm non → Tiến sĩ) & Kiểm định Pháp lý Tự động cho AI Agent**
+> Xây dựng độc lập trên nền tảng **DESIGN:OS** và chuẩn tri thức **Universal Knowledge Master Contract (`UKMC.v1`)** với 16 kỹ năng chuyên sâu, 31 thanh điệu đối tượng (`registers`), 126 quy tắc kiểm định tĩnh, 489 cặp kiểm thử chuẩn (`golden pairs`) và 18 mô-đun tri thức xác thực mã hóa SHA-256.
 
 [English Documentation (`README.md`)](README.md) · [Trang chủ GitHub Pages](https://jangtrinh.github.io/design-os-vietnamese/) · [Cookbook (`docs/cookbook.md`)](docs/cookbook.md) · [`llms.txt`](llms.txt)
 
-![DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
+![DESIGN:OS Vietnamese v5.0 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
 
 ---
 
-## Kiến trúc 10 Kỹ năng Chuyên sâu (`skills/`)
+## Kiến trúc 16 Kỹ năng Chuyên sâu (`skills/`)
 
 1. **[`vn-design-system-ux`](skills/vn-design-system-ux/SKILL.md)**: Design Tokens tiếng Việt, tỉ lệ `line-height` chống cắt dấu tầng (`Ấ, Ệ, Ữ, Ợ`), giới hạn ký tự UI (Button <= 24 [tối đa 28], Tab <= 18, Badge <= 16, Toast <= 90), kiểm định `en.json` ↔ `vi.json`, gắn kết từ ghép cuối câu bằng `U+00A0` (`UX001`–`UX007`).
 2. **[`vietnamese-landing-copy`](skills/vietnamese-landing-copy/SKILL.md)**: Copywriting trang đích SaaS, Thương mại điện tử, Bất động sản, Giáo dục; tuân thủ Luật Quảng cáo sửa đổi 2025 (`Luật số 75/2025/QH15`) và Nghị định 98/2020/NĐ-CP (`LND001`–`LND004`).
@@ -28,6 +28,12 @@
 8. **[`vietnamese-legal-contracts`](skills/vietnamese-legal-contracts/SKILL.md)**: Soạn thảo Hợp đồng Dân sự (**BLDS 2015**), Hợp đồng Thương mại (**Luật Thương mại 2005** — trần phạt vi phạm 8% theo Điều 301), Thỏa thuận bảo mật NDA, Điều khoản dịch vụ ToS (**Luật Bảo vệ quyền lợi người tiêu dùng 2023**) (`LEG001`–`LEG007`).
 9. **[`vietnamese-hospitality-travel`](skills/vietnamese-hospitality-travel/SKILL.md)**: Khách sạn – Resort 5 sao (**Luật Du lịch 2017** Điều 50), minh bạch giá `++` (5% phí phục vụ + 8%/10% thuế GTGT), Hàng không (**Thông tư 14/2015 & 19/2023/TT-BGTVT**), Lữ hành & Ẩm thực cao cấp (`HOS001`–`HOS006`).
 10. **[`vietnamese-hr-recruitment`](skills/vietnamese-hr-recruitment/SKILL.md)**: Tuyển dụng nhân sự (JD không phân biệt đối xử theo **Điều 8 Bộ luật Lao động 2019**), Thư mời nhận việc, Hợp đồng lao động (2 loại theo **Điều 20 BLLĐ 2019**), Thử việc (**Điều 25, 26 BLLĐ 2019** — lương >= 85%) và BHXH (**Luật BHXH 41/2024/QH15**) (`HR001`–`HR006`).
+11. **[`vietnamese-real-estate-construction`](skills/vietnamese-real-estate-construction/SKILL.md)**: Bất động sản & Xây dựng (**Luật Kinh doanh BĐS 2023** — trần đặt cọc <= 5% Điều 23, tiến độ thanh toán BĐS hình thành trong tương lai <= 30%/70%/95% Điều 25; **Luật Đất đai 2024** — tên chuẩn Giấy chứng nhận & pháp lý condotel/officetel; **Luật Nhà ở 2023** — tách bạch *diện tích thông thủy* vs *tim tường* & 2% kinh phí bảo trì; Hồ sơ mời thầu BOQ **Nghị định 37/2015/NĐ-CP**) (`REA001`–`REA006`).
+12. **[`vietnamese-ecommerce-retail`](skills/vietnamese-ecommerce-retail/SKILL.md)**: Thương mại điện tử & Bán lẻ Đa kênh (**Nghị định 52/2013 & 85/2021/NĐ-CP** — phân biệt *Đã thông báo BCT* vs *Đã đăng ký BCT*; **Nghị định 81/2018 & 128/2024/NĐ-CP** — trần khuyến mại 50%; **Luật Bảo vệ quyền lợi người tiêu dùng 2023** — quyền đổi trả/đồng kiểm COD; Nhãn hàng hóa **Nghị định 43/2017 & 111/2021/NĐ-CP**) (`ECOM001`–`ECOM006`).
+13. **[`vietnamese-government-public-service`](skills/vietnamese-government-public-service/SKILL.md)**: Dịch vụ công Trực tuyến, Hành chính công & VNeID (**Nghị định 42/2022/NĐ-CP** — 2 mức *DVC trực tuyến toàn trình* và *một phần*; **Luật Căn cước 2023** — danh xưng chuẩn *Thẻ căn cước* & hết hiệu lực CMND 9 số; **Nghị định 69/2024/NĐ-CP** — *VNeID Mức độ 1 / Mức độ 2*; **Luật Cư trú 2020** — nghiêm cấm yêu cầu nộp *Sổ hộ khẩu giấy*) (`GOV001`–`GOV006`).
+14. **[`vietnamese-insurance-insurtech`](skills/vietnamese-insurance-insurtech/SKILL.md)**: Bảo hiểm Nhân thọ, Phi nhân thọ, Bancassurance & InsurTech (**Luật Kinh doanh bảo hiểm 2022** & **Thông tư 67/2023/TT-BTC** — cấm đánh tráo bảo hiểm liên kết đầu tư thành tiết kiệm ngân hàng cam kết lãi suất, thời gian cân nhắc 21 ngày Điều 35, giải thích rõ điều khoản loại trừ Điều 19, thời hạn bồi thường 15 ngày Điều 31) (`INS001`–`INS006`).
+15. **[`vietnamese-cybersecurity-infosec`](skills/vietnamese-cybersecurity-infosec/SKILL.md)**: An toàn thông tin, An ninh mạng (SOC/VNCERT) & Ứng cứu sự cố dữ liệu cá nhân (**Nghị định 13/2023/NĐ-CP** Điều 23 — thông báo vi phạm dữ liệu cá nhân <= 72 giờ gửi Cục A05 Bộ Công an; **Nghị định 85/2016 & Thông tư 12/2022/TT-BTTTT** — *An toàn hệ thống thông tin Cấp độ 1–5*; chuẩn thuật ngữ CVE/Pentest) (`SEC001`–`SEC006`).
+16. **[`vietnamese-media-journalism-pr`](skills/vietnamese-media-journalism-pr/SKILL.md)**: Báo chí, Truyền thông, Thông cáo báo chí & Xử lý khủng hoảng PR (**Luật Báo chí 2016** & **Nghị định 147/2024/NĐ-CP** — phân biệt Cơ quan báo chí vs Trang TTĐT tổng hợp ICP, chuẩn cải chính xin lỗi Điều 42, nguyên tắc suy đoán vô tội *nghi phạm / bị can / bị cáo* Điều 9, bảo vệ trẻ em < 16 tuổi theo **Luật Trẻ em 2016**) (`MEDJ001`–`MEDJ006`).
 
 ---
 
@@ -37,10 +43,10 @@
 # Kiểm định văn bản tiếng Việt với bộ quy tắc chuyên ngành
 python3 shared/scripts/validate_copy.py path/to/file.md --domain edu --register edu-postgrad
 
-# Kiểm định tính toàn vẹn tri thức UKMC.v1 (12 module, 53 neo bằng chứng SHA-256)
+# Kiểm định tính toàn vẹn tri thức UKMC.v1 (18 module, 65+ neo bằng chứng SHA-256)
 python3 tools/verify_ukmc.py
 
-# Chạy toàn bộ тест tự động (Unit Tests + 310+ cặp Golden Evals + Skill Spec + UKMC Gate)
+# Chạy toàn bộ kiểm thử tự động (Unit Tests + 489 cặp Golden Evals + Skill Spec + UKMC Gate)
 python3 -m unittest discover -s tests -v
 ```
 

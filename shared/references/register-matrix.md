@@ -39,6 +39,13 @@ This file is the canonical source of truth. `validate_copy.py` parses the `<!-- 
 | `legal-contract` | | `bạn`, `mình`, `cả nhà`, `em`, `con`, `cậu` | Civil/commercial/labor contracts, Terms of Service, PDPD Privacy Policies, DPAs (third-person `Bên A`, `Bên B`, `Khách hàng`, `Người lao động`) |
 | `hospitality-luxury` | `quý khách` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | 4–5 star hotels, resorts, airlines, cruise lines, fine dining F&B, concierge communications |
 | `hr-candidate` | `anh/chị` | `mày`, `cậu`, `con`, `cả nhà` | Job descriptions (JD), offer letters (`thư mời nhận việc`), interview invitations, formal HR candidate communications |
+| `realestate-luxury` | `quý khách` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | High-end residential/commercial real estate brochures, condo/villa sales contracts (`Luật KDBĐS 2023`, `Luật Nhà ở 2023`), handover notices |
+| `construction-b2b` | | `bạn`, `mình`, `cả nhà`, `em`, `con`, `cậu`, `mày` | Construction bidding documents (`hồ sơ mời thầu`), BOQ tables, EPC/supervision engineering specs (`Nghị định 37/2015/NĐ-CP`) |
+| `ecommerce-shopper` | `bạn` | `quý vị`, `mày`, `cậu` | E-commerce product detail pages (PDP), cart/checkout, COD/return policies (`Nghị định 85/2021/NĐ-CP`, `Luật BVQLNTD 2023`), logistics tracking |
+| `public-citizen` | `ông/bà` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Online public service portals (`dichvucong.gov.vn`, `Nghị định 42/2022/NĐ-CP`), VNeID identity guides (`Nghị định 69/2024/NĐ-CP`), citizen administrative notices |
+| `insurance-policyholder` | `quý khách` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Life/non-life insurance policy schedules, benefit illustrations (`Thông tư 67/2023/TT-BTC`), claim notices (`Luật KDBH 2022`) |
+| `infosec-advisory` | | `mình`, `cả nhà`, `cậu`, `mày`, `em`, `con` | Cybersecurity advisories, SOC/VNCERT incident reports, pentest reports, PDPD 72-hour breach disclosures (`Nghị định 13/2023/NĐ-CP`, `Nghị định 85/2016/NĐ-CP`) |
+| `crisis-comms` | `quý vị` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Crisis holding statements, formal press corrections/apologies (`Điều 42 Luật Báo chí 2016`), public safety announcements |
 
 ---
 

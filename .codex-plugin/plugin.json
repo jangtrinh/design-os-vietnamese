@@ -1,7 +1,7 @@
 {
   "name": "design-os-vietnamese",
   "description": "Sovereign Vietnamese (vi-VN) language, typography, 7-tier pedagogy, and multi-industry statutory compliance suite for AI coding agents.",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "author": {
     "name": "Jang Trinh",
     "url": "https://github.com/jangtrinh"
@@ -22,7 +22,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "DESIGN:OS Vietnamese Suite",
-    "shortDescription": "10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, and 12 UKMC.v1 verified modules for Vietnamese (vi-VN).",
+    "shortDescription": "16 production skills, 31 audience registers, 126 deterministic AST/regex rules, and 18 UKMC.v1 verified modules for Vietnamese (vi-VN).",
     "longDescription": "Sovereign Vietnamese language, typography, UX design system, 7-tier pedagogy (Preschool to Doctoral & GS/PGS), and multi-industry statutory compliance suite for Claude Code, OpenAI Codex, Gemini CLI, and Google Antigravity.",
     "developerName": "DESIGN:OS",
     "category": "Developer Tools",

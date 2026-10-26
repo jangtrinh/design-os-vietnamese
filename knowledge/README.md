@@ -1,8 +1,8 @@
-# DESIGN:OS Vietnamese — UKMC.v1 Verified Knowledge Base (12 Modules)
+# DESIGN:OS Vietnamese — UKMC.v1 Verified Knowledge Base (18 Modules)
 
 This directory contains the cryptographically provenance-pinned **Universal Knowledge Master Contract (UKMC.v1)** modules powering **DESIGN:OS Vietnamese**, verified and gated by `design-os-knowledge-builder`.
 
-## Modules (12 Verified Modules)
+## Modules (18 Verified Modules)
 
 | ID | File | Domain | Trust Tier |
 |---|---|---|---|
@@ -18,6 +18,12 @@ This directory contains the cryptographically provenance-pinned **Universal Know
 | `legal-contracts-civil-commercial` | `legal-contracts-civil-commercial.md` | `vietnamese-legal-and-contracts` | `verified` |
 | `hospitality-aviation-tourism` | `hospitality-aviation-tourism.md` | `vietnamese-hospitality-and-travel` | `verified` |
 | `hr-labor-code-and-bhxh` | `hr-labor-code-and-bhxh.md` | `vietnamese-hr-and-recruitment` | `verified` |
+| `real-estate-and-construction-law` | `real-estate-and-construction-law.md` | `vietnamese-real-estate-and-construction` | `verified` |
+| `ecommerce-retail-and-consumer-law` | `ecommerce-retail-and-consumer-law.md` | `vietnamese-ecommerce-and-retail` | `verified` |
+| `egovernment-dvc-and-vneid` | `egovernment-dvc-and-vneid.md` | `vietnamese-government-and-public-service` | `verified` |
+| `insurance-law-and-insurtech` | `insurance-law-and-insurtech.md` | `vietnamese-insurance-and-insurtech` | `verified` |
+| `cybersecurity-attt-and-pdpd` | `cybersecurity-attt-and-pdpd.md` | `vietnamese-cybersecurity-and-infosec` | `verified` |
+| `media-journalism-and-crisis-pr` | `media-journalism-and-crisis-pr.md` | `vietnamese-media-journalism-and-pr` | `verified` |
 
 ## Verification Commands
 

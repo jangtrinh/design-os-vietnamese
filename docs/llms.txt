@@ -1,6 +1,6 @@
 # DESIGN:OS Vietnamese (`design-os-vietnamese`)
 
-> Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Preschool to Doctoral & GS/PGS), and multi-industry statutory compliance suite for AI coding agents. 10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, and 12 UKMC.v1 cryptographically verified modules.
+> Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Preschool to Doctoral & GS/PGS), and multi-industry statutory compliance suite for AI coding agents. 16 production skills, 31 audience registers, 126 deterministic AST/regex rules, 489 golden evaluation pairs, and 18 UKMC.v1 cryptographically verified modules.
 
 ## Quick Facts
 
@@ -9,9 +9,9 @@
 - **License**: PolyForm Shield License 1.0.0
 - **Runtime**: Python 3.9+ standard library (`zero external dependencies`)
 - **Telemetry**: Zero tracking, 100% local execution (`PRIVACY.md`)
-- **Knowledge Contract**: `UKMC.v1` (`12 verified modules`, `53 SHA-256 anchors`, `STOP_SUFFICIENT`)
+- **Knowledge Contract**: `UKMC.v1` (`18 verified modules`, `66 SHA-256 anchors`, `STOP_SUFFICIENT`)
 
-## 10 Production Skills (`skills/`)
+## 16 Production Skills (`skills/`)
 
 - [vn-design-system-ux](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vn-design-system-ux/SKILL.md): Vietnamese design tokens, stacked-diacritic line-height gates, UI character caps, `en.json` <-> `vi.json` parity, and `U+00A0` compound-word binding (`UX001`–`UX007`).
 - [vietnamese-landing-copy](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-landing-copy/SKILL.md): Conversion copywriting for SaaS, E-Commerce, Real Estate, and EdTech with Advertising Law 75/2025/QH15 compliance (`LND001`–`LND004`).
@@ -23,6 +23,12 @@
 - [vietnamese-legal-contracts](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-legal-contracts/SKILL.md): Civil, commercial, and labor contracts under Civil Code 2015, Commercial Law 2005 (8% penalty cap), and Consumer Protection Law 2023 (`LEG001`–`LEG007`).
 - [vietnamese-hospitality-travel](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-hospitality-travel/SKILL.md): 5-star hotel/resort booking copy, transparent `++` pricing, aviation delay rights (TT 19/2023/TT-BGTVT), and culinary menus (`HOS001`–`HOS006`).
 - [vietnamese-hr-recruitment](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-hr-recruitment/SKILL.md): Non-discriminatory JDs, offer letters, probation rules (>=85% wage), and BHXH 2024 compliance under Labor Code 2019 (`HR001`–`HR006`).
+- [vietnamese-real-estate-construction](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-real-estate-construction/SKILL.md): Off-plan deposit (<=5%) and installment (30%/70%/95%) rules under Real Estate Business Law 2023, Land Law 2024 titles, Housing Law 2023 (`diện tích thông thủy` & 2% maintenance fund), and Construction BOQ (`REA001`–`REA006`).
+- [vietnamese-ecommerce-retail](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-ecommerce-retail/SKILL.md): E-commerce platform/merchant badges (`Đã thông báo / Đã đăng ký Bộ Công Thương` Decrees 52/2013 & 85/2021), <=50% promotion cap (Decree 128/2024), Consumer Protection Law 2023 return/COD rights, and product labeling (`ECOM001`–`ECOM006`).
+- [vietnamese-government-public-service](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-government-public-service/SKILL.md): National Public Service Portal DVC guides (`Toàn trình / Một phần` Decree 42/2022), `Thẻ căn cước` (Law 26/2023/QH15), `VNeID Mức độ 1 / Mức độ 2` (Decree 69/2024), and paper `Sổ hộ khẩu` abolition (`GOV001`–`GOV006`).
+- [vietnamese-insurance-insurtech](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-insurance-insurtech/SKILL.md): Life, health, and bancassurance compliance under Insurance Business Law 2022 & Circular 67/2023/TT-BTC (21-day free-look period, exclusion disclosures, 15-day payout, anti-coercion) (`INS001`–`INS006`).
+- [vietnamese-cybersecurity-infosec](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-cybersecurity-infosec/SKILL.md): <=72-hour Personal Data Breach notification to A05 Ministry of Public Security (Decree 13/2023/NĐ-CP Art. 23), `ATTT Cấp độ 1–5` (Decree 85/2016 & TT 12/2022), and CVE security advisories (`SEC001`–`SEC006`).
+- [vietnamese-media-journalism-pr](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-media-journalism-pr/SKILL.md): Press releases, Press Law 2016 & Decree 147/2024/NĐ-CP (Press vs ICP), Article 42 press corrections, presumption of innocence (`nghi phạm / bị can / bị cáo`), <16 child privacy, and crisis PR (`MEDJ001`–`MEDJ006`).
 
 ## Deterministic CLI Entrypoints
 

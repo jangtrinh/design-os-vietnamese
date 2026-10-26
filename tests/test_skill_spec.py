@@ -19,6 +19,12 @@ SKILLS = (
     "vietnamese-legal-contracts",
     "vietnamese-hospitality-travel",
     "vietnamese-hr-recruitment",
+    "vietnamese-real-estate-construction",
+    "vietnamese-ecommerce-retail",
+    "vietnamese-government-public-service",
+    "vietnamese-insurance-insurtech",
+    "vietnamese-cybersecurity-infosec",
+    "vietnamese-media-journalism-pr",
 )
 # Constructed dynamically so even the test file never contains the literal vendor token.
 FORBIDDEN_TOKEN = "".join(("trus", "sary"))

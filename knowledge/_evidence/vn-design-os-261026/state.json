@@ -20,9 +20,15 @@
     "claim-healthcare-med",
     "claim-legal-contracts",
     "claim-hospitality-travel",
-    "claim-hr-labor"
+    "claim-hr-labor",
+    "claim-realestate-law",
+    "claim-ecommerce-law",
+    "claim-gov-dvc",
+    "claim-insurance-law",
+    "claim-cybersecurity-law",
+    "claim-media-law"
   ],
-  "minimum_independent_sources": 5,
+  "minimum_independent_sources": 6,
   "last_weighted_delta": 0.0,
   "researcher_runtime": "gemini-3.8-flash-worker",
   "is_target_version_matched": true,

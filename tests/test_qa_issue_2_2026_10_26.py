@@ -26,6 +26,12 @@ DOMAIN_EXPECTED_RULE_PREFIX = {
     "legal": "LEG001",
     "hospitality": "HOS001",
     "hr": "HR001",
+    "realestate": "REA001",
+    "ecommerce": "ECOM001",
+    "gov": "GOV001",
+    "insurance": "INS001",
+    "cybersecurity": "SEC001",
+    "media": "MEDJ001",
 }
 
 
@@ -43,7 +49,7 @@ class Issue2DomainCrashRegressionTests(unittest.TestCase):
 
     def test_shared_and_all_10_skill_copies_accept_domain_on_clean_and_violation_files(self) -> None:
         scripts = [SHARED] + sorted(ROOT.glob("skills/*/scripts/validate_copy.py"))
-        self.assertEqual(len(scripts), 11)
+        self.assertEqual(len(scripts), 17)
 
         with tempfile.NamedTemporaryFile("w", suffix=".md", encoding="utf-8", delete=False) as tf:
             tf.write("Xin chào bạn, hệ thống đã lưu cấu hình thành công.\n")
@@ -102,7 +108,7 @@ class Issue2DomainCrashRegressionTests(unittest.TestCase):
                     all_rules.add(line.split()[0])
 
         rule_re = re.compile(
-            r"\b(?:NFC|ENC|CAL|SYN|LAW|DIA|TONE|NUM|DATE|PHONE|ICU|PRO|UX|LND|TECH|BIZ|ENG|PROD|ADMIN|MKT|SALES|SPAM|ZNS|FIN|EDU|MED|LEG|HOS|HR)\d{3}\b"
+            r"\b(?:NFC|ENC|CAL|SYN|LAW|DIA|TONE|NUM|DATE|PHONE|ICU|PRO|UX|LND|TECH|BIZ|ENG|PROD|ADMIN|MKT|SALES|SPAM|ZNS|FIN|EDU|MED|LEG|HOS|HR|REA|ECOM|GOV|INS|SEC|MEDJ)\d{3}\b"
         )
         for rel in ("README.md", "README.vi.md", "docs/index.html", "llms.txt", "docs/llms.txt"):
             text = (ROOT / rel).read_text(encoding="utf-8")

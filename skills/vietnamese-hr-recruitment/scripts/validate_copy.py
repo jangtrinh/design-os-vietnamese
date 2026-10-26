@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (2c214edf9a77a802) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (4e2645bf4c4d3741) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -72,6 +72,13 @@ DEFAULT_REGISTERS: Dict[str, dict] = {
     "legal-contract":     {"expects": "",              "forbids": ("bạn", "mình", "cả nhà", "em", "con", "cậu")},
     "hospitality-luxury": {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
     "hr-candidate":       {"expects": "anh/chị",       "forbids": ("mày", "cậu", "con", "cả nhà")},
+    "realestate-luxury":  {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
+    "construction-b2b":   {"expects": "",              "forbids": ("bạn", "mình", "cả nhà", "em", "con", "cậu", "mày")},
+    "ecommerce-shopper":  {"expects": "bạn",           "forbids": ("quý vị", "mày", "cậu")},
+    "public-citizen":     {"expects": "ông/bà",        "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
+    "insurance-policyholder": {"expects": "quý khách", "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
+    "infosec-advisory":   {"expects": "",              "forbids": ("mình", "cả nhà", "cậu", "mày", "em", "con")},
+    "crisis-comms":       {"expects": "quý vị",        "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
 }
 
 FORMAL_PRONOUNS = ("quý khách", "quý vị", "quý phụ huynh")
@@ -217,6 +224,25 @@ DOMAIN_SKILL_MAP: Dict[str, str] = {
     "hr": "vietnamese-hr-recruitment",
     "recruitment": "vietnamese-hr-recruitment",
     "vietnamese-hr-recruitment": "vietnamese-hr-recruitment",
+    "realestate": "vietnamese-real-estate-construction",
+    "construction": "vietnamese-real-estate-construction",
+    "vietnamese-real-estate-construction": "vietnamese-real-estate-construction",
+    "ecommerce": "vietnamese-ecommerce-retail",
+    "retail": "vietnamese-ecommerce-retail",
+    "vietnamese-ecommerce-retail": "vietnamese-ecommerce-retail",
+    "gov": "vietnamese-government-public-service",
+    "public-service": "vietnamese-government-public-service",
+    "vietnamese-government-public-service": "vietnamese-government-public-service",
+    "insurance": "vietnamese-insurance-insurtech",
+    "insurtech": "vietnamese-insurance-insurtech",
+    "vietnamese-insurance-insurtech": "vietnamese-insurance-insurtech",
+    "cybersecurity": "vietnamese-cybersecurity-infosec",
+    "infosec": "vietnamese-cybersecurity-infosec",
+    "vietnamese-cybersecurity-infosec": "vietnamese-cybersecurity-infosec",
+    "media": "vietnamese-media-journalism-pr",
+    "journalism": "vietnamese-media-journalism-pr",
+    "pr": "vietnamese-media-journalism-pr",
+    "vietnamese-media-journalism-pr": "vietnamese-media-journalism-pr",
 }
 
 
@@ -417,6 +443,13 @@ DIACRITIC_PHRASES = (
     "hop dong", "boi thuong thiet hai", "bat kha khang", "giai quyet tranh chap",
     "khach san", "dat phong", "nhan phong", "tra phong", "chuyen bay", "hanh ly",
     "tuyen dung", "ung vien", "thu viec", "bao hiem xa hoi", "hop dong lao dong",
+    # Real Estate, E-Commerce, Gov DVC, Insurance, Cybersecurity & Media PR
+    "giay chung nhan", "dien tich thong thuy", "kinh phi bao tri", "ban giao can ho",
+    "da thong bao bo cong thuong", "da dang ky bo cong thuong", "mien phi van chuyen",
+    "dich vu cong truc tuyen", "the can cuoc", "dinh danh dien tu", "so ho khau",
+    "hop dong bao hiem", "phi bao hiem", "loai tru trach nhiem", "gia tri hoan lai",
+    "an toan thong tin", "lo hong bao mat", "du lieu ca nhan nhay cam", "tan cong mang",
+    "thong cao bao chi", "cai chinh xin loi", "co quan bao chi",
 )
 DIACRITIC_RE = re.compile(
     r"(?<![\w/-])(" + "|".join(re.escape(p) for p in DIACRITIC_PHRASES) + r")(?![\w/-])",

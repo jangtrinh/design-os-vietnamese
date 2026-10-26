@@ -1,16 +1,16 @@
-# DESIGN:OS Vietnamese (`design-os-vietnamese`) — v4.0 Multi-Industry Suite
+# DESIGN:OS Vietnamese (`design-os-vietnamese`) — v5.0 Multi-Industry Suite
 
-**Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Mầm non -> Tiến sĩ & GS/PGS), and multi-industry statutory compliance suite for AI coding agents.**
+**Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Mầm non -> Tiến sĩ & GS/PGS), and 16-domain statutory compliance suite for AI coding agents.**
 
-Equip Claude Code, OpenAI Codex, Gemini CLI, and Google Antigravity with 10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, 339 golden evaluation pairs, and 12 `UKMC.v1` cryptographically verified knowledge modules.
+Equip Claude Code, OpenAI Codex, Gemini CLI, and Google Antigravity with 16 production skills, 31 audience registers, 126 deterministic AST/regex rules, 489 golden evaluation pairs, and 18 `UKMC.v1` cryptographically verified knowledge modules.
 
 <p align="center">
-  <img src="assets/design-os-vietnamese-architecture.svg" alt="DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture and 10-Skill Matrix" width="840">
+  <img src="assets/design-os-vietnamese-architecture.svg" alt="DESIGN:OS Vietnamese v5.0 Multi-Industry Architecture and 16-Skill Matrix" width="840">
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-PolyForm_Shield_1.0.0-202020?style=flat-square&labelColor=202020&color=444444" alt="PolyForm Shield License 1.0.0"></a>
-  <img src="https://img.shields.io/badge/Claude_Code_%C2%B7_Codex_%C2%B7_Gemini_%C2%B7_Antigravity-10_skills-202020?style=flat-square&labelColor=202020&color=444444" alt="Compatible AI coding agents and 10 skills">
+  <img src="https://img.shields.io/badge/Claude_Code_%C2%B7_Codex_%C2%B7_Gemini_%C2%B7_Antigravity-16_skills-202020?style=flat-square&labelColor=202020&color=444444" alt="Compatible AI coding agents and 16 skills">
   <a href="commands/doctor.md"><img src="https://img.shields.io/badge/diagnostics-%2Fdoctor-202020?style=flat-square&labelColor=202020&color=444444" alt="Doctor diagnostic slash command"></a>
   <a href="llms.txt"><img src="https://img.shields.io/badge/GEO-llms.txt-202020?style=flat-square&labelColor=202020&color=444444" alt="GEO llms.txt index for AI search"></a>
   <a href="https://jangtrinh.github.io/design-os-vietnamese/"><img src="https://img.shields.io/badge/live_docs-GitHub_Pages-202020?style=flat-square&labelColor=202020&color=444444" alt="Live GitHub Pages documentation"></a>
@@ -37,8 +37,8 @@ Generic LLMs treat Vietnamese (`vi-VN`) as word-by-word translated English. In p
 | **Linguistic & Tone Engine** | Literal calques, mixed tone styles (`hoà` vs `hòa`), decomposed NFD bugs | Deterministic `validate_copy.py` linter (`NFC001`, `CAL001`, `SYN001`, `TONE001`) |
 | **UI/UX & i18n Engineering** | Clipped stacked diacritics and broken `one`/`other` ICU plurals | Stacked-diacritic line-height tokens, `U+00A0` binding, `check_i18n_parity.py` & `check_font_coverage.py` |
 | **Pedagogy Continuum** | Confuses K-12 rankings, undergraduate theses, and doctoral dissertations | Full 7-Tier MOET & VQF Continuum (Preschool `Mầm non` -> Doctoral `Tiến sĩ & GS/PGS`, `EDU001`–`EDU012`) |
-| **Multi-Industry Compliance** | Hallucinates repealed circulars (TT 200, BLLĐ 2012, BLDS 2005) | 10 domain rule engines (`UX`, `LND`, `TECH`, `BIZ`, `FIN`, `EDU`, `MED`, `LEG`, `HOS`, `HR`) |
-| **Epistemic Provenance** | Unverifiable prose summaries with zero source hashes | 12 `UKMC.v1` modules with 53 SHA-256 anchors (`STOP_SUFFICIENT`) & [`PRIVACY.md`](PRIVACY.md) zero telemetry |
+| **Multi-Industry Compliance** | Hallucinates repealed circulars (TT 200, BLLĐ 2012, BLDS 2005, DVC mức độ 4) | 16 domain rule engines (`UX`, `LND`, `TECH`, `BIZ`, `FIN`, `EDU`, `MED`, `LEG`, `HOS`, `HR`, `REA`, `ECOM`, `GOV`, `INS`, `SEC`, `MEDJ`) |
+| **Epistemic Provenance** | Unverifiable prose summaries with zero source hashes | 18 `UKMC.v1` modules with 65+ SHA-256 anchors (`STOP_SUFFICIENT`) & [`PRIVACY.md`](PRIVACY.md) zero telemetry |
 
 ---
 
@@ -73,7 +73,7 @@ python3 shared/scripts/check_i18n_parity.py \
 
 ## What it makes
 
-Every deliverable generated or audited by `design-os-vietnamese` is backed by a deterministic Python 3.9+ standard-library linter and 339 golden evaluation pairs (`evals/*/pairs.jsonl`).
+Every deliverable generated or audited by `design-os-vietnamese` is backed by a deterministic Python 3.9+ standard-library linter and 489 golden evaluation pairs (`evals/*/pairs.jsonl`).
 
 | # | Skill | Domain & Target Artifacts | Domain Rule Engine | Key Reference Modules |
 | :--- | :--- | :--- | :--- | :--- |
@@ -87,6 +87,12 @@ Every deliverable generated or audited by `design-os-vietnamese` is backed by a 
 | **8** | [`vietnamese-legal-contracts`](skills/vietnamese-legal-contracts/SKILL.md) | **Civil, Commercial & Labor Contracts, NDAs, Terms of Service & Privacy Notices**: BLDS 2015, Luật Thương mại 2005 (8% penalty cap), Luật BVQLNTD 2023 | `rules_legal.py` (`LEG001`–`LEG007`) | `contract-drafting-blds-ltt.md`, `labor-and-ip-clauses.md`, `pdpd-and-consumer-protection.md` |
 | **9** | [`vietnamese-hospitality-travel`](skills/vietnamese-hospitality-travel/SKILL.md) | **5-Star Hotels, Resorts, Aviation, OTA Booking & Culinary/F&B**: Luật Du lịch 2017 (Điều 50), transparent `++` pricing, TT 14/2015 & 19/2023 aviation rights | `rules_hospitality.py` (`HOS001`–`HOS006`) | `hotel-and-resort-standards.md`, `aviation-and-tour-policies.md`, `fnb-and-culinary-copy.md` |
 | **10** | [`vietnamese-hr-recruitment`](skills/vietnamese-hr-recruitment/SKILL.md) | **Job Descriptions (JD), Offer Letters, Labor Contracts, Probation & BHXH/PIT**: Bộ luật Lao động 2019 (Điều 8, 17, 20, 25, 26), Luật BHXH 41/2024/QH15 | `rules_hr.py` (`HR001`–`HR006`) | `labor-code-and-offer-letters.md`, `jd-and-employer-branding.md`, `okr-kpi-and-performance-review.md` |
+| **11** | [`vietnamese-real-estate-construction`](skills/vietnamese-real-estate-construction/SKILL.md) | **Real Estate, Property Development & Construction BOQ**: Luật KDBĐS 2023 (<=5% deposit cap Art. 23, 30%/70%/95% off-plan schedule Art. 25), Luật Đất đai 2024, Luật Nhà ở 2023 (`thông thủy` & 2% maintenance fund) | `rules_realestate.py` (`REA001`–`REA006`) | `luat-kinh-doanh-bds-2023.md`, `luat-dat-dai-2024-va-nha-o-2023.md`, `construction-boq-and-calques.md` |
+| **12** | [`vietnamese-ecommerce-retail`](skills/vietnamese-ecommerce-retail/SKILL.md) | **E-Commerce, Omnichannel Retail & Consumer Law**: NĐ 52/2013 & 85/2021 (`Đã thông báo` vs `Đã đăng ký Bộ Công Thương`), NĐ 128/2024 (<=50% promo cap), Luật BVQLNTD 2023, NĐ 43/2017 & 111/2021 labels | `rules_ecommerce.py` (`ECOM001`–`ECOM006`) | `tmdt-nd52-nd85-va-bct.md`, `khuyen-mai-nd81-nd128-va-bvqlntd.md`, `ecommerce-logistics-and-calques.md` |
+| **13** | [`vietnamese-government-public-service`](skills/vietnamese-government-public-service/SKILL.md) | **E-Government, Public Services (DVC) & VNeID**: NĐ 42/2022 (`DVC trực tuyến toàn trình / một phần`), Luật Căn cước 2023 (`Thẻ căn cước`), NĐ 69/2024 (`VNeID Mức độ 1 / 2`), Luật Cư trú 2020 (no paper `Sổ hộ khẩu`) | `rules_gov.py` (`GOV001`–`GOV006`) | `dvc-truc-tuyen-nd42-2022.md`, `luat-can-cuoc-2023-va-vneid-nd69.md`, `luat-cu-tru-bo-so-ho-khau-giay.md` |
+| **14** | [`vietnamese-insurance-insurtech`](skills/vietnamese-insurance-insurtech/SKILL.md) | **Life, Health, Motor Insurance & Bancassurance**: Luật KDBH 2022 & TT 67/2023/TT-BTC (21-day free-look Art. 35, affirmative exclusion disclosure Art. 19, 15-day payout Art. 31, anti-deposit disguise) | `rules_insurance.py` (`INS001`–`INS006`) | `luat-kinh-doanh-bao-hiem-2022.md`, `thong-tu-67-2023-bancassurance.md`, `insurance-terminology-and-calques.md` |
+| **15** | [`vietnamese-cybersecurity-infosec`](skills/vietnamese-cybersecurity-infosec/SKILL.md) | **Cybersecurity, SOC Advisories, ATTT Level 1–5 & 72h Breach Notice**: NĐ 13/2023/NĐ-CP Art. 23 (<=72h breach report to A05 Bộ Công an), NĐ 85/2016 & TT 12/2022 (`ATTT Cấp độ 1–5`), VNCERT/NCSC CVE alerts | `rules_cybersecurity.py` (`SEC001`–`SEC006`) | `ung-cuu-su-co-pdpd-72h-a05.md`, `attt-cap-do-1-5-nd85-tt12.md`, `infosec-terminology-and-calques.md` |
+| **16** | [`vietnamese-media-journalism-pr`](skills/vietnamese-media-journalism-pr/SKILL.md) | **Press Releases, Journalism Ethics, Corrections & Crisis PR**: Luật Báo chí 2016 & NĐ 147/2024 (Press vs ICP), Art. 42 press corrections, presumption of innocence (`nghi phạm / bị can / bị cáo`), Luật Trẻ em 2016 | `rules_media.py` (`MEDJ001`–`MEDJ006`) | `luat-bao-chi-2016-va-nd147-2024.md`, `suy-doan-vo-toi-va-bao-ve-tre-em.md`, `press-release-and-crisis-pr.md` |
 
 ---
 
@@ -106,13 +112,13 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | `NUM001`–`NUM004` | `ERROR`/`WARN` | Period thousands (`1.250.000 ₫`), comma decimals (`3,5%`), and superscript `m²`/`m³` (with hardware chip guard for `Apple M2/M3`, `SSD M.2`, `BMW M2/M3`) |
 | `DATE001` / `PHONE001` | `ERROR` | Flags US `MM/dd/yyyy` dates and redundant trunk zero `+84 (0)9...` |
 | `ICU001` / `ICU002` | `ERROR` | Multi-line ICU plural block parser (`other`-only) and translated placeholder detector (`{tên}`) |
-| `PRO001` / `PRO002` | `ERROR`/`WARN` | Enforces pronoun consistency across **24 audience registers** (`ux-microcopy`, `edu-preschool`, `edu-postgrad`, `healthcare-clinical`, `legal-contract`, `hospitality-luxury`, `hr-candidate`, etc.) |
+| `PRO001` / `PRO002` | `ERROR`/`WARN` | Enforces pronoun consistency across **31 audience registers** (`ux-microcopy`, `edu-preschool`, `edu-postgrad`, `healthcare-clinical`, `legal-contract`, `hospitality-luxury`, `hr-candidate`, `realestate-luxury`, `ecommerce-shopper`, `public-citizen`, `insurance-policyholder`, `infosec-advisory`, `crisis-comms`, etc.) |
 
 ---
 
 ## Installation
 
-Choose the setup that matches your AI coding agent. Browse [`docs/cookbook.md`](docs/cookbook.md) for copy-paste prompt recipes across all 10 domains.
+Choose the setup that matches your AI coding agent. Browse [`docs/cookbook.md`](docs/cookbook.md) for copy-paste prompt recipes across all 16 domains.
 
 ### Claude Code
 
@@ -137,10 +143,10 @@ rm -rf /tmp/design-os-vietnamese
 
 ## How it works
 
-1. **Intent & Register Routing** — Your AI agent matches the prompt against `skills/<skill>/SKILL.md` and selects one of the **24 audience registers** (`shared/references/register-matrix.md`).
+1. **Intent & Register Routing** — Your AI agent matches the prompt against `skills/<skill>/SKILL.md` and selects one of the **31 audience registers** (`shared/references/register-matrix.md`).
 2. **Progressive Context Loading** — Only the target `SKILL.md` (~150 lines) loads initially; domain playbooks, templates, and `UKMC.v1` knowledge modules load on demand.
 3. **Deterministic Static Linting** — `validate_copy.py`, `check_i18n_parity.py`, and `check_font_coverage.py` execute locally in <100ms with zero network calls.
-4. **Epistemic & Repo Verification** — `python3 tools/verify_ukmc.py` and `python3 scripts/self_check.py` verify all 12 `UKMC.v1` modules (`53 SHA-256 anchors`, `STOP_SUFFICIENT`) and 339 golden evaluation pairs.
+4. **Epistemic & Repo Verification** — `python3 tools/verify_ukmc.py` and `python3 scripts/self_check.py` verify all 18 `UKMC.v1` modules (`65+ SHA-256 anchors`, `STOP_SUFFICIENT`) and 489 golden evaluation pairs.
 
 ### What loads when
 
@@ -148,7 +154,7 @@ rm -rf /tmp/design-os-vietnamese
 | :--- | :--- |
 | `skills/<skill>/SKILL.md` | Always (~140–185 lines) — domain workflow, register matrix, and rule triggers |
 | `skills/<skill>/references/*.md` | On demand when drafting or auditing specific domain artifacts |
-| `docs/cookbook.md` | When selecting multi-step prompt recipes across the 10 Vietnamese skills |
+| `docs/cookbook.md` | When selecting multi-step prompt recipes across the 16 Vietnamese skills |
 | `commands/doctor.md` / `prompts/doctor.md` | Only when running `/doctor` diagnostics |
 | `llms.txt` | When indexed by AI answer engines, RAG pipelines, or repo crawlers |
 
@@ -170,10 +176,10 @@ design-os-vietnamese/
 ├── shared/
 │   ├── references/                 # Universal compliance, register-matrix, typography, glossary, banned-phrases
 │   └── scripts/                    # Canonical validate_copy.py, check_i18n_parity.py, check_font_coverage.py
-├── skills/                         # 10 self-contained production skills (UX, Landing, Tech, Biz, Finance, Edu, Med, Legal, Hospitality, HR)
-├── knowledge/                      # 12 UKMC.v1 cryptographically verified modules + _evidence/ SHA-256 corpus
-├── evals/                          # 339 golden bad/good pairs across 10 skills + 200 trigger queries
-├── tests/                          # 33 automated unit, spec, sync, UKMC.v1, and QA regression tests
+├── skills/                         # 16 self-contained production skills across Vietnamese software & regulated industries
+├── knowledge/                      # 18 UKMC.v1 cryptographically verified modules + _evidence/ SHA-256 corpus
+├── evals/                          # 489 golden bad/good pairs across 16 skills + trigger queries
+├── tests/                          # Automated unit, spec, sync, UKMC.v1, and QA regression tests
 ├── tools/                          # sync_shared.py, build_examples.py, verify_ukmc.py
 ├── docs/                           # 9-Tier GitHub Pages site (index.html, cookbook.md, llms.txt, sitemap.xml, robots.txt)
 ├── PRIVACY.md                      # Zero-telemetry & local-first privacy commitment
@@ -193,9 +199,9 @@ design-os-vietnamese/
 
 ### It's working if...
 
-- `python3 scripts/self_check.py` prints `ok: design-os-vietnamese self-check passed (10 skills, 12 UKMC.v1 modules)` and exits `0`.
-- `python3 -m unittest discover -s tests -v` runs all **42 tests** (including all 22 QA regression tests across PR #1 & Issue #2 and 339 golden evaluation pairs) and prints `OK`.
-- `python3 tools/verify_ukmc.py` prints `files: 12 · anchors: 53 · failures: 0 · Decision: STOP_SUFFICIENT`.
+- `python3 scripts/self_check.py` prints `ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)` and exits `0`.
+- `python3 -m unittest discover -s tests -v` runs all **42+ tests** (including all QA regression tests across PR #1 & Issue #2 and 489 golden evaluation pairs) and prints `OK`.
+- `python3 tools/verify_ukmc.py` prints `files: 18 · anchors: 66 · failures: 0 · Decision: STOP_SUFFICIENT`.
 - Network traffic during execution remains zero (guaranteed by [`PRIVACY.md`](PRIVACY.md)).
 
 ### When not to use
@@ -208,7 +214,7 @@ design-os-vietnamese/
 <summary>Frequently Asked Questions (AEO &amp; Statutory FAQ Registry)</summary>
 
 **What is DESIGN:OS Vietnamese and how does it prevent LLM translationese?**
-`design-os-vietnamese` combines 10 domain-specialized agent skills with `validate_copy.py`, a deterministic Python 3.9+ linter that flags English calques (`CAL001`), syntactic translationese (`SYN001`), decomposed Unicode `NFD` (`NFC001`), mixed tone placement (`TONE001`), broken ICU plural branches (`ICU001`), and pronoun register drift (`PRO001`/`PRO002`) across 24 Vietnamese audience registers.
+`design-os-vietnamese` combines 16 domain-specialized agent skills with `validate_copy.py`, a deterministic Python 3.9+ linter that flags English calques (`CAL001`), syntactic translationese (`SYN001`), decomposed Unicode `NFD` (`NFC001`), mixed tone placement (`TONE001`), broken ICU plural branches (`ICU001`), and pronoun register drift (`PRO001`/`PRO002`) across 31 Vietnamese audience registers.
 
 **How does `vietnamese-education-copy` cover the 7-tier pedagogy continuum from Preschool to Doctoral studies?**
 It enforces statutory grading and terminology across all 7 tiers: Tier 1 Preschool (`Mầm non: Nhà trẻ 3–36 tháng & Mẫu giáo 3–6 tuổi` under `VBHN 01/VBHN-BGDĐT`, blocking numeric scores via `EDU011`), Tier 2 Primary (`TT 27/2020/TT-BGDĐT`, `EDU002`), Tier 3 Secondary/High School (`TT 22/2021/TT-BGDĐT`, `EDU001`), Tier 4 TVET (`TT 04/2022/TT-BLĐTBXH`), Tier 5 Undergraduate VQF Level 6 (`TT 08/2021/TT-BGDĐT`), Tier 6 Master's VQF Level 7 (`TT 23/2021/TT-BGDĐT`), and Tier 7 Doctoral VQF Level 8 + `GS./PGS.` Academic Ranks (`TT 18/2021/TT-BGDĐT` & `QĐ 37/2018/QĐ-TTg`, `EDU004`, `EDU008`, `EDU012`).
