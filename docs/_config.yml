@@ -1,0 +1,33 @@
+# GitHub Pages site for design-os-vietnamese, built from this docs/ folder.
+# _layouts/default.html wraps every Markdown page in the landing's design language;
+# index.html is a hand-built page (layout: null) sharing assets/site.css.
+# jekyll-seo-tag emits <title>, <meta name="description">, Open Graph and JSON-LD;
+# jekyll-sitemap emits sitemap.xml for Google Search Console.
+title: design-os-vietnamese
+description: 10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, and 12 UKMC.v1 verified modules for Vietnamese software and regulated copy.
+url: https://jangtrinh.github.io
+baseurl: /design-os-vietnamese
+lang: en
+repository: jangtrinh/design-os-vietnamese
+repository_url: https://github.com/jangtrinh/design-os-vietnamese
+wordmark: DESIGN:OS
+wordmark_url: https://jangtrinh.github.io/design-os/
+eyebrow: DESIGN:OS Toolchain          # short product family label, e.g. design:os
+logo: /images/cover.png          # a real capture under docs/images/
+nav:                        # one entry per Markdown page under docs/, in reading order
+  - { title: Deep dive, url: /deep-dive.html }
+footer:
+  - { title: GitHub, url: https://github.com/jangtrinh/design-os-vietnamese }
+  - { title: MIT, url: https://github.com/jangtrinh/design-os-vietnamese/blob/main/LICENSE }
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "google*.html" }
+    values: { sitemap: false }

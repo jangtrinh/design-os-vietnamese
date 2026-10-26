@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Full Unit, Golden Eval (339 pairs), QA Regression & UKMC.v1 Test Suite
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 tools/sync_shared.py --check
+          python3 tools/build_examples.py --check
+          python3 tools/verify_ukmc.py
+          python3 scripts/self_check.py
+
+      - name: Verify HTML5 Tag Balance on GitHub Pages
+        run: |
+          python3 -c "
+          from html.parser import HTMLParser
+          import sys
+
+          class TagChecker(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.stack = []
+                  self.void_tags = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
+                  self.errors = []
+              def handle_starttag(self, tag, attrs):
+                  if tag not in self.void_tags: self.stack.append((tag, self.getpos()))
+              def handle_endtag(self, tag):
+                  if tag in self.void_tags: return
+                  if not self.stack:
+                      self.errors.append(f'Unexpected </{tag}> at line {self.getpos()[0]}'); return
+                  last_tag, pos = self.stack.pop()
+                  if last_tag != tag:
+                      self.errors.append(f'Mismatched tag: expected </{last_tag}> (opened line {pos[0]}), found </{tag}> at line {self.getpos()[0]}')
+
+          with open('docs/index.html', 'r', encoding='utf-8') as f:
+              content = f.read().split('---', 2)[-1]
+          parser = TagChecker()
+          parser.feed(content)
+          if parser.errors or parser.stack:
+              print('FAIL docs/index.html:', parser.errors, parser.stack); sys.exit(1)
+          print('PASS: docs/index.html tag balance 100% clean')
+          "

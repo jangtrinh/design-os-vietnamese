@@ -1,0 +1,33 @@
+# DESIGN:OS Vietnamese (`design-os-vietnamese`)
+
+> Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Preschool to Doctoral & GS/PGS), and multi-industry statutory compliance suite for AI coding agents. 10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, and 12 UKMC.v1 cryptographically verified modules.
+
+## Quick Facts
+
+- **Repository**: https://github.com/jangtrinh/design-os-vietnamese
+- **Documentation & Landing**: https://jangtrinh.github.io/design-os-vietnamese/
+- **License**: PolyForm Shield License 1.0.0
+- **Runtime**: Python 3.9+ standard library (`zero external dependencies`)
+- **Telemetry**: Zero tracking, 100% local execution (`PRIVACY.md`)
+- **Knowledge Contract**: `UKMC.v1` (`12 verified modules`, `53 SHA-256 anchors`, `STOP_SUFFICIENT`)
+
+## 10 Production Skills (`skills/`)
+
+- [vn-design-system-ux](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vn-design-system-ux/SKILL.md): Vietnamese design tokens, stacked-diacritic line-height gates, UI character caps, `en.json` <-> `vi.json` parity, and `U+00A0` compound-word binding (`UX001`–`UX010`).
+- [vietnamese-landing-copy](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-landing-copy/SKILL.md): Conversion copywriting for SaaS, E-Commerce, Real Estate, and EdTech with Advertising Law 75/2025/QH15 compliance (`LND001`–`LND007`).
+- [vietnamese-tech-writing](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-tech-writing/SKILL.md): Developer documentation, API references, runbooks, postmortems, ADRs, and surveys (`TECH001`–`TECH006`).
+- [vietnamese-business-comms](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-business-comms/SKILL.md): B2B emails, Zalo OA/ZNS templates, executive proposals, and Decree 30/2020/NĐ-CP administrative *Công văn* (`BIZ001`–`BIZ007`).
+- [vietnamese-finance-copy](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-finance-copy/SKILL.md): Digital banking, VietQR/Napas, Decree 70/2025/NĐ-CP e-invoices, and Circular 99/2025/TT-BTC financial reporting (`FIN001`–`FIN006`).
+- [vietnamese-education-copy](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-education-copy/SKILL.md): Full 7-Tier Vietnamese Pedagogy Continuum from Preschool (`Mầm non` — VBHN 01/VBHN-BGDĐT), Primary (TT 27/2020), Secondary (TT 22/2021), TVET (TT 04/2022), Undergraduate (TT 08/2021), Master's (TT 23/2021), to Doctoral & `GS./PGS.` Academic Ranks (TT 18/2021 & QĐ 37/2018/QĐ-TTg) (`EDU001`–`EDU012`).
+- [vietnamese-healthcare-copy](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-healthcare-copy/SKILL.md): Clinical EMR notes, e-prescriptions, discharge summaries, and TPCN compliance under Healthcare Law 2023 & Decree 15/2018/NĐ-CP (`MED001`–`MED007`).
+- [vietnamese-legal-contracts](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-legal-contracts/SKILL.md): Civil, commercial, and labor contracts under Civil Code 2015, Commercial Law 2005 (8% penalty cap), and Consumer Protection Law 2023 (`LEG001`–`LEG007`).
+- [vietnamese-hospitality-travel](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-hospitality-travel/SKILL.md): 5-star hotel/resort booking copy, transparent `++` pricing, aviation delay rights (TT 19/2023/TT-BGTVT), and culinary menus (`HOS001`–`HOS006`).
+- [vietnamese-hr-recruitment](https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-hr-recruitment/SKILL.md): Non-discriminatory JDs, offer letters, probation rules (>=85% wage), and BHXH 2024 compliance under Labor Code 2019 (`HR001`–`HR006`).
+
+## Deterministic CLI Entrypoints
+
+- `python3 shared/scripts/validate_copy.py <path> --domain <domain> --register <register>`
+- `python3 shared/scripts/check_i18n_parity.py --source <en.json> --target <vi.json> --json`
+- `python3 shared/scripts/check_font_coverage.py --css <tokens.css>`
+- `python3 tools/verify_ukmc.py`
+- `python3 scripts/self_check.py`

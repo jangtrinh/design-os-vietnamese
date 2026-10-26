@@ -1,0 +1,15 @@
+{
+  "name": "design-os-vietnamese",
+  "metadata": {
+    "description": "Sovereign Vietnamese (vi-VN) language, typography, 7-tier pedagogy, and multi-industry statutory compliance suite for AI coding agents."
+  },
+  "owner": {
+    "name": "Jang Trinh"
+  },
+  "plugins": [
+    {
+      "name": "design-os-vietnamese",
+      "source": "./"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "design-os-vietnamese",
+  "interface": {
+    "displayName": "DESIGN:OS Vietnamese Suite"
+  },
+  "plugins": [
+    {
+      "name": "design-os-vietnamese",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

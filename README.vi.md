@@ -3,7 +3,7 @@
 > **Hệ sinh thái Kỹ năng Ngôn ngữ, Hệ thống Thiết kế Giao diện (Design System), Copywriting Đa Ngành, Sư phạm 7 Bậc học (Mầm non → Tiến sĩ) & Kiểm định Pháp lý Tự động cho AI Agent**
 > Xây dựng độc lập trên nền tảng **DESIGN:OS** và chuẩn tri thức **Universal Knowledge Master Contract (`UKMC.v1`)**.
 
-[English Documentation (`README.md`)](README.md)
+[English Documentation (`README.md`)](README.md) · [Trang chủ GitHub Pages](https://jangtrinh.github.io/design-os-vietnamese/) · [Cookbook (`docs/cookbook.md`)](docs/cookbook.md) · [`llms.txt`](llms.txt)
 
 ![DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
 
