@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 420" width="1080" height="420" role="img" aria-label="DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#090D16"/>
@@ -6,73 +6,73 @@
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#10B981"/>
-      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
       <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
   </defs>
-  <rect width="1080" height="420" rx="16" fill="url(#bg)" stroke="#1F2937" stroke-width="2"/>
-  <rect x="32" y="28" width="1016" height="4" rx="2" fill="url(#accent)"/>
+  <rect width="1200" height="440" rx="16" fill="url(#bg)" stroke="#1F2937" stroke-width="2"/>
+  <rect x="36" y="28" width="1128" height="4" rx="2" fill="url(#accent)"/>
 
   <text x="36" y="68" fill="#F9FAFB" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="700">DESIGN:OS Vietnamese (vi-VN) — v4.0 Sovereign Multi-Industry Suite</text>
   <text x="36" y="94" fill="#9CA3AF" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14">10 Production Skills · 24 Audience Registers · 90+ Deterministic AST/Regex Rules · 12 UKMC.v1 Cryptographic Modules</text>
 
   <!-- Row 1: Core Product, Marketing, Docs, Gov, Finance -->
-  <g transform="translate(36, 120)" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
-    <rect x="0" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
-    <text x="14" y="28" fill="#10B981" font-size="12" font-weight="700">01 · UI/UX &amp; DESIGN TOKENS</text>
-    <text x="14" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vn-design-system-ux</text>
-    <text x="14" y="72" fill="#9CA3AF" font-size="11">UX001–UX010 · i18n &amp; Font Gates</text>
+  <g transform="translate(36, 122)" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+    <rect x="0" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <text x="14" y="28" fill="#10B981" font-size="10.5" font-weight="700">01 · UI/UX &amp; DESIGN TOKENS</text>
+    <text x="14" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vn-design-system-ux</text>
+    <text x="14" y="74" fill="#9CA3AF" font-size="10.5">UX001–UX010 · i18n &amp; Font Gates</text>
 
-    <rect x="206" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
-    <text x="220" y="28" fill="#10B981" font-size="12" font-weight="700">02 · LANDING &amp; E-COMMERCE</text>
-    <text x="220" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-landing-copy</text>
-    <text x="220" y="72" fill="#9CA3AF" font-size="11">LND001–LND007 · Luật 75/2025</text>
+    <rect x="228" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#10B981" stroke-width="1.5"/>
+    <text x="242" y="28" fill="#10B981" font-size="10.5" font-weight="700">02 · LANDING &amp; E-COMMERCE</text>
+    <text x="242" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-landing-copy</text>
+    <text x="242" y="74" fill="#9CA3AF" font-size="10.5">LND001–LND007 · Luật 75/2025</text>
 
-    <rect x="412" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
-    <text x="426" y="28" fill="#3B82F6" font-size="12" font-weight="700">03 · TECH DOCS &amp; RUNBOOKS</text>
-    <text x="426" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-tech-writing</text>
-    <text x="426" y="72" fill="#9CA3AF" font-size="11">TECH001–TECH006 · ADR &amp; API</text>
+    <rect x="456" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#0EA5E9" stroke-width="1.5"/>
+    <text x="470" y="28" fill="#38BDF8" font-size="10.5" font-weight="700">03 · TECH DOCS &amp; RUNBOOKS</text>
+    <text x="470" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-tech-writing</text>
+    <text x="470" y="74" fill="#9CA3AF" font-size="10.5">TECH001–TECH006 · ADR &amp; API</text>
 
-    <rect x="618" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#3B82F6" stroke-width="1.5"/>
-    <text x="632" y="28" fill="#3B82F6" font-size="12" font-weight="700">04 · B2B &amp; NĐ 30/2020 CÔNG VĂN</text>
-    <text x="632" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-business-comms</text>
-    <text x="632" y="72" fill="#9CA3AF" font-size="11">BIZ001–BIZ007 · NĐ 13/2023</text>
+    <rect x="684" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#0EA5E9" stroke-width="1.5"/>
+    <text x="698" y="28" fill="#38BDF8" font-size="10.5" font-weight="700">04 · B2B &amp; NĐ 30/2020</text>
+    <text x="698" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-business-comms</text>
+    <text x="698" y="74" fill="#9CA3AF" font-size="10.5">BIZ001–BIZ007 · NĐ 13/2023</text>
 
-    <rect x="824" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
-    <text x="838" y="28" fill="#F59E0B" font-size="12" font-weight="700">05 · BANKING &amp; TT 99/2025</text>
-    <text x="838" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-finance-copy</text>
-    <text x="838" y="72" fill="#9CA3AF" font-size="11">FIN001–FIN006 · Napas / VietQR</text>
+    <rect x="912" y="0" width="216" height="98" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="926" y="28" fill="#FBBF24" font-size="10.5" font-weight="700">05 · BANKING &amp; TT 99/2025</text>
+    <text x="926" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-finance-copy</text>
+    <text x="926" y="74" fill="#9CA3AF" font-size="10.5">FIN001–FIN006 · Napas / VietQR</text>
   </g>
 
   <!-- Row 2: 7-Tier Pedagogy, Healthcare, Legal, Hospitality, HR -->
-  <g transform="translate(36, 232)" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
-    <rect x="0" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
-    <text x="14" y="28" fill="#F59E0B" font-size="12" font-weight="700">06 · 7-TIER PEDAGOGY</text>
-    <text x="14" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-education-copy</text>
-    <text x="14" y="72" fill="#9CA3AF" font-size="11">Mầm non → Tiến sĩ (EDU001–012)</text>
+  <g transform="translate(36, 238)" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+    <rect x="0" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="14" y="28" fill="#FBBF24" font-size="10.5" font-weight="700">06 · 7-TIER PEDAGOGY</text>
+    <text x="14" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-education-copy</text>
+    <text x="14" y="74" fill="#9CA3AF" font-size="10.5">Mầm non → Tiến sĩ (EDU001–012)</text>
 
-    <rect x="206" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
-    <text x="220" y="28" fill="#EC4899" font-size="12" font-weight="700">07 · CLINICAL &amp; PHARMA</text>
-    <text x="220" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-healthcare-copy</text>
-    <text x="220" y="72" fill="#9CA3AF" font-size="11">MED001–MED007 · Luật KCB 2023</text>
+    <rect x="228" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#14B8A6" stroke-width="1.5"/>
+    <text x="242" y="28" fill="#2DD4BF" font-size="10.5" font-weight="700">07 · CLINICAL &amp; PHARMA</text>
+    <text x="242" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-healthcare-copy</text>
+    <text x="242" y="74" fill="#9CA3AF" font-size="10.5">MED001–MED007 · Luật KCB 2023</text>
 
-    <rect x="412" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#EC4899" stroke-width="1.5"/>
-    <text x="426" y="28" fill="#EC4899" font-size="12" font-weight="700">08 · CIVIL &amp; COMMERCIAL LAW</text>
-    <text x="426" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-legal-contracts</text>
-    <text x="426" y="72" fill="#9CA3AF" font-size="11">LEG001–LEG007 · BLDS &amp; LTM 8%</text>
+    <rect x="456" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#14B8A6" stroke-width="1.5"/>
+    <text x="470" y="28" fill="#2DD4BF" font-size="10.5" font-weight="700">08 · CIVIL &amp; COMMERCIAL LAW</text>
+    <text x="470" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-legal-contracts</text>
+    <text x="470" y="74" fill="#9CA3AF" font-size="10.5">LEG001–LEG007 · BLDS &amp; LTM 8%</text>
 
-    <rect x="618" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
-    <text x="632" y="28" fill="#A78BFA" font-size="12" font-weight="700">09 · HOSPITALITY &amp; AVIATION</text>
-    <text x="632" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-hospitality-travel</text>
-    <text x="632" y="72" fill="#9CA3AF" font-size="11">HOS001–HOS006 · Giá ++ &amp; PNR</text>
+    <rect x="684" y="0" width="214" height="98" rx="10" fill="#111827" stroke="#06B6D4" stroke-width="1.5"/>
+    <text x="698" y="28" fill="#22D3EE" font-size="10.5" font-weight="700">09 · HOSPITALITY &amp; AVIATION</text>
+    <text x="698" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-hospitality-travel</text>
+    <text x="698" y="74" fill="#9CA3AF" font-size="10.5">HOS001–HOS006 · Giá ++ &amp; PNR</text>
 
-    <rect x="824" y="0" width="192" height="96" rx="10" fill="#111827" stroke="#8B5CF6" stroke-width="1.5"/>
-    <text x="838" y="28" fill="#A78BFA" font-size="12" font-weight="700">10 · HR &amp; LABOR CODE 2019</text>
-    <text x="838" y="50" fill="#F9FAFB" font-size="13" font-weight="600">vietnamese-hr-recruitment</text>
-    <text x="838" y="72" fill="#9CA3AF" font-size="11">HR001–HR006 · BLLĐ Đ8, Đ20, Đ26</text>
+    <rect x="912" y="0" width="216" height="98" rx="10" fill="#111827" stroke="#06B6D4" stroke-width="1.5"/>
+    <text x="926" y="28" fill="#22D3EE" font-size="10.5" font-weight="700">10 · HR &amp; LABOR CODE 2019</text>
+    <text x="926" y="52" fill="#F9FAFB" font-size="12" font-weight="600">vietnamese-hr-recruitment</text>
+    <text x="926" y="74" fill="#9CA3AF" font-size="10.5">HR001–HR006 · BLLĐ Đ8, Đ20, Đ26</text>
   </g>
 
   <!-- Footer bar -->
-  <rect x="36" y="346" width="1008" height="46" rx="8" fill="#1F2937"/>
-  <text x="54" y="374" fill="#E5E7EB" font-family="JetBrains Mono, monospace" font-size="13">validate_copy.py (NFC001, ENC001, CAL001, SYN001, LAW001, DIA001, TONE001, NUM001-004, ICU001-002, PRO001-002) · STOP_SUFFICIENT</text>
+  <rect x="36" y="358" width="1128" height="48" rx="8" fill="#1F2937"/>
+  <text x="54" y="387" fill="#E5E7EB" font-family="JetBrains Mono, monospace" font-size="12">validate_copy.py (NFC001, ENC001, CAL001, SYN001, LAW001, DIA001, TONE001, NUM001–004, ICU001–002, PRO001–002) · STOP_SUFFICIENT</text>
 </svg>
