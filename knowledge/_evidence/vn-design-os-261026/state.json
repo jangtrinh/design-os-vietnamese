@@ -1,0 +1,26 @@
+{
+  "run_id": "vn-design-os-261026",
+  "round": 0,
+  "status": "RUNNING",
+  "budget_used": 0,
+  "budget_total": 50,
+  "remaining_budget_calls": 50,
+  "gaps": [],
+  "resolved": [],
+  "required_claim_ids": [
+    "claim-unicode-nfc",
+    "claim-tone-orthography",
+    "claim-register-pragmatics",
+    "claim-locale-formatting",
+    "claim-statutory-compliance",
+    "claim-typography-metrics",
+    "claim-finance-tt99",
+    "claim-edtech-moet"
+  ],
+  "minimum_independent_sources": 4,
+  "last_weighted_delta": 0.0,
+  "researcher_runtime": "gemini-3.8-flash-worker",
+  "is_target_version_matched": true,
+  "consecutive_low_delta_rounds": 3,
+  "has_viable_probe_remaining": false
+}

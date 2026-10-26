@@ -1,0 +1,64 @@
+{
+  "_comment": "Template resource file chuẩn vi-VN cho hệ thống DESIGN:OS. Toàn bộ key là mã ASCII, giá trị chuẩn NFC Unicode, plurals chỉ dùng branch 'other'.",
+  "common": {
+    "save": "Lưu thay đổi",
+    "saving": "Đang lưu...",
+    "saved": "Đã lưu thành công",
+    "cancel": "Huỷ bỏ",
+    "confirm": "Xác nhận",
+    "delete": "Xoá",
+    "edit": "Chỉnh sửa",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp tục",
+    "search": "Tìm kiếm tài liệu...",
+    "loading": "Đang tải dữ liệu...",
+    "retry": "Thử lại",
+    "learnMore": "Tìm hiểu thêm",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép vào bộ nhớ tạm"
+  },
+  "auth": {
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký tài khoản",
+    "signOut": "Đăng xuất",
+    "emailLabel": "Địa chỉ email",
+    "passwordLabel": "Mật khẩu",
+    "forgotPassword": "Quên mật khẩu?",
+    "invalidCredentials": "Email hoặc mật khẩu chưa chính xác. Vui lòng kiểm tra lại."
+  },
+  "errors": {
+    "generic": "Đã có lỗi xảy ra trong quá trình xử lý. Vui lòng thử lại.",
+    "network": "Không thể kết nối đến máy chủ. Vui lòng kiểm tra đường truyền mạng.",
+    "timeout": "Yêu cầu đã quá thời gian phản hồi. Vui lòng thử lại sau.",
+    "notFound": "Không tìm thấy nội dung yêu cầu.",
+    "forbidden": "Tài khoản của bạn chưa được cấp quyền truy cập tài nguyên này.",
+    "validation": "Dữ liệu nhập vào chưa đúng định dạng. Vui lòng kiểm tra lại các trường được đánh dấu.",
+    "serverError": "Hệ thống đang gặp sự cố tạm thời. Đội ngũ kỹ thuật đang tiến hành xử lý."
+  },
+  "empty": {
+    "noResults": "Không tìm thấy kết quả phù hợp với từ khoá.",
+    "noItems": "Chưa có mục nào trong danh sách. Nhấn nút bên dưới để tạo mới.",
+    "noNotifications": "Bạn chưa có thông báo mới nào."
+  },
+  "counts": {
+    "files": "{count, plural, other {# tệp tin}}",
+    "items": "{count, plural, other {# mục}}",
+    "repositories": "{count, plural, =0 {Chưa có kho lưu trữ nào} other {# kho lưu trữ}}"
+  },
+  "settings": {
+    "theme": "Giao diện hiển thị",
+    "themeLight": "Chế độ sáng",
+    "themeDark": "Chế độ tối",
+    "language": "Ngôn ngữ hệ thống",
+    "notifications": "Cài đặt thông báo",
+    "apiKey": "Khoá xác thực API",
+    "generateKey": "Tạo khoá mới"
+  },
+  "releaseNotes": {
+    "header": "Thông tin phiên bản mới",
+    "improvements": "Cải thiện tốc độ phản hồi và tối ưu hoá giao diện người dùng.",
+    "bugFixes": "Khắc phục một số lỗi hiển thị danh sách trên thiết bị di động.",
+    "newFeatures": "Bổ sung tính năng xuất báo cáo định dạng CSV và JSON."
+  }
+}

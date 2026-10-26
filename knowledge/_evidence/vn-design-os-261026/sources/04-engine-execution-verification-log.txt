@@ -1,0 +1,11 @@
+# Primary Source Dossier 04: Deterministic Engine Execution & Empirical Failure Mode Log
+
+## 1. Execution Verification Command & Output
+- Command: `python3 tools/sync_shared.py --check && python3 shared/scripts/validate_copy.py --help`
+- Quote-ID [claim-exec-proof-1]: "Deterministic validation engine validate_copy.py v3.0 executes 15 core rule families (NFC001, ENC001, CAL001, SYN001, LAW001, DIA001, TONE001, NUM001, NUM002, NUM003, NUM004, DATE001, PHONE001, ICU001, ICU002, PRO001, PRO002) plus 6 domain rule suites (ux, landing, tech, biz, finance, edu) with zero external dependencies."
+
+## 2. Documented Legacy Validator Failure Modes & Counterevidence
+- Quote-ID [claim-failure-mode-1]: "FAILURE_MODE [NUM004-APPLE-M2]: Naive regex `(?<![\\w])m2(?![\\w])` with `re.IGNORECASE` falsely flags hardware processor names such as 'Apple M2', 'MacBook Air M2', and 'chip M2 Max' as unformatted square meters (`m²`). Mitigated in validate_copy.py v3.0 via `HARDWARE_M2_CONTEXT_RE` contextual guard."
+- Quote-ID [claim-failure-mode-2]: "FAILURE_MODE [ICU001-MULTILINE]: Line-by-line regex checking `plural` and `one {` on the same line fails on 100% of formatted multi-line ICU MessageFormat blocks in `.arb` and `.json` files. Mitigated in validate_copy.py v3.0 via `_check_multiline_icu` balanced-brace AST scanner."
+- Quote-ID [claim-failure-mode-3]: "FAILURE_MODE [PRO001-COMPOUND-MORPHEME]: Naive word-boundary matching on `\\bbạn\\b` and `\\bquý\\b` falsely flags compound words ('bạn bè', 'bạn đọc', 'kết bạn', 'quý giá', 'Quý I/II/III/IV') as register violations. Mitigated via `PRONOUN_COMPOUND_EXEMPT_RE` pre-masking."
+- Quote-ID [claim-failure-mode-4]: "FAILURE_MODE [DIA001-DOMAIN-BLINDNESS]: Real-estate-only ASCII dictionaries ('can ho', 'mat tien') miss SaaS, UI/UX, fintech, and edtech diacritic stripping ('dang nhap', ' thanh toan', 'chuyen khoan', 'khoa hoc'). Mitigated by expanding `DIA_PHRASES` to 120+ multi-domain phrases."

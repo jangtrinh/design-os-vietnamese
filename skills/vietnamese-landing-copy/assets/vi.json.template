@@ -1,0 +1,65 @@
+{
+  "_comment": "Template khởi tạo localization vi-VN cho landing page SaaS / B2B trong DESIGN:OS. Chuẩn Unicode NFC, đại từ 'bạn' nhất quán, ICU plural chỉ dùng branch 'other'.",
+  "meta": {
+    "title": "Nền tảng tối ưu hoá quy trình làm việc",
+    "description": "Giải pháp quản lý và tự động hoá công việc dành cho doanh nghiệp số. Dùng thử miễn phí 14 ngày, không cần thẻ tín dụng.",
+    "slug": "nen-tang-toi-uu-hoa-quy-trinh",
+    "lang": "vi"
+  },
+  "hero": {
+    "badge": "Chính thức ra mắt phiên bản 2.0",
+    "title": "Tối ưu hoá vận hành doanh nghiệp toàn diện",
+    "subtitle": "Tự động hoá phân công công việc, đối soát dòng tiền và lập báo cáo đa kênh theo thời gian thực.",
+    "primaryCta": "Bắt đầu ngay",
+    "secondaryCta": "Đặt lịch trải nghiệm",
+    "noCreditCard": "Không cần thẻ tín dụng"
+  },
+  "features": {
+    "title": "Tính năng nổi bật",
+    "subtitle": "Thiết kế chuyên biệt cho đội ngũ vận hành và phát triển sản phẩm",
+    "automationTitle": "Tự động hoá quy trình",
+    "automationDesc": "Giảm 70% thời gian thao tác thủ công nhờ luồng xử lý thông minh.",
+    "analyticsTitle": "Báo cáo theo thời gian thực",
+    "analyticsDesc": "Trực quan hoá toàn bộ chỉ số kinh doanh trên cùng một bảng điều khiển.",
+    "securityTitle": "Bảo mật đa lớp",
+    "securityDesc": "Tuân thủ tiêu chuẩn mã hoá chuẩn quốc tế và lưu trữ dữ liệu an toàn."
+  },
+  "pricing": {
+    "title": "Bảng giá dịch vụ",
+    "subtitle": "Lựa chọn gói giải pháp phù hợp với quy mô đội nhóm của bạn",
+    "starterPrice": "299.000 ₫",
+    "starterPeriod": "/tháng",
+    "proPrice": "899.000 ₫",
+    "proPeriod": "/tháng",
+    "enterprisePrice": "Liên hệ báo giá",
+    "vatNote": "Giá chưa bao gồm VAT",
+    "annualDiscount": "Tiết kiệm 20% khi thanh toán theo năm"
+  },
+  "leadForm": {
+    "title": "Đăng ký nhận tư vấn chuyên sâu",
+    "subtitle": "Chuyên viên giải pháp của chúng tôi sẽ liên hệ trong vòng 24 giờ làm việc.",
+    "fields": {
+      "name": "Họ và tên",
+      "email": "Địa chỉ email",
+      "company": "Tên doanh nghiệp",
+      "phone": "Số điện thoại liên hệ"
+    },
+    "consentNotice": "Tôi đồng ý để công ty thu thập và xử lý thông tin cá nhân theo Chính sách bảo mật nhằm mục đích liên hệ tư vấn giải pháp.",
+    "marketingConsent": "Tôi đồng ý nhận bản tin cập nhật công nghệ và ưu đãi định kỳ.",
+    "submit": "Gửi yêu cầu tư vấn",
+    "success": "Cảm ơn bạn đã gửi thông tin. Chúng tôi sẽ phản hồi trong thời gian sớm nhất."
+  },
+  "counts": {
+    "members": "{count, plural, other {# thành viên}}",
+    "projects": "{count, plural, other {# dự án}}"
+  },
+  "footer": {
+    "companyName": "Công ty Cổ phần Công nghệ DESIGN:OS Việt Nam",
+    "taxId": "Mã số doanh nghiệp: 0108912345 do Sở Kế hoạch và Đầu tư TP. Hồ Chí Minh cấp ngày 15/03/2021",
+    "address": "Tầng 18, Toà nhà Landmark 81, số 720A Điện Biên Phủ, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh",
+    "hotline": "1900 6868",
+    "email": "contact@design-os.vn",
+    "moitNotice": "Đã thông báo Bộ Công Thương",
+    "copyright": "© 2026 DESIGN:OS. Toàn bộ bản quyền được bảo lưu."
+  }
+}

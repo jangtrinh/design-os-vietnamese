@@ -1,0 +1,107 @@
+{
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": ["Be Vietnam Pro", "Plus Jakarta Sans", "Inter", "sans-serif"],
+        "$description": "Primary sans font stack optimized for Vietnamese UI and stacked diacritics"
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": ["JetBrains Mono", "SF Mono", "Roboto Mono", "monospace"],
+        "$description": "Tabular and code font stack with Vietnamese currency symbol support"
+      },
+      "serif": {
+        "$type": "fontFamily",
+        "$value": ["Newsreader", "Lora", "Merriweather", "serif"],
+        "$description": "Editorial serif font stack with verified uppercase diacritic positioning"
+      }
+    },
+    "lineHeight": {
+      "display2xl": {
+        "$type": "number",
+        "$value": 1.20,
+        "$description": "Mandatory floor >= 1.18 for 60px-72px display headings to prevent diacritic clipping"
+      },
+      "displayXl": {
+        "$type": "number",
+        "$value": 1.20,
+        "$description": "Mandatory floor >= 1.18 for 48px-56px display headings"
+      },
+      "headingLg": {
+        "$type": "number",
+        "$value": 1.25,
+        "$description": "Mandatory floor >= 1.22 for 32px-40px section headings"
+      },
+      "headingMd": {
+        "$type": "number",
+        "$value": 1.30,
+        "$description": "Mandatory floor >= 1.25 for 24px-28px card titles"
+      },
+      "headingSm": {
+        "$type": "number",
+        "$value": 1.32,
+        "$description": "Mandatory floor >= 1.28 for 18px-20px subheadings and modal headers"
+      },
+      "bodyLg": {
+        "$type": "number",
+        "$value": 1.55,
+        "$description": "Mandatory floor >= 1.50 for 16px-18px body prose to prevent diacritic crowding"
+      },
+      "bodyMd": {
+        "$type": "number",
+        "$value": 1.55,
+        "$description": "Mandatory floor >= 1.50 for 14px-15px standard interface text"
+      },
+      "bodySm": {
+        "$type": "number",
+        "$value": 1.50,
+        "$description": "Mandatory floor >= 1.45 for 12px-13px helper text and metadata"
+      },
+      "caption": {
+        "$type": "number",
+        "$value": 1.40,
+        "$description": "Mandatory floor >= 1.35 for 10px-11px micro-labels and badges"
+      }
+    },
+    "letterSpacing": {
+      "tight": {
+        "$type": "dimension",
+        "$value": "-0.01em",
+        "$description": "Max negative tracking allowed on display headings (never exceed -0.01em for vi-VN)"
+      },
+      "normal": {
+        "$type": "dimension",
+        "$value": "0em",
+        "$description": "Neutral tracking for body and headings"
+      },
+      "wide": {
+        "$type": "dimension",
+        "$value": "0.03em",
+        "$description": "Expanded tracking for uppercase badges and abbreviations"
+      }
+    }
+  },
+  "componentCaps": {
+    "button": {
+      "$type": "number",
+      "$value": 24,
+      "$description": "Max recommended character cap for primary and secondary buttons (hard limit 28)"
+    },
+    "tab": {
+      "$type": "number",
+      "$value": 18,
+      "$description": "Max character cap for navigation tabs and segmented control items"
+    },
+    "badge": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "Max character cap for status badges and pills"
+    },
+    "toast": {
+      "$type": "number",
+      "$value": 90,
+      "$description": "Max character cap for transient snackbar and toast notifications"
+    }
+  }
+}

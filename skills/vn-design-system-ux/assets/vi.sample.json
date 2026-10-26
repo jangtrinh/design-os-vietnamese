@@ -1,0 +1,53 @@
+{
+  "auth": {
+    "button": {
+      "signup": "Đăng ký",
+      "submit": "Đăng nhập"
+    }
+  },
+  "billing": {
+    "badge": {
+      "active": "Đang hoạt động",
+      "overdue": "Quá hạn",
+      "pending": "Đang chờ duyệt"
+    }
+  },
+  "cart": {
+    "item_count": "{count, plural, other {# mục}}"
+  },
+  "dashboard": {
+    "tab": {
+      "analytics": "Phân tích",
+      "billing": "Thanh toán",
+      "overview": "Tổng quan"
+    }
+  },
+  "member": {
+    "invite_message": "Chào mừng {name}! Bạn đã tham gia không gian làm việc."
+  },
+  "notification": {
+    "toast": {
+      "deleted": "Đã xóa 3 tệp. Hoàn tác",
+      "saved": "Đã lưu thay đổi."
+    }
+  },
+  "project": {
+    "button": {
+      "delete": "Xóa vĩnh viễn"
+    },
+    "cta": {
+      "create": "Tạo dự án mới"
+    },
+    "empty": {
+      "description": "Tạo dự án đầu tiên để bắt đầu theo dõi tiến độ công việc.",
+      "title": "Chưa có dự án nào"
+    },
+    "error": {
+      "network": "Không thể tải dự án do mất kết nối. Kiểm tra mạng và thử lại."
+    },
+    "modal": {
+      "delete_desc": "Toàn bộ dữ liệu sẽ bị xóa vĩnh viễn. Hành động này không thể hoàn tác.",
+      "delete_title": "Xóa vĩnh viễn dự án?"
+    }
+  }
+}

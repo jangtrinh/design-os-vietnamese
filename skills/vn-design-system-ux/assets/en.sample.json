@@ -1,0 +1,53 @@
+{
+  "auth": {
+    "button": {
+      "signup": "Sign up",
+      "submit": "Sign in"
+    }
+  },
+  "billing": {
+    "badge": {
+      "active": "Active",
+      "overdue": "Overdue",
+      "pending": "Pending"
+    }
+  },
+  "cart": {
+    "item_count": "{count, plural, one {# item} other {# items}}"
+  },
+  "dashboard": {
+    "tab": {
+      "analytics": "Analytics",
+      "billing": "Billing",
+      "overview": "Overview"
+    }
+  },
+  "member": {
+    "invite_message": "Welcome {name}! You have joined the workspace."
+  },
+  "notification": {
+    "toast": {
+      "deleted": "3 files deleted. Undo",
+      "saved": "Changes saved."
+    }
+  },
+  "project": {
+    "button": {
+      "delete": "Delete permanently"
+    },
+    "cta": {
+      "create": "Create project"
+    },
+    "empty": {
+      "description": "Create your first project to start tracking milestones.",
+      "title": "No projects created yet"
+    },
+    "error": {
+      "network": "Unable to load projects. Check connection and retry."
+    },
+    "modal": {
+      "delete_desc": "All data will be permanently deleted. This action cannot be undone.",
+      "delete_title": "Permanently delete project?"
+    }
+  }
+}

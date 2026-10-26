@@ -1,0 +1,42 @@
+[
+  {
+    "id": "b2b-zns-and-admin-comms",
+    "path": "b2b-zns-and-admin-comms.md",
+    "sha256": "7758bcd43f97e5a645503b47e2aaec794833c842d1ec96aa1d32c3e58ec1a15f"
+  },
+  {
+    "id": "education-moet-and-edtech",
+    "path": "education-moet-and-edtech.md",
+    "sha256": "a3cb049ee276f8a1acabf02948464e29ee207cae8e20465bdd12619cb051e21b"
+  },
+  {
+    "id": "finance-tt99-and-fintech",
+    "path": "finance-tt99-and-fintech.md",
+    "sha256": "2b050822da96f65675e633fc125cf7a5854c16c881581cec3f1ce826baa6921e"
+  },
+  {
+    "id": "locale-and-icu-engineering",
+    "path": "locale-and-icu-engineering.md",
+    "sha256": "e53879c5a2a235a137bfda47865f4ad5d8a97d6f8d2389331918283d9dae4237"
+  },
+  {
+    "id": "register-and-pragmatics",
+    "path": "register-and-pragmatics.md",
+    "sha256": "a2466eed613b9471d2f6f1af834ef23ecebbfc4f923b08e19109045b85fa0195"
+  },
+  {
+    "id": "statutory-compliance-vi",
+    "path": "statutory-compliance-vi.md",
+    "sha256": "465df35eae8589010dadb7f2615d3c6ee358df9d8b4e75953bb782d21b0e5e1f"
+  },
+  {
+    "id": "typography-and-vertical-metrics",
+    "path": "typography-and-vertical-metrics.md",
+    "sha256": "2f49a2e34cc0fbe3f7f3879b9f86d650477ef718462923db309f9a859491f7cc"
+  },
+  {
+    "id": "unicode-and-phonology",
+    "path": "unicode-and-phonology.md",
+    "sha256": "61a9bb5c33f88715b68dc059fd0c9bf851d97d755faf1e6ebc8805aa2e4ee852"
+  }
+]
