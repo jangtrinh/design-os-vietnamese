@@ -1,7 +1,7 @@
 ---
 name: vietnamese-finance-copy
 description: Writes, localizes, and audits native-quality Vietnamese (vi-VN) financial, banking, accounting, and FinTech communications. Enforces statutory financial statement terminology under Thông tư 99/2025/TT-BTC (mandatory rename of Bảng cân đối kế toán to Báo cáo tình hình tài chính from 01/01/2026), electronic invoice (hóa đơn điện tử) field requirements and tax formatting under Nghị định 123/2020/NĐ-CP and Nghị định 70/2025/NĐ-CP (MST, thuế GTGT, số tiền bằng chữ), consumer lending and BNPL interest transparency under Thông tư 43/2016/TT-NHNN and Thông tư 18/2019/TT-NHNN (explicit fee schedule and total repayment cost for promotional 0% rates), securities solicitation restrictions under Luật Chứng khoán 2019 and Nghị định 38/2018/NĐ-CP (strict prohibition of guaranteed-return claims), investment-linked insurance disclaimers under Thông tư 67/2023/TT-BTC Điều 53 (mandating policyholder risk acknowledgment and non-deposit disclosure), digital asset regulatory parameters under Nghị quyết 05/2025/NQ-CP and Luật 71/2025, and FinTech payment microcopy (VietQR / NAPAS 247 instant interbank transfers, chip-based CCCD NFC scanning UX, and Quyết định 2345/QĐ-NHNN biometric authentication step-up rules for transactions over 10.000.000 ₫).
-license: MIT
+license: PolyForm-Shield-1.0.0
 metadata:
   version: "2.0.0"
   repository: "https://github.com/jangtrinh/design-os-vietnamese"

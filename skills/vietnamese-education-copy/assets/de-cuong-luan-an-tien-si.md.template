@@ -1,0 +1,76 @@
+# BỘ GIÁO DỤC VÀ ĐÀO TẠO
+## TRƯỜNG ĐẠI HỌC BÁCH KHOA — ĐẠI HỌC QUỐC GIA
+
+---
+
+# ĐỀ CƯƠNG CHI TIẾT NGHIÊN CỨU LUẬN ÁN TIẾN SĨ
+**Chuyên ngành:** Khoa học máy tính  
+**Mã số chuyên ngành:** 9480101  
+*Căn cứ quy chế tuyển sinh và đào tạo trình độ tiến sĩ ban hành kèm theo Thông tư 18/2021/TT-BGDĐT của Bộ Giáo dục và Đào tạo.*
+
+---
+
+## I. THÔNG TIN HỌC THUẬT VÀ NHÂN SỰ HƯỚNG DẪN
+
+- **Tên đề tài luận án:** Nghiên cứu kiến trúc mô hình ngôn ngữ lớn thích ứng ngữ cảnh tiếng Việt phục vụ trích xuất tri thức y tế
+- **Họ và tên nghiên cứu sinh:** Trần Văn Dũng
+- **Mã số nghiên cứu sinh:** NCS2024KHMT012
+- **Khóa đào tạo tiến sĩ:** Khóa 34 (Niên khóa 2024–2027)
+- **Người hướng dẫn khoa học 1:** PGS.TS. Nguyễn Minh Hải (Chức danh Phó Giáo sư, Học vị Tiến sĩ khoa học)
+- **Người hướng dẫn khoa học 2:** TS. Lê Quang Vinh (Học vị Tiến sĩ chuyên ngành Khoa học máy tính)
+- **Đơn vị chuyên môn quản lý:** Bộ môn Hệ thống thông tin — Khoa Khoa học và Kỹ thuật Máy tính
+
+---
+
+## II. TỔNG QUAN TÌNH HÌNH NGHIÊN CỨU (TIỂU LUẬN TỔNG QUAN)
+
+Nghiên cứu sinh đã hoàn thành Tiểu luận tổng quan về các phương pháp tinh chỉnh mô hình ngôn ngữ phục vụ xử lý văn bản chuyên ngành. Báo cáo phân tích hệ thống 120 công trình khoa học quốc tế trong danh mục Web of Science (SCIE) và Scopus giai đoạn 2020–2025. Kết quả tổng quan chỉ ra rằng các mô hình ngôn ngữ lớn hiện tại gặp khó khăn khi xử lý các cấu trúc thanh điệu phức tạp và từ ghép đa nghĩa trong ngữ liệu y khoa tiếng Việt. Đây là tiền đề khoa học vững chắc để tác giả triển khai nghiên cứu độc lập.
+
+---
+
+## III. MỤC TIÊU VÀ ĐÓNG GÓP MỚI DỰ KIẾN CỦA LUẬN ÁN
+
+### 1. Mục tiêu tổng quát
+Xây dựng khung kiến trúc học sâu tối ưu hóa việc nhúng ngữ nghĩa tiếng Việt, giảm thiểu hiện tượng ảo giác thông tin và nâng cao độ chính xác trích xuất thực thể y tế.
+
+### 2. Những đóng góp mới dự kiến về mặt học thuật
+- **Đóng góp lý luận:** Đề xuất cơ chế chú ý định hướng âm vị và thanh điệu giúp bảo toàn đặc trưng hình thái học tiếng Việt trong quá trình nén trọng số mô hình.
+- **Đóng góp thực tiễn:** Xây dựng tập ngữ liệu đối soát thực thể lâm sàng gồm 50.000 câu văn bản y khoa gán nhãn chuẩn hóa và công bố mã nguồn mở phục vụ cộng đồng học thuật.
+
+---
+
+## IV. KẾ HOẠCH THỰC HIỆN 03 CHUYÊN ĐỀ TIẾN SĨ
+
+Căn cứ quy định đào tạo tiến sĩ, nghiên cứu sinh đăng ký hoàn thành 03 Chuyên đề tiến sĩ với nội dung học thuật chuyên sâu:
+
+| Số thứ tự | Tên chuyên đề tiến sĩ | Khối lượng tín chỉ | Cán bộ hướng dẫn chuyên đề | Thời gian hoàn thành |
+|---|---|---|---|---|
+| Chuyên đề 1 | Cơ sở lý luận về biểu diễn từ và cơ chế chú ý trong mô hình ngôn ngữ học sâu | 02 tín chỉ | PGS.TS. Nguyễn Minh Hải | Học kỳ I (Tháng 12/2024) |
+| Chuyên đề 2 | Phương pháp nén mô hình và lượng tử hóa thích ứng trên ngữ liệu chuyên ngành | 02 tín chỉ | TS. Lê Quang Vinh | Học kỳ II (Tháng 06/2025) |
+| Chuyên đề 3 | Kỹ thuật đối soát thực nghiệm và đánh giá độ tin cậy trong suy luận y khoa | 02 tín chỉ | PGS.TS. Nguyễn Minh Hải | Học kỳ III (Tháng 12/2025) |
+
+---
+
+## V. PHƯƠNG PHÁP NGHIÊN CỨU VÀ ĐÁNH GIÁ THỰC NGHIỆM
+
+Nghiên cứu sinh áp dụng phương pháp nghiên cứu định lượng thực nghiệm đối chứng. Hiệu năng mô hình được đo lường thông qua các chỉ số F1-Score, BLEU, ROUGE và kiểm định ý nghĩa thống kê Student với ngưỡng p < 0,05 và khoảng tin cậy 95,0%. Mọi số liệu đo đạc thực nghiệm đều được thực hiện độc lập trên cụm máy chủ tính toán hiệu năng cao của phòng thí nghiệm trọng điểm. Tác giả cam kết công khai tập dữ liệu kiểm thử và quy trình thực nghiệm để bảo đảm tính lặp lại của kết quả nghiên cứu.
+
+---
+
+## VI. KẾ HOẠCH CÔNG BỐ KHOA HỌC VÀ BẢO VỆ LUẬN ÁN
+
+- **Công bố quốc tế:** Dự kiến công bố tối thiểu 02 bài báo khoa học trên các tạp chí quốc tế uy tín thuộc danh mục SCIE / Scopus nhóm Q1 hoặc Q2 với vai trò tác giả chính.
+- **Công bố trong nước:** Tối thiểu 01 bài báo đăng trên tạp chí khoa học chuyên ngành được Hội đồng Giáo sư Nhà nước tính điểm từ 0,75 điểm trở lên.
+- **Kế hoạch bảo vệ luận án:**
+  - Hoàn thành Tiểu luận tổng quan và 03 Chuyên đề tiến sĩ: Tháng 12/2025.
+  - Bảo vệ đề cương và báo cáo định kỳ cấp Bộ môn: 06 tháng một lần.
+  - Đánh giá luận án tại Hội đồng đánh giá luận án cấp đơn vị chuyên môn: Tháng 03/2027.
+  - Phản biện độc lập và bảo vệ chính thức tại Hội đồng đánh giá luận án tiến sĩ cấp cơ sở: Tháng 08/2027.
+
+---
+
+## VII. XÁC NHẬN CỦA ĐƠN VỊ VÀ NGƯỜI HƯỚNG DẪN KHOA HỌC
+
+- **Nghiên cứu sinh thực hiện:** Nghiên cứu sinh Trần Văn Dũng (Đã ký số)
+- **Người hướng dẫn khoa học chính:** PGS.TS. Nguyễn Minh Hải (Đã phê duyệt đề cương)
+- **Trưởng Khoa Khoa học và Kỹ thuật Máy tính:** GS.TS. Phạm Hoàng Long (Đã phê duyệt)

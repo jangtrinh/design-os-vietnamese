@@ -2,7 +2,7 @@
 
 # Educational, Academic, & EdTech Glossary (`design-os-vietnamese`)
 
-This glossary provides standardized Vietnamese educational, pedagogical, university administrative, and EdTech terminology.
+This glossary provides standardized Vietnamese educational, pedagogical, university administrative, and EdTech terminology across the 7-tier continuum (Mầm non $\rightarrow$ Tiểu học $\rightarrow$ THCS/THPT $\rightarrow$ GDNN $\rightarrow$ Đại học $\rightarrow$ Thạc sĩ $\rightarrow$ Tiến sĩ & GS/PGS).
 The table below is parsed by `validate_copy.py` at runtime; every row acts as an automated lint rule firing `CAL001` with declared severity.
 
 ## 1. Machine-Readable Educational & EdTech Terms
@@ -77,3 +77,38 @@ The table below is parsed by `validate_copy.py` at runtime; every row acts as an
 | parental consent | `sự cho phép của cha mẹ đơn giản` | `sự đồng ý của phụ huynh` | error |
 | student identity card | `chứng minh nhân dân sinh viên` | `thẻ sinh viên / thẻ học sinh` | error |
 | student conduct evaluation | `hành vi cư xử cá nhân` | `đánh giá rèn luyện / xếp loại hạnh kiểm` | error |
+| academic rank professor | `học vị giáo sư` | `chức danh giáo sư / học hàm giáo sư` | error |
+| academic rank associate professor | `học vị phó giáo sư` | `chức danh phó giáo sư / học hàm phó giáo sư` | error |
+| doctoral academic degree | `học hàm tiến sĩ` | `học vị tiến sĩ` | error |
+| master academic degree | `học hàm thạc sĩ` | `học vị thạc sĩ` | error |
+| bachelor academic degree | `học hàm cử nhân` | `học vị cử nhân / bằng cử nhân` | error |
+| engineer academic degree | `học hàm kỹ sư` | `học vị kỹ sư / bằng kỹ sư` | error |
+| undergraduate thesis mismatch | `luận án cử nhân` | `khóa luận tốt nghiệp / đồ án tốt nghiệp` | error |
+| undergraduate university thesis mismatch | `luận án đại học` | `khóa luận tốt nghiệp` | error |
+| undergraduate degree dissertation mismatch | `luận án tốt nghiệp đại học` | `khóa luận tốt nghiệp / đồ án tốt nghiệp` | error |
+| master thesis mismatch | `luận án thạc sĩ` | `luận văn thạc sĩ / đề án thạc sĩ` | error |
+| doctoral thesis mismatch | `khóa luận tiến sĩ` | `luận án tiến sĩ` | error |
+| doctoral project mismatch | `đồ án tiến sĩ` | `luận án tiến sĩ` | error |
+| postgraduate coursework thesis | `khóa luận thạc sĩ` | `luận văn thạc sĩ / đề án thạc sĩ` | error |
+| vocational module | `học phần thợ` | `mô-đun đào tạo nghề` | error |
+| vocational credit | `tín dụng tay nghề` | `tín chỉ nghề nghiệp` | error |
+| national occupational skill standards | `chuẩn tay nghề quốc tế thô` | `chuẩn kỹ năng nghề quốc gia` | error |
+| enterprise internship | `đi làm việc ngoài` | `thực tập tại doanh nghiệp` | error |
+| intermediate vocational degree | `bằng thợ trung học` | `bằng tốt nghiệp trung cấp` | error |
+| vocational college diploma | `bằng đại học thực hành cấp 2` | `bằng tốt nghiệp cao đẳng` | error |
+| practice bachelor title | `cử nhân thực tập` | `cử nhân thực hành` | error |
+| practice engineer title | `kỹ sư thực tập nghề` | `kỹ sư thực hành` | error |
+| preschool developmental milestone | `cột mốc trưởng thành trẻ` | `chỉ số phát triển của trẻ` | error |
+| preschool routine health record | `sách y tế mẫu giáo` | `sổ theo dõi sức khỏe trẻ` | error |
+| early childhood physical domain | `lĩnh vực thể xác` | `lĩnh vực phát triển thể chất` | error |
+| early childhood cognitive domain` | `lĩnh vực nhận biết trí khôn` | `lĩnh vực phát triển nhận thức` | error |
+| early childhood language domain | `lĩnh vực ăn nói` | `lĩnh vực phát triển ngôn ngữ` | error |
+| early childhood socio-emotional domain | `lĩnh vực cảm xúc xã hội thô` | `lĩnh vực phát triển tình cảm và kỹ năng xã hội` | error |
+| early childhood aesthetic domain | `lĩnh vực làm đẹp nghệ thuật` | `lĩnh vực phát triển thẩm mỹ` | error |
+| doctoral candidate | `thí sinh bác sĩ` | `nghiên cứu sinh` | error |
+| master student | `học sinh cao học` | `học viên cao học` | error |
+| doctoral thesis advisor | `người dạy tiến sĩ` | `người hướng dẫn khoa học` | error |
+| doctoral literature review | `bài tiểu luận nhỏ` | `tiểu luận tổng quan` | error |
+| doctoral thematic topic | `chủ đề nghiên cứu nhỏ` | `chuyên đề tiến sĩ` | error |
+| thesis defense council | `hội đồng bảo hộ luận văn` | `hội đồng đánh giá luận văn / luận án` | error |
+| institutional defense | `bảo vệ trường lớp` | `bảo vệ cấp cơ sở` | error |

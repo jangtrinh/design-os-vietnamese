@@ -15,9 +15,14 @@
     "claim-statutory-compliance",
     "claim-typography-metrics",
     "claim-finance-tt99",
-    "claim-edtech-moet"
+    "claim-edtech-moet",
+    "claim-edtech-continuum",
+    "claim-healthcare-med",
+    "claim-legal-contracts",
+    "claim-hospitality-travel",
+    "claim-hr-labor"
   ],
-  "minimum_independent_sources": 4,
+  "minimum_independent_sources": 5,
   "last_weighted_delta": 0.0,
   "researcher_runtime": "gemini-3.8-flash-worker",
   "is_target_version_matched": true,

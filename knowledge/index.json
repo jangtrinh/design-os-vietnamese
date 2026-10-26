@@ -7,12 +7,32 @@
   {
     "id": "education-moet-and-edtech",
     "path": "education-moet-and-edtech.md",
-    "sha256": "a3cb049ee276f8a1acabf02948464e29ee207cae8e20465bdd12619cb051e21b"
+    "sha256": "af8e65134987d19fc2aa9a28de3893e72e4b81c26187e372f21d8ba0863e5dd4"
   },
   {
     "id": "finance-tt99-and-fintech",
     "path": "finance-tt99-and-fintech.md",
     "sha256": "2b050822da96f65675e633fc125cf7a5854c16c881581cec3f1ce826baa6921e"
+  },
+  {
+    "id": "healthcare-by-law-and-emr",
+    "path": "healthcare-by-law-and-emr.md",
+    "sha256": "3ee40e62aa9f26643cd676770d0874717da88735490b07c68731cadf6dbc1e32"
+  },
+  {
+    "id": "hospitality-aviation-tourism",
+    "path": "hospitality-aviation-tourism.md",
+    "sha256": "110bedb62f0deb93c66bb9af709d25ac7bd27fe6349d221ac9dc14267f72bc85"
+  },
+  {
+    "id": "hr-labor-code-and-bhxh",
+    "path": "hr-labor-code-and-bhxh.md",
+    "sha256": "f9e79df66dcb71375f5533043c9feef75d2ad8c45ed16dac43dd5267d6dae3bb"
+  },
+  {
+    "id": "legal-contracts-civil-commercial",
+    "path": "legal-contracts-civil-commercial.md",
+    "sha256": "77d9888516c19bfc5c2be68295eb2fe57cb2740bcec8c404e830d7eb2cb48aa5"
   },
   {
     "id": "locale-and-icu-engineering",

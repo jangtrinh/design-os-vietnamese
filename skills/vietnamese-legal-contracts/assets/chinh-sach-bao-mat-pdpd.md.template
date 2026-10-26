@@ -1,0 +1,82 @@
+# CHÍNH SÁCH BẢO MẬT VÀ THỎA THUẬN XỬ LÝ DỮ LIỆU CÁ NHÂN (PDPD)
+**Phiên bản: 2026.1 - Có hiệu lực từ ngày 01 tháng 01 năm 2026**
+
+- *Căn cứ Nghị định số 13/2023/NĐ-CP ngày 17/04/2023 của Chính phủ về bảo vệ dữ liệu cá nhân;*
+- *Căn cứ Luật An toàn thông tin mạng số 86/2015/QH13 và Luật An ninh mạng số 24/2018/QH14;*
+- *Căn cứ Luật Bảo vệ quyền lợi người tiêu dùng số 19/2023/QH15.*
+
+Chính sách bảo mật và Thỏa thuận xử lý dữ liệu cá nhân này ("Chính sách") quy định nguyên tắc, mục đích, phạm vi và biện pháp xử lý dữ liệu cá nhân của Khách hàng và Người dùng ("Chủ thể dữ liệu") do Công ty Cổ phần Công nghệ Thiết kế Việt Nam ("Bên Kiểm soát dữ liệu cá nhân" hoặc "Công ty") thu thập và xử lý.
+
+---
+
+## Điều 1: Định nghĩa và Vai trò Pháp lý
+
+1. **Chủ thể dữ liệu:** Là cá nhân được dữ liệu cá nhân phản ánh, bao gồm người dùng truy cập ứng dụng, khách hàng đăng ký tài khoản và đại diện pháp nhân giao kết hợp đồng với Công ty.
+2. **Dữ liệu cá nhân:** Là thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự trên môi trường điện tử gắn liền với một cá nhân cụ thể hoặc giúp xác định một cá nhân cụ thể theo Điều 2 của Nghị định 13/2023/NĐ-CP.
+3. **Bên Kiểm soát dữ liệu cá nhân:** Là Công ty Cổ phần Công nghệ Thiết kế Việt Nam, đơn vị quyết định mục đích và phương tiện xử lý dữ liệu cá nhân của Chủ thể dữ liệu.
+4. **Bên Xử lý dữ liệu cá nhân:** Là các đơn vị cung cấp hạ tầng điện toán đám mây, trung tâm dữ liệu và đối tác dịch vụ thanh toán thực hiện việc xử lý dữ liệu thay mặt Công ty trên cơ sở Thỏa thuận xử lý dữ liệu (DPA).
+
+---
+
+## Điều 2: Loại Dữ liệu Cá nhân Thu thập và Xử lý
+
+1. **Dữ liệu cá nhân cơ bản:**
+   - Họ, chữ đệm và tên khai sinh, tên gọi khác (nếu có);
+   - Ngày, tháng, năm sinh;
+   - Số điện thoại liên lạc, địa chỉ thư điện tử (email);
+   - Địa chỉ thường trú, địa chỉ liên hệ giao dịch;
+   - Thông tin tài khoản số và dữ liệu định danh trực tuyến (IP, Cookies phiên làm việc).
+2. **Dữ liệu cá nhân nhạy cảm:**
+   - Thông tin thanh toán, số tài khoản ngân hàng phục vụ đối soát giao dịch;
+   - Dữ liệu vị trí địa lý của thiết bị khi sử dụng các tính năng định vị thời gian thực được Chủ thể dữ liệu cấp quyền rõ ràng.
+
+---
+
+## Điều 3: Mục đích và Nguyên tắc Xử lý Dữ liệu
+
+1. **Mục đích xử lý:**
+   - Cung cấp sản phẩm, dịch vụ phần mềm và duy trì tài khoản cho Chủ thể dữ liệu;
+   - Thực hiện nghĩa vụ thanh toán, xuất hóa đơn điện tử theo quy định pháp luật;
+   - Hỗ trợ kỹ thuật, giải quyết khiếu nại và phòng ngừa gian lận thương mại điện tử;
+   - Tuân thủ các yêu cầu cung cấp thông tin theo lệnh của cơ quan nhà nước có thẩm quyền.
+2. **Nguyên tắc xử lý dữ liệu:**
+   - Dữ liệu cá nhân chỉ được xử lý khi có sự đồng ý tự nguyện của Chủ thể dữ liệu, trừ các trường hợp ngoại lệ luật định tại Điều 17 của Nghị định 13/2023/NĐ-CP;
+   - Áp dụng nguyên tắc giới hạn mục đích và nguyên tắc tối thiểu hóa dữ liệu: Chỉ thu thập đúng phạm vi cần thiết cho việc vận hành dịch vụ.
+
+---
+
+## Điều 4: Quyền của Chủ thể Dữ liệu
+
+Theo quy định tại Điều 9 của Nghị định 13/2023/NĐ-CP, Chủ thể dữ liệu được bảo đảm đầy đủ các quyền hợp pháp sau:
+
+1. **Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân liên quan đến bản thân thông qua Chính sách này.
+2. **Quyền đồng ý:** Được quyền quyết định đồng ý hoặc từ chối cho phép xử lý dữ liệu cá nhân.
+3. **Quyền truy cập:** Được truy cập vào hệ thống để xem, chỉnh sửa hoặc cập nhật dữ liệu cá nhân của Chủ thể dữ liệu.
+4. **Quyền rút lại sự đồng ý:** Chủ thể dữ liệu có quyền rút lại sự đồng ý cho phép xử lý dữ liệu cá nhân bất kỳ lúc nào bằng cách gửi yêu cầu bằng văn bản hoặc thông qua tính năng cài đặt quyền riêng tư trên giao diện tài khoản. Việc rút lại sự đồng ý không làm ảnh hưởng đến tính hợp pháp của các hoạt động xử lý dữ liệu đã được thực hiện trước đó.
+5. **Quyền yêu cầu xóa dữ liệu:** Chủ thể dữ liệu có quyền xóa dữ liệu hoặc gửi yêu cầu xóa dữ liệu cá nhân khi dữ liệu không còn cần thiết cho mục đích ban đầu hoặc khi Chủ thể dữ liệu đã rút lại sự đồng ý. Công ty cam kết thực hiện việc xóa dữ liệu trong thời hạn 72 giờ kể từ khi nhận được yêu cầu hợp lệ, trừ trường hợp pháp luật có quy định lưu trữ bắt buộc.
+6. **Quyền hạn chế xử lý dữ liệu:** Được yêu cầu hạn chế việc xử lý dữ liệu cá nhân trong thời gian kiểm tra tính chính xác của dữ liệu.
+7. **Quyền cung cấp dữ liệu:** Được yêu cầu Công ty cung cấp bản sao dữ liệu cá nhân ở định dạng điện tử tiêu chuẩn.
+8. **Quyền phản đối xử lý dữ liệu:** Được quyền phản đối Công ty xử lý dữ liệu cá nhân cho mục đích quảng cáo hoặc nghiên cứu thị trường.
+9. **Quyền khiếu nại, tố cáo, khởi kiện:** Được quyền khiếu nại, tố cáo hoặc khởi kiện theo quy định của pháp luật khi nhận thấy quyền lợi về dữ liệu cá nhân bị xâm phạm.
+10. **Quyền yêu cầu bồi thường thiệt hại:** Được yêu cầu bồi thường thiệt hại theo quy định pháp luật khi xảy ra hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân gây thiệt hại thực tế.
+11. **Quyền tự bảo vệ:** Được quyền thực hiện các biện pháp tự bảo vệ hợp pháp theo quy định của Bộ luật Dân sự 2015.
+
+---
+
+## Điều 5: Biện pháp An toàn và Thủ tục Xử lý Sự cố Vi phạm Dữ liệu
+
+1. Công ty thiết lập các biện pháp an ninh mạng kỹ thuật gồm mã hóa đầu cuối (AES-256), giao thức bảo mật đường truyền (TLS 1.3), phân quyền truy cập nghiêm ngặt và lưu vết nhật ký hệ thống độc lập.
+2. Trường hợp phát hiện sự cố vi phạm quy định bảo vệ dữ liệu cá nhân dẫn đến nguy cơ lộ lọt hoặc mất mát dữ liệu, Công ty sẽ:
+   - Thông báo ngay cho Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05) thuộc Bộ Công an trong thời hạn tối đa 72 giờ kể từ khi phát hiện sự cố theo Điều 23 của Nghị định 13/2023/NĐ-CP;
+   - Thông báo bằng văn bản hoặc thư điện tử cho các Chủ thể dữ liệu bị ảnh hưởng kèm theo hướng dẫn giảm thiểu tổn thất trong thời hạn luật định.
+
+---
+
+## Điều 6: Địa chỉ Liên hệ của Bộ phận Bảo vệ Dữ liệu Cá nhân (DPO)
+
+Chủ thể dữ liệu có thể thực hiện các quyền hợp pháp hoặc gửi câu hỏi về việc xử lý dữ liệu cá nhân tới:
+
+- **Bộ phận Bảo vệ Dữ liệu Cá nhân (DPO) - Công ty Cổ phần Công nghệ Thiết kế Việt Nam**
+- **Địa chỉ:** Tầng 12, Tòa nhà Công nghệ, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam
+- **Thư điện tử chuyên trách:** privacy@designos.vn
+- **Thời hạn phản hồi yêu cầu:** Trong thời hạn không quá 72 giờ làm việc kể từ thời điểm tiếp nhận yêu cầu hợp lệ.

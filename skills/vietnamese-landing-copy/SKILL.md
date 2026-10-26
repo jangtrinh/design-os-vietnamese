@@ -1,7 +1,7 @@
 ---
 name: vietnamese-landing-copy
 description: Writes, optimizes, and audits high-converting native Vietnamese (vi-VN) landing pages and digital marketing copy across 6 critical verticals — SaaS/AI developer tools, FinTech & digital banking, E-Commerce & D2C, Real Estate & luxury hospitality, Healthcare & aesthetics, and Enterprise B2B solutions. Master of Persuade-mode scroll architecture, benefit-driven Hero headline formulas, conventional CTAs, lead-form PDPA consent (Nghị định 13/2023/NĐ-CP), statutory e-commerce footer disclosures (Nghị định 52/2013/NĐ-CP & 85/2021/NĐ-CP Bộ Công Thương), and typography/locale gates. Fixes translationese calques, passive agent corruptions, illegal advertising superlatives, and broken Unicode or number formatting.
-license: MIT
+license: PolyForm-Shield-1.0.0
 metadata:
   version: "2.0.0"
   repository: "https://github.com/jangtrinh/design-os-vietnamese"

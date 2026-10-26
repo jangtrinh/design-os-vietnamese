@@ -21,6 +21,10 @@ Modern software interfaces demand concise, immediate, and high-clarity copy. Tra
 <!-- machine-readable: calques -->
 | ❌ Cụm từ cấm / Lạm dụng | ✅ Cách diễn đạt tự nhiên | Gợi ý thay thế / Ngữ cảnh | Severity |
 |---|---|---|---|
+| làm ơn nhập của bạn mật khẩu | Vui lòng nhập mật khẩu của bạn | Sửa lỗi dịch máy "Please" và đảo ngược sở hữu cách "your password" | error |
+| của bạn mật khẩu | mật khẩu của bạn | Đặt cụm sở hữu "của bạn" sau danh từ trung tâm | error |
+| của bạn tài khoản | tài khoản của bạn | Đặt cụm sở hữu "của bạn" sau danh từ trung tâm | error |
+| làm ơn nhập | Vui lòng nhập | Dùng "Vui lòng" hoặc động từ mệnh lệnh trực tiếp | error |
 | xin quý khách vui lòng tiến hành | Vui lòng | Cắt bỏ kính ngữ thừa và động từ phụ trợ | error |
 | yêu cầu đã được tiến hành gửi thành công | Đã gửi yêu cầu | Bỏ thể bị động và từ phụ trợ tiến hành | error |
 | bạn hãy nhấn vào nút | Chọn / Nhấn | Không mô tả thao tác vật lý hiển nhiên | error |

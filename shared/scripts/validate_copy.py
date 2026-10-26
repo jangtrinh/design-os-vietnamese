@@ -58,12 +58,18 @@ DEFAULT_REGISTERS: Dict[str, dict] = {
     "eng-impersonal":  {"expects": "",              "forbids": ("bạn", "quý khách", "quý vị", "anh/chị", "em", "con")},
     "eng-readme":      {"expects": "bạn",           "forbids": ("quý khách", "quý vị")},
     "finance-formal":  {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà")},
-    "edu-k12":         {"expects": "em",            "forbids": ("bạn", "quý khách", "quý vị")},
-    "edu-k12-primary": {"expects": "con",           "forbids": ("bạn", "quý khách", "quý vị", "em")},
-    "edu-parent":      {"expects": "quý phụ huynh", "forbids": ("bạn", "mình", "quý khách", "em", "con")},
-    "edu-uni":         {"expects": "",              "forbids": ("bạn", "con", "em", "quý khách")},
-    "gov-admin":       {"expects": "",              "forbids": ("bạn", "mình", "em", "con", "cả nhà")},
-    "healthcare":      {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà")},
+    "edu-k12":            {"expects": "em",            "forbids": ("bạn", "quý khách", "quý vị")},
+    "edu-k12-primary":    {"expects": "con",           "forbids": ("bạn", "quý khách", "quý vị", "em")},
+    "edu-preschool":      {"expects": "con",           "forbids": ("bạn", "quý khách", "quý vị", "em")},
+    "edu-parent":         {"expects": "quý phụ huynh", "forbids": ("bạn", "mình", "quý khách", "em", "con")},
+    "edu-uni":            {"expects": "",              "forbids": ("bạn", "con", "em", "quý khách")},
+    "edu-postgrad":       {"expects": "",              "forbids": ("bạn", "con", "em", "quý khách", "mình", "cả nhà")},
+    "gov-admin":          {"expects": "",              "forbids": ("bạn", "mình", "em", "con", "cả nhà")},
+    "healthcare":         {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà")},
+    "healthcare-clinical":{"expects": "",              "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
+    "legal-contract":     {"expects": "",              "forbids": ("bạn", "mình", "cả nhà", "em", "con", "cậu")},
+    "hospitality-luxury": {"expects": "quý khách",     "forbids": ("bạn", "mình", "cả nhà", "cậu", "mày")},
+    "hr-candidate":       {"expects": "anh/chị",       "forbids": ("mày", "cậu", "con", "cả nhà")},
 }
 
 FORMAL_PRONOUNS = ("quý khách", "quý vị", "quý phụ huynh")
@@ -175,11 +181,48 @@ def _split_alternatives(cell: str) -> List[str]:
     ]
 
 
+BUILTIN_CALQUES: Tuple[Tuple[str, str, str, str], ...] = (
+    ("làm ơn nhập của bạn mật khẩu", "Vui lòng nhập mật khẩu của bạn", "builtin", ERROR),
+    ("của bạn mật khẩu", "mật khẩu của bạn", "builtin", ERROR),
+    ("của bạn tài khoản", "tài khoản của bạn", "builtin", ERROR),
+    ("làm ơn nhập", "Vui lòng nhập", "builtin", ERROR),
+)
+
+DOMAIN_SKILL_MAP: Dict[str, str] = {
+    "ux": "vn-design-system-ux",
+    "vn-design-system-ux": "vn-design-system-ux",
+    "landing": "vietnamese-landing-copy",
+    "vietnamese-landing-copy": "vietnamese-landing-copy",
+    "tech": "vietnamese-tech-writing",
+    "vietnamese-tech-writing": "vietnamese-tech-writing",
+    "biz": "vietnamese-business-comms",
+    "business": "vietnamese-business-comms",
+    "vietnamese-business-comms": "vietnamese-business-comms",
+    "finance": "vietnamese-finance-copy",
+    "vietnamese-finance-copy": "vietnamese-finance-copy",
+    "edu": "vietnamese-education-copy",
+    "education": "vietnamese-education-copy",
+    "vietnamese-education-copy": "vietnamese-education-copy",
+    "healthcare": "vietnamese-healthcare-copy",
+    "medical": "vietnamese-healthcare-copy",
+    "vietnamese-healthcare-copy": "vietnamese-healthcare-copy",
+    "legal": "vietnamese-legal-contracts",
+    "contracts": "vietnamese-legal-contracts",
+    "vietnamese-legal-contracts": "vietnamese-legal-contracts",
+    "hospitality": "vietnamese-hospitality-travel",
+    "travel": "vietnamese-hospitality-travel",
+    "vietnamese-hospitality-travel": "vietnamese-hospitality-travel",
+    "hr": "vietnamese-hr-recruitment",
+    "recruitment": "vietnamese-hr-recruitment",
+    "vietnamese-hr-recruitment": "vietnamese-hr-recruitment",
+}
+
+
 class Blocklists:
     """Calques, superlative patterns, and register profiles loaded from Markdown."""
 
     def __init__(self, ref_dir: pathlib.Path = REF_DIR):
-        self.calques: List[tuple] = []
+        self.calques: List[tuple] = list(BUILTIN_CALQUES)
         self.superlatives: List[tuple] = []
         self.registers: Dict[str, dict] = dict(DEFAULT_REGISTERS)
         self.missing: List[str] = []
@@ -353,9 +396,15 @@ DIACRITIC_PHRASES = (
     # Finance & Banking
     "chuyen khoan", "so du", "lai suat", "hoa don", "bao cao tai chinh",
     "thue gia tri gia tang", "nguoi thu huong", "sao ke", "tin dung", "khoan vay",
-    # Education & EdTech
+    # Education & EdTech (7-Tier: Mầm non -> Tiến sĩ)
     "hoc sinh", "sinh vien", "phu huynh", "giao vien", "bai tap", "kiem tra",
-    "bang diem", "hoc ba", "ket qua hoc tap",
+    "bang diem", "hoc ba", "ket qua hoc tap", "mam non", "mau giao", "luan van",
+    "luan an", "nghien cuu sinh", "khoa luan tot nghiep",
+    # Healthcare, Legal, Hospitality & HR
+    "kham chua benh", "benh nhan", "nguoi benh", "don thuoc", "thuc pham chuc nang",
+    "hop dong", "boi thuong thiet hai", "bat kha khang", "giai quyet tranh chap",
+    "khach san", "dat phong", "nhan phong", "tra phong", "chuyen bay", "hanh ly",
+    "tuyen dung", "ung vien", "thu viec", "bao hiem xa hoi", "hop dong lao dong",
 )
 DIACRITIC_RE = re.compile(
     r"(?<![\w/-])(" + "|".join(re.escape(p) for p in DIACRITIC_PHRASES) + r")(?![\w/-])",
@@ -888,14 +937,20 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     )
     ap.add_argument("paths", nargs="*", help="files or directories to check")
     ap.add_argument(
+        "--domain",
+        choices=sorted(DOMAIN_SKILL_MAP),
+        default=None,
+        help="select domain ruleset and reference tables (e.g. ux, landing, tech, biz, finance, edu, healthcare, legal, hospitality, hr)",
+    )
+    ap.add_argument(
         "--register",
         help="enable register-consistency check (PRO002); values defined in references/register-matrix.md",
     )
     ap.add_argument(
         "--doctype",
-        choices=sorted(DOCTYPES) or None,
+        default=None,
         help="declare artifact type to activate structural domain rules"
-        + ("; one of: " + ", ".join(sorted(DOCTYPES)) if DOCTYPES else " (this skill defines none)"),
+        + ("; one of: " + ", ".join(sorted(DOCTYPES)) if DOCTYPES else ""),
     )
     ap.add_argument("--json", action="store_true", dest="as_json", help="emit findings as JSON")
     ap.add_argument("--strict", action="store_true", help="exit non-zero on warnings as well as errors")
@@ -906,10 +961,34 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         default=None,
         help="normalize open-syllable oa/oe/uy tone placement in place to 'new' (hoà) or 'old' (hòa)",
     )
+    ap.add_argument(
+        "--output",
+        default=None,
+        help="write normalized/fixed output for the target file to this path instead of modifying in place",
+    )
     ap.add_argument("--ext", default=",".join(DEFAULT_EXTENSIONS), help="comma-separated file extensions")
-    ap.add_argument("--refs", default=str(REF_DIR), help="directory holding reference markdown tables")
+    ap.add_argument("--refs", default=None, help="directory holding reference markdown tables")
     ap.add_argument("--list-rules", action="store_true", help="print every rule this skill emits, then exit")
     args = ap.parse_args(argv)
+
+    refs_dir = pathlib.Path(args.refs) if args.refs else REF_DIR
+    if args.domain:
+        skill_slug = DOMAIN_SKILL_MAP[args.domain]
+        candidate_skill_dir = SKILL_DIR.parent / "skills" / skill_slug
+        if not candidate_skill_dir.is_dir():
+            candidate_skill_dir = SKILL_DIR.parent / skill_slug
+        if candidate_skill_dir.is_dir():
+            load_domain_rules(candidate_skill_dir / "scripts")
+            if not args.refs and (candidate_skill_dir / "references").is_dir():
+                refs_dir = candidate_skill_dir / "references"
+
+    if args.doctype and DOCTYPES and args.doctype not in DOCTYPES:
+        print(
+            f"unknown doctype {args.doctype!r}; available doctypes: "
+            + ", ".join(sorted(DOCTYPES)),
+            file=sys.stderr,
+        )
+        return 2
 
     if args.list_rules:
         for rule, doc in sorted(RULE_DOCS.items()):
@@ -931,7 +1010,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print("no files to check", file=sys.stderr)
         return 2
 
-    blocklists = Blocklists(pathlib.Path(args.refs))
+    blocklists = Blocklists(refs_dir)
     for missing in blocklists.missing:
         print(f"warning: reference file not found, some rules disabled: {missing}", file=sys.stderr)
 
@@ -943,15 +1022,23 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         )
         return 2
 
-    if args.fix:
-        for path in files:
-            if fix_nfc(path):
-                print(f"fixed NFC: {path}", file=sys.stderr)
+    if args.output:
+        out_path = pathlib.Path(args.output)
+        src_text = files[0].read_text(encoding="utf-8")
+        out_text = unicodedata.normalize("NFC", src_text)
+        if args.fix_tone:
+            out_text = convert_tone_style(out_text, args.fix_tone)
+        out_path.write_text(out_text, encoding="utf-8")
+    else:
+        if args.fix:
+            for path in files:
+                if fix_nfc(path):
+                    print(f"fixed NFC: {path}", file=sys.stderr)
 
-    if args.fix_tone:
-        for path in files:
-            if fix_tone(path, args.fix_tone):
-                print(f"fixed tone ({args.fix_tone}): {path}", file=sys.stderr)
+        if args.fix_tone:
+            for path in files:
+                if fix_tone(path, args.fix_tone):
+                    print(f"fixed tone ({args.fix_tone}): {path}", file=sys.stderr)
 
     validator = Validator(blocklists, args.register, args.doctype)
     findings: List[Finding] = []

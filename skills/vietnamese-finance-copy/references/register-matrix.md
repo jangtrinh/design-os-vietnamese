@@ -1,4 +1,4 @@
-<!-- synced from shared/references/register-matrix.md (62b98ecdd1776007) — edit shared/ source, not this copy -->
+<!-- synced from shared/references/register-matrix.md (4490770e554ae3b2) — edit shared/ source, not this copy -->
 <!-- vlc-disable: TONE001, DIA001 -->
 
 # Register Matrix — Vietnamese Pragmatics & Audience Address (`design-os-vietnamese`)
@@ -30,10 +30,16 @@ This file is the canonical source of truth. `validate_copy.py` parses the `<!-- 
 | `finance-formal` | `quý khách` | `bạn`, `mình`, `cả nhà` | Financial statements (`BCTC`), tax filings, e-invoices, credit/loan disclosures, insurance contracts |
 | `edu-k12` | `em` | `bạn`, `quý khách`, `quý vị` | Secondary/High school (THCS/THPT) teacher-to-student remarks, `học bạ`, AI tutor for grades 6–12 |
 | `edu-k12-primary` | `con` | `bạn`, `quý khách`, `quý vị`, `em` | Primary school (Tiểu học, grades 1–5) teacher-to-student remarks, pastoral feedback |
-| `edu-parent` | `quý phụ huynh` | `bạn`, `mình`, `quý khách`, `em`, `con` | School-to-parent notices (`sổ liên lạc điện tử`), tuition notices, parental learning analytics |
-| `edu-uni` | | `bạn`, `con`, `em`, `quý khách` | University syllabi (`đề cương học phần`), transcripts, academic regulations (third-person `sinh viên` / `học viên`) |
+| `edu-preschool` | `con` | `bạn`, `quý khách`, `quý vị`, `em` | Early childhood / Preschool (Mầm non: Nhà trẻ 3–36 tháng & Mẫu giáo 3–6 tuổi) teacher-to-child interactions & developmental observation logs (`cô` – `con`) |
+| `edu-parent` | `quý phụ huynh` | `bạn`, `mình`, `quý khách`, `em`, `con` | School-to-parent notices (`sổ liên lạc điện tử`, `sổ theo dõi trẻ mầm non`), tuition notices, parental learning analytics |
+| `edu-uni` | | `bạn`, `con`, `em`, `quý khách` | Undergraduate university syllabi (`đề cương học phần`), transcripts, academic regulations (third-person `sinh viên`) |
+| `edu-postgrad` | | `bạn`, `con`, `em`, `quý khách`, `mình`, `cả nhà` | Postgraduate Master's (`Thạc sĩ` TT 23/2021) & Doctoral (`Tiến sĩ` TT 18/2021) dissertations, defense councils, scholarly journals (third-person `học viên`, `nghiên cứu sinh`, `tác giả`) |
 | `gov-admin` | | `bạn`, `mình`, `em`, `con`, `cả nhà` | Administrative & statutory documents under Nghị định 30/2020/NĐ-CP (`công văn`, `tờ trình`, `quyết định`) |
-| `healthcare` | `quý khách` | `bạn`, `mình`, `cả nhà` | Hospital/clinic patient communications, medical records, diagnostic instructions (`quý khách` or `người bệnh`) |
+| `healthcare` | `quý khách` | `bạn`, `mình`, `cả nhà` | Hospital/clinic patient communications, appointment reminders, discharge instructions (`quý khách`) |
+| `healthcare-clinical` | | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Electronic Medical Records (EMR TT 32/2023/TT-BYT), prescriptions (`đơn thuốc`), lab reports (impersonal/third-person `người bệnh`, `bác sĩ`) |
+| `legal-contract` | | `bạn`, `mình`, `cả nhà`, `em`, `con`, `cậu` | Civil/commercial/labor contracts, Terms of Service, PDPD Privacy Policies, DPAs (third-person `Bên A`, `Bên B`, `Khách hàng`, `Người lao động`) |
+| `hospitality-luxury` | `quý khách` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | 4–5 star hotels, resorts, airlines, cruise lines, fine dining F&B, concierge communications |
+| `hr-candidate` | `anh/chị` | `mày`, `cậu`, `con`, `cả nhà` | Job descriptions (JD), offer letters (`thư mời nhận việc`), interview invitations, formal HR candidate communications |
 
 ---
 

@@ -186,7 +186,7 @@ class CheckFontAndI18nScriptsTests(unittest.TestCase):
 
 
 class GoldenEvalPairsBenchmarkTests(unittest.TestCase):
-    """Validates all golden bad/good benchmark pairs in evals/*/pairs.jsonl across all 6 skills."""
+    """Validates all golden bad/good benchmark pairs in evals/*/pairs.jsonl across all 10 skills."""
 
     SKILLS = (
         "vn-design-system-ux",
@@ -195,6 +195,10 @@ class GoldenEvalPairsBenchmarkTests(unittest.TestCase):
         "vietnamese-business-comms",
         "vietnamese-finance-copy",
         "vietnamese-education-copy",
+        "vietnamese-healthcare-copy",
+        "vietnamese-legal-contracts",
+        "vietnamese-hospitality-travel",
+        "vietnamese-hr-recruitment",
     )
 
     def test_all_eval_pairs_pass_bad_and_good_assertions(self) -> None:

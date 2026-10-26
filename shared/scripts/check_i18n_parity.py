@@ -135,14 +135,23 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         prog="check_i18n_parity.py",
         description="Compare en.json and vi.json for key/placeholder parity and UI expansion caps.",
     )
-    ap.add_argument("source", help="source catalog JSON (e.g. en.json)")
-    ap.add_argument("target", help="target Vietnamese catalog JSON (e.g. vi.json)")
+    ap.add_argument("pos_source", nargs="?", help="source catalog JSON (e.g. en.json)")
+    ap.add_argument("pos_target", nargs="?", help="target Vietnamese catalog JSON (e.g. vi.json)")
+    ap.add_argument("--source", dest="opt_source", default=None, help="source catalog JSON (e.g. en.json)")
+    ap.add_argument("--target", dest="opt_target", default=None, help="target Vietnamese catalog JSON (e.g. vi.json)")
     ap.add_argument("--json", action="store_true", dest="as_json", help="emit findings as JSON")
     ap.add_argument("--strict", action="store_true", help="exit non-zero on warnings too")
     args = ap.parse_args(argv)
 
-    en_path = pathlib.Path(args.source)
-    vi_path = pathlib.Path(args.target)
+    src_arg = args.opt_source or args.pos_source
+    tgt_arg = args.opt_target or args.pos_target
+    if not src_arg or not tgt_arg:
+        ap.print_usage(sys.stderr)
+        print("check_i18n_parity.py: error: both source and target JSON files are required", file=sys.stderr)
+        return 2
+
+    en_path = pathlib.Path(src_arg)
+    vi_path = pathlib.Path(tgt_arg)
     if not en_path.is_file() or not vi_path.is_file():
         print("check_i18n_parity.py: error: both source and target JSON files must exist", file=sys.stderr)
         return 2

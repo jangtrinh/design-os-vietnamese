@@ -1,7 +1,7 @@
 ---
 name: vietnamese-tech-writing
 description: Writes, edits, and audits native-quality Vietnamese (vi-VN) engineering, cloud, and product documentation — including commit subjects, PR reviews, RFCs, ADRs, blameless postmortems, operational runbooks, READMEs, API docs, CLI/UI error microcopy, i18n message catalogs, release notes, user research surveys, and app-store metadata. Master of technical code-switching taxonomy (Keep-EN vs Translate-VI vs Context-Split), impersonal system registers (eliminating 'bạn' in specs), bare imperative runbooks, non-blaming error microcopy, acquiescence bias mitigation in surveys, platform character limits, and Telex/VNI IME composition hazards.
-license: MIT
+license: PolyForm-Shield-1.0.0
 metadata:
   version: "2.0.0"
   repository: "https://github.com/jangtrinh/design-os-vietnamese"

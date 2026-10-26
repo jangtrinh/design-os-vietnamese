@@ -15,6 +15,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SHARED_REFS = ROOT / "shared" / "references"
+SHARED_SYNC_REF_NAMES = ("compliance.md", "register-matrix.md", "typography.md")
 SHARED_SCRIPTS = ROOT / "shared" / "scripts"
 SKILLS_DIR = ROOT / "skills"
 
@@ -46,8 +47,8 @@ def sync_all(check_only: bool = False) -> int:
     drifted = []
     skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
     sources = [
-        *(( src, "references" ) for src in sorted(SHARED_REFS.glob("*.md"))),
-        *(( src, "scripts" ) for src in sorted(SHARED_SCRIPTS.glob("*.py"))),
+        *((SHARED_REFS / name, "references") for name in SHARED_SYNC_REF_NAMES if (SHARED_REFS / name).is_file()),
+        *((src, "scripts") for src in sorted(SHARED_SCRIPTS.glob("*.py"))),
     ]
 
     for skill in skill_dirs:

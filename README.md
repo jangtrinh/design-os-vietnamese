@@ -1,101 +1,88 @@
-# DESIGN:OS Vietnamese (`design-os-vietnamese`)
+# DESIGN:OS Vietnamese (`vi-VN`) — v4.0 Multi-Industry Suite
 
-> **Sovereign Vietnamese Language, Typography, UX Writing, Statutory Compliance & UKMC.v1 Knowledge Suite for AI Agents & Design Systems.**
->
-> Built and maintained by **Jang Trinh / DESIGN:OS** (`https://github.com/jangtrinh/design-os-vietnamese`).
+> **Sovereign Vietnamese Language, Typography, UX Design System, Multi-Industry Copywriting, 7-Tier Pedagogy (Mầm non → Tiến sĩ), & Statutory Compliance Suite for AI Coding Agents**
+> Built on **DESIGN:OS** and verified with the **Universal Knowledge Master Contract (`UKMC.v1`)** epistemic pipeline.
 
-[![UKMC.v1 Verified](https://img.shields.io/badge/UKMC.v1-STOP__SUFFICIENT-10b981)](#ukmcv1-cryptographically-verified-knowledge-base)
-[![Skills](https://img.shields.io/badge/Skills-6%20Production%20Modules-2563eb)](#the-6-production-skills)
-[![Validator](https://img.shields.io/badge/Engine-validate__copy.py%20v3.0-f59e0b)](#deterministic-validation--tooling-suite)
-[![License: MIT](https://img.shields.io/badge/License-MIT-zinc.svg)](LICENSE)
+[![Schema: UKMC.v1](https://img.shields.io/badge/Knowledge_Schema-UKMC.v1_Verified-10B981)](knowledge/)
+[![Skills: 10 Production](https://img.shields.io/badge/Skills-10_Production-3B82F6)](skills/)
+[![Registers: 24 Profiles](https://img.shields.io/badge/Registers-24_Audience_Profiles-8B5CF6)](shared/references/register-matrix.md)
+[![Gate: STOP_SUFFICIENT](https://img.shields.io/badge/Epistemic_Gate-STOP__SUFFICIENT-F59E0B)](knowledge/_evidence/vn-design-os-261026/state.json)
+[![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/License-PolyForm_Shield_1.0.0-111827)](LICENSE)
 
 [Tiếng Việt (`README.vi.md`)](README.vi.md)
+
+![DESIGN:OS Vietnamese v4.0 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
 
 ---
 
 ## Why DESIGN:OS Vietnamese?
 
-Generic LLM outputs in Vietnamese suffer from systematic failure modes that break production interfaces, violate Vietnamese statutory regulations, and erode user trust:
+Generic LLMs treat Vietnamese (`vi-VN`) as word-by-word translated English. In production software and regulated industries, that creates four systemic failure modes:
 
-1. **English-to-Vietnamese Calques (`CAL001`, `SYN001`):** Word-by-word translations (`"Làm ơn nhập của bạn mật khẩu"`, `"Đơn hàng của bạn đã bị hủy thành công"`) confuse adversity passive (`bị`) with beneficiary passive (`được`) and violate head-first Vietnamese noun phrase syntax.
-2. **Stacked Diacritic Vertical Clipping:** Uppercase and lowercase Vietnamese vowels with circumflex/horn/breve plus tone marks (`Ẫ, Ễ, Ổ, Ữ, Ệ, Ộ`) extend `25%–38%` above the Latin cap-height and into the descender zone. Applying English-tuned tight line-heights (`leading-none`, `leading-tight`) or `overflow: hidden` slices off tone marks, while omitting the `'vietnamese'` font subset triggers "ransom-note" browser fallback.
-3. **Unicode NFD & Telex/VNI IME Hazards (`NFC001`, `ENC001`):** macOS APFS file names, Google Docs, and PDF exports emit decomposed NFD sequences (`o + U+0302 + U+0309`) that break database queries and detach diacritics. Unfiltered React `onChange` mutations during active Telex/VNI composition (`event.nativeEvent.isComposing`) corrupt user input into `"Tiênsg Viêjt"`.
-4. **CLDR `vi-VN` & Multi-Line ICU MessageFormat Defects (`ICU001`, `ICU002`, `NUM001–NUM004`):** Copy-pasted English `one`/`other` plural branches in `.arb`/`.json` localization catalogs, unformatted VND currency (`50000đ`, `1.5M VND`), and naive unit regexes that falsely flag hardware processors (`Apple M2`, `MacBook Air M2`) as square meters (`m²`).
-5. **2025–2026 Vietnamese Statutory & Regulatory Non-Compliance (`LAW001`, `FIN001`, `EDU001`, `BIZ001`):**
-   - **Advertising Law 2012 & Law No. 75/2025/QH15** (effective `01/01/2026`): Prohibits unverified superlatives (`nhất`, `duy nhất`, `tốt nhất`, `số 1`) and mandates influencer (KOL/KOC) sponsorship disclosure.
-   - **Decree 13/2023/NĐ-CP (PDPD):** Requires explicit 6-element consent and dual parent + child verification for ages `7` to under `16` (Article 20).
-   - **Circular 99/2025/TT-BTC** (effective `01/01/2026`, superseding Circular 200/2014/TT-BTC): Renames *Bảng cân đối kế toán* to **Báo cáo tình hình tài chính** and introduces Accounts `215` (Biological Assets), `332` (Dividends Payable), and `82112` (Pillar Two Global Minimum Tax).
-   - **MOET Circular 22/2021/TT-BGDĐT (GDPT 2018):** Replaces legacy *Học lực Giỏi/Tiên tiến/Yếu/Kém* with **Tốt — Khá — Đạt — Chưa đạt**.
-   - **Decree 30/2020/NĐ-CP & Decree 91/2020/NĐ-CP:** Governs clerical document headers (`Công văn`, `Tờ trình`, `Quyết định`, `Biên bản`) and Zalo Notification Service (ZNS) anti-spam tagging.
+1. **Translationese & Syntactic Calques**: Literal English-to-Vietnamese phrasing (*"Làm ơn nhập của bạn mật khẩu"*, *"Như một người dùng, tôi muốn..."*, *"Thực hiện một quyết định"*) that immediately breaks native trust.
+2. **Stacked Diacritic Clipping & UI Expansion**: Vietnamese combines base vowels with circumflex/breve/horn modifiers (`ă, â, ê, ô, ơ, ư`) and five tone marks (`Ấ, Ệ, Ữ, Ợ`), increasing vertical glyph bounds by **25–35%** and expanding string length by **22–38%** over English. Standard `line-height: 1.2` and fixed-width English buttons clip accents or overflow containers.
+3. **Encoding & ICU Localization Bugs**: Decomposed Unicode `NFD` from macOS clipboard/filesystems breaks search and regex; `one`/`other` ICU plural branches fail because Vietnamese uses only `other` (`CLDR`).
+4. **Statutory & Multi-Industry Regulatory Violations**:
+   - **Advertising & E-commerce**: Unsubstantiated superlatives (*"số 1"*, *"tốt nhất"*, *"duy nhất"*) violate **Luật Quảng cáo 2012 (sửa đổi bởi Luật số 75/2025/QH15)**.
+   - **7-Tier Education Continuum (Mầm non → Tiến sĩ)**: Confusing Preschool developmental domains (**VBHN 01/VBHN-BGDĐT**), Primary 3-tier assessment (**Thông tư 27/2020/TT-BGDĐT**), Secondary 4-tier assessment (**Thông tư 22/2021/TT-BGDĐT**), TVET modules (**Thông tư 04/2022/TT-BLĐTBXH**), and Higher-Ed/Postgraduate theses (*Khóa luận cử nhân* vs *Luận văn thạc sĩ* vs *Luận án tiến sĩ*; *Học vị* `TS.` vs *Học hàm* `GS./PGS.`).
+   - **Healthcare, Legal, Hospitality & HR**: Missing mandatory TPCN disclaimers (**Nghị định 15/2018/NĐ-CP**), commercial contract penalty caps over 8% (**Luật Thương mại 2005 Điều 301**), opaque hotel `++` pricing, or discriminatory job descriptions and sub-85% probation wages (**Bộ luật Lao động 2019 Điều 8, Điều 26**).
 
 ---
 
-## The 6 Production Skills
+## Architecture: 10 Production Skills + 12 UKMC.v1 Knowledge Modules
 
-| Skill | Domain Scope | Domain Rule Engine | Key References & Assets |
-|---|---|---|---|
-| [`vn-design-system-ux`](skills/vn-design-system-ux/SKILL.md) | Product UI, UX writing, microcopy states, design tokens (`Be Vietnam Pro`), Telex/VNI IME safety, i18n parity (`.json`/`.arb`) | `rules_ux.py` (`UX001`–`UX006`) | `glossary.md`, `banned-phrases.md`, `microcopy-states.md`, `design-tokens-vi.md`, `design-tokens.vi.json` |
-| [`vietnamese-landing-copy`](skills/vietnamese-landing-copy/SKILL.md) | SaaS & e-commerce landing pages, Hero/CTA hierarchy, VND pricing tables, PDPD consent, Decree 81/128 promo caps | `rules_landing.py` (`LAND001`–`LAND003`) | `section-playbook.md`, `promo-law.md`, `cta-library.md`, `headline-formulas.md` |
-| [`vietnamese-tech-writing`](skills/vietnamese-tech-writing/SKILL.md) | Developer docs, API references, ADRs, Runbooks, Post-mortems, Changelogs, code-switching rules | `rules_tech.py` (`TECH001`–`TECH003`) | `terminology.md`, `doc-patterns.md`, `error-messages.md`, `release-notes-and-rca.md` |
-| [`vietnamese-business-comms`](skills/vietnamese-business-comms/SKILL.md) | Decree 30/2020/NĐ-CP administrative documents (`Công văn`, `Tờ trình`, `Quyết định`, `Biên bản`), B2B emails, Zalo ZNS | `rules_biz.py` (`BIZ001`–`BIZ005`) | `cong-van-format.md`, `email-etiquette.md`, `zalo-zns-patterns.md`, 6 `.md.template` assets |
-| [`vietnamese-finance-copy`](skills/vietnamese-finance-copy/SKILL.md) | Retail banking, Napas 247 / VietQR, securities, insurance, Circular 99/2025/TT-BTC accounting & ERP | `rules_finance.py` (`FIN001`–`FIN003`) | `accounting-tt99-2025.md`, `banking-and-payments.md`, `securities-and-investing.md`, `number-to-words-vnd.md` |
-| [`vietnamese-education-copy`](skills/vietnamese-education-copy/SKILL.md) | EdTech, LMS microcopy, K-12 MOET Circular 22/2021/TT-BGDĐT (`học bạ số`), university syllabi, KNLNN 6 bậc (VSTEP) | `rules_edu.py` (`EDU001`–`EDU003`) | `moet-curriculum-and-grading.md`, `certification-and-cefr.md`, `instructional-design.md`, `lms-and-student-ux.md` |
+| # | Skill | Domain & Target Artifacts | Domain Rule Engine | Key Reference Modules |
+|---|---|---|---|---|
+| **1** | [`vn-design-system-ux`](skills/vn-design-system-ux/SKILL.md) | **Design Tokens, Typography, UI Microcopy & i18n**: line-height gates, character caps, empty/loading/error states, passkeys, AI streaming UX, `U+00A0` compound-word binding | `rules_ux.py` (`UX001`–`UX010`) | `design-tokens-vi.md`, `microcopy-states.md`, `glossary.md`, `banned-phrases.md` |
+| **2** | [`vietnamese-landing-copy`](skills/vietnamese-landing-copy/SKILL.md) | **Landing Pages, SaaS, E-Commerce & Real Estate**: Hero formulas, value props, pricing tables, CTAs, Luật Quảng cáo 75/2025 & NĐ 98/2020 compliance | `rules_landing.py` (`LND001`–`LND007`) | `vertical-playbooks.md`, `legal-copy.md`, `register-guide.md`, `examples.md` |
+| **3** | [`vietnamese-tech-writing`](skills/vietnamese-tech-writing/SKILL.md) | **Developer Docs, API Specs, Runbooks, Changelogs, ADRs & Surveys**: Code-switching rules, CLI/SDK docs, postmortems, Likert scales | `rules_tech.py` (`TECH001`–`TECH006`) | `code-switching.md`, `i18n-hazards.md`, `survey-design.md`, `doc-registers.md` |
+| **4** | [`vietnamese-business-comms`](skills/vietnamese-business-comms/SKILL.md) | **B2B Emails, Zalo OA/ZNS, Proposals & Administrative *Công văn***: Nghị định 30/2020/NĐ-CP format, Nghị định 13/2023/NĐ-CP PDPD consent | `rules_business.py` (`BIZ001`–`BIZ007`) | `admin-decree-30.md`, `b2b-xung-ho.md`, `channel-guide.md`, `promo-law.md` |
+| **5** | [`vietnamese-finance-copy`](skills/vietnamese-finance-copy/SKILL.md) | **Fintech, Banking, Tax, Invoices & Financial Reports**: Thông tư 99/2025/TT-BTC (replacing TT 200), Nghị định 70/2025/NĐ-CP e-invoices, VietQR/Napas | `rules_finance.py` (`FIN001`–`FIN006`) | `fintech-ekyc-vietqr.md`, `statement-formatting.md`, `statement-terminology.md`, `financial-promotion.md` |
+| **6** | [`vietnamese-education-copy`](skills/vietnamese-education-copy/SKILL.md) | **Full 7-Tier Pedagogy Continuum (Mầm non → Tiểu học → THCS/THPT → GDNN → Đại học → Thạc sĩ → Tiến sĩ & GS/PGS)**: VBHN 01, TT 27/2020, TT 22/2021, TT 04/2022, TT 08/2021, TT 23/2021, TT 18/2021, QĐ 37/2018 | `rules_education.py` (`EDU001`–`EDU012`) | `preschool-to-postgrad-continuum.md`, `grading-terminology.md`, `edtech-pedagogy.md`, `doc-registers.md` |
+| **7** | [`vietnamese-healthcare-copy`](skills/vietnamese-healthcare-copy/SKILL.md) | **Clinical EMR, E-Prescriptions, Hospital Discharge & Pharma/TPCN Compliance**: Luật KCB 15/2023/QH15, TT 32/2023/TT-BYT, NĐ 15/2018/NĐ-CP | `rules_healthcare.py` (`MED001`–`MED007`) | `clinical-and-emr-writing.md`, `pharma-and-tpcn-compliance.md`, `patient-communication.md`, `qa-checklist.md` |
+| **8** | [`vietnamese-legal-contracts`](skills/vietnamese-legal-contracts/SKILL.md) | **Civil, Commercial & Labor Contracts, NDAs, Terms of Service & Privacy Notices**: BLDS 2015, Luật Thương mại 2005 (8% penalty cap), Luật BVQLNTD 2023 | `rules_legal.py` (`LEG001`–`LEG007`) | `contract-drafting-blds-ltt.md`, `labor-and-ip-clauses.md`, `pdpd-and-consumer-protection.md` |
+| **9** | [`vietnamese-hospitality-travel`](skills/vietnamese-hospitality-travel/SKILL.md) | **5-Star Hotels, Resorts, Aviation, OTA Booking & Culinary/F&B**: Luật Du lịch 2017 (Điều 50), transparent `++` pricing, TT 14/2015 & 19/2023 aviation rights | `rules_hospitality.py` (`HOS001`–`HOS006`) | `hotel-and-resort-standards.md`, `aviation-and-tour-policies.md`, `fnb-and-culinary-copy.md` |
+| **10** | [`vietnamese-hr-recruitment`](skills/vietnamese-hr-recruitment/SKILL.md) | **Job Descriptions (JD), Offer Letters, Labor Contracts, Probation & BHXH/PIT**: Bộ luật Lao động 2019 (Điều 8, 17, 20, 25, 26), Luật BHXH 41/2024/QH15 | `rules_hr.py` (`HR001`–`HR006`) | `labor-code-and-offer-letters.md`, `jd-and-employer-branding.md`, `okr-kpi-and-performance-review.md` |
 
 ---
 
-## Deterministic Validation & Tooling Suite
+## Deterministic Tooling & Static Linters
 
-All scripts run on **Python 3.9+ standard library only** (zero third-party pip packages required).
+Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized from [`shared/scripts/`](shared/scripts/):
 
-### 1. `validate_copy.py` (v3.0 Linguistic & Statutory Linter)
+### 1. `validate_copy.py` — Universal + Domain-Specific Vietnamese Copy Linter
+
+Detects **18 universal rules** plus **70+ domain rules** across all 10 skills:
+
+| Rule Code | Severity | Check Description |
+|---|---|---|
+| `NFC001` | `ERROR` | Detects decomposed Unicode `NFD` combining marks (`--fix` auto-normalizes to `NFC`) |
+| `ENC001` | `ERROR` | Detects UTF-8 Mojibake (`Ã¡`, `áº¡`, `Æ°`, `Ä‘`) and legacy VNI/TCVN3 corruption |
+| `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `như một...`, `thực hiện việc...`) |
+| `SYN001` | `WARN` | Flags syntactic translationese word order and passive `bị`/`được` misuse |
+| `LAW001` | `ERROR` | Flags unsubstantiated superlatives (`số 1`, `tốt nhất`, `duy nhất`, `100%`) unless backed by `<!-- proof: ... -->` or negated |
+| `DIA001` | `ERROR` | Detects unaccented Vietnamese prose across 140+ multi-word phrases |
+| `TONE001` | `WARN` | Enforces document-wide consistency between `kiểu mới` (`hoà, thuỷ`) and `kiểu cũ` (`hòa, thủy`) (`--fix-tone new\|old`) |
+| `NUM001`–`NUM004` | `ERROR`/`WARN` | Period thousands (`1.250.000 ₫`), comma decimals (`3,5%`), and superscript `m²`/`m³` (with hardware chip guard for `Apple M2/M3`, `SSD M.2`, `BMW M2/M3`) |
+| `DATE001` / `PHONE001` | `ERROR` | Flags US `MM/dd/yyyy` dates and redundant trunk zero `+84 (0)9...` |
+| `ICU001` / `ICU002` | `ERROR` | Multi-line ICU plural block parser (`other`-only) and translated placeholder detector (`{tên}`) |
+| `PRO001` / `PRO002` | `ERROR`/`WARN` | Enforces pronoun consistency across **24 audience registers** (`ux-microcopy`, `edu-preschool`, `edu-postgrad`, `healthcare-clinical`, `legal-contract`, `hospitality-luxury`, `hr-candidate`, etc.) |
 
 ```bash
-# Run core + domain validation on a file or stdin
+# Validate a Vietnamese UI or Markdown file with domain & register rules
 python3 shared/scripts/validate_copy.py path/to/copy.md --domain ux --register ux-microcopy
 
-# Validate an administrative Công văn under Decree 30/2020/NĐ-CP
-python3 shared/scripts/validate_copy.py path/to/cong-van.md --domain biz --doctype cong-van
+# Auto-fix decomposed NFD Unicode and normalize tone marks to kiểu mới (hoà, thuỷ)
+python3 shared/scripts/validate_copy.py path/to/copy.md --fix --fix-tone new --output path/to/copy.clean.md
 
-# Auto-fix NFC normalization (NFC001), superscripts (NUM004), and normalize tone style (TONE001)
-python3 shared/scripts/validate_copy.py path/to/copy.md --fix --fix-tone new --output path/to/copy.fixed.md
+# Validate a 7-tier education document (e.g., Preschool report or Doctoral dissertation)
+python3 skills/vietnamese-education-copy/scripts/validate_copy.py path/to/de-cuong.md --doctype doctoral-dissertation --register edu-postgrad
 
-# Emit machine-readable JSON diagnostics for CI/CD pipelines
-python3 shared/scripts/validate_copy.py path/to/copy.md --domain finance --json
+# Validate a clinical or TPCN healthcare document
+python3 skills/vietnamese-healthcare-copy/scripts/validate_copy.py path/to/tpcn.md --doctype tpcn-ad --register healthcare
 ```
 
-#### Core Rule Matrix (`validate_copy.py`)
-
-| Rule ID | Severity | Description | Auto-Fix |
-|---|---|---|---|
-| `NFC001` | `ERROR` | Decomposed Unicode NFD combining marks (`U+0300–U+036F`, `U+0340–U+0341`) | `--fix` |
-| `ENC001` | `ERROR` | Legacy TCVN3 / VNI-Windows / CP1258 encoding or double-encoded UTF-8 mojibake (`Ã¡`, `á»‡`, `Æ°`) | — |
-| `CAL001` | `WARNING` | Direct English-to-Vietnamese calques (`Làm ơn + verb`, `Của bạn + noun`, `nó là quan trọng`) | — |
-| `SYN001` | `WARNING` | Adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) | — |
-| `LAW001` | `ERROR` | Unverified superlatives (`nhất`, `duy nhất`, `tốt nhất`, `số 1`) under Advertising Law Art. 8(11) | — |
-| `DIA001` | `ERROR` | Stripped Vietnamese diacritics across 120+ UI, SaaS, Tech, Finance, Edu, and Real-Estate phrases | — |
-| `TONE001` | `INFO` | Intra-document mixed tone placement on open syllables `oa`, `oe`, `uy` (`hòa` vs `hoà`) | `--fix-tone new\|old` |
-| `NUM001` | `WARNING` | English thousands comma or decimal dot in Vietnamese numeric prose | — |
-| `NUM002` | `WARNING` | Unformatted 4+ digit VND amounts (`50000đ`, `1500000 VND`) | — |
-| `NUM003` | `WARNING` | English currency shorthand (`1.5M VND`, `$50K`) instead of `tr`, `tỷ`, `nghìn` | — |
-| `NUM004` | `WARNING` | ASCII unit `m2`/`m3`/`cm2`/`km2` instead of `m²`/`m³` (with `Apple M2`/`M3` hardware guard) | `--fix` |
-| `DATE001` | `WARNING` | Ambiguous US `MM/DD/YYYY` date or `Tháng 1-12` capitalization drift | — |
-| `PHONE001` | `INFO` | Unformatted 10-digit Vietnamese mobile number or `+840...` trunk-zero redundancy | — |
-| `ICU001` | `ERROR` | Multi-line or single-line ICU MessageFormat `plural` using `zero`/`one`/`two`/`few`/`many` in `vi-VN` | — |
-| `ICU002` | `WARNING` | Malformed ICU braces or ASCII camelCase/snake_case placeholder key in Vietnamese prose | — |
-| `PRO001` | `WARNING` | Intra-document formal (`Quý khách`) vs casual (`bạn`) pronoun drift (exempts compound words) | — |
-| `PRO002` | `WARNING` | Pronoun mismatch against `--register <register-id>` | — |
-
-### 2. `check_font_coverage.py` (TrueType/OpenType Binary `cmap` & CSS `unicode-range` Auditor)
-
-```bash
-# Audit a binary .ttf/.otf font for all 134 precomposed Vietnamese vowels + Đ/đ + ₫ (U+20AB)
-python3 shared/scripts/check_font_coverage.py path/to/BeVietnamPro-Regular.ttf --json
-
-# Audit a CSS file's @font-face unicode-range declarations
-python3 shared/scripts/check_font_coverage.py path/to/fonts.css
-```
-
-### 3. `check_i18n_parity.py` (EN/VI Localization Catalog Parity & Length Expansion Checker)
+### 2. `check_i18n_parity.py` — `en.json` ↔ `vi.json` Catalog & UI Expansion Gate
 
 ```bash
 python3 shared/scripts/check_i18n_parity.py \
@@ -104,59 +91,37 @@ python3 shared/scripts/check_i18n_parity.py \
   --json
 ```
 
----
-
-## UKMC.v1 Cryptographically Verified Knowledge Base
-
-The [`knowledge/`](knowledge/README.md) directory is structured and verified under the **Universal Knowledge Master Contract (UKMC.v1)** using `design-os-knowledge-builder`:
-
-- **8 Verified Knowledge Modules** (`trust_tier: "verified"`), each containing SHA-256 provenance-pinned `source_attribution` and 38 inline `<!-- ease:source uri="..." sha256="..." quote="..." -->` anchors verified verbatim against primary source dossiers in `knowledge/_evidence/vn-design-os-261026/sources/`.
-- **Certified `STOP_SUFFICIENT` Epistemic Gate:** 8/8 required claims verified, 4 independent source dossiers, execution proof recorded, counterevidence/failure modes cataloged, and independent cross-runtime review (`gemini-4-argon-high` reviewing `gemini-3.8-flash-worker`).
+### 3. `check_font_coverage.py` — Vietnamese 134-Glyph Precomposed Coverage Auditor
 
 ```bash
-# Verify all 8 UKMC.v1 modules and 38 quote anchors
-PYTHONPATH=/Users/jangtrinh/Products/design-os-knowledge-builder/src \
-  python3 -m knowledge_builder.cli verify knowledge --claims
-
-# Evaluate the epistemic stopping gate
-PYTHONPATH=/Users/jangtrinh/Products/design-os-knowledge-builder/src \
-  python3 -m knowledge_builder.cli gate --root knowledge --run-id vn-design-os-261026
+python3 shared/scripts/check_font_coverage.py --css path/to/tokens.css
 ```
 
 ---
 
-## Repository Structure
+## UKMC.v1 Cryptographic Knowledge Base (`knowledge/`)
 
-```text
-design-os-vietnamese/
-├── knowledge/                       # UKMC.v1 cryptographically verified knowledge base (8 modules + index.json)
-│   └── _evidence/vn-design-os-261026/
-├── shared/                          # Canonical source of truth synced into every skill
-│   ├── references/                  # 5 shared linguistic, legal, locale, unicode & typography manuals
-│   └── scripts/                     # validate_copy.py, check_font_coverage.py, check_i18n_parity.py
-├── skills/                          # 6 self-contained agent skills
-│   ├── vn-design-system-ux/
-│   ├── vietnamese-landing-copy/
-│   ├── vietnamese-tech-writing/
-│   ├── vietnamese-business-comms/
-│   ├── vietnamese-finance-copy/
-│   └── vietnamese-education-copy/
-├── evals/                           # 180+ golden bad/good JSONL benchmark pairs + 120 trigger queries
-├── tools/                           # sync_shared.py & build_examples.py
-└── tests/                           # Comprehensive automated unittest suite
-```
-
-## Running Tests & Maintainer Sync
+All 12 foundational knowledge documents in [`knowledge/`](knowledge/) are compiled and audited under the **Universal Knowledge Master Contract (`UKMC.v1`)** with SHA-256 source provenance and inline `[ev:...]` evidence anchors:
 
 ```bash
-# Sync shared references & scripts into all 6 skills and regenerate examples.md from evals/
-python3 tools/sync_shared.py
-python3 tools/build_examples.py
+# Run the portable UKMC.v1 claim verifier and Epistemic Stopping Gate (STOP_SUFFICIENT)
+python3 tools/verify_ukmc.py
+```
 
-# Run the full test suite
+---
+
+## Testing & Verification Suite
+
+Run the full unit test, golden evaluation (`310+ pairs.jsonl`), skill specification, QA regression, and UKMC.v1 verification suite:
+
+```bash
 python3 -m unittest discover -s tests -v
+python3 tools/sync_shared.py --check
+python3 tools/build_examples.py --check
 ```
+
+---
 
 ## License
 
-Released under the [MIT License](LICENSE). Copyright (c) 2026 Jang Trinh / DESIGN:OS.
+Released under the [PolyForm Shield License 1.0.0](LICENSE). Copyright © 2026 DESIGN:OS (Jang Trinh).

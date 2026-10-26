@@ -1,8 +1,8 @@
-# DESIGN:OS Vietnamese — UKMC.v1 Verified Knowledge Base
+# DESIGN:OS Vietnamese — UKMC.v1 Verified Knowledge Base (12 Modules)
 
 This directory contains the cryptographically provenance-pinned **Universal Knowledge Master Contract (UKMC.v1)** modules powering **DESIGN:OS Vietnamese**, verified and gated by `design-os-knowledge-builder`.
 
-## Modules
+## Modules (12 Verified Modules)
 
 | ID | File | Domain | Trust Tier |
 |---|---|---|---|
@@ -13,7 +13,11 @@ This directory contains the cryptographically provenance-pinned **Universal Know
 | `typography-and-vertical-metrics` | `typography-and-vertical-metrics.md` | `vietnamese-typography-and-design-systems` | `verified` |
 | `b2b-zns-and-admin-comms` | `b2b-zns-and-admin-comms.md` | `vietnamese-business-and-administrative-comms` | `verified` |
 | `finance-tt99-and-fintech` | `finance-tt99-and-fintech.md` | `vietnamese-finance-and-accounting` | `verified` |
-| `education-moet-and-edtech` | `education-moet-and-edtech.md` | `vietnamese-education-and-edtech` | `verified` |
+| `education-moet-and-edtech` | `education-moet-and-edtech.md` | `vietnamese-education-and-edtech` (7-Tier: Mầm non -> Tiến sĩ & GS/PGS) | `verified` |
+| `healthcare-by-law-and-emr` | `healthcare-by-law-and-emr.md` | `vietnamese-healthcare-and-pharma` | `verified` |
+| `legal-contracts-civil-commercial` | `legal-contracts-civil-commercial.md` | `vietnamese-legal-and-contracts` | `verified` |
+| `hospitality-aviation-tourism` | `hospitality-aviation-tourism.md` | `vietnamese-hospitality-and-travel` | `verified` |
+| `hr-labor-code-and-bhxh` | `hr-labor-code-and-bhxh.md` | `vietnamese-hr-and-recruitment` | `verified` |
 
 ## Verification Commands
 

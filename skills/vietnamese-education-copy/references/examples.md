@@ -1,7 +1,7 @@
 <!-- vlc-disable: all -->
 # Worked Diagnostic Pairs — `vietnamese-education-copy`
 
-> Auto-generated from `evals/vietnamese-education-copy/pairs.jsonl` (30 verified pairs). Each pair contrasts a real LLM defect (❌) with the production Vietnamese fix (✅) and names the rule IDs it satisfies.
+> Auto-generated from `evals/vietnamese-education-copy/pairs.jsonl` (46 verified pairs). Each pair contrasts a real LLM defect (❌) with the production Vietnamese fix (✅) and names the rule IDs it satisfies.
 
 ## K12
 
@@ -235,4 +235,124 @@
 ```diff
 - Kết quả học tập và rèn luyện của học sinh trong năm học.
 + Kết quả học tập và rèn luyện của học sinh trong năm học.
+```
+
+## Academic Rank
+
+### edu-rank-degree-ts (Rules: `EDU004` · Register: `edu-uni` · Doctype: `higher-ed`)
+
+```diff
+- Thầy hướng dẫn có học hàm Tiến sĩ chuyên ngành Khoa học Máy tính.
++ Thầy hướng dẫn có học vị Tiến sĩ chuyên ngành Khoa học Máy tính.
+```
+
+### edu-rank-degree-gs (Rules: `EDU004` · Register: `edu-uni` · Doctype: `higher-ed`)
+
+```diff
+- Hội đồng vừa trao học vị Giáo sư danh dự cho giảng viên cao cấp.
++ Hội đồng vừa trao chức danh Giáo sư danh dự cho giảng viên cao cấp.
+```
+
+### edu-rank-degree-ths (Rules: `EDU004` · Register: `edu-uni` · Doctype: `higher-ed`)
+
+```diff
+- Yêu cầu ứng viên dự tuyển có học hàm Thạc sĩ trở lên.
++ Yêu cầu ứng viên dự tuyển có học vị Thạc sĩ trở lên.
+```
+
+### edu-rank-degree-pgs (Rules: `EDU004` · Register: `edu-uni` · Doctype: `higher-ed`)
+
+```diff
+- Nhà trường tổ chức lễ công nhận học vị Phó Giáo sư cho các nhà khoa học trẻ.
++ Nhà trường tổ chức lễ công nhận chức danh Phó Giáo sư cho các nhà khoa học trẻ.
+```
+
+## Graduation Work
+
+### edu-grad-work-bachelor (Rules: `EDU008` · Register: `edu-uni` · Doctype: `higher-ed`)
+
+```diff
+- Sinh viên năm cuối chuẩn bị bảo vệ luận án cử nhân trước hội đồng khoa.
++ Sinh viên năm cuối chuẩn bị bảo vệ khóa luận tốt nghiệp trước hội đồng khoa.
+```
+
+### edu-grad-work-master (Rules: `EDU008` · Register: `edu-postgrad` · Doctype: `master-thesis`)
+
+```diff
+- Học viên cao học đã hoàn thành bản thảo luận án thạc sĩ chuyên ngành Quản lý kinh tế.
++ Học viên cao học đã hoàn thành bản thảo luận văn thạc sĩ chuyên ngành Quản lý kinh tế.
+```
+
+### edu-grad-work-phd-khoa-luan (Rules: `EDU008` · Register: `edu-postgrad` · Doctype: `doctoral-dissertation`)
+
+```diff
+- Nghiên cứu sinh nộp hồ sơ bảo vệ khóa luận tiến sĩ cấp đơn vị chuyên môn.
++ Nghiên cứu sinh nộp hồ sơ bảo vệ luận án tiến sĩ cấp đơn vị chuyên môn.
+```
+
+### edu-grad-work-phd-do-an (Rules: `EDU008` · Register: `edu-postgrad` · Doctype: `doctoral-dissertation`)
+
+```diff
+- Khoa thông báo lịch nghiệm thu đồ án tiến sĩ của các nghiên cứu sinh.
++ Khoa thông báo lịch nghiệm thu luận án tiến sĩ của các nghiên cứu sinh.
+```
+
+## Preschool
+
+### edu-preschool-numeric-score (Rules: `EDU011` · Register: `edu-preschool` · Doctype: `preschool-report`)
+
+```diff
+- Bé rất tích cực phát biểu và đạt điểm 10 môn Nhận thức trong tuần qua.
++ Bé rất tích cực phát biểu và đạt chuẩn mốc phát triển nhận thức trong tuần qua.
+```
+
+### edu-preschool-overall-gioi (Rules: `EDU011` · Register: `edu-preschool` · Doctype: `preschool-report`)
+
+```diff
+- Cuối học kỳ I, bé được giáo viên chủ nhiệm xếp loại học lực Giỏi.
++ Cuối học kỳ I, bé được giáo viên chủ nhiệm đánh giá Đạt tất cả các chỉ số phát triển theo độ tuổi.
+```
+
+### edu-preschool-letter-grade (Rules: `EDU011` · Register: `edu-preschool` · Doctype: `preschool-report`)
+
+```diff
+- Bé chăm ngoan và được nhà trường xếp loại A trong học kỳ vừa qua.
++ Bé chăm ngoan và hoàn thành tốt các hoạt động sinh hoạt và học tập trong học kỳ vừa qua.
+```
+
+### edu-preschool-ten-point-scale (Rules: `EDU011` · Register: `edu-preschool` · Doctype: `preschool-report`)
+
+```diff
+- Khả năng phát âm tiếng Việt của bé đạt 9/10 điểm theo bài kiểm tra định kỳ.
++ Khả năng phát âm tiếng Việt của bé đạt chuẩn chỉ số phát triển ngôn ngữ theo độ tuổi.
+```
+
+## Postgrad
+
+### edu-postgrad-pronoun-minh-se (Rules: `EDU012` · Register: `edu-postgrad` · Doctype: `doctoral-dissertation`)
+
+```diff
+- Trong chương 3, mình sẽ trình bày thuật toán phân cụm dữ liệu phân tán.
++ Trong chương 3, nghiên cứu sinh trình bày thuật toán phân cụm dữ liệu phân tán.
+```
+
+### edu-postgrad-pronoun-teacher-student (Rules: `EDU012` · Register: `edu-postgrad` · Doctype: `master-thesis`)
+
+```diff
+- Cán bộ hướng dẫn ghi nhận tiến độ và cô khen con đã nộp đề cương đúng hạn.
++ Cán bộ hướng dẫn ghi nhận tiến độ và đánh giá cao học viên đã nộp đề cương đúng hạn.
+```
+
+### edu-postgrad-claim-inflation (Rules: `EDU012` · Register: `edu-postgrad` · Doctype: `doctoral-dissertation`)
+
+```diff
+- Mô hình đề xuất chứng minh tuyệt đối 100% không có sai số trong quá trình nhận dạng.
++ Mô hình đề xuất đạt độ chính xác 98,5% trên tập dữ liệu kiểm thử với khoảng tin cậy 95,0%.
+```
+
+### edu-postgrad-casual-ban-hay (Rules: `EDU012` · Register: `edu-postgrad` · Doctype: `master-thesis`)
+
+```diff
+- Để đánh giá hiệu quả giải pháp, bạn hãy đối chiếu biểu đồ tăng trưởng doanh thu.
++ Để đánh giá hiệu quả giải pháp, tác giả đối chiếu biểu đồ tăng trưởng doanh thu.
 ```
