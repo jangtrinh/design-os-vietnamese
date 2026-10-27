@@ -52,6 +52,11 @@ PENALTY_RATE_RE = re.compile(
     re.IGNORECASE,
 )
 
+CONTRACT_CONTEXT_RE = re.compile(
+    r"(?<!\w)(?:hợp\s+đồng|bên\s+[ab]|bên\s+vi\s+phạm|bên\s+bán|bên\s+mua|bên\s+thuê|thỏa\s+thuận)(?!\w)",
+    re.IGNORECASE,
+)
+
 # LEG002: Obsolete seasonal labor contracts
 OBSOLETE_LABOR_RE = re.compile(
     r"(?<!\w)(?:"
@@ -96,10 +101,15 @@ OBSOLETE_STATUTE_RE = re.compile(
     r"Luật\s+Doanh\s+nghiệp\s+2005|"
     r"Luật\s+Sở\s+hữu\s+trí\s+tuệ\s+2005\s+chưa\s+sửa\s+đổi|"
     r"Luật\s+Bảo\s+vệ\s+quyền\s+lợi\s+người\s+tiêu\s+dùng\s+2010|"
+    r"Luật\s+Giao\s+dịch\s+điện\s+tử(?:\s+năm)?\s+2005|"
+    r"51/2005/QH11|"
+    r"Luật\s+Viễn\s+thông(?:\s+năm)?\s+2009|"
+    r"41/2009/QH12|"
     r"Luật\s+Thương\s+mại\s+1997"
     r")(?!\w)",
     re.IGNORECASE,
 )
+OBSOLETE_LAW_RE = OBSOLETE_STATUTE_RE
 
 # LEG006: Dispute resolution and force majeure markers for contracts
 DISPUTE_RE = re.compile(
@@ -122,14 +132,32 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, str, int, str, str, str]]:
     if _is_comment_or_blank(raw):
         return
 
     # LEG001: Commercial contract breach penalty > 8%
     # Gated to commercial-contract or untyped contract context (sparing explicit civil contracts)
+    has_contract_context = bool(CONTRACT_CONTEXT_RE.search(raw) or (ctx.text and CONTRACT_CONTEXT_RE.search(ctx.text)))
     if ctx.doctype == "commercial-contract" or (
-        ctx.doctype is None and not re.search(r"hợp\s+đồng\s+dân\s+sự", ctx.text, re.IGNORECASE)
+        ctx.doctype is None
+        and not (ctx.text and re.search(r"hợp\s+đồng\s+dân\s+sự", ctx.text, re.IGNORECASE))
+        and has_contract_context
     ):
         for match in PENALTY_RATE_RE.finditer(masked):
             captured_rate = next((g for g in match.groups() if g is not None), None)
@@ -150,6 +178,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # LEG002: Obsolete seasonal labor contract
     for match in OBSOLETE_LABOR_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "LEG002",
             ERROR,
@@ -161,6 +191,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # LEG003: Foreign citation ordering
     for match in FOREIGN_CITATION_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "LEG003",
             WARN,
@@ -183,13 +215,15 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # LEG005: Obsolete legal document names
     for match in OBSOLETE_STATUTE_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "LEG005",
             WARN,
             match.start() + 1,
             match.group(0),
             f"obsolete legal document name “{match.group(0)}”",
-            "update to current effective statute (Bộ luật Dân sự 2015, Bộ luật Lao động 2019, Luật Doanh nghiệp 2020, Luật Sở hữu trí tuệ sửa đổi 2022, Luật Bảo vệ quyền lợi người tiêu dùng 2023)",
+            "update to current effective statute (Bộ luật Dân sự 2015, Bộ luật Lao động 2019, Luật Doanh nghiệp 2020, Luật Sở hữu trí tuệ sửa đổi 2022, Luật Bảo vệ quyền lợi người tiêu dùng 2023, Luật Giao dịch điện tử 2023, Luật Viễn thông 2023)",
         )
 
 

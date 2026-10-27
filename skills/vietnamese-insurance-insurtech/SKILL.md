@@ -98,6 +98,9 @@ To produce compliant insurance copy and digital onboarding flows under Vietnames
 
 ## 6. Bundled References
 
+- [references/glossary.md](references/glossary.md) — Machine-readable glossary of 30+ statutory insurance, actuarial, and InsurTech terms with severity linting rules.
+- [references/banned-phrases.md](references/banned-phrases.md) — Prohibited misleading insurance phrases, savings disguise slogans, and unverified superlatives.
+- [references/qa-checklist.md](references/qa-checklist.md) — Comprehensive 4-tier pre-publish compliance and actuarial quality gate.
 - [references/luat-kinh-doanh-bao-hiem-2022.md](references/luat-kinh-doanh-bao-hiem-2022.md) — Law on Insurance Business 2022 key provisions: 4 statutory roles, 21-day free-look, exclusion clauses, and 15-day claim timelines.
 - [references/thong-tu-67-2023-bancassurance.md](references/thong-tu-67-2023-bancassurance.md) — Circular 67/2023/TT-BTC bancassurance anti-coercion regulations and investment-linked illustration standards.
 - [references/insurance-terminology-and-calques.md](references/insurance-terminology-and-calques.md) — Statutory Vietnamese insurance glossary and English translationese lookup table.

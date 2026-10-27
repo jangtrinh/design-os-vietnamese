@@ -115,6 +115,21 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def _is_negated(text: str, start: int) -> bool:
     prefix = text[max(0, start - 60):start].lower()
     return any(neg in prefix for neg in (
@@ -129,6 +144,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # GOV001: Obsolete 4-level public service classification
     for match in OBSOLETE_DVC_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "GOV001",
             ERROR,
@@ -140,7 +157,7 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # GOV002: Outdated identity card terminology
     for match in OUTDATED_ID_RE.finditer(masked):
-        if _is_negated(masked, match.start()):
+        if _is_negated_or_meta(raw, match.start()) or _is_negated(masked, match.start()):
             continue
         yield (
             "GOV002",
@@ -153,6 +170,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # GOV003: Invalid VNeID electronic identity levels
     for match in INVALID_VNEID_LEVEL_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "GOV003",
             ERROR,

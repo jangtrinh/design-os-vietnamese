@@ -119,6 +119,9 @@ To draft or audit compliant real estate instruments, execute this 4-step workflo
 
 ## Bundled References
 
+- [references/glossary.md](references/glossary.md) — Standardized real estate, land tenure, condominium, and construction BOQ terminology.
+- [references/banned-phrases.md](references/banned-phrases.md) — Banned superlatives, illegal deposit terms, misleading tenure claims, and calque blocklist.
+- [references/qa-checklist.md](references/qa-checklist.md) — 4-tier pre-publish quality assurance checklist for real estate and construction documentation.
 - [references/luat-kinh-doanh-bds-2023.md](references/luat-kinh-doanh-bds-2023.md) — Comprehensive guide to the Law on Real Estate Business 2023: 5% deposit cap, 30%/70%/95% payment schedules, and bank guarantees.
 - [references/luat-dat-dai-2024-va-nha-o-2023.md](references/luat-dat-dai-2024-va-nha-o-2023.md) — Land Law 2024 & Housing Law 2023: commercial land tenure limits, carpet area measurement rules, and 2% maintenance fund requirements.
 - [references/construction-boq-and-calques.md](references/construction-boq-and-calques.md) — Decree 37/2015/NĐ-CP construction contracts, BOQ standards, and English-Vietnamese calque blocklist.

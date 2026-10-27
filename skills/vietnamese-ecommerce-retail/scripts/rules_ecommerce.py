@@ -102,6 +102,16 @@ LOGISTICS_CALQUES_MAP = {
     "tiền mặt trên giao hàng": "thanh toán khi nhận hàng (COD)",
     "chính sách trở lại": "chính sách đổi trả",
     "người vận chuyển cuối cùng": "đơn vị vận chuyển chặng cuối",
+    "theo dõi bưu kiện của bạn": "theo dõi đơn hàng",
+    "nhãn vận chuyển trở lại": "phiếu gửi hàng hoàn trả",
+    "trung tâm thực hiện": "trung tâm xử lý đơn hàng (Fulfillment Center)",
+    "giao hàng dặm cuối": "giao hàng chặng cuối",
+    "đơn hàng lưng": "đơn hàng đặt trước / chờ bổ sung tồn kho",
+    "kiểm tra ra": "thanh toán",
+    "thêm vào danh sách mong muốn": "thêm vào danh sách yêu thích",
+    "vận chuyển thả": "bán hàng bỏ qua khâu vận chuyển (Dropshipping)",
+    "out for delivery": "đang giao hàng",
+    "pod": "bằng chứng giao hàng (Proof of Delivery / POD)",
 }
 
 LOGISTICS_CALQUES_RE = re.compile(
@@ -125,6 +135,21 @@ DARK_PATTERN_RE = re.compile(
 def _is_comment_or_blank(line: str) -> bool:
     stripped = line.strip()
     return not stripped or stripped.startswith(("#", "<!--", "//"))
+
+
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
 
 
 def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, str, int, str, str, str]]:
@@ -199,6 +224,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # ECOM005: E-commerce logistics calques
     for match in LOGISTICS_CALQUES_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         term_lower = match.group(1).lower()
         replacement = LOGISTICS_CALQUES_MAP.get(term_lower, "thuật ngữ chuẩn")
         yield (

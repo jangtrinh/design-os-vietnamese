@@ -40,8 +40,13 @@
 ## Kiểm định Tự động & UKMC.v1
 
 ```bash
-# Kiểm định văn bản tiếng Việt với bộ quy tắc chuyên ngành
+# Kiểm định văn bản tiếng Việt với bộ quy tắc chuyên ngành (hỗ trợ ghép đa ngành --domain finance,legal hoặc --domain all)
 python3 shared/scripts/validate_copy.py path/to/file.md --domain edu --register edu-postgrad
+python3 shared/scripts/validate_copy.py contract.md --domain finance,insurance,legal,cybersecurity --strict
+
+# Kiểm định danh mục đa nền tảng: JSON, Apple Xcode (.xcstrings) và Android (strings.xml)
+python3 shared/scripts/check_i18n_parity.py ios/Localizable.xcstrings --json
+python3 shared/scripts/check_i18n_parity.py android/values/strings.xml android/values-vi/strings.xml --json
 
 # Kiểm định tính toàn vẹn tri thức UKMC.v1 (18 module, 65+ neo bằng chứng SHA-256)
 python3 tools/verify_ukmc.py

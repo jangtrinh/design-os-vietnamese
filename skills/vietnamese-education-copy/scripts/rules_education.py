@@ -162,6 +162,21 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def check_line(ctx, lineno: int, raw: str, masked: str):
     doctype = ctx.doctype
     register = getattr(ctx, "register", None)
@@ -285,6 +300,14 @@ def check_line(ctx, lineno: int, raw: str, masked: str):
 
     if doctype in ("higher-ed", "transcript"):
         for match in CREDIT_CALQUE_RE.finditer(masked):
+            pre = masked[max(0, match.start() - 25):match.start()]
+            post = masked[match.end():match.end() + 25]
+            if re.search(r"(?:vay|gói|chương\s+trình)\s+$", pre, re.IGNORECASE):
+                continue
+            if re.match(r"^\s+(?:sinh\s+viên|học\s+sinh|học\s+tập|ưu\s+đãi|ngân\s+hàng)\b", post, re.IGNORECASE):
+                continue
+            if _is_negated_or_meta(raw, match.start()):
+                continue
             yield (
                 "EDU005",
                 WARN,

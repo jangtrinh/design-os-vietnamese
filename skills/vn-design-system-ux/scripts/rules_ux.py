@@ -100,6 +100,21 @@ def _extract_text_for_cap(raw: str) -> Optional[str]:
     return stripped
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def check_line(ctx: Any, lineno: int, raw: str, masked: str) -> List[Tuple[str, str, int, str, str, str]]:
     findings: List[Tuple[str, str, int, str, str, str]] = []
 

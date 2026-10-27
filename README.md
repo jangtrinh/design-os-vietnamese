@@ -114,6 +114,22 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | `ICU001` / `ICU002` | `ERROR` | Multi-line ICU plural block parser (`other`-only) and translated placeholder detector (`{tên}`) |
 | `PRO001` / `PRO002` | `ERROR`/`WARN` | Enforces pronoun consistency across **31 audience registers** (`ux-microcopy`, `edu-preschool`, `edu-postgrad`, `healthcare-clinical`, `legal-contract`, `hospitality-luxury`, `hr-candidate`, `realestate-luxury`, `ecommerce-shopper`, `public-citizen`, `insurance-policyholder`, `infosec-advisory`, `crisis-comms`, etc.) |
 
+### Multi-Domain Composition, Cross-Platform Catalogs & Inline Directives (v5.1)
+
+```bash
+# Audit hybrid documents across multiple regulated domains simultaneously (or use --domain all)
+python3 shared/scripts/validate_copy.py contract.md --domain finance,insurance,legal,cybersecurity --strict
+
+# Pipe text directly via stdin (-)
+echo "Giao dịch hoàn tất thành công." | python3 shared/scripts/validate_copy.py - --json
+
+# Check Apple Xcode String Catalogs (.xcstrings), Android strings.xml, or nested JSON arrays
+python3 shared/scripts/check_i18n_parity.py ios/Localizable.xcstrings --json
+python3 shared/scripts/check_i18n_parity.py android/values/strings.xml android/values-vi/strings.xml --json
+```
+
+Inline suppression directives are supported for verified exceptions: `<!-- vncopy-disable: LAW001 -->` (file/block), `<!-- vncopy-disable-line: LAW001 -->` (specific rule on line), or `<!-- vncopy-disable-line -->` (all rules on line; `vlc-disable` alias also supported).
+
 ---
 
 ## Installation

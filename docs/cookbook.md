@@ -99,3 +99,14 @@ Copy-paste prompt recipes for Claude Code, OpenAI Codex, Gemini CLI, and Google 
 ```text
 "Draft an official corporate Press Release and Crisis Communications Statement compliant with Press Law 2016, Decree 147/2024/NĐ-CP, Article 42 press correction rules, presumption of innocence (nghi phạm / bị can / bị cáo), and Law on Children 2016 (<16 anonymization). Verify with validate_copy.py --domain media --doctype press-release --register crisis-comms."
 ```
+
+## 17. Hybrid Multi-Domain Audit, Apple `.xcstrings` / Android `strings.xml` & Inline Suppression
+
+```text
+"Audit our Bancassurance & FinTech privacy agreement across Finance, Insurance, Legal, and Cybersecurity simultaneously using:
+  python3 shared/scripts/validate_copy.py contract.md --domain finance,insurance,legal,cybersecurity --strict
+Check our iOS String Catalog and Android XML parity using:
+  python3 shared/scripts/check_i18n_parity.py ios/Localizable.xcstrings --json
+  python3 shared/scripts/check_i18n_parity.py android/values/strings.xml android/values-vi/strings.xml --json
+Use <!-- vncopy-disable: LAW001 --> or <!-- vncopy-disable-line --> only for legally verified third-party awards."
+```

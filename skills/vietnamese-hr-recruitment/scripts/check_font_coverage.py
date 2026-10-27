@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/check_font_coverage.py (60b0608ed7e6dd05) — edit shared/ source, not this copy
+# synced from shared/scripts/check_font_coverage.py (aa11757601f857c3) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Font & Glyph Coverage Inspector (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -19,6 +19,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import pathlib
 import re
@@ -37,8 +38,18 @@ DEFAULT_RANGE = (
     "U+0000-00FF, U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, "
     "U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, "
     "U+0323, U+0329, U+1EA0-1EF9, U+2018-2019, U+201C-201D, U+2013-2014, "
-    "U+2026, U+00B2, U+00B3, U+20AB"
+    "U+2022, U+2026, U+00B2, U+00B3, U+20AB"
 )
+
+
+def _is_vietnamese_or_typography_codepoint(cp: int) -> bool:
+    """Return True for Latin, Vietnamese, Combining Marks, Punctuation, Superscripts, and Currency."""
+    return (
+        (0x0020 <= cp <= 0x024F)
+        or (0x02B0 <= cp <= 0x036F)
+        or (0x1E00 <= cp <= 0x1EFF)
+        or (0x2000 <= cp <= 0x20CF)
+    )
 
 # All 134 precomposed Vietnamese vowels (67 lowercase + 67 uppercase) + Đ/đ + ₫
 REQUIRED_SAMPLE = (
@@ -198,6 +209,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     ap.add_argument("--font-file", metavar="TTF_OTF", help="read binary cmap table from .ttf/.otf")
     ap.add_argument("--list-required", action="store_true", help="print all required Vietnamese codepoints")
     ap.add_argument("--ext", default=",".join(DEFAULT_EXTENSIONS), help="comma-separated extensions")
+    ap.add_argument("--json", action="store_true", dest="as_json", help="emit coverage report as JSON")
+    ap.add_argument(
+        "--strict-symbols",
+        action="store_true",
+        help="also fail on non-Latin/non-typography symbols (emojis, arrows, math, CJK)",
+    )
     args = ap.parse_args(argv)
 
     if args.list_required:
@@ -241,10 +258,32 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     for ctrl in (0x0A, 0x0D, 0x09):
         used.discard(ctrl)
 
+    if not args.strict_symbols:
+        used = {cp for cp in used if _is_vietnamese_or_typography_codepoint(cp)}
+
     uncovered = sorted(cp for cp in used if not covered(cp, ranges))
+    gaps_in_font = [ch for ch in KNOWN_GAP if not covered(ord(ch), ranges)]
+
+    if args.as_json:
+        print(json.dumps({
+            "files": len(files),
+            "distinct_codepoints": len(used),
+            "ranges": len(ranges),
+            "known_gap_missing": gaps_in_font,
+            "uncovered_count": len(uncovered),
+            "uncovered": [
+                {
+                    "codepoint": f"U+{cp:04X}",
+                    "char": chr(cp),
+                    "name": unicodedata.name(chr(cp), "<unnamed>"),
+                }
+                for cp in uncovered
+            ],
+        }, ensure_ascii=False, indent=2))
+        return 1 if uncovered else 0
+
     print(f"{len(files)} file(s) · {len(used)} distinct codepoints · {len(ranges)} range(s) in font")
 
-    gaps_in_font = [ch for ch in KNOWN_GAP if not covered(ord(ch), ranges)]
     if gaps_in_font:
         print(
             f"\nnote: this font subset is missing {''.join(gaps_in_font)} (google/fonts#189 trap). "

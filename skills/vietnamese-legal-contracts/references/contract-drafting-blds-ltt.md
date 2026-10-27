@@ -138,3 +138,18 @@ Trước năm 2015, pháp luật Việt Nam chưa có quy định về nguyên t
 - Trường hợp các bên không thể thỏa thuận được về việc sửa đổi hợp đồng trong thời hạn hợp lý, một trong các bên có quyền yêu cầu Tòa án:
   - Chấm dứt hợp đồng tại một thời điểm xác định; hoặc
   - Sửa đổi hợp đồng để cân bằng quyền và lợi ích hợp pháp của các bên.
+
+---
+
+## 6. Giao kết Hợp đồng Điện tử theo Luật Giao dịch điện tử 2023 (20/2023/QH15)
+
+Luật Giao dịch điện tử 2023 (Luật số 20/2023/QH15, có hiệu lực từ ngày 01/07/2024 thay thế Luật Giao dịch điện tử 2005) hoàn thiện hành lang pháp lý cho việc giao kết và thực hiện hợp đồng điện tử tại Việt Nam:
+
+1. **Giá trị pháp lý của Hợp đồng điện tử (Điều 34):**
+   - Hợp đồng điện tử có giá trị pháp lý như hợp đồng truyền thống bằng văn bản giấy, không bị phủ nhận giá trị pháp lý chỉ vì được thể hiện dưới dạng thông điệp dữ liệu.
+2. **Hình thức chữ ký điện tử hợp chuẩn trong hợp đồng (Điều 21, Điều 22):**
+   - **Chữ ký số (Digital Signature):** Chữ ký điện tử sử dụng thuật toán khóa không đối xứng, bảo đảm an toàn theo tiêu chuẩn chữ ký số công cộng (USB Token, SmartCard, Remote Signing / Cloud CA).
+   - **Chữ ký điện tử chuyên dùng bảo đảm an toàn:** Được tổ chức, doanh nghiệp thiết lập và cấp để xác thực nội bộ hoặc trong chuỗi cung ứng khi đáp ứng đầy đủ điều kiện kỹ thuật an toàn thông tin theo quy định của pháp luật.
+3. **Chứng thực Hợp đồng điện tử qua tổ chức cung cấp dịch vụ CeCA (Điều 32):**
+   - Hợp đồng điện tử được chứng thực bởi Tổ chức cung cấp dịch vụ chứng thực hợp đồng điện tử (CeCA - Certified e-Contract Authority) được Bộ Công Thương cấp phép có giá trị chứng cứ cao nhất trong tố tụng và giải quyết tranh chấp thương mại/dân sự.
+

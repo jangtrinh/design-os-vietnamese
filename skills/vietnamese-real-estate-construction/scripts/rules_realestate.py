@@ -59,10 +59,15 @@ DISGUISED_MOBILIZATION_RE = re.compile(
 )
 
 # REA002: Installment 1 > 30%
+INSTALLMENT_PAYMENT_KW_RE = re.compile(
+    r"(?<!\w)(?:thanh\s+toán|đóng|(?<!doanh\s)thu|nộp|giá\s+trị\s+hợp\s+đồng|giá\s+bán|tiền)(?!\w)",
+    re.IGNORECASE,
+)
+
 INSTALLMENT_1_RE = re.compile(
     r"(?<!\w)(?:"
-    r"(?:thanh\s+toán\s+đợt\s+1|thanh\s+toán\s+lần\s+đầu|đợt\s+1|đợt\s+đầu)[^\n.,;:]*?(\d+(?:[.,]\d+)?)\s*%|"
-    r"(\d+(?:[.,]\d+)?)\s*%\s*(?:giá\s+trị\s+hợp\s+đồng|tổng\s+giá\s+trị)?[^\n.,;:]*?(?:ở\s+đợt\s+1|trong\s+đợt\s+1|đợt\s+đầu|ngay\s+đợt\s+1)"
+    r"(?:thanh\s+toán\s+đợt\s+1|thanh\s+toán\s+lần\s+đầu|(?:thanh\s+toán|đóng|(?<!doanh\s)thu|nộp)[^\n.,;:]*?(?:đợt\s+1|đợt\s+đầu)|(?:đợt\s+1|đợt\s+đầu)[^\n.,;:]*?(?:thanh\s+toán|đóng|(?<!doanh\s)thu|nộp|giá\s+trị\s+hợp\s+đồng|giá\s+bán|tiền))[^\n.,;:]*?(\d+(?:[.,]\d+)?)\s*%|"
+    r"(\d+(?:[.,]\d+)?)\s*%\s*(?:giá\s+trị\s+hợp\s+đồng|tổng\s+giá\s+trị|tiền)[^\n.,;:]*?(?:ở\s+đợt\s+1|trong\s+đợt\s+1|đợt\s+đầu|ngay\s+đợt\s+1)"
     r")(?!\w)",
     re.IGNORECASE,
 )
@@ -143,12 +148,29 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, str, int, str, str, str]]:
     if _is_comment_or_blank(raw):
         return
 
     # REA001: Off-plan deposit exceeding 5%
     for match in DEPOSIT_RATE_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         matched_str = match.group(0).lower()
         if "bao gồm" in matched_str or "đã gồm" in matched_str or "(gồm" in matched_str:
             continue
@@ -174,6 +196,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # REA001: Disguised capital mobilization
     for match in DISGUISED_MOBILIZATION_RE.finditer(masked):
+        if _is_negated_or_meta(raw, match.start()):
+            continue
         yield (
             "REA001",
             ERROR,
@@ -185,22 +209,23 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # REA002: Payment schedule violating Article 25
     # First installment > 30%
-    for match in INSTALLMENT_1_RE.finditer(masked):
-        captured_rate = next((g for g in match.groups() if g is not None), None)
-        if captured_rate:
-            try:
-                rate_val = float(captured_rate.replace(",", "."))
-            except ValueError:
-                continue
-            if rate_val > 30.0:
-                yield (
-                    "REA002",
-                    ERROR,
-                    match.start() + 1,
-                    match.group(0),
-                    f"first installment payment ({captured_rate}%) exceeds the 30% statutory limit under Article 25 of Law on Real Estate Business 2023",
-                    "first installment payment for off-plan real estate cannot exceed 30% of contract value (inclusive of deposit)",
-                )
+    if INSTALLMENT_PAYMENT_KW_RE.search(raw):
+        for match in INSTALLMENT_1_RE.finditer(masked):
+            captured_rate = next((g for g in match.groups() if g is not None), None)
+            if captured_rate:
+                try:
+                    rate_val = float(captured_rate.replace(",", "."))
+                except ValueError:
+                    continue
+                if rate_val > 30.0:
+                    yield (
+                        "REA002",
+                        ERROR,
+                        match.start() + 1,
+                        match.group(0),
+                        f"first installment payment ({captured_rate}%) exceeds the 30% statutory limit under Article 25 of Law on Real Estate Business 2023",
+                        "first installment payment for off-plan real estate cannot exceed 30% of contract value (inclusive of deposit)",
+                    )
 
     # Pre-handover > 70% (or > 50% for FDI)
     for match in PRE_HANDOVER_RE.finditer(masked):
@@ -254,14 +279,15 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
         comm_match = COMMERCIAL_PROPERTY_RE.search(masked)
         tenure_match = PERMANENT_TENURE_RE.search(masked)
         assert comm_match and tenure_match
-        yield (
-            "REA003",
-            ERROR,
-            tenure_match.start() + 1,
-            tenure_match.group(0),
-            f"misleading permanent tenure claim “{tenure_match.group(0)}” for commercial-service property “{comm_match.group(0)}” on leasehold land",
-            "commercial-service properties (condotels, officetels, resort villas, shophouses on commercial land) have limited 50/70-year leasehold tenure under Land Law 2024; never promise 'sổ đỏ lâu dài' or 'sở hữu vĩnh viễn'",
-        )
+        if not (_is_negated_or_meta(raw, tenure_match.start()) or _is_negated_or_meta(raw, comm_match.start())):
+            yield (
+                "REA003",
+                ERROR,
+                tenure_match.start() + 1,
+                tenure_match.group(0),
+                f"misleading permanent tenure claim “{tenure_match.group(0)}” for commercial-service property “{comm_match.group(0)}” on leasehold land",
+                "commercial-service properties (condotels, officetels, resort villas, shophouses on commercial land) have limited 50/70-year leasehold tenure under Land Law 2024; never promise 'sổ đỏ lâu dài' or 'sở hữu vĩnh viễn'",
+            )
 
     # REA004: Ambiguous apartment area
     for match in AREA_AMBIGUOUS_RE.finditer(masked):

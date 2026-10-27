@@ -2,6 +2,25 @@
 
 All notable changes to `design-os-vietnamese` are documented in this file.
 
+## [5.1.0] — 2026-10-27
+
+### Added
+- **Multi-Domain Rule Composition (`--domain finance,legal,cybersecurity` & `--domain all`)**: `validate_copy.py` now accepts comma-separated domain lists or `all` to audit hybrid documents (e.g., Bancassurance contracts, PropTech mortgage agreements, or FinTech privacy notices) in a single pass.
+- **Stdin (`-`) & Pre-Commit / CI Integration**: Added `validate_copy.py -` stdin support, `.pre-commit-hooks.yaml`, `pyproject.toml`, and `.github/workflows/ci.yml` (Python 3.9/3.11/3.12 matrix).
+- **Apple Xcode `.xcstrings` & Android `strings.xml` Parity Support**: `check_i18n_parity.py` now natively parses `.xcstrings` String Catalogs (single-file or dual-file), Android `strings.xml`, nested JSON arrays (`list`), ICU `{count, number}` formatted placeholders, and positional printf tokens (`%1$s`, `%@`).
+- **Complete Reference Suites for All 16 Skills**: Added comprehensive `references/glossary.md`, `references/banned-phrases.md`, and `references/qa-checklist.md` across all 6 v5.0 regulated industry skills (`realestate`, `ecommerce`, `gov`, `insurance`, `cybersecurity`, `media`).
+- **Statutory Coverage Expansion**: Added `Luật Giao dịch điện tử 2005` / `Luật Viễn thông 2009` detection (`LEG005`, replaced by 2023 Laws) and logistics calque detection (`ECOM005`: `pod`, `awb`, `3pl`, `out for delivery`).
+
+### Fixed (Red Team Hardening)
+- **Unicode NFD Normalization Before Rule Evaluation**: `validate_copy.py` now normalizes decomposed NFD lines to NFC in memory immediately after recording `NFC001`, preventing NFD text from bypassing linguistic, calque, tone, pronoun, or statutory regex rules.
+- **Vietnamese Thousand Grouping vs Decimal Period (`NUM003`)**: Refined `NUM003` so valid Vietnamese thousand-grouped figures (`5.000 tỷ`, `20.000 m²`, `1.500 điểm`) are never falsely flagged as Anglo-American decimal points.
+- **Unaccented Diacritic Detector (`DIA001`)**: Fixed `"thanh cong"` entry in `DIACRITIC_PHRASES` so properly accented `", thành công"` never triggers a false positive.
+- **Square/Cubic Meter & Hardware `M2 SSD` Disambiguation (`NUM004`)**: Catches unspaced `50m2` / `120m3` while exempting hardware terms (`Apple M2`, `chip M2`, `Ổ cứng M2 SSD 1TB`).
+- **Superlative Ordinals (`LAW001`) & Pronoun Compounds (`PRO002`)**: Exempted ordinal labels (`bước số 1`, `trang số 1`, `phụ lục số 1`, `để có trải nghiệm tốt nhất`) and compound nouns (`người bạn`, `bạn cùng phòng`, `quý công ty`, `quý này`).
+- **Code Block & JSON Key Masking (`ICU001`, `ICU002`)**: Masked Markdown fenced code blocks before `ICU001`/`ICU002` checks and masked JSON keys in `.json`/`.xcstrings` files.
+- **Negation & Meta-Discourse Context Guard**: Added `_is_negated_or_meta()` across domain rule engines so regulatory explanations (e.g., `"đã bãi bỏ hợp đồng mùa vụ"`, `"không được quảng cáo là thần dược"`) and HTML `<ul>` tags (`FIN008`), student loans (`tín dụng sinh viên`, `EDU005`), or revenue milestones (`Doanh thu đợt 1`, `REA002`) do not trigger false positives.
+- **Font Coverage JSON & Non-Latin Symbol Filtering (`check_font_coverage.py`)**: Added `--json` output and `--strict-symbols` so Markdown arrows (`→`) and emojis (`✅`) do not trigger false font subset failures by default.
+
 ## [5.0.0] — 2026-10-26
 
 ### Added

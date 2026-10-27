@@ -119,6 +119,21 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def _is_negated(text: str, start: int) -> bool:
     prefix = text[max(0, start - 60):start].lower()
     return any(neg in prefix for neg in (
@@ -132,7 +147,7 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
 
     # INS001: Disguising investment-linked insurance as fixed-rate bank savings
     for match in SAVINGS_DISGUISE_RE.finditer(masked):
-        if _is_negated(masked, match.start()):
+        if _is_negated_or_meta(raw, match.start()) or _is_negated(masked, match.start()):
             continue
         yield (
             "INS001",

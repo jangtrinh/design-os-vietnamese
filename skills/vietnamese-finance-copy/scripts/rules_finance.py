@@ -78,10 +78,30 @@ MST_RE = re.compile(r"(?<!\w)MST(?!\w)", re.IGNORECASE)
 VAT_RE = re.compile(r"(?<!\w)(thuế\s*GTGT|giá\s+trị\s+gia\s+tăng)(?!\w)", re.IGNORECASE)
 
 # Investment-linked insurance triggers under TT 67/2023/TT-BTC
-ILP_TRIGGER_RE = re.compile(
-    r"(?<!\w)(?:bảo\s+hiểm\s+liên\s+kết\s+(?:đầu\s+tư|chung|đơn\s+vị)|sản\s+phẩm\s+ILP|hợp\s+đồng\s+ILP|\bILP\b|\bUL\b)(?!\w)",
+ILP_VN_RE = re.compile(
+    r"(?<!\w)(?:bảo\s+hiểm\s+liên\s+kết\s+(?:đầu\s+tư|chung|đơn\s+vị)|sản\s+phẩm\s+ILP|hợp\s+đồng\s+ILP)(?!\w)",
     re.IGNORECASE,
 )
+ILP_ACRONYM_RE = re.compile(r"(?<![</\w])(?:ILP|UL)(?![>\w])")
+
+
+class _ILPTriggerMatcher:
+    pattern = r"(?<!\w)(?:bảo\s+hiểm\s+liên\s+kết\s+(?:đầu\s+tư|chung|đơn\s+vị)|sản\s+phẩm\s+ILP|hợp\s+đồng\s+ILP)(?!\w)|(?<![</\w])(?:ILP|UL)(?![>\w])"
+
+    def search(self, text: str, *args, **kwargs):
+        m1 = ILP_VN_RE.search(text, *args, **kwargs)
+        m2 = ILP_ACRONYM_RE.search(text, *args, **kwargs)
+        if m1 and m2:
+            return m1 if m1.start() <= m2.start() else m2
+        return m1 or m2
+
+    def finditer(self, text: str, *args, **kwargs):
+        matches = list(ILP_VN_RE.finditer(text, *args, **kwargs)) + list(ILP_ACRONYM_RE.finditer(text, *args, **kwargs))
+        matches.sort(key=lambda m: m.start())
+        return iter(matches)
+
+
+ILP_TRIGGER_RE = _ILPTriggerMatcher()
 NOT_DEPOSIT_RE = re.compile(
     r"(?<!\w)(?:không\s+phải\s+(?:là\s+)?(?:sản\s+phẩm\s+)?tiết\s+kiệm|không\s+phải\s+(?:là\s+)?tiền\s+gửi(?: ngân hàng)?|đây\s+là\s+sản\s+phẩm\s+bảo\s+hiểm,\s+không\s+phải)",
     re.IGNORECASE,
@@ -143,10 +163,27 @@ def _is_comment_or_blank(line: str) -> bool:
     return not stripped or stripped.startswith(("#", "<!--", "//"))
 
 
+META_NEGATION_RE = re.compile(
+    r"(?:đã\s+bãi\s+bỏ|bãi\s+bỏ\s+quy\s+định|bãi\s+bỏ\s+loại\s+hình|thay\s+thế\s+cho|"
+    r"không\s+được(?:\s+phép)?\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"nghiêm\s+cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết|ghi|viết|dùng|sử\s+dụng)|"
+    r"cấm\s+(?:quảng\s+cáo|tuyên\s+bố|cam\s+kết)\s+|"
+    r"tránh\s+(?:viết|dùng|sử\s+dụng))\s*[^\n.;:]{0,25}$",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_or_meta(raw_line: str, match_start: int) -> bool:
+    prefix = raw_line[max(0, match_start - 60):match_start]
+    return bool(META_NEGATION_RE.search(prefix))
+
+
 def check_line(ctx, lineno: int, raw: str, masked: str):
     # FIN001 is never gated: guaranteed-return phrasing is prohibited wherever it appears
     for regex in GUARANTEED:
         for match in regex.finditer(masked):
+            if _is_negated_or_meta(raw, match.start()):
+                continue
             yield (
                 "FIN001",
                 WARN,
@@ -235,7 +272,7 @@ def check_document(ctx):
             )
 
     # FIN008: Investment-linked insurance missing disclaimers under TT 67/2023/TT-BTC Điều 53
-    if doctype in ("insurance", "financial-promotion", "disclosure"):
+    if doctype in ("insurance", "financial-promotion", "disclosure") or doctype is None:
         match_ilp = ILP_TRIGGER_RE.search(body)
         if match_ilp:
             has_not_deposit = bool(NOT_DEPOSIT_RE.search(body))

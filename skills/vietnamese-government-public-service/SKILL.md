@@ -106,6 +106,9 @@ Public service administrators and engineering teams must enforce modern Vietname
 
 ## 7. Bundled References
 
+- [references/glossary.md](references/glossary.md) — Standardized public administration, online public service portals, citizen identity, and civil service terminology.
+- [references/banned-phrases.md](references/banned-phrases.md) — Banned superlatives, bureaucratic scolding, obsolete service levels, and paper residency demand blocklist.
+- [references/qa-checklist.md](references/qa-checklist.md) — 4-tier pre-publish quality assurance checklist for online public service portals, TTHC dossiers, and civic software.
 - [references/dvc-truc-tuyen-nd42-2022.md](references/dvc-truc-tuyen-nd42-2022.md) — Decree 42/2022/NĐ-CP 2-tier online public service classification and mandatory TTHC guide fields.
 - [references/luat-can-cuoc-2023-va-vneid-nd69.md](references/luat-can-cuoc-2023-va-vneid-nd69.md) — Law on Identification 2023 card terminology and Decree 69/2024/NĐ-CP VNeID Level 1 & Level 2 standards.
 - [references/luat-cu-tru-bo-so-ho-khau-giay.md](references/luat-cu-tru-bo-so-ho-khau-giay.md) — Law on Residence 2020 and Decree 104/2022/NĐ-CP abolition of paper household books and electronic verification channels.

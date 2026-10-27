@@ -118,6 +118,9 @@ To publish compliant e-commerce listings and campaigns, execute this 4-step work
 
 ## Bundled References
 
+- [references/glossary.md](references/glossary.md) — Standardized e-commerce, digital retail, fulfillment lifecycle, and multi-channel logistics terminology.
+- [references/banned-phrases.md](references/banned-phrases.md) — Banned superlatives, fake MoIT endorsements, illegal discount claims, and dark pattern blocklist.
+- [references/qa-checklist.md](references/qa-checklist.md) — 4-tier pre-publish quality assurance checklist for e-commerce storefronts, PDPs, and promotional campaigns.
 - [references/tmdt-nd52-nd85-va-bct.md](references/tmdt-nd52-nd85-va-bct.md) — Decree 52/2013/NĐ-CP & Decree 85/2021/NĐ-CP: MoIT notification vs. registration logos and mandatory storefront disclosures.
 - [references/khuyen-mai-nd81-nd128-va-bvqlntd.md](references/khuyen-mai-nd81-nd128-va-bvqlntd.md) — Decree 81/2018/NĐ-CP discount limits, Consumer Protection Law 2023 void clauses, PDP labeling, and dark pattern prohibitions.
 - [references/ecommerce-logistics-and-calques.md](references/ecommerce-logistics-and-calques.md) — E-commerce lifecycle statuses, payment terms (COD/BNPL), and English-Vietnamese logistics calque blocklist.

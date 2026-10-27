@@ -93,6 +93,9 @@ To draft and publish compliant Vietnamese press and PR instruments, follow this 
 
 ## Bundled References
 
+- [references/glossary.md](references/glossary.md) — Machine-readable glossary of 30+ journalism, press release architecture, and PR terms with severity linting rules.
+- [references/banned-phrases.md](references/banned-phrases.md) — Prohibited journalism calques, presumption-of-innocence violations, and retaliatory crisis statements.
+- [references/qa-checklist.md](references/qa-checklist.md) — Comprehensive 4-tier pre-publish editorial, constitutional, and PR quality gate.
 - [references/luat-bao-chi-2016-va-nd147-2024.md](references/luat-bao-chi-2016-va-nd147-2024.md) — Press Law 2016, Decree 147/2024/NĐ-CP, and Article 42 press correction procedures.
 - [references/suy-doan-vo-toi-va-bao-ve-tre-em.md](references/suy-doan-vo-toi-va-bao-ve-tre-em.md) — Constitutional presumption of innocence and child identity protection standards.
 - [references/press-release-and-crisis-pr.md](references/press-release-and-crisis-pr.md) — Press release architecture, journalism calques, and constructive crisis PR guidelines.

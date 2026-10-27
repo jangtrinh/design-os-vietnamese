@@ -15,7 +15,13 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SHARED_REFS = ROOT / "shared" / "references"
-SHARED_SYNC_REF_NAMES = ("compliance.md", "register-matrix.md", "typography.md")
+SHARED_SYNC_REF_NAMES = (
+    "compliance.md",
+    "register-matrix.md",
+    "locale-formatting.md",
+    "typography-and-layout.md",
+    "unicode-and-tone.md",
+)
 SHARED_SCRIPTS = ROOT / "shared" / "scripts"
 SKILLS_DIR = ROOT / "skills"
 
