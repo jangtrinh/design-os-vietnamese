@@ -8,7 +8,7 @@ when:
   - "Enforcing LAW001 unverified superlative restrictions and explicit consent under Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 and Nghị định 356/2025/NĐ-CP"
   - "Validating promotional discount percentages against Decree 81/2018/NĐ-CP and Decree 128/2024/NĐ-CP"
 trust_tier: "verified"
-version: "3.1.0"
+version: "3.2.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
@@ -20,6 +20,8 @@ source_attribution:
     sha256: "11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715"
   - uri: "_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt"
     sha256: "350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990"
+  - uri: "_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt"
+    sha256: "0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34"
 ---
 
 # Vietnamese Statutory Compliance: Advertising Law 75/2025/QH15, Personal Data Protection Law 91/2025/QH15, and Promotions Decree 128/2024
@@ -68,8 +70,18 @@ Nghị định 356/2025 Điều 6 khoản 3 bans default-on consent and agree/de
 Children: dual consent from the child and the legal representative is required to publish or disclose a child's private-life data from age 7 (Điều 24 khoản 2). The Law sets no upper age bound in that clause; for other processing the legal representative acts for the child.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Việc xử lý dữ liệu cá nhân của trẻ em nhằm công bố, tiết lộ thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em từ đủ 07 tuổi trở lên thì phải có sự đồng ý của trẻ em và người đại diện theo pháp luật." -->
 
-Transition: processing already consented under Decree 13/2023 before 01/01/2026 continues without asking again (Điều 39 khoản 1).
+Transition: processing already under way that was consented or agreed under Decree 13/2023 before 01/01/2026 continues without asking again (Điều 39 khoản 1).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="trước ngày Luật này có hiệu lực thi hành thì tiếp tục thực hiện, không phải xin đồng ý lại hoặc thỏa thuận lại." -->
+
+Fines: Nghị định 330/2026/NĐ-CP sets the administrative fines for these rules and is in force from 19/08/2026 (Điều 80).
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="Nghị định này có hiệu lực thi hành kể từ ngày 19 tháng 8 năm 2026." -->
+
+A default-on consent method, or agree/decline wording that blurs the two, is fined 30-50 million đồng (Điều 43 khoản 1 điểm c). Treating silence or no response as consent is fined 50-70 million đồng (Điều 43 khoản 2 điểm b).
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="c) Thiết lập phương thức mặc định đồng ý, tạo ra các chỉ dẫn không rõ ràng, gây hiểu lầm giữa đồng ý và không đồng ý cho chủ thể dữ liệu cá nhân;" -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="tự ý coi sự im lặng là đồng ý." -->
+
+These amounts apply to an organization. An individual who commits the same violation pays half (Điều 7 khoản 1).
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="Trường hợp cá nhân có cùng hành vi vi phạm, mức phạt tiền được áp dụng với cá nhân bằng một phần hai lần mức phạt tiền áp dụng đối với tổ chức." -->
 
 Historical (Decree 13/2023, no longer in force): Decree 13/2023/NĐ-CP on Personal Data Protection (PDPD) invalidates pre-ticked checkboxes and implied "By continuing you agree" banners; Article 11 requires explicit consent covering data types, processing purposes, third parties, and data subject rights, while Article 20 mandates dual verification of both the child's consent (for ages 7 to under 16) and the parent or legal guardian's consent.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md" sha256="c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290" quote="Decree 13/2023/NĐ-CP on Personal Data Protection (PDPD) invalidates pre-ticked checkboxes and implied 'By continuing you agree' banners; Article 11 requires explicit consent covering data types, processing purposes, third parties, and data subject rights, while Article 20 mandates dual verification of both the child's consent (for ages 7 to under 16) and the parent or legal guardian's consent." -->

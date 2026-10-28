@@ -1,0 +1,28 @@
+{
+  "run": "5-cyber-section",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 2,
+  "secs": 380,
+  "verdict": {
+    "paragraphs_reviewed": 7,
+    "supported": 4,
+    "unsupported": [],
+    "minor": [
+      {
+        "paragraph_start": "### 1. PDPD 72-Hour Statutory Breach Notification to the Spe",
+        "why": "Title only, no anchor. 'Breach' and the comma before Bộ Công an read as if the specialised agency is the ministry; later anchors say a unit under Bộ Công an."
+      },
+      {
+        "paragraph_start": "The notice content is set by Nghị định 356/2025/NĐ-CP Điều 2",
+        "why": "Điều 28 supports Mẫu số 08 and the portal. 'Directly' is not in that article (Điều 20's trực tiếp is a different filing). 'Breach' is looser than thông báo vi phạm."
+      },
+      {
+        "paragraph_start": "The national legal database lists Decree 13/2023/NĐ-CP as no",
+        "why": "vbpl header shows legislationLegalForce=NotInForce for 13/2023/NĐ-CP. 'No longer' adds that it had previously been in force, which the field does not state."
+      }
+    ],
+    "passed": true,
+    "notes": "One section, seven paragraphs. No sentence adds a duty, deadline, party, or form the anchors do not show. Three wording nits only. Historical line matches the corpus quote."
+  }
+}

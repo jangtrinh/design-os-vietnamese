@@ -24,7 +24,7 @@
   {
     "id": "cybersecurity-attt-and-pdpd",
     "path": "cybersecurity-attt-and-pdpd.md",
-    "sha256": "bc44b515dd36d9a4c0e847d240a00365d621c27925f0dd9f59a87ca90a06d4dd",
+    "sha256": "e2290bfbbad07cb37378c54bd569dc47901ef99bc3af0af5d6f92c1df1c20d2b",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -40,7 +40,7 @@
     "status": null,
     "links_out": [],
     "links_in": [],
-    "source_count": 4,
+    "source_count": 5,
     "evidence_age_days": 0,
     "links_in_count": 0
   },
@@ -113,7 +113,7 @@
   {
     "id": "finance-tt99-and-fintech",
     "path": "finance-tt99-and-fintech.md",
-    "sha256": "3f60d45b2692a6ed47300690c81fabbe0869383a2c288dc9525cb2ef750b0e79",
+    "sha256": "d616d076bdaa4cc9356d5a73fc5d2eb4f1588dfd2e2d1c40851162bdd93f7f82",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -128,14 +128,14 @@
     "status": null,
     "links_out": [],
     "links_in": [],
-    "source_count": 2,
+    "source_count": 4,
     "evidence_age_days": 0,
     "links_in_count": 0
   },
   {
     "id": "healthcare-by-law-and-emr",
     "path": "healthcare-by-law-and-emr.md",
-    "sha256": "38d1b7b0923f5e5dff9a332d14527cbb50924bf3de5f875e4f231c042febab8b",
+    "sha256": "5c4272835c8e05ff723e6bed4e30e2ae9bc2a791a8af6633605779dfe7ab1c0d",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -290,7 +290,7 @@
   {
     "id": "real-estate-and-construction-law",
     "path": "real-estate-and-construction-law.md",
-    "sha256": "c32676550c610e3010a916438dd1fd0c5a444c28e90c802634620f53879a100b",
+    "sha256": "72e657f2d67b969fcdcaaa960b076f599b740d17d43664b9bfa7d361f3c60b67",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -305,7 +305,7 @@
     "status": null,
     "links_out": [],
     "links_in": [],
-    "source_count": 2,
+    "source_count": 3,
     "evidence_age_days": 0,
     "links_in_count": 0
   },
@@ -334,7 +334,7 @@
   {
     "id": "statutory-compliance-vi",
     "path": "statutory-compliance-vi.md",
-    "sha256": "169c7b81e7bf3d019a7812f4d43754a9f14527fdb2fbd5dfce5e158e5b5af5b3",
+    "sha256": "87522a1714c1a6f37bb22cd4074cb7f653ee7a5be9eec2c80494481548018b9a",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -349,7 +349,7 @@
     "status": null,
     "links_out": [],
     "links_in": [],
-    "source_count": 5,
+    "source_count": 6,
     "evidence_age_days": 0,
     "links_in_count": 0
   },

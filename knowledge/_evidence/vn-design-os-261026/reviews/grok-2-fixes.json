@@ -1,0 +1,28 @@
+{
+  "run": "2-fixes",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 2,
+  "secs": 478,
+  "verdict": {
+    "reviewed_items": 11,
+    "entailed": 9,
+    "overreach": [
+      {
+        "id": "claim-pdpd-default-consent-fine-nd330",
+        "why": "Minor: Điều 43 khoản 1 điểm c names default-consent and confusing agree/decline cues inside one điểm, joined by a comma, not hoặc. 'Or' matches the Điều 6 khoản 3 ban but is not strict entailment from Điều 43's punctuation. The 30-50 million band and the Mục 6 organization note are supported."
+      },
+      {
+        "id": "claim-fin-law56-d12k3",
+        "why": "Minor: item 5 does sửa đổi, bổ sung khoản 3 Điều 12, and the 20 headers, item 20's full text, and zero 'Điều 91' hits support the negative. '(market manipulation)' does not appear in the shown Điều 1 text."
+      }
+    ],
+    "wrong": [],
+    "variant_rows_ok": true,
+    "variant_note": "lãi is proposed: the note's client-return sense is not same-sense attestation. 'thay thế thuốc chữa bệnh' occurs in the NĐ 15 Điều 27 khoản 3 disclaimer, so attested-in-statute fits; statutory would overclaim the affirmative, and proposed would ignore a frozen source.",
+    "module_text_ok": false,
+    "module_note": "Cyber text adds 72-hour Luật 91 Điều 23 from 01/01/2026, ND 330 Điều 55 khoản 1 điểm b and 19/08/2026, a database repeal of Decree 13, and Decree 13 Form 03a/A05 history; none are in the packet. 'As the statute does' is not Điều 39's wording. Health text says the disclaimer is verbatim but does not quote it; 'beyond them' equates khoản 4 điểm đ (công dụng, tính năng) with khoản 2 (công dụng, tác dụng); chữa khỏi, điều trị dứt điểm, and 'no basis in the declaration' are not in Điều 27.",
+    "passed": false,
+    "notes": "Nine of eleven statements are entailed. Two overreaches are minor: Điều 43 điểm c uses a comma, not or, and market manipulation is not in the shown Luật 56 text. Variant labels match. Both module paragraphs assert facts the packet does not show, so this does not pass."
+  }
+}

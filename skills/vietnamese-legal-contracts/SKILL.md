@@ -38,7 +38,7 @@ The linter dynamically configures domain-specific statutory checks based on decl
 | `civil-contract` | Hợp đồng dân sự / Thuê tài sản / Vay tài sản (Bộ luật Dân sự 2015) | `LEG006` (điều khoản tranh chấp & bất khả kháng), tự do thỏa thuận phạt vi phạm |
 | `labor-contract` | Hợp đồng lao động (Bộ luật Lao động 2019 — Luật số 45/2019/QH14) | `LEG002` (cấm hợp đồng mùa vụ), thời hạn tối đa 36 tháng, lương thử việc 85% |
 | `terms-of-service` | Điều khoản sử dụng dịch vụ / Điều kiện giao dịch chung (Luật BVQLNTD 2023) | `LEG004` (cấm miễn trừ toàn bộ trách nhiệm & cấm tước đoạt quyền khiếu nại) |
-| `pdpd-policy` | Chính sách bảo mật & Thỏa thuận DPA (Luật 91/2025/QH15, Nghị định 356/2025/NĐ-CP & Luật Dữ liệu 60/2024/QH15) | `LEG007` (11 quyền chủ thể dữ liệu), quyền rút lại sự đồng ý & yêu cầu xóa dữ liệu |
+| `pdpd-policy` | Chính sách bảo mật & Thỏa thuận DPA (Luật 91/2025/QH15, Nghị định 356/2025/NĐ-CP & Luật Dữ liệu 60/2024/QH15) | `LEG007` (quyền chủ thể dữ liệu theo Điều 4 Luật 91/2025/QH15), quyền rút lại sự đồng ý & yêu cầu xóa dữ liệu |
 
 ---
 
@@ -133,7 +133,7 @@ python skills/vietnamese-legal-contracts/scripts/validate_copy.py labor.md --doc
 - `LEG004`: Unconscionable blanket liability waiver in consumer terms prohibited under Article 25 Consumer Protection Law 2023.
 - `LEG005`: Obsolete statute name without historical annotation (e.g. `Bộ luật Dân sự 2005`, `Bộ luật Lao động 2012`).
 - `LEG006`: Contract missing mandatory dispute resolution clause (`Giải quyết tranh chấp` / `Tòa án` / `Trọng tài`) or force majeure clause (`Bất khả kháng`).
-- `LEG007`: PDPD policy missing mandatory data subject rights under Article 4 of Law 91/2025/QH15 (rule text still cites Decree 13/2023 Article 9 and its 11-right list).
+- `LEG007`: PDPD policy missing mandatory data subject rights under Article 4 of Law 91/2025/QH15 (the rule message still cites Decree 13/2023 Article 9).
 - `CAL001`: English common-law calques and mistranslations (e.g., `bồi thường vô hại` -> `bồi thường thiệt hại`).
 - `LAW001`: Unsubstantiated absolute representations and marketing superlatives.
 - `PRO002`: Pronoun violations in the `legal-contract` register (e.g., casual `bạn`, `mình`).

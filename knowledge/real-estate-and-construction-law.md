@@ -8,12 +8,14 @@ when:
   - "Enforcing REA001–REA006 rules in validate_copy.py for vietnamese-real-estate-construction"
   - "Verifying land tenure, carpet area, and payment milestone disclosures under 2023–2024 real estate statutes"
 trust_tier: "verified"
-version: "5.1.0"
+version: "5.2.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md"
     sha256: "a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4"
   - uri: "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt"
     sha256: "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e"
+  - uri: "_evidence/vn-design-os-261026/sources/26-vbpl-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt"
+    sha256: "27ce1d4688eba7f9fc9d6f1130b06c9e679a7775a68a37f32444779aca338a0f"
 ---
 
 # Vietnamese Real Estate, Property Development & Construction Law: Law on Real Estate Business 29/2023/QH15, Land Law 31/2024/QH15, and Housing Law 27/2023/QH15
@@ -38,8 +40,11 @@ Under the Law on Real Estate Business 2023, project developers are strictly proh
 Article 23 Clause 5 of the Law on Real Estate Business 2023 (Luật Kinh doanh bất động sản số 29/2023/QH15, effective 01/08/2024) caps deposit amounts ('tiền đặt cọc') for off-plan properties ('nhà ở, công trình xây dựng hình thành trong tương lai') at 5% of the selling or lease-purchase price when the project meets all statutory conditions for commercialization.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md" sha256="a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4" quote="Article 23 Clause 5 of the Law on Real Estate Business 2023 (Luật Kinh doanh bất động sản số 29/2023/QH15, effective 01/08/2024) caps deposit amounts ('tiền đặt cọc') for off-plan properties ('nhà ở, công trình xây dựng hình thành trong tương lai') at 5% of the selling or lease-purchase price when the project meets all statutory conditions for commercialization." -->
 
-Primary text (Luật KDBĐS 2023 Điều 23 khoản 5; statutory span frozen from a mirror, hethongphapluat.com):
+Primary text (Luật KDBĐS 2023 Điều 23 khoản 5; the same wording is frozen from the mirror hethongphapluat.com and from the official vbpl.vn text):
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e" quote="Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này." -->
+
+Register status: vbpl.vn lists Luật 29/2023/QH15 as partially in force on 2026-10-28 and does not say which provisions lost force. Check Điều 23 and Điều 25 against the consolidated text before citing them in a contract.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/26-vbpl-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="27ce1d4688eba7f9fc9d6f1130b06c9e679a7775a68a37f32444779aca338a0f" quote="legislationIdentifier=29/2023/QH15; legislationDate=2023-11-28; legislationLegalForce=PartiallyInForce" -->
 
 ### 2. Statutory Milestone Payment Caps (`REA002`)
 

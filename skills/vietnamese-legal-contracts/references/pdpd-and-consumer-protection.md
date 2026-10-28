@@ -51,10 +51,10 @@ Nghị định 13/2023/NĐ-CP là chế định toàn diện đầu tiên (hết
 
 | Khái niệm | Định nghĩa pháp lý (Luật 91/2025/QH15 Điều 2) | Thuật ngữ chuẩn trong DPA |
 |---|---|---|
-| **Data Subject** | Cá nhân được dữ liệu cá nhân phản ánh | `Chủ thể dữ liệu` |
-| **Data Controller** | Tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân | `Bên Kiểm soát dữ liệu cá nhân` |
-| **Data Processor** | Tổ chức, cá nhân thực hiện việc xử lý dữ liệu thay mặt cho Bên Kiểm soát thông qua hợp đồng | `Bên Xử lý dữ liệu cá nhân` |
-| **Data Controller-cum-Processor** | Tổ chức, cá nhân vừa quyết định mục đích, phương tiện, vừa trực tiếp xử lý dữ liệu | `Bên Kiểm soát và xử lý dữ liệu cá nhân` |
+| **Data Subject** | Người được dữ liệu cá nhân phản ánh (khoản 5) | `Chủ thể dữ liệu` |
+| **Data Controller** | Cơ quan, tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân (khoản 7) | `Bên Kiểm soát dữ liệu cá nhân` |
+| **Data Processor** | Cơ quan, tổ chức, cá nhân thực hiện việc xử lý dữ liệu cá nhân theo yêu cầu của bên kiểm soát dữ liệu cá nhân hoặc bên kiểm soát và xử lý dữ liệu cá nhân thông qua hợp đồng (khoản 8) | `Bên Xử lý dữ liệu cá nhân` |
+| **Data Controller-cum-Processor** | Cơ quan, tổ chức, cá nhân quyết định mục đích, phương tiện và trực tiếp xử lý dữ liệu cá nhân (khoản 9) | `Bên Kiểm soát và xử lý dữ liệu cá nhân` |
 
 ### 06 Điều khoản Bắt buộc trong Thỏa thuận DPA giữa Controller và Processor
 Hợp đồng hoặc thỏa thuận xử lý dữ liệu cá nhân (DPA) giữa Bên Kiểm soát và Bên Xử lý phải có các nội dung bắt buộc:
@@ -63,27 +63,24 @@ Hợp đồng hoặc thỏa thuận xử lý dữ liệu cá nhân (DPA) giữa 
 3. **Biện pháp kỹ thuật và tổ chức bảo vệ dữ liệu:** Cam kết áp dụng các biện pháp an ninh mạng, mã hóa (AES-256, TLS 1.3), phân quyền truy cập, kiểm soát nội bộ.
 4. **Thủ tục xử lý Sự cố vi phạm dữ liệu cá nhân (Personal Data Breach Notification):**
    - Bên Xử lý phải thông báo ngay lập tức cho Bên Kiểm soát khi phát hiện sự cố vi phạm an toàn dữ liệu.
-   - Bên Kiểm soát có trách nhiệm thông báo cho **Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05 — Bộ Công an)** theo Mẫu số 03 chậm nhất **72 giờ** kể từ khi phát hiện hành vi vi phạm (Điều 23).
-5. **Đánh giá tác động xử lý dữ liệu cá nhân (DPIA):** Phối hợp lập và lưu giữ Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân theo Điều 24 NĐ 13.
-6. **Chuyển dữ liệu cá nhân ra nước ngoài:** Phải lập Hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo Điều 25 và gửi Bộ Công an (A05) trong vòng 60 ngày kể từ ngày tiến hành xử lý.
+   - Bên Kiểm soát có trách nhiệm thông báo cho **cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an)** theo **Mẫu số 08 NĐ 356/2025/NĐ-CP** chậm nhất **72 giờ** kể từ khi phát hiện hành vi vi phạm (Điều 23 Luật 91/2025/QH15).
+5. **Đánh giá tác động xử lý dữ liệu cá nhân (DPIA):** Phối hợp lập và lưu giữ Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân theo Điều 21 Luật 91/2025/QH15 và Điều 19 NĐ 356/2025/NĐ-CP (nộp kèm Mẫu số 02a/02b trong 60 ngày).
+6. **Chuyển dữ liệu cá nhân ra nước ngoài:** Phải lập Hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo Điều 20 Luật 91/2025/QH15 và Điều 18 NĐ 356/2025/NĐ-CP, nộp cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong 60 ngày kể từ ngày tiến hành chuyển dữ liệu (kèm Mẫu số 01a/01b).
 
 ---
 
 ## 4. Quyền của Chủ thể Dữ liệu (Điều 4 Luật 91/2025/QH15)
 
-Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 4 khoản 1 Luật 91/2025/QH15** (danh sách 11 quyền dưới đây theo Điều 9 NĐ 13/2023/NĐ-CP, đã hết hiệu lực; Luật 91 gom thành các điểm a–e):
+Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 4 khoản 1 Luật 91/2025/QH15**:
 
-1. **Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân của mình thông qua Chính sách này.
-2. **Quyền đồng ý:** Đồng ý hoặc không đồng ý cho phép xử lý dữ liệu cá nhân. Sự đồng ý phải được thể hiện rõ ràng, tự nguyện, có thể in ấn hoặc sao chép được.
-3. **Quyền truy cập:** Được truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa dữ liệu cá nhân của mình.
-4. **Quyền rút lại sự đồng ý:** Được rút lại sự đồng ý đã đưa ra trước đó. Việc rút lại không ảnh hưởng đến tính hợp pháp của các hoạt động xử lý dữ liệu đã thực hiện trước đó.
-5. **Quyền xóa dữ liệu:** Được xóa hoặc yêu cầu xóa dữ liệu cá nhân của mình.
-6. **Quyền hạn chế xử lý dữ liệu:** Được yêu cầu hạn chế việc xử lý dữ liệu cá nhân trong một số trường hợp nhất định.
-7. **Quyền cung cấp dữ liệu:** Được yêu cầu Bên Kiểm soát dữ liệu cung cấp cho mình bản sao dữ liệu cá nhân của mình.
-8. **Quyền phản đối xử lý dữ liệu:** Được phản đối Bên Kiểm soát dữ liệu xử lý dữ liệu cá nhân của mình nhằm ngăn chặn hoặc hạn chế việc tiết lộ hoặc sử dụng cho mục đích quảng cáo, tiếp thị.
-9. **Quyền khiếu nại, tố cáo, khởi kiện:** Được khiếu nại, tố cáo hoặc khởi kiện theo quy định của pháp luật.
-10. **Quyền yêu cầu bồi thường thiệt hại:** Được yêu cầu bồi thường thiệt hại theo quy định của pháp luật khi xảy ra vi phạm quy định về bảo vệ dữ liệu cá nhân của mình.
-11. **Quyền tự bảo vệ:** Được tự bảo vệ theo quy định của Bộ luật Dân sự, luật khác có liên quan và Nghị định này.
+1. **Được biết** về hoạt động xử lý dữ liệu cá nhân (điểm a).
+2. **Đồng ý hoặc không đồng ý, yêu cầu rút lại sự đồng ý** cho phép xử lý dữ liệu cá nhân (điểm b).
+3. **Xem, chỉnh sửa hoặc yêu cầu chỉnh sửa** dữ liệu cá nhân (điểm c).
+4. **Yêu cầu cung cấp, xóa, hạn chế xử lý** dữ liệu cá nhân (gồm quyền yêu cầu xóa dữ liệu cá nhân); **gửi yêu cầu phản đối** xử lý dữ liệu cá nhân (điểm d).
+5. **Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại** theo quy định của pháp luật (điểm đ).
+6. **Yêu cầu cơ quan có thẩm quyền** hoặc cơ quan, tổ chức, cá nhân liên quan thực hiện các biện pháp, giải pháp bảo vệ dữ liệu cá nhân của mình (điểm e).
+
+`Tự bảo vệ dữ liệu cá nhân` nay là **nghĩa vụ** (Điều 4 khoản 2 điểm a), không còn là một quyền như trong danh sách 11 quyền của Điều 9 NĐ 13/2023/NĐ-CP (đã hết hiệu lực).
 
 ---
 

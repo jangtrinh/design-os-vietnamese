@@ -1,0 +1,41 @@
+{
+  "run": "3-module-text",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 5,
+  "secs": 342,
+  "verdict": {
+    "paragraphs_reviewed": 9,
+    "supported": 6,
+    "unsupported": [
+      {
+        "paragraph_start": "Current basis (from 01/01/2026): Luật Bảo vệ dữ liệu cá nhân",
+        "why": "Điều 23 khoản 1 supports notice to the specialised agency within 72 hours of a harm-threshold violation. It does not state an effective date of 01/01/2026."
+      },
+      {
+        "paragraph_start": "The penalty decree, Nghị định 330/2026/NĐ-CP (in force from ",
+        "why": "Điều 55 khoản 1 điểm b names the Cục as DPIA-dossier recipient, and the 'points to' sentence is labelled as not a textual identity. The anchor does not show in-force date 19/08/2026, does not show that A05 is absent from the whole Law and Decrees 356 and 330, and does not contain NĐ 356 Điều 39 khoản 1."
+      },
+      {
+        "paragraph_start": "Primary text (Nghị định 15/2018/NĐ-CP Điều 27, frozen from v",
+        "why": "Điều 27 khoản 3 điểm a contains the quoted disclaimer. The shown article has no legal-force metadata and does not say the decree was listed InForce on 2026-10-28."
+      }
+    ],
+    "minor": [
+      {
+        "paragraph_start": "### 1. PDPD 72-Hour Statutory Breach Notification to the Min",
+        "why": "The title says notice to the Ministry of Public Security and has no anchor. Điều 23 requires notice to the specialised agency, which Điều 39 only places under Bộ Công an."
+      },
+      {
+        "paragraph_start": "The notice content is set by Nghị định 356/2025/NĐ-CP Điều 2",
+        "why": "'Now the wrong form' adds a change over time. Điều 20 and Điều 28 only assign Mẫu 03a/03b to impact-assessment updates and Mẫu 08 to the breach notice."
+      },
+      {
+        "paragraph_start": "The ad must match the uses and effects (công dụng, tác dụng)",
+        "why": "'Must match' is tighter than khoản 2 'phải phù hợp' (conform to declared công dụng, tác dụng). The MED002 curative-wording sentence is explicitly labelled as the rule's reading."
+      }
+    ],
+    "passed": false,
+    "notes": "Nine paragraphs. Three add legal-status facts absent from their anchors (01/01/2026, 19/08/2026, InForce on 2026-10-28; A05 absence and a Điều 39 cite sit outside the Decree 330 anchor). Historical text and the labelled MED002 reading match their labels."
+  }
+}

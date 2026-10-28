@@ -1,6 +1,6 @@
 {
   "run_id": "vn-design-os-261026",
-  "round": 5,
+  "round": 10,
   "status": "RUNNING",
   "budget_used": 0,
   "budget_total": 50,
@@ -56,14 +56,26 @@
     "claim-orth-tone-ie-uo",
     "claim-orth-i-not-y",
     "claim-orth-decimal-comma",
-    "claim-med-nd15-register-status"
+    "claim-med-nd15-register-status",
+    "claim-pdpd-nd330-in-force",
+    "claim-pdpd-silence-fine-nd330",
+    "claim-pdpd-default-consent-fine-nd330",
+    "claim-pdpd-fine-individual-half-nd330",
+    "claim-pdpd-agency-name-nd330",
+    "claim-fin-nd38-scope",
+    "claim-fin-nd38-d2k4",
+    "claim-fin-law56-d12k3",
+    "claim-fin-law56-register-status",
+    "claim-rea-law29-register-status",
+    "claim-pdpd-form-03a-dpia-update",
+    "claim-med-ad-beyond-declaration-evidence"
   ],
   "minimum_independent_sources": 6,
-  "last_weighted_delta": 0.0,
+  "last_weighted_delta": 0.02531645569620253,
   "researcher_runtime": "claude-opus-5-5",
   "is_target_version_matched": true,
-  "consecutive_low_delta_rounds": 3,
-  "has_viable_probe_remaining": false,
+  "consecutive_low_delta_rounds": 0,
+  "has_viable_probe_remaining": true,
   "researcher_history": [
     {
       "rounds": [
@@ -76,10 +88,20 @@
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9
       ],
       "runtime": "claude-opus-5-5",
       "date": "2026-10-28"
     }
+  ],
+  "open_probes": [
+    "Which law replaced Luật 56/2024/QH15 from 01/01/2026, and does it amend Luật Chứng khoán Điều 91",
+    "Which provisions of Luật KDBĐS 29/2023/QH15 lost force (Luật 43/2024 and later amendments)",
+    "Status of the NĐ 15/2018 replacement decree",
+    "Lexicographic sources (Hoàng Phê, Diệp Quang Ban, Cao Xuân Hạo) for colloquial variants and negation cues"
   ]
 }

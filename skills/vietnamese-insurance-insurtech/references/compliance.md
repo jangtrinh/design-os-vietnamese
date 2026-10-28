@@ -1,4 +1,4 @@
-<!-- synced from shared/references/compliance.md (30096ecbc79661ca) — edit shared/ source, not this copy -->
+<!-- synced from shared/references/compliance.md (6c1e774e5aef3c8d) — edit shared/ source, not this copy -->
 <!-- vlc-disable: TONE001, DIA001, LAW001 -->
 
 # Statutory & Regulatory Compliance Reference (`design-os-vietnamese`)
@@ -32,7 +32,7 @@ Shared across every skill in `design-os-vietnamese`. In Vietnam, copywriting def
 
 ## 2. Personal Data Protection & Consent (`PROD004`)
 
-- **Statute (from 01/01/2026):** **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** & **Nghị định 356/2025/NĐ-CP** (detailing the Law). **Nghị định 13/2023/NĐ-CP is no longer in force** from 01/01/2026 (NĐ 356/2025 Điều 42 khoản 2); cite it only as history. Consents obtained under NĐ 13/2023 before that date stay valid (Luật 91/2025 Điều 39 khoản 1).
+- **Statute (from 01/01/2026):** **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** & **Nghị định 356/2025/NĐ-CP** (detailing the Law). **Nghị định 13/2023/NĐ-CP is no longer in force** from 01/01/2026 (NĐ 356/2025 Điều 42 khoản 2); cite it only as history. Processing already under way that was consented or agreed under NĐ 13/2023 before that date continues without new consent (Luật 91/2025 Điều 39 khoản 1).
 - **Mandatory Lead-Form & Onboarding Requirements:**
   1. **Express, Purpose-Bound Consent (Luật 91/2025 Điều 9):** Consent copy must explicitly state **what data** is collected and **for what specific purpose** (`nhằm mục đích...` / `để phục vụ...`), and link to the full `Chính sách bảo mật` / `Chính sách bảo vệ dữ liệu cá nhân`.
   2. **No Pre-Ticked Boxes or Silence:** Silence or non-response is **not** valid consent (Luật 91/2025 Điều 9 khoản 4 điểm d). Default-on consent is banned (NĐ 356/2025 Điều 6 khoản 3). Checkboxes must render unchecked by default.

@@ -34,13 +34,8 @@
           },
           {
             "form": "đảm bảo",
-            "class": "attested-in-statute",
-            "evidence": {
-              "source_uri": "_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt",
-              "sha256": "350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990",
-              "quote": "Nội dung thông báo cần đảm bảo tối thiểu các nội dung quy định tại khoản 1 Điều 28 Nghị định này."
-            },
-            "note": "same verb with the syllables swapped; official texts use both"
+            "class": "proposed",
+            "note": "same verb with the syllables swapped; the frozen texts use đảm bảo only in the 'ensure' sense (e.g. NĐ 356/2025 Điều 6 khoản 3, Điều 8 khoản 3), not 'guarantee to a client', so its guarantee sense is unsourced here"
           },
           {
             "form": "cam kết",
@@ -88,13 +83,8 @@
           },
           {
             "form": "lãi",
-            "class": "attested-in-statute",
-            "evidence": {
-              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
-              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
-              "quote": "Các tài sản bằng tiền bao gồm cổ tức, trái tức, tiền lãi được tính theo giá trị ghi trên sổ kế toán tại thời điểm xác định."
-            },
-            "note": "tiền lãi appears in Luật CK 2019 as income on assets"
+            "class": "proposed",
+            "note": "'tiền lãi' appears in Luật CK 2019 only as accounting interest on assets, not as a promised client return, so the form is unattested in the needed sense"
           },
           {
             "form": "lời",
@@ -177,7 +167,8 @@
         "(?:lợi\\s+nhuận|thu\\s+nhập|lãi|lợi\\s+tức)\\s+(?:được\\s+)?(?:cam\\s+kết|bảo\\s+đảm|đảm\\s+bảo)",
         "(?:cam\\s+kết|cam\\s+đoan|bảo\\s+đảm|đảm\\s+bảo)\\s+(?:khách\\s+hàng\\s+)?không\\s+(?:bị\\s+)?(?:thua\\s+)?lỗ",
         "\\bbao\\s+(?:lời|lãi)\\b"
-      ]
+      ],
+      "scope_note": "Luật CK 2019 Điều 91 binds securities companies and fund managers only. FIN001 also fires on bank, P2P, gold, crypto and property-investment copy; the statutory basis for those products was not researched in this run (UNKNOWN)."
     },
     "MED002": {
       "meaning": "a cure or treatment claim for a supplement, or deceptive treatment advertising for a clinic",
@@ -207,14 +198,14 @@
         "cure_claim": [
           {
             "form": "thay thế thuốc chữa bệnh",
-            "class": "statutory",
+            "class": "attested-in-statute",
             "evidence": {
               "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
               "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
               "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
               "claim": "claim-med-tpcn-disclaimer"
             },
-            "note": "only the affirmative form is a violation; the mandated disclaimer contains the same words after không có tác dụng"
+            "note": "only the affirmative form is a violation; the mandated disclaimer contains the same words after không có tác dụng; the statute attests the words through the mandated disclaimer, it does not itself call the affirmative a cure claim"
           },
           {
             "form": "chữa khỏi",
@@ -427,6 +418,6 @@
       "không nên"
     ],
     "window": "cue ends within 20 characters before the match, no sentence break between",
-    "evidence": "UNKNOWN: no frozen grammar source; Diệp Quang Ban / Cao Xuân Hạo not consulted in this run"
+    "evidence_note": "UNKNOWN: no frozen grammar source; Diệp Quang Ban / Cao Xuân Hạo not consulted in this run"
   }
 }

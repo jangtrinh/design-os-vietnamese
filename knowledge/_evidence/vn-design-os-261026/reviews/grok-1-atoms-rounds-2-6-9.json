@@ -1,0 +1,67 @@
+{
+  "run": "1-atoms-rounds-2-6-9",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 6,
+  "secs": 440,
+  "verdict": {
+    "reviewed_atoms": 43,
+    "entailed": 34,
+    "overreach": [
+      {
+        "id": "claim-pdpd-consent-silence",
+        "why": "Điều 9 khoản 4 điểm d only says silence or no response is not consent. It does not mention 'by continuing you agree' banners."
+      },
+      {
+        "id": "claim-pdpd-breach-form-08",
+        "why": "Điều 28 khoản 2 supports Mẫu số 08 only. The shown article never mentions Mẫu 03a/03b or calls it an impact-assessment update form."
+      },
+      {
+        "id": "claim-pdpd-agency-bca",
+        "why": "Điều 39 khoản 1 supports a unit under Bộ Công an and does not contain A05. 'The decree does not name it A05' is a whole-instrument negative; only Điều 39 is shown."
+      },
+      {
+        "id": "claim-pdpd-transition-consent",
+        "why": "Điều 39 khoản 1 says ongoing processing (đang thực hiện) consented or agreed under NĐ 13 continues from the Law's effective date. It does not state 01/01/2026, and it does not cover every prior consent."
+      },
+      {
+        "id": "claim-pdpd-silence-fine-nd330",
+        "why": "Điều 43 khoản 2 điểm b and the 50–70 million range match. The article does not say the fine is for an organization."
+      },
+      {
+        "id": "claim-pdpd-default-consent-fine-nd330",
+        "why": "Điều 43 khoản 1 điểm c and the 30–50 million range match. The article does not say the fine is for an organization."
+      },
+      {
+        "id": "claim-fin-law56-d12k3",
+        "why": "Điều 1 khoản 5 does rewrite Điều 12 khoản 3 as market manipulation. The shown text stops inside item 10, so '20 securities items' and 'none amends Điều 91' are not established."
+      }
+    ],
+    "wrong": [
+      {
+        "id": "claim-pdpd-no-default-consent",
+        "why": "Cites NĐ 356 Điều 6 khoản 3, but the shown heading is Điều 5 and that article does not contain the quoted ban. 'Pre-ticked boxes' is not in the quote."
+      },
+      {
+        "id": "claim-med-ad-matches-declaration",
+        "why": "Khoản 2 requires conformity (phù hợp) with the declaration, but khoản 4 điểm đ allows ad content outside it if scientifically documented. 'Cure claims fall outside any declaration' is not stated."
+      }
+    ],
+    "variant_table_issues": [
+      {
+        "rule": "FIN001",
+        "form": "lãi",
+        "why": "attested-in-statute quote has 'tiền lãi' as accounting interest on assets, not the bare form 'lãi' in a client-return sense."
+      },
+      {
+        "rule": "MED002",
+        "form": "thay thế thuốc chữa bệnh",
+        "why": "statutory quote is the mandated disclaimer 'không có tác dụng thay thế thuốc chữa bệnh', not a statute stating that phrase as a cure claim."
+      }
+    ],
+    "agency_paragraph_ok": false,
+    "agency_note": "Điều 39 khoản 1 matches 'unit under Bộ Công an, unnamed'. Điều 55 khoản 1 điểm b names Cục An ninh mạng as the DPIA recipient, not as the specialised agency, and does not mention Mẫu 03a/03b. The 03a claim, the Law/356/330-wide A05 negative, and the historical Decree 13 Form 03a sentence are not in those texts.",
+    "passed": false,
+    "notes": "Wrong: default-consent cites Điều 6 khoản 3; shown text is Điều 5 and lacks the quote. Food-ad 'may not exceed' conflicts with NĐ 15 Điều 27 khoản 4 điểm đ. Overreach: consent banners, Mẫu 03a/03b, Luật 56's unshown '20 items' negative. Agency paragraph repeats 03a and equates the Điều 55 DPIA recipient with the unnamed agency."
+  }
+}

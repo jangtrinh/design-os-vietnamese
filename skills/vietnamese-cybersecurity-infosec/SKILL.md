@@ -96,6 +96,6 @@ To draft and audit high-assurance Vietnamese cybersecurity instruments, follow t
 - [references/glossary.md](references/glossary.md) — Machine-readable glossary of 30+ cybersecurity, SOC, and threat intelligence terms with severity linting rules.
 - [references/banned-phrases.md](references/banned-phrases.md) — Prohibited InfoSec calques, credential solicitation phrases, and fabricated security levels.
 - [references/qa-checklist.md](references/qa-checklist.md) — Comprehensive 4-tier pre-publish incident notification and advisory quality gate.
-- [references/ung-cuu-su-co-pdpd-72h-a05.md](references/ung-cuu-su-co-pdpd-72h-a05.md) — 72-hour A05 personal data breach notification procedure and Form 03a structure.
+- [references/ung-cuu-su-co-pdpd-72h-a05.md](references/ung-cuu-su-co-pdpd-72h-a05.md) — 72-hour personal data breach notification procedure (Luật 91/2025/QH15 Điều 23) and Mẫu số 08 structure (NĐ 356/2025/NĐ-CP Điều 28).
 - [references/attt-cap-do-1-5-nd85-tt12.md](references/attt-cap-do-1-5-nd85-tt12.md) — Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT 5-tier system security levels.
 - [references/infosec-terminology-and-calques.md](references/infosec-terminology-and-calques.md) — Authoritative cybersecurity terms, translationese blocklist, and SOC conventions.

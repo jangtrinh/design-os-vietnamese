@@ -13,7 +13,7 @@ Chính sách bảo mật và Thỏa thuận xử lý dữ liệu cá nhân này 
 ## Điều 1: Định nghĩa và Vai trò Pháp lý
 
 1. **Chủ thể dữ liệu:** Là cá nhân được dữ liệu cá nhân phản ánh, bao gồm người dùng truy cập ứng dụng, khách hàng đăng ký tài khoản và đại diện pháp nhân giao kết hợp đồng với Công ty.
-2. **Dữ liệu cá nhân:** Là thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự trên môi trường điện tử gắn liền với một cá nhân cụ thể hoặc giúp xác định một cá nhân cụ thể theo Điều 2 của Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15.
+2. **Dữ liệu cá nhân:** Là dữ liệu số hoặc thông tin dưới dạng khác xác định hoặc giúp xác định một con người cụ thể, bao gồm dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm, theo khoản 1 Điều 2 của Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15.
 3. **Bên Kiểm soát dữ liệu cá nhân:** Là Công ty Cổ phần Công nghệ Thiết kế Việt Nam, đơn vị quyết định mục đích và phương tiện xử lý dữ liệu cá nhân của Chủ thể dữ liệu.
 4. **Bên Xử lý dữ liệu cá nhân:** Là các đơn vị cung cấp hạ tầng điện toán đám mây, trung tâm dữ liệu và đối tác dịch vụ thanh toán thực hiện việc xử lý dữ liệu thay mặt Công ty trên cơ sở Thỏa thuận xử lý dữ liệu (DPA).
 
@@ -50,17 +50,13 @@ Chính sách bảo mật và Thỏa thuận xử lý dữ liệu cá nhân này 
 
 Theo quy định tại Điều 4 của Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Chủ thể dữ liệu được bảo đảm đầy đủ các quyền hợp pháp sau:
 
-1. **Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân liên quan đến bản thân thông qua Chính sách này.
-2. **Quyền đồng ý:** Được quyền quyết định đồng ý hoặc từ chối cho phép xử lý dữ liệu cá nhân.
-3. **Quyền truy cập:** Được truy cập vào hệ thống để xem, chỉnh sửa hoặc cập nhật dữ liệu cá nhân của Chủ thể dữ liệu.
-4. **Quyền rút lại sự đồng ý:** Chủ thể dữ liệu có quyền rút lại sự đồng ý cho phép xử lý dữ liệu cá nhân bất kỳ lúc nào bằng cách gửi yêu cầu bằng văn bản hoặc thông qua tính năng cài đặt quyền riêng tư trên giao diện tài khoản. Việc rút lại sự đồng ý không làm ảnh hưởng đến tính hợp pháp của các hoạt động xử lý dữ liệu đã được thực hiện trước đó.
-5. **Quyền yêu cầu xóa dữ liệu:** Chủ thể dữ liệu có quyền xóa dữ liệu hoặc gửi yêu cầu xóa dữ liệu cá nhân khi dữ liệu không còn cần thiết cho mục đích ban đầu hoặc khi Chủ thể dữ liệu đã rút lại sự đồng ý. Công ty cam kết thực hiện việc xóa dữ liệu trong thời hạn 72 giờ kể từ khi nhận được yêu cầu hợp lệ, trừ trường hợp pháp luật có quy định lưu trữ bắt buộc.
-6. **Quyền hạn chế xử lý dữ liệu:** Được yêu cầu hạn chế việc xử lý dữ liệu cá nhân trong thời gian kiểm tra tính chính xác của dữ liệu.
-7. **Quyền cung cấp dữ liệu:** Được yêu cầu Công ty cung cấp bản sao dữ liệu cá nhân ở định dạng điện tử tiêu chuẩn.
-8. **Quyền phản đối xử lý dữ liệu:** Được quyền phản đối Công ty xử lý dữ liệu cá nhân cho mục đích quảng cáo hoặc nghiên cứu thị trường.
-9. **Quyền khiếu nại, tố cáo, khởi kiện:** Được quyền khiếu nại, tố cáo hoặc khởi kiện theo quy định của pháp luật khi nhận thấy quyền lợi về dữ liệu cá nhân bị xâm phạm.
-10. **Quyền yêu cầu bồi thường thiệt hại:** Được yêu cầu bồi thường thiệt hại theo quy định pháp luật khi xảy ra hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân gây thiệt hại thực tế.
-11. **Quyền tự bảo vệ:** Được quyền thực hiện các biện pháp tự bảo vệ hợp pháp theo quy định của Bộ luật Dân sự 2015.
+1. **Được biết** về hoạt động xử lý dữ liệu cá nhân.
+2. **Đồng ý hoặc không đồng ý, yêu cầu rút lại sự đồng ý** cho phép xử lý dữ liệu cá nhân.
+3. **Xem, chỉnh sửa hoặc yêu cầu chỉnh sửa** dữ liệu cá nhân.
+4. **Yêu cầu cung cấp, xóa, hạn chế xử lý** dữ liệu cá nhân (gồm quyền yêu cầu xóa dữ liệu cá nhân); **gửi yêu cầu phản đối** xử lý dữ liệu cá nhân.
+5. **Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại** theo quy định của pháp luật.
+6. **Yêu cầu cơ quan có thẩm quyền** hoặc cơ quan, tổ chức, cá nhân liên quan thực hiện các biện pháp, giải pháp bảo vệ dữ liệu cá nhân của mình.
+
 
 ---
 

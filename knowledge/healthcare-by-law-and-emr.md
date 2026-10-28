@@ -8,7 +8,7 @@ when:
   - "Enforcing MED001–MED007 rules in validate_copy.py for vietnamese-healthcare-copy"
   - "Verifying medical licensing terminology under the Law on Medical Examination and Treatment 2023"
 trust_tier: "verified"
-version: "4.1.0"
+version: "4.2.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/05-multi-industry-pedagogy-healthcare-legal-hospitality-hr-corpus.md"
     sha256: "a6bcddebf52a95595070264d5a290493e1885bc7ae548ec6c68e7eca3f42d2ed"
@@ -44,9 +44,11 @@ Under Decree 15/2018/NĐ-CP (Article 27) and Circular 05/2018/TT-BYT, all health
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/05-multi-industry-pedagogy-healthcare-legal-hospitality-hr-corpus.md" sha256="a6bcddebf52a95595070264d5a290493e1885bc7ae548ec6c68e7eca3f42d2ed" quote="Under Decree 15/2018/NĐ-CP (Article 27) and Circular 05/2018/TT-BYT, all health supplement (Thực phẩm bảo vệ sức khỏe — TPCN) advertising and product copy must include the verbatim disclaimer 'Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh', and must never claim therapeutic cure ('điều trị dứt điểm', 'chữa khỏi hoàn toàn') or use patient thank-you letters or physician/medical-facility imagery for promotional endorsement." -->
 
 Primary text (Nghị định 15/2018/NĐ-CP Điều 27, frozen from vbpl.vn; listed InForce on 2026-10-28). The disclaimer is verbatim:
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="legislationIdentifier=15/2018/NĐ-CP; legislationDate=2018-02-02; legislationLegalForce=InForce" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh" -->
 
-The ad may claim only the uses written in the product declaration. A supplement has no declared curative use, so `chữa khỏi`, `điều trị dứt điểm` and similar wording breach this clause (`MED002`).
+The ad must conform to (phải phù hợp với) the uses and effects (công dụng, tác dụng) in the product declaration (khoản 2). Ad content beyond the uses and features (công dụng, tính năng) recorded in the declaration needs scientific documentation in the registration dossier (khoản 4 điểm đ). A supplement ad must also carry the disclaimer that the product does not replace medicine (khoản 3 điểm a). Applying these clauses, `MED002` treats curative wording such as `chữa khỏi` or `điều trị dứt điểm` on a supplement as contradicting the mandated disclaimer; that reading is the rule's, not wording from Điều 27.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="đ) Đối với nội dung quảng cáo ngoài công dụng, tính năng của sản phẩm ghi trong bản công bố sản phẩm thì phải có tài liệu khoa học chứng minh (bản sao có xác nhận của tổ chức, cá nhân);" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="Nội dung quảng cáo phải phù hợp với công dụng, tác dụng của sản phẩm đã được công bố trong bản công bố sản phẩm." -->
 
 Doctors, pharmacists, medical facilities and patient thank-you letters may not appear in food ads (`MED005`).

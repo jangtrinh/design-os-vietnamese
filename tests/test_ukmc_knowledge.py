@@ -30,8 +30,8 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
             f"verify_ukmc.py failed:\n{proc.stdout}\n{proc.stderr}",
         )
         self.assertIn("files: 18", proc.stdout)
-        self.assertIn("verified_claims: 49/49", proc.stdout)
-        self.assertIn("independent_sources: 22", proc.stdout)
+        self.assertIn("verified_claims: 61/61", proc.stdout)
+        self.assertIn("independent_sources: 26", proc.stdout)
         self.assertIn("failures: 0", proc.stdout)
         self.assertIn("Decision: STOP_SUFFICIENT", proc.stdout)
 
@@ -39,9 +39,12 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
         if not SIBLING_KB_SRC.is_dir():
             return
         env = dict(os.environ, PYTHONPATH=str(SIBLING_KB_SRC))
-        for args, expected in (
-            (["verify", str(KNOWLEDGE_ROOT), "--claims"], "failures: 0"),
-            (["gate", "--root", str(KNOWLEDGE_ROOT), "--run-id", "vn-design-os-261026"], "Decision: STOP_SUFFICIENT"),
+        # Rounds 6-9 found new statutory material and probes remain open, so the run is
+        # honestly DEEPEN (exit 2), not STOP. Every hard gate must still hold.
+        gate = ["gate", "--root", str(KNOWLEDGE_ROOT), "--run-id", "vn-design-os-261026"]
+        for args, returncode, expected in (
+            (["verify", str(KNOWLEDGE_ROOT), "--claims"], 0, ("failures: 0",)),
+            (gate, 2, ("Hard Gates Passed: True", "Decision: DEEPEN")),
         ):
             proc = subprocess.run(
                 [sys.executable, "-m", "knowledge_builder.cli", *args],
@@ -51,8 +54,9 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
                 text=True,
                 check=False,
             )
-            self.assertEqual(proc.returncode, 0, f"{args} failed:\n{proc.stdout}\n{proc.stderr}")
-            self.assertIn(expected, proc.stdout)
+            self.assertEqual(proc.returncode, returncode, f"{args} failed:\n{proc.stdout}\n{proc.stderr}")
+            for text in expected:
+                self.assertIn(text, proc.stdout)
 
 
 if __name__ == "__main__":
