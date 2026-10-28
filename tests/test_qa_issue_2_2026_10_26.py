@@ -108,7 +108,7 @@ class Issue2DomainCrashRegressionTests(unittest.TestCase):
                     all_rules.add(line.split()[0])
 
         rule_re = re.compile(
-            r"\b(?:NFC|ENC|CAL|SYN|LAW|DIA|TONE|NUM|DATE|PHONE|ICU|PRO|UX|LND|TECH|BIZ|ENG|PROD|ADMIN|MKT|SALES|SPAM|ZNS|FIN|EDU|MED|LEG|HOS|HR|REA|ECOM|GOV|INS|SEC|MEDJ)\d{3}\b"
+            r"\b(?:NFC|ENC|CAL|SYN|LAW|DIA|TONE|NUM|DATE|PHONE|ICU|PRO|CTX|UX|LND|TECH|BIZ|ENG|PROD|ADMIN|MKT|SALES|SPAM|ZNS|FIN|EDU|MED|LEG|HOS|HR|REA|ECOM|GOV|INS|SEC|MEDJ)\d{3}\b"
         )
         for rel in ("README.md", "README.vi.md", "docs/index.html", "llms.txt", "docs/llms.txt"):
             text = (ROOT / rel).read_text(encoding="utf-8")

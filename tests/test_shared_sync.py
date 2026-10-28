@@ -26,6 +26,14 @@ class SharedSyncTests(unittest.TestCase):
             f"sync_shared.py --check failed:\nSTDOUT:\n{proc.stdout}\nSTDERR:\n{proc.stderr}",
         )
 
+    def test_context_matrix_and_module_are_synced_into_every_skill(self) -> None:
+        skills = sorted(p for p in (REPO_ROOT / "skills").iterdir() if p.is_dir())
+        self.assertEqual(len(skills), 16)
+        for skill in skills:
+            self.assertTrue((skill / "references" / "context-matrix.md").is_file(), skill.name)
+            self.assertTrue((skill / "scripts" / "writing_context.py").is_file(), skill.name)
+            self.assertFalse(list((skill / "scripts").glob("rules_context*.py")), skill.name)
+
     def test_build_examples_check_passes(self) -> None:
         proc = subprocess.run(
             [sys.executable, str(REPO_ROOT / "tools" / "build_examples.py"), "--check"],
