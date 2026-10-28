@@ -149,10 +149,29 @@ class Issue2DocsAndPathHygieneTests(unittest.TestCase):
         )
         self.assertIn("source-available", readme)
 
+    @staticmethod
+    def _candidate_files() -> list[pathlib.Path]:
+        """Files to scan: git-tracked files, so untracked local worktrees and scratch dirs
+        never leak into the result. Falls back to a filesystem walk (skipping .git and
+        .claude) when git is unavailable or ROOT is not a git work tree."""
+        try:
+            proc = subprocess.run(
+                ["git", "ls-files", "-z"],
+                capture_output=True,
+                cwd=ROOT,
+                check=True,
+            )
+        except (OSError, subprocess.CalledProcessError):
+            return sorted(
+                p for p in ROOT.rglob("*") if ".git" not in p.parts and ".claude" not in p.parts
+            )
+        names = [n for n in proc.stdout.decode("utf-8", errors="surrogateescape").split("\0") if n]
+        return sorted(ROOT / n for n in names)
+
     def test_no_personal_paths_anywhere_in_repo_outside_test_assertions(self) -> None:
         personal_token = "/" + "/".join(("Users", "jangtrinh"))
         offenders: list[str] = []
-        for p in sorted(ROOT.rglob("*")):
+        for p in self._candidate_files():
             if ".git" in p.parts or "__pycache__" in p.parts or not p.is_file():
                 continue
             if p.parent == ROOT / "tests":

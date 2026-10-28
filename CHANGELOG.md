@@ -15,6 +15,7 @@ All notable changes to `design-os-vietnamese` are documented in this file.
 ### Fixed
 - **pre-commit hooks failed in every consumer repository**: hooks used `language: system` with `entry: python3 shared/scripts/...`, which pre-commit runs in the consumer's working directory (`can't open file`). Hooks now use `language: python` with the `vi-*` commands as entry; hook ids are unchanged.
 - **`pip install` installed no code and no commands**: `pyproject.toml` declared `py-modules = []` and no `[project.scripts]`.
+- **Personal-path hygiene test failed locally**: it walked untracked local worktrees under `.claude/`. It now scans only git-tracked files (filesystem walk skipping `.git` and `.claude` when git is unavailable).
 
 ## [5.1.0] — 2026-10-27
 
