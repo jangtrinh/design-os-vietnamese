@@ -66,7 +66,10 @@ jobs:
           printf 'Cam kết lợi nhuận 18%%/năm.\n' | "$BIN/vi-validate-copy" --json --domain finance - | grep -q FIN001
           printf 'Hạn chót: 12/25/2026.\n' > bad.md
           printf 'Xin chào bạn.\n' > good.md
-          if "$BIN/vi-validate-copy" bad.md; then echo "bad.md must fail"; exit 1; fi
+          status=0
+          "$BIN/vi-validate-copy" bad.md > bad.out || status=$?
+          cat bad.out
+          test "$status" -eq 1 && grep -q DATE001 bad.out
           "$BIN/vi-validate-copy" good.md
 
       - name: Install pre-commit
