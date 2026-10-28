@@ -273,6 +273,18 @@ class BuiltWheelLayoutTests(unittest.TestCase):
         rules = [n for n in self.names if re.fullmatch(rf"{PACKAGE}/skills/[^/]+/scripts/rules_\w+\.py", n)]
         self.assertEqual(len(rules), 16)
 
+    def test_wheel_ships_every_per_skill_reference_table_the_runtime_reads(self) -> None:
+        # validate_copy silently falls back to shared references when a skill's
+        # references/ dir is missing, so a dropped glob is invisible to the CLI tests.
+        expected = []
+        for skill in sorted((ROOT / "skills").iterdir()):
+            for ref in ("glossary.md", "banned-phrases.md", "register-matrix.md"):
+                if (skill / "references" / ref).is_file():
+                    expected.append(f"{PACKAGE}/skills/{skill.name}/references/{ref}")
+        self.assertGreaterEqual(len(expected), 16)
+        missing = [name for name in expected if name not in self.names]
+        self.assertEqual(missing, [])
+
     def test_installed_list_rules_matches_repo_script(self) -> None:
         r = run_entry("validate_copy_main", "--list-rules", "--domain", "all", cwd=self.elsewhere, env=self._env())
         self.assertNotIn("Traceback", r.stderr, r.stderr)
