@@ -191,7 +191,7 @@ Inline suppression directives are supported for verified exceptions: `<!-- vncop
 | `CTX004` | An email has no greeting line or no sign-off. |
 | `CTX005` | A document for executives has no summary or conclusion marker (`Tóm tắt`, `Kết luận`, `Đề xuất`, `TL;DR`, …) in its first 15 non-empty lines. |
 
-Three runs (real output, `$?` shown as `exit`):
+Three runs (abridged from real output; `exit` is the process exit code):
 
 ```text
 $ printf 'Chào sếp,\n\nMình gửi sếp báo cáo tuần này, mai sếp rảnh ko?\n' | vi-validate-copy --context email-to-manager -
@@ -205,7 +205,8 @@ $ printf 'Tôi muốn ứng tuyển vị trí Kế toán tổng hợp, bạn xem
 <stdin>:1:1: warn  CTX004  email has no greeting line
 <stdin>:1:1: warn  CTX004  email has no sign-off
 <stdin>:1:45: error CTX001  “bạn” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)
-<stdin>:1:61: error CTX001  “mình” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)   # exit 1
+<stdin>:1:61: error CTX001  “mình” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)
+1 file(s) checked · 2 error(s) · 2 warning(s)        # exit 1
 
 $ printf 'ko biết nha mn, tối nay ae đi ăn ko, mai tao dc nghỉ r\ncam on nha, quán này rẻ nhất Sài Gòn, số 1 luôn\n' | vi-validate-copy --context chat-close-friend -
 1 file(s) checked · 0 error(s) · 0 warning(s)        # exit 0, clean

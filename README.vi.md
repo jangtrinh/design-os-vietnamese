@@ -116,7 +116,7 @@ repos:
 | `CTX004` | Email không có dòng chào đầu hoặc không có lời kết. |
 | `CTX005` | Tài liệu cho lãnh đạo không có dấu hiệu tóm tắt/kết luận (`Tóm tắt`, `Kết luận`, `Đề xuất`, `TL;DR`, …) trong 15 dòng không trống đầu tiên. |
 
-Ba ví dụ (kết quả thật):
+Ba ví dụ (rút gọn từ kết quả thật; `exit` là mã thoát):
 
 ```text
 $ printf 'Chào sếp,\n\nMình gửi sếp báo cáo tuần này, mai sếp rảnh ko?\n' | vi-validate-copy --context email-to-manager -
