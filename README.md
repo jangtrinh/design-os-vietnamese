@@ -173,7 +173,7 @@ Inline suppression directives are supported for verified exceptions: `<!-- vncop
 | Preset | Situation | Rules on (`CTX`) | Relaxed (off) |
 | :--- | :--- | :--- | :--- |
 | `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `NUM002` `NUM004` `TONE001` `CTX003` |
-| `chat-colleague` | Colleague chat (Slack/Zalo group) | `CTX001` | same as above |
+| `chat-colleague` | Colleague chat (Slack/Zalo group) | `CTX001` | same as above except `NUM002` (amounts are business data between colleagues) |
 | `chat-to-manager` | Message to the boss | `CTX001` `CTX002` `CTX003` | — |
 | `email-to-manager` | Email to the boss / a superior | `CTX001` `CTX002` `CTX003` `CTX004` | — |
 | `email-to-colleague` | Email to a colleague | `CTX001` `CTX003` `CTX004` | — |
