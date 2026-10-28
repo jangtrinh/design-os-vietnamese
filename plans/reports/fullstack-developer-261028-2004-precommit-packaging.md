@@ -112,3 +112,87 @@ python3 tools/verify_ukmc.py               -> files: 18 · anchors: 66 · failur
 Status: DONE
 Summary: Three console commands + `language: python` hooks implemented; AC1-AC8 evidenced (AC7 CI not run on GitHub, replayed locally). `shared/scripts` untouched, version unchanged.
 Concerns/Blockers: none blocking. `.gitignore` edit outside file list; README uses `rev: main` until a tag ships; CI job unverified on real GitHub runners.
+
+## Fix round 1 (review NEEDS_CHANGES: B1, B2, H1)
+
+### B1: dead CI assertion (`.github/workflows/ci.yml`)
+Cause: under `bash -e`, a failing non-final command in an `&&` list does not abort, so `test "$status" -eq 1 && grep -q DATE001 bad.out` could never fail the step.
+Fix: split into two lines. Sweep of `ci.yml` for the same pattern: three more non-final `&&` chains in the consumer step (`mkdir && cd`, `git init && git config && git config`, `git add && git commit`) split into single commands. Remaining pipes and `||` checked and left alone: `... | grep -q FIN001` (the final command is the assertion), `|| status=$?` (intentional capture), `grep -q "$pattern" || { ...; exit 1; }` (explicit exit).
+The replay harness extracts the real step body from `ci.yml` and runs it under `bash -e` against the installed commands.
+RED (before fix, `bad.md` mutated to a clean date `25/12/2026`; the step must fail but does not):
+```
+step rc=0
+clean
+1 file(s) checked · 0 error(s) · 0 warning(s)
+clean
+```
+GREEN (after fix):
+```
+== clean bad.md (must be rc!=0)
+step rc=1
+1 file(s) checked · 0 error(s) · 0 warning(s)
+clean
+== real bad.md (must be rc=0)
+step rc=0
+1 file(s) checked · 1 error(s) · 0 warning(s)
+1 file(s) checked · 0 error(s) · 0 warning(s)
+clean
+```
+
+### B2: README `check-i18n-parity` snippet (README.md, README.vi.md)
+Fix: `pass_filenames: false` plus `args: [locales/en.json, locales/vi.json]`, with `files:` kept only as the trigger. One explanatory sentence in each README (EN and VI), which also notes source-before-target ordering for Android. `.pre-commit-hooks.yaml` NOT changed: the README fix alone is sufficient (below).
+Consumer repo with a real `.pre-commit-config.yaml` (`repo:` = worktree, `rev:` = HEAD SHA), `locales/en.json` and `locales/vi.json` committed in parity.
+RED (old snippet; only `vi.json` staged with parity intact, then `vi.json` with a missing key):
+```
+=== [old] commit changes only vi.json, parity intact
+DESIGN:OS Vietnamese i18n Catalog Parity Gate (...).......Failed
+- exit code: 2
+check_i18n_parity.py: error: both source and target JSON files are required
+rc=1
+=== [old] vi.json drops key b
+- exit code: 2
+check_i18n_parity.py: error: both source and target JSON files are required
+rc=1
+```
+GREEN (new snippet):
+```
+=== [new] commit changes only vi.json, parity intact
+DESIGN:OS Vietnamese i18n Catalog Parity Gate (...).......Passed
+rc=0
+=== [new] vi.json drops key b
+- exit code: 1
+locales/vi.json:b: error I18N001  missing key in vi.json: 'b'
+checked en.json <-> vi.json · 1 error(s) · 0 warning(s)
+rc=1
+```
+Explicit ordered `args` also removes the Android `values-vi/` before `values/` swap, because the pair no longer comes from pre-commit's sorted path order. I did not run an Android consumer case this round (JSON only).
+
+### H1: wheel test did not protect per-skill reference tables
+Added `test_wheel_ships_every_per_skill_reference_table_the_runtime_reads`: every `skills/*/references/{glossary,banned-phrases,register-matrix}.md` that exists must be in the built wheel (at least 16 expected).
+RED (temporarily deleted the three `*/references/...` globs from `[tool.setuptools.package-data]`, setuptools env):
+```
+FAIL: test_wheel_ships_every_per_skill_reference_table_the_runtime_reads
+AssertionError: Lists differ: ['vi_design_os/skills/vietnamese-business-[3719 chars].md'] != []
+Ran 18 tests in 1.308s
+FAILED (failures=1)
+```
+GREEN (`pyproject.toml` restored; `git diff pyproject.toml` empty):
+```
+Ran 18 tests in 1.347s
+OK
+```
+
+### Gates after the last edit
+```
+python3 -m unittest discover -s tests          -> Ran 79 tests, OK (skipped=5), rc=0   [system python, no setuptools]
+<setuptools env> -m unittest discover -s tests -> Ran 79 tests, OK (0 skipped), rc=0
+python3 scripts/self_check.py                  -> ok: self-check passed (16 skills, 18 UKMC.v1 modules)
+python3 tools/sync_shared.py --check           -> 16 skills verified byte-identical to shared/
+python3 tools/build_examples.py --check        -> 16 skills verified up-to-date
+python3 tools/verify_ukmc.py                   -> verified_claims 19/19 · Decision: STOP_SUFFICIENT
+```
+Not touched (out of scope): `rev: main`, license field form, `validate-copy` `text` type, font-hook CI bad case, `_load_script` cleanup. `ci.yml` still not run on GitHub. Temp envs and consumers removed.
+
+Status: DONE
+Summary: B1, B2 and H1 fixed test-first with RED/GREEN evidence; all gates green after the last edit.
+Concerns/Blockers: none new; Android consumer case for B2 not exercised; CI still not run on real runners.
