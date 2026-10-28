@@ -2,6 +2,17 @@
 
 All notable changes to `design-os-vietnamese` are documented in this file.
 
+## [Unreleased]
+
+### Added
+- **Installable console commands**: `pip install` / `uvx` now provides `vi-validate-copy`, `vi-i18n-parity` and `vi-font-coverage` (same flags and exit codes as the `shared/scripts/` checkers). `shared/` and `skills/` rule data ship inside the `vi_design_os` package as siblings, so domain rules and references resolve exactly as in a checkout. Runtime stays standard-library only.
+- CI job `packaging`: installs the package into a fresh virtualenv, smokes the three commands from outside the checkout, and runs all three hooks through `pre-commit try-repo` in a scratch consumer repository.
+- README (EN/VI): pip/uvx usage and a working `.pre-commit-config.yaml` snippet.
+
+### Fixed
+- **pre-commit hooks failed in every consumer repository**: hooks used `language: system` with `entry: python3 shared/scripts/...`, which pre-commit runs in the consumer's working directory (`can't open file`). Hooks now use `language: python` with the `vi-*` commands as entry; hook ids are unchanged.
+- **`pip install` installed no code and no commands**: `pyproject.toml` declared `py-modules = []` and no `[project.scripts]`.
+
 ## [5.1.0] — 2026-10-27
 
 ### Added

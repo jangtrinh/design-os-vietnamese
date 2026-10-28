@@ -1,20 +1,20 @@
 - id: validate-copy
   name: DESIGN:OS Vietnamese Copy & Regulatory Validator (vi-VN)
   description: Deterministic linter for Vietnamese Unicode NFC, calques, tone placement, pronouns, and 16 industry regulatory rules.
-  entry: python3 shared/scripts/validate_copy.py
-  language: system
+  entry: vi-validate-copy
+  language: python
   types_or: [markdown, json, text, html, yaml]
 
 - id: check-i18n-parity
   name: DESIGN:OS Vietnamese i18n Catalog Parity Gate (JSON / xcstrings / Android XML)
   description: Validates key parity, placeholder symmetry, ICU plural branches, and Vietnamese UI expansion caps.
-  entry: python3 shared/scripts/check_i18n_parity.py
-  language: system
+  entry: vi-i18n-parity
+  language: python
   pass_filenames: true
 
 - id: check-font-coverage
   name: DESIGN:OS Vietnamese Font & Glyph Coverage Inspector
   description: Audits 134 precomposed Vietnamese vowels, Đ/đ, and ₫ (U+20AB) against CSS unicode-range or TTF/OTF cmap tables.
-  entry: python3 shared/scripts/check_font_coverage.py
-  language: system
+  entry: vi-font-coverage
+  language: python
   types_or: [markdown, json, text, html]

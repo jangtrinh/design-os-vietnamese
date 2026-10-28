@@ -55,6 +55,42 @@ python3 tools/verify_ukmc.py
 python3 -m unittest discover -s tests -v
 ```
 
+### Cài đặt dạng lệnh (pip / uvx) và hook pre-commit
+
+Ba công cụ kiểm định cũng cài được như lệnh console, chỉ dùng thư viện chuẩn Python; cờ và mã thoát giống hệt các script ở trên.
+
+| Lệnh | Tương ứng với |
+| :--- | :--- |
+| `vi-validate-copy` | `shared/scripts/validate_copy.py` |
+| `vi-i18n-parity` | `shared/scripts/check_i18n_parity.py` |
+| `vi-font-coverage` | `shared/scripts/check_font_coverage.py` |
+
+```bash
+pip install git+https://github.com/jangtrinh/design-os-vietnamese
+vi-validate-copy path/to/copy.md --domain finance --strict
+
+# hoặc chạy một lần, không cần cài
+uvx --from git+https://github.com/jangtrinh/design-os-vietnamese vi-validate-copy path/to/copy.md --domain all
+```
+
+Dùng cùng bộ kiểm định dưới dạng hook [pre-commit](https://pre-commit.com) trong repo của bạn (`.pre-commit-config.yaml`); pre-commit tự dựng môi trường cho hook:
+
+```yaml
+repos:
+  - repo: https://github.com/jangtrinh/design-os-vietnamese
+    rev: main   # ghim theo tag phát hành có lệnh vi-* khi tag đó được công bố
+    hooks:
+      - id: validate-copy
+        args: [--domain, ux, --register, ux-microcopy]
+      - id: check-i18n-parity
+        files: ^locales/(en|vi)\.json$
+        pass_filenames: false
+        args: [locales/en.json, locales/vi.json]
+      - id: check-font-coverage
+```
+
+`check-i18n-parity` cần danh mục nguồn đứng trước, đích đứng sau, nhưng pre-commit chỉ truyền các tệp đã staged theo thứ tự đường dẫn; vì vậy `files:` chỉ là điều kiện kích hoạt còn `args:` chỉ rõ cặp nguồn/đích (nguồn trước, ví dụ `values/strings.xml` trước `values-vi/strings.xml` với Android). Mã hook: `validate-copy`, `check-i18n-parity`, `check-font-coverage`.
+
 ---
 
 ## Giấy phép (License)

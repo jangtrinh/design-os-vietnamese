@@ -46,5 +46,27 @@ Repository = "https://github.com/jangtrinh/design-os-vietnamese"
 Issues = "https://github.com/jangtrinh/design-os-vietnamese/issues"
 Changelog = "https://github.com/jangtrinh/design-os-vietnamese/blob/main/CHANGELOG.md"
 
+[project.scripts]
+vi-validate-copy = "vi_design_os.cli:validate_copy_main"
+vi-i18n-parity = "vi_design_os.cli:i18n_parity_main"
+vi-font-coverage = "vi_design_os.cli:font_coverage_main"
+
+# The checkers resolve references and domain rules relative to their own file,
+# so shared/ and skills/ are mapped into the package as siblings of cli.py.
 [tool.setuptools]
-py-modules = []
+packages = ["vi_design_os", "vi_design_os.shared", "vi_design_os.skills"]
+include-package-data = false
+
+[tool.setuptools.package-dir]
+vi_design_os = "vi_design_os"
+"vi_design_os.shared" = "shared"
+"vi_design_os.skills" = "skills"
+
+[tool.setuptools.package-data]
+"vi_design_os.shared" = ["scripts/*.py", "references/*.md"]
+"vi_design_os.skills" = [
+    "*/scripts/rules_*.py",
+    "*/references/glossary.md",
+    "*/references/banned-phrases.md",
+    "*/references/register-matrix.md",
+]

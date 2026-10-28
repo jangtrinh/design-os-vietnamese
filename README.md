@@ -69,6 +69,42 @@ python3 shared/scripts/check_i18n_parity.py \
   --json
 ```
 
+### 3. Install the commands (pip / uvx) and add the pre-commit hooks
+
+The three checkers are also installable. Runtime stays standard-library only; the commands take the same flags and return the same exit codes as the scripts above.
+
+| Command | Wraps |
+| :--- | :--- |
+| `vi-validate-copy` | `shared/scripts/validate_copy.py` |
+| `vi-i18n-parity` | `shared/scripts/check_i18n_parity.py` |
+| `vi-font-coverage` | `shared/scripts/check_font_coverage.py` |
+
+```bash
+pip install git+https://github.com/jangtrinh/design-os-vietnamese
+vi-validate-copy path/to/copy.md --domain finance --strict
+
+# or run once without installing
+uvx --from git+https://github.com/jangtrinh/design-os-vietnamese vi-validate-copy path/to/copy.md --domain all
+```
+
+Use the same checks as [pre-commit](https://pre-commit.com) hooks in your own repository (`.pre-commit-config.yaml`). pre-commit builds the hook environment for you, so nothing needs to be installed by hand:
+
+```yaml
+repos:
+  - repo: https://github.com/jangtrinh/design-os-vietnamese
+    rev: main   # pin a release tag that ships the vi-* commands once one is published
+    hooks:
+      - id: validate-copy
+        args: [--domain, ux, --register, ux-microcopy]
+      - id: check-i18n-parity
+        files: ^locales/(en|vi)\.json$
+        pass_filenames: false
+        args: [locales/en.json, locales/vi.json]
+      - id: check-font-coverage
+```
+
+`check-i18n-parity` needs the source catalog first and the target second, but pre-commit passes only the staged files in path order, so `files:` is just the trigger and `args:` names the pair explicitly (source first, e.g. `values/strings.xml` before `values-vi/strings.xml` for Android). Hook ids are `validate-copy`, `check-i18n-parity` and `check-font-coverage`.
+
 ---
 
 ## What it makes
