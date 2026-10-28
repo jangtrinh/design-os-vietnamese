@@ -8,7 +8,7 @@ when:
   - "Enforcing MED001–MED007 rules in validate_copy.py for vietnamese-healthcare-copy"
   - "Verifying medical licensing terminology under the Law on Medical Examination and Treatment 2023"
 trust_tier: "verified"
-version: "4.2.0"
+version: "4.2.1"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/05-multi-industry-pedagogy-healthcare-legal-hospitality-hr-corpus.md"
     sha256: "a6bcddebf52a95595070264d5a290493e1885bc7ae548ec6c68e7eca3f42d2ed"
@@ -51,7 +51,7 @@ The ad must conform to (phải phù hợp với) the uses and effects (công d�
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="đ) Đối với nội dung quảng cáo ngoài công dụng, tính năng của sản phẩm ghi trong bản công bố sản phẩm thì phải có tài liệu khoa học chứng minh (bản sao có xác nhận của tổ chức, cá nhân);" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="Nội dung quảng cáo phải phù hợp với công dụng, tác dụng của sản phẩm đã được công bố trong bản công bố sản phẩm." -->
 
-Doctors, pharmacists, medical facilities and patient thank-you letters may not appear in food ads (`MED005`).
+Food ads may not use the images, equipment, attire, names or letters of medical units or facilities, doctors, pharmacists or medical staff, nor patients' thank-you letters or articles by doctors, pharmacists or medical staff (`MED005`, Điều 27 khoản 2).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt" sha256="c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9" quote="Không sử dụng hình ảnh, thiết bị, trang phục, tên, thư tín của các đơn vị, cơ sở y tế, bác sỹ, dược sỹ, nhân viên y tế, thư cảm ơn của người bệnh, bài viết của bác sỹ, dược sỹ, nhân viên y tế để quảng cáo thực phẩm." -->
 
 For clinics and hospitals, Luật Khám bệnh, chữa bệnh 2023 Điều 7 khoản 20 bans deceptive advertising of examination and treatment (`MED002` on `clinic-landing`).

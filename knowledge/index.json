@@ -113,7 +113,7 @@
   {
     "id": "finance-tt99-and-fintech",
     "path": "finance-tt99-and-fintech.md",
-    "sha256": "c326e13206b37d0ce9b5030ff63a616e11ca7b02392585801e9bda1219ade74b",
+    "sha256": "d52a2c4686690ea32bff4ae9c4c86764aa16bdd019403608c4af16fa63979dac",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -135,7 +135,7 @@
   {
     "id": "healthcare-by-law-and-emr",
     "path": "healthcare-by-law-and-emr.md",
-    "sha256": "5c4272835c8e05ff723e6bed4e30e2ae9bc2a791a8af6633605779dfe7ab1c0d",
+    "sha256": "b7103369eb66a568e5d9c5c0fa131ddde321855ee0d27d3cbddae72061f9d1dd",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,

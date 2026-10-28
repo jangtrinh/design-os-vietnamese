@@ -8,7 +8,7 @@ when:
   - "Migrating financial statements and chart of accounts from Circular 200/2014/TT-BTC to Circular 99/2025/TT-BTC"
   - "Auditing investment/savings terminology and interest-rate disclosures with --domain finance"
 trust_tier: "verified"
-version: "3.4.0"
+version: "3.4.1"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
@@ -67,9 +67,15 @@ The statutory wording names three things to match: `bảo đảm` + `mức thu n
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/24-vbpl-nd-38-2018-nd-cp-dau-tu-khoi-nghiep-sang-tao.txt" sha256="8a22a4d2816a1950a3f194321b93c1dd7a36b5a90961dbf6775d6c12aa494e08" quote="Nghị định này hướng dẫn về đầu tư cho doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo; việc thành lập, tổ chức quản lý và hoạt động của quỹ đầu tư khởi nghiệp sáng tạo" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/24-vbpl-nd-38-2018-nd-cp-dau-tu-khoi-nghiep-sang-tao.txt" sha256="8a22a4d2816a1950a3f194321b93c1dd7a36b5a90961dbf6775d6c12aa494e08" quote="4. Công ty thực hiện quản lý quỹ đầu tư khởi nghiệp sáng tạo là công ty được thành lập theo pháp luật về doanh nghiệp, có ngành, nghề quản lý quỹ đầu tư khởi nghiệp sáng tạo." -->
 
-Luật 56/2024/QH15 amended the Securities Law from 01/01/2025. Its only change to Điều 12 is khoản 3 (market manipulation), and none of its securities items amends Điều 91. The register records Luật 56/2024 as fully out of force from 01/01/2026.
+Luật 56/2024/QH15 amended the Securities Law from 01/01/2025. In its Điều 1 (the Securities Law items) the only item that names Điều 12 is item 5, which rewrites khoản 3 (market manipulation); item 20 repeals Điều 23, khoản 3 Điều 48 and khoản 4–5 Điều 135 and inserts a phrase into Điều 7, 52 and 68, so it does not touch Điều 12. None of the Điều 1 items amends Điều 91. The register records Luật 56/2024 as fully out of force from 01/01/2026.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="a) Bãi bỏ Điều 23; khoản 3 Điều 48; khoản 4 và khoản 5 Điều 135;" -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="tại điểm đ khoản 1 Điều 7, khoản 3 Điều 52 và Điều 68." -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="5. Sửa đổi, bổ sung khoản 3 Điều 12 như sau:" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="effFrom=2025-01-01; effTo=2026-01-01; effStatus=Hết hiệu lực toàn bộ" -->
+
+Luật 56 also rewrites a khoản 4 Điều 12, but that item sits in its Điều 2, which amends the Accounting Law (Luật Kế toán), not the Securities Law.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="Điều 2. Sửa đổi, bổ sung một số điều của Luật Kế toán" -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/25-vbpl-luat-56-2024-qh15-sua-doi-luat-chung-khoan.txt" sha256="61f028e5b33f1a27b53e5b431d337df320ab51d84a71304bb55ba4f26015daad" quote="4. Sửa đổi, bổ sung khoản 4 Điều 12 như sau:" -->
 
 The register's relation record for Luật Chứng khoán 54/2019/QH14 lists two amending acts, NĐ 200/2026/NĐ-CP (private corporate bonds) and Luật 56/2024/QH15, and no act that ends the Law in full. The record for Luật 56/2024 lists no act that ended it either, so no replacement is named. This module's inference, not a quoted statement: with no other amender listed, Điều 91 khoản 1 remains the basis for the guaranteed-return ban.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/27-vbpl-luoc-do-luat-54-2019-qh14-chung-khoan.txt" sha256="d51f4c733a8b67227e9bc9229846a9521f0bac524a58b8a83b346c4059655332" quote="Văn bản quy định về việc hết hiệu lực một phần (2)" -->
