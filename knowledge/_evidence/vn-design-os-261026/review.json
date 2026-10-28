@@ -1,48 +1,58 @@
 {
   "passed": false,
   "reviewer_runtime": "grok-4.7",
-  "reviewed_at": "2026-10-28T23:11:00+07:00",
-  "scope": "Frozen commit 88a89ff (round 3): ledger rounds 2 and 6-13 (51 atoms), all variant-table rows, and module sections cybersecurity §1, healthcare NĐ 15 food ads, finance §3, statutory §1-2 (31 paragraphs).",
-  "method": "One read-only grok-4.7 run (--lean, no write tools) on a self-contained packet cut mechanically from the frozen sources; the reviewer's own passed rule; owner-decided items (Part D) excluded from findings. Record: reviews/grok-8-round3-full-scope.json with packet and prompt. Codex unavailable (login expired; owner-manual re-login).",
+  "reviewed_at": "2026-10-28T23:25:00+07:00",
+  "scope": "Frozen commit 0520afa (round 4, rebased on origin/main): ledger rounds 2 and 6-13 (51 atoms), all variant-table rows, and module sections cybersecurity §1, healthcare NĐ 15 food ads, finance §3, statutory §1-2.",
+  "method": "One read-only grok-4.7 run (--lean, no write tools) on a self-contained packet cut mechanically from the frozen sources; the reviewer's own passed rule; owner-decided items (Part D) excluded from findings. Record: reviews/grok-9-round4-full-scope.json with packet and prompt. Codex unavailable (login expired; owner-manual re-login).",
   "verdict": {
     "reviewed_atoms": 51,
     "entailed": 50,
     "overreach": [
       {
-        "id": "claim-med-ad-matches-declaration",
+        "id": "claim-med-no-medical-endorsement",
         "minor": true,
-        "why": "Điều 27 khoản 4 điểm đ requires scientific documentation for ad content beyond declared công dụng and tính năng. It does not allow content beyond khoản 2’s công dụng and tác dụng."
+        "why": "Điều 27 khoản 2 bans use of images, equipment, attire, names or letters of medical units, doctors, pharmacists and staff, plus patient thank-you letters and their articles. 'May not use doctors, pharmacists or medical facilities' drops those instruments and reads wider than the clause."
       }
     ],
     "wrong": [],
     "variant_table_issues": [],
-    "paragraphs_reviewed": 31,
+    "paragraphs_reviewed": 28,
     "unsupported_paragraphs": [
       {
-        "paragraph_start": "Children: dual consent from the child and the legal represen",
-        "why": "Điều 24 khoản 2 has the representative exercise the data subject’s rights, except cases under Điều 19 khoản 1, which is not in the anchor. It does not say the representative acts for the child for all other processing."
+        "paragraph_start": "Luật 56/2024/QH15 amended the Securities Law from 01/01/2025",
+        "why": "Anchors show item 5 replaces Điều 12 khoản 3 and that 'Điều 91' occurs 0 times. Item 20's repeal and phrase-insertion body is not quoted, so 'only change to Điều 12 is khoản 3' is not shown."
       }
     ],
     "passed": false,
-    "notes": "Owner kept MED002 “thay thế thuốc chữa bệnh” statutory. The clause only mandates the negated disclaimer, so the affirmative fragment is not a stated ban. Not counted as a finding."
+    "notes": "MED002 'thay thế thuốc chữa bệnh' stays owner-statutory, but the quote only mandates that phrase inside the negated disclaimer. FIN001's note that Luật 56 also amends Điều 12 khoản 4 is marked unfrozen and is not in the shown headers."
   },
   "post_review_edits": [],
   "author_notes_on_findings": [
     {
-      "claim_id": "cybersecurity child-consent paragraph",
-      "note": "Accepted, not yet fixed: the anchor (Luật 91/2025 Điều 24 khoản 2) has the representative exercise the child's rights except for Điều 19 khoản 1 cases, which is not anchored. Next run: anchor Điều 19 khoản 1 or narrow the sentence. State left as reviewed."
+      "claim_id": "run-8 findings",
+      "note": "Both run-8 findings (child-consent paragraph, claim-med-ad-matches-declaration) were fixed in 0520afa and are not raised again in this run."
     },
     {
-      "claim_id": "claim-med-ad-matches-declaration",
-      "note": "Minor overreach accepted for the next run: khoản 4 điểm đ concerns content beyond declared công dụng and tính năng, not beyond khoản 2's công dụng and tác dụng."
+      "claim_id": "finance Luật 56 paragraph",
+      "note": "New in this run (run 8 passed the same paragraph). Accepted, not fixed: the 'only change to Điều 12 is khoản 3' negative is not shown by the anchors, and the FIN001 citation_note in data/rule-variant-tables.json says Luật 56 amends Điều 12 khoản 3 and khoản 4. The two texts conflict; the next run must check item 20 of Luật 56 Điều 1 against the frozen text and correct one of them."
+    },
+    {
+      "claim_id": "claim-med-no-medical-endorsement",
+      "note": "New minor overreach, accepted for the next run: name the instruments (images, equipment, attire, names, letters) instead of 'may not use doctors'."
     },
     {
       "claim_id": "MED002 thay thế thuốc chữa bệnh",
       "note": "Owner ruled statutory (2026-10-28); reviewer disagreement recorded in notes, not a finding."
     }
   ],
-  "next_run_must": "Fix the child-consent paragraph and the med-ad atom, then replace this review before any STOP: the gate does not check that a review covers atoms added after it.",
+  "next_run_must": "Resolve the Luật 56 / Điều 12 khoản 4 conflict and the med-endorsement wording, then replace this review before any STOP: the gate does not check that a review covers atoms added after it.",
   "previous_reviews": [
+    {
+      "run": "8-round3-full-scope",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-8-round3-full-scope.json"
+    },
     {
       "run": "7-round2-full-scope",
       "reviewer_runtime": "grok-4.7",

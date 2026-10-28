@@ -2,7 +2,7 @@
 
 Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. Researcher: claude-opus-5-5. Independent review is in §7.
 
-**Status after round 3 (see §12): not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP for three reasons. Saturation is 1/3. Real probes remain open. The latest independent review (grok-4.7, run 8, full scope on frozen commit 88a89ff) returned **passed=false**: 0 wrong, 50/51 atoms entailed, 1 minor overreach, 1 unsupported paragraph (child consent), 0 variant-table issues. `verify_ukmc.py` returns CONTINUE_GAP; that review is its only failure. No rounds were manufactured, and no pass was set by hand.
+**Status after round 4 (see §13), the last round of this run: not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 1/3, real probes remain open, and the latest independent review returned **passed=false**. That review was grok-4.7 run 9, full scope, on frozen commit 0520afa: 0 wrong, 50/51 atoms entailed, 1 minor overreach, 1 unsupported paragraph, 0 variant-table issues. `verify_ukmc.py` returns CONTINUE_GAP; that review is its only failure. No rounds were manufactured, and no pass was set by hand.
 
 ## 1. Numbers (before → after)
 
@@ -456,3 +456,54 @@ All 7 commands ran from the worktree after the `review.json` update. Exit codes:
 | `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
 
 Screenshot: `knowledge-261028-2016-gates-terminal-r3.png`.
+
+## 13. Round 4 (last round of this run, 2026-10-28)
+
+**Rebase.** The branch is rebased onto `origin/main` (24d0146: PR #4 rules fix plus PR #3 packaging). `121042d` dropped out as already applied (d89ea60), with no conflicts. Commit hashes before the rebase changed: the round-3 freeze 88a89ff is now e5c40e3, and the run-8 record is 643ffb1. Their trees are unchanged. After the rebase all gates held: 87 tests (5 skipped), DEEPEN, CONTINUE_GAP.
+
+**The two run-8 fixes, nothing else** (freeze commit 0520afa):
+1. **Child-consent paragraph** (`statutory-compliance-vi.md` 3.4.1). The unsupported tail was cut. The representative sentence now has its own anchor, the first sentence of Luật 91/2025 Điều 24 khoản 2, including its Điều 19 khoản 1 exception.
+2. **`claim-med-ad-matches-declaration`** (2 atoms). The khoản 4 điểm đ rider now reads "content beyond the uses and features (công dụng, tính năng) recorded in the declaration needs scientific documentation".
+
+No new probes or material were added. Anchors went from 121 to 122; claims stay at 65/65 and sources at 28.
+
+### 13.1 Review run 9 (grok-4.7, read-only, frozen commit 0520afa)
+
+The verdict is recorded verbatim in `review.json`. The record is `reviews/grok-9-round4-full-scope.json`, with packet and prompt alongside.
+
+| | Run 8 | **Run 9** |
+|---|---|---|
+| Atoms entailed | 50/51 | **50/51** |
+| Wrong | 0 | 0 |
+| Overreach | 1 minor (med-ad) | **1 minor (med-endorsement, new)** |
+| Variant-table issues | 0 | 0 |
+| Unsupported paragraphs | 1 (child consent) | **1 (finance Luật 56, new)** |
+| passed | false | **false** |
+
+Both run-8 findings are gone. Run 9 raised two items that run 8 had passed on the same text. This reviewer's findings vary from run to run, so a single run is not a stable pass/fail signal.
+
+1. **Finance: Luật 56 and Điều 12. This is a real conflict, not only a missing anchor.** The module says Luật 56's "only change to Điều 12 is khoản 3". The FIN001 `citation_note` in `data/rule-variant-tables.json` says Luật 56 amends Điều 12 **khoản 3 and khoản 4**, checked on vbpl.vn but not frozen. One of them is wrong. Next run: read item 20 of Luật 56 Điều 1 in the frozen text (source 25), then correct the module or the note.
+2. **`claim-med-no-medical-endorsement` (minor).** Điều 27 khoản 2 bans the *instruments*: images, equipment, attire, names, letters, thank-you letters and articles. "May not use doctors" reads wider than the clause. Next run: name the instruments.
+
+### 13.2 Still red, and why
+
+- **`kb gate` DEEPEN (exit 2).** Saturation is 1/3 (delta 1.2%). Probes remain open: KDBĐS lost provisions, the NĐ 15 replacement, dictionaries. Review run 9 did not pass.
+- **`verify_ukmc` CONTINUE_GAP (exit 1).** Its only failure is review run 9.
+- **`tests/test_ukmc_knowledge.py` unchanged**, because nothing passed.
+- **Owner-manual:** Codex re-login. A second, non-Grok reviewer would also help with the run-to-run variance above.
+
+### 13.3 Verification after the last edit (round 4)
+
+The 7 commands were rerun by Haiku after the `review.json` update; Opus checked the raw output. Exit codes:
+
+| Command | Exit | Result |
+|---|---|---|
+| `sync_shared --check` | 0 | 16 skills byte-identical |
+| `build_examples --check` | 0 | 16 skills up to date |
+| `verify_ukmc.py` | 1 (expected) | 65/65 claims, 28 sources, 122 anchors; 1 failure = review → CONTINUE_GAP |
+| `kb verify --claims` | 0 | 122 anchors, 0 failures |
+| `kb gate` | 2 (expected) | DEEPEN; Hard Gates Passed: True; saturation 1/3 (delta 1.2%) |
+| unittest | 0 | 87 tests OK (5 skipped) |
+| `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
+
+Screenshot: `knowledge-261028-2016-gates-terminal-r4.png`.

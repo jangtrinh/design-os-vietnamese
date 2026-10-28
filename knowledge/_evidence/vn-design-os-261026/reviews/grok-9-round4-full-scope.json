@@ -1,0 +1,29 @@
+{
+  "run": "9-round4-full-scope",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 8,
+  "secs": 483,
+  "verdict": {
+    "reviewed_atoms": 51,
+    "entailed": 50,
+    "overreach": [
+      {
+        "id": "claim-med-no-medical-endorsement",
+        "minor": true,
+        "why": "Điều 27 khoản 2 bans use of images, equipment, attire, names or letters of medical units, doctors, pharmacists and staff, plus patient thank-you letters and their articles. 'May not use doctors, pharmacists or medical facilities' drops those instruments and reads wider than the clause."
+      }
+    ],
+    "wrong": [],
+    "variant_table_issues": [],
+    "paragraphs_reviewed": 28,
+    "unsupported_paragraphs": [
+      {
+        "paragraph_start": "Luật 56/2024/QH15 amended the Securities Law from 01/01/2025",
+        "why": "Anchors show item 5 replaces Điều 12 khoản 3 and that 'Điều 91' occurs 0 times. Item 20's repeal and phrase-insertion body is not quoted, so 'only change to Điều 12 is khoản 3' is not shown."
+      }
+    ],
+    "passed": false,
+    "notes": "MED002 'thay thế thuốc chữa bệnh' stays owner-statutory, but the quote only mandates that phrase inside the negated disclaimer. FIN001's note that Luật 56 also amends Điều 12 khoản 4 is marked unfrozen and is not in the shown headers."
+  }
+}
