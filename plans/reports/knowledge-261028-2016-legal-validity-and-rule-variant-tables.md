@@ -510,7 +510,7 @@ Screenshot: `knowledge-261028-2016-gates-terminal-r4.png`.
 
 ## 14. Round 5 (owner ruling 2026-10-29: Grok as the only reviewer)
 
-**Rebase.** Nothing to do: `origin/main` is still 24d0146 (PR #5 not merged), and the branch was 0 behind.
+**Rebase.** PR #5 (writing-context dimension) merged during the round. The branch was then rebased onto `origin/main` 5ea84c7 without conflicts: PR #5 touches no file in `knowledge/`, and the knowledge tree of the frozen commit is byte-identical before and after. Commit hashes changed: freeze c9fa997 is now e506b21, and the run-10 record 405f476 is now b17e9ac. `review.json` keeps the hash the review actually saw (c9fa997). The gates in §14.3 were rerun after the rebase.
 
 **The two run-9 fixes, nothing else** (freeze commit c9fa997):
 1. **Luật 56 / Điều 12.** Frozen source 25 settles it. Within Luật 56 Điều 1 (the Securities Law items), "Điều 12" occurs exactly once, at item 5 (khoản 3, market manipulation). Item 20 repeals Điều 23, khoản 3 Điều 48 and khoản 4–5 Điều 135, and inserts a phrase into Điều 7, 52 and 68. The "khoản 4 Điều 12" rewrite is item 4 of Luật 56 **Điều 2**, which amends the Accounting Law.
@@ -544,7 +544,7 @@ New minor item: `claim-pdpd-nd356-scope` adds the law number 91/2025/QH15, which
 
 ### 14.3 Verification after the last edit (round 5)
 
-The 7 commands were rerun by Haiku after the `review.json` and test update; Opus checked the raw output. Exit codes:
+The 7 commands were rerun by Haiku on the rebased HEAD (on 5ea84c7); Opus checked the raw output. Exit codes:
 
 | Command | Exit | Result |
 |---|---|---|
@@ -553,7 +553,7 @@ The 7 commands were rerun by Haiku after the `review.json` and test update; Opus
 | `verify_ukmc.py` | 0 | 65/65 claims, 28 sources, 126 anchors, 0 failures → **STOP_SUFFICIENT** |
 | `kb verify --claims` | 0 | 126 anchors, 0 failures |
 | `kb gate` | 2 (expected) | DEEPEN; Hard Gates Passed: True; saturation 1/3 (delta 1.2%); a viable probe remains |
-| unittest | 0 | 87 tests OK (5 skipped) |
+| unittest | 0 | 148 tests OK (8 skipped); PR #5 added 61 tests |
 | `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
 
 Screenshot: `knowledge-261028-2016-gates-terminal-r5.png`.
