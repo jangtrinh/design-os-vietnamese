@@ -46,7 +46,7 @@ Vietnamese possesses rich, natural impersonal grammatical frames that make `bạ
 
 ## 1. Mục tiêu (Objective)
 Đặc tả giải pháp phân vùng cơ sở dữ liệu PostgreSQL cho bảng `user_events` và triển khai
-mã hóa ở trạng thái nghỉ (encryption-at-rest) nhằm đáp ứng yêu cầu của Nghị định 13/2023/NĐ-CP.
+mã hóa ở trạng thái nghỉ (encryption-at-rest) nhằm đáp ứng yêu cầu của Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15.
 
 ## 2. Thiết kế chi tiết (Detailed Design)
 1. Bảng `user_events` được phân vùng theo phạm vi thời gian (Range Partitioning) theo từng tháng.

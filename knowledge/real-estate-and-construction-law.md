@@ -8,10 +8,12 @@ when:
   - "Enforcing REA001–REA006 rules in validate_copy.py for vietnamese-real-estate-construction"
   - "Verifying land tenure, carpet area, and payment milestone disclosures under 2023–2024 real estate statutes"
 trust_tier: "verified"
-version: "5.0.0"
+version: "5.1.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md"
     sha256: "a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4"
+  - uri: "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt"
+    sha256: "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e"
 ---
 
 # Vietnamese Real Estate, Property Development & Construction Law: Law on Real Estate Business 29/2023/QH15, Land Law 31/2024/QH15, and Housing Law 27/2023/QH15
@@ -36,11 +38,18 @@ Under the Law on Real Estate Business 2023, project developers are strictly proh
 Article 23 Clause 5 of the Law on Real Estate Business 2023 (Luật Kinh doanh bất động sản số 29/2023/QH15, effective 01/08/2024) caps deposit amounts ('tiền đặt cọc') for off-plan properties ('nhà ở, công trình xây dựng hình thành trong tương lai') at 5% of the selling or lease-purchase price when the project meets all statutory conditions for commercialization.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md" sha256="a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4" quote="Article 23 Clause 5 of the Law on Real Estate Business 2023 (Luật Kinh doanh bất động sản số 29/2023/QH15, effective 01/08/2024) caps deposit amounts ('tiền đặt cọc') for off-plan properties ('nhà ở, công trình xây dựng hình thành trong tương lai') at 5% of the selling or lease-purchase price when the project meets all statutory conditions for commercialization." -->
 
+Primary text (Luật KDBĐS 2023 Điều 23 khoản 5; statutory span frozen from a mirror, hethongphapluat.com):
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e" quote="Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này." -->
+
 ### 2. Statutory Milestone Payment Caps (`REA002`)
 
 Payment schedules for off-plan properties must strictly adhere to the phased completion thresholds set by law to safeguard buyer capital against project delays.
 Article 25 of the Law on Real Estate Business 2023 limits off-plan property installment payments to a maximum of 30% of contract value on the first installment (inclusive of deposit), 70% prior to handover (or 50% for foreign-invested developers), and 95% prior to issuance of the Land Use Rights and Assets Attached to Land Certificate.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md" sha256="a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4" quote="Article 25 of the Law on Real Estate Business 2023 limits off-plan property installment payments to a maximum of 30% of contract value on the first installment (inclusive of deposit), 70% prior to handover (or 50% for foreign-invested developers), and 95% prior to issuance of the Land Use Rights and Assets Attached to Land Certificate." -->
+
+Primary text (Luật KDBĐS 2023 Điều 25 khoản 1 and khoản 3):
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e" quote="lần đầu không quá 30% giá trị hợp đồng bao gồm cả tiền đặt cọc" -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e" quote="thì bên bán, cho thuê mua không được thu quá 95% giá trị hợp đồng" -->
 
 ### 3. Land Tenure Accuracy, Carpet Area & 2% Maintenance Fund (`REA003`, `REA004`, `REA005`)
 

@@ -2,21 +2,21 @@
 
 # Personal Data Breach Incident Response & 72-Hour A05 Notification Guide
 
-> Statutory mandate: **Nghị định số 13/2023/NĐ-CP** (Nghị định về Bảo vệ dữ liệu cá nhân - PDPD), effective July 1, 2023.
+> Statutory mandate (from 01/01/2026): **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** and **Nghị định số 356/2025/NĐ-CP**. Nghị định 13/2023/NĐ-CP (effective 01/07/2023) is no longer in force (NĐ 356/2025 Điều 42 khoản 2).
 
 ---
 
-## 1. Statutory Breach Notification Timeline (Điều 23 NĐ 13/2023/NĐ-CP)
+## 1. Statutory Breach Notification Timeline (Điều 23 Luật 91/2025/QH15)
 
-Under **Điều 23 Nghị định 13/2023/NĐ-CP**, in the event of an incident involving personal data leakage, loss, or unauthorized breach:
+Under **Điều 23 Luật 91/2025/QH15**, in the event of an incident involving personal data leakage, loss, or unauthorized breach:
 
 1. **72-Hour Mandatory Window:**
    - The Data Controller (`Bên Kiểm soát dữ liệu cá nhân`) and Data Processor (`Bên Xử lý dữ liệu cá nhân`) must formally notify the **Department of Cybersecurity and High-Tech Crime Prevention (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao — A05, Bộ Công an)** within **72 hours** from the time of detecting the breach.
    - Any internal policy specifying deadlines longer than 72 hours (e.g. 7 days, 15 days, 30 days) is **statutorily void and subject to administrative penalties**.
 
-2. **Official Form 03a (Mẫu số 03a):**
-   - The notification must be drafted in Vietnamese according to **Mẫu số 03a ban hành kèm theo Nghị định số 13/2023/NĐ-CP**.
-   - Core required sections:
+2. **Official Form: Mẫu số 08 (Nghị định 356/2025/NĐ-CP); formerly Mẫu số 03a of Nghị định 13/2023/NĐ-CP:**
+   - The notification must be drafted in Vietnamese according to **Mẫu số 08 ban hành kèm theo Nghị định số 356/2025/NĐ-CP** (content per Điều 28; Mẫu 03a/03b of Decree 356 is the impact-assessment update form).
+   - Core required sections (Nghị định 356/2025/NĐ-CP Điều 28 khoản 1, điểm a–d):
      - Tên cơ quan, tổ chức, cá nhân thông báo;
      - Mô tả bản chất vụ vi phạm (thời gian, địa điểm, cách thức xảy ra sự cố);
      - Loại dữ liệu cá nhân và số lượng chủ thể dữ liệu ước tính bị ảnh hưởng;
@@ -26,9 +26,9 @@ Under **Điều 23 Nghị định 13/2023/NĐ-CP**, in the event of an incident 
 
 ---
 
-## 2. Classification of Personal Data (Điều 2 NĐ 13/2023/NĐ-CP)
+## 2. Classification of Personal Data (Điều 2 Luật 91/2025/QH15; Điều 3–4 NĐ 356/2025/NĐ-CP)
 
-Under **Điều 2 Khoản 3 và Khoản 4 Nghị định 13/2023/NĐ-CP**, personal data is divided into two strict legal categories:
+Under **Điều 2 khoản 2 và khoản 3 Luật 91/2025/QH15** (lists in **Điều 3 and Điều 4 Nghị định 356/2025/NĐ-CP**), personal data is divided into two strict legal categories:
 
 ### A. Dữ liệu cá nhân cơ bản (Basic Personal Data — Khoản 3)
 - Họ, chữ đệm và tên khai sinh, tên gọi khác;
@@ -62,7 +62,7 @@ Under **Điều 2 Khoản 3 và Khoản 4 Nghị định 13/2023/NĐ-CP**, perso
 [Kích hoạt Đội CSIRT & DPO]                            [Cách ly hệ thống bị xâm nhập]
         │                                                       │
         ▼ (Phân tích phạm vi, số lượng chủ thể)                ▼
-[Soạn thảo Mẫu số 03a NĐ 13]                           [Bảo toàn chứng cứ số (Digital Forensics)]
+[Soạn thảo Mẫu số 08 NĐ 356]                          [Bảo toàn chứng cứ số (Digital Forensics)]
         │
         ▼ (Trước T0 + 72 giờ)
 [Gửi Thông báo vi phạm chính thức tới Cục A05 Bộ Công an]

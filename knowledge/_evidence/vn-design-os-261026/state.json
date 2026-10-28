@@ -1,6 +1,6 @@
 {
   "run_id": "vn-design-os-261026",
-  "round": 0,
+  "round": 5,
   "status": "RUNNING",
   "budget_used": 0,
   "budget_total": 50,
@@ -26,12 +26,60 @@
     "claim-gov-dvc",
     "claim-insurance-law",
     "claim-cybersecurity-law",
-    "claim-media-law"
+    "claim-media-law",
+    "claim-pdpd-law-91-in-force",
+    "claim-pdpd-nd13-expired",
+    "claim-pdpd-nd13-register-status",
+    "claim-pdpd-consent-informed",
+    "claim-pdpd-consent-silence",
+    "claim-pdpd-no-default-consent",
+    "claim-pdpd-breach-72h",
+    "claim-pdpd-breach-form-08",
+    "claim-pdpd-agency-bca",
+    "claim-pdpd-children-consent",
+    "claim-pdpd-transition-consent",
+    "claim-ads-superlative-equivalent",
+    "claim-ads-truthful",
+    "claim-ads-law-75-in-force",
+    "claim-ads-law-75-repeals",
+    "claim-fin-no-return-guarantee",
+    "claim-med-tpcn-disclaimer",
+    "claim-med-ad-matches-declaration",
+    "claim-med-no-medical-endorsement",
+    "claim-med-kcb-deceptive-ads",
+    "claim-rea-deposit-5pct",
+    "claim-rea-first-installment-30",
+    "claim-rea-pre-certificate-95",
+    "claim-orth-qd1989-number",
+    "claim-orth-tone-main-vowel",
+    "claim-orth-tone-ia-ua-ua",
+    "claim-orth-tone-ie-uo",
+    "claim-orth-i-not-y",
+    "claim-orth-decimal-comma",
+    "claim-med-nd15-register-status"
   ],
   "minimum_independent_sources": 6,
   "last_weighted_delta": 0.0,
-  "researcher_runtime": "gemini-3.8-flash-worker",
+  "researcher_runtime": "claude-opus-5-5",
   "is_target_version_matched": true,
   "consecutive_low_delta_rounds": 3,
-  "has_viable_probe_remaining": false
+  "has_viable_probe_remaining": false,
+  "researcher_history": [
+    {
+      "rounds": [
+        1
+      ],
+      "runtime": "gemini-3.8-flash-worker"
+    },
+    {
+      "rounds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "runtime": "claude-opus-5-5",
+      "date": "2026-10-28"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 ---
 name: vietnamese-education-copy
-description: Writes, evaluates, and pedagogically audits native-quality Vietnamese (vi-VN) educational, academic, and EdTech communications across the full 7-tier Vietnamese Pedagogy Continuum (Mầm non -> Tiểu học -> THCS/THPT -> GDNN -> Đại học -> Thạc sĩ -> Tiến sĩ & GS/PGS). Enforces statutory Ministry of Education and Training (Bộ GD&ĐT) and Ministry of Labour, Invalids and Social Affairs (Bộ LĐ-TB&XH) circulars, including VBHN 01/VBHN-BGDĐT for preschool developmental milestones across 5 domains (forbidding numeric scores and K-12 grades), Thông tư 27/2020/TT-BGDĐT for primary education (mandating cần cố gắng over cần cải thiện), Thông tư 22/2021/TT-BGDĐT for secondary and high schools (THCS/THPT scale of Tốt/Khá/Đạt/Chưa đạt and abolition of học sinh tiên tiến), Thông tư 04/2022/TT-BLĐTBXH for TVET vocational modules and credits, Thông tư 08/2021/TT-BGDĐT for higher education (tín chỉ and decimal comma GPA notation), Thông tư 23/2021/TT-BGDĐT for Master's theses (luận văn / đề án thạc sĩ), Thông tư 18/2021/TT-BGDĐT & QĐ 37/2018/QĐ-TTg for Doctoral dissertations (luận án tiến sĩ) and academic rank (GS/PGS) vs academic degree (TS/ThS/Cử nhân) distinctions, and Thông tư 21/2019/TT-BGDĐT for diploma issuance (bản sao từ sổ gốc). Embeds modern learning science and EdTech AI tutoring frameworks (Spaced Repetition, 3PL IRT adaptive difficulty scaling, ZPD 3-tier scaffolding, Goodness of Pronunciation [GOP] Sandwich feedback for all 6 Vietnamese tones, and Self-Determination Theory to prevent overjustification), statutory child data protection compliance under Nghị định 13/2023/NĐ-CP Điều 20 (minor double consent requiring verified approval from phụ huynh or người giám hộ), and sociolinguistic register discipline across edu-preschool, edu-k12-primary, edu-k12, edu-parent, edu-uni, and edu-postgrad.
+description: Writes, evaluates, and pedagogically audits native-quality Vietnamese (vi-VN) educational, academic, and EdTech communications across the full 7-tier Vietnamese Pedagogy Continuum (Mầm non -> Tiểu học -> THCS/THPT -> GDNN -> Đại học -> Thạc sĩ -> Tiến sĩ & GS/PGS). Enforces statutory Ministry of Education and Training (Bộ GD&ĐT) and Ministry of Labour, Invalids and Social Affairs (Bộ LĐ-TB&XH) circulars, including VBHN 01/VBHN-BGDĐT for preschool developmental milestones across 5 domains (forbidding numeric scores and K-12 grades), Thông tư 27/2020/TT-BGDĐT for primary education (mandating cần cố gắng over cần cải thiện), Thông tư 22/2021/TT-BGDĐT for secondary and high schools (THCS/THPT scale of Tốt/Khá/Đạt/Chưa đạt and abolition of học sinh tiên tiến), Thông tư 04/2022/TT-BLĐTBXH for TVET vocational modules and credits, Thông tư 08/2021/TT-BGDĐT for higher education (tín chỉ and decimal comma GPA notation), Thông tư 23/2021/TT-BGDĐT for Master's theses (luận văn / đề án thạc sĩ), Thông tư 18/2021/TT-BGDĐT & QĐ 37/2018/QĐ-TTg for Doctoral dissertations (luận án tiến sĩ) and academic rank (GS/PGS) vs academic degree (TS/ThS/Cử nhân) distinctions, and Thông tư 21/2019/TT-BGDĐT for diploma issuance (bản sao từ sổ gốc). Embeds modern learning science and EdTech AI tutoring frameworks (Spaced Repetition, 3PL IRT adaptive difficulty scaling, ZPD 3-tier scaffolding, Goodness of Pronunciation [GOP] Sandwich feedback for all 6 Vietnamese tones, and Self-Determination Theory to prevent overjustification), statutory child data protection compliance under Luật 91/2025/QH15 Điều 24 (minor double consent requiring verified approval from phụ huynh or người giám hộ), and sociolinguistic register discipline across edu-preschool, edu-k12-primary, edu-k12, edu-parent, edu-uni, and edu-postgrad.
 license: PolyForm-Shield-1.0.0
 metadata:
   version: "2.1.0"
@@ -100,7 +100,7 @@ Khi phản hồi chấm điểm phát âm (GOP - Goodness of Pronunciation qua 6
 
 ---
 
-## 4. Child Data Protection & Privacy (Nghị định 13/2023/NĐ-CP Điều 20 — `EDU010`)
+## 4. Child Data Protection & Privacy (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 24 — `EDU010`)
 
 Xử lý dữ liệu cá nhân của trẻ em ($\ge 7$ tuổi) bắt buộc có **sự đồng ý kép**:
 1. Sự đồng ý của trẻ em.
@@ -148,7 +148,7 @@ python skills/vietnamese-education-copy/scripts/validate_copy.py consent.md --do
 - `EDU007`: Trạng thái trống khô cứng trên giao diện EdTech thiếu lời kêu gọi hành động.
 - `EDU008`: Sai lệch tên gọi công trình tốt nghiệp giữa các bậc học (`luận án cử nhân`, `khóa luận tiến sĩ`, v.v.).
 - `EDU009`: Phản hồi âm thanh/phát âm tiêu cực vi phạm mô hình Sandwich.
-- `EDU010`: Thu thập dữ liệu trẻ em thiếu sự đồng ý của phụ huynh/người giám hộ (NĐ 13/2023).
+- `EDU010`: Thu thập dữ liệu trẻ em thiếu sự đồng ý của phụ huynh/người giám hộ (Luật 91/2025/QH15 Điều 24; NĐ 13/2023 hết hiệu lực từ 01/01/2026).
 - `EDU011`: Chấm điểm số hoặc xếp loại học lực K-12 đối với trẻ mầm non (VBHN 01/VBHN-BGDĐT).
 - `EDU012`: Xưng hô thân mật/K-12 hoặc thổi phồng khẳng định khoa học trong nghiên cứu Sau đại học.
 

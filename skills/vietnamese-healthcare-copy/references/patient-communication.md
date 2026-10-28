@@ -1,6 +1,6 @@
 # Patient-Centered Communication & Healthcare Empathy (`design-os-vietnamese`)
 
-This guide establishes the sociolinguistic standards, psychological protocols, and privacy frameworks for communicating with patients, family members, and the public in Vietnamese healthcare systems under **Luật Khám bệnh, chữa bệnh số 15/2023/QH15** and **Nghị định 13/2023/NĐ-CP** (Bảo vệ dữ liệu cá nhân).
+This guide establishes the sociolinguistic standards, psychological protocols, and privacy frameworks for communicating with patients, family members, and the public in Vietnamese healthcare systems under **Luật Khám bệnh, chữa bệnh số 15/2023/QH15** and **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15** (with Nghị định 356/2025/NĐ-CP).
 
 ---
 
@@ -84,7 +84,7 @@ Hướng dẫn người bệnh chuẩn bị trước cận lâm sàng và can th
 
 ---
 
-## 4. Health Data Privacy & Confidentiality (Điều 10 Luật KCB 2023 & NĐ 13/2023/NĐ-CP)
+## 4. Health Data Privacy & Confidentiality (Điều 10 Luật KCB 2023 & Luật 91/2025/QH15 Điều 26)
 
 Dữ liệu sức khỏe là **dữ liệu cá nhân nhạy cảm** được bảo vệ ở cấp độ cao nhất theo pháp luật Việt Nam:
 

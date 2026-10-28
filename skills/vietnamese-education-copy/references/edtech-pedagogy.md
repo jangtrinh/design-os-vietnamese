@@ -2,7 +2,7 @@
 
 # Learning Science, Cognitive Psychology, & EdTech Architecture (`design-os-vietnamese`)
 
-This guide bridges cognitive learning science and native Vietnamese EdTech copy design. It provides concrete specifications for Spaced Repetition systems, Item Response Theory (IRT) adaptive assessment, Zone of Proximal Development (ZPD) scaffolding, pediatric acoustic pronunciation scoring (GOP across Vietnamese 6 tones), Self-Determination Theory (SDT), and statutory child data protection under **Nghị định 13/2023/NĐ-CP Điều 20**.
+This guide bridges cognitive learning science and native Vietnamese EdTech copy design. It provides concrete specifications for Spaced Repetition systems, Item Response Theory (IRT) adaptive assessment, Zone of Proximal Development (ZPD) scaffolding, pediatric acoustic pronunciation scoring (GOP across Vietnamese 6 tones), Self-Determination Theory (SDT), and statutory child data protection under **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 24**.
 
 ---
 
@@ -105,7 +105,7 @@ Overjustification occurs when an extrinsic reward (XP, badges, digital gems) rep
 
 ---
 
-## 6. Child Data Protection & Double Consent (Nghị định 13/2023/NĐ-CP Điều 20 — `EDU010`)
+## 6. Child Data Protection & Double Consent (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 24 — `EDU010`)
 
 Vietnam's Personal Data Protection Decree imposes strict legal obligations on EdTech platforms handling minor data:
 

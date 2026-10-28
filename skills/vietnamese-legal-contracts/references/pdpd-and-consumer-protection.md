@@ -2,7 +2,7 @@
 
 # Personal Data Protection (PDPD) & Consumer Protection Compliance (`vietnamese-legal-contracts`)
 
-With the enactment of **Nghị định 13/2023/NĐ-CP (PDPD)**, the upcoming **Luật Dữ liệu 2024**, and the effective date of **Luật Bảo vệ quyền lợi người tiêu dùng 2023 (Luật số 19/2023/QH15 — có hiệu lực từ ngày 01/07/2024)**, standard Terms of Service (ToS), consumer contracts, and Data Processing Agreements (DPA) in Vietnam face heightened statutory oversight.
+With **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15** and **Nghị định 356/2025/NĐ-CP** in force from 01/01/2026 (replacing **Nghị định 13/2023/NĐ-CP**), **Luật Dữ liệu 60/2024/QH15**, and the effective date of **Luật Bảo vệ quyền lợi người tiêu dùng 2023 (Luật số 19/2023/QH15 — có hiệu lực từ ngày 01/07/2024)**, standard Terms of Service (ToS), consumer contracts, and Data Processing Agreements (DPA) in Vietnam face heightened statutory oversight.
 
 Drafting consumer terms without statutory guardrails exposes digital platforms to administrative sanctions, mandatory public rectifications, and nullification of key protective clauses.
 
@@ -45,11 +45,11 @@ Theo quy định tại **Điều 25 Luật Bảo vệ quyền lợi người ti�
 
 ---
 
-## 3. Nghị định 13/2023/NĐ-CP (PDPD): Kiến trúc Thỏa thuận Xử lý Dữ liệu Cá nhân (DPA)
+## 3. Luật 91/2025/QH15 & Nghị định 356/2025/NĐ-CP (PDPD): Kiến trúc Thỏa thuận Xử lý Dữ liệu Cá nhân (DPA)
 
-Nghị định 13/2023/NĐ-CP đặt ra chế định pháp lý toàn diện đầu tiên về bảo vệ dữ liệu cá nhân tại Việt Nam, phân định rõ ràng các chủ thể:
+Nghị định 13/2023/NĐ-CP là chế định toàn diện đầu tiên (hết hiệu lực từ 01/01/2026); Luật 91/2025/QH15 Điều 2 nay định nghĩa các chủ thể:
 
-| Khái niệm | Định nghĩa pháp lý (NĐ 13/2023/NĐ-CP) | Thuật ngữ chuẩn trong DPA |
+| Khái niệm | Định nghĩa pháp lý (Luật 91/2025/QH15 Điều 2) | Thuật ngữ chuẩn trong DPA |
 |---|---|---|
 | **Data Subject** | Cá nhân được dữ liệu cá nhân phản ánh | `Chủ thể dữ liệu` |
 | **Data Controller** | Tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân | `Bên Kiểm soát dữ liệu cá nhân` |
@@ -69,9 +69,9 @@ Hợp đồng hoặc thỏa thuận xử lý dữ liệu cá nhân (DPA) giữa 
 
 ---
 
-## 4. 11 Quyền Cốt lõi của Chủ thể Dữ liệu (Điều 9 NĐ 13/2023/NĐ-CP)
+## 4. Quyền của Chủ thể Dữ liệu (Điều 4 Luật 91/2025/QH15)
 
-Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 9 Nghị định 13/2023/NĐ-CP**:
+Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 4 khoản 1 Luật 91/2025/QH15** (danh sách 11 quyền dưới đây theo Điều 9 NĐ 13/2023/NĐ-CP, đã hết hiệu lực; Luật 91 gom thành các điểm a–e):
 
 1. **Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân của mình thông qua Chính sách này.
 2. **Quyền đồng ý:** Đồng ý hoặc không đồng ý cho phép xử lý dữ liệu cá nhân. Sự đồng ý phải được thể hiện rõ ràng, tự nguyện, có thể in ấn hoặc sao chép được.
@@ -89,7 +89,7 @@ Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD
 
 ## 5. Hồ sơ Đánh giá Tác động Xử lý Dữ liệu Cá nhân (DPIA — Điều 24)
 
-Theo **Điều 24 Nghị định 13/2023/NĐ-CP**, Bên Kiểm soát dữ liệu và Bên Kiểm soát và xử lý dữ liệu cá nhân bắt buộc phải lập và lưu giữ **Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân** kể từ thời điểm bắt đầu xử lý dữ liệu.
+Theo **Điều 21 Luật 91/2025/QH15** và **Điều 19 Nghị định 356/2025/NĐ-CP** (trước đây Điều 24 NĐ 13/2023/NĐ-CP), Bên Kiểm soát dữ liệu và Bên Kiểm soát và xử lý dữ liệu cá nhân bắt buộc phải lập và lưu giữ **Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân** kể từ thời điểm bắt đầu xử lý dữ liệu.
 
 Hồ sơ DPIA bao gồm các tài liệu bắt buộc sau:
 1. Thông tin và chi tiết liên lạc của Bên Kiểm soát dữ liệu và Bộ phận Bảo vệ dữ liệu cá nhân (DPO).
@@ -108,7 +108,7 @@ Hồ sơ DPIA bao gồm các tài liệu bắt buộc sau:
 
 ## 6. Chuyển Dữ liệu Cá nhân ra Nước ngoài (Cross-Border Transfer — Điều 25)
 
-Hoạt động chuyển dữ liệu cá nhân của công dân Việt Nam ra nước ngoài (bao gồm lưu trữ trên máy chủ đám mây đặt ngoài lãnh thổ Việt Nam như AWS Singapore, GCP, Azure) phải tuân thủ nghiêm ngặt quy định tại **Điều 25 Nghị định 13/2023/NĐ-CP**:
+Hoạt động chuyển dữ liệu cá nhân của công dân Việt Nam ra nước ngoài (bao gồm lưu trữ trên máy chủ đám mây đặt ngoài lãnh thổ Việt Nam như AWS Singapore, GCP, Azure) phải tuân thủ nghiêm ngặt quy định tại **Điều 20 Luật 91/2025/QH15** và **Điều 17–18 Nghị định 356/2025/NĐ-CP** (trước đây Điều 25 NĐ 13/2023/NĐ-CP):
 
 1. **Điều kiện chuyển giao:**
    - Có sự đồng ý rõ ràng của chủ thể dữ liệu về việc chuyển dữ liệu cá nhân ra nước ngoài sau khi đã được thông báo đầy đủ về các rủi ro tiềm ẩn.

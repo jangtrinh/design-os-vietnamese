@@ -28,7 +28,7 @@ Thông tư 32/2023/TT-BYT (hiệu lực từ 01/01/2024) quy định chi tiết 
 ### A. Core EMR Architecture & Interoperability
 - **Mã định danh duy nhất:** Mỗi người bệnh có một mã số định danh y tế (Mã người bệnh) thống nhất toàn quốc liên thông với Cơ sở dữ liệu Quốc gia về dân cư (VNeID / CCCD gắn chip).
 - **Chữ ký số y tế (PKI & Timestamp):** Mọi ghi chép lâm sàng, kết quả xét nghiệm, chẩn đoán hình ảnh, y lệnh thuốc phải được ký số cá nhân của bác sĩ/điều dưỡng có thẩm quyền kèm dấu thời gian thực (timestamp), không được sửa xóa sau khi đã hoàn tất ký số.
-- **Bảo mật và phân quyền:** Dữ liệu EMR phải tuân thủ cấp độ an toàn thông tin hệ thống y tế cấp 3 trở lên và quy định bảo vệ dữ liệu cá nhân (Nghị định 13/2023/NĐ-CP).
+- **Bảo mật và phân quyền:** Dữ liệu EMR phải tuân thủ cấp độ an toàn thông tin hệ thống y tế cấp 3 trở lên và quy định bảo vệ dữ liệu cá nhân (Luật 91/2025/QH15 Điều 26; Nghị định 356/2025/NĐ-CP).
 
 ### B. Structured Clinical Documentation (Chuẩn SOAP)
 Ghi chép diễn tiến bệnh hàng ngày trong EMR tuân theo chuẩn SOAP quốc tế được Việt hóa:

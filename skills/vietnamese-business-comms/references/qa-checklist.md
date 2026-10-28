@@ -72,7 +72,7 @@
 
 ---
 
-## 8. Chống Thư Rác & Quyền Riêng Tư (Nghị Định 91/2020 & 13/2023)
+## 8. Chống Thư Rác & Quyền Riêng Tư (Nghị Định 91/2020 & Luật 91/2025/QH15)
 
 - [ ] **Cơ chế từ chối nhận tin (`SPAM001`):** Mọi tin nhắn SMS/Zalo/Email tiếp thị hàng loạt đã có hướng dẫn từ chối (ví dụ: `Soạn TC gửi 1324` hoặc nút `Hủy nhận tin`) chưa?
 - [ ] **Khung giờ gửi tin:** Đã lên lịch gửi trong khung giờ quy định: SMS/Zalo từ 07:00 đến 22:00; Telemarketing từ 08:00 đến 17:00 chưa?

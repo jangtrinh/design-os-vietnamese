@@ -30,8 +30,8 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
             f"verify_ukmc.py failed:\n{proc.stdout}\n{proc.stderr}",
         )
         self.assertIn("files: 18", proc.stdout)
-        self.assertIn("verified_claims: 19/19", proc.stdout)
-        self.assertIn("independent_sources: 6", proc.stdout)
+        self.assertIn("verified_claims: 49/49", proc.stdout)
+        self.assertIn("independent_sources: 22", proc.stdout)
         self.assertIn("failures: 0", proc.stdout)
         self.assertIn("Decision: STOP_SUFFICIENT", proc.stdout)
 

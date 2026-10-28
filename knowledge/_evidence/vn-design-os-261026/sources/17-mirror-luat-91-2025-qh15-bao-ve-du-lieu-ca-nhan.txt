@@ -1,0 +1,355 @@
+Source-URL: https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025.html
+Fetched: 2026-10-28T13:45:10+00:00
+
+Publisher: hethongphapluat.com (mirror; statutory span only, site commentary removed). Used to corroborate the official vbpl.vn copy. Text is not protected by copyright (Luật Sở hữu trí tuệ, Điều 15).
+Luật số: 91/2025/QH15
+Hà Nội, ngày 26 tháng 6 năm 2025
+LUẬT
+BẢO VỆ DỮ LIỆU CÁ NHÂN
+Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 203/2025/QH15;
+Quốc hội ban hành Luật Bảo vệ dữ liệu cá nhân.
+Chương I
+NHỮNG QUY ĐỊNH CHUNG
+Điều 1. Phạm vi điều chỉnh và đối tượng áp dụng
+1. Luật này quy định về dữ liệu cá nhân, bảo vệ dữ liệu cá nhân và quyền, nghĩa vụ, trách nhiệm của cơ quan, tổ chức, cá nhân có liên quan.
+2. Luật này áp dụng đối với:
+a) Cơ quan, tổ chức, cá nhân Việt Nam;
+b) Cơ quan, tổ chức, cá nhân nước ngoài tại Việt Nam;
+c) Cơ quan, tổ chức, cá nhân nước ngoài trực tiếp tham gia hoặc có liên quan đến hoạt động xử lý dữ liệu cá nhân của công dân Việt Nam và người gốc Việt Nam chưa xác định được quốc tịch đang sinh sống tại Việt Nam đã được cấp giấy chứng nhận căn cước.
+Điều 2. Giải thích từ ngữ
+Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
+1. Dữ liệu cá nhân là dữ liệu số hoặc thông tin dưới dạng khác xác định hoặc giúp xác định một con người cụ thể, bao gồm: dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm. Dữ liệu cá nhân sau khi khử nhận dạng không còn là dữ liệu cá nhân.
+2. Dữ liệu cá nhân cơ bản là dữ liệu cá nhân phản ánh các yếu tố nhân thân, lai lịch phổ biến, thường xuyên sử dụng trong các giao dịch, quan hệ xã hội, thuộc danh mục do Chính phủ ban hành.
+3. Dữ liệu cá nhân nhạy cảm là dữ liệu cá nhân gắn liền với quyền riêng tư của cá nhân, khi bị xâm phạm sẽ gây ảnh hưởng trực tiếp đến quyền, lợi ích hợp pháp của cơ quan, tổ chức, cá nhân, thuộc danh mục do Chính phủ ban hành.
+4. Bảo vệ dữ liệu cá nhân là việc cơ quan, tổ chức, cá nhân sử dụng lực lượng, phương tiện, biện pháp để phòng, chống hoạt động xâm phạm dữ liệu cá nhân.
+5. Chủ thể dữ liệu cá nhân là người được dữ liệu cá nhân phản ánh.
+6. Xử lý dữ liệu cá nhân là hoạt động tác động đến dữ liệu cá nhân, bao gồm một hoặc nhiều hoạt động như sau: thu thập, phân tích, tổng hợp, mã hóa, giải mã, chỉnh sửa, xóa, hủy, khử nhận dạng, cung cấp, công khai, chuyển giao dữ liệu cá nhân và hoạt động khác tác động đến dữ liệu cá nhân.
+7. Bên kiểm soát dữ liệu cá nhân là cơ quan, tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân.
+8. Bên xử lý dữ liệu cá nhân là cơ quan, tổ chức, cá nhân thực hiện việc xử lý dữ liệu cá nhân theo yêu cầu của bên kiểm soát dữ liệu cá nhân hoặc bên kiểm soát và xử lý dữ liệu cá nhân thông qua hợp đồng.
+9. Bên kiểm soát và xử lý dữ liệu cá nhân là cơ quan, tổ chức, cá nhân quyết định mục đích, phương tiện và trực tiếp xử lý dữ liệu cá nhân.
+10. Bên thứ ba là tổ chức, cá nhân ngoài chủ thể dữ liệu cá nhân, bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân tham gia vào việc xử lý dữ liệu cá nhân theo quy định của pháp luật.
+11. Khử nhận dạng dữ liệu cá nhân là quá trình thay đổi hoặc xóa thông tin để tạo ra dữ liệu mới không thể xác định hoặc không thể giúp xác định được một con người cụ thể.
+12. Đánh giá tác động xử lý dữ liệu cá nhân là việc phân tích, đánh giá rủi ro có thể xảy ra trong quá trình xử lý dữ liệu cá nhân để áp dụng các biện pháp giảm thiểu rủi ro, bảo vệ dữ liệu cá nhân.
+Điều 3. Nguyên tắc bảo vệ dữ liệu cá nhân
+1. Tuân thủ quy định của Hiến pháp, quy định của Luật này và quy định khác của pháp luật có liên quan.
+2. Chỉ được thu thập, xử lý dữ liệu cá nhân đúng phạm vi, mục đích cụ thể, rõ ràng, bảo đảm tuân thủ quy định của pháp luật.
+3. Bảo đảm tính chính xác của dữ liệu cá nhân và được chỉnh sửa, cập nhật, bổ sung khi cần thiết; được lưu trữ trong khoảng thời gian phù hợp với mục đích xử lý dữ liệu cá nhân, trừ trường hợp pháp luật có quy định khác.
+4. Thực hiện đồng bộ có hiệu quả các biện pháp, giải pháp về thể chế, kỹ thuật, con người phù hợp để bảo vệ dữ liệu cá nhân.
+5. Chủ động phòng ngừa, phát hiện, ngăn chặn, đấu tranh, xử lý kịp thời, nghiêm minh mọi hành vi vi phạm pháp luật về bảo vệ dữ liệu cá nhân.
+6. Bảo vệ dữ liệu cá nhân gắn với bảo vệ lợi ích quốc gia, dân tộc, phục vụ phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh và đối ngoại; bảo đảm hài hòa giữa bảo vệ dữ liệu cá nhân với bảo vệ quyền, lợi ích hợp pháp của cơ quan, tổ chức, cá nhân.
+Điều 4. Quyền và nghĩa vụ của chủ thể dữ liệu cá nhân
+1. Quyền của chủ thể dữ liệu cá nhân bao gồm:
+a) Được biết về hoạt động xử lý dữ liệu cá nhân;
+b) Đồng ý hoặc không đồng ý, yêu cầu rút lại sự đồng ý cho phép xử lý dữ liệu cá nhân;
+c) Xem, chỉnh sửa hoặc yêu cầu chỉnh sửa dữ liệu cá nhân;
+d) Yêu cầu cung cấp, xóa, hạn chế xử lý dữ liệu cá nhân; gửi yêu cầu phản đối xử lý dữ liệu cá nhân;
+đ) Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại theo quy định của pháp luật;
+e) Yêu cầu cơ quan có thẩm quyền hoặc cơ quan, tổ chức, cá nhân liên quan đến xử lý dữ liệu cá nhân thực hiện các biện pháp, giải pháp bảo vệ dữ liệu cá nhân của mình theo quy định của pháp luật.
+2. Nghĩa vụ của chủ thể dữ liệu cá nhân bao gồm:
+a) Tự bảo vệ dữ liệu cá nhân của mình;
+b) Tôn trọng, bảo vệ dữ liệu cá nhân của người khác;
+c) Cung cấp đầy đủ, chính xác dữ liệu cá nhân của mình theo quy định của pháp luật, theo hợp đồng hoặc khi đồng ý cho phép xử lý dữ liệu cá nhân của mình;
+d) Chấp hành pháp luật về bảo vệ dữ liệu cá nhân và tham gia phòng, chống hoạt động xâm phạm dữ liệu cá nhân.
+3. Chủ thể dữ liệu cá nhân khi thực hiện quyền và nghĩa vụ của mình phải tuân thủ đầy đủ các nguyên tắc sau đây:
+a) Thực hiện theo quy định của pháp luật; tuân thủ nghĩa vụ của chủ thể dữ liệu cá nhân theo hợp đồng. Việc thực hiện quyền và nghĩa vụ của chủ thể dữ liệu cá nhân phải nhằm mục đích bảo vệ quyền, lợi ích hợp pháp của chính chủ thể dữ liệu cá nhân đó;
+b) Không được gây khó khăn, cản trở việc thực hiện quyền, nghĩa vụ pháp lý của bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân;
+c) Không được xâm phạm đến quyền, lợi ích hợp pháp của Nhà nước, cơ quan, tổ chức, cá nhân khác.
+4. Cơ quan, tổ chức, cá nhân có trách nhiệm tạo điều kiện thuận lợi, không được gây khó khăn, cản trở việc thực hiện quyền và nghĩa vụ của chủ thể dữ liệu cá nhân theo quy định của pháp luật.
+5. Khi nhận được yêu cầu của chủ thể dữ liệu cá nhân để thực hiện quyền của chủ thể dữ liệu cá nhân quy định tại khoản 1 Điều này, bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân phải kịp thời thực hiện trong thời hạn theo quy định của pháp luật.
+Chính phủ quy định chi tiết khoản này.
+Điều 5. Áp dụng pháp luật về bảo vệ dữ liệu cá nhân
+1. Hoạt động bảo vệ dữ liệu cá nhân trên lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam thực hiện theo quy định của Luật này và quy định khác của pháp luật có liên quan.
+2. Trường hợp luật, nghị quyết của Quốc hội ban hành trước ngày Luật này có hiệu lực thi hành có quy định cụ thể về bảo vệ dữ liệu cá nhân mà không trái với nguyên tắc bảo vệ dữ liệu cá nhân theo quy định của Luật này thì áp dụng quy định của luật, nghị quyết đó.
+3. Trường hợp luật, nghị quyết của Quốc hội ban hành sau ngày Luật này có hiệu lực thi hành có quy định về bảo vệ dữ liệu cá nhân khác với quy định của Luật này thì phải quy định cụ thể nội dung thực hiện hoặc không thực hiện theo quy định của Luật này, nội dung thực hiện theo quy định của luật, nghị quyết đó.
+4. Trường hợp cơ quan, tổ chức, cá nhân thực hiện việc đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới theo quy định của Luật này thì không phải thực hiện đánh giá rủi ro xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới theo quy định của pháp luật về dữ liệu.
+Điều 6. Hợp tác quốc tế về bảo vệ dữ liệu cá nhân
+1. Tuân thủ pháp luật Việt Nam, điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên và thỏa thuận quốc tế về bảo vệ dữ liệu cá nhân trên cơ sở bình đẳng, cùng có lợi, tôn trọng độc lập, chủ quyền và toàn vẹn lãnh thổ.
+2. Nội dung hợp tác quốc tế về bảo vệ dữ liệu cá nhân bao gồm:
+a) Xây dựng cơ chế hợp tác quốc tế để tạo điều kiện cho việc thực thi có hiệu quả pháp luật về bảo vệ dữ liệu cá nhân;
+b) Tham gia tương trợ tư pháp về bảo vệ dữ liệu cá nhân của quốc gia khác;
+c) Phòng ngừa, đấu tranh với các hành vi xâm phạm dữ liệu cá nhân;
+d) Đào tạo nguồn nhân lực, nghiên cứu khoa học, ứng dụng khoa học và công nghệ trong bảo vệ dữ liệu cá nhân;
+đ) Trao đổi kinh nghiệm xây dựng và thực hiện pháp luật về bảo vệ dữ liệu cá nhân;
+e) Chuyển giao công nghệ phục vụ bảo vệ dữ liệu cá nhân.
+3. Chính phủ quy định trách nhiệm thực hiện hợp tác quốc tế về bảo vệ dữ liệu cá nhân.
+Điều 7. Hành vi bị nghiêm cấm
+1. Xử lý dữ liệu cá nhân nhằm chống lại Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam, gây ảnh hưởng đến quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, quyền, lợi ích hợp pháp của cơ quan, tổ chức, cá nhân.
+2. Cản trở hoạt động bảo vệ dữ liệu cá nhân.
+3. Lợi dụng hoạt động bảo vệ dữ liệu cá nhân để thực hiện hành vi vi phạm pháp luật.
+4. Xử lý dữ liệu cá nhân trái quy định của pháp luật.
+5. Sử dụng dữ liệu cá nhân của người khác, cho người khác sử dụng dữ liệu cá nhân của mình để thực hiện hành vi trái quy định của pháp luật.
+6. Mua, bán dữ liệu cá nhân, trừ trường hợp luật có quy định khác.
+7. Chiếm đoạt, cố ý làm lộ, làm mất dữ liệu cá nhân.
+Điều 8. Xử lý vi phạm pháp luật về bảo vệ dữ liệu cá nhân
+1. Tổ chức, cá nhân có hành vi vi phạm quy định của Luật này và quy định khác của pháp luật có liên quan đến bảo vệ dữ liệu cá nhân thì tùy theo tính chất, mức độ, hậu quả của hành vi vi phạm có thể bị xử phạt hành chính hoặc bị truy cứu trách nhiệm hình sự; nếu gây thiệt hại thì phải bồi thường theo quy định của pháp luật.
+2. Việc xử phạt vi phạm hành chính trong lĩnh vực bảo vệ dữ liệu cá nhân thực hiện theo quy định tại các khoản 3, 4, 5, 6 và 7 Điều này và pháp luật về xử lý vi phạm hành chính.
+3. Mức phạt tiền tối đa trong xử phạt vi phạm hành chính đối với hành vi mua, bán dữ liệu cá nhân là 10 lần khoản thu có được từ hành vi vi phạm; trường hợp không có khoản thu từ hành vi vi phạm hoặc mức phạt tính theo khoản thu có được từ hành vi vi phạm thấp hơn mức phạt tiền tối đa quy định tại khoản 5 Điều này thì áp dụng mức phạt tiền theo quy định tại khoản 5 Điều này.
+4. Mức phạt tiền tối đa trong xử phạt vi phạm hành chính đối với tổ chức có hành vi vi phạm quy định chuyển dữ liệu cá nhân xuyên biên giới là 5% doanh thu của năm trước liền kề của tổ chức đó; trường hợp không có doanh thu của năm trước liền kề hoặc mức phạt tính theo doanh thu thấp hơn mức phạt tiền tối đa theo quy định tại khoản 5 Điều này thì áp dụng mức phạt tiền theo quy định tại khoản 5 Điều này.
+5. Mức phạt tiền tối đa trong xử phạt vi phạm hành chính đối với các hành vi vi phạm khác trong lĩnh vực bảo vệ dữ liệu cá nhân là 03 tỷ đồng.
+6. Mức phạt tiền tối đa quy định tại các khoản 3, 4 và 5 Điều này được áp dụng đối với tổ chức; cá nhân thực hiện cùng hành vi vi phạm thì mức phạt tiền tối đa bằng một phần hai mức phạt tiền đối với tổ chức.
+7. Chính phủ quy định phương pháp tính khoản thu có được từ việc thực hiện hành vi vi phạm pháp luật về bảo vệ dữ liệu cá nhân.
+Chương II
+BẢO VỆ DỮ LIỆU CÁ NHÂN
+Mục 1. BẢO VỆ DỮ LIỆU CÁ NHÂN TRONG QUÁ TRÌNH XỬ LÝ DỮ LIỆU CÁ NHÂN
+Điều 9. Sự đồng ý của chủ thể dữ liệu cá nhân
+1. Sự đồng ý của chủ thể dữ liệu cá nhân là việc chủ thể dữ liệu cá nhân cho phép xử lý dữ liệu cá nhân của mình, trừ trường hợp pháp luật có quy định khác.
+2. Sự đồng ý của chủ thể dữ liệu cá nhân chỉ có hiệu lực khi dựa trên sự tự nguyện và biết rõ các thông tin sau đây:
+a) Loại dữ liệu cá nhân được xử lý, mục đích xử lý dữ liệu cá nhân;
+b) Bên kiểm soát dữ liệu cá nhân hoặc bên kiểm soát và xử lý dữ liệu cá nhân;
+c) Các quyền, nghĩa vụ của chủ thể dữ liệu cá nhân.
+3. Sự đồng ý của chủ thể dữ liệu cá nhân được thể hiện bằng phương thức rõ ràng, cụ thể, có thể in, sao chép bằng văn bản, bao gồm cả dưới dạng điện tử hoặc định dạng kiểm chứng được.
+4. Sự đồng ý của chủ thể dữ liệu cá nhân phải bảo đảm các nguyên tắc sau đây:
+a) Thể hiện sự đồng ý đối với từng mục đích;
+b) Không được kèm theo điều kiện bắt buộc phải đồng ý với các mục đích khác với nội dung thỏa thuận;
+c) Sự đồng ý có hiệu lực cho đến khi chủ thể dữ liệu cá nhân thay đổi sự đồng ý đó hoặc theo quy định của pháp luật;
+d) Sự im lặng hoặc không phản hồi không được coi là sự đồng ý.
+5. Chính phủ quy định chi tiết khoản 3 Điều này.
+Điều 10. Yêu cầu rút lại sự đồng ý, yêu cầu hạn chế xử lý dữ liệu cá nhân
+1. Chủ thể dữ liệu cá nhân có quyền yêu cầu rút lại sự đồng ý cho phép xử lý dữ liệu cá nhân, yêu cầu hạn chế xử lý dữ liệu cá nhân của mình khi có nghi ngờ phạm vi, mục đích xử lý dữ liệu cá nhân hoặc tính chính xác của dữ liệu cá nhân, trừ trường hợp quy định tại Điều 19 của Luật này hoặc trường hợp pháp luật có quy định khác.
+2. Yêu cầu rút lại sự đồng ý, yêu cầu hạn chế xử lý dữ liệu cá nhân của chủ thể dữ liệu cá nhân phải được thể hiện bằng văn bản, bao gồm cả dạng điện tử hoặc định dạng kiểm chứng được và được gửi cho bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân. Yêu cầu rút lại sự đồng ý, yêu cầu hạn chế xử lý dữ liệu cá nhân của chủ thể dữ liệu cá nhân được thực hiện theo quy định của pháp luật và theo thỏa thuận giữa các bên.
+3. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân tiếp nhận, thực hiện và yêu cầu bên xử lý dữ liệu cá nhân thực hiện yêu cầu rút lại sự đồng ý, hạn chế xử lý dữ liệu cá nhân của chủ thể dữ liệu cá nhân trong thời gian theo quy định của pháp luật.
+4. Việc thực hiện yêu cầu rút lại sự đồng ý, yêu cầu hạn chế xử lý dữ liệu cá nhân không áp dụng đối với hoạt động xử lý dữ liệu cá nhân trước thời điểm chủ thể dữ liệu cá nhân yêu cầu rút lại sự đồng ý hoặc yêu cầu hạn chế xử lý dữ liệu cá nhân.
+Điều 11. Thu thập, phân tích, tổng hợp dữ liệu cá nhân
+1. Dữ liệu cá nhân được thu thập phải được sự đồng ý của chủ thể dữ liệu cá nhân trước khi thu thập, trừ trường hợp pháp luật có quy định khác.
+2. Cơ quan Đảng, Nhà nước có thẩm quyền được phân tích, tổng hợp dữ liệu cá nhân từ nguồn dữ liệu tự thu thập hoặc được chia sẻ, cung cấp, chuyển giao, khai thác, sử dụng để phục vụ công tác lãnh đạo, chỉ đạo, quản lý nhà nước, phát triển kinh tế - xã hội theo quy định của pháp luật.
+3. Cơ quan, tổ chức, cá nhân không thuộc quy định tại khoản 2 Điều này được phân tích, tổng hợp dữ liệu cá nhân từ nguồn dữ liệu cá nhân được phép xử lý theo quy định của pháp luật.
+Điều 12. Mã hóa, giải mã dữ liệu cá nhân
+1. Mã hóa dữ liệu cá nhân là việc chuyển đổi dữ liệu cá nhân sang dạng không nhận biết được dữ liệu cá nhân nếu không được giải mã; dữ liệu cá nhân sau khi được mã hóa vẫn là dữ liệu cá nhân.
+2. Dữ liệu cá nhân là bí mật nhà nước phải được mã hóa, giải mã theo quy định của pháp luật về bảo vệ bí mật nhà nước và pháp luật về cơ yếu.
+3. Cơ quan, tổ chức, cá nhân quyết định việc mã hóa, giải mã dữ liệu cá nhân phù hợp với hoạt động xử lý dữ liệu cá nhân.
+Điều 13. Chỉnh sửa dữ liệu cá nhân
+1. Chủ thể dữ liệu cá nhân được tự mình chỉnh sửa dữ liệu cá nhân của mình đối với một số loại dữ liệu cá nhân theo thỏa thuận với bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân; đề nghị bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân chỉnh sửa dữ liệu cá nhân của mình.
+2. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân chỉnh sửa dữ liệu cá nhân sau khi chủ thể dữ liệu cá nhân yêu cầu hoặc chỉnh sửa dữ liệu cá nhân theo quy định của pháp luật; yêu cầu bên xử lý dữ liệu cá nhân, bên thứ ba chỉnh sửa dữ liệu cá nhân của chủ thể dữ liệu cá nhân.
+3. Việc chỉnh sửa dữ liệu cá nhân phải bảo đảm tính chính xác. Trường hợp không thể chỉnh sửa dữ liệu cá nhân vì lý do chính đáng, bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân phải thông báo để cơ quan, tổ chức, cá nhân yêu cầu biết.
+Điều 14. Xóa, hủy, khử nhận dạng dữ liệu cá nhân
+1. Việc xóa, hủy dữ liệu cá nhân được thực hiện trong các trường hợp sau đây:
+a) Chủ thể dữ liệu cá nhân có yêu cầu và chấp nhận các rủi ro, thiệt hại có thể xảy ra đối với mình. Yêu cầu của chủ thể dữ liệu cá nhân trong trường hợp này phải tuân thủ đầy đủ các nguyên tắc quy định tại khoản 3 Điều 4 của Luật này;
+b) Đã hoàn thành mục đích xử lý dữ liệu cá nhân;
+c) Hết thời hạn lưu trữ theo quy định của pháp luật;
+d) Thực hiện theo quyết định của cơ quan nhà nước có thẩm quyền;
+đ) Thực hiện theo thỏa thuận;
+e) Trường hợp khác theo quy định của pháp luật.
+2. Không thực hiện yêu cầu của chủ thể dữ liệu cá nhân về việc xóa, hủy dữ liệu cá nhân trong các trường hợp quy định tại Điều 19 của Luật này hoặc việc xóa, hủy dữ liệu cá nhân vi phạm quy định tại khoản 3 Điều 4 của Luật này.
+3. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân xóa, hủy dữ liệu cá nhân trong các trường hợp quy định tại khoản 1 Điều này hoặc yêu cầu bên xử lý dữ liệu cá nhân, bên thứ ba xóa, hủy dữ liệu cá nhân của chủ thể dữ liệu cá nhân. Việc xóa, hủy dữ liệu cá nhân phải được thực hiện bằng các biện pháp an toàn; ngăn chặn hoạt động xâm nhập và khôi phục trái phép dữ liệu cá nhân đã bị xóa, hủy.
+4. Cơ quan, tổ chức, cá nhân không được cố ý khôi phục trái phép dữ liệu cá nhân đã bị xóa, hủy.
+5. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân có trách nhiệm tuân thủ quy định của Luật này. Trường hợp không thể xóa, hủy dữ liệu cá nhân vì lý do chính đáng sau khi nhận được yêu cầu của chủ thể dữ liệu cá nhân, bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân phải thông báo để chủ thể dữ liệu cá nhân biết.
+6. Việc khử nhận dạng dữ liệu cá nhân được quy định như sau:
+a) Cơ quan, tổ chức, cá nhân khử nhận dạng dữ liệu cá nhân có trách nhiệm kiểm soát và giám sát chặt chẽ quá trình khử nhận dạng dữ liệu cá nhân; ngăn chặn việc truy cập trái phép, sao chép, chiếm đoạt, làm lộ, làm mất dữ liệu cá nhân trong quá trình khử nhận dạng;
+b) Không được tái nhận dạng dữ liệu cá nhân sau khi đã được khử nhận dạng, trừ trường hợp pháp luật có quy định khác;
+c) Việc khử nhận dạng dữ liệu cá nhân tuân thủ quy định của Luật này và quy định khác của pháp luật có liên quan.
+Điều 15. Cung cấp dữ liệu cá nhân
+1. Chủ thể dữ liệu cá nhân cung cấp dữ liệu cá nhân cho cơ quan, tổ chức, cá nhân theo quy định của pháp luật hoặc theo thỏa thuận với cơ quan, tổ chức, cá nhân đó.
+2. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân cung cấp dữ liệu cá nhân trong các trường hợp sau đây:
+a) Cung cấp cho chủ thể dữ liệu cá nhân theo yêu cầu của chủ thể dữ liệu cá nhân phù hợp quy định của pháp luật, thỏa thuận với chủ thể dữ liệu, trừ trường hợp việc cung cấp đó có thể gây tổn hại đến quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội hoặc xâm phạm đến tính mạng, sức khỏe, tài sản của người khác;
+b) Cung cấp cho cơ quan, tổ chức, cá nhân khác khi được chủ thể dữ liệu cá nhân đồng ý, trừ trường hợp pháp luật có quy định khác.
+Điều 16. Công khai dữ liệu cá nhân
+1. Dữ liệu cá nhân chỉ được công khai với mục đích cụ thể. Phạm vi công khai, loại dữ liệu cá nhân được công khai phải phù hợp với mục đích công khai. Việc công khai dữ liệu cá nhân không được xâm phạm đến quyền, lợi ích hợp pháp của chủ thể dữ liệu cá nhân.
+2. Dữ liệu cá nhân chỉ được công khai trong các trường hợp sau đây:
+a) Khi có sự đồng ý của chủ thể dữ liệu cá nhân;
+b) Thực hiện theo quy định của pháp luật;
+c) Trường hợp quy định tại điểm b khoản 1 Điều 19 của Luật này;
+d) Thực hiện nghĩa vụ theo hợp đồng.
+3. Dữ liệu cá nhân công khai phải bảo đảm phản ánh đúng dữ liệu cá nhân từ nguồn dữ liệu gốc và tạo thuận lợi cho cơ quan, tổ chức, cá nhân trong việc tiếp cận, khai thác, sử dụng.
+4. Hình thức công khai dữ liệu cá nhân, bao gồm: đăng tải dữ liệu trên trang thông tin điện tử, cổng thông tin điện tử, phương tiện thông tin đại chúng và các hình thức khác theo quy định của pháp luật.
+5. Cơ quan, tổ chức, cá nhân công khai dữ liệu cá nhân phải kiểm soát và giám sát chặt chẽ việc công khai dữ liệu cá nhân để bảo đảm tuân thủ đúng mục đích, phạm vi và quy định của pháp luật; ngăn chặn việc truy cập, sử dụng, tiết lộ, sao chép, sửa đổi, xóa, hủy hoặc các hành vi xử lý trái phép khác đối với dữ liệu cá nhân đã công khai trong khả năng, điều kiện của mình.
+Điều 17. Chuyển giao dữ liệu cá nhân
+1. Việc chuyển giao dữ liệu cá nhân được thực hiện trong các trường hợp sau đây:
+a) Chuyển giao dữ liệu cá nhân khi có sự đồng ý của chủ thể dữ liệu cá nhân;
+b) Chia sẻ dữ liệu cá nhân giữa các bộ phận trong cùng một cơ quan, tổ chức để xử lý dữ liệu cá nhân phù hợp với mục đích xử lý đã xác lập;
+c) Chuyển giao dữ liệu cá nhân để tiếp tục xử lý dữ liệu cá nhân trong trường hợp chia, tách, sáp nhập cơ quan, tổ chức, đơn vị hành chính và tổ chức lại, chuyển đổi hình thức sở hữu doanh nghiệp nhà nước; chia, tách, sáp nhập, hợp nhất, kết thúc hoạt động đơn vị, tổ chức; đơn vị, tổ chức được thành lập trên cơ sở kết thúc hoạt động của đơn vị, tổ chức khác;
+d) Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân chuyển giao dữ liệu cá nhân cho bên xử lý dữ liệu cá nhân, bên thứ ba để xử lý dữ liệu cá nhân theo quy định;
+đ) Chuyển giao dữ liệu cá nhân theo yêu cầu của cơ quan nhà nước có thẩm quyền;
+e) Chuyển giao dữ liệu cá nhân trong các trường hợp quy định tại khoản 1 Điều 19 của Luật này.
+2. Việc chuyển giao dữ liệu cá nhân trong các trường hợp quy định tại khoản 1 Điều này có thu phí hoặc không thu phí thì không được xác định là mua, bán dữ liệu cá nhân.
+3. Chính phủ quy định chi tiết Điều này.
+Điều 18. Các hoạt động khác trong xử lý dữ liệu cá nhân
+1. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân, bên thứ ba lưu trữ dữ liệu cá nhân theo hình thức phù hợp với hoạt động của mình và có biện pháp bảo vệ dữ liệu cá nhân trong quá trình lưu trữ theo quy định của pháp luật.
+2. Việc lưu trữ, truy cập, truy xuất, kết nối, điều phối, xác nhận, xác thực dữ liệu cá nhân, hoạt động khác tác động đến dữ liệu cá nhân thực hiện theo quy định của Luật này, pháp luật về dữ liệu, các quy định khác của pháp luật có liên quan và theo thỏa thuận giữa các bên.
+3. Ưu tiên khai thác, sử dụng dữ liệu cá nhân vào hoạt động phục vụ quản lý nhà nước, hoạt động của các đơn vị sự nghiệp công lập để phục vụ thí điểm một số cơ chế, chính sách đặc biệt tạo đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia.
+Điều 19. Xử lý dữ liệu cá nhân trong trường hợp không cần sự đồng ý của chủ thể dữ liệu cá nhân
+1. Các trường hợp xử lý dữ liệu cá nhân không cần sự đồng ý của chủ thể dữ liệu cá nhân bao gồm:
+a) Để bảo vệ tính mạng, sức khỏe, danh dự, nhân phẩm, quyền, lợi ích hợp pháp của chủ thể dữ liệu cá nhân hoặc người khác trong trường hợp cấp bách; bảo vệ quyền hoặc lợi ích chính đáng của mình, của người khác hoặc lợi ích của Nhà nước, của cơ quan tổ chức một cách cần thiết trước hành vi xâm phạm lợi ích nói trên. Bên kiểm soát dữ liệu cá nhân, bên xử lý dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên thứ ba có trách nhiệm chứng minh trường hợp này;
+b) Để giải quyết tình trạng khẩn cấp; nguy cơ đe dọa an ninh quốc gia nhưng chưa đến mức ban bố tình trạng khẩn cấp; phòng, chống bạo loạn, khủng bố, phòng, chống tội phạm và vi phạm pháp luật;
+c) Phục vụ hoạt động của cơ quan nhà nước, hoạt động quản lý nhà nước theo quy định của pháp luật;
+d) Thực hiện thỏa thuận của chủ thể dữ liệu cá nhân với cơ quan, tổ chức, cá nhân có liên quan theo quy định của pháp luật;
+đ) Trường hợp khác theo quy định của pháp luật.
+2. Cơ quan, tổ chức, cá nhân có liên quan phải thiết lập cơ chế giám sát khi xử lý dữ liệu cá nhân trong trường hợp không cần sự đồng ý của chủ thể dữ liệu cá nhân bao gồm:
+a) Thiết lập quy trình, quy định xử lý dữ liệu cá nhân và xác định trách nhiệm của cơ quan, tổ chức, cá nhân trong quá trình xử lý dữ liệu cá nhân;
+b) Triển khai các biện pháp bảo vệ dữ liệu cá nhân phù hợp; thường xuyên đánh giá rủi ro có thể xảy ra trong quá trình xử lý dữ liệu cá nhân;
+c) Thực hiện kiểm tra, đánh giá định kỳ việc tuân thủ quy định của pháp luật, quy trình, quy định xử lý dữ liệu cá nhân;
+d) Có cơ chế tiếp nhận và xử lý phản ánh, kiến nghị từ cơ quan, tổ chức, cá nhân có liên quan.
+Điều 20. Chuyển dữ liệu cá nhân xuyên biên giới
+1. Các trường hợp chuyển dữ liệu cá nhân xuyên biên giới bao gồm:
+a) Chuyển dữ liệu cá nhân đang lưu trữ tại Việt Nam đến hệ thống lưu trữ dữ liệu đặt ngoài lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam;
+b) Cơ quan, tổ chức, cá nhân tại Việt Nam chuyển dữ liệu cá nhân cho tổ chức, cá nhân ở nước ngoài;
+c) Cơ quan, tổ chức, cá nhân tại Việt Nam hoặc ở nước ngoài sử dụng nền tảng ở ngoài lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam để xử lý dữ liệu cá nhân được thu thập tại Việt Nam.
+2. Cơ quan, tổ chức, cá nhân chuyển dữ liệu cá nhân xuyên biên giới thực hiện các hoạt động quy định tại khoản 1 Điều này phải lập hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới và gửi 01 bản chính cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong thời gian 60 ngày kể từ ngày đầu tiên chuyển dữ liệu cá nhân xuyên biên giới, trừ trường hợp quy định tại khoản 6 Điều này.
+3. Đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới được thực hiện 01 lần cho suốt thời gian hoạt động của cơ quan, tổ chức, cá nhân đó và được cập nhật theo quy định tại Điều 22 của Luật này.
+4. Cơ quan chuyên trách bảo vệ dữ liệu cá nhân quyết định việc kiểm tra chuyển dữ liệu cá nhân xuyên biên giới định kỳ không quá 01 lần trong năm hoặc kiểm tra đột xuất khi phát hiện hành vi vi phạm quy định của pháp luật về bảo vệ dữ liệu cá nhân hoặc khi xảy ra sự cố lộ, mất dữ liệu cá nhân.
+5. Cơ quan chuyên trách bảo vệ dữ liệu cá nhân quyết định yêu cầu ngừng chuyển dữ liệu cá nhân xuyên biên giới của cơ quan, tổ chức, cá nhân khi phát hiện dữ liệu cá nhân được chuyển để sử dụng vào hoạt động có thể gây tổn hại đến quốc phòng, an ninh quốc gia.
+6. Các trường hợp không phải thực hiện quy định về đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới bao gồm:
+a) Việc chuyển dữ liệu cá nhân xuyên biên giới của cơ quan nhà nước có thẩm quyền;
+b) Cơ quan, tổ chức lưu trữ dữ liệu cá nhân của người lao động thuộc cơ quan, tổ chức đó trên dịch vụ điện toán đám mây;
+c) Chủ thể dữ liệu cá nhân tự chuyển dữ liệu cá nhân của mình xuyên biên giới;
+d) Các trường hợp khác theo quy định của Chính phủ.
+7. Chính phủ quy định chi tiết các khoản 1, 5 và 6 Điều này; quy định thành phần hồ sơ, điều kiện, trình tự, thủ tục đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới.
+Điều 21. Đánh giá tác động xử lý dữ liệu cá nhân
+1. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân lập, lưu trữ hồ sơ đánh giá tác động xử lý dữ liệu cá nhân và gửi 01 bản chính cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong thời gian 60 ngày kể từ ngày đầu tiên xử lý dữ liệu cá nhân, trừ trường hợp quy định tại khoản 6 Điều này.
+2. Đánh giá tác động xử lý dữ liệu cá nhân được thực hiện 01 lần cho suốt thời gian hoạt động của bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân và được cập nhật theo quy định tại Điều 22 của Luật này.
+3. Bên xử lý dữ liệu cá nhân lập và lưu trữ hồ sơ đánh giá tác động xử lý dữ liệu cá nhân theo thỏa thuận với bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, trừ trường hợp quy định tại khoản 6 Điều này.
+4. Cơ quan chuyên trách bảo vệ dữ liệu cá nhân đánh giá, yêu cầu bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân hoàn thiện hồ sơ đánh giá tác động xử lý dữ liệu cá nhân trong trường hợp hồ sơ chưa đầy đủ và đúng quy định.
+5. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên xử lý dữ liệu cá nhân cập nhật, bổ sung hồ sơ đánh giá tác động xử lý dữ liệu cá nhân khi có sự thay đổi về nội dung hồ sơ đã gửi cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân.
+6. Cơ quan nhà nước có thẩm quyền không phải thực hiện quy định về đánh giá tác động xử lý dữ liệu cá nhân quy định tại Điều này.
+7. Chính phủ quy định thành phần hồ sơ, điều kiện, trình tự, thủ tục đánh giá tác động xử lý dữ liệu cá nhân.
+Điều 22. Cập nhật hồ sơ đánh giá tác động xử lý dữ liệu cá nhân và hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới
+1. Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân và hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới được cập nhật định kỳ 06 tháng khi có sự thay đổi hoặc cập nhật ngay trong các trường hợp quy định tại khoản 2 Điều này.
+2. Các trường hợp thay đổi cần cập nhật ngay bao gồm:
+a) Khi cơ quan, tổ chức, đơn vị được tổ chức lại, chấm dứt hoạt động, giải thể, phá sản theo quy định của pháp luật;
+b) Khi có sự thay đổi thông tin về tổ chức, cá nhân cung cấp dịch vụ bảo vệ dữ liệu cá nhân;
+c) Khi phát sinh hoặc thay đổi ngành, nghề, dịch vụ kinh doanh liên quan đến xử lý dữ liệu cá nhân đã đăng ký trong hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới.
+3. Việc cập nhật hồ sơ đánh giá tác động xử lý dữ liệu cá nhân và hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới được thực hiện trên Cổng thông tin quốc gia về bảo vệ dữ liệu cá nhân hoặc tại cơ quan chuyên trách bảo vệ dữ liệu cá nhân.
+4. Chính phủ quy định chi tiết Điều này.
+Điều 23. Thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân
+1. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên thứ ba phát hiện vi phạm quy định về bảo vệ dữ liệu cá nhân có thể gây tổn hại đến quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội hoặc xâm phạm đến tính mạng, sức khỏe, danh dự, nhân phẩm, tài sản của chủ thể dữ liệu cá nhân thì phải thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân chậm nhất là 72 giờ kể từ khi phát hiện hành vi vi phạm. Trường hợp bên xử lý dữ liệu cá nhân phát hiện hành vi vi phạm phải thông báo kịp thời cho bên kiểm soát dữ liệu cá nhân hoặc bên kiểm soát và xử lý dữ liệu cá nhân.
+2. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân phải lập biên bản xác nhận về việc xảy ra hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân, phối hợp với cơ quan chuyên trách bảo vệ dữ liệu cá nhân xử lý hành vi vi phạm.
+3. Cơ quan, tổ chức, cá nhân thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong các trường hợp sau đây:
+a) Phát hiện hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân;
+b) Dữ liệu cá nhân bị xử lý sai mục đích, không đúng thỏa thuận giữa chủ thể dữ liệu cá nhân với bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân;
+c) Không bảo đảm quyền hoặc thực hiện không đúng quyền của chủ thể dữ liệu cá nhân;
+d) Trường hợp khác theo quy định của pháp luật.
+4. Cơ quan chuyên trách bảo vệ dữ liệu cá nhân có trách nhiệm tiếp nhận thông báo, xử lý hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân, bên thứ ba và cơ quan, tổ chức, cá nhân có liên quan có trách nhiệm ngăn chặn hành vi vi phạm, khắc phục hậu quả xảy ra và phối hợp cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong xử lý hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân.
+5. Chính phủ quy định nội dung thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân.
+Mục 2. BẢO VỆ DỮ LIỆU CÁ NHÂN TRONG MỘT SỐ HOẠT ĐỘNG
+Điều 24. Bảo vệ dữ liệu cá nhân của trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự, người có khó khăn trong nhận thức, làm chủ hành vi
+1. Bảo vệ dữ liệu cá nhân của trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự, người có khó khăn trong nhận thức, làm chủ hành vi thực hiện theo quy định của Luật này.
+2. Đối với trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự hoặc người có khó khăn trong nhận thức, làm chủ hành vi thì người đại diện theo pháp luật thay mặt thực hiện các quyền của chủ thể dữ liệu cá nhân, trừ các trường hợp quy định tại khoản 1 Điều 19 của Luật này. Việc xử lý dữ liệu cá nhân của trẻ em nhằm công bố, tiết lộ thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em từ đủ 07 tuổi trở lên thì phải có sự đồng ý của trẻ em và người đại diện theo pháp luật.
+3. Ngừng xử lý dữ liệu cá nhân của trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự, người có khó khăn trong nhận thức, làm chủ hành vi trong trường hợp sau đây:
+a) Người đã đồng ý quy định tại khoản 2 Điều này rút lại sự đồng ý cho phép xử lý dữ liệu cá nhân của trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự, người có khó khăn trong nhận thức, làm chủ hành vi, trừ trường hợp pháp luật có quy định khác;
+b) Theo yêu cầu của cơ quan có thẩm quyền khi có đủ căn cứ chứng minh việc xử lý dữ liệu cá nhân có thể xâm phạm đến quyền, lợi ích hợp pháp của trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự, người có khó khăn trong nhận thức, làm chủ hành vi, trừ trường hợp pháp luật có quy định khác.
+Điều 25. Bảo vệ dữ liệu cá nhân trong tuyển dụng, quản lý, sử dụng người lao động
+1. Trách nhiệm bảo vệ dữ liệu cá nhân của cơ quan, tổ chức, cá nhân trong tuyển dụng lao động được quy định như sau:
+a) Chỉ được yêu cầu cung cấp các thông tin phục vụ cho mục đích tuyển dụng của cơ quan, tổ chức, cá nhân tuyển dụng phù hợp với quy định của pháp luật; thông tin được cung cấp chỉ được sử dụng vào mục đích tuyển dụng và mục đích khác theo thỏa thuận phù hợp với quy định của pháp luật;
+b) Thông tin cung cấp phải được xử lý theo quy định của pháp luật và phải được sự đồng ý của người dự tuyển;
+c) Phải xóa, hủy thông tin đã cung cấp của người dự tuyển trong trường hợp không tuyển dụng, trừ trường hợp có thỏa thuận khác với người đã dự tuyển;
+2. Trách nhiệm bảo vệ dữ liệu cá nhân của cơ quan, tổ chức, cá nhân trong quản lý, sử dụng người lao động được quy định như sau:
+a) Tuân thủ quy định của Luật này, pháp luật về lao động, việc làm, pháp luật về dữ liệu và quy định khác của pháp luật có liên quan;
+b) Dữ liệu cá nhân của người lao động phải lưu trữ trong thời hạn theo quy định của pháp luật hoặc theo thỏa thuận;
+c) Phải xóa, hủy dữ liệu cá nhân của người lao động khi chấm dứt hợp đồng, trừ trường hợp theo thỏa thuận hoặc pháp luật có quy định khác.
+3. Việc xử lý dữ liệu cá nhân của người lao động được thu thập bằng biện pháp công nghệ, kỹ thuật trong quản lý người lao động được quy định như sau:
+a) Chỉ được áp dụng các biện pháp công nghệ, kỹ thuật phù hợp với quy định của pháp luật và bảo đảm quyền, lợi ích của chủ thể dữ liệu cá nhân, trên cơ sở người lao động biết rõ biện pháp đó;
+b) Không được xử lý, sử dụng dữ liệu cá nhân thu thập từ các biện pháp công nghệ, kỹ thuật trái quy định của pháp luật.
+Điều 26. Bảo vệ dữ liệu cá nhân đối với thông tin sức khỏe và trong hoạt động kinh doanh bảo hiểm
+1. Việc bảo vệ dữ liệu cá nhân đối với các thông tin sức khỏe và trong hoạt động kinh doanh bảo hiểm được quy định như sau:
+a) Phải có sự đồng ý của chủ thể dữ liệu cá nhân trong quá trình thu thập, xử lý dữ liệu cá nhân, trừ trường hợp quy định tại khoản 1 Điều 19 của Luật này;
+b) Áp dụng đầy đủ quy định về bảo vệ dữ liệu cá nhân, quy định khác của pháp luật có liên quan.
+2. Cơ quan, tổ chức, cá nhân hoạt động trong lĩnh vực sức khỏe không cung cấp dữ liệu cá nhân cho bên thứ ba là tổ chức cung cấp dịch vụ chăm sóc sức khỏe hoặc dịch vụ bảo hiểm sức khỏe, bảo hiểm nhân thọ, trừ trường hợp có yêu cầu bằng văn bản của chủ thể dữ liệu cá nhân hoặc trường hợp quy định tại khoản 1 Điều 19 của Luật này.
+3. Tổ chức, cá nhân phát triển ứng dụng về y tế, ứng dụng về kinh doanh bảo hiểm phải tuân thủ đầy đủ quy định về bảo vệ dữ liệu cá nhân.
+4. Trường hợp doanh nghiệp kinh doanh tái bảo hiểm, nhượng tái bảo hiểm và có chuyển dữ liệu cá nhân cho đối tác cần được nêu rõ trong hợp đồng với khách hàng.
+Điều 27. Bảo vệ dữ liệu cá nhân trong hoạt động tài chính, ngân hàng, hoạt động thông tin tín dụng
+1. Tổ chức, cá nhân hoạt động trong lĩnh vực tài chính, ngân hàng, hoạt động thông tin tín dụng có trách nhiệm sau đây:
+a) Thực hiện đầy đủ quy định về bảo vệ dữ liệu cá nhân nhạy cảm, các tiêu chuẩn an toàn, bảo mật trong hoạt động tài chính, ngân hàng theo quy định của pháp luật;
+b) Không sử dụng thông tin tín dụng của chủ thể dữ liệu cá nhân để chấm điểm, xếp hạng tín dụng, đánh giá thông tin tín dụng, đánh giá mức độ tín nhiệm về tín dụng của chủ thể dữ liệu cá nhân khi chưa có sự đồng ý của chủ thể dữ liệu cá nhân;
+c) Chỉ thu thập những dữ liệu cá nhân cần thiết phục vụ cho hoạt động thông tin tín dụng từ các nguồn phù hợp với quy định của Luật này và các quy định khác của pháp luật có liên quan;
+d) Thông báo cho chủ thể dữ liệu cá nhân trong trường hợp lộ, mất thông tin về tài khoản ngân hàng, tài chính, tín dụng, thông tin tín dụng.
+2. Tổ chức, cá nhân thực hiện hoạt động thông tin tín dụng có trách nhiệm tuân thủ quy định của Luật này; áp dụng các biện pháp phòng, chống truy cập, sử dụng, tiết lộ, chỉnh sửa trái phép dữ liệu cá nhân của khách hàng; có giải pháp khôi phục dữ liệu cá nhân của khách hàng trong trường hợp bị mất; bảo mật trong quá trình thu thập, cung cấp, xử lý dữ liệu cá nhân của khách hàng phục vụ đánh giá thông tin tín dụng.
+3. Chính phủ quy định chi tiết Điều này.
+Điều 28. Bảo vệ dữ liệu cá nhân trong kinh doanh dịch vụ quảng cáo
+1. Tổ chức, cá nhân kinh doanh dịch vụ quảng cáo chỉ được sử dụng dữ liệu cá nhân của khách hàng được bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân chuyển giao theo thỏa thuận hoặc thu thập qua hoạt động kinh doanh của mình để kinh doanh dịch vụ quảng cáo. Việc thu thập, sử dụng, chuyển giao dữ liệu cá nhân phải bảo đảm quyền của chủ thể dữ liệu cá nhân quy định tại Điều 4 của Luật này.
+2. Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân chỉ được chuyển dữ liệu cá nhân cho tổ chức, cá nhân kinh doanh dịch vụ quảng cáo theo quy định của pháp luật.
+3. Việc xử lý dữ liệu cá nhân của khách hàng để kinh doanh dịch vụ quảng cáo phải được sự đồng ý của khách hàng, trên cơ sở khách hàng biết rõ nội dung, phương thức, hình thức, tần suất giới thiệu sản phẩm; cung cấp phương thức cho khách hàng để có thể từ chối nhận các thông tin quảng cáo.
+4. Việc sử dụng dữ liệu cá nhân để quảng cáo phải phù hợp với quy định của pháp luật về phòng, chống tin nhắn rác, thư điện tử rác, cuộc gọi rác và quy định của pháp luật về quảng cáo.
+5. Chủ thể dữ liệu cá nhân có quyền yêu cầu ngừng nhận thông tin từ dịch vụ quảng cáo. Tổ chức, cá nhân kinh doanh dịch vụ quảng cáo phải cung cấp cơ chế và ngừng quảng cáo theo yêu cầu của chủ thể dữ liệu cá nhân.
+6. Tổ chức, cá nhân kinh doanh dịch vụ quảng cáo không được thuê lại hoặc thỏa thuận để tổ chức, cá nhân khác thay mặt mình thực hiện toàn bộ dịch vụ quảng cáo có sử dụng dữ liệu cá nhân.
+7. Tổ chức, cá nhân kinh doanh dịch vụ quảng cáo có trách nhiệm chứng minh việc sử dụng dữ liệu cá nhân của khách hàng để quảng cáo; tuân thủ quy định tại các khoản 1, 2, 3, 4 Điều này và quy định của pháp luật về quảng cáo.
+8. Tổ chức, cá nhân khi sử dụng dữ liệu cá nhân để quảng cáo theo hành vi hoặc có mục tiêu cụ thể hoặc cá nhân hóa quảng cáo phải tuân thủ quy định tại Điều này và các quy định sau đây:
+a) Chỉ được thu thập dữ liệu cá nhân thông qua việc theo dõi trang thông tin điện tử, cổng thông tin điện tử, ứng dụng khi có sự đồng ý của chủ thể dữ liệu cá nhân;
+b) Phải thiết lập phương thức cho phép chủ thể dữ liệu cá nhân từ chối chia sẻ dữ liệu; xác định thời gian lưu trữ; xóa, hủy dữ liệu khi không còn cần thiết.
+Điều 29. Bảo vệ dữ liệu cá nhân đối với các nền tảng mạng xã hội, dịch vụ truyền thông trực tuyến
+Tổ chức, cá nhân cung cấp dịch vụ mạng xã hội, dịch vụ truyền thông trực tuyến có trách nhiệm sau đây:
+1. Thông báo rõ ràng nội dung dữ liệu cá nhân thu thập khi chủ thể dữ liệu cá nhân cài đặt và sử dụng mạng xã hội, dịch vụ truyền thông trực tuyến; không thu thập trái phép dữ liệu cá nhân và ngoài phạm vi theo thỏa thuận với khách hàng;
+2. Không được yêu cầu cung cấp hình ảnh, video chứa nội dung đầy đủ hoặc một phần giấy tờ tùy thân làm yếu tố xác thực tài khoản;
+3. Cung cấp lựa chọn cho phép người dùng từ chối thu thập và chia sẻ tệp dữ liệu (gọi là cookies);
+4. Cung cấp lựa chọn “không theo dõi” hoặc chỉ được theo dõi hoạt động sử dụng mạng xã hội, dịch vụ truyền thông trực tuyến khi có sự đồng ý của người sử dụng;
+5. Không nghe lén, nghe trộm hoặc ghi âm cuộc gọi và đọc tin nhắn văn bản khi không có sự đồng ý của chủ thể dữ liệu cá nhân, trừ trường hợp pháp luật có quy định khác;
+6. Công khai chính sách bảo mật, giải thích rõ cách thức thu thập, sử dụng và chia sẻ dữ liệu cá nhân; cung cấp cho người dùng cơ chế truy cập, chỉnh sửa, xóa dữ liệu và thiết lập quyền riêng tư cho dữ liệu cá nhân, báo cáo các vi phạm về bảo mật và quyền riêng tư; bảo vệ dữ liệu cá nhân của công dân Việt Nam khi chuyển dữ liệu xuyên biên giới; xây dựng quy trình xử lý vi phạm về bảo vệ dữ liệu cá nhân nhanh chóng và hiệu quả.
+Điều 30. Bảo vệ dữ liệu cá nhân trong xử lý dữ liệu lớn, trí tuệ nhân tạo, chuỗi khối, vũ trụ ảo, điện toán đám mây
+1. Dữ liệu cá nhân trong môi trường dữ liệu lớn, trí tuệ nhân tạo, chuỗi khối, vũ trụ ảo và điện toán đám mây phải được xử lý đúng mục đích và giới hạn trong phạm vi cần thiết, bảo đảm quyền, lợi ích hợp pháp của chủ thể dữ liệu cá nhân.
+2. Việc xử lý dữ liệu cá nhân trong môi trường dữ liệu lớn, trí tuệ nhân tạo, chuỗi khối, vũ trụ ảo và điện toán đám mây phải tuân thủ quy định của Luật này và quy định khác của pháp luật có liên quan; phù hợp với chuẩn mực đạo đức, thuần phong mỹ tục của Việt Nam.
+3. Hệ thống và dịch vụ sử dụng dữ liệu lớn, trí tuệ nhân tạo, chuỗi khối, vũ trụ ảo và điện toán đám mây phải được tích hợp các biện pháp bảo mật dữ liệu cá nhân phù hợp; phải sử dụng phương thức xác thực, định danh phù hợp và phân quyền truy cập để xử lý dữ liệu cá nhân.
+4. Việc xử lý dữ liệu cá nhân bằng trí tuệ nhân tạo phải thực hiện phân loại theo mức độ rủi ro để có biện pháp bảo vệ dữ liệu cá nhân phù hợp.
+5. Không sử dụng, phát triển hệ thống xử lý dữ liệu lớn, trí tuệ nhân tạo, chuỗi khối, vũ trụ ảo, điện toán đám mây có sử dụng dữ liệu cá nhân để gây tổn hại đến quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội hoặc xâm phạm đến tính mạng, sức khỏe, danh dự, nhân phẩm, tài sản của người khác.
+6. Chính phủ quy định chi tiết Điều này.
+Điều 31. Bảo vệ dữ liệu cá nhân đối với dữ liệu vị trí cá nhân, dữ liệu sinh trắc học
+1. Dữ liệu vị trí cá nhân là dữ liệu được xác định thông qua công nghệ định vị để biết vị trí và giúp xác định con người cụ thể.
+2. Dữ liệu sinh trắc học là dữ liệu về thuộc tính vật lý, đặc điểm sinh học cá biệt và ổn định của một người để xác định người đó.
+3. Việc bảo vệ dữ liệu cá nhân đối với dữ liệu vị trí cá nhân được quy định như sau:
+a) Không áp dụng việc theo dõi định vị qua thẻ nhận dạng tần số vô tuyến và các công nghệ khác, trừ trường hợp có sự đồng ý của chủ thể dữ liệu cá nhân hoặc trường hợp có yêu cầu của cơ quan có thẩm quyền theo quy định của pháp luật hoặc trường hợp pháp luật có quy định khác;
+b) Tổ chức, cá nhân cung cấp nền tảng ứng dụng di động phải thông báo cho người sử dụng về việc sử dụng dữ liệu vị trí cá nhân; có biện pháp ngăn chặn việc thu thập dữ liệu vị trí cá nhân của tổ chức, cá nhân không liên quan; cung cấp cho người sử dụng các tùy chọn theo dõi vị trí cá nhân.
+4. Việc bảo vệ dữ liệu sinh trắc học quy định như sau:
+a) Cơ quan, tổ chức, cá nhân thu thập và xử lý dữ liệu sinh trắc học phải có biện pháp bảo mật vật lý đối với thiết bị lưu trữ và truyền tải dữ liệu sinh trắc học của mình; hạn chế quyền truy cập vào dữ liệu sinh trắc học; có hệ thống theo dõi để phòng ngừa, phát hiện hành vi xâm phạm dữ liệu sinh trắc học; tuân thủ quy định của pháp luật và tiêu chuẩn quốc tế có liên quan;
+b) Trường hợp xử lý dữ liệu sinh trắc học gây thiệt hại cho chủ thể dữ liệu cá nhân thì tổ chức, cá nhân thu thập và xử lý dữ liệu sinh trắc học phải thông báo cho chủ thể dữ liệu cá nhân đó theo quy định của Chính phủ.
+Điều 32. Bảo vệ dữ liệu cá nhân thu được từ hoạt động ghi âm, ghi hình tại nơi công cộng, hoạt động công cộng
+1. Cơ quan, tổ chức, cá nhân được ghi âm, ghi hình và xử lý dữ liệu cá nhân thu được từ hoạt động ghi âm, ghi hình tại nơi công cộng, hoạt động công cộng mà không cần có sự đồng ý của chủ thể dữ liệu cá nhân trong các trường hợp sau đây:
+a) Để thực hiện nhiệm vụ quốc phòng, bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ quyền, lợi ích hợp pháp của cơ quan, tổ chức, cá nhân;
+b) Âm thanh, hình ảnh, các thông tin nhận dạng khác thu được từ các hoạt động công cộng bao gồm hội nghị, hội thảo, hoạt động thi đấu thể thao, biểu diễn nghệ thuật và hoạt động công cộng khác mà không làm tổn hại đến danh dự, nhân phẩm, uy tín của chủ thể dữ liệu cá nhân;
+c) Trường hợp khác theo quy định của pháp luật.
+2. Trường hợp ghi âm, ghi hình theo quy định tại khoản 1 Điều này, cơ quan, tổ chức, cá nhân có trách nhiệm thông báo hoặc bằng hình thức thông tin khác để chủ thể dữ liệu cá nhân biết được mình đang bị ghi âm, ghi hình, trừ trường hợp pháp luật có quy định khác.
+3. Dữ liệu cá nhân thu được chỉ được xử lý, sử dụng phù hợp với mục đích xử lý, không được sử dụng vào các mục đích trái pháp luật hoặc xâm phạm đến quyền, lợi ích hợp pháp của chủ thể dữ liệu cá nhân.
+4. Dữ liệu cá nhân thu được từ hoạt động ghi âm, ghi hình tại nơi công cộng, hoạt động công cộng chỉ được lưu trữ trong khoảng thời gian cần thiết để phục vụ mục đích thu thập, trừ trường hợp pháp luật có quy định khác. Khi hết thời hạn lưu trữ, dữ liệu cá nhân phải được xóa, hủy theo quy định của Luật này.
+5. Cơ quan, tổ chức, cá nhân thực hiện ghi âm, ghi hình, xử lý dữ liệu cá nhân thu được từ ghi âm, ghi hình trong các trường hợp quy định tại khoản 1 Điều này có trách nhiệm bảo vệ dữ liệu cá nhân theo quy định của Luật này và quy định khác của pháp luật có liên quan.
+Chương III
+LỰC LƯỢNG, ĐIỀU KIỆN BẢO ĐẢM BẢO VỆ DỮ LIỆU CÁ NHÂN
+Điều 33. Lực lượng bảo vệ dữ liệu cá nhân
+1. Lực lượng bảo vệ dữ liệu cá nhân bao gồm:
+a) Cơ quan chuyên trách bảo vệ dữ liệu cá nhân thuộc Bộ Công an;
+b) Bộ phận, nhân sự bảo vệ dữ liệu cá nhân trong cơ quan, tổ chức;
+c) Tổ chức, cá nhân cung cấp dịch vụ bảo vệ dữ liệu cá nhân;
+d) Tổ chức, cá nhân được huy động tham gia bảo vệ dữ liệu cá nhân.
+2. Cơ quan, tổ chức có trách nhiệm chỉ định bộ phận, nhân sự đủ điều kiện năng lực bảo vệ dữ liệu cá nhân hoặc thuê tổ chức, cá nhân cung cấp dịch vụ bảo vệ dữ liệu cá nhân.
+3. Chính phủ quy định về điều kiện, nhiệm vụ của bộ phận, nhân sự bảo vệ dữ liệu cá nhân trong cơ quan, tổ chức; tổ chức, cá nhân cung cấp dịch vụ bảo vệ dữ liệu cá nhân; dịch vụ xử lý dữ liệu cá nhân.
+Điều 34. Tiêu chuẩn, quy chuẩn kỹ thuật về bảo vệ dữ liệu cá nhân
+1. Tiêu chuẩn về bảo vệ dữ liệu cá nhân gồm tiêu chuẩn đối với hệ thống thông tin, phần cứng, phần mềm, quản lý, vận hành, xử lý, bảo vệ dữ liệu cá nhân được công bố, thừa nhận áp dụng tại Việt Nam.
+2. Quy chuẩn kỹ thuật về bảo vệ dữ liệu cá nhân gồm quy chuẩn kỹ thuật đối với hệ thống thông tin, phần cứng, phần mềm, quản lý, vận hành, xử lý, bảo vệ dữ liệu cá nhân được xây dựng, ban hành và áp dụng tại Việt Nam.
+3. Việc ban hành tiêu chuẩn, quy chuẩn kỹ thuật về bảo vệ dữ liệu cá nhân thực hiện theo quy định của pháp luật về tiêu chuẩn và quy chuẩn kỹ thuật.
+Điều 35. Kiểm tra hoạt động bảo vệ dữ liệu cá nhân
+Việc kiểm tra hoạt động bảo vệ dữ liệu cá nhân được thực hiện theo quy định của Luật này và theo quy định của Chính phủ.
+Chương IV
+TRÁCH NHIỆM CỦA CƠ QUAN, TỔ CHỨC, CÁ NHÂN VỀ BẢO VỆ DỮ LIỆU CÁ NHÂN
+Điều 36. Trách nhiệm quản lý nhà nước về bảo vệ dữ liệu cá nhân
+1. Chính phủ thống nhất thực hiện quản lý nhà nước về bảo vệ dữ liệu cá nhân.
+2. Bộ Công an là cơ quan đầu mối chịu trách nhiệm trước Chính phủ thực hiện quản lý nhà nước về bảo vệ dữ liệu cá nhân, trừ nội dung thuộc phạm vi quản lý của Bộ Quốc phòng.
+3. Bộ Quốc phòng chịu trách nhiệm trước Chính phủ thực hiện quản lý nhà nước về bảo vệ dữ liệu cá nhân thuộc phạm vi quản lý.
+4. Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ thực hiện quản lý nhà nước về bảo vệ dữ liệu cá nhân đối với các ngành, lĩnh vực thuộc phạm vi quản lý theo quy định của pháp luật và chức năng, nhiệm vụ được giao.
+5. Ủy ban nhân dân cấp tỉnh thực hiện quản lý nhà nước về bảo vệ dữ liệu cá nhân theo quy định của pháp luật và chức năng, nhiệm vụ được giao.
+Điều 37. Trách nhiệm của bên kiểm soát dữ liệu cá nhân, bên xử lý dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân
+1. Trách nhiệm của bên kiểm soát dữ liệu cá nhân như sau:
+a) Nêu rõ trách nhiệm, quyền và nghĩa vụ phải tuân thủ của các bên trong thỏa thuận, hợp đồng có liên quan đến xử lý dữ liệu cá nhân theo quy định của Luật này và quy định khác của pháp luật có liên quan;
+b) Quyết định mục đích và phương tiện xử lý dữ liệu cá nhân tại các văn bản, thỏa thuận với chủ thể dữ liệu cá nhân, bảo đảm đúng nguyên tắc và nội dung theo quy định của Luật này;
+c) Thực hiện biện pháp quản lý, kỹ thuật phù hợp để bảo vệ dữ liệu cá nhân theo quy định của pháp luật, rà soát và cập nhật các biện pháp này khi cần thiết;
+d) Thông báo hành vi vi phạm quy định về bảo vệ dữ liệu cá nhân theo quy định tại Điều 23 của Luật này;
+đ) Lựa chọn bên xử lý dữ liệu cá nhân phù hợp để xử lý dữ liệu cá nhân;
+e) Bảo đảm các quyền của chủ thể dữ liệu cá nhân theo quy định tại Điều 4 của Luật này;
+g) Chịu trách nhiệm trước chủ thể dữ liệu cá nhân về các thiệt hại do quá trình xử lý dữ liệu cá nhân gây ra;
+h) Ngăn chặn hoạt động thu thập dữ liệu cá nhân trái phép từ hệ thống, trang thiết bị, dịch vụ của mình;
+i) Phối hợp với Bộ Công an, cơ quan nhà nước có thẩm quyền trong bảo vệ dữ liệu cá nhân, cung cấp thông tin phục vụ điều tra, xử lý hành vi vi phạm pháp luật về bảo vệ dữ liệu cá nhân;
+k) Thực hiện các trách nhiệm khác theo quy định của Luật này và quy định khác của pháp luật có liên quan.
+2. Trách nhiệm của bên xử lý dữ liệu cá nhân như sau:
+a) Chỉ được tiếp nhận dữ liệu cá nhân sau khi có thỏa thuận, hợp đồng về xử lý dữ liệu cá nhân với bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân;
+b) Xử lý dữ liệu cá nhân theo đúng thỏa thuận, hợp đồng ký kết với bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân;
+c) Thực hiện đầy đủ các biện pháp bảo vệ dữ liệu cá nhân theo quy định của Luật này và các quy định khác của pháp luật có liên quan;
+d) Chịu trách nhiệm trước bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân về thiệt hại do quá trình xử lý dữ liệu cá nhân gây ra;
+đ) Ngăn chặn hoạt động thu thập dữ liệu cá nhân trái phép từ hệ thống, trang thiết bị, dịch vụ của mình;
+e) Phối hợp với Bộ Công an, cơ quan nhà nước có thẩm quyền trong bảo vệ dữ liệu cá nhân, cung cấp thông tin phục vụ điều tra, xử lý hành vi vi phạm pháp luật về bảo vệ dữ liệu cá nhân;
+g) Thực hiện các trách nhiệm khác theo quy định của Luật này và quy định khác của pháp luật có liên quan.
+3. Bên kiểm soát và xử lý dữ liệu cá nhân có trách nhiệm thực hiện đầy đủ các quy định tại khoản 1 và khoản 2 Điều này.
+Chương V
+ĐIỀU KHOẢN THI HÀNH
+Điều 38. Hiệu lực thi hành
+1. Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Doanh nghiệp nhỏ, doanh nghiệp khởi nghiệp được quyền lựa chọn thực hiện hoặc không thực hiện quy định tại Điều 21, Điều 22 và khoản 2 Điều 33 của Luật này trong thời gian 05 năm kể từ ngày Luật này có hiệu lực thi hành, trừ doanh nghiệp nhỏ, doanh nghiệp khởi nghiệp kinh doanh dịch vụ xử lý dữ liệu cá nhân, trực tiếp xử lý dữ liệu cá nhân nhạy cảm hoặc xử lý dữ liệu cá nhân của số lượng lớn chủ thể dữ liệu cá nhân.
+3. Hộ kinh doanh, doanh nghiệp siêu nhỏ không phải thực hiện quy định tại Điều 21, Điều 22 và khoản 2 Điều 33 của Luật này, trừ hộ kinh doanh, doanh nghiệp siêu nhỏ kinh doanh dịch vụ xử lý dữ liệu cá nhân, trực tiếp xử lý dữ liệu cá nhân nhạy cảm hoặc xử lý dữ liệu cá nhân của số lượng lớn chủ thể dữ liệu cá nhân.
+4. Chính phủ quy định chi tiết khoản 2 và khoản 3 Điều này.
+Điều 39. Quy định chuyển tiếp
+1. Hoạt động xử lý dữ liệu cá nhân đang thực hiện mà đã được chủ thể dữ liệu cá nhân đồng ý hoặc theo thỏa thuận theo quy định của Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính phủ trước ngày Luật này có hiệu lực thi hành thì tiếp tục thực hiện, không phải xin đồng ý lại hoặc thỏa thuận lại.
+2. Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, hồ sơ đánh giá tác động chuyển dữ liệu cá nhân ra nước ngoài theo quy định của Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính phủ đã được cơ quan chuyên trách bảo vệ dữ liệu cá nhân tiếp nhận trước ngày Luật này có hiệu lực thi hành thì tiếp tục được sử dụng và không phải lập hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới theo quy định của Luật này; việc cập nhật các hồ sơ đã lập nêu trên sau ngày Luật này có hiệu lực thi hành thì thực hiện theo quy định của Luật này.
+Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XV, kỳ họp thứ 9 thông qua ngày 26 tháng 6 năm 2025.

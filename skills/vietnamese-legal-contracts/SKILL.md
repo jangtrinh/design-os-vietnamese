@@ -1,6 +1,6 @@
 ---
 name: vietnamese-legal-contracts
-description: Drafts, localizes, and audits native-quality Vietnamese (vi-VN) civil and commercial agreements, corporate governance contracts, Terms of Service (ToS), and Data Processing Agreements (DPA). Enforces statutory penalty caps under Article 301 of Commercial Law 2005 (Luật Thương mại 2005 trần phạt vi phạm 8%), general contract freedom under Civil Code 2015 (Bộ luật Dân sự 2015 Điều 418), deposit mechanisms (Điều 328), force majeure (Điều 156), and fundamental change of circumstances (Điều 420), statutory labor contract classifications under Labor Code 2019 (Bộ luật Lao động 2019 Điều 20 bãi bỏ hợp đồng mùa vụ, chỉ công nhận không xác định thời hạn và xác định thời hạn tối đa 36 tháng; thử việc Điều 25-26), non-compete agreements (NCA) and confidentiality agreements (NDA) under Article 21 Clause 2 BLLĐ and VIAC arbitration practice, unconscionable contract terms prohibition under Consumer Protection Law 2023 (Luật Bảo vệ quyền lợi người tiêu dùng 2023 Điều 25 cấm miễn trừ toàn bộ trách nhiệm và tước đoạt quyền khiếu nại của người tiêu dùng), Personal Data Protection Decree compliance (Nghị định 13/2023/NĐ-CP PDPD Điều 9 đầy đủ 11 quyền của chủ thể dữ liệu gồm rút lại sự đồng ý và xóa dữ liệu, Điều 23 thông báo vi phạm dữ liệu trong 72 giờ cho Bộ Công an A05, Điều 24 DPIA và Điều 25 chuyển dữ liệu ra nước ngoài), and software intellectual property assignments under amended IP Law 2022 (Luật Sở hữu trí tuệ sửa đổi 2022 Điều 19 quyền nhân thân không thể chuyển nhượng vs Điều 20 quyền tài sản).
+description: Drafts, localizes, and audits native-quality Vietnamese (vi-VN) civil and commercial agreements, corporate governance contracts, Terms of Service (ToS), and Data Processing Agreements (DPA). Enforces statutory penalty caps under Article 301 of Commercial Law 2005 (Luật Thương mại 2005 trần phạt vi phạm 8%), general contract freedom under Civil Code 2015 (Bộ luật Dân sự 2015 Điều 418), deposit mechanisms (Điều 328), force majeure (Điều 156), and fundamental change of circumstances (Điều 420), statutory labor contract classifications under Labor Code 2019 (Bộ luật Lao động 2019 Điều 20 bãi bỏ hợp đồng mùa vụ, chỉ công nhận không xác định thời hạn và xác định thời hạn tối đa 36 tháng; thử việc Điều 25-26), non-compete agreements (NCA) and confidentiality agreements (NDA) under Article 21 Clause 2 BLLĐ and VIAC arbitration practice, unconscionable contract terms prohibition under Consumer Protection Law 2023 (Luật Bảo vệ quyền lợi người tiêu dùng 2023 Điều 25 cấm miễn trừ toàn bộ trách nhiệm và tước đoạt quyền khiếu nại của người tiêu dùng), Personal Data Protection Law compliance (Luật 91/2025/QH15 Điều 4 quyền của chủ thể dữ liệu gồm rút lại sự đồng ý và xóa dữ liệu, Điều 23 thông báo vi phạm dữ liệu trong 72 giờ cho Bộ Công an A05, Điều 24 DPIA và Điều 25 chuyển dữ liệu ra nước ngoài), and software intellectual property assignments under amended IP Law 2022 (Luật Sở hữu trí tuệ sửa đổi 2022 Điều 19 quyền nhân thân không thể chuyển nhượng vs Điều 20 quyền tài sản).
 license: PolyForm-Shield-1.0.0
 metadata:
   author: "Jang Trinh"
@@ -23,7 +23,7 @@ Legal documents and contracts in Vietnam operate under strict formal conventions
 |---|---|---|---|---|
 | Commercial & Civil Contracts | `legal-contract` | `Bên B` / `Khách hàng` | `Bên A` / `Doanh nghiệp` | Third-person only; zero second-person pronouns (`bạn`, `mình`, `em`) |
 | Terms of Service (ToS) & EULA | `legal-contract` | `Người dùng` / `Khách hàng` | `Chúng tôi` / `Công ty` | Objective legal tone; explicit rights and dispute boundaries |
-| PDPD Privacy Policy & DPA | `legal-contract` | `Chủ thể dữ liệu` | `Bên Kiểm soát dữ liệu` | Exact statutory terminology per Nghị định 13/2023/NĐ-CP |
+| PDPD Privacy Policy & DPA | `legal-contract` | `Chủ thể dữ liệu` | `Bên Kiểm soát dữ liệu` | Exact statutory terminology per Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 & Nghị định 356/2025/NĐ-CP |
 | Employment Agreements & NDA | `legal-contract` | `Người lao động` | `Người sử dụng lao động` | High statutory formality per Bộ luật Lao động 2019 |
 
 ---
@@ -38,7 +38,7 @@ The linter dynamically configures domain-specific statutory checks based on decl
 | `civil-contract` | Hợp đồng dân sự / Thuê tài sản / Vay tài sản (Bộ luật Dân sự 2015) | `LEG006` (điều khoản tranh chấp & bất khả kháng), tự do thỏa thuận phạt vi phạm |
 | `labor-contract` | Hợp đồng lao động (Bộ luật Lao động 2019 — Luật số 45/2019/QH14) | `LEG002` (cấm hợp đồng mùa vụ), thời hạn tối đa 36 tháng, lương thử việc 85% |
 | `terms-of-service` | Điều khoản sử dụng dịch vụ / Điều kiện giao dịch chung (Luật BVQLNTD 2023) | `LEG004` (cấm miễn trừ toàn bộ trách nhiệm & cấm tước đoạt quyền khiếu nại) |
-| `pdpd-policy` | Chính sách bảo mật & Thỏa thuận DPA (Nghị định 13/2023/NĐ-CP & Luật Dữ liệu 2024) | `LEG007` (11 quyền chủ thể dữ liệu), quyền rút lại sự đồng ý & yêu cầu xóa dữ liệu |
+| `pdpd-policy` | Chính sách bảo mật & Thỏa thuận DPA (Luật 91/2025/QH15, Nghị định 356/2025/NĐ-CP & Luật Dữ liệu 60/2024/QH15) | `LEG007` (11 quyền chủ thể dữ liệu), quyền rút lại sự đồng ý & yêu cầu xóa dữ liệu |
 
 ---
 
@@ -90,8 +90,8 @@ Digital platforms and online service providers face strict consumer and data reg
 1. **Unconscionable Terms Prohibition (`LEG004`):**
    - Under **Điều 25 Luật Bảo vệ quyền lợi người tiêu dùng 2023**, blanket liability disclaimers, waivers of consumer complaint rights, and unilateral modification clauses without cancellation rights are **void ab initio (vô hiệu)**.
 2. **Data Subject Rights (`LEG007`):**
-   - Privacy policies and DPAs must enumerate all **11 rights of data subjects** under **Điều 9 Nghị định 13/2023/NĐ-CP**, specifically including the right to withdraw consent (`rút lại sự đồng ý`) and right to erasure (`xóa dữ liệu cá nhân`).
-3. **Data Breach Notification (Điều 23 NĐ 13/2023/NĐ-CP):**
+   - Privacy policies and DPAs must enumerate the **data subject rights** under **Điều 4 khoản 1 Luật 91/2025/QH15** (the former 11-item list of Điều 9 Nghị định 13/2023/NĐ-CP is no longer in force), specifically including the right to withdraw consent (`rút lại sự đồng ý`) and right to erasure (`xóa dữ liệu cá nhân`).
+3. **Data Breach Notification (Điều 23 Luật 91/2025/QH15; Mẫu số 08 NĐ 356/2025/NĐ-CP):**
    - Personal data breaches must be reported to the Ministry of Public Security (Department A05) within **72 hours** of discovery.
 
 ---
@@ -133,7 +133,7 @@ python skills/vietnamese-legal-contracts/scripts/validate_copy.py labor.md --doc
 - `LEG004`: Unconscionable blanket liability waiver in consumer terms prohibited under Article 25 Consumer Protection Law 2023.
 - `LEG005`: Obsolete statute name without historical annotation (e.g. `Bộ luật Dân sự 2005`, `Bộ luật Lao động 2012`).
 - `LEG006`: Contract missing mandatory dispute resolution clause (`Giải quyết tranh chấp` / `Tòa án` / `Trọng tài`) or force majeure clause (`Bất khả kháng`).
-- `LEG007`: PDPD policy missing mandatory data subject rights under Article 9 Decree 13/2023/NĐ-CP.
+- `LEG007`: PDPD policy missing mandatory data subject rights under Article 4 of Law 91/2025/QH15 (rule text still cites Decree 13/2023 Article 9 and its 11-right list).
 - `CAL001`: English common-law calques and mistranslations (e.g., `bồi thường vô hại` -> `bồi thường thiệt hại`).
 - `LAW001`: Unsubstantiated absolute representations and marketing superlatives.
 - `PRO002`: Pronoun violations in the `legal-contract` register (e.g., casual `bạn`, `mình`).
@@ -149,4 +149,4 @@ python skills/vietnamese-legal-contracts/scripts/validate_copy.py labor.md --doc
 - [references/labor-and-ip-clauses.md](references/labor-and-ip-clauses.md) — Labor Code 2019 classifications, NCA enforceability, and software IP transfer.
 - [references/qa-checklist.md](references/qa-checklist.md) — 12-point pre-execution statutory and linguistic verification checklist.
 - [assets/hop-dong-dich-vu-b2b.md.template](assets/hop-dong-dich-vu-b2b.md.template) — Fully compliant B2B technology services contract template.
-- [assets/chinh-sach-bao-mat-pdpd.md.template](assets/chinh-sach-bao-mat-pdpd.md.template) — Fully compliant Decree 13/2023/NĐ-CP PDPD privacy policy template.
+- [assets/chinh-sach-bao-mat-pdpd.md.template](assets/chinh-sach-bao-mat-pdpd.md.template) — PDPD privacy policy template based on Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 & Nghị định 356/2025/NĐ-CP.

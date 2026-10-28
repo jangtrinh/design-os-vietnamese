@@ -8,10 +8,12 @@ when:
   - "Migrating financial statements and chart of accounts from Circular 200/2014/TT-BTC to Circular 99/2025/TT-BTC"
   - "Auditing investment/savings terminology and interest-rate disclosures with --domain finance"
 trust_tier: "verified"
-version: "3.0.0"
+version: "3.1.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
+  - uri: "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt"
+    sha256: "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e"
 ---
 
 # Vietnamese Corporate Accounting (Thông tư 99/2025/TT-BTC) and Banking/Fintech Compliance
@@ -41,6 +43,14 @@ Circular 99/2025/TT-BTC introduces Account 215 (`Tài sản sinh học` / Biolog
 
 In Vietnamese retail banking, securities, and e-wallet interfaces, bonds (`trái phiếu doanh nghiệp`), mutual fund certificates (`chứng chỉ quỹ`), and gold/crypto assets must never be labeled `tiền gửi tiết kiệm` (savings deposit) or `cam kết lãi suất cố định không rủi ro`, and credit copy must clearly distinguish flat nominal interest (`lãi suất trên dư nợ gốc ban đầu`) from effective reducing-balance interest (`lãi suất trên dư nợ giảm dần`).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md" sha256="c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290" quote="In Vietnamese retail banking, securities, and e-wallet interfaces, bonds ('trái phiếu doanh nghiệp'), mutual fund certificates ('chứng chỉ quỹ'), and gold/crypto assets must never be labeled 'tiền gửi tiết kiệm' (savings deposit) or 'cam kết lãi suất cố định không rủi ro', and credit copy must clearly distinguish flat nominal interest ('lãi suất trên dư nợ gốc ban đầu') from effective reducing-balance interest ('lãi suất trên dư nợ giảm dần')." -->
+
+### 3. Statutory Basis for the Guaranteed-Return Ban (`FIN001`)
+
+The guaranteed-return ban sits in Luật Chứng khoán 2019 (54/2019/QH14) Điều 91 khoản 1, a restriction on securities companies and fund managers: no statement or guarantee to a client about an income or profit level, and no guarantee against loss. Fixed-income securities are the only exception. Điều 12 of the same Law (prohibited market acts: fraud, insider dealing, manipulation) contains no guarantee clause, so `Luật CK Đ12` alone is not the right citation for `FIN001`.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt" sha256="3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e" quote="Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định." -->
+
+The statutory wording names three things to match: `bảo đảm` + `mức thu nhập` / `lợi nhuận`, and `bảo đảm khách hàng không bị thua lỗ`. Variants such as `cam kết`, `đảm bảo`, `lãi`, `lời`, `sinh lời` express the same meaning; the variant table in `knowledge/data/rule-variant-tables.json` marks which rows the statute states and which are proposed.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt" sha256="3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e" quote="Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định." -->
 
 ## Failure Modes (Mandatory)
 

@@ -110,7 +110,7 @@ Vietnamese buyers exhibit high risk-aversion. Place social proof immediately bel
 - Frame questions using natural Vietnamese customer phrasing (*"Tôi có được hoàn tiền không?"*, *"Dữ liệu của doanh nghiệp có được lưu trữ tại Việt Nam không?"*).
 
 ### Section 9 & 10: Lead Form & Statutory Disclosures
-- Compliant with Nghị định 13/2023/NĐ-CP (explicit consent checkbox + purpose).
+- Compliant with Luật 91/2025/QH15 Điều 9 and Nghị định 356/2025/NĐ-CP Điều 6 (explicit consent checkbox + purpose, unchecked by default).
 - Full legal footer satisfying Bộ Công Thương (MST, company name, address, hotline).
 
 ---

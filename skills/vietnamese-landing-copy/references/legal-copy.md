@@ -6,9 +6,9 @@
 
 ---
 
-## 1. Personal Data Protection: Nghị định 13/2023/NĐ-CP
+## 1. Personal Data Protection: Luật 91/2025/QH15 & Nghị định 356/2025/NĐ-CP
 
-Enacted by the Government of Vietnam on 17/04/2023 and effective from **01/07/2023**, Nghị định 13/2023/NĐ-CP establishes comprehensive data privacy obligations across all digital surfaces collecting personal information from Vietnamese citizens.
+From **01/01/2026**, Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 and Nghị định 356/2025/NĐ-CP replace Nghị định 13/2023/NĐ-CP (17/04/2023, effective 01/07/2023, now no longer in force). Together they establish comprehensive data privacy obligations across all digital surfaces collecting personal information from Vietnamese citizens.
 
 ### Core Legal Principles (Điều 11 & Điều 12)
 1. **Consent Must Be Voluntary & Explicit:** Pre-ticked checkboxes (`ô đánh dấu sẵn`) are strictly void. The user must perform an affirmative act (tick an unchecked box or click a dedicated confirmation button).

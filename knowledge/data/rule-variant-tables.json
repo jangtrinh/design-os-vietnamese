@@ -1,0 +1,432 @@
+{
+  "schema": "design-os-vietnamese/rule-variant-tables.v1",
+  "as_of": "2026-10-28",
+  "evidence_classes": {
+    "statutory": "the statute states this meaning or wording; the row carries the clause as a frozen quote",
+    "attested-in-statute": "the form appears in a frozen official text with the same sense, but that text does not regulate the rule's subject",
+    "proposed": "a paraphrase or colloquial form proposed for coverage; no frozen source states it (dictionary or enforcement evidence still UNKNOWN)"
+  },
+  "rules": {
+    "FIN001": {
+      "meaning": "a promise of an income or profit level, or of no loss, on an investment",
+      "current_citation_in_rule": "Luật CK Đ12; NĐ 38/2018",
+      "proposed_citation": "Luật Chứng khoán 2019 (54/2019/QH14) Điều 91 khoản 1",
+      "citation_note": "Điều 12 lists market abuses and has no guarantee clause; Luật 56/2024/QH15 amends Điều 12 khoản 3 and khoản 4 but not Điều 91 (checked on vbpl.vn, not frozen). The NĐ 38/2018 reference was not checked in this run.",
+      "statutory_basis": [
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+          "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+          "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+          "claim": "claim-fin-no-return-guarantee"
+        }
+      ],
+      "slots": {
+        "guarantee_verb": [
+          {
+            "form": "bảo đảm",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+              "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+              "claim": "claim-fin-no-return-guarantee"
+            }
+          },
+          {
+            "form": "đảm bảo",
+            "class": "attested-in-statute",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt",
+              "sha256": "350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990",
+              "quote": "Nội dung thông báo cần đảm bảo tối thiểu các nội dung quy định tại khoản 1 Điều 28 Nghị định này."
+            },
+            "note": "same verb with the syllables swapped; official texts use both"
+          },
+          {
+            "form": "cam kết",
+            "class": "proposed"
+          },
+          {
+            "form": "cam đoan",
+            "class": "proposed"
+          },
+          {
+            "form": "chắc chắn",
+            "class": "proposed"
+          },
+          {
+            "form": "bao",
+            "class": "proposed",
+            "note": "colloquial (bao lời, bao lãi); high false-positive risk, needs a following return noun"
+          },
+          {
+            "form": "100%",
+            "class": "proposed",
+            "note": "only when attached to a return noun (lãi 100%, chắc thắng 100%)"
+          }
+        ],
+        "return_noun": [
+          {
+            "form": "lợi nhuận",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+              "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+              "claim": "claim-fin-no-return-guarantee"
+            }
+          },
+          {
+            "form": "thu nhập",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+              "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+              "claim": "claim-fin-no-return-guarantee"
+            }
+          },
+          {
+            "form": "lãi",
+            "class": "attested-in-statute",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+              "quote": "Các tài sản bằng tiền bao gồm cổ tức, trái tức, tiền lãi được tính theo giá trị ghi trên sổ kế toán tại thời điểm xác định."
+            },
+            "note": "tiền lãi appears in Luật CK 2019 as income on assets"
+          },
+          {
+            "form": "lời",
+            "class": "proposed"
+          },
+          {
+            "form": "sinh lời",
+            "class": "proposed"
+          },
+          {
+            "form": "lợi tức",
+            "class": "proposed"
+          },
+          {
+            "form": "hoàn vốn",
+            "class": "proposed"
+          }
+        ],
+        "no_loss_phrase": [
+          {
+            "form": "không bị thua lỗ",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+              "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+              "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+              "claim": "claim-fin-no-return-guarantee"
+            }
+          },
+          {
+            "form": "không lỗ",
+            "class": "proposed"
+          },
+          {
+            "form": "không mất vốn",
+            "class": "proposed"
+          },
+          {
+            "form": "bảo toàn vốn",
+            "class": "proposed",
+            "note": "already in the rule's fallback list"
+          },
+          {
+            "form": "không rủi ro",
+            "class": "proposed",
+            "note": "already in the rule as đầu tư không rủi ro"
+          }
+        ]
+      },
+      "word_order": [
+        {
+          "pattern": "<guarantee_verb> (mức)? <return_noun>",
+          "example": "cam kết lợi nhuận 12%/năm"
+        },
+        {
+          "pattern": "<return_noun> (được)? <guarantee_verb>",
+          "example": "lợi nhuận được đảm bảo 12%/năm",
+          "note": "reverse order; not matched by the current fallback patterns"
+        },
+        {
+          "pattern": "<guarantee_verb> <no_loss_phrase>",
+          "example": "cam kết không lỗ vốn"
+        }
+      ],
+      "exceptions": [
+        {
+          "text": "fixed-income securities (chứng khoán có thu nhập cố định)",
+          "class": "statutory",
+          "evidence": {
+            "source_uri": "_evidence/vn-design-os-261026/sources/12-vbpl-luat-54-2019-qh14-chung-khoan.txt",
+            "sha256": "3bc5fc03a97453ed0e5bf6f86fb50c8ea5d57797292866a1f2237f29f452ff0e",
+            "quote": "Không được đưa ra nhận định hoặc bảo đảm với khách hàng về mức thu nhập hoặc lợi nhuận đạt được trên khoản đầu tư của mình hoặc bảo đảm khách hàng không bị thua lỗ, trừ trường hợp đầu tư vào chứng khoán có thu nhập cố định.",
+            "claim": "claim-fin-no-return-guarantee"
+          },
+          "note": "a stated coupon on a bond is not a prohibited guarantee; the rule should not fire on coupon disclosure"
+        }
+      ],
+      "proposed_patterns": [
+        "(?:cam\\s+kết|cam\\s+đoan|bảo\\s+đảm|đảm\\s+bảo|chắc\\s+chắn)\\s+(?:mức\\s+)?(?:lợi\\s+nhuận|thu\\s+nhập|lãi|lời|sinh\\s+lời|lợi\\s+tức|hoàn\\s+vốn)",
+        "(?:lợi\\s+nhuận|thu\\s+nhập|lãi|lợi\\s+tức)\\s+(?:được\\s+)?(?:cam\\s+kết|bảo\\s+đảm|đảm\\s+bảo)",
+        "(?:cam\\s+kết|cam\\s+đoan|bảo\\s+đảm|đảm\\s+bảo)\\s+(?:khách\\s+hàng\\s+)?không\\s+(?:bị\\s+)?(?:thua\\s+)?lỗ",
+        "\\bbao\\s+(?:lời|lãi)\\b"
+      ]
+    },
+    "MED002": {
+      "meaning": "a cure or treatment claim for a supplement, or deceptive treatment advertising for a clinic",
+      "current_citation_in_rule": "NĐ 15/2018; Luật Dược; Luật KCB 2023",
+      "proposed_citation": "NĐ 15/2018/NĐ-CP Điều 27 khoản 2 and khoản 3 (supplements); Luật Khám bệnh, chữa bệnh 2023 Điều 7 khoản 20 (clinics)",
+      "statutory_basis": [
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
+          "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
+          "quote": "Nội dung quảng cáo phải phù hợp với công dụng, tác dụng của sản phẩm đã được công bố trong bản công bố sản phẩm.",
+          "claim": "claim-med-ad-matches-declaration"
+        },
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
+          "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
+          "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
+          "claim": "claim-med-tpcn-disclaimer"
+        },
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/14-vbpl-luat-15-2023-qh15-kham-benh-chua-benh.txt",
+          "sha256": "bc9e98c1de0822c372b94feff7f5771930a4dd0416c660209973e018143bae01",
+          "quote": "lợi dụng kiến thức y học để quảng cáo gian dối về khám bệnh, chữa bệnh.",
+          "claim": "claim-med-kcb-deceptive-ads"
+        }
+      ],
+      "slots": {
+        "cure_claim": [
+          {
+            "form": "thay thế thuốc chữa bệnh",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
+              "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
+              "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
+              "claim": "claim-med-tpcn-disclaimer"
+            },
+            "note": "only the affirmative form is a violation; the mandated disclaimer contains the same words after không có tác dụng"
+          },
+          {
+            "form": "chữa khỏi",
+            "class": "proposed"
+          },
+          {
+            "form": "khỏi hẳn",
+            "class": "proposed"
+          },
+          {
+            "form": "khỏi hoàn toàn",
+            "class": "proposed"
+          },
+          {
+            "form": "trị dứt điểm",
+            "class": "proposed"
+          },
+          {
+            "form": "điều trị dứt điểm",
+            "class": "proposed",
+            "note": "already in the rule"
+          },
+          {
+            "form": "trị tận gốc",
+            "class": "proposed"
+          },
+          {
+            "form": "đặc trị",
+            "class": "proposed"
+          },
+          {
+            "form": "thần dược",
+            "class": "proposed",
+            "note": "already in the rule"
+          },
+          {
+            "form": "hết bệnh",
+            "class": "proposed"
+          },
+          {
+            "form": "đánh bay",
+            "class": "proposed",
+            "note": "slang; needs a disease noun"
+          }
+        ],
+        "absolute_marker": [
+          {
+            "form": "100%",
+            "class": "proposed"
+          },
+          {
+            "form": "vĩnh viễn",
+            "class": "proposed"
+          },
+          {
+            "form": "không tái phát",
+            "class": "proposed"
+          }
+        ]
+      },
+      "exceptions": [
+        {
+          "text": "the statutory disclaimer itself",
+          "class": "statutory",
+          "evidence": {
+            "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
+            "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
+            "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
+            "claim": "claim-med-tpcn-disclaimer"
+          },
+          "note": "any new pattern on thay thế thuốc must skip the disclaimer sentence"
+        }
+      ],
+      "proposed_patterns": [
+        "(?:chữa|trị|điều\\s+trị)\\s+(?:khỏi|dứt|tận\\s+gốc)",
+        "khỏi\\s+(?:hẳn|hoàn\\s+toàn)",
+        "(?<!không\\s)(?<!không có tác dụng\\s)thay\\s+thế\\s+(?:hoàn\\s+toàn\\s+)?thuốc",
+        "(?:hết|đánh\\s+bay)\\s+bệnh"
+      ]
+    },
+    "REA001": {
+      "meaning": "an off-plan deposit above 5% of the price, or a deposit taken before the property meets business conditions",
+      "current_citation_in_rule": "Luật Kinh doanh bất động sản 2023 Điều 23 Khoản 5",
+      "proposed_citation": "unchanged; the clause is confirmed in the frozen statutory text",
+      "statutory_basis": [
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+          "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+          "quote": "Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này.",
+          "claim": "claim-rea-deposit-5pct"
+        }
+      ],
+      "slots": {
+        "deposit_noun": [
+          {
+            "form": "tiền đặt cọc",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+              "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+              "quote": "Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này.",
+              "claim": "claim-rea-deposit-5pct"
+            }
+          },
+          {
+            "form": "đặt cọc",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+              "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+              "quote": "Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này.",
+              "claim": "claim-rea-deposit-5pct"
+            }
+          },
+          {
+            "form": "tiền cọc",
+            "class": "proposed"
+          },
+          {
+            "form": "cọc",
+            "class": "proposed"
+          },
+          {
+            "form": "giữ chỗ",
+            "class": "proposed",
+            "note": "market term absent from the statute; already in the rule"
+          },
+          {
+            "form": "thiện chí",
+            "class": "proposed",
+            "note": "giữ chỗ thiện chí; already in the rule"
+          },
+          {
+            "form": "booking",
+            "class": "proposed"
+          },
+          {
+            "form": "đặt chỗ",
+            "class": "proposed"
+          }
+        ]
+      },
+      "proposed_patterns": [
+        "(?:booking|đặt\\s+chỗ|cọc)\\b[^\\n.;:]*?(\\d+(?:[.,]\\d+)?)\\s*%"
+      ],
+      "numeric_check": "apply the rule's existing threshold (REA001: >5; REA002 first payment: >30) to the captured percentage"
+    },
+    "REA002": {
+      "meaning": "an off-plan payment schedule above 30% first payment (deposit included), above 70%/50% before handover, or above 95% before the certificate",
+      "current_citation_in_rule": "Luật Kinh doanh bất động sản 2023 Điều 25",
+      "proposed_citation": "unchanged; khoản 1 and khoản 3 confirmed in the frozen statutory text",
+      "statutory_basis": [
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+          "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+          "quote": "lần đầu không quá 30% giá trị hợp đồng bao gồm cả tiền đặt cọc",
+          "claim": "claim-rea-first-installment-30"
+        },
+        {
+          "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+          "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+          "quote": "thì bên bán, cho thuê mua không được thu quá 95% giá trị hợp đồng",
+          "claim": "claim-rea-pre-certificate-95"
+        }
+      ],
+      "slots": {
+        "first_payment": [
+          {
+            "form": "lần đầu",
+            "class": "statutory",
+            "evidence": {
+              "source_uri": "_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt",
+              "sha256": "f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e",
+              "quote": "lần đầu không quá 30% giá trị hợp đồng bao gồm cả tiền đặt cọc",
+              "claim": "claim-rea-first-installment-30"
+            }
+          },
+          {
+            "form": "đợt 1",
+            "class": "proposed"
+          },
+          {
+            "form": "đợt đầu",
+            "class": "proposed"
+          },
+          {
+            "form": "thanh toán ngay",
+            "class": "proposed"
+          }
+        ]
+      },
+      "numeric_check": "apply the rule's existing threshold (REA001: >5; REA002 first payment: >30) to the captured percentage",
+      "proposed_patterns": [
+        "(?:đợt\\s+(?:1|một|đầu)|lần\\s+đầu)[^\\n.;:]*?(\\d+(?:[.,]\\d+)?)\\s*%"
+      ]
+    }
+  },
+  "negation_guard": {
+    "class": "proposed",
+    "why": "the rules' META_NEGATION_RE only skips meta wording (không được cam kết, nghiêm cấm …); a plain negator before the match is not skipped, so 'Sản phẩm này không cam kết lợi nhuận' is flagged today",
+    "cues": [
+      "không",
+      "không hề",
+      "chẳng",
+      "chưa",
+      "không phải là",
+      "không phải",
+      "không có",
+      "không hứa hẹn",
+      "không nên"
+    ],
+    "window": "cue ends within 20 characters before the match, no sentence break between",
+    "evidence": "UNKNOWN: no frozen grammar source; Diệp Quang Ban / Cao Xuân Hạo not consulted in this run"
+  }
+}
