@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (ccd2ce91df387f6a) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (854dbd300f183817) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -653,6 +653,7 @@ def _load_sibling_module(stem: str):
 # Writing-context support: CTX rules + suggestion, and the context-matrix.md parser.
 WRITING_CONTEXT = _load_sibling_module("writing_context")
 CONTEXT_MATRIX = _load_sibling_module("context_matrix")
+CONTEXT_SUGGESTION = _load_sibling_module("context_suggestion")
 if WRITING_CONTEXT is not None:
     RULE_DOCS.update(WRITING_CONTEXT.RULE_DOCS)
 
@@ -803,7 +804,7 @@ class Validator:
         self._check_pronouns(masked, path, emit)
         self._check_domain_rules(lines, masked, text_nfc, path, is_markdown, emit)
         self._check_writing_context(masked, emit)
-        self._suggest_writing_context(text_nfc, path)
+        self._suggest_writing_context(text_nfc, path, disabled)
 
         findings.sort(key=lambda f: (f.line, f.col, f.rule))
         return findings
@@ -1074,11 +1075,16 @@ class Validator:
         ]
         WRITING_CONTEXT.check(self.context_profile, self.context_matrix, masked, cleaned, emit)
 
-    def _suggest_writing_context(self, text: str, path: pathlib.Path) -> None:
-        """Record a context hint when none is declared. Never a finding; the caller prints it to stderr."""
-        if self.context_profile is not None or WRITING_CONTEXT is None:
+    def _suggest_writing_context(self, text: str, path: pathlib.Path, disabled: set) -> None:
+        """Record a context hint when none is declared. Never a finding; the caller prints it to stderr.
+
+        Silent when a context or a register is declared, or when the file switches CTX rules off.
+        """
+        if self.context_profile is not None or self.register or CONTEXT_SUGGESTION is None:
             return
-        suggestion = WRITING_CONTEXT.suggest_context(text)
+        if any(rule.startswith("CTX") for rule in disabled):
+            return
+        suggestion = CONTEXT_SUGGESTION.suggest_context(text)
         if suggestion:
             self.suggestions.append((path, suggestion))
 
@@ -1292,7 +1298,14 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         return 2
 
     context_matrix = None
-    if args.context:
+    if args.context is not None:
+        if WRITING_CONTEXT is None or CONTEXT_MATRIX is None:
+            print(
+                "validate_copy.py: --context is unavailable: writing_context.py or context_matrix.py "
+                f"is missing or broken next to {pathlib.Path(__file__).name}",
+                file=sys.stderr,
+            )
+            return 2
         context_matrix = load_context_matrix(refs_dirs)
         if context_matrix is None or args.context not in context_matrix.profiles:
             available = ", ".join(sorted(context_matrix.profiles)) if context_matrix else "none (context-matrix.md not found)"

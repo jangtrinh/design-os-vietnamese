@@ -33,60 +33,65 @@ A **context preset** is a named bundle over five independent facets. A rule read
 | Context | Label | Relation | Closeness | Channel | Purpose | Reader | Self | Address | Forbids | Disables | Enables | Basis |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `chat-close-friend` | Chat bạn thân | peer | close | chat | inform | general | `tao`, `mình`, `tớ` | `mày`, `cậu`, `bạn` | `quý khách`, `quý vị` | `DIA001`, `CAL001`, `LAW001`, `SYN001`, `NUM002`, `NUM004`, `TONE001`, `CTX003` | `CTX001` | `proposed` |
-| `chat-colleague` | Chat đồng nghiệp (Slack/Zalo nhóm) | peer | acquainted | chat | inform | general | `mình`, `em`, `anh`, `chị` | `bạn`, `anh`, `chị`, `em` | `quý khách`, `quý vị`, `mày`, `tao` | `DIA001`, `CAL001`, `LAW001`, `SYN001`, `NUM002`, `NUM004`, `TONE001`, `CTX003` | `CTX001` | `proposed` |
-| `chat-to-manager` | Nhắn sếp | up | acquainted | chat | request | general | `em`, `tôi` | `anh/chị`, `sếp` | `mày`, `tao`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX002`, `CTX003` | `proposed` |
-| `email-to-manager` | Email gửi sếp/cấp trên | up | acquainted | email | report | general | `em`, `tôi` | `anh/chị`, `sếp` | `mày`, `tao`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX002`, `CTX003`, `CTX004` | `proposed` |
+| `chat-colleague` | Chat đồng nghiệp (Slack/Zalo nhóm) | peer | acquainted | chat | inform | general | `mình`, `em`, `anh`, `chị` | `bạn`, `anh`, `chị`, `em` | `quý khách`, `quý vị`, `mày`, `tao` | `DIA001`, `CAL001`, `LAW001`, `SYN001`, `NUM004`, `TONE001`, `CTX003` | `CTX001` | `proposed` |
+| `chat-to-manager` | Nhắn sếp | up | acquainted | chat | request | general | `em`, `tôi` | `anh/chị`, `sếp` | `mày`, `tao`, `tui`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX002`, `CTX003` | `proposed` |
+| `email-to-manager` | Email gửi sếp/cấp trên | up | acquainted | email | report | general | `em`, `tôi` | `anh/chị`, `sếp` | `mày`, `tao`, `tui`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX002`, `CTX003`, `CTX004` | `proposed` |
 | `email-to-colleague` | Email đồng nghiệp | peer | acquainted | email | request | general | `mình`, `tôi`, `em`, `anh`, `chị` | `bạn`, `anh`, `chị`, `em` | `quý khách`, `quý vị`, `mày`, `tao`, `tớ`, `cậu` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
 | `email-to-team` | Email/thông báo cho cấp dưới, cả team | down | acquainted | email | inform | general | `anh`, `chị`, `mình`, `tôi` | `các bạn`, `các em`, `cả team` | `quý khách`, `quý vị`, `mày`, `tao` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
-| `email-to-client` | Email khách hàng/đối tác (cá nhân viết) | up | stranger | email | request | general | `tôi`, `em` | `anh/chị`, `quý công ty` | `mày`, `tao`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
-| `job-application` | Thư xin việc / email ứng tuyển / CV | up | stranger | email | apply | general | `tôi`, `em` | `anh/chị`, `quý công ty` | `mày`, `tao`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
-| `doc-for-executives` | Tài liệu/báo cáo cho lãnh đạo | up | acquainted | document | report | executive | — | — | `mày`, `tao`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX005` | `proposed` |
+| `email-to-client` | Email khách hàng/đối tác (cá nhân viết) | up | stranger | email | request | general | `tôi`, `em` | `anh/chị`, `quý công ty` | `mày`, `tao`, `tui`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
+| `job-application` | Thư xin việc / email ứng tuyển / CV | up | stranger | email | apply | general | `tôi`, `em` | `anh/chị`, `quý công ty` | `mày`, `tao`, `tui`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX004` | `proposed` |
+| `doc-for-executives` | Tài liệu/báo cáo cho lãnh đạo | up | acquainted | document | report | executive | — | — | `mày`, `tao`, `tui`, `tớ`, `cậu`, `mình`, `bạn` | — | `CTX001`, `CTX003`, `CTX005` | `proposed` |
 | `doc-for-engineers` | Tài liệu kỹ thuật cho dev | peer | acquainted | document | inform | technical | `chúng tôi`, `chúng ta` | `bạn` | `quý khách`, `quý vị`, `mày`, `tao` | — | `CTX001`, `CTX003` | `proposed` |
 
 ### Why these rules are on or off
 
-- **Casual chats** disable `DIA001`, `CAL001`, `LAW001`, `SYN001`: unaccented typing, borrowed English words, superlatives and word-order slips are normal in a friend chat and are not advertising claims. `NUM002` (ungrouped amounts such as `500000đ`), `NUM004` (`m2`) and `TONE001` (mixed `hoà`/`hòa`) are disabled for the same reason. `CTX003` is disabled because abbreviations are the register. Left **on**: `NFC001`, `ENC001` (broken Unicode is broken everywhere), `PRO001` (mixing `quý khách` with `bạn` in one message), and the numeric/format checks that prevent real misreadings (`NUM001`, `NUM003`, `DATE001`, `PHONE001`, `ICU001`, `ICU002`).
+- **Casual chats** disable `DIA001`, `CAL001`, `LAW001`, `SYN001`: unaccented typing, borrowed English words, superlatives and word-order slips are normal in a friend chat and are not advertising claims. `NUM004` (`m2`) and `TONE001` (mixed `hoà`/`hòa`) are disabled for the same reason. `CTX003` is disabled because abbreviations are the register. `NUM002` (ungrouped amounts such as `500000đ`) is off for `chat-close-friend` only: between friends a bare amount is a casual shorthand, but in `chat-colleague` amounts are business data and an ungrouped `12000000đ` is easy to misread by a factor of ten, so `NUM002` stays on there. Left **on** in both: `NFC001`, `ENC001` (broken Unicode is broken everywhere), `PRO001` (mixing `quý khách` with `bạn` in one message), and the numeric/format checks that prevent real misreadings (`NUM001`, `NUM003`, `DATE001`, `PHONE001`, `ICU001`, `ICU002`).
 - **Chat to the boss** keeps every universal rule: the message is informal in channel but not in relationship.
-- **`CTX002` runs only for `chat-to-manager` and `email-to-manager`.** A formal letter to a recruiter or client signals respect with `Kính gửi` / `Trân trọng`, and forcing `ạ` into it reads as over-familiar.
+- **`CTX002` runs only for `chat-to-manager` and `email-to-manager`, and not when the message opens with a formal opener** (`Kính gửi`, `Kính thưa`, `Thưa`; table below). A formal letter signals respect with `Kính gửi` / `Trân trọng`, and forcing `ạ` into it reads as over-familiar; this is the same reasoning that keeps `CTX002` off for clients and recruiters.
 - **`CTX004` runs for every email preset.** `CTX005` runs only for `doc-for-executives`.
 
 ## 3. Machine-Readable Word Lists
 
 ### Chat abbreviations and teencode (`CTX003`)
 
-`Ambiguous = yes` means the token is also a normal English word, unit or code (`vs`, `ns`, `ko-KR`); it is skipped when the context's `reader` is `technical`. Tokens are matched as whole words (lowercase, or capitalised for tokens of two or more letters; single-letter tokens are lowercase only), never after a digit (`5 ns`, `5k`) and never inside identifiers, paths or locale codes (`ko-KR`, `k8s`).
+`Ambiguous = yes` means the token is also a normal English word, unit, symbol or code (`vs` = versus, `r` = a correlation coefficient, `ns` = nanoseconds, `a/c` = account, `ko-KR`); it is skipped when the context's `reader` is `technical` **or its `channel` is `document`**, because reports and technical documents use them as standard notation. `Caps = yes` means the ALL-CAPS form (`KO`, `ĐC`) is teencode too; tokens without it match lowercase or Capitalised only, so `DC`, `VS` and `NS` stay untouched. Tokens are matched as whole words (single-letter tokens are lowercase only), never directly after a digit (`5 ns`, `5k`; this also hides real teencode such as `bài tập 2 r`, a deliberate trade-off against unit false positives), and never inside identifiers, paths, locale codes, URLs or e-mail addresses (`ko-KR`, `k8s`, `r.py`, `j.doe@abc.vn`). A sentence-final token (`xong r.`) is still caught.
 
 <!-- machine-readable: chat-abbreviations -->
 
-| Token | Meaning | Ambiguous | Basis |
-|---|---|---|---|
-| `ko` | không | yes | `proposed` |
-| `k` | không | yes | `proposed` |
-| `hok` | không | no | `proposed` |
-| `dc` | được | yes | `proposed` |
-| `đc` | được | no | `proposed` |
-| `j` | gì | yes | `proposed` |
-| `bt` | bình thường | yes | `proposed` |
-| `ns` | nói | yes | `proposed` |
-| `mn` | mọi người | no | `proposed` |
-| `ae` | anh em | no | `proposed` |
-| `vs` | với | yes | `proposed` |
-| `r` | rồi | yes | `proposed` |
-| `oke` | ổn / được | no | `proposed` |
-| `okie` | ổn / được | no | `proposed` |
-| `thik` | thích | no | `proposed` |
-| `iu` | yêu | no | `proposed` |
-| `bik` | biết | no | `proposed` |
-| `wá` | quá | no | `proposed` |
-| `ntn` | như thế nào | no | `proposed` |
-| `trc` | trước | no | `proposed` |
-| `cx` | cũng | no | `proposed` |
-| `lm` | làm | yes | `proposed` |
-| `mk` | mình / mật khẩu | yes | `proposed` |
-| `hnay` | hôm nay | no | `proposed` |
-| `zậy` | vậy | no | `proposed` |
-| `dzậy` | vậy | no | `proposed` |
-| `pls` | vui lòng | no | `proposed` |
+| Token | Meaning | Ambiguous | Caps | Basis |
+|---|---|---|---|---|
+| `ko` | không | yes | yes | `proposed` |
+| `k` | không | yes | no | `proposed` |
+| `hok` | không | no | yes | `proposed` |
+| `dc` | được | yes | no | `proposed` |
+| `đc` | được | no | yes | `proposed` |
+| `j` | gì | yes | no | `proposed` |
+| `bt` | bình thường | yes | no | `proposed` |
+| `ns` | nói | yes | no | `proposed` |
+| `mn` | mọi người | no | yes | `proposed` |
+| `ae` | anh em | no | yes | `proposed` |
+| `vs` | với / so với | yes | no | `proposed` |
+| `r` | rồi | yes | no | `proposed` |
+| `oke` | ổn / được | no | yes | `proposed` |
+| `okie` | ổn / được | no | yes | `proposed` |
+| `thik` | thích | no | yes | `proposed` |
+| `iu` | yêu | no | yes | `proposed` |
+| `bik` | biết | no | yes | `proposed` |
+| `wá` | quá | no | yes | `proposed` |
+| `ntn` | như thế nào | no | yes | `proposed` |
+| `trc` | trước | no | yes | `proposed` |
+| `cx` | cũng | no | yes | `proposed` |
+| `lm` | làm | yes | no | `proposed` |
+| `mk` | mình / mật khẩu | yes | no | `proposed` |
+| `hnay` | hôm nay | no | yes | `proposed` |
+| `zậy` | vậy | no | yes | `proposed` |
+| `dzậy` | vậy | no | yes | `proposed` |
+| `pls` | vui lòng | no | yes | `proposed` |
+| `kn` | kinh nghiệm | yes | yes | `proposed` |
+| `a/c` | anh / chị | yes | no | `proposed` |
+| `tks` | cảm ơn | no | yes | `proposed` |
+| `thx` | cảm ơn | no | yes | `proposed` |
+| `nma` | nhưng mà | no | yes | `proposed` |
 
 ### Politeness particles (`CTX002`)
 
@@ -100,7 +105,7 @@ A **context preset** is a named bundle over five independent facets. A rule read
 
 ### Email greetings (`CTX004`)
 
-A greeting is any of these at the start of the first body line. Header fields such as `Subject:`, `Chủ đề:`, `To:`, `From:` and Markdown headings are skipped when looking for the first body line.
+A greeting is any of these at the start of the first body line, or a name-first greeting ending in one of the endings below (`Anh Tuấn thân mến,`). Header fields such as `Subject:`, `Chủ đề:`, `V/v:`, `To:`, `From:` and Markdown headings are skipped when looking for the first body line.
 
 <!-- machine-readable: email-greetings -->
 
@@ -117,6 +122,10 @@ A greeting is any of these at the start of the first body line. Header fields su
 | `Thân chào` | `proposed` |
 | `Gửi` | `proposed` |
 | `Dear` | `proposed` |
+| `Thưa` | `proposed` |
+| `Kính thưa` | `proposed` |
+| `Dạ chào` | `proposed` |
+| `Dạ thưa` | `proposed` |
 | `Hi` | `proposed` |
 | `Hello` | `proposed` |
 | `Các anh` | `proposed` |
@@ -127,9 +136,29 @@ A greeting is any of these at the start of the first body line. Header fields su
 | `Cả team` | `proposed` |
 | `Anh chị em` | `proposed` |
 
+<!-- machine-readable: email-greeting-endings -->
+
+| Ending | Basis |
+|---|---|
+| `thân mến` | `proposed` |
+| `thân yêu` | `proposed` |
+| `kính mến` | `proposed` |
+
+### Formal openers (`CTX002`)
+
+A message that opens with one of these needs no politeness particle: the opener already carries the respect.
+
+<!-- machine-readable: formal-openers -->
+
+| Opener | Basis |
+|---|---|
+| `Kính gửi` | `proposed` |
+| `Kính thưa` | `proposed` |
+| `Thưa` | `proposed` |
+
 ### Email sign-offs (`CTX004`)
 
-A sign-off is any of these at the start of one of the last six non-empty lines.
+A sign-off is any of these at the start of one of the last six non-empty lines, or of the six lines above the first contact line (phone, e-mail, address, website) of the signature block, so a block of name, title, department, company, phone and e-mail does not hide it.
 
 <!-- machine-readable: email-signoffs -->
 
@@ -149,6 +178,17 @@ A sign-off is any of these at the start of one of the last six non-empty lines.
 | `Sincerely` | `proposed` |
 | `Thanks` | `proposed` |
 | `Cheers` | `proposed` |
+| `Best` | `proposed` |
+| `Many thanks` | `proposed` |
+| `Thank you` | `proposed` |
+| `Em cảm ơn` | `proposed` |
+| `Em cám ơn` | `proposed` |
+| `Cám ơn` | `proposed` |
+| `Xin cám ơn` | `proposed` |
+| `Tôi cảm ơn` | `proposed` |
+| `Tôi xin cảm ơn` | `proposed` |
+| `Tôi xin chân thành cảm ơn` | `proposed` |
+| `Rất cảm ơn` | `proposed` |
 
 ### Executive summary markers (`CTX005`)
 
@@ -167,18 +207,24 @@ One of these must appear within the first 15 non-empty lines of a document writt
 | `Điểm chính` | `proposed` |
 | `Executive summary` | `proposed` |
 | `Bottom line` | `proposed` |
+| `Đề nghị` | `proposed` |
+| `Kiến nghị` | `proposed` |
+| `Tóm lại` | `proposed` |
+| `Nội dung chính` | `proposed` |
 
 ## 4. Rules
 
 | Rule | Fires when | Severity |
 |---|---|---|
-| `CTX001` | An address or self term in **Forbids** appears (first hit per term; compounds such as `bạn bè`, `một mình`, `tao nhã` are exempt) | `error` for `relation: up`, else `warning` |
-| `CTX002` | A direct-address term from **Address** (`anh`, `chị`, `sếp`) appears and no politeness particle (`ạ`, `dạ`, `vâng`) appears anywhere in the message | `warning` |
-| `CTX003` | A chat abbreviation from section 3 appears | `error` for `up` + `email`/`document`, else `warning` |
-| `CTX004` | `email` channel: the first body line has no greeting, or the last six non-empty lines have no sign-off | `warning` |
+| `CTX001` | An address or self term in **Forbids** appears (first hit per term; compounds and reflexives such as `bạn bè`, `một mình`, `hết mình`, `về phần mình`, `các bạn thực tập sinh`, `bạn Lan`, `tao nhã`, and `của mình` in a sentence with a first-person subject are exempt) | `error` for `relation: up`, else `warning` |
+| `CTX002` | A direct-address term from **Address** (`anh`, `chị`, `sếp`) appears and no politeness particle (`ạ`, `dạ`, `vâng`) appears anywhere in the message, unless the message opens with a formal opener | `warning` |
+| `CTX003` | A chat abbreviation from section 3 appears (not inside an e-mail address, file name or URL) | `error` for `up` + `email`/`document`, else `warning` |
+| `CTX004` | `email` channel: the first body line has no greeting, or the signature-aware tail has no sign-off | `warning` |
 | `CTX005` | `doc-for-executives`: no summary marker in the first 15 non-empty lines | `warning` |
 
 All five accept `vlc-disable-line` / `vlc-disable` directives like every other rule.
+
+**Quoted replies.** For `chat` and `email` channels everything from the first quote marker onward is ignored by every `CTX` rule, because the writer did not write it: a line starting with `>`, `Vào … đã viết:`, `On … wrote:`, `-----Original Message-----` or `----- Tin nhắn gốc -----`. In `document` channels a `>` block is the writer's own text and is checked.
 
 ## 5. Từng preset trong thực tế
 
@@ -237,7 +283,7 @@ Người dẫn dắt nói thẳng, không dùng giọng chăm sóc khách hàng 
 
 ### `email-to-client` — Email khách hàng/đối tác (cá nhân viết)
 
-Một người viết thay mặt công việc: hô `anh/chị`, xưng `tôi/em`, đủ khung thư.
+Một người viết thay mặt công ty: hô `anh/chị`, xưng `tôi/em`, đủ khung thư.
 
 - Sai: `Mình gửi bạn báo giá ko?` (`CTX001` hai lần: `Mình`, `bạn`; `CTX003`: `ko`; `CTX004` hai lần)
 - Đúng: `Kính gửi anh Hùng, / Tôi gửi anh báo giá đính kèm. / Trân trọng, Mai`
@@ -271,4 +317,4 @@ Trực tiếp và chính xác. `bạn` và `chúng ta` đều ổn; giọng chă
 
 ## 6. Gợi ý (không bao giờ là một finding)
 
-Khi không có `--context`, `validate_copy.py` có thể in **một dòng gợi ý ra stderr** nếu có tín hiệu mạnh: `Kính gửi anh/chị` cùng `Em xin …` gợi ý `email-to-manager`; `Kính gửi` cùng `ứng tuyển` gợi ý `job-application`; `mày` cùng `tao` gợi ý `chat-close-friend`. Gợi ý không đổi finding, JSON trên stdout hay mã thoát, và công cụ không bao giờ áp dụng quy tắc ngữ cảnh theo phỏng đoán.
+Khi không có `--context`, `validate_copy.py` có thể in **một dòng gợi ý ra stderr** nếu có tín hiệu mạnh: `Kính gửi anh/chị` cùng `Em xin …` gợi ý `email-to-manager`; `Kính gửi` cùng `ứng tuyển` gợi ý `job-application`; `mày` cùng `tao` gợi ý `chat-close-friend`. Để tránh gợi ý nhầm, mẫu mở đầu phải nằm ở đầu văn bản (dòng không trống đầu tiên); tài liệu hướng dẫn nhắc tới `mày/tao` trong ngoặc kép, thông báo của tổ chức gửi ứng viên hay khách hàng, và tệp đã khai báo `--register` hoặc đã tắt quy tắc `CTX` đều không bị gợi ý. Gợi ý không đổi finding, JSON trên stdout hay mã thoát, và công cụ không bao giờ áp dụng quy tắc ngữ cảnh theo phỏng đoán.

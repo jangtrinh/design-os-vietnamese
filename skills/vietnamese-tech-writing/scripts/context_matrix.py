@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/context_matrix.py (90e5c25005831146) — edit shared/ source, not this copy
+# synced from shared/scripts/context_matrix.py (f6b30fdbfa220a61) — edit shared/ source, not this copy
 """Parser for ``references/context-matrix.md``: writing-context presets and word lists.
 
 Pure Python 3.9+ standard library. Sibling of ``writing_context.py`` (the CTX rules);
@@ -34,10 +34,12 @@ class ContextMatrix:
 
     def __init__(self) -> None:
         self.profiles: Dict[str, ContextProfile] = {}
-        # (token, meaning, ambiguous)
-        self.abbreviations: List[Tuple[str, str, bool]] = []
+        # (token, meaning, ambiguous, caps)
+        self.abbreviations: List[Tuple[str, str, bool, bool]] = []
         self.particles: List[str] = []
         self.greetings: List[str] = []
+        self.greeting_endings: List[str] = []
+        self.formal_openers: List[str] = []
         self.signoffs: List[str] = []
         self.summary_markers: List[str] = []
 
@@ -93,14 +95,20 @@ def parse_matrix(text: str, table_with_header: TableParser, unwrap: Unwrap) -> C
 
     abbr_header, abbr_rows = table_with_header(text, "<!-- machine-readable: chat-abbreviations -->")
     amb = _column(abbr_header, "ambiguous")
+    caps = _column(abbr_header, "caps")
     for row in abbr_rows:
         token = unwrap(row[0]) if row else ""
         if token:
-            matrix.abbreviations.append(
-                (token, _cell(row, 1), unwrap(_cell(row, amb)).lower() == "yes")
-            )
+            matrix.abbreviations.append((
+                token,
+                _cell(row, 1),
+                unwrap(_cell(row, amb)).lower() == "yes",
+                unwrap(_cell(row, caps)).lower() == "yes",
+            ))
     matrix.particles = single_column("<!-- machine-readable: politeness-particles -->")
     matrix.greetings = single_column("<!-- machine-readable: email-greetings -->")
+    matrix.greeting_endings = single_column("<!-- machine-readable: email-greeting-endings -->")
+    matrix.formal_openers = single_column("<!-- machine-readable: formal-openers -->")
     matrix.signoffs = single_column("<!-- machine-readable: email-signoffs -->")
     matrix.summary_markers = single_column("<!-- machine-readable: summary-markers -->")
     return matrix
