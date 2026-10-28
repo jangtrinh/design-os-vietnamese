@@ -32,3 +32,71 @@ jobs:
 
       - name: Run Full Unit & Golden Benchmark Test Suite
         run: python3 -m unittest discover -s tests -v
+
+  packaging:
+    name: pip install & pre-commit hooks (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install the package into a fresh virtualenv
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install .
+
+      - name: Smoke the installed console commands from outside the checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          BIN="$RUNNER_TEMP/venv/bin"
+          for cmd in vi-validate-copy vi-i18n-parity vi-font-coverage; do
+            "$BIN/$cmd" --help > /dev/null
+          done
+          test "$("$BIN/vi-validate-copy" --list-rules --domain all | wc -l)" -ge 126
+          printf 'Cam kết lợi nhuận 18%%/năm.\n' | "$BIN/vi-validate-copy" --json --domain finance - | grep -q FIN001
+          printf 'Hạn chót: 12/25/2026.\n' > bad.md
+          printf 'Xin chào bạn.\n' > good.md
+          if "$BIN/vi-validate-copy" bad.md; then echo "bad.md must fail"; exit 1; fi
+          "$BIN/vi-validate-copy" good.md
+
+      - name: Install pre-commit
+        if: matrix.python-version == '3.12'
+        run: python -m pip install pre-commit
+
+      - name: Run the three hooks in a scratch consumer repository
+        if: matrix.python-version == '3.12'
+        run: |
+          HOOK_REPO="$GITHUB_WORKSPACE"
+          CONSUMER="$RUNNER_TEMP/consumer"
+          mkdir "$CONSUMER" && cd "$CONSUMER"
+          git init -q . && git config user.email ci@example.com && git config user.name ci
+          printf 'Hạn chót: 12/25/2026.\n' > bad.md
+          printf 'Xin chào bạn.\n' > good.md
+          printf '{"a": "Hello {name}", "b": "Save"}\n' > en.json
+          printf '{"a": "Xin chào {name}", "b": "Lưu"}\n' > vi_ok.json
+          printf '{"a": "Xin chào"}\n' > vi_bad.json
+          git add -A && git commit -q -m init
+          # A hook must fail because of real findings, not because it could not start.
+          expect_findings() {
+            pattern="$1"; shift
+            if out="$(pre-commit try-repo "$HOOK_REPO" "$@" 2>&1)"; then
+              echo "$out"; echo "expected failure: $*"; exit 1
+            fi
+            echo "$out"
+            echo "$out" | grep -q "$pattern" || { echo "missing $pattern in hook output"; exit 1; }
+          }
+          expect_findings DATE001 validate-copy --files bad.md
+          pre-commit try-repo "$HOOK_REPO" validate-copy --files good.md
+          expect_findings I18N001 check-i18n-parity --files en.json vi_bad.json
+          pre-commit try-repo "$HOOK_REPO" check-i18n-parity --files en.json vi_ok.json
+          pre-commit try-repo "$HOOK_REPO" check-font-coverage --files good.md
