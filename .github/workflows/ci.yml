@@ -69,7 +69,8 @@ jobs:
           status=0
           "$BIN/vi-validate-copy" bad.md > bad.out || status=$?
           cat bad.out
-          test "$status" -eq 1 && grep -q DATE001 bad.out
+          test "$status" -eq 1
+          grep -q DATE001 bad.out
           "$BIN/vi-validate-copy" good.md
 
       - name: Install pre-commit
@@ -81,14 +82,18 @@ jobs:
         run: |
           HOOK_REPO="$GITHUB_WORKSPACE"
           CONSUMER="$RUNNER_TEMP/consumer"
-          mkdir "$CONSUMER" && cd "$CONSUMER"
-          git init -q . && git config user.email ci@example.com && git config user.name ci
+          mkdir "$CONSUMER"
+          cd "$CONSUMER"
+          git init -q .
+          git config user.email ci@example.com
+          git config user.name ci
           printf 'Hạn chót: 12/25/2026.\n' > bad.md
           printf 'Xin chào bạn.\n' > good.md
           printf '{"a": "Hello {name}", "b": "Save"}\n' > en.json
           printf '{"a": "Xin chào {name}", "b": "Lưu"}\n' > vi_ok.json
           printf '{"a": "Xin chào"}\n' > vi_bad.json
-          git add -A && git commit -q -m init
+          git add -A
+          git commit -q -m init
           # A hook must fail because of real findings, not because it could not start.
           expect_findings() {
             pattern="$1"; shift
