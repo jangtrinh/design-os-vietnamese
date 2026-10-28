@@ -166,6 +166,56 @@ python3 shared/scripts/check_i18n_parity.py android/values/strings.xml android/v
 
 Inline suppression directives are supported for verified exceptions: `<!-- vncopy-disable: LAW001 -->` (file/block), `<!-- vncopy-disable-line: LAW001 -->` (specific rule on line), or `<!-- vncopy-disable-line -->` (all rules on line; `vlc-disable` alias also supported).
 
+### Writing context (`--context`)
+
+`--register` models an **organisation → customer** voice. `--context <preset>` models **one person writing to a specific person**: a chat with friends, an email to the boss, a job application, a document for executives or for engineers. A preset is a bundle of five facets (`relation`, `closeness`, `channel`, `purpose`, `reader`) defined in [`shared/references/context-matrix.md`](shared/references/context-matrix.md). It turns on rules `CTX001`–`CTX005` and turns **off** rules that do not suit the situation; real defects (`NFC001`, `ENC001`, mixed `quý khách`/`bạn` via `PRO001`) always stay on. Word lists and presets are conventions, not statute (evidence class `proposed`).
+
+| Preset | Situation | Rules on (`CTX`) | Relaxed (off) |
+| :--- | :--- | :--- | :--- |
+| `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-colleague` | Colleague chat (Slack/Zalo group) | `CTX001` | same as above |
+| `chat-to-manager` | Message to the boss | `CTX001` `CTX002` `CTX003` | — |
+| `email-to-manager` | Email to the boss / a superior | `CTX001` `CTX002` `CTX003` `CTX004` | — |
+| `email-to-colleague` | Email to a colleague | `CTX001` `CTX003` `CTX004` | — |
+| `email-to-team` | Email or announcement to reports / the whole team | `CTX001` `CTX003` `CTX004` | — |
+| `email-to-client` | Email to a client or partner, written by a person | `CTX001` `CTX003` `CTX004` | — |
+| `job-application` | Cover letter, application email, CV | `CTX001` `CTX003` `CTX004` | — |
+| `doc-for-executives` | Report or document for leadership | `CTX001` `CTX003` `CTX005` | — |
+| `doc-for-engineers` | Technical document for developers | `CTX001` `CTX003` | — |
+
+| Rule | Fires when |
+| :--- | :--- |
+| `CTX001` | An address/self term forbidden for the context appears (`mày/tao/mình/bạn` to a superior, `quý khách` in a friend chat). `error` toward a superior, else `warning`. |
+| `CTX002` | A message to a superior addresses them (`anh/chị`, `sếp`) but has no politeness particle (`ạ`, `dạ`, `vâng`). |
+| `CTX003` | A chat abbreviation (`ko`, `dc`, `đc`, `mn`, `ae`, `r`, …) appears outside a close chat. `error` in an email/document toward a superior, else `warning`. |
+| `CTX004` | An email has no greeting line or no sign-off. |
+| `CTX005` | A document for executives has no summary or conclusion marker (`Tóm tắt`, `Kết luận`, `Đề xuất`, `TL;DR`, …) in its first 15 non-empty lines. |
+
+Three runs (real output, `$?` shown as `exit`):
+
+```text
+$ printf 'Chào sếp,\n\nMình gửi sếp báo cáo tuần này, mai sếp rảnh ko?\n' | vi-validate-copy --context email-to-manager -
+<stdin>:1:6: warn  CTX002  the email-to-manager context addresses a superior but the message has no politeness particle
+<stdin>:3:1: error CTX001  “Mình” does not fit the email-to-manager context (Email gửi sếp/cấp trên)
+<stdin>:3:1: warn  CTX004  email has no sign-off
+<stdin>:3:45: error CTX003  chat abbreviation “ko” (không) in the email-to-manager context
+1 file(s) checked · 2 error(s) · 2 warning(s)        # exit 1
+
+$ printf 'Tôi muốn ứng tuyển vị trí Kế toán tổng hợp, bạn xem CV giúp mình.\n' | vi-validate-copy --context job-application -
+<stdin>:1:1: warn  CTX004  email has no greeting line
+<stdin>:1:1: warn  CTX004  email has no sign-off
+<stdin>:1:45: error CTX001  “bạn” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)
+<stdin>:1:61: error CTX001  “mình” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)   # exit 1
+
+$ printf 'ko biết nha mn, tối nay ae đi ăn ko, mai tao dc nghỉ r\ncam on nha, quán này rẻ nhất Sài Gòn, số 1 luôn\n' | vi-validate-copy --context chat-close-friend -
+1 file(s) checked · 0 error(s) · 0 warning(s)        # exit 0, clean
+# the same text without --context: DIA001 "cam on", LAW001 "rẻ nhất" and "số 1"
+```
+
+Composition: `--context` combines with `--register`, `--domain` and `--doctype`; context relaxations are applied after domain rules are collected, `--strict` semantics are unchanged, and the JSON shape is unchanged. An unknown preset exits `2` and lists the valid ids. A stand-alone CV file has no greeting or sign-off; add `<!-- vlc-disable: CTX004 -->` to it.
+
+**Suggestion, never a guess.** With no `--context`, the linter may print one hint to **stderr** when strong signals appear (for example `Kính gửi anh/chị` plus `Em xin…` suggests `email-to-manager`). The hint never changes findings, the JSON on stdout or the exit code, and no context rule is applied on a guess.
+
 ---
 
 ## Installation
@@ -226,7 +276,7 @@ design-os-vietnamese/
 ├── prompts/doctor.md               # Codex diagnostic prompt mirror
 ├── scripts/self_check.py           # Deterministic repository & skill self-check
 ├── shared/
-│   ├── references/                 # Universal compliance, register-matrix, typography, glossary, banned-phrases
+│   ├── references/                 # Universal compliance, register-matrix, context-matrix, typography, glossary, banned-phrases
 │   └── scripts/                    # Canonical validate_copy.py, check_i18n_parity.py, check_font_coverage.py
 ├── skills/                         # 16 self-contained production skills across Vietnamese software & regulated industries
 ├── knowledge/                      # 18 UKMC.v1 cryptographically verified modules + _evidence/ SHA-256 corpus

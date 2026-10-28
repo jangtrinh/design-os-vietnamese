@@ -91,6 +91,53 @@ repos:
 
 `check-i18n-parity` cần danh mục nguồn đứng trước, đích đứng sau, nhưng pre-commit chỉ truyền các tệp đã staged theo thứ tự đường dẫn; vì vậy `files:` chỉ là điều kiện kích hoạt còn `args:` chỉ rõ cặp nguồn/đích (nguồn trước, ví dụ `values/strings.xml` trước `values-vi/strings.xml` với Android). Mã hook: `validate-copy`, `check-i18n-parity`, `check-font-coverage`.
 
+### Ngữ cảnh viết (`--context`)
+
+`--register` mô hình hóa giọng **tổ chức → khách hàng**. `--context <preset>` mô hình hóa **một người viết cho một người cụ thể**: nhắn tin với bạn bè, email gửi sếp, thư xin việc, tài liệu cho lãnh đạo hoặc cho kỹ sư. Mỗi preset là một bộ năm trục (`relation`, `closeness`, `channel`, `purpose`, `reader`) khai báo trong [`shared/references/context-matrix.md`](shared/references/context-matrix.md). Preset bật các quy tắc `CTX001`–`CTX005` và **tắt** các quy tắc không hợp tình huống; lỗi thật (`NFC001`, `ENC001`, trộn `quý khách`/`bạn` theo `PRO001`) luôn được giữ. Danh sách từ và preset là quy ước, không phải luật (nhóm bằng chứng `proposed`).
+
+| Preset | Tình huống | Quy tắc bật (`CTX`) | Nới lỏng (tắt) |
+| :--- | :--- | :--- | :--- |
+| `chat-close-friend` | Chat bạn thân | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-colleague` | Chat đồng nghiệp (Slack/Zalo nhóm) | `CTX001` | như trên |
+| `chat-to-manager` | Nhắn sếp | `CTX001` `CTX002` `CTX003` | — |
+| `email-to-manager` | Email gửi sếp/cấp trên | `CTX001` `CTX002` `CTX003` `CTX004` | — |
+| `email-to-colleague` | Email đồng nghiệp | `CTX001` `CTX003` `CTX004` | — |
+| `email-to-team` | Email/thông báo cho cấp dưới, cả team | `CTX001` `CTX003` `CTX004` | — |
+| `email-to-client` | Email khách hàng/đối tác do cá nhân viết | `CTX001` `CTX003` `CTX004` | — |
+| `job-application` | Thư xin việc, email ứng tuyển, CV | `CTX001` `CTX003` `CTX004` | — |
+| `doc-for-executives` | Tài liệu/báo cáo cho lãnh đạo | `CTX001` `CTX003` `CTX005` | — |
+| `doc-for-engineers` | Tài liệu kỹ thuật cho dev | `CTX001` `CTX003` | — |
+
+| Quy tắc | Kích hoạt khi |
+| :--- | :--- |
+| `CTX001` | Có từ xưng/hô bị cấm trong ngữ cảnh (`mày/tao/mình/bạn` với cấp trên, `quý khách` trong chat bạn bè). `error` với cấp trên, còn lại `warning`. |
+| `CTX002` | Tin nhắn gửi cấp trên có xưng hô trực tiếp (`anh/chị`, `sếp`) nhưng không có từ lễ phép (`ạ`, `dạ`, `vâng`). |
+| `CTX003` | Có viết tắt kiểu chat (`ko`, `dc`, `đc`, `mn`, `ae`, `r`, …) ngoài chat bạn thân. `error` trong email/tài liệu gửi cấp trên, còn lại `warning`. |
+| `CTX004` | Email không có dòng chào đầu hoặc không có lời kết. |
+| `CTX005` | Tài liệu cho lãnh đạo không có dấu hiệu tóm tắt/kết luận (`Tóm tắt`, `Kết luận`, `Đề xuất`, `TL;DR`, …) trong 15 dòng không trống đầu tiên. |
+
+Ba ví dụ (kết quả thật):
+
+```text
+$ printf 'Chào sếp,\n\nMình gửi sếp báo cáo tuần này, mai sếp rảnh ko?\n' | vi-validate-copy --context email-to-manager -
+<stdin>:3:1: error CTX001  “Mình” does not fit the email-to-manager context (Email gửi sếp/cấp trên)
+<stdin>:3:45: error CTX003  chat abbreviation “ko” (không) in the email-to-manager context
+(cộng CTX002 thiếu từ lễ phép và CTX004 thiếu lời kết)        # exit 1
+
+$ printf 'Tôi muốn ứng tuyển vị trí Kế toán tổng hợp, bạn xem CV giúp mình.\n' | vi-validate-copy --context job-application -
+<stdin>:1:45: error CTX001  “bạn” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)
+<stdin>:1:61: error CTX001  “mình” does not fit the job-application context (Thư xin việc / email ứng tuyển / CV)
+(cộng 2 CTX004: thiếu lời chào và lời kết)                    # exit 1
+
+$ printf 'ko biết nha mn, tối nay ae đi ăn ko, mai tao dc nghỉ r\ncam on nha, quán này rẻ nhất Sài Gòn, số 1 luôn\n' | vi-validate-copy --context chat-close-friend -
+1 file(s) checked · 0 error(s) · 0 warning(s)                 # exit 0, sạch
+# cùng đoạn văn không có --context: DIA001 "cam on", LAW001 "rẻ nhất" và "số 1"
+```
+
+Kết hợp: `--context` dùng chung với `--register`, `--domain`, `--doctype`; phần nới lỏng của ngữ cảnh áp dụng sau khi nạp quy tắc theo miền, ngữ nghĩa `--strict` và định dạng JSON không đổi. Preset lạ trả mã thoát `2` kèm danh sách id hợp lệ. Tệp CV đứng riêng không có lời chào/lời kết: thêm `<!-- vlc-disable: CTX004 -->`.
+
+**Gợi ý, không đoán mò.** Khi không có `--context`, công cụ có thể in một dòng gợi ý ra **stderr** nếu có tín hiệu mạnh (ví dụ `Kính gửi anh/chị` cùng `Em xin…` gợi ý `email-to-manager`). Gợi ý không đổi kết quả, JSON trên stdout hay mã thoát, và không bao giờ áp dụng quy tắc theo phỏng đoán.
+
 ---
 
 ## Giấy phép (License)
