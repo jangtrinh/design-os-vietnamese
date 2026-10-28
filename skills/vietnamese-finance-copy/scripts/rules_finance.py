@@ -8,7 +8,7 @@ This module enforces statutory and regulatory compliance across Vietnamese finan
 documents, financial statements (BCTC under Thông tư 99/2025/TT-BTC), electronic
 invoices (hóa đơn điện tử under Nghị định 123/2020/NĐ-CP & Nghị định 70/2025/NĐ-CP),
 consumer lending and BNPL transparency (Thông tư 43/2016/TT-NHNN & Thông tư 18/2019/TT-NHNN),
-securities and fund marketing (Luật Chứng khoán 2019 & Nghị định 38/2018/NĐ-CP),
+securities and fund marketing (Luật Chứng khoán 2019 Điều 91 khoản 1),
 investment-linked insurance disclaimers (Thông tư 67/2023/TT-BTC Điều 53),
 and FinTech transfer / biometric security thresholds (Quyết định 2345/QĐ-NHNN).
 
@@ -27,7 +27,7 @@ WARN = "warning"
 REF_DIR = pathlib.Path(__file__).resolve().parent.parent / "references"
 
 RULE_DOCS = {
-    "FIN001": "guaranteed-return language ('cam kết lợi nhuận', 'đảm bảo sinh lời', 'bảo toàn vốn', 'đầu tư không rủi ro') — prohibited in solicitation (Luật CK Đ12; NĐ 38/2018)",
+    "FIN001": "guaranteed-return language ('cam kết lợi nhuận', 'đảm bảo sinh lời', 'bảo toàn vốn', 'đầu tư không rủi ro') — prohibited in solicitation (Luật Chứng khoán 2019 Điều 91 khoản 1)",
     "FIN002": "promotional 0% rate ('lãi suất 0%', 'trả góp 0%') with no explicit fee or total-cost disclosure ('phí chuyển đổi', 'tổng chi phí', 'lãi suất thực tế', 'tổng số tiền phải trả' — TT 43/2016)",
     "FIN005": "financial statement table missing 'Đơn vị tính' header",
     "FIN006": "negative number written with a minus sign (-1.234) in a financial statement; use parentheses (1.234)",
@@ -190,8 +190,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str):
                 match.start() + 1,
                 match.group(0),
                 f"guaranteed-return language “{match.group(0)}”",
-                "prohibited in investment solicitation (Luật Chứng khoán 2019 Đ12; "
-                "NĐ 38/2018 Đ2 kh.4). Write “lợi nhuận kỳ vọng” with a risk disclaimer, "
+                "prohibited in investment solicitation (Luật Chứng khoán 2019 Điều 91 khoản 1). "
+                "Write “lợi nhuận kỳ vọng” with a risk disclaimer, "
                 "and route to legal review.",
             )
 

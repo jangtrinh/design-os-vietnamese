@@ -343,8 +343,8 @@ pairs = [
         "en": "Submit form with name and phone number",
         "bad": "Để lại thông tin gồm họ và tên và số điện thoại để nhận tư vấn ngay.",
         "good": "Để lại họ và tên và số điện thoại. Tôi đồng ý để công ty xử lý dữ liệu cá nhân theo Chính sách bảo mật nhằm mục đích tư vấn sản phẩm.",
-        "diagnosis": "Lead form collecting personal data without purpose statement and privacy policy link (NĐ 13/2023).",
-        "why": "Nghị định 13/2023/NĐ-CP requires stating the processing purpose and referencing Chính sách bảo mật.",
+        "diagnosis": "Lead form collecting personal data without purpose statement and privacy policy link (Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6).",
+        "why": "Luật 91/2025/QH15 Điều 9 and NĐ 356/2025/NĐ-CP Điều 6 require stating the processing purpose and referencing Chính sách bảo mật.",
         "expected_rules": ["LND002"],
         "doctype": "lead-form"
     },

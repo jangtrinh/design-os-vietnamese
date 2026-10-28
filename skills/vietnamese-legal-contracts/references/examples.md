@@ -191,7 +191,7 @@
 
 ```diff
 - Chính sách bảo vệ dữ liệu cá nhân của Công ty. Chúng tôi thu thập thông tin để nâng cao trải nghiệm ứng dụng. Dữ liệu được lưu trữ an toàn.
-+ Chính sách bảo vệ dữ liệu cá nhân. Quyền của chủ thể dữ liệu bao gồm quyền rút lại sự đồng ý và quyền yêu cầu xóa dữ liệu cá nhân theo quy định tại Điều 9 Nghị định 13/2023/NĐ-CP.
++ Chính sách bảo vệ dữ liệu cá nhân. Quyền của chủ thể dữ liệu bao gồm quyền rút lại sự đồng ý và quyền yêu cầu xóa dữ liệu cá nhân theo quy định tại Điều 4 khoản 1 Luật 91/2025/QH15.
 ```
 
 ### leg-pdpd-missing-withdraw (Rules: `LEG007` · Doctype: `pdpd-policy`)

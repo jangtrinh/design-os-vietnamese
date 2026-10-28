@@ -7,8 +7,8 @@ Pure Python standard library only.
 This module enforces statutory and regulatory compliance across Vietnamese civil
 and commercial agreements (Bộ luật Dân sự 2015 & Luật Thương mại 2005), labor
 contracts (Bộ luật Lao động 2019), consumer terms of service (Luật Bảo vệ quyền
-lợi người tiêu dùng 2023), personal data protection agreements (Nghị định 13/2023/NĐ-CP
-& Luật Dữ liệu 2024), and intellectual property licensing/assignments (Luật Sở hữu
+lợi người tiêu dùng 2023), personal data protection agreements (Luật 91/2025/QH15
+& Nghị định 356/2025/NĐ-CP & Luật Dữ liệu 2024), and intellectual property licensing/assignments (Luật Sở hữu
 trí tuệ sửa đổi 2022).
 """
 from __future__ import annotations
@@ -27,7 +27,7 @@ DOCTYPES = {
     "civil-contract": "Hợp đồng dân sự / Hợp đồng thuê tài sản / Hợp đồng vay tài sản (Bộ luật Dân sự 2015)",
     "labor-contract": "Hợp đồng lao động (Bộ luật Lao động 2019 — Số 45/2019/QH14)",
     "terms-of-service": "Điều khoản sử dụng dịch vụ (ToS) / Hợp đồng theo mẫu & Điều kiện giao dịch chung (Luật Bảo vệ quyền lợi người tiêu dùng 2023)",
-    "pdpd-policy": "Chính sách bảo mật & Thỏa thuận xử lý dữ liệu cá nhân (Nghị định 13/2023/NĐ-CP & Luật Dữ liệu 2024)",
+    "pdpd-policy": "Chính sách bảo mật & Thỏa thuận xử lý dữ liệu cá nhân (Luật 91/2025/QH15 & Nghị định 356/2025/NĐ-CP & Luật Dữ liệu 2024)",
 }
 
 RULE_DOCS = {
@@ -37,7 +37,7 @@ RULE_DOCS = {
     "LEG004": "unconscionable blanket liability waiver in consumer terms ('miễn trừ hoàn toàn mọi trách nhiệm', 'chúng tôi không chịu bất kỳ trách nhiệm nào trong mọi trường hợp') prohibited under Article 25 of Consumer Protection Law 2023 (Luật Bảo vệ quyền lợi người tiêu dùng 2023)",
     "LEG005": "obsolete statute name ('Bộ luật Dân sự 2005', 'Bộ luật Lao động 2012', 'Luật Doanh nghiệp 2014', 'Luật Sở hữu trí tuệ 2005 chưa sửa đổi') used without historical context",
     "LEG006": "commercial or civil contract missing mandatory dispute resolution clause ('Giải quyết tranh chấp' / 'Tòa án' / 'Trọng tài') or force majeure clause ('Bất khả kháng')",
-    "LEG007": "PDPD policy / DPA missing mandatory data subject rights under Article 9 of Decree 13/2023/NĐ-CP ('Quyền của chủ thể dữ liệu' / 'rút lại sự đồng ý' / 'yêu cầu xóa dữ liệu')",
+    "LEG007": "PDPD policy / DPA missing mandatory data subject rights under Article 4 Clause 1 of Law 91/2025/QH15 ('Quyền của chủ thể dữ liệu' / 'rút lại sự đồng ý' / 'yêu cầu xóa dữ liệu')",
 }
 
 # LEG001: Commercial penalty rate > 8%
@@ -281,6 +281,6 @@ def check_document(ctx) -> Iterator[Tuple[str, str, int, int, str, str, str]]:
                 first_line,
                 1,
                 "",
-                f"pdpd-policy missing mandatory data subject rights under Article 9 of Decree 13/2023/NĐ-CP: {'; '.join(missing_items)}",
-                "Article 9 Decree 13/2023/NĐ-CP mandates explicit enumeration of data subject rights including the right to withdraw consent ('rút lại sự đồng ý') and right to erasure ('xóa dữ liệu cá nhân')",
+                f"pdpd-policy missing mandatory data subject rights under Article 4 Clause 1 of Law 91/2025/QH15: {'; '.join(missing_items)}",
+                "Article 4 Clause 1 of Law 91/2025/QH15 sets out the data subject rights, so the policy should state them explicitly, including the right to withdraw consent ('rút lại sự đồng ý') and right to erasure ('xóa dữ liệu cá nhân')",
             )

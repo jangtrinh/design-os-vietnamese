@@ -6,7 +6,7 @@ Pure Python standard library only.
 
 This module enforces statutory and regulatory compliance across Vietnamese cybersecurity
 operations (Luật An toàn thông tin mạng 2015, Luật An ninh mạng 2018), 72-hour personal data
-breach notifications to A05 Ministry of Public Security (Nghị định 13/2023/NĐ-CP Điều 23),
+breach notifications to the specialised personal-data-protection agency of the Ministry of Public Security (Luật 91/2025/QH15 Điều 23 khoản 1; notice form Mẫu số 08, NĐ 356/2025/NĐ-CP),
 strict 5-tier information system security classification (Nghị định 85/2016/NĐ-CP & Thông tư
 12/2022/TT-BTTTT), standard InfoSec/SOC terminology, credential security, and CVE advisory completeness.
 """
@@ -22,18 +22,18 @@ WARN = "warning"
 REF_DIR = pathlib.Path(__file__).resolve().parent.parent / "references"
 
 DOCTYPES = {
-    "breach-notification": "Thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân gửi Cục A05 Bộ Công an (Điều 23 Nghị định 13/2023/NĐ-CP)",
+    "breach-notification": "Thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân gửi cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) (Điều 23 khoản 1 Luật 91/2025/QH15; Mẫu số 08 Nghị định 356/2025/NĐ-CP)",
     "security-advisory": "Cảnh báo an toàn thông tin / Khuyến nghị bản vá lỗ hổng bảo mật CVE (VNCERT/CC & NCSC)",
     "pentest-report": "Báo cáo kiểm thử xâm nhập (Pentest) & Đánh giá An toàn hệ thống thông tin theo cấp độ 1–5 (NĐ 85/2016 & TT 12/2022/TT-BTTTT)",
 }
 
 RULE_DOCS = {
-    "SEC001": "personal data breach notification deadline exceeding 72 hours or omitting notification to A05 Ministry of Public Security under Article 23 Decree 13/2023/NĐ-CP (Nghị định 13/2023/NĐ-CP Điều 23 thời hạn 72 giờ gửi Cục A05 Bộ Công an)",
+    "SEC001": "personal data breach notification deadline exceeding 72 hours or omitting notification to the specialised personal-data-protection agency (Bộ Công an) under Article 23 Clause 1 Law 91/2025/QH15 (Luật 91/2025/QH15 Điều 23 khoản 1 thời hạn 72 giờ gửi cơ quan chuyên trách bảo vệ dữ liệu cá nhân, Bộ Công an; Mẫu số 08 NĐ 356/2025/NĐ-CP)",
     "SEC002": "fabricated information system security level above level 5 ('cấp độ 6', 'cấp độ 7', 'ATTT cấp 6'); Decree 85/2016/NĐ-CP & Circular 12/2022/TT-BTTTT define strictly Levels 1 to 5",
     "SEC003": "awkward machine-translated cybersecurity terminology ('cuộc tấn công câu cá', 'phần mềm đòi tiền chuộc', 'kỹ thuật xã hội', 'bề mặt cuộc tấn công', 'tường lửa thế hệ tiếp theo', 'kiểm toán cây bút')",
     "SEC004": "phishing-like or insecure credential solicitation asking users to send passwords, PINs, OTPs, or CVV codes via email, message, or forms",
     "SEC005": "security advisory missing mandatory vulnerability severity rating ('Mức độ nghiêm trọng' / 'CVSS') or remediation guidance ('Biện pháp khắc phục' / 'Khuyến nghị cập nhật bản vá')",
-    "SEC006": "misclassifying health, financial/banking, biometric, or location data as basic personal data instead of sensitive personal data under Article 2 Clause 4 Decree 13/2023/NĐ-CP",
+    "SEC006": "misclassifying health, financial/banking, biometric, or location data as basic personal data instead of sensitive personal data under Article 4 Decree 356/2025/NĐ-CP (Nghị định 356/2025/NĐ-CP Điều 4)",
 }
 
 # SEC001: Breach reporting deadline exceeding 72 hours / 3 days
@@ -160,8 +160,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
                     ERROR,
                     match.start() + 1,
                     match.group(0),
-                    f"breach notification deadline ({days_val} days) exceeds the 72-hour statutory deadline under Article 23 Decree 13/2023/NĐ-CP",
-                    "Article 23 of Decree 13/2023/NĐ-CP mandates notifying the Department of Cybersecurity and High-Tech Crime Prevention (Cục A05, Bộ Công an) within 72 hours of detecting a personal data breach",
+                    f"breach notification deadline ({days_val} days) exceeds the 72-hour statutory deadline under Article 23 Clause 1 Law 91/2025/QH15",
+                    "Article 23 Clause 1 of Law 91/2025/QH15 mandates notifying the specialised personal-data-protection agency (cơ quan chuyên trách bảo vệ dữ liệu cá nhân, Bộ Công an) within 72 hours of detecting a personal data breach; use Mẫu số 08 of Decree 356/2025/NĐ-CP",
                 )
 
     for match in BREACH_DEADLINE_HOURS_RE.finditer(masked):
@@ -177,8 +177,8 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
                     ERROR,
                     match.start() + 1,
                     match.group(0),
-                    f"breach notification deadline ({hrs_val} hours) exceeds the 72-hour statutory deadline under Article 23 Decree 13/2023/NĐ-CP",
-                    "Article 23 of Decree 13/2023/NĐ-CP mandates notifying the Department of Cybersecurity and High-Tech Crime Prevention (Cục A05, Bộ Công an) within 72 hours of detecting a personal data breach",
+                    f"breach notification deadline ({hrs_val} hours) exceeds the 72-hour statutory deadline under Article 23 Clause 1 Law 91/2025/QH15",
+                    "Article 23 Clause 1 of Law 91/2025/QH15 mandates notifying the specialised personal-data-protection agency (cơ quan chuyên trách bảo vệ dữ liệu cá nhân, Bộ Công an) within 72 hours of detecting a personal data breach; use Mẫu số 08 of Decree 356/2025/NĐ-CP",
                 )
 
     # SEC002: Fabricated system security levels above 5
@@ -226,7 +226,7 @@ def check_line(ctx, lineno: int, raw: str, masked: str) -> Iterator[Tuple[str, s
             match.start() + 1,
             match.group(0),
             f"misclassifying sensitive personal data as basic personal data: “{match.group(0)}”",
-            "Article 2 Clause 4 of Decree 13/2023/NĐ-CP classifies health records, banking/financial data, biometrics, and location data as 'dữ liệu cá nhân nhạy cảm' requiring enhanced security safeguards",
+            "Article 4 of Decree 356/2025/NĐ-CP lists health records, banking/financial data, biometrics, and location data among 'dữ liệu cá nhân nhạy cảm' requiring enhanced security safeguards",
         )
 
 
@@ -238,19 +238,19 @@ def check_document(ctx) -> Iterator[Tuple[str, str, int, int, str, str, str]]:
 
     first_line = next((i for i, raw in enumerate(ctx.lines, 1) if not _is_comment_or_blank(raw)), 1)
 
-    # SEC001: Personal data breach notification missing A05 or 72-hour requirement
+    # SEC001: Personal data breach notification missing the receiving agency or 72-hour requirement
     if doctype == "breach-notification":
-        has_a05 = bool(re.search(
-            r"(?<!\w)(?:Cục\s+A05|A05|Cục\s+An\s+ninh\s+mạng\s+và\s+phòng,\s*chống\s+tội\s+phạm\s+sử\s+dụng\s+công\s+nghệ\s+cao|Bộ\s+Công\s+an)(?!\w)",
+        has_agency = bool(re.search(
+            r"(?<!\w)(?:cơ\s+quan\s+chuyên\s+trách\s+bảo\s+vệ\s+dữ\s+liệu\s+cá\s+nhân|Cục\s+A05|A05|Cục\s+An\s+ninh\s+mạng\s+và\s+phòng,\s*chống\s+tội\s+phạm\s+sử\s+dụng\s+công\s+nghệ\s+cao|Bộ\s+Công\s+an)(?!\w)",
             body,
             re.IGNORECASE,
         ))
         has_72h = bool(re.search(r"(?<!\w)(?:72\s+giờ|72h|03\s+ngày|3\s+ngày)(?!\w)", body, re.IGNORECASE))
 
-        if not (has_a05 and has_72h):
+        if not (has_agency and has_72h):
             missing_items = []
-            if not has_a05:
-                missing_items.append("thông báo gửi Cục A05 Bộ Công an")
+            if not has_agency:
+                missing_items.append("thông báo gửi cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an)")
             if not has_72h:
                 missing_items.append("thời hạn thông báo trong vòng 72 giờ")
             yield (
@@ -259,8 +259,8 @@ def check_document(ctx) -> Iterator[Tuple[str, str, int, int, str, str, str]]:
                 first_line,
                 1,
                 "",
-                f"breach-notification missing mandatory statutory requirements under Article 23 Decree 13/2023/NĐ-CP: {'; '.join(missing_items)}",
-                "Article 23 Decree 13/2023/NĐ-CP mandates notifying Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05) - Bộ Công an trong thời hạn 72 giờ kể từ khi phát hiện vi phạm",
+                f"breach-notification missing mandatory statutory requirements under Article 23 Clause 1 Law 91/2025/QH15: {'; '.join(missing_items)}",
+                "Luật 91/2025/QH15 Điều 23 khoản 1 yêu cầu thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) trong thời hạn 72 giờ kể từ khi phát hiện vi phạm, theo Mẫu số 08 Nghị định 356/2025/NĐ-CP",
             )
 
     # SEC005: Security advisory missing CVSS / severity rating or remediation guidance

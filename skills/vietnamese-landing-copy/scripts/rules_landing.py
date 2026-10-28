@@ -14,7 +14,7 @@ WARN = "warning"
 
 RULE_DOCS = {
     "LND001": "passive English construction ('được thiết kế bởi', 'được xây dựng bởi', 'được phát triển bởi') in hero/headline copy",
-    "LND002": "lead-form collecting personal data without explicit purpose statement and privacy policy reference ('Chính sách bảo mật' / 'dữ liệu cá nhân', NĐ 13/2023)",
+    "LND002": "lead-form collecting personal data without explicit purpose statement and privacy policy reference ('Chính sách bảo mật' / 'dữ liệu cá nhân', Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6)",
     "LND003": "e-commerce footer missing mandatory statutory fields ('MST' / 'Mã số doanh nghiệp' or 'Bộ Công Thương', NĐ 52/2013 & NĐ 85/2021)",
     "LND004": "pricing table mixing colloquial 'tỷ/triệu' and full grouped digits in the same table, or using '/month' instead of '/tháng'",
 }
@@ -40,7 +40,7 @@ BILLING_PERIOD_RE = re.compile(r"/(?:month|mo|yr|year)\b", re.IGNORECASE)
 WORD_SCALE_RE = re.compile(r"\b\d+[\s\u00A0]*(?:tỷ|triệu|nghìn|tr|k)\b", re.IGNORECASE)
 GROUPED_NUM_RE = re.compile(r"\b\d{1,3}(?:\.\d{3})+\b")
 
-# LND002: PDPA (Nghị định 13/2023/NĐ-CP) required markers in lead forms
+# LND002: PDPD (Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6) required markers in lead forms
 PURPOSE_RE = re.compile(r"(?:nhằm\s+mục\s+đích|mục\s+đích|để|phục\s+vụ\s+cho)", re.IGNORECASE)
 PRIVACY_RE = re.compile(r"(?:chính\s+sách\s+bảo\s+mật|dữ\s+liệu\s+cá\s+nhân|bảo\s+vệ\s+dữ\s+liệu)", re.IGNORECASE)
 
@@ -115,7 +115,7 @@ def check_document(ctx):
                 1,
                 first_line,
                 "lead-form collecting personal data without explicit purpose statement and privacy policy reference",
-                "Nghị định 13/2023/NĐ-CP requires an explicit purpose statement (e.g. “nhằm mục đích tư vấn”) and reference to “Chính sách bảo mật” / “dữ liệu cá nhân”",
+                "Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6 require an explicit purpose statement (e.g. “nhằm mục đích tư vấn”) and reference to “Chính sách bảo mật” / “dữ liệu cá nhân”",
             )
 
     if doctype == "ecommerce-footer":

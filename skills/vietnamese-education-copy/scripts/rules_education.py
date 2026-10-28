@@ -18,7 +18,7 @@ the 7-tier pedagogy continuum (Mầm non -> Tiểu học -> THCS/THPT -> GDNN ->
 - Thông tư 18/2021/TT-BGDĐT & QĐ 37/2018/QĐ-TTg: Doctoral dissertations (luận án tiến sĩ), academic degrees
   (Tiến sĩ, Thạc sĩ, Cử nhân) vs academic ranks / titles (Giáo sư, Phó Giáo sư), and scholarly register discipline.
 - Thông tư 21/2019/TT-BGDĐT: diploma reissuance regulations ('cấp bản sao từ sổ gốc').
-- Nghị định 13/2023/NĐ-CP Điều 20: double consent for children's personal data ('phụ huynh' / 'người giám hộ').
+- Luật 91/2025/QH15 Điều 24: the legal representative ('phụ huynh' / 'người giám hộ') acts for the child; dual consent (child + legal representative) to publish or disclose a child's private-life information from age 7.
 - Learning science & EdTech UX: Sandwich pronunciation feedback and actionable empty states.
 """
 from __future__ import annotations
@@ -38,7 +38,7 @@ RULE_DOCS = {
     "EDU007": "literal empty-state phrase on EdTech UI without an actionable CTA",
     "EDU008": "mismatched graduation work nomenclature across degree tiers (TT 08/2021, TT 23/2021, TT 18/2021)",
     "EDU009": "unpedagogical or harsh pronunciation feedback violating the Sandwich model",
-    "EDU010": "children's EdTech onboarding/consent collecting minor data without mentioning parent/guardian consent ('phụ huynh' / 'người giám hộ' under Nghị định 13/2023/NĐ-CP Điều 20)",
+    "EDU010": "children's EdTech onboarding/consent collecting minor data without mentioning parent/guardian consent ('phụ huynh' / 'người giám hộ' under Luật 91/2025/QH15 Điều 24)",
     "EDU011": "numeric grading or K-12 academic classification applied to preschool children (VBHN 01/VBHN-BGDĐT)",
     "EDU012": "casual pronouns, teacher-student address, or unscientific claim inflation in postgraduate research (TT 23/2021, TT 18/2021)",
 }
@@ -54,7 +54,7 @@ DOCTYPES = {
     "edtech-microcopy": "EdTech product UI strings, empty states, and notifications",
     "pedagogical-nudge": "pedagogical reminder and habit-loop notifications",
     "parental-analytics": "learning analytics and progress reports for parents",
-    "child-consent": "child personal data collection, onboarding, or consent flow under NĐ 13/2023 Điều 20",
+    "child-consent": "child personal data collection, onboarding, or consent flow under Luật 91/2025/QH15 Điều 24",
     "preschool-report": "Sổ theo dõi sức khỏe và đánh giá sự phát triển của trẻ mầm non (Nhà trẻ 3–36 tháng & Mẫu giáo 3–6 tuổi, VBHN 01/VBHN-BGDĐT)",
     "tvet-syllabus": "Chương trình / Mô-đun Giáo dục nghề nghiệp (Trung cấp / Cao đẳng, TT 04/2022/TT-BLĐTBXH)",
     "master-thesis": "Đề cương / Tóm tắt Luận văn Thạc sĩ hoặc Đề án Thạc sĩ (TT 23/2021/TT-BGDĐT, VQF Bậc 7)",
@@ -362,7 +362,7 @@ def check_document(ctx):
 
     body = "\n".join(ctx.masked)
 
-    # EDU010: Minor personal data processing without parent/guardian consent under NĐ 13/2023 Điều 20
+    # EDU010: Minor personal data processing without parent/guardian consent under Luật 91/2025/QH15 Điều 24
     if doctype in ("child-consent", "edtech-microcopy"):
         match_cd = CHILD_DATA_RE.search(body)
         if match_cd and not PARENT_CONSENT_RE.search(body):
@@ -374,6 +374,6 @@ def check_document(ctx):
                 1,
                 match_cd.group(0),
                 f"child data collection “{match_cd.group(0)}” missing parent/guardian consent",
-                "Nghị định 13/2023/NĐ-CP Điều 20 requires verified consent from parent or legal guardian "
-                "('phụ huynh' / 'người giám hộ') for collecting or processing personal data of children.",
+                "Luật 91/2025/QH15 Điều 24: the legal representative ('phụ huynh' / 'người giám hộ') acts for the child, "
+                "and publishing or disclosing a child's private-life information from age 7 needs the consent of both the child and the legal representative.",
             )
