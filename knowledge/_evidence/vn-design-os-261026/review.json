@@ -1,51 +1,103 @@
 {
-  "passed": true,
+  "passed": false,
   "reviewer_runtime": "grok-4.7",
-  "reviewed_at": "2026-10-28T22:10:00+07:00",
-  "scope": "Rounds 2 and 6-10 of the ledger (45 atoms), knowledge/data/rule-variant-tables.json evidence classes, and the PDPD agency and NĐ 15 food-ad paragraphs of cybersecurity-attt-and-pdpd.md and healthcare-by-law-and-emr.md. Rounds 1 and 3-5 (baseline and second-publisher corroboration) were not re-reviewed.",
-  "method": "Five read-only grok-4.7 runs (--lean, no write tools) on self-contained packets cut mechanically from the frozen sources; raw verdicts, packets and prompts are in reviews/. A first attempt with codex exec could not authenticate (expired refresh token) and produced no verdict.",
-  "passed_basis": "Composite: the last reviewer verdict on each scope has no wrong item and no unsupported sentence. Run 1 (atoms) found 2 wrong, 7 overreach and 2 variant-row issues; run 2 re-judged the fixed items: 0 wrong, 2 minor overreach, variant rows ok; runs 3-4 found module sentences beyond their anchors; run 5 on the rewritten agency section returned passed=true with 3 wording nits. The healthcare paragraphs had no unsupported sentence in run 4.",
-  "disputed_findings": [
+  "reviewed_at": "2026-10-28T22:30:00+07:00",
+  "scope": "Committed state bd52a14: ledger rounds 2 and 6-10 (45 atoms), all variant-table rows, and the PDPD-agency and NĐ 15 food-ad sections of the two modules with their anchors. Rounds 1 and 3-5 were not re-reviewed.",
+  "method": "One read-only grok-4.7 run (--lean, no write tools) on a self-contained packet cut mechanically from the frozen sources; the reviewer's own passed rule. Record: reviews/grok-6-final-full-scope.json with its packet and prompt. A codex exec attempt could not authenticate and gave no verdict.",
+  "verdict": {
+    "reviewed_atoms": 45,
+    "entailed": 40,
+    "overreach": [
+      {
+        "id": "claim-ads-law-75-repeals",
+        "minor": false,
+        "why": "Shown Điều 1 repeals Điều 8 khoản 13. No shown provision rewrites khoản 3 or khoản 10, and the truncated article has no count showing khoản 11 unchanged."
+      },
+      {
+        "id": "claim-pdpd-silence-fine-nd330",
+        "minor": true,
+        "why": "Điều 43 khoản 2 điểm b and the 50-70 million fine match. Điều 7 khoản 1, and that Mục 6 sums are organization amounts, is not in the shown article."
+      },
+      {
+        "id": "claim-pdpd-default-consent-fine-nd330",
+        "minor": true,
+        "why": "Điều 43 khoản 1 điểm c and the 30-50 million fine match. The Điều 7 khoản 1 organization-amount rider is not in the shown article."
+      },
+      {
+        "id": "claim-fin-law56-register-status",
+        "minor": false,
+        "why": "Shown metadata is only NotInForce and legislationDate 2024-11-29. The effFrom/effTo/Hết hiệu lực toàn bộ quote is not in that block, and nothing shows that no replacement is named."
+      },
+      {
+        "id": "claim-med-ad-beyond-declaration-evidence",
+        "minor": true,
+        "why": "Điểm đ requires scientific proof for content ngoài công dụng, tính năng. The statement says only beyond the uses and drops tính năng."
+      }
+    ],
+    "wrong": [],
+    "variant_table_issues": [
+      {
+        "rule": "MED002",
+        "form": "thay thế thuốc chữa bệnh",
+        "why": "Class attested-in-statute needs the same sense. The quote is the mandated denial không có tác dụng thay thế thuốc chữa bệnh, not a cure claim."
+      }
+    ],
+    "paragraphs_reviewed": 9,
+    "unsupported_paragraphs": [
+      {
+        "paragraph_start": "The penalty decree, Nghị định 330/2026/NĐ-CP (in force from",
+        "why": "The no-A05 sentence claims a search of Law 91, Decree 356 and Decree 330. This paragraph's anchors are only Điều 80, Điều 39 and Điều 55."
+      }
+    ],
+    "passed": false,
+    "notes": "Non-minor: Law 75 rewrite/unchanged claim is not in the shown Điều 1, and Law 56 effFrom/effTo is not in the shown JSON-LD. MED002 labels a disclaimer denial as an attested cure claim. The ND 330 paragraph's A05 search lacks its own anchor. Minor: unshown Điều 7 riders and dropped tính năng."
+  },
+  "author_notes_on_findings": [
     {
-      "claim_id": "claim-pdpd-no-default-consent",
-      "note": "Run 1 said the quote is not in NĐ 356 Điều 6; the packet showed the wrong heading. The quote is in Điều 6 khoản 3; run 2 judged it entailed."
+      "claim_id": "claim-fin-law56-register-status",
+      "note": "The packet showed only the first 4 file lines, which stop before the vbpl record-fields line holding the quote. The quote is in the frozen file (quote verified). The 'does not name a replacement' clause remains an unshown negative."
     },
     {
-      "claim_id": "claim-fin-law56-d12k3",
-      "note": "Run 1 saw a truncated Điều 1; run 2 saw all 20 item headers and zero mentions of Điều 91 and accepted the negative as minor."
+      "claim_id": "claim-ads-law-75-repeals",
+      "note": "The packet elided the long Luật 75 Điều 1; the rewrite of Điều 8 khoản 3 and 10 was not shown. Open: re-review with the full article."
+    },
+    {
+      "claim_id": "MED002 thay thế thuốc chữa bệnh",
+      "note": "Run 2 accepted attested-in-statute for this row; run 6 rejects it. Reviewer disagreement left open; the owner decides the class."
     }
   ],
-  "entailment_notes": [
-    {
-      "claim_id": "claim-pdpd-consent-silence",
-      "note": "Banner interpretation removed from the statement."
-    },
-    {
-      "claim_id": "claim-pdpd-breach-form-08",
-      "note": "Mẫu 03a/03b fact moved to its own claim, claim-pdpd-form-03a-dpia-update (NĐ 356 Điều 20 khoản 3)."
-    },
-    {
-      "claim_id": "claim-pdpd-transition-consent",
-      "note": "Narrowed to ongoing processing (đang thực hiện), per Luật 91 Điều 39 khoản 1."
-    },
-    {
-      "claim_id": "claim-med-ad-matches-declaration",
-      "note": "Cure-claim inference removed; khoản 4 điểm đ added as claim-med-ad-beyond-declaration-evidence."
-    },
-    {
-      "claim_id": "claim-pdpd-silence-fine-nd330",
-      "note": "Organization scope now attributed to Điều 7 khoản 1."
-    },
-    {
-      "claim_id": "claim-pdpd-default-consent-fine-nd330",
-      "note": "Organization scope now attributed to Điều 7 khoản 1; điểm c joins the two acts with a comma (minor)."
-    },
-    {
-      "claim_id": "claim-pdpd-agency-name-nd330",
-      "note": "Module now labels 'the Cục is the specialised agency' as an inference; NĐ 330 names it only as the DPIA-dossier recipient."
-    }
-  ],
+  "next_run_must": "Replace this review before any STOP: the gate does not check that a review covers atoms added after it.",
   "previous_reviews": [
+    {
+      "run": "1-atoms-rounds-2-6-9",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-1-atoms-rounds-2-6-9.json"
+    },
+    {
+      "run": "2-fixes",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-2-fixes.json"
+    },
+    {
+      "run": "3-module-text",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-3-module-text.json"
+    },
+    {
+      "run": "4-module-text",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-4-module-text.json"
+    },
+    {
+      "run": "5-cyber-section",
+      "reviewer_runtime": "grok-4.7",
+      "passed": true,
+      "record": "reviews/grok-5-cyber-section.json"
+    },
     {
       "passed": true,
       "reviewer_runtime": "gemini-4-argon-high",

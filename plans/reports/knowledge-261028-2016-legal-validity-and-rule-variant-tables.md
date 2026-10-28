@@ -2,6 +2,8 @@
 
 Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. Researcher: claude-opus-5-5. Independent review is in §7.
 
+**Status: not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 0/3 low-delta rounds, real probes remain open, and the final independent review (grok-4.7, full scope) returned **passed=false**: 0 wrong, 2 non-minor overreaches, 1 variant-row dispute, 1 unsupported paragraph (§7). `verify_ukmc.py` now returns CONTINUE_GAP, with that review as its only failure. The parent's "builder gate passes" criterion is therefore **not met, on purpose**: no rounds were manufactured, and no pass was set by hand.
+
 ## 1. Numbers (before → after)
 
 | Measure | Before | After |
@@ -13,10 +15,10 @@ Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. 
 | `ease:source` anchors in modules | 66 | 114 |
 | Ledger atoms | 21 | 81 (rounds in §1a) |
 | Saturation (`run measure --material`) | not measured | **0/3 low-delta rounds** (round 10 delta 0.0253) |
-| Builder gate (`kb gate`) | STOP_SUFFICIENT, resting on a stale review | **DEEPEN**: hard gates pass, independent review recorded, saturation does not pass, probes remain open |
+| Builder gate (`kb gate`) | STOP_SUFFICIENT, resting on a stale review | **DEEPEN**: hard gates pass; saturation 0/3; probes open; final review passed=false |
 
 - **"Independent sources" counts files.** Two files from one publisher count twice, so the publisher row is the honest measure of independence.
-- **`tools/verify_ukmc.py` still prints STOP_SUFFICIENT.** It checks hashes and claim counts but not saturation or open probes. The builder gate is the stricter result, and it is the one that counts.
+- **`tools/verify_ukmc.py` returns CONTINUE_GAP (exit 1).** Its only failure is `review.json did not pass independent review`. It does not check saturation or open probes, so the builder gate is the stricter result.
 
 ### 1a. Rounds: what each one was
 
@@ -106,7 +108,7 @@ Mapping used for every edit:
 | `skills/*/references/examples.md` ×4 | generated from `evals/` by `tools/build_examples.py` | regenerate after `evals/` changes |
 | `tools/generate_tech_pairs.py`, `generate_landing_pairs.py` | 2 each | same mapping |
 
-**Cost split (owner instruction, received mid-run).** The research, writing and rulings ran on Opus (claude-opus-5-5) before the instruction arrived. Independent grading ran on grok-4.7, not a Claude model. The final mechanical gate rerun ran on Haiku, and Opus checked it.
+**Cost split (owner instruction, received mid-run).** The research, writing and rulings ran on Opus (claude-opus-5-5) before the instruction arrived. Independent grading ran on grok-4.7, not a Claude model. The first full gate rerun ran on Haiku and caught a stale test count. Opus ran the final rerun after the last edit.
 
 **Ledger disclosure.** Two old round-1 required claims, `claim-statutory-compliance` and `claim-cybersecurity-law`, still describe Decree 13/2023, now expired. Their quotes are true of the old corpus, so they still verify. The modules cite them only under "Historical" labels. The owner should decide whether to retire them from `required_claim_ids`.
 
@@ -145,30 +147,34 @@ Caveats:
 
 ## 7. Independent review
 
-Reviewer: **grok-4.7**, read-only (`grok-run.mjs ask --lean`, no write tools). It is a different runtime from the researcher (claude-opus-5-5).
-- `codex exec` was tried first and could not authenticate (expired refresh token), so it gave no verdict. **Re-login to Codex is needed (owner-manual).**
-- Raw verdicts, packets and prompts are in `knowledge/_evidence/vn-design-os-261026/reviews/`, with personal paths scrubbed. The verdicts are summarised in `review.json`.
+Reviewer: **grok-4.7**, read-only (`grok-run.mjs ask --lean`, no write tools). It is a different runtime from the researcher (claude-opus-5-5). `codex exec` was tried first and could not authenticate (expired refresh token), so it gave no verdict. **The owner needs to re-login to Codex.** Raw verdicts, packets and prompts are in `knowledge/_evidence/vn-design-os-261026/reviews/`, with personal paths scrubbed.
 
 | Run | Scope | Result |
 |---|---|---|
 | 1 | 43 atoms (rounds 2, 6–9), variant tables, agency paragraph | passed=false: 2 wrong, 7 overreach, 2 variant-row issues |
-| 2 | 11 revised or disputed items, 2 relabelled rows, 2 module sections | 0 wrong, 2 minor overreach, rows OK; module text not OK |
+| 2 | 11 revised or disputed items, 2 relabelled rows, 2 module sections | 0 wrong, 2 minor overreach, rows OK, module text not OK |
 | 3–4 | module paragraphs with their anchors | 3, then 1, sentences beyond their anchors |
-| 5 | rewritten cybersecurity §1 | **passed=true**, 3 wording nits |
+| 5 | rewritten cybersecurity §1 | passed=true, 3 wording nits |
+| **6 (recorded)** | **committed state bd52a14: 45 atoms, all variant rows, both module sections** | **passed=false**: 40/45 entailed, 0 wrong |
 
-**Accepted and fixed:**
-- MED "cure claims fall outside any declaration": NĐ 15 Đ27 k4 đ allows content beyond the declared uses when it has scientific documentation. Statement narrowed, k4 đ cited, and the MED002 reading labelled as the rule's.
-- Điều 39 transition: covers ongoing processing only. Fixed in the ledger, the module, `shared/compliance.md` (synced to 16 skills) and this report.
-- Banner gloss, the Mẫu 03a fact, and the organization scope of fines: each now rests on its own cited clause.
-- `lãi` → proposed; the MED002 disclaimer words → attested-in-statute.
+**Fixed after runs 1–5:**
+- MED "cure claims fall outside any declaration": NĐ 15 Đ27 k4 đ allows content beyond the declaration when it has scientific documentation.
+- Điều 39 transition: ongoing processing only. Fixed in the ledger, the module, `shared/compliance.md` (synced) and this report.
+- Banner gloss; Mẫu 03a now has its own claim; the organization scope of fines.
+- `lãi` → proposed.
 - The Cục = specialised agency equation is labelled as an inference.
-- Status dates now anchored in place.
+- Status dates anchored in place.
 
-**Rejected, with evidence:**
-- "default-consent quote not in Điều 6": it is NĐ 356 Đ6 k3. The packet showed the wrong heading.
-- "Luật 56 negative not shown": the full list of 20 item headers has zero mentions of Đ91. Run 2 agreed.
+**Rejected with evidence:** "default-consent quote not in Điều 6". It is NĐ 356 Đ6 k3; run 1's packet showed the wrong heading, and runs 2 and 6 accept it.
 
-`review.json` `passed=true` is a composite, set by the researcher from the reviewer's last verdict on each scope; no single reviewer run passed every scope. The basis is written into the file (`passed_basis`). It does not change the gate, which stays DEEPEN on saturation.
+**Still open from run 6** (not fixed in this run, so that `review.json` matches the reviewed state):
+- **`claim-ads-law-75-repeals` (non-minor).** The statement that Luật 75 Đ1 k4 rewrites Đ8 k3 and k10 and leaves k11 unchanged was not shown: the packet cut the long article. Re-review with the full article.
+- **`claim-fin-law56-register-status` (non-minor).** The packet showed 4 header lines, which end before the vbpl record line holding the quote. The quote does exist in the file. "Does not name a replacement" is a negative the reviewer could not see.
+- **MED002 `thay thế thuốc chữa bệnh` as attested-in-statute.** Run 2 accepted it; run 6 rejects it. The reviewer disagrees with itself, so the owner decides the class.
+- **NĐ 330 paragraph.** Its "text search finds no A05" sentence has no anchor of its own (a whole-file count, not a quote).
+- Minor: the Điều 7 organization rider sits outside Điều 43; "tính năng" was dropped from the k4 đ statement.
+
+`review.json` holds run 6 verbatim (`passed: false`) plus `author_notes_on_findings` and `previous_reviews`.
 
 ## 8. Still UNKNOWN (open probes)
 
@@ -186,7 +192,7 @@ Reviewer: **grok-4.7**, read-only (`grok-run.mjs ask --lean`, no write tools). I
 ## 9. Verification (rerun after the last edit)
 
 Rerun after the last edit on 2026-10-28. Screenshot: [knowledge-261028-2016-gates-terminal.png](knowledge-261028-2016-gates-terminal.png).
-- Haiku ran the suite first and caught one stale count in `test_ukmc_knowledge.py` (59/59 instead of 61/61). After the fix, Opus reran the full suite.
+- Haiku ran the suite first and caught one stale count in `test_ukmc_knowledge.py` (59/59 instead of 61/61). After that fix and the final review, Opus reran the full suite; the output below is that last run.
 - The builder check in `tests/test_ukmc_knowledge.py` resolves the builder as a sibling of the repo, so it is skipped inside a `.claude/worktrees/` checkout. It was also run against `~/Products/design-os-knowledge-builder`: 2 tests OK.
 
 ```text
@@ -199,10 +205,11 @@ build_examples: 16 skills verified up-to-date
 [exit 0]
 
 $ python3 tools/verify_ukmc.py
-files: 18 · anchors: 114 · failures: 0 · exempt blocks: 0
+FAIL: review.json did not pass independent review
+files: 18 · anchors: 114 · failures: 1 · exempt blocks: 0
 verified_claims: 61/61 · independent_sources: 26
-Decision: STOP_SUFFICIENT
-[exit 0]
+Decision: CONTINUE_GAP
+[exit 1]
 
 $ env PYTHONPATH=$HOME/Products/design-os-knowledge-builder/src python3 -m knowledge_builder.cli verify ./knowledge --claims
 [WARN] no ontology.yaml: legacy mode, UKMC.v1 checks only
@@ -216,7 +223,7 @@ $ env PYTHONPATH=$HOME/Products/design-os-knowledge-builder/src python3 -m knowl
 [*] Evaluating Stopping Gate for run: vn-design-os-261026
 --------------------------------------------------
 Decision: DEEPEN
-Reason:   Deficiencies detected: Saturation not yet reached (low-delta rounds 0/3, delta 2.5%), A viable probe remains. Probing further.
+Reason:   Deficiencies detected: Saturation not yet reached (low-delta rounds 0/3, delta 2.5%), A viable probe remains, Independent review has not passed. Probing further.
 Hard Gates Passed: True
 Saturation Passed: False
 --------------------------------------------------
@@ -225,7 +232,7 @@ Saturation Passed: False
 $ python3 -m unittest discover -s tests
 ..................................................................
 ----------------------------------------------------------------------
-Ran 66 tests in 5.525s
+Ran 66 tests in 5.488s
 
 OK
 [exit 0]
@@ -238,9 +245,9 @@ ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
 | Gate | Result |
 |---|---|
 | sync_shared, build_examples, self_check | pass |
-| `verify_ukmc.py` | 61/61 claims, 26 sources, 0 failures (STOP_SUFFICIENT under its own looser gate) |
+| `verify_ukmc.py` | 61/61 claims, 26 sources; 1 failure = review not passed → CONTINUE_GAP (exit 1, expected) |
 | `kb verify --claims` | 114 anchors, 0 failures |
-| `kb gate` | **DEEPEN** (exit 2). Hard gates pass; saturation 0/3; a probe remains |
+| `kb gate` | **DEEPEN** (exit 2). Hard gates pass; saturation 0/3; a probe remains; review not passed |
 | unittest | 66 tests OK |
 | protected files (`rules_*.py`, `evals/`, `pyproject.toml`, `.pre-commit-hooks.yaml`, `.github/`, `README*`, `CHANGELOG.md`) | untouched |
 
@@ -250,3 +257,5 @@ ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
 2. **Apply the protected-file replacements in §4?** These are the `rules_*.py` and `evals/` files; LEG007's logic can stay as is.
 3. **Make `tools/verify_ukmc.py` read saturation and open probes?** It reports STOP_SUFFICIENT while the builder reports DEEPEN.
 4. **Re-login to Codex** so a second, non-Grok reviewer can check this run.
+5. **The next run must replace `review.json` before any STOP.** The gate does not check that a review covers atoms added after it.
+6. **`tests/test_ukmc_knowledge.py` pins today's state** (`CONTINUE_GAP`/exit 1, `DEEPEN`/exit 2). It will fail by design once review and saturation pass; update it then.

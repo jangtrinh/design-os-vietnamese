@@ -24,16 +24,18 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
             text=True,
             check=False,
         )
-        self.assertEqual(
-            proc.returncode,
-            0,
-            f"verify_ukmc.py failed:\n{proc.stdout}\n{proc.stderr}",
-        )
+        # The latest independent review (review.json) did not pass, so the verifier
+        # honestly stops short of STOP. Every structural check must still hold, and the
+        # review must be the only failure.
+        self.assertEqual(proc.returncode, 1, f"verify_ukmc.py:\n{proc.stdout}\n{proc.stderr}")
+        output = proc.stdout + proc.stderr
+        failures = [line for line in output.splitlines() if line.startswith("FAIL:")]
+        self.assertEqual(failures, ["FAIL: review.json did not pass independent review"])
         self.assertIn("files: 18", proc.stdout)
         self.assertIn("verified_claims: 61/61", proc.stdout)
         self.assertIn("independent_sources: 26", proc.stdout)
-        self.assertIn("failures: 0", proc.stdout)
-        self.assertIn("Decision: STOP_SUFFICIENT", proc.stdout)
+        self.assertIn("failures: 1", proc.stdout)
+        self.assertIn("Decision: CONTINUE_GAP", proc.stdout)
 
     def test_sibling_knowledge_builder_if_installed(self) -> None:
         if not SIBLING_KB_SRC.is_dir():
