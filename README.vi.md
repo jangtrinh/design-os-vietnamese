@@ -84,10 +84,12 @@ repos:
         args: [--domain, ux, --register, ux-microcopy]
       - id: check-i18n-parity
         files: ^locales/(en|vi)\.json$
+        pass_filenames: false
+        args: [locales/en.json, locales/vi.json]
       - id: check-font-coverage
 ```
 
-`check-i18n-parity` nhận tất cả tệp khớp cùng lúc, nên hãy giới hạn `files:` ở đúng một cặp nguồn/đích. Mã hook: `validate-copy`, `check-i18n-parity`, `check-font-coverage`.
+`check-i18n-parity` cần danh mục nguồn đứng trước, đích đứng sau, nhưng pre-commit chỉ truyền các tệp đã staged theo thứ tự đường dẫn; vì vậy `files:` chỉ là điều kiện kích hoạt còn `args:` chỉ rõ cặp nguồn/đích (nguồn trước, ví dụ `values/strings.xml` trước `values-vi/strings.xml` với Android). Mã hook: `validate-copy`, `check-i18n-parity`, `check-font-coverage`.
 
 ---
 

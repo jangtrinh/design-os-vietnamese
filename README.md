@@ -98,10 +98,12 @@ repos:
         args: [--domain, ux, --register, ux-microcopy]
       - id: check-i18n-parity
         files: ^locales/(en|vi)\.json$
+        pass_filenames: false
+        args: [locales/en.json, locales/vi.json]
       - id: check-font-coverage
 ```
 
-`check-i18n-parity` receives every matched file at once, so restrict `files:` to one source/target pair. Hook ids are `validate-copy`, `check-i18n-parity` and `check-font-coverage`.
+`check-i18n-parity` needs the source catalog first and the target second, but pre-commit passes only the staged files in path order, so `files:` is just the trigger and `args:` names the pair explicitly (source first, e.g. `values/strings.xml` before `values-vi/strings.xml` for Android). Hook ids are `validate-copy`, `check-i18n-parity` and `check-font-coverage`.
 
 ---
 
