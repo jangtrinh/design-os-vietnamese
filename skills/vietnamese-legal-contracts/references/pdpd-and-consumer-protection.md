@@ -2,7 +2,7 @@
 
 # Personal Data Protection (PDPD) & Consumer Protection Compliance (`vietnamese-legal-contracts`)
 
-With the enactment of **Nghị định 13/2023/NĐ-CP (PDPD)**, the upcoming **Luật Dữ liệu 2024**, and the effective date of **Luật Bảo vệ quyền lợi người tiêu dùng 2023 (Luật số 19/2023/QH15 — có hiệu lực từ ngày 01/07/2024)**, standard Terms of Service (ToS), consumer contracts, and Data Processing Agreements (DPA) in Vietnam face heightened statutory oversight.
+With **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15** and **Nghị định 356/2025/NĐ-CP** in force from 01/01/2026 (replacing **Nghị định 13/2023/NĐ-CP**), **Luật Dữ liệu 60/2024/QH15**, and the effective date of **Luật Bảo vệ quyền lợi người tiêu dùng 2023 (Luật số 19/2023/QH15 — có hiệu lực từ ngày 01/07/2024)**, standard Terms of Service (ToS), consumer contracts, and Data Processing Agreements (DPA) in Vietnam face heightened statutory oversight.
 
 Drafting consumer terms without statutory guardrails exposes digital platforms to administrative sanctions, mandatory public rectifications, and nullification of key protective clauses.
 
@@ -45,16 +45,16 @@ Theo quy định tại **Điều 25 Luật Bảo vệ quyền lợi người ti�
 
 ---
 
-## 3. Nghị định 13/2023/NĐ-CP (PDPD): Kiến trúc Thỏa thuận Xử lý Dữ liệu Cá nhân (DPA)
+## 3. Luật 91/2025/QH15 & Nghị định 356/2025/NĐ-CP (PDPD): Kiến trúc Thỏa thuận Xử lý Dữ liệu Cá nhân (DPA)
 
-Nghị định 13/2023/NĐ-CP đặt ra chế định pháp lý toàn diện đầu tiên về bảo vệ dữ liệu cá nhân tại Việt Nam, phân định rõ ràng các chủ thể:
+Nghị định 13/2023/NĐ-CP là chế định toàn diện đầu tiên (hết hiệu lực từ 01/01/2026); Luật 91/2025/QH15 Điều 2 nay định nghĩa các chủ thể:
 
-| Khái niệm | Định nghĩa pháp lý (NĐ 13/2023/NĐ-CP) | Thuật ngữ chuẩn trong DPA |
+| Khái niệm | Định nghĩa pháp lý (Luật 91/2025/QH15 Điều 2) | Thuật ngữ chuẩn trong DPA |
 |---|---|---|
-| **Data Subject** | Cá nhân được dữ liệu cá nhân phản ánh | `Chủ thể dữ liệu` |
-| **Data Controller** | Tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân | `Bên Kiểm soát dữ liệu cá nhân` |
-| **Data Processor** | Tổ chức, cá nhân thực hiện việc xử lý dữ liệu thay mặt cho Bên Kiểm soát thông qua hợp đồng | `Bên Xử lý dữ liệu cá nhân` |
-| **Data Controller-cum-Processor** | Tổ chức, cá nhân vừa quyết định mục đích, phương tiện, vừa trực tiếp xử lý dữ liệu | `Bên Kiểm soát và xử lý dữ liệu cá nhân` |
+| **Data Subject** | Người được dữ liệu cá nhân phản ánh (khoản 5) | `Chủ thể dữ liệu` |
+| **Data Controller** | Cơ quan, tổ chức, cá nhân quyết định mục đích và phương tiện xử lý dữ liệu cá nhân (khoản 7) | `Bên Kiểm soát dữ liệu cá nhân` |
+| **Data Processor** | Cơ quan, tổ chức, cá nhân thực hiện việc xử lý dữ liệu cá nhân theo yêu cầu của bên kiểm soát dữ liệu cá nhân hoặc bên kiểm soát và xử lý dữ liệu cá nhân thông qua hợp đồng (khoản 8) | `Bên Xử lý dữ liệu cá nhân` |
+| **Data Controller-cum-Processor** | Cơ quan, tổ chức, cá nhân quyết định mục đích, phương tiện và trực tiếp xử lý dữ liệu cá nhân (khoản 9) | `Bên Kiểm soát và xử lý dữ liệu cá nhân` |
 
 ### 06 Điều khoản Bắt buộc trong Thỏa thuận DPA giữa Controller và Processor
 Hợp đồng hoặc thỏa thuận xử lý dữ liệu cá nhân (DPA) giữa Bên Kiểm soát và Bên Xử lý phải có các nội dung bắt buộc:
@@ -63,33 +63,30 @@ Hợp đồng hoặc thỏa thuận xử lý dữ liệu cá nhân (DPA) giữa 
 3. **Biện pháp kỹ thuật và tổ chức bảo vệ dữ liệu:** Cam kết áp dụng các biện pháp an ninh mạng, mã hóa (AES-256, TLS 1.3), phân quyền truy cập, kiểm soát nội bộ.
 4. **Thủ tục xử lý Sự cố vi phạm dữ liệu cá nhân (Personal Data Breach Notification):**
    - Bên Xử lý phải thông báo ngay lập tức cho Bên Kiểm soát khi phát hiện sự cố vi phạm an toàn dữ liệu.
-   - Bên Kiểm soát có trách nhiệm thông báo cho **Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05 — Bộ Công an)** theo Mẫu số 03 chậm nhất **72 giờ** kể từ khi phát hiện hành vi vi phạm (Điều 23).
-5. **Đánh giá tác động xử lý dữ liệu cá nhân (DPIA):** Phối hợp lập và lưu giữ Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân theo Điều 24 NĐ 13.
-6. **Chuyển dữ liệu cá nhân ra nước ngoài:** Phải lập Hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo Điều 25 và gửi Bộ Công an (A05) trong vòng 60 ngày kể từ ngày tiến hành xử lý.
+   - Bên Kiểm soát có trách nhiệm thông báo cho **cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an)** theo **Mẫu số 08 NĐ 356/2025/NĐ-CP** chậm nhất **72 giờ** kể từ khi phát hiện hành vi vi phạm (Điều 23 Luật 91/2025/QH15).
+5. **Đánh giá tác động xử lý dữ liệu cá nhân (DPIA):** Phối hợp lập và lưu giữ Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân theo Điều 21 Luật 91/2025/QH15 và Điều 19 NĐ 356/2025/NĐ-CP (nộp kèm Mẫu số 02a/02b trong 60 ngày).
+6. **Chuyển dữ liệu cá nhân ra nước ngoài:** Phải lập Hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo Điều 20 Luật 91/2025/QH15 và Điều 18 NĐ 356/2025/NĐ-CP, nộp cơ quan chuyên trách bảo vệ dữ liệu cá nhân trong 60 ngày kể từ ngày tiến hành chuyển dữ liệu (kèm Mẫu số 01a/01b).
 
 ---
 
-## 4. 11 Quyền Cốt lõi của Chủ thể Dữ liệu (Điều 9 NĐ 13/2023/NĐ-CP)
+## 4. Quyền của Chủ thể Dữ liệu (Điều 4 Luật 91/2025/QH15)
 
-Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 9 Nghị định 13/2023/NĐ-CP**:
+Bất kỳ Chính sách Bảo mật (Privacy Policy) hoặc Điều khoản PDPD nào công bố cho người dùng đều bắt buộc phải liệt kê đầy đủ các quyền của chủ thể dữ liệu theo **Điều 4 khoản 1 Luật 91/2025/QH15**:
 
-1. **Quyền được biết:** Được thông báo về hoạt động xử lý dữ liệu cá nhân của mình thông qua Chính sách này.
-2. **Quyền đồng ý:** Đồng ý hoặc không đồng ý cho phép xử lý dữ liệu cá nhân. Sự đồng ý phải được thể hiện rõ ràng, tự nguyện, có thể in ấn hoặc sao chép được.
-3. **Quyền truy cập:** Được truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa dữ liệu cá nhân của mình.
-4. **Quyền rút lại sự đồng ý:** Được rút lại sự đồng ý đã đưa ra trước đó. Việc rút lại không ảnh hưởng đến tính hợp pháp của các hoạt động xử lý dữ liệu đã thực hiện trước đó.
-5. **Quyền xóa dữ liệu:** Được xóa hoặc yêu cầu xóa dữ liệu cá nhân của mình.
-6. **Quyền hạn chế xử lý dữ liệu:** Được yêu cầu hạn chế việc xử lý dữ liệu cá nhân trong một số trường hợp nhất định.
-7. **Quyền cung cấp dữ liệu:** Được yêu cầu Bên Kiểm soát dữ liệu cung cấp cho mình bản sao dữ liệu cá nhân của mình.
-8. **Quyền phản đối xử lý dữ liệu:** Được phản đối Bên Kiểm soát dữ liệu xử lý dữ liệu cá nhân của mình nhằm ngăn chặn hoặc hạn chế việc tiết lộ hoặc sử dụng cho mục đích quảng cáo, tiếp thị.
-9. **Quyền khiếu nại, tố cáo, khởi kiện:** Được khiếu nại, tố cáo hoặc khởi kiện theo quy định của pháp luật.
-10. **Quyền yêu cầu bồi thường thiệt hại:** Được yêu cầu bồi thường thiệt hại theo quy định của pháp luật khi xảy ra vi phạm quy định về bảo vệ dữ liệu cá nhân của mình.
-11. **Quyền tự bảo vệ:** Được tự bảo vệ theo quy định của Bộ luật Dân sự, luật khác có liên quan và Nghị định này.
+1. **Được biết** về hoạt động xử lý dữ liệu cá nhân (điểm a).
+2. **Đồng ý hoặc không đồng ý, yêu cầu rút lại sự đồng ý** cho phép xử lý dữ liệu cá nhân (điểm b).
+3. **Xem, chỉnh sửa hoặc yêu cầu chỉnh sửa** dữ liệu cá nhân (điểm c).
+4. **Yêu cầu cung cấp, xóa, hạn chế xử lý** dữ liệu cá nhân (gồm quyền yêu cầu xóa dữ liệu cá nhân); **gửi yêu cầu phản đối** xử lý dữ liệu cá nhân (điểm d).
+5. **Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại** theo quy định của pháp luật (điểm đ).
+6. **Yêu cầu cơ quan có thẩm quyền** hoặc cơ quan, tổ chức, cá nhân liên quan thực hiện các biện pháp, giải pháp bảo vệ dữ liệu cá nhân của mình (điểm e).
+
+`Tự bảo vệ dữ liệu cá nhân` nay là **nghĩa vụ** (Điều 4 khoản 2 điểm a), không còn là một quyền như trong danh sách 11 quyền của Điều 9 NĐ 13/2023/NĐ-CP (đã hết hiệu lực).
 
 ---
 
 ## 5. Hồ sơ Đánh giá Tác động Xử lý Dữ liệu Cá nhân (DPIA — Điều 24)
 
-Theo **Điều 24 Nghị định 13/2023/NĐ-CP**, Bên Kiểm soát dữ liệu và Bên Kiểm soát và xử lý dữ liệu cá nhân bắt buộc phải lập và lưu giữ **Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân** kể từ thời điểm bắt đầu xử lý dữ liệu.
+Theo **Điều 21 Luật 91/2025/QH15** và **Điều 19 Nghị định 356/2025/NĐ-CP** (trước đây Điều 24 NĐ 13/2023/NĐ-CP), Bên Kiểm soát dữ liệu và Bên Kiểm soát và xử lý dữ liệu cá nhân bắt buộc phải lập và lưu giữ **Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân** kể từ thời điểm bắt đầu xử lý dữ liệu.
 
 Hồ sơ DPIA bao gồm các tài liệu bắt buộc sau:
 1. Thông tin và chi tiết liên lạc của Bên Kiểm soát dữ liệu và Bộ phận Bảo vệ dữ liệu cá nhân (DPO).
@@ -108,7 +105,7 @@ Hồ sơ DPIA bao gồm các tài liệu bắt buộc sau:
 
 ## 6. Chuyển Dữ liệu Cá nhân ra Nước ngoài (Cross-Border Transfer — Điều 25)
 
-Hoạt động chuyển dữ liệu cá nhân của công dân Việt Nam ra nước ngoài (bao gồm lưu trữ trên máy chủ đám mây đặt ngoài lãnh thổ Việt Nam như AWS Singapore, GCP, Azure) phải tuân thủ nghiêm ngặt quy định tại **Điều 25 Nghị định 13/2023/NĐ-CP**:
+Hoạt động chuyển dữ liệu cá nhân của công dân Việt Nam ra nước ngoài (bao gồm lưu trữ trên máy chủ đám mây đặt ngoài lãnh thổ Việt Nam như AWS Singapore, GCP, Azure) phải tuân thủ nghiêm ngặt quy định tại **Điều 20 Luật 91/2025/QH15** và **Điều 17–18 Nghị định 356/2025/NĐ-CP** (trước đây Điều 25 NĐ 13/2023/NĐ-CP):
 
 1. **Điều kiện chuyển giao:**
    - Có sự đồng ý rõ ràng của chủ thể dữ liệu về việc chuyển dữ liệu cá nhân ra nước ngoài sau khi đã được thông báo đầy đủ về các rủi ro tiềm ẩn.

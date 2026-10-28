@@ -30,7 +30,7 @@ The table below is parsed by `validate_copy.py` at runtime; each row acts as an 
 | denial of service | `từ chối cung cấp dịch vụ máy tính` | `tấn công từ chối dịch vụ` / `DoS` | Thuật ngữ chuẩn Luật ATTT mạng 2015 | error |
 | distributed denial of service | `tấn công từ chối dịch vụ phân tán thô sơ` | `tấn công từ chối dịch vụ phân tán` / `DDoS` | Quy chuẩn thuật ngữ kỹ thuật NCSC | error |
 | zero-day vulnerability | `lỗ hổng ngày số không` | `lỗ hổng zero-day` / `lỗ hổng chưa có bản vá` | Lỗ hổng bảo mật chưa được công bố bản vá | error |
-| data breach | `vi phạm dữ liệu đổ vỡ` | `sự cố lộ lọt dữ liệu` / `vi phạm dữ liệu cá nhân` | Nghị định 13/2023/NĐ-CP | error |
+| data breach | `vi phạm dữ liệu đổ vỡ` | `sự cố lộ lọt dữ liệu` / `vi phạm dữ liệu cá nhân` | Luật 91/2025/QH15 | error |
 | data exfiltration | `lọc dữ liệu bất hợp pháp` | `trích xuất dữ liệu trái phép` / `thất thoát dữ liệu` | Hành vi đánh cắp dữ liệu ra ngoài mạng nội bộ | error |
 | privilege escalation | `leo thang đặc quyền chính trị` | `leo thang đặc quyền` / `nâng quyền trái phép` | Kỹ thuật chiếm quyền root/administrator | error |
 | security operations center | `trung tâm hoạt động bảo an` | `trung tâm điều hành an toàn thông tin` / `SOC` | Tổ chức giám sát an ninh mạng 24/7 | error |

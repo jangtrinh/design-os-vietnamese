@@ -2,7 +2,7 @@
 
 # Learning Science, Cognitive Psychology, & EdTech Architecture (`design-os-vietnamese`)
 
-This guide bridges cognitive learning science and native Vietnamese EdTech copy design. It provides concrete specifications for Spaced Repetition systems, Item Response Theory (IRT) adaptive assessment, Zone of Proximal Development (ZPD) scaffolding, pediatric acoustic pronunciation scoring (GOP across Vietnamese 6 tones), Self-Determination Theory (SDT), and statutory child data protection under **Nghị định 13/2023/NĐ-CP Điều 20**.
+This guide bridges cognitive learning science and native Vietnamese EdTech copy design. It provides concrete specifications for Spaced Repetition systems, Item Response Theory (IRT) adaptive assessment, Zone of Proximal Development (ZPD) scaffolding, pediatric acoustic pronunciation scoring (GOP across Vietnamese 6 tones), Self-Determination Theory (SDT), and statutory child data protection under **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 24**.
 
 ---
 
@@ -105,15 +105,16 @@ Overjustification occurs when an extrinsic reward (XP, badges, digital gems) rep
 
 ---
 
-## 6. Child Data Protection & Double Consent (Nghị định 13/2023/NĐ-CP Điều 20 — `EDU010`)
+## 6. Child Data Protection & Double Consent (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 Điều 24 — `EDU010`)
 
-Vietnam's Personal Data Protection Decree imposes strict legal obligations on EdTech platforms handling minor data:
+Vietnam's Personal Data Protection Law (Luật 91/2025/QH15, in force from 01/01/2026) imposes these obligations on EdTech platforms handling minor data:
 
-### Double Consent Requirement
-1. **Children from 7 to under 16 years old:**
-   - Platform must obtain verified consent from **both the child AND the child's parent or legal guardian** (`phụ huynh` hoặc `người giám hộ`).
-2. **Children under 7 years old:**
-   - Platform must obtain verified consent from the parent or legal guardian.
+### Consent for Children (Luật 91/2025/QH15 Điều 24 khoản 2)
+1. **Any child:**
+   - The legal representative (`người đại diện theo pháp luật`, usually `cha, mẹ` or `người giám hộ`) exercises the child's data rights, including giving or withdrawing consent (Điều 4 khoản 1 điểm b). Onboarding must obtain that person's verified consent.
+2. **Publishing or disclosing a child's private-life information, child aged 7 or older:**
+   - Consent is required from **both the child AND the legal representative**. The Law sets no upper age bound for this rule.
+3. **History:** the former "7 to under 16" double-consent band came from Nghị định 13/2023/NĐ-CP Điều 20, no longer in force.
 
 ### Statutory UX Onboarding Requirements (`EDU010`)
 Any registration, profile setup, microphone audio access, or behavioral telemetry collection screen must explicitly include:

@@ -62,5 +62,5 @@ This checklist is an authoritative quality gate for medical copywriters, hospita
 - [ ] **14. Định dạng ngày tháng năm và số điện thoại (`DATE001`, `PHONE001`):**
   - Ngày tháng năm viết chuẩn `dd/MM/yyyy`: `26/10/2026` (không viết ngược theo chuẩn Mỹ `MM/dd/yyyy`).
   - Số điện thoại quốc tế loại bỏ số 0 đầu: `+84 912 345 678` (không viết `+84 0912...`).
-- [ ] **15. Bảo mật dữ liệu cá nhân sức khỏe (Nghị định 13/2023/NĐ-CP):**
+- [ ] **15. Bảo mật dữ liệu cá nhân sức khỏe (Luật 91/2025/QH15 Điều 26; Nghị định 356/2025/NĐ-CP):**
   - Đã che mờ hoặc xóa bỏ 100% thông tin định danh cá nhân (tên, số CCCD, hình ảnh nhận dạng) khi công bố ca bệnh học tập hoặc truyền thông.

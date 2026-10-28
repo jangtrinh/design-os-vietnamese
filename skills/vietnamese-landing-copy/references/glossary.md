@@ -95,4 +95,4 @@ Vietnamese digital marketing and landing page conversion copy has established co
 
 4. **`Chính sách riêng tư` vs `Chính sách bảo mật`:**
    - `Riêng tư` translates personal intimacy (privacy of thoughts or personal life).
-   - The statutory and technical term under Vietnamese law (Luật An toàn thông tin mạng & Nghị định 13/2023/NĐ-CP) is strictly `Chính sách bảo mật` or `Bảo vệ dữ liệu cá nhân`.
+   - The statutory and technical term under Vietnamese law (Luật An toàn thông tin mạng & Luật 91/2025/QH15) is strictly `Chính sách bảo mật` or `Bảo vệ dữ liệu cá nhân`.

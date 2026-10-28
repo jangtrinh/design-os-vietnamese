@@ -1,0 +1,55 @@
+{
+  "run": "6-final-full-scope",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 7,
+  "secs": 631,
+  "verdict": {
+    "reviewed_atoms": 45,
+    "entailed": 40,
+    "overreach": [
+      {
+        "id": "claim-ads-law-75-repeals",
+        "minor": false,
+        "why": "Shown Điều 1 repeals Điều 8 khoản 13. No shown provision rewrites khoản 3 or khoản 10, and the truncated article has no count showing khoản 11 unchanged."
+      },
+      {
+        "id": "claim-pdpd-silence-fine-nd330",
+        "minor": true,
+        "why": "Điều 43 khoản 2 điểm b and the 50-70 million fine match. Điều 7 khoản 1, and that Mục 6 sums are organization amounts, is not in the shown article."
+      },
+      {
+        "id": "claim-pdpd-default-consent-fine-nd330",
+        "minor": true,
+        "why": "Điều 43 khoản 1 điểm c and the 30-50 million fine match. The Điều 7 khoản 1 organization-amount rider is not in the shown article."
+      },
+      {
+        "id": "claim-fin-law56-register-status",
+        "minor": false,
+        "why": "Shown metadata is only NotInForce and legislationDate 2024-11-29. The effFrom/effTo/Hết hiệu lực toàn bộ quote is not in that block, and nothing shows that no replacement is named."
+      },
+      {
+        "id": "claim-med-ad-beyond-declaration-evidence",
+        "minor": true,
+        "why": "Điểm đ requires scientific proof for content ngoài công dụng, tính năng. The statement says only beyond the uses and drops tính năng."
+      }
+    ],
+    "wrong": [],
+    "variant_table_issues": [
+      {
+        "rule": "MED002",
+        "form": "thay thế thuốc chữa bệnh",
+        "why": "Class attested-in-statute needs the same sense. The quote is the mandated denial không có tác dụng thay thế thuốc chữa bệnh, not a cure claim."
+      }
+    ],
+    "paragraphs_reviewed": 9,
+    "unsupported_paragraphs": [
+      {
+        "paragraph_start": "The penalty decree, Nghị định 330/2026/NĐ-CP (in force from",
+        "why": "The no-A05 sentence claims a search of Law 91, Decree 356 and Decree 330. This paragraph's anchors are only Điều 80, Điều 39 and Điều 55."
+      }
+    ],
+    "passed": false,
+    "notes": "Non-minor: Law 75 rewrite/unchanged claim is not in the shown Điều 1, and Law 56 effFrom/effTo is not in the shown JSON-LD. MED002 labels a disclaimer denial as an attested cure claim. The ND 330 paragraph's A05 search lacks its own anchor. Minor: unshown Điều 7 riders and dropped tính năng."
+  }
+}

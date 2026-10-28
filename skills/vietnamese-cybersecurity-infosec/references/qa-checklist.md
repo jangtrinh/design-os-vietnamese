@@ -11,13 +11,13 @@ This checklist is an authoritative quality gate for Chief Information Security O
 - [ ] **1. Thời hạn thông báo rò rỉ dữ liệu cá nhân 72 giờ gửi Cục A05 (`SEC001`):**
   - Mọi tài liệu thông báo vi phạm bảo vệ dữ liệu cá nhân (`breach-notification`) phải ghi rõ:
     - Cơ quan tiếp nhận: `Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05) - Bộ Công an`.
-    - Thời hạn thông báo: `trong thời hạn 72 giờ kể từ khi phát hiện vi phạm` theo Điều 23 Nghị định 13/2023/NĐ-CP (Mẫu số 03a).
+    - Thời hạn thông báo: `trong thời hạn 72 giờ kể từ khi phát hiện vi phạm` theo Điều 23 Luật 91/2025/QH15 (Mẫu số 08, Nghị định 356/2025/NĐ-CP).
   - Tuyệt đối không quy định thời hạn vượt quá 72 giờ (ví dụ: ghi 5 ngày, 7 ngày).
 - [ ] **2. Thẩm định cấp độ an toàn hệ thống thông tin Cấp độ 1 đến Cấp độ 5 (`SEC002`):**
   - Báo cáo đánh giá hệ thống và hồ sơ đề xuất cấp độ tuân thủ nghiêm ngặt khung Cấp độ 1 đến Cấp độ 5 theo Nghị định 85/2016/NĐ-CP và Thông tư 12/2022/TT-BTTTT.
   - Tuyệt đối không tự ý bịa đặt hoặc sử dụng các danh xưng: `ATTT cấp độ 6`, `cấp độ 7`, `tiêu chuẩn bảo mật cấp độ 6`.
 - [ ] **3. Phân loại chuẩn xác dữ liệu cá nhân cơ bản và nhạy cảm (`SEC006`):**
-  - Phân loại chính xác theo Điều 2 Khoản 4 Nghị định 13/2023/NĐ-CP:
+  - Phân loại chính xác theo Điều 4 Nghị định 356/2025/NĐ-CP (danh mục dữ liệu cá nhân nhạy cảm):
     - `Dữ liệu cá nhân nhạy cảm`: Dữ liệu sức khỏe/bệnh án, thông tin tài khoản/số dư ngân hàng, dữ liệu sinh trắc học, dữ liệu định vị cá nhân.
     - Áp dụng các biện pháp bảo vệ tăng cường và chỉ định bộ phận/nhân sự bảo vệ dữ liệu (DPO).
 - [ ] **4. Báo cáo sự cố an toàn thông tin mạng theo Điều 20 Luật ATTT mạng 2015:**

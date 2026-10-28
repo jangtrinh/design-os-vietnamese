@@ -1,6 +1,6 @@
 ---
 name: vietnamese-landing-copy
-description: Writes, optimizes, and audits high-converting native Vietnamese (vi-VN) landing pages and digital marketing copy across 6 critical verticals — SaaS/AI developer tools, FinTech & digital banking, E-Commerce & D2C, Real Estate & luxury hospitality, Healthcare & aesthetics, and Enterprise B2B solutions. Master of Persuade-mode scroll architecture, benefit-driven Hero headline formulas, conventional CTAs, lead-form PDPA consent (Nghị định 13/2023/NĐ-CP), statutory e-commerce footer disclosures (Nghị định 52/2013/NĐ-CP & 85/2021/NĐ-CP Bộ Công Thương), and typography/locale gates. Fixes translationese calques, passive agent corruptions, illegal advertising superlatives, and broken Unicode or number formatting.
+description: Writes, optimizes, and audits high-converting native Vietnamese (vi-VN) landing pages and digital marketing copy across 6 critical verticals — SaaS/AI developer tools, FinTech & digital banking, E-Commerce & D2C, Real Estate & luxury hospitality, Healthcare & aesthetics, and Enterprise B2B solutions. Master of Persuade-mode scroll architecture, benefit-driven Hero headline formulas, conventional CTAs, lead-form PDPA consent (Luật 91/2025/QH15 & Nghị định 356/2025/NĐ-CP), statutory e-commerce footer disclosures (Nghị định 52/2013/NĐ-CP & 85/2021/NĐ-CP Bộ Công Thương), and typography/locale gates. Fixes translationese calques, passive agent corruptions, illegal advertising superlatives, and broken Unicode or number formatting.
 license: PolyForm-Shield-1.0.0
 metadata:
   version: "2.0.0"
@@ -34,7 +34,7 @@ This skill equips DESIGN:OS agents with deep, culturally calibrated, legally com
    Under **Điều 8 khoản 11 Luật Quảng cáo 16/2012/QH13**, claiming `số 1`, `tốt nhất`, `duy nhất`, or `hàng đầu` without a certified market survey or official award certificate is illegal and penalized up to **200.000.000 ₫**. Replace rankings with countable facts (*"Được hơn 50.000 doanh nghiệp tin dùng"*) or aspirational statements.
 
 4. **Law 4: Absolute Statutory Compliance for Leads & Footers.**
-   - **PDPA Lead Forms (`LND002`):** Under **Nghị định 13/2023/NĐ-CP**, personal data capture forms must feature an un-ticked consent checkbox, an explicit processing purpose statement, and a direct link to `Chính sách bảo mật`.
+   - **PDPA Lead Forms (`LND002`):** Under **Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 & Nghị định 356/2025/NĐ-CP** (Điều 9; NĐ 356 Điều 6), personal data capture forms must feature an un-ticked consent checkbox, an explicit processing purpose statement, and a direct link to `Chính sách bảo mật`.
    - **E-Commerce Footers (`LND003`):** Under **Nghị định 52/2013/NĐ-CP & 85/2021/NĐ-CP**, online commerce footers must show company name, Tax Code / Enterprise Registration Number (`MST / Mã số doanh nghiệp`), registered headquarters address, and the verified `Đã thông báo Bộ Công Thương` badge.
 
 ---

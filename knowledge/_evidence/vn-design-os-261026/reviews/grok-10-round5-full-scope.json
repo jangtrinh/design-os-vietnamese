@@ -1,0 +1,24 @@
+{
+  "run": "10-round5-full-scope",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 10,
+  "secs": 550,
+  "verdict": {
+    "reviewed_atoms": 51,
+    "entailed": 50,
+    "overreach": [
+      {
+        "id": "claim-pdpd-nd356-scope",
+        "minor": true,
+        "why": "Điều 1 names Luật Bảo vệ dữ liệu cá nhân and the agency and portal measures, but does not print 91/2025/QH15."
+      }
+    ],
+    "wrong": [],
+    "variant_table_issues": [],
+    "paragraphs_reviewed": 33,
+    "unsupported_paragraphs": [],
+    "passed": true,
+    "notes": "Quotes, counts, dates and amounts match the shown articles. A49 adds law number 91/2025/QH15, absent from Điều 1. Owner kept MED002 phrase statutory; the statute mandates it only inside the negated disclaimer."
+  }
+}

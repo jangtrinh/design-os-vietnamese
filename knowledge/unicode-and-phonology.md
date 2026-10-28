@@ -8,12 +8,14 @@ when:
   - "Configuring Telex/VNI input handlers in React, Vue, SwiftUI, or Flutter"
   - "Resolving new-style (hoà, thuỷ) vs old-style (hòa, thủy) tone placement"
 trust_tier: "verified"
-version: "3.0.0"
+version: "3.1.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/01-unicode-cldr-orthography-corpus.md"
     sha256: "50a85a767aeee5790aa442deb2346390d7f6bce8a87676d22bdb4c2b1b0958ae"
   - uri: "_evidence/vn-design-os-261026/sources/04-engine-execution-verification-log.txt"
     sha256: "4149a4846143aa45aec3a7089226ddf8f8e791c97c437acb311b2d9910bdf4ef"
+  - uri: "_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt"
+    sha256: "abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b"
 ---
 
 # Vietnamese Unicode Normalization (NFC), Orthography (Decision 1989/QĐ-BGDĐT), and IME Composition
@@ -65,6 +67,23 @@ Closed syllables ending in a consonant or semivowel (`toàn`, `hoàn`, `doanh`, 
 
 Rule `TONE001` enforces intra-document consistency across lowercase, Title Case, and ALL CAPS occurrences of `oa`/`oe`/`uy`, and supports automated normalization via `--fix-tone new` or `--fix-tone old`.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/01-unicode-cldr-orthography-corpus.md" sha256="50a85a767aeee5790aa442deb2346390d7f6bce8a87676d22bdb4c2b1b0958ae" quote="Rule TONE001 enforces intra-document consistency across lowercase, Title Case, and ALL CAPS occurrences of oa/oe/uy, and supports automated normalization via --fix-tone new or --fix-tone old." -->
+
+Primary text of Quyết định 1989/QĐ-BGDĐT (25/5/2018), frozen from a mirror (hoatieu.vn). Its scope is the general-education curriculum and textbooks; it is not binding on product UI copy.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="BAN HÀNH QUY ĐỊNH VỀ CHÍNH TẢ TRONG CHƯƠNG TRÌNH, SÁCH GIÁO KHOA GIÁO DỤC PHỔ THÔNG" -->
+
+Điều 8 puts the tone mark on the letter that writes the main vowel. Its own examples are `hoà`, `hoá`, `thuỷ`, `khoẻ`, which is the modern style for `oa`/`oe`/`uy`.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Trường hợp âm chính của âm tiết được ghi bằng một chữ cái, dấu thanh được đặt trên hoặc dưới chữ cái ghi âm chính của mỗi âm tiết, ví dụ: mái nhà, hoà nhạc, quý hoá, thuỷ thủ, mạnh khoẻ, trí tuệ,..." -->
+
+Two-letter main vowels: `ia`, `ua`, `ưa` take the mark on the first letter; `iê`, `yê`, `uô`, `uơ` on the second.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Đối với các kí hiệu ia, ua, ưa, dấu thanh đặt trên hoặc dưới chữ cái thứ nhất, ví dụ: bìa, lụa, lửa,..." -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Đối với các kí hiệu iê, yê, uô, uơ, dấu thanh đặt trên hoặc dưới chữ cái thứ hai, ví dụ: biển, thuyền, nhuộm, được,..." -->
+
+The decision states the placement rule, not the claim that styles diverge only on `oa`/`oe`/`uy`; that narrower claim is an inference from Điều 8 and rests on the project corpus above.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Trường hợp âm chính của âm tiết được ghi bằng một chữ cái, dấu thanh được đặt trên hoặc dưới chữ cái ghi âm chính của mỗi âm tiết, ví dụ: mái nhà, hoà nhạc, quý hoá, thuỷ thủ, mạnh khoẻ, trí tuệ,..." -->
+
+Related textbook rules: a bare `i` after an initial consonant is written `i` (`kỉ niệm`, `lí luận`, `mĩ thuật`), and decimals use a comma.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Trường hợp âm i đứng ngay sau phụ âm đầu thì được viết bằng chữ i, ví dụ: hi vọng, kỉ niệm, lí luận, mĩ thuật, bác sĩ, tỉ lệ,..." -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/16-mirror-qd-1989-qd-bgddt-2018-chinh-ta-sgk.txt" sha256="abf5c4e412c53330c2b4f4b53fe1a4210d42f3d8de9a2b2c04138c72863d6d9b" quote="Khi viết các số thập phân, sử dụng dấu phẩy để ngăn cách giữa phần nguyên và phần thập phân, ví dụ: 3,8; 5,21; 10,43,..." -->
 
 ### 4. Telex/VNI IME Composition Safety and CLDR Collation
 

@@ -31,12 +31,12 @@ Shared across every skill in `design-os-vietnamese`. In Vietnam, copywriting def
 
 ## 2. Personal Data Protection & Consent (`PROD004`)
 
-- **Statute:** **Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân (PDPD)** & **Luật Bảo vệ dữ liệu cá nhân**.
+- **Statute (from 01/01/2026):** **Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15** & **Nghị định 356/2025/NĐ-CP** (detailing the Law). **Nghị định 13/2023/NĐ-CP is no longer in force** from 01/01/2026 (NĐ 356/2025 Điều 42 khoản 2); cite it only as history. Processing already under way that was consented or agreed under NĐ 13/2023 before that date continues without new consent (Luật 91/2025 Điều 39 khoản 1).
 - **Mandatory Lead-Form & Onboarding Requirements:**
-  1. **Express, Purpose-Bound Consent (Điều 11):** Consent copy must explicitly state **what data** is collected and **for what specific purpose** (`nhằm mục đích...` / `để phục vụ...`), and link to the full `Chính sách bảo mật` / `Chính sách bảo vệ dữ liệu cá nhân`.
-  2. **No Pre-Ticked Boxes or Silence:** Silence or non-response is **not** valid consent. Checkboxes must render unchecked by default.
+  1. **Express, Purpose-Bound Consent (Luật 91/2025 Điều 9):** Consent copy must explicitly state **what data** is collected and **for what specific purpose** (`nhằm mục đích...` / `để phục vụ...`), and link to the full `Chính sách bảo mật` / `Chính sách bảo vệ dữ liệu cá nhân`.
+  2. **No Pre-Ticked Boxes or Silence:** Silence or non-response is **not** valid consent (Luật 91/2025 Điều 9 khoản 4 điểm d). Default-on consent is banned (NĐ 356/2025 Điều 6 khoản 3). Checkboxes must render unchecked by default.
   3. **Unbundled Marketing Consent:** Transactional/service processing consent must be separated from promotional/marketing consent (use two independent checkboxes when both apply).
-  4. **Children's Personal Data (Điều 20):** For children aged **7 to under 16**, processing personal data requires **Double Consent (Sự đồng ý kép)**: verified consent from the child **AND** verified consent from a parent or legal guardian (`cha, mẹ hoặc người giám hộ hợp pháp`), plus age verification prior to collection.
+  4. **Children's Personal Data (Luật 91/2025 Điều 24):** The legal representative exercises the child's data rights. To **publish or disclose** private-life information of a child **aged 7 or older**, get **Double Consent (Sự đồng ý kép)**: the child **AND** the legal representative (`người đại diện theo pháp luật`). The Law sets no upper age bound in that clause (the former "7 to under 16" rule came from NĐ 13/2023 Điều 20). Verify age before collection.
 
 ---
 

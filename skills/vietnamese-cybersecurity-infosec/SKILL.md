@@ -1,6 +1,6 @@
 ---
 name: vietnamese-cybersecurity-infosec
-description: Drafts, localizes, and audits native-quality Vietnamese (vi-VN) cybersecurity incident communications, personal data breach notifications under Decree 13/2023/NĐ-CP (PDPD 72-hour A05 notification), 5-tier information system security assessments under Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT, vulnerability disclosures (CVE/CVSS advisories), and penetration testing reports. Enforces standard Vietnamese InfoSec terminology, eliminates awkward translationese calques, and guards against credential solicitation and sensitive data misclassification.
+description: Drafts, localizes, and audits native-quality Vietnamese (vi-VN) cybersecurity incident communications, personal data breach notifications under Law 91/2025/QH15 Article 23 and Decree 356/2025/NĐ-CP (PDPD 72-hour notification to the Ministry of Public Security, Mẫu số 08), 5-tier information system security assessments under Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT, vulnerability disclosures (CVE/CVSS advisories), and penetration testing reports. Enforces standard Vietnamese InfoSec terminology, eliminates awkward translationese calques, and guards against credential solicitation and sensitive data misclassification.
 version: "5.0.0"
 author: "DESIGN:OS Vietnamese"
 license: "PolyForm-Shield-1.0.0"
@@ -11,7 +11,7 @@ metadata:
 
 # Vietnamese Cybersecurity & InfoSec Compliance (`vietnamese-cybersecurity-infosec`)
 
-In Vietnamese cybersecurity governance, communication failures carry **immediate statutory penalties and severe operational liabilities**. Reporting a personal data breach after the statutory 72-hour deadline breaches Article 23 of Decree 13/2023/NĐ-CP; claiming a system is certified to non-existent "ATTT Cấp độ 6" violates Decree 85/2016/NĐ-CP; soliciting user passwords or OTPs in security advisories mimics phishing tactics; and omitting CVSS ratings or remediation patches in vulnerability notices cripples enterprise incident response.
+In Vietnamese cybersecurity governance, communication failures carry **immediate statutory penalties and severe operational liabilities**. Reporting a personal data breach after the statutory 72-hour deadline breaches Article 23 of Law 91/2025/QH15; claiming a system is certified to non-existent "ATTT Cấp độ 6" violates Decree 85/2016/NĐ-CP; soliciting user passwords or OTPs in security advisories mimics phishing tactics; and omitting CVSS ratings or remediation patches in vulnerability notices cripples enterprise incident response.
 
 This skill equips Security Operations Centers (SOC), Computer Security Incident Response Teams (CSIRT), penetration testers, and Chief Information Security Officers (CISO) with verified Vietnamese phrasing, statutory incident notification procedures, and automated linter validation.
 
@@ -19,7 +19,7 @@ This skill equips Security Operations Centers (SOC), Computer Security Incident 
 
 ## When to Use
 
-- **Drafting Statutory Breach Notifications (`breach-notification`):** Authoring formal notifications to the Department of Cybersecurity and High-Tech Crime Prevention (Cục A05 - Bộ Công an) within the mandatory 72-hour window under Article 23 of Decree 13/2023/NĐ-CP.
+- **Drafting Statutory Breach Notifications (`breach-notification`):** Authoring formal notifications to the cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) within the mandatory 72-hour window under Article 23 of Law 91/2025/QH15, on Mẫu số 08 of Decree 356/2025/NĐ-CP.
 - **Authoring Vulnerability Advisories (`security-advisory`):** Writing CVE bulletins and NCSC/VNCERT coordination notices containing CVSS severity ratings, attack vectors, and vendor patch recommendations.
 - **Publishing Penetration Testing Reports (`pentest-report`):** Structuring system assessment findings and security level proposals aligned strictly with Levels 1–5 under Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT.
 - **Auditing SOC Communications & Microcopy:** Eliminating machine-translated terminology (e.g. replacing `tấn công câu cá` with `tấn công giả mạo`) and preventing insecure credential requests.
@@ -47,12 +47,12 @@ python3 shared/scripts/validate_copy.py pentest.md --domain vietnamese-cybersecu
 
 | Rule ID | Severity | Statutory / Technical Anchor | Defect Description & Remediation |
 |---|---|---|---|
-| `SEC001` | `ERROR` | Điều 23 Nghị định 13/2023/NĐ-CP | Personal data breach notification stating a deadline exceeding 72 hours, or omitting notification to Cục A05 Bộ Công an and the 72-hour timeframe. |
+| `SEC001` | `ERROR` | Điều 23 Luật 91/2025/QH15 | Personal data breach notification stating a deadline exceeding 72 hours, or omitting notification to the cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) and the 72-hour timeframe. |
 | `SEC002` | `ERROR` | Nghị định 85/2016 & Thông tư 12/2022 | Fabricated information system security level above Level 5 (`Cấp độ 6`, `Cấp độ 7`, `ATTT cấp 6`). Vietnamese law strictly recognizes only Levels 1 to 5. |
 | `SEC003` | `WARN` | VNCERT/CC & NCSC Glossary | Awkward machine-translated InfoSec calques (`cuộc tấn công câu cá` → `tấn công giả mạo`, `mã độc chuộc lỗi` → `mã độc tống tiền`, `kỹ thuật xã hội` → `tấn công phi kỹ thuật`). |
 | `SEC004` | `ERROR` | OWASP & Phishing Prevention Baseline | Insecure credential solicitation asking users to send passwords, OTPs, PINs, or CVVs via email, text, or unauthenticated forms. |
 | `SEC005` | `ERROR` | NCSC & CVE Standard Protocol | Security advisory missing mandatory vulnerability severity rating (`Mức độ nghiêm trọng` / `CVSS`) or remediation guidance (`Biện pháp khắc phục` / `Bản vá`). |
-| `SEC006` | `WARN` | Điều 2 Khoản 4 Nghị định 13/2023/NĐ-CP | Misclassifying health, financial/banking, biometric, or location data as basic personal data instead of sensitive personal data (`dữ liệu cá nhân nhạy cảm`). |
+| `SEC006` | `WARN` | Điều 2 khoản 3 Luật 91/2025/QH15; Điều 4 Nghị định 356/2025/NĐ-CP | Misclassifying health, financial/banking, biometric, or location data as basic personal data instead of sensitive personal data (`dữ liệu cá nhân nhạy cảm`). |
 
 ---
 
@@ -77,7 +77,7 @@ To draft and audit high-assurance Vietnamese cybersecurity instruments, follow t
    - Determine whether the event involves personal data leakage (triggering PDPD Decree 13) or infrastructure intrusion (triggering Decree 85/2016/NĐ-CP).
    - Classify all affected data assets: identify sensitive personal data (banking, biometric, health, location) requiring elevated protection.
 2. **Stage 2: 72-Hour Breach Notification Protocol (A05):**
-   - If personal data is compromised, draft Form 03a addressed to Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05) - Bộ Công an.
+   - If personal data is compromised, draft the breach notice on Mẫu số 08 (Nghị định 356/2025/NĐ-CP Điều 28) addressed to the cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an), directly or via the national PDP portal.
    - Enforce the non-negotiable **72-hour statutory deadline** from the moment of detection.
 3. **Stage 3: Terminology & System Level Verification:**
    - Audit system classification against Decree 85/2016 Levels 1–5 (`Cấp độ 1 đến Cấp độ 5`). Reject any claims of Levels 6+.
@@ -96,6 +96,6 @@ To draft and audit high-assurance Vietnamese cybersecurity instruments, follow t
 - [references/glossary.md](references/glossary.md) — Machine-readable glossary of 30+ cybersecurity, SOC, and threat intelligence terms with severity linting rules.
 - [references/banned-phrases.md](references/banned-phrases.md) — Prohibited InfoSec calques, credential solicitation phrases, and fabricated security levels.
 - [references/qa-checklist.md](references/qa-checklist.md) — Comprehensive 4-tier pre-publish incident notification and advisory quality gate.
-- [references/ung-cuu-su-co-pdpd-72h-a05.md](references/ung-cuu-su-co-pdpd-72h-a05.md) — 72-hour A05 personal data breach notification procedure and Form 03a structure.
+- [references/ung-cuu-su-co-pdpd-72h-a05.md](references/ung-cuu-su-co-pdpd-72h-a05.md) — 72-hour personal data breach notification procedure (Luật 91/2025/QH15 Điều 23) and Mẫu số 08 structure (NĐ 356/2025/NĐ-CP Điều 28).
 - [references/attt-cap-do-1-5-nd85-tt12.md](references/attt-cap-do-1-5-nd85-tt12.md) — Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT 5-tier system security levels.
 - [references/infosec-terminology-and-calques.md](references/infosec-terminology-and-calques.md) — Authoritative cybersecurity terms, translationese blocklist, and SOC conventions.

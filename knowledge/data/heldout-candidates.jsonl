@@ -1,0 +1,12 @@
+{"rule": "FIN001", "text": "Lợi nhuận được đảm bảo 12%/năm, rút vốn bất cứ lúc nào.", "expect": "finding", "why": "reverse word order", "class": "proposed", "status": "candidate"}
+{"rule": "FIN001", "text": "Cam đoan lãi 2%/tháng cho mọi hợp đồng.", "expect": "finding", "why": "cam đoan + lãi", "class": "proposed", "status": "candidate"}
+{"rule": "FIN001", "text": "Bao lời 30% mỗi năm, không lo thị trường.", "expect": "finding", "why": "colloquial bao lời", "class": "proposed", "status": "candidate"}
+{"rule": "FIN001", "text": "Chắc chắn có lãi ngay từ tháng đầu tiên.", "expect": "finding", "why": "chắc chắn + lãi", "class": "proposed", "status": "candidate"}
+{"rule": "FIN001", "text": "Cam kết khách hàng không bị thua lỗ trong mọi kịch bản.", "expect": "finding", "why": "statutory no-loss wording", "class": "proposed", "status": "candidate"}
+{"rule": "FIN001", "text": "Đầu tư 100 triệu, đảm bảo thu nhập 3 triệu mỗi tháng.", "expect": "finding", "why": "statutory noun thu nhập", "class": "proposed", "status": "candidate"}
+{"rule": "MED002", "text": "Uống 2 liệu trình là khỏi hẳn bệnh gút.", "expect": "finding", "why": "khỏi hẳn", "class": "proposed", "status": "candidate"}
+{"rule": "MED002", "text": "Trị dứt bệnh dạ dày chỉ sau 7 ngày.", "expect": "finding", "why": "trị dứt", "class": "proposed", "status": "candidate"}
+{"rule": "MED002", "text": "Sản phẩm có thể thay thế thuốc tây cho người tiểu đường.", "expect": "finding", "why": "affirmative replace-medicine claim", "class": "proposed", "status": "candidate"}
+{"rule": "MED002", "text": "Đánh bay bệnh xương khớp tận gốc.", "expect": "finding", "why": "slang + tận gốc", "class": "proposed", "status": "candidate"}
+{"rule": "REA001", "text": "Booking 10% giá trị căn hộ để giữ suất ưu tiên.", "expect": "finding", "why": "booking + percentage", "class": "proposed", "status": "candidate"}
+{"rule": "REA002", "text": "Đợt 1 thanh toán 40% giá trị hợp đồng.", "expect": "finding", "why": "đợt 1 above 30%", "class": "proposed", "status": "candidate"}

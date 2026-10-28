@@ -1,0 +1,10 @@
+{"rule": "FIN001", "text": "Sản phẩm này không cam kết lợi nhuận; nhà đầu tư có thể mất một phần hoặc toàn bộ vốn.", "expect": "no-finding", "why": "explicit negation of the guarantee", "class": "proposed"}
+{"rule": "FIN001", "text": "Chúng tôi không bảo đảm mức thu nhập hoặc lợi nhuận trên khoản đầu tư của quý khách.", "expect": "no-finding", "why": "negation mirrors the statutory wording", "class": "proposed"}
+{"rule": "FIN001", "text": "Không có khoản đầu tư nào được đảm bảo sinh lời.", "expect": "no-finding", "why": "universal negation", "class": "proposed"}
+{"rule": "FIN001", "text": "Trái phiếu có thu nhập cố định, lãi suất danh nghĩa 8%/năm theo điều khoản phát hành.", "expect": "no-finding", "why": "statutory exception: fixed-income coupon disclosure", "class": "proposed"}
+{"rule": "FIN001", "text": "Lợi nhuận kỳ vọng 7–9%/năm, không phải lợi nhuận cam kết; hiệu quả quá khứ không bảo đảm kết quả tương lai.", "expect": "no-finding", "why": "risk disclaimer that names the banned term", "class": "proposed"}
+{"rule": "MED002", "text": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.", "expect": "no-finding", "why": "the mandated disclaimer itself", "class": "proposed"}
+{"rule": "MED002", "text": "Sản phẩm không có tác dụng chữa khỏi bệnh; hãy hỏi ý kiến bác sĩ.", "expect": "no-finding", "why": "explicit negation", "class": "proposed"}
+{"rule": "MED002", "text": "Phòng khám không hứa hẹn khỏi hoàn toàn; kết quả điều trị tuỳ thể trạng từng người.", "expect": "no-finding", "why": "negated absolute claim", "class": "proposed"}
+{"rule": "REA001", "text": "Chủ đầu tư chỉ nhận đặt cọc không quá 5% giá bán khi dự án đã đủ điều kiện kinh doanh.", "expect": "no-finding", "why": "restates the cap", "class": "proposed"}
+{"rule": "REA002", "text": "Thanh toán lần đầu 30% giá trị hợp đồng, đã bao gồm tiền đặt cọc.", "expect": "no-finding", "why": "at the cap, not above", "class": "proposed"}

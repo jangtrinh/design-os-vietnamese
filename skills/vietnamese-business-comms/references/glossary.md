@@ -67,5 +67,5 @@
 | Anti-spam regulation | quy định chống rác | quy định phòng chống tin nhắn rác | Quy định tại Nghị định 91/2020/NĐ-CP về quảng cáo điện tử | warn |
 | Statutory disclosure | tiết lộ luật định | công bố thông tin theo luật định | Nghĩa vụ minh bạch thông tin doanh nghiệp, tài trợ hoặc quảng cáo | error |
 | Return policy | chính sách quay lại | chính sách đổi trả / chính sách hoàn tiền | Quy định về điều kiện, thời hạn và thủ tục đổi trả sản phẩm | error |
-| Privacy policy | chính sách riêng tư | chính sách bảo vệ dữ liệu cá nhân / chính sách bảo mật | Bản công bố việc thu thập và bảo vệ dữ liệu theo Nghị định 13/2023 | error |
+| Privacy policy | chính sách riêng tư | chính sách bảo vệ dữ liệu cá nhân / chính sách bảo mật | Bản công bố việc thu thập và bảo vệ dữ liệu theo Luật 91/2025/QH15 | error |
 | Terms of service | điều khoản phục vụ | điều khoản sử dụng dịch vụ | Hợp đồng điện tử xác lập quyền và nghĩa vụ giữa nền tảng và người dùng | error |

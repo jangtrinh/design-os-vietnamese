@@ -68,5 +68,5 @@ This checklist is an authoritative quality gate for insurance product managers, 
 - [ ] **14. Định dạng ngày tháng và số điện thoại tổng đài CSKH (`DATE001`, `PHONE001`):**
   - Ngày tháng năm viết chuẩn `dd/MM/yyyy` (ví dụ: `27/10/2026`).
   - Số điện thoại tổng đài hỗ trợ bồi thường viết chuẩn quốc tế hoặc hotline trong nước: `1900 xxxx` hoặc `+84 24 3987 6543`.
-- [ ] **15. Bảo mật dữ liệu cá nhân y tế và sức khỏe (Nghị định 13/2023/NĐ-CP):**
+- [ ] **15. Bảo mật dữ liệu cá nhân y tế và sức khỏe (Luật 91/2025/QH15 Điều 26; Nghị định 356/2025/NĐ-CP):**
   - Dữ liệu tiền sử bệnh lý, hồ sơ sức khỏe và thông tin tài chính của người được bảo hiểm được phân loại là `dữ liệu cá nhân nhạy cảm`, bắt buộc mã hóa và bảo mật nghiêm ngặt.

@@ -1,0 +1,25 @@
+{
+  "run": "4-module-text",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 4,
+  "secs": 528,
+  "verdict": {
+    "paragraphs_reviewed": 9,
+    "supported": 8,
+    "unsupported": [
+      {
+        "paragraph_start": "The penalty decree, Nghị định 330/2026/NĐ-CP (in force from ",
+        "why": "FACT: Điều 80 sets effect from 19/08/2026; Điều 55 khoản 1 điểm b penalises not sending the processing-impact dossier to that Cục; the end counts show A05 0 times in Law 91, Decree 356 and Decree 330; Điều 39 khoản 1 leaves the specialised agency unnamed. Not in the anchors: that no frozen sentence equates the Cục with that agency (the counts do not search for such a sentence), and that user copy may substitute the Cục's full name for 'cơ quan chuyên trách bảo vệ dữ liệu cá nhân'."
+      }
+    ],
+    "minor": [
+      {
+        "paragraph_start": "The ad must conform to (phải phù hợp với) the uses and effec",
+        "why": "FACT: khoản 3 điểm a requires thực phẩm bảo vệ sức khỏe ads to carry the exact warning that the product is not a medicine and has no effect of replacing thuốc chữa bệnh. 'A supplement ad ... does not replace medicine' is a shorter, slightly stronger paraphrase."
+      }
+    ],
+    "passed": false,
+    "notes": "Eight of nine paragraphs stay inside their anchors. Decree 330 copy guidance offers the Cục full name as a stand-in for the specialised agency; no shown sentence equates them, and the A05 counts do not prove that absence. The supplement disclaimer paraphrase is minor. Historical and MED002 lines are labelled."
+  }
+}

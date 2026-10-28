@@ -50,8 +50,8 @@ Before publishing student report-card entries, teacher evaluation remarks, schoo
   - Does it conclude with Growth Mindset encouragement rather than blunt failure tags (`Sai rồi`)?
 - [ ] **11. Actionable Empty States (`EDU007`):**
   - Do blank homework lists, course dashboards, or quiz screens provide an encouraging call to action rather than raw `Trạng thái trống` or `Không có dữ liệu`?
-- [ ] **12. Child Personal Data Double Consent (NĐ 13/2023/NĐ-CP Điều 20 — `EDU010`):**
-  - Does any onboarding or account registration flow for children under 16 explicitly require verified consent from `phụ huynh` or `người giám hộ`?
+- [ ] **12. Child Personal Data Double Consent (Luật 91/2025/QH15 Điều 24 — `EDU010`):**
+  - Does any onboarding or account registration flow for children require verified consent from the legal representative (`phụ huynh` / `người giám hộ`), and, before publishing or disclosing private-life information of a child aged 7 or older, consent from both the child and the legal representative?
 - [ ] **13. Adherence to GDPT 2018 Dimensions:**
   - Do qualitative report-card comments evaluate student progress across the 5 Core Qualities (*Yêu nước, Nhân ái, Chăm chỉ, Trung thực, Trách nhiệm*) and Core Competencies?
 - [ ] **14. Retention Nudges & Habit Loops:**

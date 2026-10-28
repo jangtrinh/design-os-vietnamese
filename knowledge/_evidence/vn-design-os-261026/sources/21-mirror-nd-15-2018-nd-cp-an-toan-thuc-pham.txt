@@ -1,0 +1,386 @@
+Source-URL: https://hethongphapluat.com/nghi-dinh-15-2018-nd-cp-huong-dan-luat-an-toan-thuc-pham.html
+Fetched: 2026-10-28T13:45:11+00:00
+
+Publisher: hethongphapluat.com (mirror; statutory span only, site commentary removed). Used to corroborate the official vbpl.vn copy. Text is not protected by copyright (Luật Sở hữu trí tuệ, Điều 15).
+Số: 15/2018/NĐ-CP
+Hà Nội, ngày 02 tháng 02 năm 2018
+NGHỊ ĐỊNH
+QUY ĐỊNH CHI TIẾT THI HÀNH MỘT SỐ ĐIỀU CỦA LUẬT AN TOÀN THỰC PHẨM
+Căn cứ Luật tổ chức Chính phủ ngày 19 tháng 6 năm 2015;
+Căn cứ Luật an toàn thực phẩm ngày 17 tháng 6 năm 2010;
+Theo đề nghị của Bộ trưởng Bộ Y tế;
+Chính phủ ban hành Nghị định quy định chi tiết thi hành một số điều của Luật an toàn thực phẩm.
+Chương I
+QUY ĐỊNH CHUNG
+Điều 1. Phạm vi điều chỉnh
+Nghị định này quy định chi tiết thi hành một số điều của Luật an toàn thực phẩm về:
+1. Thủ tục tự công bố sản phẩm.
+2. Thủ tục đăng ký bản công bố sản phẩm.
+3. Bảo đảm an toàn thực phẩm biến đổi gen.
+4. Cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm.
+5. Kiểm tra nhà nước về an toàn thực phẩm nhập khẩu, xuất khẩu.
+6. Ghi nhãn thực phẩm.
+7. Quảng cáo thực phẩm.
+8. Điều kiện bảo đảm an toàn thực phẩm trong sản xuất thực phẩm bảo vệ sức khỏe.
+9. Điều kiện bảo đảm an toàn thực phẩm trong sản xuất, kinh doanh và sử dụng phụ gia thực phẩm.
+10. Truy xuất nguồn gốc thực phẩm.
+11. Phân công trách nhiệm quản lý nhà nước về an toàn thực phẩm.
+Điều 2. Đối tượng áp dụng
+Nghị định này áp dụng đối với cơ quan, tổ chức, cá nhân Việt Nam; tổ chức, cá nhân nước ngoài tại Việt Nam tham gia sản xuất, kinh doanh thực phẩm; tổ chức, cá nhân có hoạt động liên quan đến an toàn thực phẩm tại Việt Nam (sau đây gọi chung là tổ chức, cá nhân).
+Điều 3. Giải thích từ ngữ
+Trong Nghị định này, các từ ngữ sau đây được hiểu như sau:
+1. Thực phẩm bảo vệ sức khỏe (Health Supplement, Dietary Supplement) là những sản phẩm được dùng để bổ sung thêm vào chế độ ăn uống hàng ngày nhằm duy trì, tăng cường, cải thiện các chức năng của cơ thể con người, giảm nguy cơ mắc bệnh. Thực phẩm bảo vệ sức khỏe chứa một hoặc nhiều chất hoặc hỗn hợp các chất sau:
+a) Vitamin, khoáng chất, axit amin, axit béo, enzyme, probiotic và chất có hoạt tính sinh học khác;
+b) Chất có nguồn gốc tự nhiên, bao gồm động vật, khoáng vật và thực vật dưới dạng chiết xuất, phân lập, cô đặc và chuyển hóa;
+c) Các nguồn tổng hợp của những thành phần đề cập tại điểm a và điểm b trên đây.
+Thực phẩm bảo vệ sức khỏe được trình bày ở dạng chế biến như viên nang, viên hoàn, viên nén, chế phẩm dạng cốm, bột, lỏng và các dạng bào chế khác và được phân liều (để sử dụng) thành các đơn vị liều nhỏ.
+2. Thực phẩm dinh dưỡng y học còn gọi là thực phẩm dinh dưỡng dùng cho mục đích y tế đặc biệt (Food for Special Medical Purposes, Medical Food) là loại thực phẩm có thể ăn bằng đường miệng hoặc bằng ống xông, được chỉ định để điều chỉnh chế độ ăn của người bệnh và chỉ được sử dụng dưới sự giám sát của nhân viên y tế.
+3. Thực phẩm dùng cho chế độ ăn đặc biệt (Food for Special Dietary Uses) dùng cho người ăn kiêng, người già và các đối tượng đặc biệt khác theo quy định của Ủy ban tiêu chuẩn thực phẩm quốc tế (CODEX) là những thực phẩm được chế biến hoặc được phối trộn theo công thức đặc biệt nhằm đáp ứng các yêu cầu về chế độ ăn đặc thù theo thể trạng hoặc theo tình trạng bệnh lý và các rối loạn cụ thể của người sử dụng. Thành phần của thực phẩm này phải khác biệt rõ rệt với thành phần của những thực phẩm thông thường cùng bản chất, nếu có.
+4. Bằng chứng khoa học là các thông tin, tài liệu khoa học từ các công trình nghiên cứu khoa học được cơ quan quản lý nhà nước có thẩm quyền về nghiên cứu khoa học nghiệm thu hoặc được các tạp chí khoa học trong, ngoài nước công bố hoặc tài liệu về y học cổ truyền, cây thuốc, vị thuốc được công bố trên các ấn bản khoa học.
+5. Chủ hàng là tổ chức, cá nhân chịu trách nhiệm về hàng hóa trong các hồ sơ công bố/tự công bố sản phẩm hoặc tổ chức, cá nhân được ủy quyền thực hiện việc nhập khẩu, xuất khẩu sản phẩm thực phẩm.
+6. Mặt hàng xuất khẩu, nhập khẩu là các sản phẩm thực phẩm cùng loại, cùng tên, nhãn hàng hóa, cơ sở sản xuất hàng hóa, chất liệu bao bì.
+7. Lô hàng xuất khẩu, nhập khẩu là toàn bộ sản phẩm thực phẩm của một chuyến hàng nhập khẩu hoặc xuất khẩu (có cùng số vận đơn). Lô hàng có thể chỉ có một mặt hàng hoặc nhiều mặt hàng.
+8. Cơ sở sản xuất ban đầu nhỏ lẻ là cơ sở trồng trọt, chăn nuôi, thu hái, đánh bắt, khai thác các nguyên liệu thực phẩm ở quy mô hộ gia đình, hộ cá thể có hoặc không có giấy chứng nhận đăng ký doanh nghiệp.
+9. Cơ sở sơ chế nhỏ lẻ là cơ sở sơ chế thực phẩm ở quy mô hộ gia đình, hộ cá thể có hoặc không có giấy chứng nhận đăng ký doanh nghiệp.
+10. Cơ sở kinh doanh thực phẩm nhỏ lẻ là cơ sở do cá nhân, nhóm cá nhân, hộ gia đình thực hiện đăng ký hộ kinh doanh và cơ sở không được cấp Giấy chứng nhận đăng ký kinh doanh hoặc Giấy chứng nhận đăng ký doanh nghiệp hoặc Giấy chứng nhận đầu tư theo quy định của pháp luật.
+Chương II
+THỦ TỤC TỰ CÔNG BỐ SẢN PHẨM
+Điều 4. Tự công bố sản phẩm
+1. Tổ chức, cá nhân sản xuất, kinh doanh thực phẩm thực hiện tự công bố thực phẩm đã qua chế biến bao gói sẵn, phụ gia thực phẩm, chất hỗ trợ chế biến thực phẩm, dụng cụ chứa đựng thực phẩm, vật liệu bao gói tiếp xúc trực tiếp với thực phẩm (sau đây gọi chung là sản phẩm) trừ các sản phẩm quy định tại khoản 2 Điều này và Điều 6 Nghị định này.
+2. Sản phẩm, nguyên liệu sản xuất, nhập khẩu chỉ dùng để sản xuất, gia công hàng xuất khẩu hoặc phục vụ cho việc sản xuất nội bộ của tổ chức, cá nhân không tiêu thụ tại thị trường trong nước được miễn thực hiện thủ tục tự công bố sản phẩm.
+Điều 5. Hồ sơ, trình tự tự công bố sản phẩm
+1. Hồ sơ tự công bố sản phẩm bao gồm:
+a) Bản tự công bố sản phẩm theo Mẫu số 01 Phụ lục I ban hành kèm theo Nghị định này;
+b) Phiếu kết quả kiểm nghiệm an toàn thực phẩm của sản phẩm trong thời hạn 12 tháng tính đến ngày nộp hồ sơ được cấp bởi phòng kiểm nghiệm được chỉ định hoặc phòng kiểm nghiệm được công nhận phù hợp ISO 17025 gồm các chỉ tiêu an toàn do Bộ Y tế ban hành theo nguyên tắc quản lý rủi ro phù hợp với quy định của quốc tế hoặc các chỉ tiêu an toàn theo các quy chuẩn, tiêu chuẩn tương ứng do tổ chức, cá nhân công bố trong trường hợp chưa có quy định của Bộ Y tế (bản chính hoặc bản sao chứng thực).
+2. Việc tự công bố sản phẩm được thực hiện theo trình tự như sau:
+a) Tổ chức, cá nhân tự công bố sản phẩm trên phương tiện thông tin đại chúng hoặc trang thông tin điện tử của mình hoặc niêm yết công khai tại trụ sở của tổ chức, cá nhân và nộp 01 (một) bản qua đường bưu điện hoặc trực tiếp đến cơ quan quản lý nhà nước có thẩm quyền do Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương (sau đây gọi chung là Ủy ban nhân dân cấp tỉnh) chỉ định;Sửa đổi, bổ sung
+b) Ngay sau khi tự công bố sản phẩm, tổ chức, cá nhân được quyền sản xuất, kinh doanh sản phẩm và chịu trách nhiệm hoàn toàn về an toàn của sản phẩm đó;
+c) Cơ quan quản lý nhà nước có thẩm quyền tiếp nhận bản tự công bố của tổ chức, cá nhân để lưu trữ hồ sơ và đăng tải tên tổ chức, cá nhân và tên các sản phẩm tự công bố trên trang thông tin điện tử của cơ quan tiếp nhận.
+Trong trường hợp tổ chức, cá nhân có từ 02 (hai) cơ sở sản xuất trở lên cùng sản xuất một sản phẩm thì tổ chức, cá nhân chỉ nộp hồ sơ tại một cơ quan quản lý nhà nước ở địa phương có cơ sở sản xuất do tổ chức, cá nhân lựa chọn. Khi đã lựa chọn cơ quan quản lý nhà nước để nộp hồ sơ thì các lần tự công bố tiếp theo phải nộp hồ sơ tại cơ quan đã lựa chọn trước đó.
+3. Các tài liệu trong hồ sơ tự công bố phải được thể hiện bằng tiếng Việt; trường hợp có tài liệu bằng tiếng nước ngoài thì phải được dịch sang tiếng Việt và được công chứng. Tài liệu phải còn hiệu lực tại thời điểm tự công bố.
+4. Trường hợp sản phẩm có sự thay đổi về tên sản phẩm, xuất xứ, thành phần cấu tạo thì tổ chức, cá nhân phải tự công bố lại sản phẩm. Các trường hợp có sự thay đổi khác, tổ chức, cá nhân thông báo bằng văn bản về nội dung thay đổi đến cơ quan quản lý nhà nước có thẩm quyền và được sản xuất, kinh doanh sản phẩm ngay sau khi gửi thông báo.
+Chương III
+THỦ TỤC ĐĂNG KÝ BẢN CÔNG BỐ SẢN PHẨM
+Điều 6. Đăng ký bản công bố sản phẩm
+Tổ chức, cá nhân sản xuất, kinh doanh thực phẩm phải đăng ký bản công bố sản phẩm đối với các sản phẩm sau đây:
+1. Thực phẩm bảo vệ sức khỏe, thực phẩm dinh dưỡng y học, thực phẩm dùng cho chế độ ăn đặc biệt.
+2. Sản phẩm dinh dưỡng dùng cho trẻ đến 36 tháng tuổi.
+3. Phụ gia thực phẩm hỗn hợp có công dụng mới, phụ gia thực phẩm không thuộc trong danh mục phụ gia được phép sử dụng trong thực phẩm hoặc không đúng đối tượng sử dụng do Bộ Y tế quy định.
+Điều 7. Hồ sơ đăng ký bản công bố sản phẩm
+1. Hồ sơ đăng ký bản công bố sản phẩm đối với sản phẩm nhập khẩu gồm:
+a) Bản công bố sản phẩm được quy định tại Mẫu số 02 Phụ lục I ban hành kèm theo Nghị định này;
+b) Giấy chứng nhận lưu hành tự do (Certificate of Free Sale) hoặc Giấy chứng nhận xuất khẩu (Certificate of Exportation) hoặc Giấy chứng nhận y tế (Health Certificate) của cơ quan có thẩm quyền của nước xuất xứ/xuất khẩu cấp có nội dung bảo đảm an toàn cho người sử dụng hoặc được bán tự do tại thị trường của nước sản xuất/xuất khẩu (hợp pháp hóa lãnh sự);
+c) Phiếu kết quả kiểm nghiệm an toàn thực phẩm của sản phẩm trong thời hạn 12 tháng tính đến ngày nộp hồ sơ được cấp bởi phòng kiểm nghiệm được chỉ định hoặc phòng kiểm nghiệm được công nhận phù hợp ISO 17025 gồm các chỉ tiêu an toàn do Bộ Y tế ban hành theo nguyên tắc quản lý rủi ro phù hợp với quy định của quốc tế hoặc các chỉ tiêu an toàn theo các quy chuẩn, tiêu chuẩn tương ứng do tổ chức, cá nhân công bố trong trường hợp chưa có quy định của Bộ Y tế (bản chính hoặc bản sao chứng thực);
+d) Bằng chứng khoa học chứng minh công dụng của sản phẩm hoặc của thành phần tạo nên công dụng đã công bố (bản chính hoặc bản sao có xác nhận của tổ chức, cá nhân). Khi sử dụng bằng chứng khoa học về công dụng thành phần của sản phẩm để làm công dụng cho sản phẩm thì liều sử dụng hàng ngày của sản phẩm tối thiểu phải lớn hơn hoặc bằng 15% lượng sử dụng thành phần đó đã nêu trong tài liệu;
+đ) Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) hoặc chứng nhận tương đương trong trường hợp sản phẩm nhập khẩu là thực phẩm bảo vệ sức khỏe áp dụng từ ngày 01 tháng 7 năm 2019 (bản có xác nhận của tổ chức, cá nhân).
+2. Hồ sơ đăng ký bản công bố sản phẩm đối với sản phẩm sản xuất trong nước gồm:
+a) Bản công bố sản phẩm được quy định tại Mẫu số 02 Phụ lục I ban hành kèm theo Nghị định này;
+b) Phiếu kết quả kiểm nghiệm an toàn thực phẩm của sản phẩm trong thời hạn 12 tháng tính đến ngày nộp hồ sơ được cấp bởi phòng kiểm nghiệm được chỉ định hoặc phòng kiểm nghiệm được công nhận phù hợp ISO 17025 gồm các chỉ tiêu an toàn do Bộ Y tế ban hành theo nguyên tắc quản lý rủi ro phù hợp với quy định của quốc tế hoặc các chỉ tiêu an toàn theo các quy chuẩn, tiêu chuẩn tương ứng do tổ chức, cá nhân công bố trong trường hợp chưa có quy định của Bộ Y tế (bản chính hoặc bản sao chứng thực);
+c) Bằng chứng khoa học chứng minh công dụng của sản phẩm hoặc của thành phần tạo nên công dụng đã công bố (bản chính hoặc bản sao có xác nhận của tổ chức, cá nhân). Khi sử dụng bằng chứng khoa học về công dụng thành phần của sản phẩm để làm công dụng cho sản phẩm thì liều sử dụng hàng ngày của sản phẩm tối thiểu phải lớn hơn hoặc bằng 15% lượng sử dụng thành phần đó đã nêu trong tài liệu;
+d) Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm trong trường hợp cơ sở thuộc đối tượng phải cấp giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm theo quy định (bản sao có xác nhận của tổ chức, cá nhân);
+đ) Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) trong trường hợp sản phẩm sản xuất trong nước là thực phẩm bảo vệ sức khỏe áp dụng từ ngày 01 tháng 7 năm 2019 (bản sao có xác nhận của tổ chức, cá nhân).
+3. Các tài liệu trong hồ sơ đăng ký bản công bố sản phẩm phải được thể hiện bằng tiếng Việt; trường hợp có tài liệu bằng tiếng nước ngoài thì phải được dịch sang tiếng Việt và được công chứng. Tài liệu phải còn hiệu lực tại thời điểm nộp hồ sơ đăng ký bản công bố sản phẩm.
+Điều 8. Trình tự đăng ký bản công bố sản phẩm
+1. Tổ chức, cá nhân sản xuất, kinh doanh thực phẩm nộp hồ sơ đăng ký bản công bố sản phẩm qua hệ thống dịch vụ công trực tuyến hoặc đường bưu điện hoặc nộp trực tiếp đến cơ quan tiếp nhận hồ sơ theo quy định sau đây:
+a) Nộp đến Bộ Y tế đối với thực phẩm bảo vệ sức khỏe, phụ gia thực phẩm hỗn hợp có công dụng mới, phụ gia thực phẩm chưa có trong danh mục phụ gia được phép sử dụng trong thực phẩm do Bộ trưởng Bộ Y tế quy định;
+b) Nộp đến cơ quan quản lý nhà nước có thẩm quyền do Ủy ban nhân dân cấp tỉnh chỉ định đối với thực phẩm dinh dưỡng y học, thực phẩm dùng cho chế độ ăn đặc biệt, sản phẩm dinh dưỡng dùng cho trẻ đến 36 tháng tuổi;
+c) Trong trường hợp tổ chức, cá nhân sản xuất nhiều loại thực phẩm thuộc thẩm quyền tiếp nhận hồ sơ đăng ký bản công bố sản phẩm của cả Bộ Y tế và cơ quan quản lý nhà nước có thẩm quyền do Ủy ban nhân dân cấp tỉnh chỉ định thì tổ chức, cá nhân có quyền lựa chọn nộp hồ sơ đến Bộ Y tế hoặc sản phẩm thuộc thẩm quyền tiếp nhận hồ sơ đăng ký của cơ quan nào thì nộp hồ sơ đăng ký đến cơ quan tiếp nhận đó.
+Trong trường hợp tổ chức, cá nhân có từ 02 (hai) cơ sở sản xuất trở lên cùng sản xuất một sản phẩm thì tổ chức, cá nhân chỉ làm thủ tục đăng ký bản công bố sản phẩm tại một cơ quan quản lý nhà nước ở địa phương có cơ sở sản xuất do tổ chức, cá nhân lựa chọn (trừ những sản phẩm đăng ký tại Bộ Y tế). Khi đã lựa chọn cơ quan quản lý nhà nước để đăng ký thì các lần đăng ký tiếp theo phải đăng ký tại cơ quan đã lựa chọn.
+2. Trong thời hạn 07 (bảy) ngày làm việc kể từ khi nhận đủ hồ sơ đăng ký bản công bố sản phẩm đối với phụ gia thực phẩm hỗn hợp có công dụng mới, phụ gia thực phẩm chưa có trong danh mục phụ gia được phép sử dụng hoặc không đúng đối tượng sử dụng trong thực phẩm do Bộ trưởng Bộ Y tế quy định, thực phẩm dinh dưỡng y học, thực phẩm dùng cho chế độ ăn đặc biệt, sản phẩm dinh dưỡng dùng cho trẻ đến 36 tháng tuổi và 21 ngày làm việc đối với thực phẩm bảo vệ sức khỏe, cơ quan tiếp nhận quy định tại khoản 1 Điều này có trách nhiệm thẩm định hồ sơ và cấp Giấy tiếp nhận đăng ký bản công bố sản phẩm theo Mẫu số 03 Phụ lục I ban hành kèm theo Nghị định này.
+Thời gian thẩm định hồ sơ tính từ thời điểm hồ sơ được nộp trên hệ thống dịch vụ công trực tuyến hoặc theo dấu đến của cơ quan tiếp nhận (trong trường hợp nộp hồ sơ qua đường bưu điện hoặc nộp hồ sơ trực tiếp).
+3. Trong trường hợp không đồng ý với hồ sơ công bố sản phẩm của tổ chức, cá nhân hoặc yêu cầu sửa đổi, bổ sung, cơ quan tiếp nhận hồ sơ phải có văn bản nêu rõ lý do và căn cứ pháp lý của việc yêu cầu. Cơ quan tiếp nhận hồ sơ chỉ được yêu cầu sửa đổi, bổ sung 01 lần.
+Trong thời hạn 07 (bảy) ngày làm việc kể từ khi nhận hồ sơ sửa đổi, bổ sung, cơ quan tiếp nhận hồ sơ thẩm định hồ sơ và có văn bản trả lời. Sau 90 ngày làm việc kể từ khi có công văn yêu cầu sửa đổi, bổ sung nếu tổ chức, cá nhân không sửa đổi, bổ sung thì hồ sơ không còn giá trị.
+4. Trường hợp sản phẩm có sự thay đổi về tên sản phẩm, xuất xứ, thành phần cấu tạo thì tổ chức, cá nhân phải công bố lại sản phẩm. Các trường hợp có sự thay đổi khác, tổ chức, cá nhân thông báo bằng văn bản về nội dung thay đổi đến cơ quan tiếp nhận hồ sơ quy định tại khoản 1 Điều này và được sản xuất, kinh doanh sản phẩm ngay sau khi gửi thông báo.
+5. Cơ quan tiếp nhận hồ sơ đăng ký bản công bố sản phẩm có trách nhiệm thông báo công khai tên, sản phẩm của tổ chức, cá nhân đã được tiếp nhận đăng ký bản công bố sản phẩm trên trang thông tin điện tử (website) của mình và cơ sở dữ liệu về an toàn thực phẩm.
+6. Tổ chức, cá nhân sản xuất, kinh doanh sản phẩm có trách nhiệm nộp phí thẩm định hồ sơ đăng ký bản công bố sản phẩm theo quy định của pháp luật về phí và lệ phí.
+Chương IV
+BẢO ĐẢM AN TOÀN THỰC PHẨM BIẾN ĐỔI GEN
+Điều 9. Bảo đảm an toàn đối với thực phẩm có thành phần từ sinh vật biến đổi gen và sản phẩm của sinh vật biến đổi gen
+Điều kiện cấp, trình tự, thủ tục cấp, thu hồi Giấy Xác nhận sinh vật biến đổi gen đủ điều kiện sử dụng làm thực phẩm và danh mục sinh vật biến đổi gen được cấp Giấy Xác nhận đủ điều kiện sử dụng làm thực phẩm được thực hiện theo quy định tại Nghị định số 69/2010/NĐ-CP ngày 21 tháng 6 năm 2010 của Chính phủ về an toàn sinh học đối với sinh vật biến đổi gen, mẫu vật di truyền và sản phẩm của sinh vật biến đổi gen và Nghị định số 108/2011/NĐ-CP ngày 30 tháng 11 năm 2011 của Chính phủ sửa đổi một số điều Nghị định số 69/2010/NĐ-CP ngày 21 tháng 6 năm 2010 của Chính phủ về an toàn sinh học đối với sinh vật biến đổi gen, mẫu vật di truyền và sản phẩm của sinh vật biến đổi gen.
+Điều 10. Ghi nhãn đối với hàng hóa chứa sinh vật biến đổi gen, sản phẩm của sinh vật biến đổi gen sử dụng làm thực phẩm
+1. Tổ chức, cá nhân sản xuất, kinh doanh thực phẩm trên thị trường có chứa sinh vật biến đổi gen, sản phẩm của sinh vật biến đổi gen có ít nhất một thành phần nguyên liệu biến đổi gen lớn hơn 5% tổng nguyên liệu được sử dụng để sản xuất thực phẩm thì ngoài việc phải tuân thủ các quy định của pháp luật về ghi nhãn hàng hóa còn phải thể hiện các thông tin liên quan đến sinh vật biến đổi gen trên nhãn hàng hóa trừ các trường hợp quy định tại khoản 2 Điều này.
+2. Các trường hợp được miễn ghi nhãn đối với hàng hóa chứa sinh vật biến đổi gen, sản phẩm của sinh vật biến đổi gen sử dụng làm thực phẩm:
+a) Thực phẩm biến đổi gen bao gói sẵn có thành phần nguyên liệu biến đổi gen nhưng không phát hiện được gen hoặc sản phẩm của gen bị biến đổi trong thực phẩm;
+b) Thực phẩm biến đổi gen tươi sống, thực phẩm biến đổi gen chế biến không bao gói và trực tiếp bán cho người tiêu dùng;
+c) Thực phẩm biến đổi gen sử dụng trong trường hợp khẩn cấp nhằm khắc phục thiên tai, dịch bệnh.
+Chương V
+CẤP GIẤY CHỨNG NHẬN CƠ SỞ ĐỦ ĐIỀU KIỆN AN TOÀN THỰC PHẨM
+Điều 11. Cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm
+1. Cơ sở sản xuất, kinh doanh thực phẩm phải có Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm khi hoạt động, trừ trường hợp quy định tại khoản 1 Điều 12 Nghị định này.
+2. Điều kiện cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm được thực hiện theo quy định tại khoản 1 Điều 34 Luật an toàn thực phẩm. Riêng đối với các cơ sở sản xuất thực phẩm bảo vệ sức khỏe, phải tuân thủ các yêu cầu quy định tại Điều 28 Nghị định này.
+Điều 12. Cơ sở không thuộc diện cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm
+1. Các cơ sở sau đây không thuộc diện cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm:
+a) Sản xuất ban đầu nhỏ lẻ;
+b) Sản xuất, kinh doanh thực phẩm không có địa điểm cố định;
+c) Sơ chế nhỏ lẻ;
+d) Kinh doanh thực phẩm nhỏ lẻ;
+đ) Kinh doanh thực phẩm bao gói sẵn;
+e) Sản xuất, kinh doanh dụng cụ, vật liệu bao gói, chứa đựng thực phẩm;
+g) Nhà hàng trong khách sạn;
+h) Bếp ăn tập thể không có đăng ký ngành nghề kinh doanh thực phẩm;
+i) Kinh doanh thức ăn đường phố;
+k) Cơ sở đã được cấp một trong các Giấy chứng nhận: Thực hành sản xuất tốt (GMP), Hệ thống phân tích mối nguy và điểm kiểm soát tới hạn (HACCP), Hệ thống quản lý an toàn thực phẩm ISO 22000, Tiêu chuẩn thực phẩm quốc tế (IFS), Tiêu chuẩn toàn cầu về an toàn thực phẩm (BRC), Chứng nhận hệ thống an toàn thực phẩm (FSSC 22000) hoặc tương đương còn hiệu lực.
+2. Các cơ sở quy định tại khoản 1 Điều này phải tuân thủ các yêu cầu về điều kiện bảo đảm an toàn thực phẩm tương ứng.
+Chương VI
+KIỂM TRA NHÀ NƯỚC VỀ AN TOÀN THỰC PHẨM NHẬP KHẨU, XUẤT KHẨU
+Điều 13. Các trường hợp được miễn kiểm tra nhà nước về an toàn thực phẩm nhập khẩu (trừ các trường hợp có cảnh báo về an toàn thực phẩm)
+1. Sản phẩm đã được cấp Giấy tiếp nhận đăng ký bản công bố sản phẩm.
+2. Sản phẩm mang theo người nhập cảnh, gửi trước hoặc gửi sau chuyến đi của người nhập cảnh để phục vụ cho nhu cầu sinh hoạt hoặc mục đích chuyến đi; quà biếu, quà tặng trong định mức miễn thuế nhập khẩu theo quy định của pháp luật về thuế.
+3. Sản phẩm nhập khẩu dùng cho cá nhân của đối tượng được hưởng quyền ưu đãi, miễn trừ ngoại giao.
+4. Sản phẩm quá cảnh, chuyển khẩu, trung chuyển, tạm nhập, tái xuất, gửi kho ngoại quan.
+5. Sản phẩm là mẫu thử nghiệm hoặc nghiên cứu có số lượng phù hợp với mục đích thử nghiệm hoặc nghiên cứu có xác nhận của tổ chức, cá nhân.
+6. Sản phẩm sử dụng để trưng bày hội chợ, triển lãm.
+7. Sản phẩm, nguyên liệu sản xuất, nhập khẩu chỉ dùng để sản xuất, gia công hàng xuất khẩu hoặc phục vụ cho việc sản xuất nội bộ của tổ chức, cá nhân không tiêu thụ tại thị trường trong nước.
+8. Sản phẩm tạm nhập khẩu để bán tại cửa hàng miễn thuế.
+9. Hàng hóa nhập khẩu phục vụ yêu cầu khẩn cấp theo chỉ đạo của Chính phủ, Thủ tướng Chính phủ.
+Điều 14. Yêu cầu đối với sản phẩm động vật trên cạn, sản phẩm động vật thủy sản, sản phẩm thực vật dùng làm thực phẩm nhập khẩu
+1. Sản phẩm động vật trên cạn, sản phẩm động vật thủy sản, sản phẩm thực vật dùng làm thực phẩm nhập khẩu, trừ các thực phẩm đã qua chế biến, bao gói sẵn, thực phẩm do tổ chức, cá nhân Việt Nam xuất khẩu sang nước ngoài nhưng bị trả về và các trường hợp quy định tại Điều 13 Nghị định này phải đáp ứng các yêu cầu sau đây:
+a) Có xuất xứ từ quốc gia, vùng lãnh thổ có hệ thống kiểm soát an toàn thực phẩm đáp ứng quy định của Việt Nam và được cơ quan có thẩm quyền của Việt Nam đưa vào danh sách các quốc gia, vùng lãnh thổ đăng ký xuất khẩu thực phẩm có nguồn gốc động vật, thực vật, thủy sản vào Việt Nam;
+b) Đối với sản phẩm động vật trên cạn dùng làm thực phẩm, sản phẩm động vật thủy sản dùng làm thực phẩm: Phải được sản xuất bởi cơ sở sản xuất, kinh doanh được cơ quan có thẩm quyền của Việt Nam công nhận đáp ứng đầy đủ các yêu cầu về bảo đảm an toàn thực phẩm theo quy định của Việt Nam;
+c) Mỗi lô hàng nhập khẩu có nguồn gốc động vật, thủy sản nhập khẩu phải kèm theo giấy chứng nhận đáp ứng các quy định về an toàn thực phẩm do cơ quan có thẩm quyền của nước xuất khẩu cấp (trừ trường hợp thủy sản do tàu cá nước ngoài thực hiện đánh bắt, chế biến trên biển bán trực tiếp cho Việt Nam).
+2. Thủ tục đăng ký quốc gia, vùng lãnh thổ và cơ sở sản xuất, kinh doanh nêu tại khoản 1 Điều này vào danh sách xuất khẩu vào Việt Nam thực hiện theo quy định tại Điều 22 Nghị định này.
+3. Bộ Nông nghiệp và Phát triển nông thôn có trách nhiệm cung cấp cho cơ quan hải quan danh sách quốc gia, vùng lãnh thổ và tổ chức, cá nhân được xuất khẩu các sản phẩm trên vào Việt Nam.
+Điều 15. Cơ quan kiểm tra nhà nước đối với thực phẩm nhập khẩu
+1. Cơ quan kiểm tra nhà nước đối với thực phẩm nhập khẩu là cơ quan được Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn hoặc Bộ Công Thương giao hoặc chỉ định.
+Trường hợp một lô hàng nhập khẩu có nhiều loại thực phẩm thuộc thẩm quyền quản lý của nhiều bộ thì cơ quan kiểm tra nhà nước là cơ quan được Bộ Nông nghiệp và Phát triển nông thôn giao hoặc chỉ định.
+2. Cơ quan kiểm tra nhà nước có quyền và trách nhiệm sau đây:
+a) Quyết định áp dụng chuyển đổi phương thức kiểm tra từ phương thức kiểm tra thông thường sang phương thức kiểm tra giảm và áp dụng phương thức kiểm tra thông thường sau 03 (ba) lần kiểm tra chặt đạt yêu cầu thực phẩm nhập khẩu;
+b) Tiến hành kiểm tra thực phẩm theo phương thức và thủ tục được quy định tại Nghị định này;
+c) Tuân thủ việc lấy mẫu, lưu mẫu theo quy định của pháp luật;
+d) Thu phí, lệ phí kiểm tra, kiểm nghiệm theo quy định của pháp luật về phí và lệ phí;
+đ) Bảo đảm trình độ chuyên môn, tính chính xác, trung thực và khách quan khi kiểm tra, xác nhận an toàn thực phẩm đối với các lô hàng, mặt hàng nhập khẩu;
+e) Chịu sự chỉ đạo, kiểm tra và hướng dẫn về tổ chức và nghiệp vụ của Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương;
+g) Tiếp nhận và giải quyết khiếu nại của chủ hàng. Nếu gây thiệt hại cho chủ hàng, cơ quan kiểm tra nhà nước phải hoàn trả toàn bộ phí kiểm nghiệm, phí kiểm tra, đồng thời phải bồi thường thiệt hại cho chủ hàng (nếu có) theo quy định của pháp luật;
+h) Lưu trữ hồ sơ kiểm tra theo quy định của pháp luật và xuất trình hồ sơ lưu trữ khi cơ quan có thẩm quyền yêu cầu;
+i) Thực hiện báo cáo 06 tháng/lần về bộ quản lý chuyên ngành tương ứng theo quy định tại Mẫu số 06 Phụ lục I ban hành kèm theo Nghị định này hoặc báo cáo đột xuất khi có cảnh báo của Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương của Việt Nam hoặc của cơ quan có thẩm quyền tại nước ngoài hoặc của nhà sản xuất hoặc báo cáo về kết quả xử lý thực phẩm không đạt yêu cầu đối với thực phẩm nhập khẩu.
+Điều 16. Phương thức kiểm tra
+Việc kiểm tra về an toàn thực phẩm nhập khẩu được thực hiện theo một trong các phương thức sau đây:
+1. Phương thức kiểm tra giảm, theo đó kiểm tra hồ sơ tối đa 5% trên tổng số lô hàng nhập khẩu trong vòng 01 năm do cơ quan hải quan lựa chọn ngẫu nhiên.
+2. Phương thức kiểm tra thông thường, theo đó chỉ kiểm tra hồ sơ của lô hàng nhập khẩu.
+3. Phương thức kiểm tra chặt, theo đó kiểm tra hồ sơ kết hợp lấy mẫu kiểm nghiệm.
+Điều 17. Áp dụng phương thức kiểm tra
+1. Kiểm tra giảm áp dụng đối với lô hàng, mặt hàng thuộc một trong các trường hợp sau đây:
+a) Đã được xác nhận đạt yêu cầu về an toàn thực phẩm bởi cơ quan, tổ chức có thẩm quyền của nước đã ký kết Điều ước quốc tế thừa nhận lẫn nhau trong hoạt động kiểm tra an toàn thực phẩm mà Việt Nam là thành viên; có kết quả kiểm tra của cơ quan có thẩm quyền nước xuất khẩu đối với lô hàng, mặt hàng phù hợp với quy định của pháp luật Việt Nam;
+b) Đã có 03 (ba) làn liên tiếp trong vòng 12 tháng đạt yêu cầu nhập khẩu theo phương thức kiểm tra thông thường;
+c) Được sản xuất trong các cơ sở áp dụng một trong các hệ thống quản lý chất lượng GMP, HACCP, ISO 22000, IFS, BRC, FSSC 22000 hoặc tương đương.
+2. Kiểm tra thông thường áp dụng đối với tất cả mặt hàng của lô hàng nhập khẩu, trừ trường hợp quy định tại khoản 1 và khoản 3 Điều này.
+3. Kiểm tra chặt áp dụng đối với lô hàng, mặt hàng nhập khẩu thuộc một trong các trường hợp sau đây:
+a) Lô hàng, mặt hàng không đạt yêu cầu nhập khẩu tại lần kiểm tra trước đó;
+b) Lô hàng, mặt hàng không đạt yêu cầu trong các lần thanh tra, kiểm tra (nếu có);
+c) Có cảnh báo của Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương, Ủy ban nhân dân cấp tỉnh hoặc của cơ quan có thẩm quyền tại nước ngoài hoặc của nhà sản xuất.
+4. Chuyển từ phương thức kiểm tra chặt sang phương thức kiểm tra thông thường trong các trường hợp sau đây:
+a) Đối với trường hợp quy định tại điểm a, b khoản 3 Điều này, nếu sau khi áp dụng phương thức kiểm tra chặt 03 (ba) lần liên tiếp mà kết quả đạt yêu cầu nhập khẩu;
+b) Đối với trường hợp quy định tại điểm c khoản 3 Điều này, khi có văn bản thông báo ngừng kiểm tra chặt của Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn hoặc Bộ Công Thương của Việt Nam.
+Điều 18. Hồ sơ đăng ký kiểm tra
+1. Hồ sơ đăng ký kiểm tra theo phương thức kiểm tra giảm bao gồm:
+a) Bản tự công bố sản phẩm;
+b) 03 (ba) Thông báo kết quả xác nhận thực phẩm đạt yêu cầu nhập khẩu liên tiếp theo phương thức kiểm tra thông thường hoặc bản sao chứng thực hoặc bản chính hợp pháp hóa lãnh sự một trong các Giấy chứng nhận GMP, HACCP, ISO 22000, IFS, BRC, FSSC 22000 hoặc tương đương còn hiệu lực tại thời điểm nộp;
+c) Trong trường hợp sản phẩm có nguồn gốc thủy sản và động vật trên cạn, trừ các sản phẩm đã qua chế biến, bao gói sẵn, thì phải có giấy chứng nhận đáp ứng các quy định về an toàn thực phẩm do cơ quan có thẩm quyền của nước xuất khẩu cấp (bản chính).
+2. Hồ sơ đăng ký kiểm tra theo phương thức kiểm tra thông thường và phương thức kiểm tra chặt bao gồm:
+a) Giấy đăng ký kiểm tra thực phẩm nhập khẩu theo quy định tại Mẫu số 04 Phụ lục I ban hành kèm theo Nghị định này;
+b) Bản tự công bố sản phẩm;
+c) 03 (ba) Thông báo kết quả xác nhận thực phẩm đạt yêu cầu nhập khẩu liên tiếp theo phương thức kiểm tra chặt đối với các lô hàng, mặt hàng được chuyển đổi phương thức từ kiểm tra chặt sang kiểm tra thông thường (bản chính);
+d) Bản sao Danh mục hàng hóa (Packing list);
+đ) Trong trường hợp sản phẩm quy định tại Điều 14 Nghị định này thì phải có giấy chứng nhận đáp ứng các quy định về an toàn thực phẩm do cơ quan có thẩm quyền của nước xuất khẩu cấp (bản chính), trừ trường hợp thủy sản do tàu cá nước ngoài thực hiện đánh bắt, chế biến trên biến bán trực tiếp cho Việt Nam.
+Điều 19. Trình tự kiểm tra thực phẩm nhập khẩu
+1. Trình tự kiểm tra đối với trường hợp kiểm tra giảm:
+a) Khi làm thủ tục hải quan, chủ hàng có trách nhiệm nộp hồ sơ theo quy định tại khoản 1 Điều 18 Nghị định này;
+b) Cơ quan hải có trách nhiệm chọn ngẫu nhiên tối đa 5% trên tổng số lô hàng nhập khẩu thuộc diện kiểm tra giảm trong vòng 01 (một) năm để kiểm tra hồ sơ theo quy định.
+Trong thời hạn 03 (ba) ngày làm việc, kể từ ngày nhận hồ sơ, cơ quan hải quan có trách nhiệm kiểm tra hồ sơ và thông quan hàng hóa. Trường hợp yêu cầu bổ sung hồ sơ thì phải nêu rõ lý do và căn cứ pháp lý của việc yêu cầu.
+2. Trình tự kiểm tra đối với trường hợp kiểm tra thông thường:
+a) Trước hoặc khi hàng về đến cửa khẩu, chủ hàng nộp hồ sơ đăng ký kiểm tra theo quy định tại khoản 2 Điều 18 Nghị định này đến cơ quan kiểm tra nhà nước hoặc Cổng thông tin một cửa quốc gia phân hệ Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương (nếu đã áp dụng);
+b) Trong thời hạn 03 (ba) ngày làm việc, kể từ ngày nhận hồ sơ, cơ quan kiểm tra nhà nước có trách nhiệm kiểm tra hồ sơ và ra thông báo thực phẩm đạt hoặc không đạt yêu cầu nhập khẩu theo Mẫu số 05 Phụ lục I ban hành kèm theo Nghị định này. Trường hợp yêu cầu bổ sung hồ sơ thì phải nêu rõ lý do và căn cứ pháp lý của việc yêu cầu;
+c) Chủ hàng có trách nhiệm nộp Thông báo kết quả xác nhận thực phẩm đạt yêu cầu nhập khẩu cho cơ quan hải quan để thông quan hàng hóa.
+3. Trình tự, thủ tục kiểm tra đối với trường hợp kiểm tra chặt:
+a) Thực hiện quy định tại điểm a khoản 2 Điều này;
+b) Trong thời hạn 07 (bảy) ngày làm việc, kể từ ngày nhận hồ sơ, cơ quan kiểm tra nhà nước có trách nhiệm kiểm tra hồ sơ, tiến hành lấy mẫu, kiểm nghiệm các chỉ tiêu an toàn thực phẩm theo yêu cầu và ra thông báo thực phẩm đạt hoặc không đạt yêu cầu nhập khẩu theo Mẫu số 05 Phụ lục I ban hành kèm theo Nghị định này. Trường hợp yêu cầu bổ sung hồ sơ thì phải nêu rõ lý do và căn cứ pháp lý của việc yêu cầu;
+c) Chủ hàng có trách nhiệm nộp Thông báo kết quả xác nhận thực phẩm đạt yêu cầu nhập khẩu cho cơ quan hải quan để thông quan hàng hóa.
+4. Trường hợp ra Thông báo kết quả xác nhận thực phẩm không đạt yêu cầu nhập khẩu theo quy định tại điểm b khoản 2, điểm b khoản 3 Điều này, cơ quan kiểm tra nhà nước quyết định các biện pháp xử lý theo các hình thức quy định tại khoản 3 Điều 55 Luật an toàn thực phẩm và báo cáo kết quả xử lý thực phẩm không đạt yêu cầu nhập khẩu với Bộ quản lý chuyên ngành.
+Điều 20. Xử lý thực phẩm không đạt yêu cầu thực phẩm nhập khẩu
+1. Sau khi hoàn tất việc xử lý đối với thực phẩm không đạt yêu cầu nhập khẩu theo quyết định của cơ quan kiểm tra nhà nước, chủ hàng có trách nhiệm báo cáo cơ quan kiểm tra nhà nước và cơ quan tiếp nhận hồ sơ công bố một trong các giấy tờ sau:
+a) Chứng từ tái xuất đối với trường hợp áp dụng hình thức tái xuất;
+b) Biên bản tiêu hủy có xác nhận của cơ quan có thẩm quyền;
+c) Hợp đồng chuyển mục đích sử dụng giữa chủ hàng với bên mua hoặc bên nhận chuyển nhượng lô hàng, mặt hàng. Bên mua hoặc nhận chuyển nhượng lô hàng, mặt hàng không đạt yêu cầu nhập khẩu không được sử dụng lô hàng, mặt hàng đó làm thực phẩm.
+2. Sau khi hoàn thành việc khắc phục lỗi của sản phẩm, lỗi ghi nhãn, nếu muốn nhập khẩu vào Việt Nam, chủ hàng có trách nhiệm thực hiện thủ tục đăng ký kiểm tra theo quy định tại Điều 19 Nghị định này.
+Trong trường hợp đã áp dụng các biện pháp khắc phục lỗi của sản phẩm, lỗi ghi nhãn mà lô hàng, mặt hàng vẫn không đạt yêu cầu nhập khẩu thì phải áp dụng một trong các hình thức xử lý quy định tại các điểm c và d khoản 3 Điều 55 Luật an toàn thực phẩm.
+Điều 21. Quyền và nghĩa vụ của chủ hàng
+Chủ hàng có quyền và nghĩa vụ sau đây:
+1. Được áp dụng phương thức kiểm tra giảm đối với lô hàng, mặt hàng nhập khẩu thuộc một trong các trường hợp quy định tại khoản 1 Điều 17 Nghị định này.
+2. Đề nghị cơ quan kiểm tra nhà nước xem xét lại kết quả kiểm tra hoặc đề nghị cơ quan tiếp nhận bản công bố sản phẩm lựa chọn cơ sở kiểm nghiệm kiểm chứng đã được chỉ định để kiểm tra lại kết quả kiểm nghiệm. Trường hợp kết quả kiểm tra lại phù hợp với kết quả kiểm tra lần đầu thì chủ hàng phải chịu chi phí cho việc kiểm tra lại; trường hợp kết quả kiểm tra lại đạt yêu cầu thực phẩm nhập khẩu thì được trả lại chi phí kiểm tra lại đã nộp.
+3. Được quyền đề xuất biện pháp xử lý được quy định tại khoản 3 Điều 55 Luật an toàn thực phẩm đối với lô hàng, mặt hàng không đạt yêu cầu thực phẩm nhập khẩu.
+4. Bảo đảm nguyên trạng lô hàng, mặt hàng để cơ quan kiểm tra nhà nước tiến hành lấy mẫu.
+5. Thực hiện quyết định xử lý lô hàng, mặt hàng của cơ quan kiểm tra nhà nước có thẩm quyền nếu lô hàng, mặt hàng không đạt yêu cầu thực phẩm nhập khẩu.
+Điều 22. Thủ tục đăng ký quốc gia, vùng lãnh thổ và cơ sở sản xuất, kinh doanh vào danh sách xuất khẩu thực phẩm vào Việt Nam và kiểm tra nhà nước về an toàn thực phẩm tại nước xuất khẩu
+1. Cơ quan quản lý nhà nước có thẩm quyền của Việt Nam xây dựng kế hoạch kiểm tra, thông báo và phối hợp với cơ quan có thẩm quyền của nước xuất khẩu thực hiện kiểm tra hệ thống kiểm soát an toàn thực phẩm của nước xuất khẩu và cơ sở sản xuất, kinh doanh thực phẩm xuất khẩu vào Việt Nam theo thủ tục sau:
+a) Cơ quan có thẩm quyền nước xuất khẩu gửi 01 (một) bộ hồ sơ đăng ký về Bộ Nông nghiệp và Phát triển nông thôn, bao gồm thông tin về hệ thống quản lý của quốc gia, vùng lãnh thổ (bao gồm hệ thống pháp luật, tiêu chuẩn, hệ thống tổ chức quản lý an toàn thực phẩm) và năng lực kiểm soát an toàn thực phẩm của cơ quan thẩm quyền quốc gia, vùng lãnh thổ xuất khẩu theo Mẫu số 08 Phụ lục I ban hành kèm theo Nghị định này; danh sách các cơ sở sản xuất, kinh doanh thực phẩm có nguồn gốc từ động vật và thủy sản đăng ký xuất khẩu vào Việt Nam theo Mẫu số 07 Phụ lục I và thông tin về điều kiện bảo đảm an toàn thực phẩm của cơ sở sản xuất, kinh doanh này theo Mẫu số 09 Phụ lục I ban hành kèm theo Nghị định này;
+b) Trong thời hạn 30 ngày làm việc kể từ ngày nhận đủ hồ sơ đăng ký danh sách cơ sở sản xuất, kinh doanh quy định tại điểm a khoản này của cơ quan có thẩm quyền nước xuất khẩu, cơ quan có thẩm quyền của bộ quản lý ngành thực hiện thẩm tra hồ sơ, thông báo cho cơ quan có thẩm quyền của nước xuất khẩu kết quả thẩm tra và kế hoạch kiểm tra trong trường hợp cần thiết thực hiện kiểm tra đối với nước xuất khẩu vào Việt Nam;
+c) Nội dung kiểm tra tại nước xuất khẩu bao gồm: Hệ thống luật pháp về quản lý, kiểm soát an toàn thực phẩm; năng lực của cơ quan kiểm soát an toàn thực phẩm nước xuất khẩu; điều kiện bảo đảm an toàn thực phẩm của cơ sở sản xuất kinh doanh đăng ký xuất khẩu vào Việt Nam.
+2. Xử lý kết quả kiểm tra và thông báo danh sách quốc gia, vùng lãnh thổ và danh sách các cơ sở sản xuất, kinh doanh được phép xuất khẩu vào Việt Nam được quy định như sau:
+a) Trường hợp không cần thiết phải thực hiện kiểm tra thực tế đối với nước xuất khẩu vào Việt Nam, Bộ Nông nghiệp và Phát triển nông thôn công bố kết quả, tên quốc gia, vùng lãnh thổ được phép xuất khẩu vào Việt Nam. Riêng đối với sản phẩm động vật trên cạn, sản phẩm động vật thủy sản thì phải công bố kèm theo danh sách cơ sở sản xuất, kinh doanh được phép xuất khẩu;
+b) Trường hợp cần thiết thực hiện kiểm tra đối với nước xuất khẩu, trong thời hạn 30 ngày làm việc kể từ ngày kết thúc đợt kiểm tra tại nước xuất khẩu, Bộ Nông nghiệp và Phát triển nông thôn xử lý, công bố kết quả kiểm tra.
+Trường hợp kết quả kiểm tra chưa đáp ứng đầy đủ các yêu cầu theo quy định, Bộ Nông nghiệp và Phát triển nông thôn thông báo và nêu rõ lý do cụ thể những trường hợp chưa được phép xuất khẩu thực phẩm vào Việt Nam;
+c) Trong trường hợp đề nghị bổ sung danh sách cơ sở sản xuất, kinh doanh xuất khẩu sản phẩm động vật trên cạn, sản phẩm động vật thủy sản vào Việt Nam, cơ quan thẩm quyền nước xuất khẩu gửi hồ sơ bao gồm danh sách và thông tin cơ sở theo Mẫu số 07 và Mẫu số 08 theo quy định tại điểm a khoản 1 Điều này đến Bộ Nông nghiệp và Phát triển nông thôn để thẩm tra hồ sơ hoặc kiểm tra thực tế tại nước xuất khẩu, trên cơ sở đó xem xét, quyết định việc bổ sung vào danh sách.
+Điều 23. Kiểm tra nhà nước đối với thực phẩm xuất khẩu
+1. Bộ trưởng Bộ Y tế, Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn, Bộ trưởng Bộ Công Thương quy định thẩm quyền kiểm tra nhà nước về an toàn thực phẩm đối với thực phẩm xuất khẩu thuộc lĩnh vực được phân công quản lý tại các Điều 62, 63 và Điều 64 của Luật an toàn thực phẩm khi có yêu cầu của nước nhập khẩu.
+2. Bộ Nông nghiệp và Phát triển nông thôn có trách nhiệm kiểm tra đối với lô hàng thực phẩm xuất khẩu gồm nhiều mặt hàng thuộc thẩm quyền quản lý của từ 2 bộ trở lên.
+Chương VII
+GHI NHÃN THỰC PHẨM
+Điều 24. Nội dung ghi nhãn bắt buộc
+1. Tổ chức, cá nhân sản xuất, kinh doanh sản phẩm tại Việt Nam ngoài việc tuân thủ các quy định của pháp luật về ghi nhãn hàng hóa còn phải tuân thủ các quy định sau:
+a) Thực phẩm dinh dưỡng y học phải ghi các cụm từ sau: "Thực phẩm dinh dưỡng y học" và "Sử dụng cho người bệnh với sự giám sát của nhân viên y tế";
+b) Thực phẩm dùng cho chế độ ăn đặc biệt phải ghi cụm từ: "Sản phẩm dinh dưỡng (cho đối tượng cụ thể)" trên mặt chính của nhãn để phân biệt với thực phẩm thông thường.
+2. Riêng đối với sản phẩm nhập khẩu, tên tổ chức, cá nhân chịu trách nhiệm ghi trên nhãn sản phẩm phải thể hiện: tên, địa chỉ của tổ chức, cá nhân sản xuất và tên, địa chỉ của tổ chức, cá nhân tự công bố hoặc đăng ký bản công bố sản phẩm.
+Điều 25. Miễn một số nội dung ghi nhãn bắt buộc
+1. Miễn ghi nhãn phụ đối với sản phẩm mang theo người nhập cảnh để tiêu dùng cá nhân, quà tặng, quà biếu trong định mức được miễn thuế nhập khẩu; sản phẩm nhập khẩu của đối tượng được ưu đãi, miễn trừ ngoại giao; sản phẩm quá cảnh, chuyển khẩu, trung chuyển, tạm nhập, tái xuất, gửi kho ngoại quan; sản phẩm là mẫu thử nghiệm hoặc nghiên cứu; sản phẩm là mẫu trưng bày hội chợ, triển lãm; sản phẩm, nguyên liệu sản xuất, nhập khẩu chỉ dùng để sản xuất, gia công hàng xuất khẩu hoặc phục vụ cho việc sản xuất nội bộ của tổ chức, cá nhân không tiêu thụ tại thị trường trong nước.
+2. Ngoài gia vị và thảo mộc, đối với các bao gói nhỏ, có diện tích bề mặt lớn nhất nhỏ hơn 10 cm2, miễn áp dụng ghi thành phần cấu tạo, thời hạn sử dụng, hướng dẫn bảo quản, hướng dẫn sử dụng nếu có nhãn phụ hoặc bao bì ngoài đã thể hiện đầy đủ các nội dung đó.
+3. Miễn ghi ngày sản xuất đối với dụng cụ chứa đựng thực phẩm, vật liệu bao gói tiếp xúc trực tiếp với thực phẩm.
+Chương VIII
+QUẢNG CÁO THỰC PHẨM
+Điều 26. Các thực phẩm phải đăng ký nội dung trước khi quảng cáo
+1. Thực phẩm bảo vệ sức khỏe, thực phẩm dinh dưỡng y học, thực phẩm dùng cho chế độ ăn đặc biệt.
+2. Sản phẩm dinh dưỡng dùng cho trẻ đến 36 tháng tuổi không thuộc trường hợp cấm quảng cáo quy định tại Điều 7 của Luật quảng cáo.
+Điều 27. Đăng ký nội dung quảng cáo thực phẩm
+Việc đăng ký nội dung quảng cáo thực phẩm ngoài việc phải tuân thủ các quy định của pháp luật về quảng cáo còn phải tuân thủ các quy định sau:
+1. Trước khi quảng cáo, tổ chức, cá nhân có sản phẩm quảng cáo phải đăng ký nội dung quảng cáo với cơ quan cấp Giấy tiếp nhận bản đăng ký công bố sản phẩm theo quy định hiện hành.
+2. Nội dung quảng cáo phải phù hợp với công dụng, tác dụng của sản phẩm đã được công bố trong bản công bố sản phẩm. Không sử dụng hình ảnh, thiết bị, trang phục, tên, thư tín của các đơn vị, cơ sở y tế, bác sỹ, dược sỹ, nhân viên y tế, thư cảm ơn của người bệnh, bài viết của bác sỹ, dược sỹ, nhân viên y tế để quảng cáo thực phẩm.
+3. Đối với thực phẩm bảo vệ sức khỏe:
+a) Phải có khuyến cáo "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh"; chữ viết phải rõ ràng, có màu tương phản với màu nền;
+b) Quảng cáo trên báo nói, báo hình phải đọc rõ khuyến cáo theo quy định tại điểm a khoản này;
+c) Việc quảng cáo trên báo hình, báo nói với thời lượng ngắn dưới 15 giây thì không phải đọc "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh", nhưng phải thể hiện khuyến cáo trong quảng cáo.
+4. Hồ sơ đăng ký xác nhận nội dung quảng cáo gồm:
+a) Đơn đăng ký xác nhận nội dung quảng cáo theo Mẫu số 10 Phụ lục I ban hành kèm theo Nghị định này;
+b) Giấy tiếp nhận đăng ký bản công bố sản phẩm và Bản công bố sản phẩm đã được cơ quan có thẩm quyền xác nhận (bản sao có xác nhận của tổ chức, cá nhân);
+c) Mẫu nhãn sản phẩm (bản có xác nhận của tổ chức, cá nhân);
+d) Đối với quảng cáo trên báo nói, báo hình thì phải có kịch bản dự kiến quảng cáo và nội dung dự kiến quảng cáo ghi trong đĩa hình, đĩa âm thanh; đối với quảng cáo trên các phương tiện khác thì phải có ma két (mẫu nội dung) dự kiến quảng cáo (bản có xác nhận của tổ chức, cá nhân);
+đ) Đối với nội dung quảng cáo ngoài công dụng, tính năng của sản phẩm ghi trong bản công bố sản phẩm thì phải có tài liệu khoa học chứng minh (bản sao có xác nhận của tổ chức, cá nhân);
+Các tài liệu trong hồ sơ đăng ký xác nhận nội dung quảng cáo phải được thể hiện bằng tiếng Việt; trường hợp có tài liệu bằng tiếng nước ngoài thì phải được dịch sang tiếng Việt và được công chứng.
+5. Thủ tục cấp Giấy xác nhận nội dung quảng cáo:
+a) Tổ chức, cá nhân có sản phẩm quảng cáo gửi hồ sơ đăng ký xác nhận nội dung quảng cáo đến cơ quan cấp Giấy tiếp nhận đăng ký bản công bố sản phẩm;
+b) Trong thời hạn 10 ngày làm việc, kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan tiếp nhận hồ sơ có trách nhiệm xem xét hồ sơ và trả kết quả theo Mẫu số 11 Phụ lục I ban hành kèm theo Nghị định này. Thời hạn này được tính từ ngày đóng dấu đến của cơ quan tiếp nhận hồ sơ nếu hồ sơ được gửi qua đường bưu điện hoặc ngày hồ sơ hoàn chỉnh được tiếp nhận trên hệ thống dịch vụ công trực tuyến.
+Trong trường hợp không đồng ý với nội dung quảng cáo của tổ chức, cá nhân hoặc yêu cầu sửa đổi, bổ sung, cơ quan tiếp nhận hồ sơ phải có văn bản nêu rõ lý do và căn cứ pháp lý của việc yêu cầu. Cơ quan tiếp nhận hồ sơ chỉ được yêu cầu sửa đổi, bổ sung 01 lần.
+Trong thời hạn 10 ngày làm việc kể từ khi nhận hồ sơ sửa đổi, bổ sung, cơ quan tiếp nhận hồ sơ thẩm định hồ sơ và có văn bản trả lời. Sau 90 ngày làm việc kể từ khi có công văn yêu cầu sửa đổi, bổ sung nếu tổ chức, cá nhân không sửa đổi, bổ sung thì hồ sơ không còn giá trị;
+c) Các cơ quan tiếp nhận hồ sơ đăng ký xác nhận nội dung quảng cáo có trách nhiệm thông báo công khai tên, sản phẩm của tổ chức, cá nhân đã được cấp Giấy xác nhận nội dung quảng cáo sản phẩm thực phẩm trên trang thông tin điện tử (website) của mình và cơ sở dữ liệu về an toàn thực phẩm;
+d) Tổ chức, cá nhân đăng ký xác nhận nội dung quảng cáo có trách nhiệm nộp phí thẩm định hồ sơ tại cơ quan tiếp nhận hồ sơ.
+6. Tổ chức, cá nhân có sản phẩm quảng cáo; tổ chức, cá nhân phát hành quảng cáo chỉ được tiến hành quảng cáo sản phẩm đã được cấp Giấy xác nhận nội dung quảng cáo và chỉ được quảng cáo phù hợp với nội dung đã được xác nhận.
+Chương IX
+ĐIỀU KIỆN BẢO ĐẢM AN TOÀN THỰC PHẨM TRONG SẢN XUẤT THỰC PHẨM BẢO VỆ SỨC KHỎE
+Điều 28. Điều kiện bảo đảm an toàn thực phẩm trong sản xuất thực phẩm bảo vệ sức khỏe
+1. Cơ sở sản xuất thực phẩm bảo vệ sức khỏe phải đáp ứng điều kiện chung về bảo đảm an toàn thực phẩm được quy định tại khoản 1 Điều 19, khoản 1 Điều 20, khoản 1 Điều 21 Luật an toàn thực phẩm và những quy định sau đây:
+a) Phải thiết lập và duy trì hệ thống quản lý chất lượng để kiểm soát quá trình sản xuất và lưu thông phân phối nhằm bảo đảm mọi sản phẩm do cơ sở sản xuất đạt chất lượng theo tiêu chuẩn đã công bố và an toàn đối với người sử dụng cho đến hết hạn sử dụng;
+b) Đủ nhân viên có trình độ chuyên môn phù hợp với vị trí công việc được giao và được huấn luyện đào tạo kiến thức cơ bản về GMP, về an toàn thực phẩm và kiến thức chuyên môn liên quan. Trưởng bộ phận sản xuất và trưởng bộ phận kiểm soát chất lượng phải là nhân sự chính thức, làm việc toàn thời gian cho cơ sở và độc lập với nhau. Người phụ trách chuyên môn của cơ sở phải có trình độ từ đại học trở lên thuộc một trong các chuyên ngành Y, Dược, Dinh dưỡng, An toàn thực phẩm, Công nghệ thực phẩm và phải có ít nhất 3 năm kinh nghiệm làm việc tại lĩnh vực chuyên ngành có liên quan;
+c) Hệ thống nhà xưởng, thiết bị và tiện ích phụ trợ được thiết kế, xây dựng, lắp đặt phù hợp với mục đích sử dụng, theo nguyên tắc một chiều, dễ làm vệ sinh, ngăn ngừa, giảm thiểu nguy cơ nhầm lẫn, tránh tích tụ bụi bẩn, ô nhiễm và các yếu tố ảnh hưởng bất lợi đến sản phẩm và thực hiện duy trì hoạt động vệ sinh hàng ngày;
+d) Thực hiện và lưu đầy đủ hồ sơ, tài liệu về sản xuất, kiểm soát chất lượng, lưu thông phân phối để truy xuất được lịch sử mọi lô sản phẩm và hồ sơ ghi chép toàn bộ các hoạt động khác đã được thực hiện tại cơ sở;
+đ) Mọi thao tác sản xuất phải thực hiện theo quy trình, hướng dẫn. Áp dụng các biện pháp kiểm tra, giám sát trong quá trình sản xuất để phòng, tránh nguy cơ nhầm lẫn, ô nhiễm, nhiễm chéo. Ghi chép kết quả ngay khi thực hiện thao tác hoặc ngay sau khi hoàn thành công đoạn sản xuất vào hồ sơ;
+e) Có bộ phận kiểm soát chất lượng để bảo đảm sản phẩm được sản xuất theo các điều kiện, quy trình phù hợp và đáp ứng tiêu chuẩn đã thiết lập; các phép thử cần thiết đã được thực hiện; nguyên vật liệu không được duyệt xuất để sử dụng, sản phẩm không được duyệt xuất bán khi chưa được đánh giá đạt chất lượng theo yêu cầu; sản phẩm phải được theo dõi độ ổn định;
+g) Trong trường hợp kiểm nghiệm hoặc sản xuất theo hợp đồng thì bên nhận hợp đồng phải có đủ nhà xưởng, trang thiết bị và nhân sự đáp ứng yêu cầu bên giao và tuân thủ quy định của cơ quan quản lý có thẩm quyền về điều kiện kiểm nghiệm hoặc sản xuất thực phẩm bảo vệ sức khỏe;
+h) Có quy trình quy định giải quyết khiếu nại, thu hồi sản phẩm, hoạt động tự kiểm tra; thực hiện theo quy trình và ghi chép, lưu giữ đầy đủ hồ sơ đối với các hoạt động này.
+2. Bộ Y tế hướng dẫn Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe để các cơ sở sản xuất thực phẩm bảo vệ sức khỏe triển khai áp dụng.
+3. Kể từ ngày 01 tháng 07 năm 2019, các cơ sở sản xuất thực phẩm bảo vệ sức khỏe phải áp dụng Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe theo hướng dẫn của Bộ Y tế.
+Điều 29. Hồ sơ, trình tự, thẩm quyền cấp, cấp lại Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe
+1. Hồ sơ cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe bao gồm:
+a) Đơn đề nghị cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe theo Mẫu số 12 Phụ lục I ban hành kèm theo Nghị định này;
+b) Sơ đồ các khu vực sản xuất và dây chuyền sản xuất (có xác nhận của tổ chức, cá nhân);
+c) Danh mục các thiết bị chính được sử dụng tại cơ sở (có xác nhận của tổ chức, cá nhân).
+2. Trình tự cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe
+a) Cơ sở lập hồ sơ theo quy định tại khoản 1 Điều này và nộp qua hệ thống dịch vụ công trực tuyến hoặc nộp qua đường bưu điện hoặc trực tiếp đến Bộ Y tế;
+b) Trong thời hạn 15 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan tiếp nhận hồ sơ có trách nhiệm thành lập đoàn thẩm định và tiến hành đánh giá thực tế tại cơ sở và lập Biên bản thẩm định theo Mẫu số 13 Phụ lục I ban hành kèm theo Nghị định này.
+Đoàn thẩm định có từ 05 người trở lên, trong đó có ít nhất 02 thành viên có kinh nghiệm về thực hành sản xuất tốt (GMP), 01 thành viên có chuyên môn về kiểm nghiệm;
+c) Trong trường hợp kết quả thẩm định đạt yêu cầu, cơ quan tiếp nhận hồ sơ cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe theo Mẫu số 14 Phụ lục I ban hành kèm theo Nghị định này. Thời gian cấp Giấy chứng phận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe không quá 30 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ;
+d) Trong trường hợp kết quả thẩm định tại cơ sở không đạt yêu cầu, Đoàn thẩm định ghi rõ nội dung không đạt yêu cầu trong biên bản thẩm định để cơ sở khắc phục. Sau khi khắc phục, cơ sở gửi thông báo kết quả khắc phục bằng văn bản đến Đoàn thẩm định. Trong thời hạn 07 (bảy) ngày làm việc kể từ ngày nhận được văn bản thông báo kết quả khắc phục, đoàn thẩm định có trách nhiệm xem xét để trình Bộ Y tế cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe. Quá thời hạn 03 (ba) tháng kể từ ngày kết thúc thẩm định, nếu cơ sở không hoàn thành việc khắc phục theo yêu cầu và thông báo kết quả khắc phục tới Đoàn thẩm định thì hồ sơ cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe không còn giá trị.
+3. Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe có giá trị 03 (ba) năm kể từ ngày cấp. Trước khi hết hạn 06 tháng, cơ sở có trách nhiệm nộp hồ sơ đăng ký cấp lại Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe. Hồ sơ, trình tự cấp lại được thực hiện theo quy định tại khoản 1 và khoản 2 Điều này.
+4. Tổ chức, cá nhân đề nghị cấp Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe có trách nhiệm nộp phí thẩm định hồ sơ tại cơ quan tiếp nhận hồ sơ.
+Chương X
+ĐIỀU KIỆN BẢO ĐẢM AN TOÀN THỰC PHẨM TRONG SẢN XUẤT, KINH DOANH VÀ SỬ DỤNG PHỤ GIA THỰC PHẨM
+Điều 30. Quy định về điều kiện bảo đảm an toàn thực phẩm đối với phụ gia thực phẩm
+Cơ sở sản xuất, kinh doanh phụ gia thực phẩm phải đáp ứng các điều kiện bảo đảm an toàn thực phẩm sau đây:
+1. Đáp ứng các quy định chung về điều kiện bảo đảm an toàn thực phẩm được quy định tại khoản 1 Điều 19, khoản 1 Điều 20, khoản 1 Điều 21 Luật an toàn thực phẩm.
+2. Chỉ được phối trộn các phụ gia thực phẩm khi các phụ gia thực phẩm đó thuộc danh mục các chất phụ gia được phép sử dụng trong thực phẩm do Bộ Y tế quy định và sản phẩm cuối cùng của sự phối trộn không gây ra bất cứ tác hại nào với sức khỏe con người; trường hợp tạo ra một sản phẩm mới, có công dụng mới phải chứng minh công dụng, đối tượng sử dụng và mức sử dụng tối đa.
+3. Việc sang chia, san, chiết phụ gia thực phẩm phải được thực hiện tại cơ sở đủ điều kiện an toàn thực phẩm và ghi nhãn theo quy định hiện hành.
+Điều 31. Quy định về phụ gia thực phẩm đơn chất
+1. Phụ gia thực phẩm thuộc danh mục các chất phụ gia được phép sử dụng trong thực phẩm do Bộ Y tế quy định thuộc đối tượng tự công bố.
+2. Thủ tục tự công bố sản phẩm đối với phụ gia thực phẩm đơn chất thực hiện theo quy định tại Điều 5 Nghị định này.
+Điều 32. Quy định về phụ gia thực phẩm hỗn hợp có công dụng mới
+1. Phụ gia thực phẩm hỗn hợp có công dụng mới phải được đăng ký bản công bố sản phẩm tại Bộ Y tế.
+2. Phụ gia thực phẩm hỗn hợp có công dụng mới phải được liệt kê thành phần định lượng đối với từng phụ gia trong thành phần cấu tạo.
+3. Trình tự thủ tục đăng ký bản công bố sản phẩm đối với phụ gia thực phẩm hỗn hợp có công dụng mới theo quy định tại Điều 7, 8 Nghị định này.
+Điều 33. Quy định về sử dụng phụ gia thực phẩm
+Tổ chức, cá nhân sản xuất, kinh doanh sản phẩm có trách nhiệm:
+1. Chỉ được sử dụng phụ gia thực phẩm trong danh mục các chất phụ gia được phép sử dụng trong thực phẩm do Bộ Y tế quy định. Trong trường hợp phụ gia thực phẩm không thuộc danh mục các chất phụ gia được phép sử dụng trong thực phẩm hoặc không đúng đối tượng sử dụng do Bộ Y tế quy định; tổ chức, cá nhân sản xuất, kinh doanh phụ gia thực phẩm phải đăng ký bản công bố sản phẩm tại Bộ Y tế theo quy định tại Điều 7, 8 Nghị định này.
+2. Sử dụng phụ gia thực phẩm không vượt quá mức sử dụng tối đa cho phép; đúng đối tượng thực phẩm; có nguồn gốc, xuất xứ rõ ràng; còn thời hạn sử dụng; đáp ứng đầy đủ các yêu cầu quản lý và yêu cầu kỹ thuật đối với phụ gia thực phẩm.
+Chương XI
+TRUY XUẤT NGUỒN GỐC THỰC PHẨM
+Điều 34. Truy xuất nguồn gốc đối với sản phẩm không bảo đảm an toàn
+Khi phát hiện sản phẩm thực phẩm do mình sản xuất, kinh doanh không bảo đảm an toàn hoặc khi cơ quan nhà nước có thẩm quyền yêu cầu, tổ chức, cá nhân sản xuất, kinh doanh sản phẩm phải có trách nhiệm thực hiện việc truy xuất nguồn gốc theo quy định tại khoản 1 và khoản 2 Điều 54 Luật an toàn thực phẩm.
+Điều 35. Thực hiện việc truy xuất nguồn gốc đối với sản phẩm không bảo đảm an toàn
+1. Tổ chức, cá nhân sản xuất, kinh doanh sản phẩm phải lưu trữ các thông tin liên quan đến nhà sản xuất, cung cấp sản phẩm và khách hàng trong trường hợp khách hàng đã mua sản phẩm đó thông qua hợp đồng, sổ sách ghi chép hoặc các phương thức khác để phục vụ việc truy xuất nguồn gốc. Các thông tin phục vụ truy xuất nguồn gốc bao gồm:
+a) Tên, chủng loại sản phẩm đã mua, đã bán;
+b) Ngày, tháng, năm, số lượng, khối lượng, số lô, số mẻ của sản phẩm (nếu có) đã mua, bán.
+2. Bộ trưởng Bộ Y tế, Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn, Bộ trưởng Bộ Công Thương quy định cụ thể việc truy xuất nguồn gốc sản phẩm đối với các sản phẩm thuộc lĩnh vực được phân công quản lý.
+Chương XII
+PHÂN CÔNG TRÁCH NHIỆM QUẢN LÝ NHÀ NƯỚC VỀ AN TOÀN THỰC PHẨM
+Điều 36. Nguyên tắc phân công trách nhiệm quản lý nhà nước về an toàn thực phẩm
+1. Trên cơ sở các quy định của Luật an toàn thực phẩm và bảo đảm phù hợp với các văn bản pháp luật có liên quan.
+2. Trên cơ sở thống nhất quản lý nhà nước về an toàn thực phẩm.
+3. Bảo đảm việc quản lý xuyên suốt toàn bộ quá trình sản xuất, kinh doanh thực phẩm.
+4. Phối hợp chặt chẽ giữa các bộ ngành.
+5. Bảo đảm nguyên tắc một cửa, một sản phẩm, một cơ sở sản xuất, kinh doanh chỉ chịu sự quản lý của một cơ quan quản lý nhà nước.
+6. Bảo đảm tính khoa học, đầy đủ và khả thi.
+7. Phân cấp quản lý nhà nước giữa trung ương và chính quyền địa phương các cấp trong quản lý nhà nước về an toàn thực phẩm.
+8. Đối với cơ sở sản xuất nhiều loại sản phẩm thực phẩm thuộc thẩm quyền quản lý của từ 2 cơ quan quản lý chuyên ngành trở lên thì cơ quan quản lý sản phẩm có sản lượng lớn nhất trong các sản phẩm của cơ sở sản xuất là cơ quan quản lý.
+9. Đối với cơ sở không thực hiện công đoạn sản xuất nhưng kinh doanh nhiều loại sản phẩm thực phẩm thuộc thẩm quyền quản lý của từ 2 cơ quan quản lý chuyên ngành trở lên do ngành Công Thương quản lý, trừ trường hợp là chợ đầu mối, đấu giá nông sản.
+10. Đối với cơ sở vừa sản xuất vừa kinh doanh nhiều loại sản phẩm thuộc thẩm quyền quản lý của từ 2 cơ quan quản lý chuyên ngành trở lên thì tổ chức, cá nhân có quyền lựa chọn cơ quan quản lý chuyên ngành về an toàn thực phẩm để thực hiện các thủ tục hành chính.
+Điều 37. Trách nhiệm quản lý nhà nước về an toàn thực phẩm của Bộ Y tế
+1. Thực hiện các quy định về trách nhiệm chung trong quản lý nhà nước về an toàn thực phẩm quy định tại khoản 1 Điều 62 Luật an toàn thực phẩm.
+2. Báo cáo định kỳ, đột xuất với Chính phủ về công tác quản lý an toàn thực phẩm trên cơ sở giám sát và tổng hợp báo cáo của các bộ quản lý chuyên ngành và Ủy ban nhân dân cấp tỉnh.
+3. Ban hành quy chuẩn kỹ thuật quốc gia đối với sản phẩm thuộc lĩnh vực được phân công quản lý quy định tại Điều 62 Luật an toàn thực phẩm và các nhóm sản phẩm trong Phụ lục II ban hành kèm theo Nghị định này; ban hành quy chuẩn kỹ thuật quốc gia hoặc quy định về mức giới hạn an toàn đối với các nhóm sản phẩm theo đề nghị của các bộ quản lý chuyên ngành.
+4. Quản lý an toàn thực phẩm trong suốt quá trình sản xuất, chế biến, bảo quản, vận chuyển, xuất khẩu, nhập khẩu, kinh doanh và cơ sở sản xuất, kinh doanh đối với sản phẩm thực phẩm quy định tại Phụ lục II ban hành kèm theo Nghị định này.
+5. Tổ chức tiếp nhận và quản lý hồ sơ, cấp Giấy tiếp nhận đăng ký bản công bố sản phẩm, Giấy chứng nhận cơ sở đủ điều kiện an toàn thực đối với: thực phẩm bảo vệ sức khỏe, phụ gia thực phẩm hỗn hợp có công dụng mới, phụ gia thực phẩm không thuộc danh mục các chất phụ gia được phép sử dụng hoặc không đúng đối tượng sử dụng trong thực phẩm do Bộ Y tế quy định; Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm đạt yêu cầu Thực hành sản xuất tốt (GMP) thực phẩm bảo vệ sức khỏe; Giấy Xác nhận nội dung quảng cáo đối với thực phẩm bảo vệ sức khỏe; Giấy chứng nhận lưu hành tự do đối với sản phẩm thuộc lĩnh vực được phân công quản lý, Giấy chứng nhận y tế.
+6. Chỉ định cơ sở kiểm nghiệm thực phẩm phục vụ quản lý nhà nước, cơ sở kiểm nghiệm kiểm chứng thuộc phạm vi được phân công quản lý; chỉ định cơ sở làm kiểm nghiệm trọng tài và kết luận cuối cùng khi có sự khác biệt về kết quả kiểm nghiệm của các cơ sở kiểm nghiệm thực phẩm trong và ngoài ngành Y tế.
+7. Chỉ định cơ quan kiểm tra nhà nước về an toàn thực phẩm nhập khẩu đối với các sản phẩm thuộc lĩnh vực được phân công quản lý.
+Điều 38. Trách nhiệm quản lý nhà nước về an toàn thực phẩm của Bộ Nông nghiệp và Phát triển nông thôn
+1. Ban hành quy chuẩn kỹ thuật quốc gia đối với sản phẩm thuộc lĩnh vực được phân công quản lý quy định tại Điều 63 Luật an toàn thực phẩm và các nhóm sản phẩm trong Phụ lục III ban hành kèm theo Nghị định này.
+2. Xây dựng và gửi Bộ Y tế ban hành quy định về mức giới hạn an toàn đối với các nhóm sản phẩm trong Phụ lục III ban hành kèm theo Nghị định này.
+3. Quản lý và phân cấp quản lý an toàn thực phẩm đối với sản xuất ban đầu nông, lâm, thủy sản, muối bao gồm: Quá trình trồng trọt, chăn nuôi, thu hái, đánh bắt, khai thác nông, lâm, thủy sản; sản xuất muối.
+4. Quản lý và phân cấp quản lý an toàn thực phẩm trong suốt quá trình sản xuất, thu gom, giết mổ, sơ chế, chế biến, bảo quản, vận chuyển, xuất khẩu, nhập khẩu, kinh doanh đối với sản phẩm và cơ sở sản xuất, kinh doanh các sản phẩm thực phẩm quy định tại Phụ lục III ban hành kèm theo Nghị định này.
+5. Tổ chức việc cấp Giấy chứng nhận lưu hành tự do đối với sản phẩm thuộc lĩnh vực được phân công quản lý.
+6. Tổ chức cấp, phân cấp việc cấp giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm cho các tổ chức, cá nhân sản xuất, kinh doanh các sản phẩm thuộc lĩnh vực được phân công quản lý tại khoản 3, 4 của Điều này.
+7. Quản lý an toàn thực phẩm đối với các chợ đầu mối, đấu giá nông sản.
+8. Chỉ định cơ sở kiểm nghiệm thực phẩm phục vụ quản lý nhà nước, cơ sở kiểm nghiệm kiểm chứng; kết luận cuối cùng khi có sự khác biệt về kết quả kiểm nghiệm giữa các cơ sở kiểm nghiệm thuộc lĩnh vực được phân công quản lý.
+9. Chỉ định cơ quan kiểm tra nhà nước về an toàn thực phẩm nhập khẩu đối với các sản phẩm thuộc lĩnh vực được phân công quản lý.
+10. Công bố danh sách quốc gia, vùng lãnh thổ và danh sách các cơ sở sản xuất, kinh doanh được phép xuất khẩu vào Việt Nam thuộc lĩnh vực được phân công quản lý.
+Điều 39. Trách nhiệm quản lý nhà nước về an toàn thực phẩm của Bộ Công Thương
+1. Ban hành quy chuẩn kỹ thuật quốc gia đối với sản phẩm thuộc lĩnh vực được phân công quản lý quy định tại Điều 64 Luật an toàn thực phẩm và các nhóm sản phẩm trong Phụ lục IV ban hành kèm theo Nghị định này.
+2. Xây dựng và gửi Bộ Y tế ban hành quy định về mức giới hạn an toàn đối với các nhóm sản phẩm trong Phụ lục IV ban hành kèm theo Nghị định này.
+3. Quản lý và phân cấp quản lý an toàn thực phẩm trong suốt quá trình sản xuất, chế biến, bảo quản, vận chuyển, xuất khẩu, nhập khẩu, kinh doanh đối với các sản phẩm và cơ sở sản xuất, kinh doanh các sản phẩm thực phẩm quy định tại Phụ lục IV ban hành kèm theo Nghị định này.
+4. Quản lý an toàn thực phẩm đối với siêu thị, trung tâm thương mại, cửa hàng tiện ích, các cơ sở thuộc hệ thống dự trữ, phân phối và các loại hình kinh doanh khác.
+5. Tổ chức cấp Giấy chứng nhận lưu hành tự do đối với các sản phẩm thuộc lĩnh vực được phân công quản lý.
+6. Tổ chức cấp, phân cấp việc cấp giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm cho các tổ chức, cá nhân sản xuất, kinh doanh các sản phẩm thuộc lĩnh vực được phân công quản lý.
+7. Thực hiện việc kiểm tra phòng chống thực phẩm giả, gian lận thương mại trên thị trường đối với tất cả các loại thực phẩm, phụ gia thực phẩm, chất hỗ trợ chế biến thực phẩm, dụng cụ, vật liệu bao gói, chứa đựng thực phẩm.
+8. Chỉ định cơ sở kiểm nghiệm thực phẩm phục vụ quản lý nhà nước, cơ sở kiểm nghiệm kiểm chứng; kết luận cuối cùng khi có sự khác biệt về kết quả kiểm nghiệm giữa các cơ sở kiểm nghiệm thuộc lĩnh vực được phân công quản lý.
+9. Chỉ định cơ quan kiểm tra nhà nước về an toàn thực phẩm nhập khẩu đối với các sản phẩm thuộc lĩnh vực được phân công quản lý.
+Điều 40. Trách nhiệm quản lý nhà nước về an toàn thực phẩm của Ủy ban nhân dân cấp tỉnh
+1. Thực hiện quản lý nhà nước về an toàn thực phẩm trên phạm vi địa phương, chịu trách nhiệm trước Chính phủ về an toàn thực phẩm tại địa phương. Chủ tịch Ủy ban nhân dân cấp tỉnh trực tiếp làm nhiệm vụ Trưởng ban chỉ đạo liên ngành về vệ sinh an toàn thực phẩm tỉnh, thành phố trực thuộc trung ương; chủ động tổ chức lực lượng thanh tra, kiểm tra, giám sát bảo đảm an toàn thực phẩm trên địa bàn; trực tiếp chỉ đạo và thường xuyên đôn đốc, kiểm tra việc chấp hành pháp luật về an toàn thực phẩm của cơ quan nhà nước cấp dưới; xử lý cán bộ, công chức thiếu trách nhiệm, buông lỏng quản lý thuộc lĩnh vực được phân công quản lý; tổ chức giải quyết khiếu nại, tố cáo, xử lý vi phạm pháp luật về an toàn thực phẩm theo quy định của pháp luật; chịu trách nhiệm trước Chính phủ và trước pháp luật khi để xảy ra vi phạm pháp luật về an toàn thực phẩm trên địa bàn.
+2. Tổ chức triển khai thực hiện các quy định của Chính phủ, các bộ, ngành về an toàn thực phẩm trên địa bàn.
+3. Tổ chức, điều hành Ban chỉ đạo liên ngành về vệ sinh an toàn thực phẩm tỉnh, thành phố trực thuộc trung ương.
+4. Tổ chức tuyên truyền, vận động việc thực hiện các quy định của pháp luật về bảo đảm an toàn thực phẩm trên địa bàn.
+5. Bố trí nguồn lực cho các cơ quan chuyên môn để thực hiện việc quản lý nhà nước về an toàn thực phẩm.
+6. Chịu trách nhiệm quản lý an toàn thực phẩm trên địa bàn; quản lý điều kiện bảo đảm an toàn thực phẩm đối với cơ sở sản xuất, kinh doanh thực phẩm nhỏ lẻ, thức ăn đường phố, cơ sở kinh doanh, dịch vụ ăn uống, an toàn thực phẩm tại các chợ trên địa bàn và các đối tượng theo phân cấp quản lý.
+7. Xây dựng và ban hành quy chuẩn kỹ thuật địa phương về an toàn thực phẩm đối với các sản phẩm thực phẩm đặc thù của địa phương.
+8. Tổ chức tiếp nhận và quản lý hồ sơ, cấp Giấy tiếp nhận đăng ký bản công bố sản phẩm, Giấy xác nhận nội dung quảng cáo đối với sản phẩm dinh dưỡng y học, thực phẩm dùng cho chế độ ăn đặc biệt, sản phẩm dinh dưỡng dùng cho trẻ đến 36 tháng tuổi.
+9. Tổ chức tiếp nhận bản tự công bố sản phẩm; chứng nhận cơ sở đủ điều kiện an toàn thực phẩm theo phân công, phân cấp.
+Điều 41. Phối hợp trong hoạt động bảo đảm an toàn thực phẩm
+1. Các bộ quản lý ngành trong phạm vi quản lý nhà nước của mình có trách nhiệm phối hợp với Bộ Y tế trong việc thực hiện các hoạt động quản lý nhà nước để bảo đảm thống nhất quản lý nhà nước về an toàn thực phẩm có hiệu quả.
+2. Bộ Y tế chủ trì xây dựng chương trình thông tin giáo dục truyền thông về an toàn thực phẩm, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương và các bộ, ngành khác theo chức năng nhiệm vụ có trách nhiệm phối hợp với Bộ Y tế để thực hiện chương trình thông tin giáo dục truyền thông về an toàn thực phẩm.
+3. Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương có trách nhiệm chủ trì xây dựng chương trình, kế hoạch và triển khai hoạt động thanh tra, kiểm tra đối với các sản phẩm thuộc lĩnh vực được phân công quản lý, các bộ, ngành khác có trách nhiệm phối hợp.
+4. Khi xảy ra ngộ độc thực phẩm, Bộ Y tế chịu trách nhiệm tổ chức cấp cứu, điều trị kịp thời cho người bị ngộ độc thực phẩm. Bộ quản lý chuyên ngành có trách nhiệm cung cấp đầy đủ hồ sơ, thông tin liên quan tới nguồn gốc thực phẩm nghi ngờ gây ngộ độc thuộc lĩnh vực được phân công quản lý; phối hợp với Bộ Y tế điều tra nguyên nhân và chủ trì trong việc truy xuất nguồn gốc và xử lý thực phẩm gây ngộ độc thuộc lĩnh vực được phân công quản lý.
+5. Khi phát hiện sản phẩm thực phẩm thuộc lĩnh vực được phân công quản lý của bộ, ngành khác vi phạm và có nguy cơ ảnh hưởng nghiêm trọng đến sức khỏe người tiêu dùng, Bộ Y tế chủ trì, phối hợp với các bộ quản lý ngành thực hiện việc thanh tra, kiểm tra và kết luận.
+Chương XIII
+ĐIỀU KHOẢN THI HÀNH
+Điều 42. Điều khoản chuyển tiếp
+1. Các sản phẩm đã được cấp Giấy tiếp nhận bản công bố hợp quy và Giấy xác nhận công bố phù hợp quy định an toàn thực phẩm trước ngày Nghị định này có hiệu lực được tiếp tục sử dụng đến khi hết thời hạn ghi trên giấy và hết thời hạn sử dụng của sản phẩm.
+2. Các bộ quản lý trong phạm vi, nhiệm vụ, quyền hạn của mình thực hiện rà soát và công bố hết hiệu lực các quy định trái với Nghị định này.
+Điều 43. Hiệu lực thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 02 tháng 02 năm 2018.
+2. Thay thế Nghị định số 38/2012/NĐ-CP ngày 25 tháng 4 năm 2012 của Chính phủ quy định chi tiết thi hành một số điều của Luật an toàn thực phẩm; bãi bỏ Chương II Thông tư liên tịch số 13/2014/TTLT-BYT-BNNPTNT-BCT ngày 09 tháng 4 năm 2014 của Bộ Y tế, Bộ Nông nghiệp và Phát triển nông thôn, Bộ Công Thương hướng dẫn việc phân công, phối hợp trong quản lý nhà nước về an toàn thực phẩm.
+Điều 44. Trách nhiệm thi hành
+Các Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc trung ương và các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này./.

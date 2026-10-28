@@ -2,7 +2,7 @@
 
 # Vietnamese Legal & Contract Terminology Glossary (`vietnamese-legal-contracts`)
 
-This glossary provides standardized Vietnamese civil-law terminology, contract drafting phrasing, intellectual property nomenclature, labor law classifications, and Personal Data Protection Decree (Nghị định 13/2023/NĐ-CP) terms.
+This glossary provides standardized Vietnamese civil-law terminology, contract drafting phrasing, intellectual property nomenclature, labor law classifications, and personal data protection terms (Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 & Nghị định 356/2025/NĐ-CP; Nghị định 13/2023/NĐ-CP no longer in force from 01/01/2026).
 
 The machine-readable table below is loaded by `validate_copy.py` at runtime; each row acts as an active linting rule firing `CAL001` with the declared severity.
 

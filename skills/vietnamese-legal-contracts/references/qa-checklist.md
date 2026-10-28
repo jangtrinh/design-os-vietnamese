@@ -36,7 +36,7 @@ Before publishing, signing, or executing any commercial agreement, civil contrac
 - [ ] Không tước đoạt quyền khiếu nại, khiếu kiện của người tiêu dùng.
 - [ ] Không quy định bên bán có độc quyền đơn phương giải thích hợp đồng khi có tranh chấp.
 
-### Gate 6: Đầy đủ 11 Quyền Chủ thể Dữ liệu trong Chính sách PDPD (Điều 9 NĐ 13/2023/NĐ-CP)
+### Gate 6: Đầy đủ 11 Quyền Chủ thể Dữ liệu trong Chính sách PDPD (Điều 4 Luật 91/2025/QH15; trước đây Điều 9 NĐ 13/2023/NĐ-CP)
 - [ ] Nêu rõ quyền của chủ thể dữ liệu (đặc biệt là quyền rút lại sự đồng ý và quyền yêu cầu xóa dữ liệu cá nhân).
 - [ ] Phân định rõ tư cách Bên Kiểm soát dữ liệu cá nhân và Bên Xử lý dữ liệu cá nhân.
 - [ ] Quy trình xử lý và thông báo sự cố vi phạm dữ liệu cá nhân trong vòng **72 giờ** cho Bộ Công an (A05) (Điều 23).

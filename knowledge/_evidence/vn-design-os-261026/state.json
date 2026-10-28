@@ -1,6 +1,6 @@
 {
   "run_id": "vn-design-os-261026",
-  "round": 0,
+  "round": 13,
   "status": "RUNNING",
   "budget_used": 0,
   "budget_total": 50,
@@ -12,7 +12,6 @@
     "claim-tone-orthography",
     "claim-register-pragmatics",
     "claim-locale-formatting",
-    "claim-statutory-compliance",
     "claim-typography-metrics",
     "claim-finance-tt99",
     "claim-edtech-moet",
@@ -25,13 +24,102 @@
     "claim-ecommerce-law",
     "claim-gov-dvc",
     "claim-insurance-law",
-    "claim-cybersecurity-law",
-    "claim-media-law"
+    "claim-media-law",
+    "claim-pdpd-law-91-in-force",
+    "claim-pdpd-nd13-expired",
+    "claim-pdpd-nd13-register-status",
+    "claim-pdpd-consent-informed",
+    "claim-pdpd-consent-silence",
+    "claim-pdpd-no-default-consent",
+    "claim-pdpd-breach-72h",
+    "claim-pdpd-breach-form-08",
+    "claim-pdpd-agency-bca",
+    "claim-pdpd-children-consent",
+    "claim-pdpd-transition-consent",
+    "claim-ads-superlative-equivalent",
+    "claim-ads-truthful",
+    "claim-ads-law-75-in-force",
+    "claim-ads-law-75-repeals",
+    "claim-fin-no-return-guarantee",
+    "claim-med-tpcn-disclaimer",
+    "claim-med-ad-matches-declaration",
+    "claim-med-no-medical-endorsement",
+    "claim-med-kcb-deceptive-ads",
+    "claim-rea-deposit-5pct",
+    "claim-rea-first-installment-30",
+    "claim-rea-pre-certificate-95",
+    "claim-orth-qd1989-number",
+    "claim-orth-tone-main-vowel",
+    "claim-orth-tone-ia-ua-ua",
+    "claim-orth-tone-ie-uo",
+    "claim-orth-i-not-y",
+    "claim-orth-decimal-comma",
+    "claim-med-nd15-register-status",
+    "claim-pdpd-nd330-in-force",
+    "claim-pdpd-silence-fine-nd330",
+    "claim-pdpd-default-consent-fine-nd330",
+    "claim-pdpd-fine-individual-half-nd330",
+    "claim-pdpd-agency-name-nd330",
+    "claim-fin-nd38-scope",
+    "claim-fin-nd38-d2k4",
+    "claim-fin-law56-d12k3",
+    "claim-fin-law56-register-status",
+    "claim-rea-law29-register-status",
+    "claim-pdpd-form-03a-dpia-update",
+    "claim-med-ad-beyond-declaration-evidence",
+    "claim-fin-luatck-amenders-register",
+    "claim-fin-law56-no-ending-act",
+    "claim-ads-law-75-d8-k3-k10",
+    "claim-pdpd-nd356-scope",
+    "claim-pdpd-breach-notice-content",
+    "claim-fin-luatck-d12-no-guarantee"
   ],
   "minimum_independent_sources": 6,
-  "last_weighted_delta": 0.0,
-  "researcher_runtime": "gemini-3.8-flash-worker",
+  "last_weighted_delta": 0.011627906976744186,
+  "researcher_runtime": "claude-opus-5-5",
   "is_target_version_matched": true,
-  "consecutive_low_delta_rounds": 3,
-  "has_viable_probe_remaining": false
+  "consecutive_low_delta_rounds": 1,
+  "has_viable_probe_remaining": true,
+  "researcher_history": [
+    {
+      "rounds": [
+        1
+      ],
+      "runtime": "gemini-3.8-flash-worker"
+    },
+    {
+      "rounds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "runtime": "claude-opus-5-5",
+      "date": "2026-10-28"
+    }
+  ],
+  "open_probes": [
+    "Which provisions of Luật KDBĐS 29/2023/QH15 lost force (Luật 43/2024 and later amendments)",
+    "Status of the NĐ 15/2018 replacement decree",
+    "Lexicographic sources (Hoàng Phê, Diệp Quang Ban, Cao Xuân Hạo) for colloquial variants and negation cues"
+  ],
+  "retired_claim_ids": [
+    {
+      "id": "claim-statutory-compliance",
+      "retired": "2026-10-28",
+      "reason": "describes Decree 13/2023 as current; owner ruling: retire, replaced by claim-pdpd-nd356-scope"
+    },
+    {
+      "id": "claim-cybersecurity-law",
+      "retired": "2026-10-28",
+      "reason": "describes Decree 13/2023 Article 23 and A05; owner ruling: retire, replaced by claim-pdpd-breach-notice-content (with claim-pdpd-breach-72h)"
+    }
+  ]
 }

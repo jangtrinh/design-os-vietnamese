@@ -2,61 +2,399 @@
   {
     "id": "b2b-zns-and-admin-comms",
     "path": "b2b-zns-and-admin-comms.md",
-    "sha256": "7758bcd43f97e5a645503b47e2aaec794833c842d1ec96aa1d32c3e58ec1a15f"
+    "sha256": "7758bcd43f97e5a645503b47e2aaec794833c842d1ec96aa1d32c3e58ec1a15f",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-business-and-administrative-comms",
+    "trust_tier": "verified",
+    "when": [
+      "Drafting or validating Vietnamese administrative documents (C\u00f4ng v\u0103n, T\u1edd tr\u00ecnh, Quy\u1ebft \u0111\u1ecbnh, Th\u00f4ng b\u00e1o, Bi\u00ean b\u1ea3n)",
+      "Designing Zalo Notification Service (ZNS) templates and B2B enterprise emails",
+      "Running validate_copy.py with --domain biz and --doctype cong-van|to-trinh|quyet-dinh|bien-ban|zns"
+    ],
+    "description": "Verified specification for Vietnamese clerical documents under Decree 30/2020/N\u0110-CP (C\u00f4ng v\u0103n, T\u1edd tr\u00ecnh, Quy\u1ebft \u0111\u1ecbnh, Bi\u00ean b\u1ea3n) and Zalo Notification Service (ZNS) compliance under Decree 91/2020/N\u0110-CP.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "cybersecurity-attt-and-pdpd",
+    "path": "cybersecurity-attt-and-pdpd.md",
+    "sha256": "ace01215ebd298de10f33316e7910658e2db1a48e24807918c6e07bc06813143",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-cybersecurity-and-infosec",
+    "trust_tier": "verified",
+    "when": [
+      "Drafting or auditing personal data breach notifications to the Ministry of Public Security PDP agency under Lu\u1eadt 91/2025/QH15 \u0110i\u1ec1u 23 and Ngh\u1ecb \u0111\u1ecbnh 356/2025/N\u0110-CP \u0110i\u1ec1u 28 (M\u1eabu s\u1ed1 08)",
+      "Authoring vulnerability advisories, CVE patches, SOC bulletins, and pentest reports in Vietnam",
+      "Enforcing SEC001\u2013SEC006 rules in validate_copy.py for vietnamese-cybersecurity-infosec",
+      "Classifying information system security levels 1\u20135 under Decree 85/2016/N\u0110-CP and Circular 12/2022/TT-BTTTT"
+    ],
+    "description": "Verified specification for Vietnamese information security, cyber incident response, 72-hour personal data breach notifications under Lu\u1eadt B\u1ea3o v\u1ec7 d\u1eef li\u1ec7u c\u00e1 nh\u00e2n 91/2025/QH15 \u0110i\u1ec1u 23 and Ngh\u1ecb \u0111\u1ecbnh 356/2025/N\u0110-CP (Decree 13/2023/N\u0110-CP no longer in force from 01/01/2026), and 5-tier information system classification under Decree 85/2016/N\u0110-CP and Circular 12/2022/TT-BTTTT.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 5,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "ecommerce-retail-and-consumer-law",
+    "path": "ecommerce-retail-and-consumer-law.md",
+    "sha256": "70e6ed636dcdb7ccfd06b2de6f6ab3ba02b8b9cb1638244c3c0a595af3cf5953",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-ecommerce-and-retail",
+    "trust_tier": "verified",
+    "when": [
+      "Authoring or auditing e-commerce product detail pages (PDP), promotional flash sale campaigns, checkout flows, and return policies",
+      "Enforcing ECOM001\u2013ECOM006 rules in validate_copy.py for vietnamese-ecommerce-retail",
+      "Auditing consumer transparency and regulatory badge representations under MoIT regulations"
+    ],
+    "description": "Verified statutory specifications for e-commerce website notification badges (Blue vs Red), promotional discount caps (50%), mandatory Vietnamese product labeling (N\u0110 43/2017 & N\u0110 111/2021), and unlawful return-refusal prohibitions.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "education-moet-and-edtech",
     "path": "education-moet-and-edtech.md",
-    "sha256": "af8e65134987d19fc2aa9a28de3893e72e4b81c26187e372f21d8ba0863e5dd4"
+    "sha256": "af8e65134987d19fc2aa9a28de3893e72e4b81c26187e372f21d8ba0863e5dd4",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-education-and-edtech",
+    "trust_tier": "verified",
+    "when": [
+      "Designing LMS dashboards, digital report cards (h\u1ecdc b\u1ea1 s\u1ed1, s\u1ed5 theo d\u00f5i tr\u1ebb m\u1ea7m non), university syllabi, or postgraduate dissertation guidelines",
+      "Distinguishing Kh\u00f3a lu\u1eadn t\u1ed1t nghi\u1ec7p (Bachelor) vs Lu\u1eadn v\u0103n th\u1ea1c s\u0129 (Master) vs Lu\u1eadn \u00e1n ti\u1ebfn s\u0129 (Doctoral) and H\u1ecdc h\u00e0m (GS./PGS.) vs H\u1ecdc v\u1ecb (TS./ThS.)",
+      "Auditing education copy across all 7 educational tiers with validate_copy.py"
+    ],
+    "description": "Verified specification for all 7 tiers of Vietnamese education from Early Childhood (VBHN 01/VBHN-BGD\u0110T) and Primary (TT 27/2020) through Secondary (TT 22/2021), TVET (TT 04/2022), Undergraduate (TT 08/2021), Master's (TT 23/2021), Doctoral (TT 18/2021), and GS/PGS Academic Ranks (Q\u0110 37/2018/Q\u0110-TTg).",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 2,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "egovernment-dvc-and-vneid",
+    "path": "egovernment-dvc-and-vneid.md",
+    "sha256": "9e8e0c21011112724688fa8bd39b77cb220e16ebc1e332a6fd8c83b1aa1974c9",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-government-and-public-service",
+    "trust_tier": "verified",
+    "when": [
+      "Authoring or auditing online public service (DVC) instructions, administrative procedures (TTHC), citizen portal notices, and VNeID integration copy",
+      "Enforcing GOV001\u2013GOV006 rules in validate_copy.py for vietnamese-government-public-service",
+      "Verifying identity document and residence terminology under current Vietnamese administrative legislation"
+    ],
+    "description": "Verified specification for Vietnamese digital public services under Decree 42/2022/N\u0110-CP, VNeID electronic identification under Law on Identification 26/2023/QH15 and Decree 69/2024/N\u0110-CP, and residence verification under Law on Residence 68/2020/QH14 and Decree 104/2022/N\u0110-CP.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "finance-tt99-and-fintech",
     "path": "finance-tt99-and-fintech.md",
-    "sha256": "2b050822da96f65675e633fc125cf7a5854c16c881581cec3f1ce826baa6921e"
+    "sha256": "d52a2c4686690ea32bff4ae9c4c86764aa16bdd019403608c4af16fa63979dac",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-finance-and-accounting",
+    "trust_tier": "verified",
+    "when": [
+      "Writing or validating Vietnamese accounting, ERP, banking, securities, insurance, or e-wallet copy",
+      "Migrating financial statements and chart of accounts from Circular 200/2014/TT-BTC to Circular 99/2025/TT-BTC",
+      "Auditing investment/savings terminology and interest-rate disclosures with --domain finance"
+    ],
+    "description": "Verified specification for Circular 99/2025/TT-BTC accounting terminology (superseding TT 200/2014/TT-BTC from 01/01/2026) and SBV/SSC banking, securities, and e-wallet disclosures.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 6,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "healthcare-by-law-and-emr",
     "path": "healthcare-by-law-and-emr.md",
-    "sha256": "3ee40e62aa9f26643cd676770d0874717da88735490b07c68731cadf6dbc1e32"
+    "sha256": "b7103369eb66a568e5d9c5c0fa131ddde321855ee0d27d3cbddae72061f9d1dd",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-healthcare-and-pharma",
+    "trust_tier": "verified",
+    "when": [
+      "Authoring or auditing hospital/clinic patient instructions, EMR notes, prescriptions, or dietary supplement (TPCN) copy",
+      "Enforcing MED001\u2013MED007 rules in validate_copy.py for vietnamese-healthcare-copy",
+      "Verifying medical licensing terminology under the Law on Medical Examination and Treatment 2023"
+    ],
+    "description": "Verified specification for Vietnamese clinical and healthcare communications under Law 15/2023/QH15, Electronic Medical Records (TT 32/2023/TT-BYT), outpatient prescriptions (TT 52/2017/TT-BYT), and dietary supplement disclaimers (N\u0110 15/2018/N\u0110-CP).",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 3,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "hospitality-aviation-tourism",
     "path": "hospitality-aviation-tourism.md",
-    "sha256": "110bedb62f0deb93c66bb9af709d25ac7bd27fe6349d221ac9dc14267f72bc85"
+    "sha256": "110bedb62f0deb93c66bb9af709d25ac7bd27fe6349d221ac9dc14267f72bc85",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-hospitality-and-travel",
+    "trust_tier": "verified",
+    "when": [
+      "Writing or auditing hotel/resort booking confirmations, room descriptions, tour itineraries, flight notifications, or fine-dining F&B menus",
+      "Enforcing HOS001\u2013HOS006 rules in validate_copy.py for vietnamese-hospitality-travel",
+      "Formatting Net vs ++ pricing with explicit 5% service charge and 8%/10% VAT disclosures"
+    ],
+    "description": "Verified specification for Vietnamese hotel/resort star ratings (Law on Tourism 2017 Article 50), ++ service charge and VAT pricing transparency, and aviation delay/cancellation notices (Circulars 14/2015 & 19/2023/TT-BGTVT).",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "hr-labor-code-and-bhxh",
     "path": "hr-labor-code-and-bhxh.md",
-    "sha256": "f9e79df66dcb71375f5533043c9feef75d2ad8c45ed16dac43dd5267d6dae3bb"
+    "sha256": "f9e79df66dcb71375f5533043c9feef75d2ad8c45ed16dac43dd5267d6dae3bb",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-hr-and-recruitment",
+    "trust_tier": "verified",
+    "when": [
+      "Writing or auditing job descriptions (JD), offer letters (Th\u01b0 m\u1eddi nh\u1eadn vi\u1ec7c), internal HR policies, or OKR/KPI performance reviews",
+      "Enforcing HR001\u2013HR006 rules in validate_copy.py for vietnamese-hr-recruitment",
+      "Verifying probation duration and probation wage floors under Articles 25 & 26 of the Labor Code 2019"
+    ],
+    "description": "Verified specification for Vietnamese job descriptions (JD), offer letters, probation terms (>=85% salary floor, 6/30/60/180-day caps), anti-discrimination rules, and performance reviews under the Labor Code 2019.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "insurance-law-and-insurtech",
+    "path": "insurance-law-and-insurtech.md",
+    "sha256": "57db7a4bad6562ff327329d474b48f1f7805a798a8af6bf587bb08f09482dfbe",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-insurance-and-insurtech",
+    "trust_tier": "verified",
+    "when": [
+      "Authoring or auditing insurance policy illustrations, insurance certificates, claim settlement guidelines, and InsurTech digital product interfaces",
+      "Enforcing INS001\u2013INS006 rules in validate_copy.py for vietnamese-insurance-insurtech",
+      "Ensuring compliance with bancassurance anti-coercion regulations and mandatory statutory disclosure standards"
+    ],
+    "description": "Verified specification for Vietnamese insurance product disclosures, sales illustrations, bancassurance anti-tying, free-look periods, liability exclusion disclosure, and claim settlement under Law on Insurance Business 08/2022/QH15 and Circular 67/2023/TT-BTC.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "legal-contracts-civil-commercial",
     "path": "legal-contracts-civil-commercial.md",
-    "sha256": "77d9888516c19bfc5c2be68295eb2fe57cb2740bcec8c404e830d7eb2cb48aa5"
+    "sha256": "77d9888516c19bfc5c2be68295eb2fe57cb2740bcec8c404e830d7eb2cb48aa5",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-legal-and-contracts",
+    "trust_tier": "verified",
+    "when": [
+      "Drafting or auditing B2B service contracts, civil leases, labor contracts, Terms of Service (ToS), or PDPD Data Processing Agreements (DPA)",
+      "Enforcing LEG001\u2013LEG007 rules in validate_copy.py for vietnamese-legal-contracts",
+      "Replacing Anglo-American common-law translationese calques with authentic Vietnamese civil-law terminology"
+    ],
+    "description": "Verified specification for drafting Vietnamese civil, commercial, labor, and consumer contracts under the Civil Code 2015, Commercial Law 2005 (Article 301), Labor Code 2019 (Article 20), and Consumer Protection Law 2023 (Article 25).",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "locale-and-icu-engineering",
     "path": "locale-and-icu-engineering.md",
-    "sha256": "e53879c5a2a235a137bfda47865f4ad5d8a97d6f8d2389331918283d9dae4237"
+    "sha256": "e53879c5a2a235a137bfda47865f4ad5d8a97d6f8d2389331918283d9dae4237",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-i18n-and-localization",
+    "trust_tier": "verified",
+    "when": [
+      "Formatting VND currency, percentages, dates, phone numbers, and physical units in Vietnamese",
+      "Validating .json, .arb, or .strings localization catalogs with ICU MessageFormat plurals",
+      "Preventing false-positive NUM004 unit errors on hardware processor names (Apple M2/M3)"
+    ],
+    "description": "Verified specification for Vietnamese CLDR number/currency formatting, Apple Silicon M2/M3 vs m\u00b2/m\u00b3 contextual disambiguation, and multi-line ICU MessageFormat validation.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 2,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "media-journalism-and-crisis-pr",
+    "path": "media-journalism-and-crisis-pr.md",
+    "sha256": "14e920e979acc2a5c452f6de883f526226c101aa142166fd5a2e7fce2fbacbbb",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-media-journalism-and-pr",
+    "trust_tier": "verified",
+    "when": [
+      "Publishing press releases, news articles, or crisis communications statements in Vietnam",
+      "Drafting formal press corrections and apologies under Article 42 Press Law 2016",
+      "Enforcing MEDJ001\u2013MEDJ006 rules in validate_copy.py for vietnamese-media-journalism-pr",
+      "Ensuring presumption of innocence and child anonymization in legal and investigative reporting"
+    ],
+    "description": "Verified specification for Vietnamese press communications, Press Law 2016, general news website regulation (Decree 147/2024/N\u0110-CP), press corrections and apologies, child identity protection under the Law on Children 2016, and professional crisis PR response.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
+  },
+  {
+    "id": "real-estate-and-construction-law",
+    "path": "real-estate-and-construction-law.md",
+    "sha256": "72e657f2d67b969fcdcaaa960b076f599b740d17d43664b9bfa7d361f3c60b67",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-real-estate-and-construction",
+    "trust_tier": "verified",
+    "when": [
+      "Authoring or auditing off-plan sales contracts, deposit agreements, project brochures, and construction BOQ specifications",
+      "Enforcing REA001\u2013REA006 rules in validate_copy.py for vietnamese-real-estate-construction",
+      "Verifying land tenure, carpet area, and payment milestone disclosures under 2023\u20132024 real estate statutes"
+    ],
+    "description": "Verified statutory specifications for off-plan property transactions, deposit caps (5%), payment schedules (30%/70%/95%), land tenure representations, apartment area disclosures (th\u00f4ng th\u1ee7y vs tim t\u01b0\u1eddng), and maintenance fund (2%) compliance.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 3,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "register-and-pragmatics",
     "path": "register-and-pragmatics.md",
-    "sha256": "a2466eed613b9471d2f6f1af834ef23ecebbfc4f923b08e19109045b85fa0195"
+    "sha256": "a2466eed613b9471d2f6f1af834ef23ecebbfc4f923b08e19109045b85fa0195",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-pragmatics-and-ux",
+    "trust_tier": "verified",
+    "when": [
+      "Selecting self/reader pronouns across UI microcopy, SaaS landing pages, B2B proposals, finance, or government documents",
+      "Eliminating English-to-Vietnamese translation calques (CAL001) and passive-voice misuse (SYN001)",
+      "Configuring PRO001 and PRO002 pronoun drift detectors without false positives on compound words"
+    ],
+    "description": "Verified specification of the 18-register DESIGN:OS Vietnamese pronoun matrix, compound-morpheme exemption rules, adversity/beneficiary passive voice (b\u1ecb/\u0111\u01b0\u1ee3c), and Sino-Vietnamese lexical balance.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 2,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "statutory-compliance-vi",
     "path": "statutory-compliance-vi.md",
-    "sha256": "465df35eae8589010dadb7f2615d3c6ee358df9d8b4e75953bb782d21b0e5e1f"
+    "sha256": "096ec621346c5dc79229ad7a999e1cff26571f895a5345b63a7d247e84ee77ab",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-legal-and-regulatory-compliance",
+    "trust_tier": "verified",
+    "when": [
+      "Reviewing landing pages, ad copy, pricing tables, consent modals, or promotional campaigns for the Vietnam market",
+      "Enforcing LAW001 unverified superlative restrictions and explicit consent under Lu\u1eadt B\u1ea3o v\u1ec7 d\u1eef li\u1ec7u c\u00e1 nh\u00e2n 91/2025/QH15 and Ngh\u1ecb \u0111\u1ecbnh 356/2025/N\u0110-CP",
+      "Validating promotional discount percentages against Decree 81/2018/N\u0110-CP and Decree 128/2024/N\u0110-CP"
+    ],
+    "description": "Verified statutory compliance requirements for Vietnamese advertising copy, influencer disclosures, personal data protection (PDPD), promotional discount caps, and anti-spam telecommunications.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 6,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "typography-and-vertical-metrics",
     "path": "typography-and-vertical-metrics.md",
-    "sha256": "2f49a2e34cc0fbe3f7f3879b9f86d650477ef718462923db309f9a859491f7cc"
+    "sha256": "2f49a2e34cc0fbe3f7f3879b9f86d650477ef718462923db309f9a859491f7cc",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-typography-and-design-systems",
+    "trust_tier": "verified",
+    "when": [
+      "Configuring CSS/Tailwind typography tokens, line-heights, and font stacks for Vietnamese UI",
+      "Auditing .ttf/.otf/.woff2 fonts and @font-face unicode-range declarations with check_font_coverage.py",
+      "Preventing clipped diacritics (\u1eaa, \u1ec4, \u1ed8, \u1eee) and orphaned compound-word syllables"
+    ],
+    "description": "Verified specification for Vietnamese stacked diacritic vertical metrics, line-height floors, web font subsetting (134 precomposed glyphs + \u0110/\u0111 + \u20ab), and horizontal text expansion.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 1,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   },
   {
     "id": "unicode-and-phonology",
     "path": "unicode-and-phonology.md",
-    "sha256": "61a9bb5c33f88715b68dc059fd0c9bf851d97d755faf1e6ebc8805aa2e4ee852"
+    "sha256": "41e839b82138cae49e18f5b44326f3f237b447795b97c629cbe4003b20eab903",
+    "ontology_sha256": null,
+    "object_type": null,
+    "superseded_by": null,
+    "domain": "vietnamese-language-engineering",
+    "trust_tier": "verified",
+    "when": [
+      "Validating or normalizing Vietnamese strings in UI, APIs, databases, or i18n catalogs",
+      "Configuring Telex/VNI input handlers in React, Vue, SwiftUI, or Flutter",
+      "Resolving new-style (ho\u00e0, thu\u1ef7) vs old-style (h\u00f2a, th\u1ee7y) tone placement"
+    ],
+    "description": "Cryptographically verified specification for Vietnamese UTF-8 NFC normalization, legacy TCVN3/VNI/CP1258 mojibake detection, oa/oe/uy tone placement, Telex/VNI IME composition guards, and CLDR vi-VN collation.",
+    "status": null,
+    "links_out": [],
+    "links_in": [],
+    "source_count": 3,
+    "evidence_age_days": 0,
+    "links_in_count": 0
   }
 ]

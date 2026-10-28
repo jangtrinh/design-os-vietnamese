@@ -1,4 +1,4 @@
-<!-- synced from shared/references/register-matrix.md (7ebc260d5a2fad3b) — edit shared/ source, not this copy -->
+<!-- synced from shared/references/register-matrix.md (c4612f175b07e86a) — edit shared/ source, not this copy -->
 <!-- vlc-disable: TONE001, DIA001 -->
 
 # Register Matrix — Vietnamese Pragmatics & Audience Address (`design-os-vietnamese`)
@@ -45,7 +45,7 @@ This file is the canonical source of truth. `validate_copy.py` parses the `<!-- 
 | `ecommerce-shopper` | `bạn` | `quý vị`, `mày`, `cậu` | E-commerce product detail pages (PDP), cart/checkout, COD/return policies (`Nghị định 85/2021/NĐ-CP`, `Luật BVQLNTD 2023`), logistics tracking |
 | `public-citizen` | `ông/bà` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Online public service portals (`dichvucong.gov.vn`, `Nghị định 42/2022/NĐ-CP`), VNeID identity guides (`Nghị định 69/2024/NĐ-CP`), citizen administrative notices |
 | `insurance-policyholder` | `quý khách` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Life/non-life insurance policy schedules, benefit illustrations (`Thông tư 67/2023/TT-BTC`), claim notices (`Luật KDBH 2022`) |
-| `infosec-advisory` | | `mình`, `cả nhà`, `cậu`, `mày`, `em`, `con` | Cybersecurity advisories, SOC/VNCERT incident reports, pentest reports, PDPD 72-hour breach disclosures (`Nghị định 13/2023/NĐ-CP`, `Nghị định 85/2016/NĐ-CP`) |
+| `infosec-advisory` | | `mình`, `cả nhà`, `cậu`, `mày`, `em`, `con` | Cybersecurity advisories, SOC/VNCERT incident reports, pentest reports, PDPD 72-hour breach disclosures (`Luật 91/2025/QH15` Điều 23, `Nghị định 356/2025/NĐ-CP` Mẫu số 08, `Nghị định 85/2016/NĐ-CP`) |
 | `crisis-comms` | `quý vị` | `bạn`, `mình`, `cả nhà`, `cậu`, `mày` | Crisis holding statements, formal press corrections/apologies (`Điều 42 Luật Báo chí 2016`), public safety announcements |
 
 ---
