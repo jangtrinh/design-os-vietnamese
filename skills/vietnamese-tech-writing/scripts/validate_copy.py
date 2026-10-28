@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (20906b0deef630ad) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (ccd2ce91df387f6a) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -627,18 +627,18 @@ RULE_DOCS: Dict[str, str] = {
 
 
 
-def _load_writing_context_module():
-    """Load the sibling ``writing_context.py`` by file path (never via sys.path).
+def _load_sibling_module(stem: str):
+    """Load ``<stem>.py`` next to this script by file path (never via sys.path).
 
-    Returns None when the file is absent so a partial install degrades to "no
-    --context support" instead of breaking every other rule.
+    Returns None when the file is absent or broken so a partial install degrades to
+    "no --context support" instead of breaking every other rule.
     """
     import importlib.util
 
-    path = SCRIPT_DIR / "writing_context.py"
+    path = SCRIPT_DIR / f"{stem}.py"
     if not path.is_file():
         return None
-    spec = importlib.util.spec_from_file_location("writing_context", path)
+    spec = importlib.util.spec_from_file_location(stem, path)
     if spec is None or spec.loader is None:
         return None
     module = importlib.util.module_from_spec(spec)
@@ -650,7 +650,9 @@ def _load_writing_context_module():
     return module
 
 
-WRITING_CONTEXT = _load_writing_context_module()
+# Writing-context support: CTX rules + suggestion, and the context-matrix.md parser.
+WRITING_CONTEXT = _load_sibling_module("writing_context")
+CONTEXT_MATRIX = _load_sibling_module("context_matrix")
 if WRITING_CONTEXT is not None:
     RULE_DOCS.update(WRITING_CONTEXT.RULE_DOCS)
 
@@ -726,16 +728,16 @@ load_domain_rules()
 def load_context_matrix(ref_dirs: Sequence[pathlib.Path] = ()):
     """Parse ``context-matrix.md`` from the first reference dir that has it (then REF_DIR).
 
-    Returns None when the writing-context module or the matrix file is unavailable.
+    Returns None when the writing-context modules or the matrix file are unavailable.
     """
-    if WRITING_CONTEXT is None:
+    if WRITING_CONTEXT is None or CONTEXT_MATRIX is None:
         return None
     for directory in [*ref_dirs, REF_DIR]:
         try:
             text = (directory / "context-matrix.md").read_text(encoding="utf-8")
         except OSError:
             continue
-        return WRITING_CONTEXT.parse_matrix(text, _table_with_header, _unwrap)
+        return CONTEXT_MATRIX.parse_matrix(text, _table_with_header, _unwrap)
     return None
 
 

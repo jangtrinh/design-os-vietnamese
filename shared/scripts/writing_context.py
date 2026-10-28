@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Writing-context profiles and rules CTX001-CTX005 for ``validate_copy.py --context``.
+"""Writing-context rules CTX001-CTX005 and the stderr suggestion for ``validate_copy.py --context``.
 
 Pure Python 3.9+ standard library. This is a sibling module, not a ``rules_*.py``
 domain module: ``validate_copy.py`` loads it by file path and calls it only when a
 context is declared (plus a stderr-only suggestion when none is).
 
-Data lives in ``references/context-matrix.md`` (machine-readable tables); this file
-holds the checks. Rule contract matches the domain engines: findings are reported
-through ``emit(rule, severity, lineno, col, snippet, message, hint)``.
+Data lives in ``references/context-matrix.md`` and is parsed by the sibling
+``context_matrix.py``; this file holds the checks. The rule contract matches the
+domain engines: findings are reported through
+``emit(rule, severity, lineno, col, snippet, message, hint)``.
 """
 from __future__ import annotations
 
 import re
-from typing import Callable, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, List, Optional, Sequence
 
 ERROR = "error"
 WARN = "warning"
@@ -48,98 +49,10 @@ _HEADER_FIELD_RE = re.compile(
 _PARTICLE_FALLBACK = ("ạ", "dạ", "vâng")
 
 Emit = Callable[[str, str, int, int, str, str, str], None]
-TableParser = Callable[[str, str], Tuple[List[str], List[List[str]]]]
-Unwrap = Callable[[str], str]
-
-
-class ContextProfile:
-    """One row of the ``contexts`` table: facets, expected terms, and rule switches."""
-
-    __slots__ = (
-        "id", "label", "relation", "closeness", "channel", "purpose", "reader",
-        "self_terms", "address_terms", "forbids", "disables", "enables", "basis",
-    )
-
-    def __init__(self, **fields: object) -> None:
-        for name in self.__slots__:
-            setattr(self, name, fields.get(name, ()))
-
-
-class ContextMatrix:
-    """Parsed ``context-matrix.md``: presets plus the word lists the rules read."""
-
-    def __init__(self) -> None:
-        self.profiles: Dict[str, ContextProfile] = {}
-        # (token, meaning, ambiguous)
-        self.abbreviations: List[Tuple[str, str, bool]] = []
-        self.particles: List[str] = []
-        self.greetings: List[str] = []
-        self.signoffs: List[str] = []
-        self.summary_markers: List[str] = []
-
-
-def _terms(cell: str, unwrap: Unwrap) -> Tuple[str, ...]:
-    out = []
-    for part in cell.split(","):
-        value = unwrap(part)
-        if value and value != "—":
-            out.append(value)
-    return tuple(out)
-
-
-def _column(header: Sequence[str], name: str) -> int:
-    return header.index(name) if name in header else -1
-
-
-def _cell(row: Sequence[str], index: int) -> str:
-    return row[index] if 0 <= index < len(row) else ""
-
-
-def parse_matrix(text: str, table_with_header: TableParser, unwrap: Unwrap) -> ContextMatrix:
-    """Build a :class:`ContextMatrix` from the markdown text of ``context-matrix.md``."""
-    matrix = ContextMatrix()
-    header, rows = table_with_header(text, "<!-- machine-readable: contexts -->")
-    cols = {name: _column(header, name) for name in (
-        "context", "label", "relation", "closeness", "channel", "purpose", "reader",
-        "self", "address", "forbids", "disables", "enables", "basis",
-    )}
-    for row in rows:
-        ident = unwrap(_cell(row, cols["context"]))
-        if not ident or cols["relation"] < 0:
-            continue
-        matrix.profiles[ident] = ContextProfile(
-            id=ident,
-            label=_cell(row, cols["label"]),
-            relation=unwrap(_cell(row, cols["relation"])),
-            closeness=unwrap(_cell(row, cols["closeness"])),
-            channel=unwrap(_cell(row, cols["channel"])),
-            purpose=unwrap(_cell(row, cols["purpose"])),
-            reader=unwrap(_cell(row, cols["reader"])),
-            self_terms=_terms(_cell(row, cols["self"]), unwrap),
-            address_terms=_terms(_cell(row, cols["address"]), unwrap),
-            forbids=_terms(_cell(row, cols["forbids"]), unwrap),
-            disables=frozenset(t.upper() for t in _terms(_cell(row, cols["disables"]), unwrap)),
-            enables=frozenset(t.upper() for t in _terms(_cell(row, cols["enables"]), unwrap)),
-            basis=unwrap(_cell(row, cols["basis"])),
-        )
-
-    def single_column(marker: str) -> List[str]:
-        _h, data = table_with_header(text, marker)
-        return [unwrap(r[0]) for r in data if r and unwrap(r[0])]
-
-    abbr_header, abbr_rows = table_with_header(text, "<!-- machine-readable: chat-abbreviations -->")
-    amb = _column(abbr_header, "ambiguous")
-    for row in abbr_rows:
-        token = unwrap(row[0]) if row else ""
-        if token:
-            matrix.abbreviations.append(
-                (token, _cell(row, 1), unwrap(_cell(row, amb)).lower() == "yes")
-            )
-    matrix.particles = single_column("<!-- machine-readable: politeness-particles -->")
-    matrix.greetings = single_column("<!-- machine-readable: email-greetings -->")
-    matrix.signoffs = single_column("<!-- machine-readable: email-signoffs -->")
-    matrix.summary_markers = single_column("<!-- machine-readable: summary-markers -->")
-    return matrix
+# Duck-typed views of context_matrix.ContextProfile / ContextMatrix (this module is
+# loaded by path, so it cannot import its sibling by name).
+Profile = Any
+Matrix = Any
 
 
 # --------------------------------------------------------------------------- #
@@ -166,7 +79,7 @@ def _quoted(terms: Sequence[str]) -> str:
     return ", ".join(f"“{t}”" for t in terms)
 
 
-def _check_forbidden_terms(profile: ContextProfile, cleaned: Sequence[str], emit: Emit) -> None:
+def _check_forbidden_terms(profile: Profile, cleaned: Sequence[str], emit: Emit) -> None:
     severity = ERROR if profile.relation == "up" else WARN
     if profile.address_terms:
         hint = "this context addresses the reader as " + _quoted(profile.address_terms)
@@ -185,7 +98,7 @@ def _check_forbidden_terms(profile: ContextProfile, cleaned: Sequence[str], emit
                 break
 
 
-def _check_politeness(profile: ContextProfile, matrix: ContextMatrix,
+def _check_politeness(profile: Profile, matrix: Matrix,
                       lines: Sequence[str], emit: Emit) -> None:
     alternatives = [a.strip() for term in profile.address_terms for a in term.split("/") if a.strip()]
     if not alternatives:
@@ -210,7 +123,7 @@ def _check_politeness(profile: ContextProfile, matrix: ContextMatrix,
              "add “ạ”, “dạ” or “vâng” where the message asks or answers, e.g. “Em gửi anh báo cáo ạ.”")
 
 
-def _check_abbreviations(profile: ContextProfile, matrix: ContextMatrix,
+def _check_abbreviations(profile: Profile, matrix: Matrix,
                          lines: Sequence[str], emit: Emit) -> None:
     technical = profile.reader == "technical"
     meanings: Dict[str, str] = {}
@@ -237,7 +150,7 @@ def _check_abbreviations(profile: ContextProfile, matrix: ContextMatrix,
                  f"write the full word “{full.split(' / ')[0]}”" if full else "")
 
 
-def _check_email_frame(matrix: ContextMatrix, lines: Sequence[str], emit: Emit) -> None:
+def _check_email_frame(matrix: Matrix, lines: Sequence[str], emit: Emit) -> None:
     body = [(i, line) for i, line in enumerate(lines, 1) if line.strip()]
     while body and _HEADER_FIELD_RE.match(body[0][1]):
         body.pop(0)
@@ -259,7 +172,7 @@ def _check_email_frame(matrix: ContextMatrix, lines: Sequence[str], emit: Emit) 
              "close with a sign-off before your name, e.g. “Trân trọng,” or “Thân,”")
 
 
-def _check_executive_summary(matrix: ContextMatrix, lines: Sequence[str], emit: Emit) -> None:
+def _check_executive_summary(matrix: Matrix, lines: Sequence[str], emit: Emit) -> None:
     if not matrix.summary_markers:
         return
     window = [(i, line) for i, line in enumerate(lines, 1) if line.strip()][:SUMMARY_WINDOW_LINES]
@@ -274,7 +187,7 @@ def _check_executive_summary(matrix: ContextMatrix, lines: Sequence[str], emit: 
          "open with “Tóm tắt” or “Đề xuất”: the decision first, the background after")
 
 
-def check(profile: ContextProfile, matrix: ContextMatrix,
+def check(profile: Profile, matrix: Matrix,
           lines: Sequence[str], cleaned: Sequence[str], emit: Emit) -> None:
     """Run every CTX rule the profile enables.
 

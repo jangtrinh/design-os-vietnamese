@@ -1,4 +1,4 @@
-<!-- synced from shared/references/context-matrix.md (b0e2ca4860d439b5) — edit shared/ source, not this copy -->
+<!-- synced from shared/references/context-matrix.md (9e8fc2b99532df24) — edit shared/ source, not this copy -->
 <!-- vlc-disable: TONE001, DIA001, LAW001, CAL001, PRO001, CTX001, CTX002, CTX003, CTX004, CTX005 -->
 
 # Context Matrix — Who Writes to Whom (`design-os-vietnamese`)
@@ -55,7 +55,7 @@ A **context preset** is a named bundle over five independent facets. A rule read
 
 ### Chat abbreviations and teencode (`CTX003`)
 
-`Ambiguous = yes` means the token is also a normal English word, unit or code (`vs`, `ns`, `ko-KR`); it is skipped when the context's `reader` is `technical`. Tokens are matched as whole words, lowercase or capitalised, never after a digit (`5 ns`, `5k`) and never inside identifiers, paths or locale codes (`ko-KR`, `k8s`).
+`Ambiguous = yes` means the token is also a normal English word, unit or code (`vs`, `ns`, `ko-KR`); it is skipped when the context's `reader` is `technical`. Tokens are matched as whole words (lowercase, or capitalised for tokens of two or more letters; single-letter tokens are lowercase only), never after a digit (`5 ns`, `5k`) and never inside identifiers, paths or locale codes (`ko-KR`, `k8s`).
 
 <!-- machine-readable: chat-abbreviations -->
 
@@ -181,80 +181,95 @@ One of these must appear within the first 15 non-empty lines of a document writt
 
 All five accept `vlc-disable-line` / `vlc-disable` directives like every other rule.
 
-## 5. Presets in Practice
+## 5. Từng preset trong thực tế
 
-Examples are teaching material, not test fixtures. **Bad** shows what the preset's rules catch; **good** shows the fix.
+Các ví dụ dưới đây là tài liệu giải thích, không phải fixture kiểm thử. **Sai** là đoạn bị quy tắc của preset bắt (kèm danh sách quy tắc chạy thật); **Đúng** là cách sửa, không còn lỗi nào. Mã quy tắc nằm trong ngoặc.
 
 ### `chat-close-friend` — Chat bạn thân
 
-Anything goes except broken text and a corporate voice. Teencode, no tones, `tao/mày` and superlatives are fine.
+Chỉ cần chữ không hỏng và không nói bằng giọng chăm sóc khách hàng. Teencode, bỏ dấu, `tao/mày`, "ngon nhất" đều chấp nhận được.
 
-- Bad: `Quý khách vui lòng đợi mình một chút nhé.` — a customer-service voice in a friend chat (`CTX001`).
-- Good: `Đợi tao tí nha, tao ra liền.`
+- Sai: `Quý khách vui lòng đợi mình một chút nhé, mình ra liền.` (`CTX001`: giọng chăm sóc khách hàng trong chat bạn bè)
+- Đúng: `Đợi tao tí nha, tao ra liền.`
 
-### `chat-colleague` — Chat đồng nghiệp
+### `chat-colleague` — Chat đồng nghiệp (Slack/Zalo nhóm)
 
-Friendly and fast, but not `mày/tao`. Abbreviations are tolerated.
+Thân thiện và nhanh, nhưng không dùng `mày/tao`. Viết tắt được bỏ qua.
 
-- Bad: `Mày gửi tao file với.` (`CTX001`, warning).
-- Good: `Bạn gửi mình file với nha, cảm ơn nhiều.`
+- Sai: `Mày gửi tao file với.` (`CTX001` hai lần: `Mày`, `tao`; mức cảnh báo)
+- Đúng: `Bạn gửi mình file với nha, cảm ơn nhiều.`
 
 ### `chat-to-manager` — Nhắn sếp
 
-Short, with `em … ạ`. No `bạn/mình`, no teencode, politeness particle present.
+Ngắn gọn, xưng `em`, có từ lễ phép `ạ`. Không dùng `bạn/mình`, không teencode.
 
-- Bad: `Anh ơi mai em xin nghỉ ko?` (`CTX002`, `CTX003`).
-- Good: `Anh ơi, mai em xin nghỉ một buổi được không ạ?`
+- Sai: `Anh ơi mai em xin nghỉ ko?` (`CTX002`: có `Anh` nhưng không có `ạ/dạ/vâng`; `CTX003`: `ko`)
+- Đúng: `Anh ơi, mai em xin nghỉ một buổi được không ạ?`
 
 ### `email-to-manager` — Email gửi sếp/cấp trên
 
-Greeting, `em/anh`, `ạ`, sign-off. Report the result first.
+Có lời chào đầu, xưng `em`, hô `anh/chị`, có `ạ` và lời kết. Nêu kết quả trước.
 
-- Bad: `Bạn xem giúp em báo cáo này.` with no greeting or closing (`CTX001`, `CTX002`, `CTX004`).
-- Good: `Kính gửi anh Nam, / Em gửi anh báo cáo tuần này ạ. / Trân trọng, Lan`
+- Sai: `Bạn xem giúp em báo cáo này.` (`CTX001`: `Bạn` với cấp trên; `CTX004` hai lần: thiếu lời chào và thiếu lời kết)
+- Đúng:
+
+  ```text
+  Kính gửi anh Nam,
+
+  Em gửi anh báo cáo tuần này ạ. Anh xem giúp em nhé.
+
+  Trân trọng,
+  Lan
+  ```
 
 ### `email-to-colleague` — Email đồng nghiệp
 
-Warm but complete: greeting, one ask, sign-off.
+Thân thiện nhưng đủ khung: lời chào, một yêu cầu rõ, lời kết.
 
-- Bad: `Gửi tao danh sách khách hàng đc ko?` (`CTX001`, `CTX003`, `CTX004`).
-- Good: `Chào An, / Bạn gửi mình danh sách khách hàng trước thứ Sáu nhé. / Cảm ơn bạn, Bình`
+- Sai: `Tao cần danh sách khách hàng, gửi đc ko?` (`CTX001`: `Tao`; `CTX003` hai lần: `đc`, `ko`; `CTX004` hai lần)
+- Đúng: `Chào An, / Bạn gửi mình danh sách khách hàng trước thứ Sáu nhé. / Cảm ơn bạn, Bình`
 
 ### `email-to-team` — Email/thông báo cho cấp dưới, cả team
 
-A lead speaks plainly, never as a customer-service voice or with `mày/tao`.
+Người dẫn dắt nói thẳng, không dùng giọng chăm sóc khách hàng và không `mày/tao`.
 
-- Bad: `Quý vị lưu ý họp lúc 9h.` (`CTX001`, `CTX004`).
-- Good: `Chào cả team, / Họp sprint 9h sáng thứ Hai ở phòng Mây nhé. / Thân, Hà`
+- Sai: `Quý vị lưu ý họp lúc 9h.` (`CTX001`: `Quý vị`; `CTX004` hai lần)
+- Đúng: `Chào cả team, / Họp sprint 9h sáng thứ Hai ở phòng Mây nhé. / Thân, Hà`
 
-### `email-to-client` — Email khách hàng/đối tác
+### `email-to-client` — Email khách hàng/đối tác (cá nhân viết)
 
-One person writing for a business: `anh/chị`, `tôi/em`, complete frame.
+Một người viết thay mặt công việc: hô `anh/chị`, xưng `tôi/em`, đủ khung thư.
 
-- Bad: `Mình gửi bạn báo giá ko?` (`CTX001`, `CTX003`, `CTX004`).
-- Good: `Kính gửi anh Hùng, / Tôi gửi anh báo giá đính kèm. / Trân trọng, Mai`
+- Sai: `Mình gửi bạn báo giá ko?` (`CTX001` hai lần: `Mình`, `bạn`; `CTX003`: `ko`; `CTX004` hai lần)
+- Đúng: `Kính gửi anh Hùng, / Tôi gửi anh báo giá đính kèm. / Trân trọng, Mai`
 
 ### `job-application` — Thư xin việc / email ứng tuyển / CV
 
-Respectful, specific, complete frame; no peer pronouns toward the recruiter. A stand-alone CV file has no greeting or sign-off by nature: add `<!-- vlc-disable: CTX004 -->` to it, or check only the cover letter.
+Tôn trọng, cụ thể, đủ khung thư; không dùng đại từ ngang hàng với nhà tuyển dụng. Tệp CV đứng riêng vốn không có lời chào hay lời kết: thêm `<!-- vlc-disable: CTX004 -->` vào tệp đó, hoặc chỉ kiểm thư xin việc.
 
-- Bad: `Mình muốn ứng tuyển, bạn xem CV giúp mình.` (`CTX001`, `CTX004`).
-- Good: `Kính gửi anh/chị, / Tôi xin ứng tuyển vị trí Kế toán tổng hợp. / Trân trọng, Lan`
+- Sai: `Mình muốn ứng tuyển, bạn xem CV giúp mình.` (`CTX001` hai lần: `Mình`, `bạn`; `CTX004` hai lần)
+- Đúng: `Kính gửi anh/chị, / Tôi xin ứng tuyển vị trí Kế toán tổng hợp. CV của tôi đính kèm thư này. / Trân trọng, Lan`
 
 ### `doc-for-executives` — Tài liệu/báo cáo cho lãnh đạo
 
-The conclusion comes first; a busy reader should stop after one screen.
+Kết luận đứng đầu: người đọc bận nên dừng được sau một màn hình.
 
-- Bad: a report that opens with background and never states a recommendation (`CTX005`).
-- Good: `## Tóm tắt / Đề xuất chọn nhà cung cấp B, tiết kiệm 12% chi phí.`
+- Sai: báo cáo mở đầu bằng bối cảnh và không có mục tóm tắt hay đề xuất trong 15 dòng đầu (`CTX005`)
+- Đúng: `## Tóm tắt` ngay sau tiêu đề, ví dụ `Nên chọn nhà cung cấp B: rẻ hơn 12% so với A.`
 
 ### `doc-for-engineers` — Tài liệu kỹ thuật cho dev
 
-Direct and precise. `bạn` and `chúng ta` are fine; a customer-service voice is not. `vs`, `ns`, `ko-KR` in technical prose are not flagged.
+Trực tiếp và chính xác. `bạn` và `chúng ta` đều ổn; giọng chăm sóc khách hàng thì không. Các token vừa là viết tắt chat vừa là từ tiếng Anh hay mã (`vs`, `ns`, `ko-KR`) không bị bắt trong tài liệu kỹ thuật.
 
-- Bad: `Quý khách chạy lệnh sau để cài đặt.` (`CTX001`, warning).
-- Good: `Chạy lệnh sau để cài đặt.`
+- Sai: `Quý khách chạy lệnh sau để cài đặt.` (`CTX001`; mức cảnh báo)
+- Đúng: `Chạy lệnh sau để cài đặt.`
 
-## 6. Suggestion (never a finding)
+### Giới hạn đã biết
 
-With no `--context`, `validate_copy.py` may print **one hint to stderr** when strong signals appear, for example `Kính gửi anh/chị` together with a self-reference `em` suggests `email-to-manager`, and `Kính gửi` together with `ứng tuyển` suggests `job-application`. The hint never changes findings, the JSON on stdout or the exit code, and the linter never applies context rules on a guess.
+- Lời chào chỉ được nhận diện theo từ mở đầu dòng đầu tiên, nên `Gửi` (như trong `Gửi tao danh sách…`) cũng bị tính là lời chào và `Chúc` (như trong `Chúc mừng …`) cũng bị tính là lời kết: bỏ sót chứ không báo nhầm.
+- `CTX002` coi `anh`, `chị`, `sếp` là xưng hô trực tiếp; `anh ấy`, `anh em`, `nước Anh` được loại trừ nhưng một cái tên đi sau (`anh Nam`) vẫn tính là xưng hô.
+- Danh sách từ chưa qua rà soát của người bản ngữ (xem phần Follow-ups của kế hoạch).
+
+## 6. Gợi ý (không bao giờ là một finding)
+
+Khi không có `--context`, `validate_copy.py` có thể in **một dòng gợi ý ra stderr** nếu có tín hiệu mạnh: `Kính gửi anh/chị` cùng `Em xin …` gợi ý `email-to-manager`; `Kính gửi` cùng `ứng tuyển` gợi ý `job-application`; `mày` cùng `tao` gợi ý `chat-close-friend`. Gợi ý không đổi finding, JSON trên stdout hay mã thoát, và công cụ không bao giờ áp dụng quy tắc ngữ cảnh theo phỏng đoán.
