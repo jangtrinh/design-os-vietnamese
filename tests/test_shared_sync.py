@@ -31,7 +31,8 @@ class SharedSyncTests(unittest.TestCase):
         self.assertEqual(len(skills), 16)
         for skill in skills:
             self.assertTrue((skill / "references" / "context-matrix.md").is_file(), skill.name)
-            self.assertTrue((skill / "scripts" / "writing_context.py").is_file(), skill.name)
+            for module in ("writing_context.py", "context_matrix.py"):
+                self.assertTrue((skill / "scripts" / module).is_file(), f"{skill.name}/{module}")
             self.assertFalse(list((skill / "scripts").glob("rules_context*.py")), skill.name)
 
     def test_build_examples_check_passes(self) -> None:

@@ -287,6 +287,7 @@ class BuiltWheelLayoutTests(unittest.TestCase):
 
     def test_wheel_ships_the_writing_context_module_and_matrix_for_shared_and_every_skill(self) -> None:
         self.assertIn(f"{PACKAGE}/shared/scripts/writing_context.py", self.names)
+        self.assertIn(f"{PACKAGE}/shared/scripts/context_matrix.py", self.names)
         self.assertIn(f"{PACKAGE}/shared/references/context-matrix.md", self.names)
         for skill in sorted(p.name for p in (ROOT / "skills").iterdir() if p.is_dir()):
             self.assertIn(f"{PACKAGE}/skills/{skill}/references/context-matrix.md", self.names, skill)
