@@ -24,25 +24,24 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
             text=True,
             check=False,
         )
-        # The latest independent review (review.json) did not pass, so the verifier
-        # honestly stops short of STOP. Every structural check must still hold, and the
-        # review must be the only failure.
-        self.assertEqual(proc.returncode, 1, f"verify_ukmc.py:\n{proc.stdout}\n{proc.stderr}")
+        # The latest independent review (review.json) passed, so the portable verifier
+        # reaches STOP_SUFFICIENT with every structural check holding.
+        self.assertEqual(proc.returncode, 0, f"verify_ukmc.py:\n{proc.stdout}\n{proc.stderr}")
         output = proc.stdout + proc.stderr
         failures = [line for line in output.splitlines() if line.startswith("FAIL:")]
-        self.assertEqual(failures, ["FAIL: review.json did not pass independent review"])
+        self.assertEqual(failures, [])
         self.assertIn("files: 18", proc.stdout)
         self.assertIn("verified_claims: 65/65", proc.stdout)
         self.assertIn("independent_sources: 28", proc.stdout)
-        self.assertIn("failures: 1", proc.stdout)
-        self.assertIn("Decision: CONTINUE_GAP", proc.stdout)
+        self.assertIn("failures: 0", proc.stdout)
+        self.assertIn("Decision: STOP_SUFFICIENT", proc.stdout)
 
     def test_sibling_knowledge_builder_if_installed(self) -> None:
         if not SIBLING_KB_SRC.is_dir():
             return
         env = dict(os.environ, PYTHONPATH=str(SIBLING_KB_SRC))
-        # Rounds 6-13 found new statutory material and probes remain open, so the run is
-        # honestly DEEPEN (exit 2), not STOP. Every hard gate must still hold.
+        # The review passed, but saturation is not reached and a probe remains open, so
+        # the builder's stricter gate is honestly DEEPEN (exit 2). Every hard gate must hold.
         gate = ["gate", "--root", str(KNOWLEDGE_ROOT), "--run-id", "vn-design-os-261026"]
         for args, returncode, expected in (
             (["verify", str(KNOWLEDGE_ROOT), "--claims"], 0, ("failures: 0",)),
