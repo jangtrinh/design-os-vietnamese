@@ -1,6 +1,6 @@
 {
   "run_id": "vn-design-os-261026",
-  "round": 12,
+  "round": 13,
   "status": "RUNNING",
   "budget_used": 0,
   "budget_total": 50,
@@ -71,13 +71,14 @@
     "claim-fin-law56-no-ending-act",
     "claim-ads-law-75-d8-k3-k10",
     "claim-pdpd-nd356-scope",
-    "claim-pdpd-breach-notice-content"
+    "claim-pdpd-breach-notice-content",
+    "claim-fin-luatck-d12-no-guarantee"
   ],
   "minimum_independent_sources": 6,
-  "last_weighted_delta": 0.03614457831325301,
+  "last_weighted_delta": 0.011627906976744186,
   "researcher_runtime": "claude-opus-5-5",
   "is_target_version_matched": true,
-  "consecutive_low_delta_rounds": 0,
+  "consecutive_low_delta_rounds": 1,
   "has_viable_probe_remaining": true,
   "researcher_history": [
     {

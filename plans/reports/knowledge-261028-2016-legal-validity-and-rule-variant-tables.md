@@ -293,7 +293,7 @@ The owner ruled, via the parent session:
 |---|---|---|
 | `claim-ads-law-75-repeals` | **Resolved.** Split into the k25 repeal atom plus a new atom for Điều 1 k4. Run 7 accepted the split, but found "keeps its 2012 wording" overreaching, since earlier amending laws exist; that phrase was removed after the review (disclosed in `review.json`) | full Điều 1: k4 rewrites only k3 and k10; "khoản 11" occurs 0 times |
 | `claim-fin-law56-register-status` | **Resolved.** Narrowed to the dates; the "no replacement" part is now its own atom on frozen relation record 28. Not flagged in run 7 | source 25 header; source 28 |
-| MED002 `thay thế thuốc chữa bệnh` class | **Rejected with evidence; owner decision needed.** Run 6 rejected `attested-in-statute` and run 7 rejected `statutory`. By the file's definitions, attested needs a text that does not regulate the subject (NĐ 15 does), and proposed needs no frozen source (one exists). Set to `statutory` with the note "mandated in negated form; only the affirmative fires" | `evidence_classes` in `rule-variant-tables.json` |
+| MED002 `thay thế thuốc chữa bệnh` class | **Owner-decided (2026-10-28): `statutory`** (see §12). Earlier status: rejected with evidence, owner decision needed. Run 6 rejected `attested-in-statute` and run 7 rejected `statutory`. By the file's definitions, attested needs a text that does not regulate the subject (NĐ 15 does), and proposed needs no frozen source (one exists). Set to `statutory` with the note "mandated in negated form; only the affirmative fires" | `evidence_classes` in `rule-variant-tables.json` |
 | NĐ 330 "no A05 in the texts" sentence | **Resolved: removed.** The guidance keeps only the statutory term | — |
 
 ### 11.2 Probe: what replaced Luật 56/2024?
@@ -379,3 +379,29 @@ ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
 ```
 
 Protected packaging files, untouched: `pyproject.toml`, `.pre-commit-hooks.yaml`, `.github/`, `README*`, `CHANGELOG.md`, `vi_design_os/`, `tests/test_pip_packaging_and_precommit.py`.
+
+## 12. Round 3 (owner rulings, 2026-10-28)
+
+**MED002 ruling.** The owner ruled `thay thế thuốc chữa bệnh` stays `statutory`, with this note: NĐ 15 Đ27 k3 a mandates the wording in negated form, and only the affirmative form fires. The ruling is recorded in the row as `owner_ruling`. A reviewer who disagrees with this class is a known, owner-decided item, not an open finding.
+
+**The 8 run-7 sentences:**
+
+| Sentence | Change |
+|---|---|
+| Finance: "Điều 12 … contains no guarantee clause" | Moved to its own paragraph with a new anchor, `claim-fin-luatck-d12-no-guarantee` (Luật CK Đ12 heading). The frozen article contains none of "bảo đảm", "đảm bảo", "cam kết" or "lợi nhuận" |
+| Finance: "variants … express the same meaning" | Reworded: these are this module's proposed variants, not statutory wording |
+| Finance: "NĐ 38/2018, the second basis FIN001 cites" | Repository claim removed from the sentence |
+| Finance: "Điều 91 khoản 1 is still the basis" | Labelled as this module's inference |
+| Statutory: corpus paragraph on Điều 8 k11 | Labelled "Historical (project corpus summary of 2026-10-26, superseded by the primary text below)" |
+| Statutory: Luật 75 paragraph | Already narrowed after run 7 ("leaves khoản 11 untouched") |
+| Statutory: Transition (date) | Luật 91 effective-date anchor added |
+| Statutory: "NĐ 330 sets the fines" | Cut to the anchored fact: in force from 19/08/2026 (Điều 80) |
+
+**Minor overreaches fixed in the ledger:**
+- the A05 negatives now state the mechanical count (0 occurrences);
+- "must match" → "must conform to (phải phù hợp với)", noting khoản 4 điểm đ;
+- the Điều 7 rider removed from both fine atoms (Điều 7 has its own atom);
+- "which FIN001 cites" removed;
+- "together they are the current PDPD basis" removed.
+
+**Saturation note.** Round 13 (one anchor atom, delta 1.2%) is a review correction, not a probe. It counts as low-delta in `run measure`, but it is not evidence of saturation.

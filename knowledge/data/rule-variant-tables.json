@@ -205,7 +205,12 @@
               "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
               "claim": "claim-med-tpcn-disclaimer"
             },
-            "note": "NĐ 15/2018 Điều 27 khoản 3 điểm a, which regulates supplement ads, mandates this wording in negated form (không có tác dụng thay thế thuốc chữa bệnh); only the affirmative claim fires, because it contradicts the mandated statement. Not attested-in-statute: that class requires a text that does not regulate the rule's subject."
+            "note": "NĐ 15/2018 Điều 27 khoản 3 điểm a, which regulates supplement ads, mandates this wording in negated form (không có tác dụng thay thế thuốc chữa bệnh); only the affirmative claim fires, because it contradicts the mandated statement. Not attested-in-statute: that class requires a text that does not regulate the rule's subject.",
+            "owner_ruling": {
+              "date": "2026-10-28",
+              "basis": "Owner ruling via AskUserQuestion: keep statutory; the wording is mandated in negated form by NĐ 15/2018 Điều 27 khoản 3 điểm a and only the affirmative form fires. A reviewer disagreeing with this class is a known, owner-decided item, not an open finding.",
+              "ruled_class": "statutory"
+            }
           },
           {
             "form": "chữa khỏi",

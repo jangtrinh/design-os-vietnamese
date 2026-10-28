@@ -8,7 +8,7 @@ when:
   - "Enforcing LAW001 unverified superlative restrictions and explicit consent under Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 and Nghị định 356/2025/NĐ-CP"
   - "Validating promotional discount percentages against Decree 81/2018/NĐ-CP and Decree 128/2024/NĐ-CP"
 trust_tier: "verified"
-version: "3.3.0"
+version: "3.4.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
@@ -41,7 +41,7 @@ Codifies the binding Vietnamese statutory requirements governing digital adverti
 
 ### 1. Law on Advertising 2012 & Law No. 75/2025/QH15 (`LAW001`)
 
-Article 8 Clause 11 of the Law on Advertising 2012 (Luật Quảng cáo số 16/2012/QH13), as amended by Law No. 75/2025/QH15 (effective 01/01/2026), prohibits advertising that uses `nhất`, `duy nhất`, `tốt nhất`, `số một` or words of equivalent meaning without statutory supporting documentation, and mandates explicit sponsorship disclosure by influencers (KOL/KOC).
+Historical (project corpus summary of 2026-10-26, superseded by the primary text below): Article 8 Clause 11 of the Law on Advertising 2012 (Luật Quảng cáo số 16/2012/QH13), as amended by Law No. 75/2025/QH15 (effective 01/01/2026), prohibits advertising that uses `nhất`, `duy nhất`, `tốt nhất`, `số một` or words of equivalent meaning without statutory supporting documentation, and mandates explicit sponsorship disclosure by influencers (KOL/KOC).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md" sha256="c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290" quote="Article 8 Clause 11 of the Law on Advertising 2012 (Luật Quảng cáo số 16/2012/QH13), as amended by Law No. 75/2025/QH15 (effective 01/01/2026), prohibits advertising that uses 'nhất', 'duy nhất', 'tốt nhất', 'số một' or words of equivalent meaning without statutory supporting documentation, and mandates explicit sponsorship disclosure by influencers (KOL/KOC)." -->
 
 Primary text (frozen from vbpl.vn): Điều 8 khoản 11 lists `nhất`, `duy nhất`, `tốt nhất`, `số một` and closes with the clause below, so the ban covers synonyms and paraphrases, not only the four listed words.
@@ -73,9 +73,10 @@ Children: dual consent from the child and the legal representative is required t
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Việc xử lý dữ liệu cá nhân của trẻ em nhằm công bố, tiết lộ thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em từ đủ 07 tuổi trở lên thì phải có sự đồng ý của trẻ em và người đại diện theo pháp luật." -->
 
 Transition: processing already under way that was consented or agreed under Decree 13/2023 before 01/01/2026 continues without asking again (Điều 39 khoản 1).
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026." -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="trước ngày Luật này có hiệu lực thi hành thì tiếp tục thực hiện, không phải xin đồng ý lại hoặc thỏa thuận lại." -->
 
-Fines: Nghị định 330/2026/NĐ-CP sets the administrative fines for these rules and is in force from 19/08/2026 (Điều 80).
+Fines: Nghị định 330/2026/NĐ-CP is in force from 19/08/2026 (Điều 80).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="Nghị định này có hiệu lực thi hành kể từ ngày 19 tháng 8 năm 2026." -->
 
 A default-on consent method, or agree/decline wording that blurs the two, is fined 30-50 million đồng (Điều 43 khoản 1 điểm c). Treating silence or no response as consent is fined 50-70 million đồng (Điều 43 khoản 2 điểm b).
