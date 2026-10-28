@@ -69,4 +69,5 @@ vi_design_os = "vi_design_os"
     "*/references/glossary.md",
     "*/references/banned-phrases.md",
     "*/references/register-matrix.md",
+    "*/references/context-matrix.md",
 ]

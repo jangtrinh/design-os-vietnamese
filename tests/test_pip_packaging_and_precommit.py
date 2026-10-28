@@ -278,12 +278,49 @@ class BuiltWheelLayoutTests(unittest.TestCase):
         # references/ dir is missing, so a dropped glob is invisible to the CLI tests.
         expected = []
         for skill in sorted((ROOT / "skills").iterdir()):
-            for ref in ("glossary.md", "banned-phrases.md", "register-matrix.md"):
+            for ref in ("glossary.md", "banned-phrases.md", "register-matrix.md", "context-matrix.md"):
                 if (skill / "references" / ref).is_file():
                     expected.append(f"{PACKAGE}/skills/{skill.name}/references/{ref}")
         self.assertGreaterEqual(len(expected), 16)
         missing = [name for name in expected if name not in self.names]
         self.assertEqual(missing, [])
+
+    def test_wheel_ships_the_writing_context_module_and_matrix_for_shared_and_every_skill(self) -> None:
+        self.assertIn(f"{PACKAGE}/shared/scripts/writing_context.py", self.names)
+        self.assertIn(f"{PACKAGE}/shared/scripts/context_matrix.py", self.names)
+        self.assertIn(f"{PACKAGE}/shared/scripts/context_suggestion.py", self.names)
+        self.assertIn(f"{PACKAGE}/shared/references/context-matrix.md", self.names)
+        for skill in sorted(p.name for p in (ROOT / "skills").iterdir() if p.is_dir()):
+            self.assertIn(f"{PACKAGE}/skills/{skill}/references/context-matrix.md", self.names, skill)
+
+    def test_installed_context_flag_works_outside_the_repo(self) -> None:
+        text = "Kính gửi anh Nam,\n\nBạn xem giúp em báo cáo này nhé ạ.\n\nTrân trọng,\nLan\n"
+        r = run_entry(
+            "validate_copy_main", "--json", "--context", "email-to-manager", "-",
+            stdin=text, cwd=self.elsewhere, env=self._env(),
+        )
+        self.assertNotIn("Traceback", r.stderr, r.stderr)
+        self.assertEqual(r.returncode, 1)
+        self.assertEqual([f["rule"] for f in json.loads(r.stdout)["findings"]], ["CTX001"])
+        # --domain switches the reference directories; the matrix must still resolve.
+        domain = run_entry(
+            "validate_copy_main", "--json", "--context", "email-to-manager", "--domain", "finance", "-",
+            stdin=text, cwd=self.elsewhere, env=self._env(),
+        )
+        self.assertNotIn("Traceback", domain.stderr, domain.stderr)
+        self.assertEqual(domain.returncode, 1)
+        self.assertIn("CTX001", {f["rule"] for f in json.loads(domain.stdout)["findings"]})
+
+    def test_installed_unknown_context_exits_two_and_lists_presets(self) -> None:
+        r = run_entry(
+            "validate_copy_main", "--context", "chat-with-aliens", "-",
+            stdin="Xin chào.\n", cwd=self.elsewhere, env=self._env(),
+        )
+        self.assertNotIn("Traceback", r.stderr, r.stderr)
+        self.assertEqual(r.returncode, 2)
+        self.assertIn("unknown context 'chat-with-aliens'", r.stderr)
+        self.assertIn("email-to-manager", r.stderr)
+        self.assertEqual(r.stdout, "")
 
     def test_installed_list_rules_matches_repo_script(self) -> None:
         r = run_entry("validate_copy_main", "--list-rules", "--domain", "all", cwd=self.elsewhere, env=self._env())

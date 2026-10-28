@@ -30,6 +30,9 @@ jobs:
       - name: Run UKMC.v1 Knowledge Audit Gate
         run: python3 tools/verify_ukmc.py
 
+      - name: Install the build backend the wheel-layout tests need
+        run: python -m pip install setuptools
+
       - name: Run Full Unit & Golden Benchmark Test Suite
         run: python3 -m unittest discover -s tests -v
 
