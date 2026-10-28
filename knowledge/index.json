@@ -24,7 +24,7 @@
   {
     "id": "cybersecurity-attt-and-pdpd",
     "path": "cybersecurity-attt-and-pdpd.md",
-    "sha256": "e2290bfbbad07cb37378c54bd569dc47901ef99bc3af0af5d6f92c1df1c20d2b",
+    "sha256": "ace01215ebd298de10f33316e7910658e2db1a48e24807918c6e07bc06813143",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -113,7 +113,7 @@
   {
     "id": "finance-tt99-and-fintech",
     "path": "finance-tt99-and-fintech.md",
-    "sha256": "d616d076bdaa4cc9356d5a73fc5d2eb4f1588dfd2e2d1c40851162bdd93f7f82",
+    "sha256": "cc1faec059b610d0177ac65560fb363e10ef60b5c04323a107acaaab28bc4983",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,
@@ -128,7 +128,7 @@
     "status": null,
     "links_out": [],
     "links_in": [],
-    "source_count": 4,
+    "source_count": 6,
     "evidence_age_days": 0,
     "links_in_count": 0
   },
@@ -334,7 +334,7 @@
   {
     "id": "statutory-compliance-vi",
     "path": "statutory-compliance-vi.md",
-    "sha256": "87522a1714c1a6f37bb22cd4074cb7f653ee7a5be9eec2c80494481548018b9a",
+    "sha256": "6fde99429b6579b6f0cb75323e18a87b5741aeb3b9700ff45b762a6fadebc3bc",
     "ontology_sha256": null,
     "object_type": null,
     "superseded_by": null,

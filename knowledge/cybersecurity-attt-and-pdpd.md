@@ -9,7 +9,7 @@ when:
   - "Enforcing SEC001–SEC006 rules in validate_copy.py for vietnamese-cybersecurity-infosec"
   - "Classifying information system security levels 1–5 under Decree 85/2016/NĐ-CP and Circular 12/2022/TT-BTTTT"
 trust_tier: "verified"
-version: "5.2.0"
+version: "5.3.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/06-realestate-ecommerce-gov-insurance-cybersecurity-media-corpus.md"
     sha256: "a5c5e96f885071c71a06f446536365f5cbf3b116d53006875351bbe6130598c4"
@@ -45,13 +45,14 @@ Current basis (from 01/01/2026): Luật Bảo vệ dữ liệu cá nhân 91/2025
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="thì phải thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân chậm nhất là 72 giờ kể từ khi phát hiện hành vi vi phạm." -->
 
 The notice content is set by Nghị định 356/2025/NĐ-CP Điều 28 and is filed on Mẫu số 08, directly or through the national PDP portal. In Decree 356, Mẫu 03a/03b is the impact-assessment update form (Điều 20 khoản 3), so `Form 03a` is the wrong form for a breach notice.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="1. Nội dung thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân, gồm:" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Việc cập nhật hồ sơ đánh giá tác động xử lý dữ liệu cá nhân và hồ sơ đánh giá tác động chuyển dữ liệu cá nhân xuyên biên giới được thực hiện theo Mẫu số 03a/03b tại Phụ lục của Nghị định này" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="gửi thông báo vi phạm quy định về dữ liệu cá nhân đến cơ quan chuyên trách bảo vệ dữ liệu cá nhân hoặc qua Cổng thông tin quốc gia về bảo vệ dữ liệu cá nhân theo Mẫu số 08 tại Phụ lục của Nghị định này." -->
 
 Decree 356 Điều 39 defines the agency only as a unit under the Ministry of Public Security, without naming it.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Cơ quan chuyên trách bảo vệ dữ liệu cá nhân là đơn vị trực thuộc Bộ Công an" -->
 
-The penalty decree, Nghị định 330/2026/NĐ-CP (in force from 19/08/2026), names Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an) as the unit that receives the impact-assessment dossier (Điều 55 khoản 1 điểm b). Reading the Cục as the specialised agency is this module's inference, not a quoted statement. A text search of the frozen Law 91, Decree 356 and Decree 330 finds no `A05`. In user copy, use the statutory term "cơ quan chuyên trách bảo vệ dữ liệu cá nhân" (a unit under Bộ Công an per NĐ 356 Điều 39 khoản 1), not the code.
+The penalty decree, Nghị định 330/2026/NĐ-CP (in force from 19/08/2026), names Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an) as the unit that receives the impact-assessment dossier (Điều 55 khoản 1 điểm b). Reading the Cục as the specialised agency is this module's inference, not a quoted statement. In user copy, use the statutory term "cơ quan chuyên trách bảo vệ dữ liệu cá nhân" (a unit under Bộ Công an per NĐ 356 Điều 39 khoản 1), not the code.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="Nghị định này có hiệu lực thi hành kể từ ngày 19 tháng 8 năm 2026." -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Cơ quan chuyên trách bảo vệ dữ liệu cá nhân là đơn vị trực thuộc Bộ Công an" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/23-vbpl-nd-330-2026-nd-cp-xu-phat-an-ninh-mang-bvdlcn.txt" sha256="0d77caf6604fdcb07512cf643832ff580575c3cd0b3b2eaa0c1bfdea92970b34" quote="cho Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (Bộ Công an) trong thời gian 60 ngày" -->

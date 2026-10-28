@@ -32,8 +32,8 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
         failures = [line for line in output.splitlines() if line.startswith("FAIL:")]
         self.assertEqual(failures, ["FAIL: review.json did not pass independent review"])
         self.assertIn("files: 18", proc.stdout)
-        self.assertIn("verified_claims: 61/61", proc.stdout)
-        self.assertIn("independent_sources: 26", proc.stdout)
+        self.assertIn("verified_claims: 64/64", proc.stdout)
+        self.assertIn("independent_sources: 28", proc.stdout)
         self.assertIn("failures: 1", proc.stdout)
         self.assertIn("Decision: CONTINUE_GAP", proc.stdout)
 
@@ -41,7 +41,7 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
         if not SIBLING_KB_SRC.is_dir():
             return
         env = dict(os.environ, PYTHONPATH=str(SIBLING_KB_SRC))
-        # Rounds 6-9 found new statutory material and probes remain open, so the run is
+        # Rounds 6-12 found new statutory material and probes remain open, so the run is
         # honestly DEEPEN (exit 2), not STOP. Every hard gate must still hold.
         gate = ["gate", "--root", str(KNOWLEDGE_ROOT), "--run-id", "vn-design-os-261026"]
         for args, returncode, expected in (

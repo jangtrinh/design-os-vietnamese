@@ -2,7 +2,7 @@
 
 Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. Researcher: claude-opus-5-5. Independent review is in §7.
 
-**Status: not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 0/3 low-delta rounds, real probes remain open, and the final independent review (grok-4.7, full scope) returned **passed=false**: 0 wrong, 2 non-minor overreaches, 1 variant-row dispute, 1 unsupported paragraph (§7). `verify_ukmc.py` now returns CONTINUE_GAP, with that review as its only failure. The parent's "builder gate passes" criterion is therefore **not met, on purpose**: no rounds were manufactured, and no pass was set by hand.
+**Status after round 2 (see §11): not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 0/3, real probes remain open, and the latest independent review (grok-4.7, run 7, full scope) returned **passed=false**: 0 wrong, 1 non-minor overreach (since narrowed), 1 disputed variant row, 8 unsupported module sentences. `verify_ukmc.py` returns CONTINUE_GAP, with that review as its only failure. No rounds were manufactured, and no pass was set by hand.
 
 ## 1. Numbers (before → after)
 
@@ -259,3 +259,123 @@ ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
 4. **Re-login to Codex** so a second, non-Grok reviewer can check this run.
 5. **The next run must replace `review.json` before any STOP.** The gate does not check that a review covers atoms added after it.
 6. **`tests/test_ukmc_knowledge.py` pins today's state** (`CONTINUE_GAP`/exit 1, `DEEPEN`/exit 2). It will fail by design once review and saturation pass; update it then.
+
+## 11. Round 2 (owner rulings, 2026-10-28)
+
+The owner ruled, via the parent session:
+- run round 2;
+- fix the stale citations in the protected `rules_*.py` and `evals/` now;
+- retire the two NĐ 13-era claims and replace them.
+
+**Work split:**
+
+| Leg | Tier | Note |
+|---|---|---|
+| `rules_*.py` / `evals/` citation edits | Sonnet | test-first |
+| Probe, rulings, knowledge edits, review of the Sonnet diff | Opus | |
+| Knowledge grading | grok-4.7 | read-only; grades nothing it wrote |
+| Gate rerun | Haiku | Opus reran the gates after the last edit |
+
+| Measure | After round 1 | After round 2 |
+|---|---|---|
+| Verified claims (`verify_ukmc`) | 61/61 | **64/64** |
+| Frozen source files | 26 | **28** |
+| Anchors | 114 | **119** |
+| Ledger atoms | 81 | **86** |
+| `rules_*.py` / `evals/` / generator lines citing NĐ 13/2023 as current law, "03a", "A05" or "NĐ 38/2018" | 48 + 17 (guard test, before) | **0** (guard test, after; one detection pattern exempt) |
+| Tests | 66 | **69** |
+| Builder gate | DEEPEN | DEEPEN |
+| Latest review | run 6 passed=false | run 7 passed=false |
+
+### 11.1 The four open review items
+
+| Item | Outcome | Evidence |
+|---|---|---|
+| `claim-ads-law-75-repeals` | **Resolved.** Split into the k25 repeal atom plus a new atom for Điều 1 k4. Run 7 accepted the split, but found "keeps its 2012 wording" overreaching, since earlier amending laws exist; that phrase was removed after the review (disclosed in `review.json`) | full Điều 1: k4 rewrites only k3 and k10; "khoản 11" occurs 0 times |
+| `claim-fin-law56-register-status` | **Resolved.** Narrowed to the dates; the "no replacement" part is now its own atom on frozen relation record 28. Not flagged in run 7 | source 25 header; source 28 |
+| MED002 `thay thế thuốc chữa bệnh` class | **Rejected with evidence; owner decision needed.** Run 6 rejected `attested-in-statute` and run 7 rejected `statutory`. By the file's definitions, attested needs a text that does not regulate the subject (NĐ 15 does), and proposed needs no frozen source (one exists). Set to `statutory` with the note "mandated in negated form; only the affirmative fires" | `evidence_classes` in `rule-variant-tables.json` |
+| NĐ 330 "no A05 in the texts" sentence | **Resolved: removed.** The guidance keeps only the statutory term | — |
+
+### 11.2 Probe: what replaced Luật 56/2024?
+
+**Nothing the register names.** vbpl.vn's relation record ("Lược đồ") for Luật 56/2024 gives the end date 01/01/2026 but lists **0** acts that end it in full. The record for Luật Chứng khoán 54/2019 lists exactly two amending acts, Luật 56/2024 and NĐ 200/2026 (private corporate bonds), and none that ends the Law. Both records are frozen as sources 27–28 (round 11). So on the register, Điều 91 k1 still stands as the FIN001 basis. Run 7 notes that the records do not mention Điều 91 itself; that sentence is open (§11.4).
+
+### 11.3 Claims replaced (owner ruling)
+
+`claim-statutory-compliance` and `claim-cybersecurity-law` were removed from `required_claim_ids` and recorded under `retired_claim_ids` with the reason. They are replaced by:
+- `claim-pdpd-nd356-scope` (NĐ 356 Điều 1);
+- `claim-pdpd-breach-notice-content` (NĐ 356 Điều 28 k1 a–d), alongside the existing `claim-pdpd-breach-72h` (Luật 91 Đ23 k1).
+
+The retired atoms stay in the ledger. The modules cite them only under "Historical".
+
+### 11.4 Rules and evals (commit 121042d)
+
+- **Coverage:** SEC001/SEC006, EDU010, LND002, PROD004, LEG007 and FIN001 messages and hints, 10 eval pairs, 4 trigger-query lines, and 2 generators. Examples were regenerated.
+- **Unchanged:** `expected_rules` and LEG007/FIN001 detection.
+- **One detection change, accepted by Opus:** SEC001 also accepts the statutory phrase "cơ quan chuyên trách bảo vệ dữ liệu cá nhân". The updated good copy uses it.
+- **Guard test:** the new `tests/test_current_pdpd_citations.py` failed before the edits (48 + 17 offenders) and passes after.
+- **`A0[5]` rejected.** The Sonnet draft got around the test with an `A0[5]` regex, and Opus rejected that as obfuscation. The literal legacy pattern `Cục\s+A05|A05` is back, with an explicit, commented exemption in the test.
+- **Open from run 7:** 8 module sentences need their own anchors:
+  - finance §3: Điều 12 has no guarantee clause; the variant words; "FIN001 cites"; Điều 91 still the basis;
+  - statutory §1: a non-historical paragraph anchored only to a corpus file; the Luật 75 paragraph;
+  - statutory §2: the transition date; "NĐ 330 sets the fines".
+  - Plus minor overreaches: the Điều 7 rider, "must match", "FIN001 cites".
+
+### 11.5 Still red, and why
+
+- **`kb gate` DEEPEN / `verify_ukmc` CONTINUE_GAP.** Saturation is 0/3, because rounds 11–12 added new material. Probes remain (KDBĐS lost provisions, the NĐ 15 replacement, dictionaries). Review run 7 is passed=false.
+- **No second reviewer: Codex login expired.** Owner-manual.
+- **Next run:** fix the 8 unanchored sentences, get the owner's call on the MED002 class, then a fresh full-scope review on a frozen state (the gate does not notice a review older than the atoms).
+
+### 11.6 Verification after the last edit (round 2)
+
+Haiku ran the suite and Opus checked the raw file. Screenshot: [knowledge-261028-2016-gates-terminal-r2.png](knowledge-261028-2016-gates-terminal-r2.png).
+
+```text
+$ python3 tools/sync_shared.py --check
+sync_shared: 16 skills verified byte-identical to shared/
+[exit 0]
+
+$ python3 tools/build_examples.py --check
+build_examples: 16 skills verified up-to-date
+[exit 0]
+
+$ python3 tools/verify_ukmc.py
+FAIL: review.json did not pass independent review
+files: 18 · anchors: 119 · failures: 1 · exempt blocks: 0
+verified_claims: 64/64 · independent_sources: 28
+Decision: CONTINUE_GAP
+[exit 1]
+
+$ env PYTHONPATH=$HOME/Products/design-os-knowledge-builder/src python3 -m knowledge_builder.cli verify ./knowledge --claims
+[WARN] no ontology.yaml: legacy mode, UKMC.v1 checks only
+files: 18
+anchors: 119
+failures: 0
+exempt blocks: 0
+[exit 0]
+
+$ env PYTHONPATH=$HOME/Products/design-os-knowledge-builder/src python3 -m knowledge_builder.cli gate --root ./knowledge --run-id vn-design-os-261026
+[*] Evaluating Stopping Gate for run: vn-design-os-261026
+--------------------------------------------------
+Decision: DEEPEN
+Reason:   Deficiencies detected: Saturation not yet reached (low-delta rounds 0/3, delta 3.6%), A viable probe remains, Independent review has not passed. Probing further.
+Hard Gates Passed: True
+Saturation Passed: False
+--------------------------------------------------
+[exit 2]
+
+$ python3 -m unittest discover -s tests
+.....................................................................
+----------------------------------------------------------------------
+Ran 69 tests in 5.927s
+
+OK
+[exit 0]
+
+$ python3 scripts/self_check.py
+ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
+[exit 0]
+```
+
+Protected packaging files, untouched: `pyproject.toml`, `.pre-commit-hooks.yaml`, `.github/`, `README*`, `CHANGELOG.md`, `vi_design_os/`, `tests/test_pip_packaging_and_precommit.py`.

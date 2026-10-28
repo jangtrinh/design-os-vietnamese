@@ -1,6 +1,6 @@
 {
   "run_id": "vn-design-os-261026",
-  "round": 10,
+  "round": 12,
   "status": "RUNNING",
   "budget_used": 0,
   "budget_total": 50,
@@ -12,7 +12,6 @@
     "claim-tone-orthography",
     "claim-register-pragmatics",
     "claim-locale-formatting",
-    "claim-statutory-compliance",
     "claim-typography-metrics",
     "claim-finance-tt99",
     "claim-edtech-moet",
@@ -25,7 +24,6 @@
     "claim-ecommerce-law",
     "claim-gov-dvc",
     "claim-insurance-law",
-    "claim-cybersecurity-law",
     "claim-media-law",
     "claim-pdpd-law-91-in-force",
     "claim-pdpd-nd13-expired",
@@ -68,10 +66,15 @@
     "claim-fin-law56-register-status",
     "claim-rea-law29-register-status",
     "claim-pdpd-form-03a-dpia-update",
-    "claim-med-ad-beyond-declaration-evidence"
+    "claim-med-ad-beyond-declaration-evidence",
+    "claim-fin-luatck-amenders-register",
+    "claim-fin-law56-no-ending-act",
+    "claim-ads-law-75-d8-k3-k10",
+    "claim-pdpd-nd356-scope",
+    "claim-pdpd-breach-notice-content"
   ],
   "minimum_independent_sources": 6,
-  "last_weighted_delta": 0.02531645569620253,
+  "last_weighted_delta": 0.03614457831325301,
   "researcher_runtime": "claude-opus-5-5",
   "is_target_version_matched": true,
   "consecutive_low_delta_rounds": 0,
@@ -92,16 +95,30 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11,
+        12
       ],
       "runtime": "claude-opus-5-5",
       "date": "2026-10-28"
     }
   ],
   "open_probes": [
-    "Which law replaced Luật 56/2024/QH15 from 01/01/2026, and does it amend Luật Chứng khoán Điều 91",
     "Which provisions of Luật KDBĐS 29/2023/QH15 lost force (Luật 43/2024 and later amendments)",
     "Status of the NĐ 15/2018 replacement decree",
     "Lexicographic sources (Hoàng Phê, Diệp Quang Ban, Cao Xuân Hạo) for colloquial variants and negation cues"
+  ],
+  "retired_claim_ids": [
+    {
+      "id": "claim-statutory-compliance",
+      "retired": "2026-10-28",
+      "reason": "describes Decree 13/2023 as current; owner ruling: retire, replaced by claim-pdpd-nd356-scope"
+    },
+    {
+      "id": "claim-cybersecurity-law",
+      "retired": "2026-10-28",
+      "reason": "describes Decree 13/2023 Article 23 and A05; owner ruling: retire, replaced by claim-pdpd-breach-notice-content (with claim-pdpd-breach-72h)"
+    }
   ]
 }

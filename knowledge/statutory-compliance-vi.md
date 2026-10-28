@@ -8,7 +8,7 @@ when:
   - "Enforcing LAW001 unverified superlative restrictions and explicit consent under Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 and Nghị định 356/2025/NĐ-CP"
   - "Validating promotional discount percentages against Decree 81/2018/NĐ-CP and Decree 128/2024/NĐ-CP"
 trust_tier: "verified"
-version: "3.2.0"
+version: "3.3.0"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
@@ -50,13 +50,15 @@ Primary text (frozen from vbpl.vn): Điều 8 khoản 11 lists `nhất`, `duy nh
 Điều 19 khoản 1 adds the general duty that ad content be truthful, accurate and clear.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/11-vbpl-luat-16-2012-qh13-quang-cao.txt" sha256="03c300d362343c5a67ef4d22ad86fbce8c017050ca17e18c7462aa08b822234c" quote="Nội dung quảng cáo phải bảo đảm trung thực, chính xác, rõ ràng, không gây thiệt hại cho người sản xuất, kinh doanh và người tiếp nhận quảng cáo." -->
 
-Luật 75/2025/QH15 takes effect on 01/01/2026. Its repeal list removes Điều 8 khoản 13 and it rewrites khoản 3 and 10; it does not touch khoản 11, so the superlative ban stands in its 2012 wording.
+Luật 75/2025/QH15 takes effect on 01/01/2026. Its repeal list (Điều 1 khoản 25) removes Điều 8 khoản 13, and Điều 1 khoản 4 rewrites only khoản 3 and khoản 10. Điều 1 never mentions khoản 11, so Luật 75 leaves the superlative ban untouched.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/10-vbpl-luat-75-2025-qh15-quang-cao-sua-doi.txt" sha256="3fd7a62806d40131b7a33cb081108f6757560436be51870a39f180b9b858ecd0" quote="4. Sửa đổi, bổ sung một số khoản của Điều 8 như sau:" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/10-vbpl-luat-75-2025-qh15-quang-cao-sua-doi.txt" sha256="3fd7a62806d40131b7a33cb081108f6757560436be51870a39f180b9b858ecd0" quote="Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026, trừ trường hợp quy định tại khoản 2 Điều này." -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/10-vbpl-luat-75-2025-qh15-quang-cao-sua-doi.txt" sha256="3fd7a62806d40131b7a33cb081108f6757560436be51870a39f180b9b858ecd0" quote="Bãi bỏ khoản 2 Điều 2, Điều 5, khoản 13 Điều 8, khoản 5 Điều 16, khoản 7 và khoản 8 Điều 22, khoản 2 Điều 29, điểm b khoản 3 Điều 31, điểm c khoản 1 Điều 33." -->
 
 ### 2. Personal Data Protection: Luật 91/2025/QH15 and Nghị định 356/2025/NĐ-CP (from 01/01/2026)
 
 Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 is in force from 01/01/2026, and Nghị định 356/2025/NĐ-CP ends the force of Nghị định 13/2023/NĐ-CP on the same day. Cite the Law and Decree 356 for new copy; cite Decree 13/2023 only as history.
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Nghị định này quy định chi tiết khoản 2, khoản 3 Điều 2; khoản 5 Điều 4;" -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026." -->
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu lực thi hành." -->
 

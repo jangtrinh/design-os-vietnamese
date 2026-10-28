@@ -198,14 +198,14 @@
         "cure_claim": [
           {
             "form": "thay thế thuốc chữa bệnh",
-            "class": "attested-in-statute",
+            "class": "statutory",
             "evidence": {
               "source_uri": "_evidence/vn-design-os-261026/sources/13-vbpl-nd-15-2018-nd-cp-an-toan-thuc-pham.txt",
               "sha256": "c5bba8ecb5b0535a213c8fe2372f2f99b9178f91615afd8c45b3cd02cda387b9",
               "quote": "Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh",
               "claim": "claim-med-tpcn-disclaimer"
             },
-            "note": "only the affirmative form is a violation; the mandated disclaimer contains the same words after không có tác dụng; the statute attests the words through the mandated disclaimer, it does not itself call the affirmative a cure claim"
+            "note": "NĐ 15/2018 Điều 27 khoản 3 điểm a, which regulates supplement ads, mandates this wording in negated form (không có tác dụng thay thế thuốc chữa bệnh); only the affirmative claim fires, because it contradicts the mandated statement. Not attested-in-statute: that class requires a text that does not regulate the rule's subject."
           },
           {
             "form": "chữa khỏi",
