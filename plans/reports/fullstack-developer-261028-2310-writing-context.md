@@ -1,6 +1,6 @@
 # Implementation report: writing-context dimension (`--context`)
 
-- Worktree: `/Users/jangtrinh/Products/design-os-vietnamese/.claude/worktrees/agent-a552efa4aec91bb50`
+- Worktree: an isolated git worktree of this repository (path omitted on purpose: reports carry no machine paths)
 - Branch: `worktree-agent-a552efa4aec91bb50` (cut from `main` @ `24d0146`). Nothing pushed.
 - Spec: `plans/261028-2310-writing-context-dimension/plan.md` (main checkout, untracked).
 
@@ -72,7 +72,7 @@ History: the first sweep showed 16 stderr diffs (4 texts x 4 modes): the suggest
 - The captured runs below were produced twice, by the repo script and by the installed `site/bin/vi-validate-copy`; `diff` of the two files: empty, exit 0 (byte-identical).
 - Packaging tests added: wheel ships both modules + `context-matrix.md` for shared and every skill; installed `--context` works outside the repo, also combined with `--domain finance` (domain mode switches reference dirs, the matrix must still resolve); installed unknown id exits 2 listing presets. Mutation check: deleting the `*/references/context-matrix.md` glob from `pyproject.toml` makes 2 wheel tests fail; restored.
 
-### AC6 gates (all run after the last edit, on the committed tree; exit codes captured without pipes)
+### AC6 gates (first round; run BEFORE this report was committed, so they did not cover it. Correction: the committed report then failed the repo's path-hygiene test. The "Fix round 1" section at the end reruns every gate after the final commit.)
 
 ```
 unittest, Python 3.14.6 (setuptools on PYTHONPATH so wheel tests run)  Ran 110 tests in 12.678s  OK   unittest_py314_exit=0
@@ -83,7 +83,7 @@ python3 tools/sync_shared.py --check   sync_exit=0   sync_shared: 16 skills veri
 python3 tools/build_examples.py --check   build_examples_exit=0   build_examples: 16 skills verified up-to-date
 python3 tools/verify_ukmc.py      verify_ukmc_exit=0   files: 18 · anchors: 66 · failures: 0 · exempt blocks: 0 / Decision: STOP_SUFFICIENT
 ```
-Read the skips honestly: locally the 8 `BuiltWheelLayoutTests` are skipped on a bare 3.14 (no setuptools); the 3.14 and 3.9.6 runs above include them. Apple's bundled setuptools 58 cannot read `pyproject.toml` (builds `UNKNOWN-0.0.0`), so those wheel tests fail on a bare `/usr/bin/python3`: pre-existing and environmental (existing tests such as `test_wheel_declares_console_scripts` fail the same way); CI installs a current setuptools. No machine-specific paths in `git diff main` (grep for `/Users/`, `/private/tmp`: empty). Stdlib only; Python 3.9 syntax verified by the 3.9.6 run. `writing_context.py` is 239 lines, `context_matrix.py` 105 (split from one 326-line file to honour the ~200-line guidance); both load by file path from `__file__`, never `sys.path`.
+Read the skips honestly: locally the 8 `BuiltWheelLayoutTests` are skipped on a bare 3.14 (no setuptools); the 3.14 and 3.9.6 runs above include them. Apple's bundled setuptools 58 cannot read `pyproject.toml` (builds `UNKNOWN-0.0.0`), so those wheel tests fail on a bare `/usr/bin/python3`: pre-existing and environmental (existing tests such as `test_wheel_declares_console_scripts` fail the same way); CI installs a current setuptools. The path grep that was claimed empty here covered the code diff only, not this report, which at that point contained one absolute path (fixed in fix round 1; see the end). Stdlib only; Python 3.9 syntax verified by the 3.9.6 run. `writing_context.py` is 239 lines, `context_matrix.py` 105 (split from one 326-line file to honour the ~200-line guidance); both load by file path from `__file__`, never `sys.path`.
 
 ### AC7 docs
 
