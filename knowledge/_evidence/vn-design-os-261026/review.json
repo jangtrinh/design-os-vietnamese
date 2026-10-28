@@ -1,118 +1,54 @@
 {
   "passed": false,
   "reviewer_runtime": "grok-4.7",
-  "reviewed_at": "2026-10-28T22:58:00+07:00",
-  "scope": "Round-2 state (rules commit 121042d plus uncommitted knowledge edits): ledger rounds 2 and 6-12 (50 atoms), all variant-table rows, and module sections: cybersecurity §1, healthcare NĐ 15 food ads, finance §3, statutory §1-2.",
-  "method": "One read-only grok-4.7 run (--lean, no write tools) on a self-contained packet cut mechanically from the frozen sources; the reviewer's own passed rule. Record: reviews/grok-7-round2-full-scope.json with packet and prompt. Codex unavailable (login expired; owner-manual re-login).",
+  "reviewed_at": "2026-10-28T23:11:00+07:00",
+  "scope": "Frozen commit 88a89ff (round 3): ledger rounds 2 and 6-13 (51 atoms), all variant-table rows, and module sections cybersecurity §1, healthcare NĐ 15 food ads, finance §3, statutory §1-2 (31 paragraphs).",
+  "method": "One read-only grok-4.7 run (--lean, no write tools) on a self-contained packet cut mechanically from the frozen sources; the reviewer's own passed rule; owner-decided items (Part D) excluded from findings. Record: reviews/grok-8-round3-full-scope.json with packet and prompt. Codex unavailable (login expired; owner-manual re-login).",
   "verdict": {
-    "reviewed_atoms": 50,
-    "entailed": 42,
+    "reviewed_atoms": 51,
+    "entailed": 50,
     "overreach": [
-      {
-        "id": "claim-pdpd-agency-bca",
-        "minor": true,
-        "why": "Điều 39 shows a unit under Bộ Công an and does not use A05. 'The decree does not name it A05' is a whole-decree negative with no file count."
-      },
       {
         "id": "claim-med-ad-matches-declaration",
         "minor": true,
-        "why": "Khoản 2 requires nội dung phù hợp với the declared công dụng and tác dụng. 'Must match' is stricter, and khoản 4 điểm đ of the same article allows further content with scientific proof."
-      },
-      {
-        "id": "claim-pdpd-silence-fine-nd330",
-        "minor": true,
-        "why": "Điểm b and the 50–70 million range are in Điều 43. 'Điều 7 khoản 1 sets the Mục 6 amounts for organizations' is not in the shown article."
-      },
-      {
-        "id": "claim-pdpd-default-consent-fine-nd330",
-        "minor": true,
-        "why": "Điểm c and the 30–50 million range are in Điều 43. The Điều 7 khoản 1 clause is not in the shown article."
-      },
-      {
-        "id": "claim-pdpd-agency-name-nd330",
-        "minor": true,
-        "why": "Điểm b names the Cục in full. 'A05 does not appear in the text' is a whole-text negative with no mechanical count."
-      },
-      {
-        "id": "claim-fin-nd38-d2k4",
-        "minor": true,
-        "why": "Khoản 4 only defines the management company and says nothing about returns. 'Which FIN001 cites' is not in the article; the table cites the decree, not this clause."
-      },
-      {
-        "id": "claim-ads-law-75-d8-k3-k10",
-        "minor": false,
-        "why": "Điều 1's silence and the zero count show Law 75 does not mention khoản 11. They do not show that the superlative ban still has its 2012 wording."
-      },
-      {
-        "id": "claim-pdpd-nd356-scope",
-        "minor": true,
-        "why": "Điều 1 details Luật 91 and measures for the agency and portal. 'Together they are the current PDPD basis for Vietnamese digital copy' is not in the article."
+        "why": "Điều 27 khoản 4 điểm đ requires scientific documentation for ad content beyond declared công dụng and tính năng. It does not allow content beyond khoản 2’s công dụng and tác dụng."
       }
     ],
     "wrong": [],
-    "variant_table_issues": [
-      {
-        "rule": "MED002",
-        "form": "thay thế thuốc chữa bệnh",
-        "why": "Class statutory, but the quote is the mandated negation 'không có tác dụng thay thế thuốc chữa bệnh', not a statutory cure claim. Affirmative use is the rule's inference."
-      }
-    ],
-    "paragraphs_reviewed": 30,
+    "variant_table_issues": [],
+    "paragraphs_reviewed": 31,
     "unsupported_paragraphs": [
       {
-        "paragraph_start": "The guaranteed-return ban sits in Luật Chứng khoán 2019 (54/",
-        "why": "The Điều 91 anchor supports the ban and the fixed-income exception. It does not contain Điều 12, so the no-guarantee-clause claim is unanchored."
-      },
-      {
-        "paragraph_start": "The statutory wording names three things to match: `bảo đảm`",
-        "why": "Điều 91 names bảo đảm, thu nhập, lợi nhuận, and không bị thua lỗ. It does not say cam kết, đảm bảo, lãi, lời, or sinh lời express that meaning."
-      },
-      {
-        "paragraph_start": "`NĐ 38/2018/NĐ-CP`, the second basis `FIN001` cites, governs",
-        "why": "The anchors support the start-up scope and the khoản 4 definition. They do not show that FIN001 cites this decree or this clause."
-      },
-      {
-        "paragraph_start": "The register's relation record for Luật Chứng khoán 54/2019/",
-        "why": "The lược đồ anchors show two partial amenders and zero full-ending acts. They do not mention Điều 91 or keep khoản 1 as the guarantee basis."
-      },
-      {
-        "paragraph_start": "Article 8 Clause 11 of the Law on Advertising 2012 (Luật Quả",
-        "why": "The only anchor is a historical corpus sentence, and the paragraph is not labelled Historical. It treats khoản 11 as amended by Law 75 and as the KOL-disclosure duty."
-      },
-      {
-        "paragraph_start": "Luật 75/2025/QH15 takes effect on 01/01/2026. Its repeal lis",
-        "why": "The date, the repeal of Điều 8 khoản 13, the limited khoản 4 rewrite, and the zero count for khoản 11 are anchored. 'Keeps its 2012 wording' is not; the Điều 3 anchor names earlier amending laws."
-      },
-      {
-        "paragraph_start": "Transition: processing already under way that was consented ",
-        "why": "Điều 39 continues processing consented under Decree 13 before the Law takes effect. The anchor does not give the date 01/01/2026."
-      },
-      {
-        "paragraph_start": "Fines: Nghị định 330/2026/NĐ-CP sets the administrative fine",
-        "why": "Điều 80 states only the 19/08/2026 effective date. It does not say the decree sets the administrative fines for these consent rules."
+        "paragraph_start": "Children: dual consent from the child and the legal represen",
+        "why": "Điều 24 khoản 2 has the representative exercise the data subject’s rights, except cases under Điều 19 khoản 1, which is not in the anchor. It does not say the representative acts for the child for all other processing."
       }
     ],
     "passed": false,
-    "notes": "Non-minor: A48 treats Law 75 silence as proof the 2012 superlative wording survives earlier amending laws. MED002's statutory cure row is a negated disclaimer. Eight module sentences lack their own anchors."
+    "notes": "Owner kept MED002 “thay thế thuốc chữa bệnh” statutory. The clause only mandates the negated disclaimer, so the affirmative fragment is not a stated ban. Not counted as a finding."
   },
-  "post_review_edits": [
-    {
-      "claim_id": "claim-ads-law-75-d8-k3-k10",
-      "note": "Accepted the non-minor overreach: removed 'keeps its 2012 wording' from the atom and the statutory module; the claim now says only that Luật 75 leaves khoản 11 untouched. Wording removed only; not re-reviewed."
-    }
-  ],
+  "post_review_edits": [],
   "author_notes_on_findings": [
     {
-      "claim_id": "MED002 thay thế thuốc chữa bệnh",
-      "note": "Run 6 rejected attested-in-statute; run 7 rejects statutory. By the file's definitions attested-in-statute needs a text that does not regulate the subject (NĐ 15 does), and proposed needs no frozen source (one exists). The class scheme has no class for a mandated negated phrase; owner decision."
+      "claim_id": "cybersecurity child-consent paragraph",
+      "note": "Accepted, not yet fixed: the anchor (Luật 91/2025 Điều 24 khoản 2) has the representative exercise the child's rights except for Điều 19 khoản 1 cases, which is not anchored. Next run: anchor Điều 19 khoản 1 or narrow the sentence. State left as reviewed."
     },
     {
-      "claim_id": "module paragraphs (8)",
-      "note": "Finance §3 and statutory §1-2 were reviewed paragraph by paragraph for the first time in run 7; their unsupported sentences are open for the next run."
+      "claim_id": "claim-med-ad-matches-declaration",
+      "note": "Minor overreach accepted for the next run: khoản 4 điểm đ concerns content beyond declared công dụng and tính năng, not beyond khoản 2's công dụng and tác dụng."
+    },
+    {
+      "claim_id": "MED002 thay thế thuốc chữa bệnh",
+      "note": "Owner ruled statutory (2026-10-28); reviewer disagreement recorded in notes, not a finding."
     }
   ],
-  "next_run_must": "Replace this review before any STOP: the gate does not check that a review covers atoms added after it.",
+  "next_run_must": "Fix the child-consent paragraph and the med-ad atom, then replace this review before any STOP: the gate does not check that a review covers atoms added after it.",
   "previous_reviews": [
+    {
+      "run": "7-round2-full-scope",
+      "reviewer_runtime": "grok-4.7",
+      "passed": false,
+      "record": "reviews/grok-7-round2-full-scope.json"
+    },
     {
       "run": "6-final-full-scope",
       "reviewer_runtime": "grok-4.7",

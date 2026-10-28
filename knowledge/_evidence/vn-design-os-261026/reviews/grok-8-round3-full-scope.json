@@ -1,0 +1,29 @@
+{
+  "run": "8-round3-full-scope",
+  "model": "grok-4.7",
+  "stop": "end_turn",
+  "turns": 9,
+  "secs": 433,
+  "verdict": {
+    "reviewed_atoms": 51,
+    "entailed": 50,
+    "overreach": [
+      {
+        "id": "claim-med-ad-matches-declaration",
+        "minor": true,
+        "why": "Điều 27 khoản 4 điểm đ requires scientific documentation for ad content beyond declared công dụng and tính năng. It does not allow content beyond khoản 2’s công dụng and tác dụng."
+      }
+    ],
+    "wrong": [],
+    "variant_table_issues": [],
+    "paragraphs_reviewed": 31,
+    "unsupported_paragraphs": [
+      {
+        "paragraph_start": "Children: dual consent from the child and the legal represen",
+        "why": "Điều 24 khoản 2 has the representative exercise the data subject’s rights, except cases under Điều 19 khoản 1, which is not in the anchor. It does not say the representative acts for the child for all other processing."
+      }
+    ],
+    "passed": false,
+    "notes": "Owner kept MED002 “thay thế thuốc chữa bệnh” statutory. The clause only mandates the negated disclaimer, so the affirmative fragment is not a stated ban. Not counted as a finding."
+  }
+}

@@ -2,7 +2,7 @@
 
 Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. Researcher: claude-opus-5-5. Independent review is in §7.
 
-**Status after round 2 (see §11): not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 0/3, real probes remain open, and the latest independent review (grok-4.7, run 7, full scope) returned **passed=false**: 0 wrong, 1 non-minor overreach (since narrowed), 1 disputed variant row, 8 unsupported module sentences. `verify_ukmc.py` returns CONTINUE_GAP, with that review as its only failure. No rounds were manufactured, and no pass was set by hand.
+**Status after round 3 (see §12): not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP for three reasons. Saturation is 1/3. Real probes remain open. The latest independent review (grok-4.7, run 8, full scope on frozen commit 88a89ff) returned **passed=false**: 0 wrong, 50/51 atoms entailed, 1 minor overreach, 1 unsupported paragraph (child consent), 0 variant-table issues. `verify_ukmc.py` returns CONTINUE_GAP; that review is its only failure. No rounds were manufactured, and no pass was set by hand.
 
 ## 1. Numbers (before → after)
 
@@ -405,3 +405,54 @@ Protected packaging files, untouched: `pyproject.toml`, `.pre-commit-hooks.yaml`
 - "together they are the current PDPD basis" removed.
 
 **Saturation note.** Round 13 (one anchor atom, delta 1.2%) is a review correction, not a probe. It counts as low-delta in `run measure`, but it is not evidence of saturation.
+
+### 12.1 Review run 8 (grok-4.7, read-only, frozen commit 88a89ff)
+
+The verdict is recorded verbatim in `review.json`. The full record is `reviews/grok-8-round3-full-scope.json`, with packet and prompt alongside. Scope: 51 atoms, all variant rows, 31 module paragraphs.
+
+| | Run 7 | **Run 8** |
+|---|---|---|
+| Atoms entailed | 42/50 | **50/51** |
+| Wrong | 0 | **0** |
+| Overreach | 8 (1 non-minor) | **1 (minor)** |
+| Variant-table issues | 1 (MED002) | **0** (MED002 owner-decided; reviewer note only) |
+| Unsupported module paragraphs/sentences | 8 sentences | **1 paragraph** |
+| passed | false | **false** |
+
+**Findings, both accepted and left for the next run.** The state was not edited after the review, so `review.json` describes exactly the committed state.
+1. **Child-consent paragraph (cybersecurity).** Its anchor, Luật 91/2025 Điều 24 khoản 2, has the legal representative exercise the child's rights, except in the cases of Điều 19 khoản 1, which is not anchored. Fix: anchor Điều 19 khoản 1, or narrow the sentence to what khoản 2 says.
+2. **`claim-med-ad-matches-declaration` (minor).** Khoản 4 điểm đ covers content beyond the declared *công dụng và tính năng*, not beyond khoản 2's *công dụng và tác dụng*. Fix: reword the khoản 4 rider.
+
+### 12.2 Numbers, round 3 (before → after)
+
+| | After round 2 | **After round 3** |
+|---|---|---|
+| Verified claims (`verify_ukmc`) | 64/64 | **65/65** |
+| Independent sources | 28 | 28 |
+| Anchors | 119 | **121** |
+| Atoms | 86 | **87** |
+| Review: unsupported module items | 8 sentences | **1 paragraph** |
+| Tests | 69 | 69 |
+
+### 12.3 Still red, and why
+
+- **`kb gate` DEEPEN (exit 2).** Saturation is 1/3, and the one low-delta round is a review correction, not a probe. Probes remain open: KDBĐS lost provisions, the NĐ 15 replacement, lexicographic sources. Review run 8 is passed=false.
+- **`verify_ukmc` CONTINUE_GAP (exit 1).** Its only failure is review run 8.
+- The tests stay at the honest state (verify exit 1, gate exit 2). Nothing passed, so `tests/test_ukmc_knowledge.py` is unchanged.
+- **Owner-manual:** Codex re-login, so that a second, non-Grok reviewer can run.
+
+### 12.4 Verification after the last edit (round 3)
+
+All 7 commands ran from the worktree after the `review.json` update. Exit codes:
+
+| Command | Exit | Result |
+|---|---|---|
+| `sync_shared --check` | 0 | 16 skills byte-identical |
+| `build_examples --check` | 0 | 16 skills up to date |
+| `verify_ukmc.py` | 1 (expected) | 65/65 claims, 28 sources, 121 anchors; 1 failure = review → CONTINUE_GAP |
+| `kb verify --claims` | 0 | 121 anchors, 0 failures |
+| `kb gate` | 2 (expected) | DEEPEN; Hard Gates Passed: True; saturation 1/3 (delta 1.2%) |
+| unittest | 0 | 69 tests OK |
+| `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
+
+Screenshot: `knowledge-261028-2016-gates-terminal-r3.png`.
