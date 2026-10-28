@@ -20,7 +20,7 @@ RULE_DOCS = {
     "ENG008": "blaming the user in an error message; state the condition objectively",
     "PROD002": "agree/disagree scale in a survey — inflates scores via acquiescence bias",
     "PROD003": "app-store metadata over the platform character limit",
-    "PROD004": "consent copy without an explicit purpose (Nghị định 13/2023/NĐ-CP)",
+    "PROD004": "consent copy without an explicit purpose (Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6)",
 }
 
 DOCTYPES = {
@@ -216,5 +216,5 @@ def check_document(ctx):
                 1,
                 first_line,
                 "consent copy does not state an explicit purpose",
-                "Nghị định 13/2023/NĐ-CP requires express, informed consent naming the purpose — “… nhằm mục đích [X]”",
+                "Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6 require express, informed consent (default-on consent is banned, NĐ 356/2025/NĐ-CP Điều 6 khoản 3) naming the purpose — “… nhằm mục đích [X]”",
             )

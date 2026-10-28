@@ -299,7 +299,7 @@
 - Để lại thông tin gồm họ và tên và số điện thoại để nhận tư vấn ngay.
 + Để lại họ và tên và số điện thoại. Tôi đồng ý để công ty xử lý dữ liệu cá nhân theo Chính sách bảo mật nhằm mục đích tư vấn sản phẩm.
 ```
-- **Why:** Nghị định 13/2023/NĐ-CP requires stating the processing purpose and referencing Chính sách bảo mật.
+- **Why:** Luật 91/2025/QH15 Điều 9 and NĐ 356/2025/NĐ-CP Điều 6 require stating the processing purpose and referencing Chính sách bảo mật.
 
 ### lnd-footer-compliance (Rules: `LND003` · Doctype: `ecommerce-footer`)
 

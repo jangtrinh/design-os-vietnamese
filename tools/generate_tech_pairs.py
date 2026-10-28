@@ -286,8 +286,8 @@ pairs = [
         "en": "Consent copy without purpose statement",
         "bad": "Tôi đồng ý cho phép ứng dụng thu thập dữ liệu cá nhân của tôi.",
         "good": "Tôi đồng ý cho phép ứng dụng thu thập dữ liệu cá nhân nhằm mục đích xác thực tài khoản.",
-        "diagnosis": "Consent copy collecting personal data without naming an explicit purpose (Nghị định 13/2023/NĐ-CP).",
-        "why": "Nghị định 13/2023/NĐ-CP mandates express, informed consent naming the specific purpose.",
+        "diagnosis": "Consent copy collecting personal data without naming an explicit purpose (Luật 91/2025/QH15 Điều 9; NĐ 356/2025/NĐ-CP Điều 6).",
+        "why": "Luật 91/2025/QH15 Điều 9 and NĐ 356/2025/NĐ-CP Điều 6 mandate express, informed consent naming the specific purpose.",
         "expected_rules": ["PROD004"],
         "doctype": "consent"
     },

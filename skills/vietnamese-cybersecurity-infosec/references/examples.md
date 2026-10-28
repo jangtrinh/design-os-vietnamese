@@ -12,7 +12,7 @@
 - Doanh nghiệp phát hiện rò rỉ dữ liệu cá nhân của khách hàng vào ngày 10/10/2026. Công ty dự kiến thông báo trong vòng 15 ngày sau khi hoàn tất kiểm tra nội bộ.
 - Thông báo này được gửi tới cơ quan chức năng có liên quan.
 + Báo cáo sự cố an ninh dữ liệu cá nhân.
-+ Doanh nghiệp phát hiện rò rỉ dữ liệu cá nhân vào ngày 10/10/2026 và đã gửi thông báo bằng văn bản theo Mẫu số 03a tới Cục A05 Bộ Công an trong thời hạn 72 giờ theo đúng quy định tại Điều 23 Nghị định 13/2023/NĐ-CP.
++ Doanh nghiệp phát hiện rò rỉ dữ liệu cá nhân vào ngày 10/10/2026 và đã gửi thông báo bằng văn bản theo Mẫu số 08 Nghị định 356/2025/NĐ-CP tới cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) trong thời hạn 72 giờ theo đúng quy định tại Điều 23 khoản 1 Luật 91/2025/QH15.
 + Đơn vị tiếp tục phối hợp chặt chẽ để khắc phục hậu quả.
 ```
 
@@ -23,7 +23,7 @@
 - Quy trình nội bộ quy định thời hạn báo cáo sự cố vi phạm dữ liệu là 7 ngày kể từ khi phát hiện.
 - Báo cáo sẽ được lưu tại hồ sơ công ty.
 + Kế hoạch ứng phó vi phạm dữ liệu cá nhân.
-+ Quy trình nội bộ quy định thời hạn thông báo tới Cục A05 Bộ Công an là trong vòng 72 giờ kể từ khi phát hiện theo Điều 23 Nghị định 13/2023/NĐ-CP.
++ Quy trình nội bộ quy định thời hạn thông báo tới cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) là trong vòng 72 giờ kể từ khi phát hiện theo Điều 23 khoản 1 Luật 91/2025/QH15.
 + Hồ sơ sự cố được lưu trữ đầy đủ để phục vụ thanh tra.
 ```
 
@@ -35,16 +35,16 @@
 - Đơn vị dự kiến gửi báo cáo sau 30 ngày sau khi phát hiện rò rỉ dữ liệu cá nhân.
 + Thông báo vi phạm quy định bảo vệ dữ liệu cá nhân.
 + Công ty TNHH Dịch vụ Số đã phát hiện sự cố rò rỉ dữ liệu tài khoản.
-+ Đơn vị gửi báo cáo sự cố tới Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05) thuộc Bộ Công an trong vòng 72 giờ theo luật định.
++ Đơn vị gửi báo cáo sự cố tới cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) trong vòng 72 giờ theo luật định.
 ```
 
 ### sec-breach-04 (Rules: `SEC001` · Doctype: `breach-notification`)
 
 ```diff
-- Thông báo gửi Cục A05 Bộ Công an về sự cố dữ liệu.
+- Thông báo gửi cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) về sự cố dữ liệu.
 - Doanh nghiệp báo cáo sau 96 giờ kể từ thời điểm phát hiện dấu hiệu xâm nhập trái phép vào cơ sở dữ liệu.
-+ Thông báo gửi Cục A05 Bộ Công an về sự cố dữ liệu.
-+ Doanh nghiệp báo cáo trong vòng 72 giờ kể từ thời điểm phát hiện dấu hiệu xâm nhập trái phép vào cơ sở dữ liệu theo Điều 23 Nghị định 13/2023/NĐ-CP.
++ Thông báo gửi cơ quan chuyên trách bảo vệ dữ liệu cá nhân (Bộ Công an) về sự cố dữ liệu.
++ Doanh nghiệp báo cáo trong vòng 72 giờ kể từ thời điểm phát hiện dấu hiệu xâm nhập trái phép vào cơ sở dữ liệu theo Điều 23 khoản 1 Luật 91/2025/QH15.
 ```
 
 ## System Security Level
@@ -185,7 +185,7 @@
 
 ```diff
 - Chính sách quản trị phân loại dữ liệu sức khỏe và sinh trắc học là dữ liệu cá nhân cơ bản trong hệ thống nội bộ.
-+ Chính sách quản trị xác định dữ liệu sức khỏe và sinh trắc học là dữ liệu cá nhân nhạy cảm cần được mã hóa theo Điều 2 Nghị định 13/2023/NĐ-CP.
++ Chính sách quản trị xác định dữ liệu sức khỏe và sinh trắc học là dữ liệu cá nhân nhạy cảm cần được mã hóa theo Điều 4 Nghị định 356/2025/NĐ-CP.
 ```
 
 ### sec-sensitive-02 (Rules: `SEC006`)

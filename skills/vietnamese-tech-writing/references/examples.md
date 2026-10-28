@@ -239,7 +239,7 @@
 - Tôi đồng ý cho phép ứng dụng thu thập dữ liệu cá nhân của tôi.
 + Tôi đồng ý cho phép ứng dụng thu thập dữ liệu cá nhân nhằm mục đích xác thực tài khoản.
 ```
-- **Why:** Nghị định 13/2023/NĐ-CP mandates express, informed consent naming the specific purpose.
+- **Why:** Luật 91/2025/QH15 Điều 9 and NĐ 356/2025/NĐ-CP Điều 6 mandate express, informed consent naming the specific purpose.
 
 ### eng-app-store-superlative (Rules: `LAW001` · Doctype: `app-store-subtitle`)
 
