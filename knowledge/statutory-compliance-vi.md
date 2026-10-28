@@ -8,7 +8,7 @@ when:
   - "Enforcing LAW001 unverified superlative restrictions and explicit consent under Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 and Nghị định 356/2025/NĐ-CP"
   - "Validating promotional discount percentages against Decree 81/2018/NĐ-CP and Decree 128/2024/NĐ-CP"
 trust_tier: "verified"
-version: "3.4.0"
+version: "3.4.1"
 source_attribution:
   - uri: "_evidence/vn-design-os-261026/sources/03-vietnam-statutory-regulatory-corpus.md"
     sha256: "c367b62b33da872f4c4477b922d9e94c589012e98581cc33e7c042a0858b8290"
@@ -69,8 +69,11 @@ Consent is valid only when it is voluntary and the person knows the data types a
 Nghị định 356/2025 Điều 6 khoản 3 bans default-on consent and agree/decline controls that blur the two. This is the current basis for rejecting pre-ticked boxes.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/08-vbpl-nd-356-2025-nd-cp-huong-dan-luat-bvdlcn.txt" sha256="350ed8ae5ac5688457ced3ecd8d7c629744371cca386a393809ef76b9e118990" quote="Bên kiểm soát dữ liệu cá nhân, bên kiểm soát và xử lý dữ liệu cá nhân không được thiết lập phương thức mặc định đồng ý hoặc tạo ra các chỉ dẫn không rõ ràng, gây hiểu lầm giữa đồng ý và không đồng ý cho chủ thể dữ liệu." -->
 
-Children: dual consent from the child and the legal representative is required to publish or disclose a child's private-life data from age 7 (Điều 24 khoản 2). The Law sets no upper age bound in that clause; for other processing the legal representative acts for the child.
+Children: dual consent from the child and the legal representative is required to publish or disclose a child's private-life data from age 7 (Điều 24 khoản 2). The Law sets no upper age bound in that clause.
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Việc xử lý dữ liệu cá nhân của trẻ em nhằm công bố, tiết lộ thông tin về đời sống riêng tư, bí mật cá nhân của trẻ em từ đủ 07 tuổi trở lên thì phải có sự đồng ý của trẻ em và người đại diện theo pháp luật." -->
+
+For a child, the legal representative exercises the data subject's rights on the child's behalf, except in the cases listed in Điều 19 khoản 1 (Điều 24 khoản 2, first sentence).
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Đối với trẻ em, người bị mất hoặc hạn chế năng lực hành vi dân sự hoặc người có khó khăn trong nhận thức, làm chủ hành vi thì người đại diện theo pháp luật thay mặt thực hiện các quyền của chủ thể dữ liệu cá nhân, trừ các trường hợp quy định tại khoản 1 Điều 19 của Luật này." -->
 
 Transition: processing already under way that was consented or agreed under Decree 13/2023 before 01/01/2026 continues without asking again (Điều 39 khoản 1).
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/07-vbpl-luat-91-2025-qh15-bao-ve-du-lieu-ca-nhan.txt" sha256="11c381fa968c8e8456c2ddbcc37738682ceb60633788d68cfd87dbb104b90715" quote="Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026." -->
