@@ -261,3 +261,122 @@ Temp wheel/env/sweep/capture scratch dirs removed (all outside the worktree); `g
 Status: DONE_WITH_CONCERNS
 Summary: `--context` with 10 presets, CTX001-CTX005, matrix, 57 pairs + 13 clean texts, docs and packaging done; all gates green (3.14 and 3.9.6), AC4 sweep 0 diffs over 3912 runs, wheel output identical to repo script.
 Concerns/Blockers: word lists unreviewed by a native speaker; the commit trailer names Opus 5.5 (as prescribed) though Sonnet 5.5 implemented; local bare-3.14 run skips 8 wheel tests (setuptools absent), covered by the setuptools-enabled runs listed above.
+
+## Fix round 1
+
+Input: the independent review (verdict NEEDS_CHANGES) plus the controller's provisional rulings on Q1/Q2. Work was test-first: the regression tests were written and run against the unfixed code before any fix. Commits of this round (on top of `2877f3e`):
+
+```
+b58f559 fix(context): stop false positives on idioms, quoted replies, addresses and openers
+5e38102 test(context): pin the review's false-positive classes and assert exit code and traceback on every CLI call
+cd599ee docs(plans): remove the machine path from the report and correct its gate claims
+```
+plus the commit that adds this section.
+
+### Red (before the fixes)
+
+B1, the existing path-hygiene test against the committed report:
+```
+$ python3 -m unittest tests.test_qa_issue_2_2026_10_26
+FAIL: test_no_personal_paths_anywhere_in_repo_outside_test_assertions
+AssertionError: Lists differ: ['plans/reports/fullstack-developer-261028-2310-writing-context.md'] != []
+Ran 9 tests in 4.506s
+FAILED (failures=1)
+```
+
+All other findings, new file `tests/test_writing_context_regressions.py` (33 tests) against the unfixed code:
+```
+Ran 33 tests in 4.931s
+FAILED (failures=39, errors=1)
+```
+Selected raw failures, grouped by finding:
+```
+H1  test_het_minh_and_ve_phan_minh_are_idioms_not_pronouns        AssertionError: 1 != 0 : ('--json', '--context', 'chat-to-manager', '-')
+H1  test_reflexive_cua_minh_after_a_first_person_subject_is_fine  AssertionError: 1 != 0 : ('--json', '--context', 'job-application', '-')
+H1  test_third_person_ban_noun_phrases_are_not_direct_address     AssertionError: 1 != 0 : ('--json', '--context', 'job-application', '-')
+H2  test_every_quote_marker_cuts_the_body (5 sub-cases: Vào…đã viết:, On…wrote:, -----Original Message-----, ----- Tin nhắn gốc -----, bare >)
+                                                                  AssertionError: 1 != 0 : ('--json', '--context', 'email-to-client', '-')
+H2  test_quoted_thanks_never_counts_as_the_sign_off               AssertionError: Lists differ: [] != [('CTX004', 3)]
+H3  test_email_addresses_and_file_names_are_not_teencode          AssertionError: 1 != 0 : ('--json', '--context', 'email-to-manager', '-')
+H4  test_vs_and_math_letters_are_not_flagged_in_documents         AssertionError: 1 != 0 : ('--json', '--context', 'doc-for-executives', '-')
+H4  test_vs_hint_offers_so_voi_not_only_voi                       AssertionError: 'so với' not found in 'write the full word “với”'
+M1  test_wider_openers_and_closers_are_accepted (6 sub-cases)     e.g. [('CTX004', 'Thưa anh,'), ('CTX004', 'Hà')] != []
+M1  test_sign_off_is_found_above_a_long_signature_block           [('CTX004', 'Email: minh.nv@abc.vn')] != []
+M2  test_de_nghi_and_kien_nghi_count_as_the_conclusion            [('CTX005', '# Tờ trình về việc lựa chọn nhà cung cấp phần mềm')] != []
+M3  test_formal_opener_needs_no_politeness_particle (3 sub-cases) [('CTX002', 'anh')] != []
+M4  test_meta_text_about_pronouns_does_not_hint (3), test_notices_to_candidates_and_customers_do_not_hint,
+    test_hint_requires_the_pattern_at_the_start_of_the_text, test_a_declared_register_silences_the_hint,
+    test_no_markdown_file_in_the_repository_triggers_a_hint       AssertionError: [('README.md', 'chat-close-friend'), ('REA… != []
+Q1  test_num002_is_off_for_friends_but_on_for_colleagues          AssertionError: Lists differ: [] != ['NUM002']
+N1  test_empty_context_exits_two_like_an_unknown_id (2)           AssertionError: 0 != 2 : ('--context=', '-')
+N2  test_all_caps_teencode_and_extra_tokens_are_caught            AssertionError: Lists differ: [] != [('CTX003', 'KO')]
+N3  test_tui_is_a_forbidden_self_term_toward_a_superior           AssertionError: 0 != 1 : ('--json', '--context', 'chat-to-manager', '-')
+N5  test_vv_subject_line_is_skipped_when_looking_for_the_greeting [('CTX004', 'V/v: Báo cáo tuần 43')] != []
+CI  test_ci_installs_setuptools_before_the_unittest_step          ValueError: substring not found
+```
+M6, the 26 clean rows and 3 new pairs of `evals/contexts/pairs.jsonl` run against the pre-fix tree (`git archive 2877f3e` plus the new corpus):
+```
+Ran 9 tests in 0.110s
+FAILED (failures=16)      # 13 clean rows + 3 new pairs (colleague-ungrouped-amount, chat-manager-tui, job-kn-ac)
+```
+M5 is a hole in the assertions, not a behaviour: the fix is that `tests/test_writing_context.py` has exactly one `subprocess.run`, inside `cli(tc, script, *args, stdin, code)`, which asserts "Traceback" absent and the exact exit code; every call site passes `code=` and asserts its payload (including the formerly bare `test_without_context_no_ctx_rule_ever_fires`, `strict`, `peer`, `good`, `plain`, `mixed`, `broken`, `off`, `declared`, `job`, `ls` runs).
+
+### Green (after the fixes)
+
+```
+$ python3 -m unittest tests.test_writing_context tests.test_writing_context_matrix_and_corpus tests.test_writing_context_regressions
+Ran 57 tests in 11.601s
+OK
+```
+Full suite on commit `cd599ee` (the last code and test commit; setuptools on `PYTHONPATH`, so nothing is skipped):
+```
+Python 3.14.6   python3 -m unittest discover -s tests              Ran 143 tests in 23.270s   OK   unittest_exit=0
+Python 3.9.6    /usr/bin/python3 -m unittest discover -s tests     Ran 143 tests in 23.460s   OK   unittest39_exit=0
+python3 scripts/self_check.py             self_check_exit=0         ok: design-os-vietnamese self-check passed (16 skills, 18 UKMC.v1 modules)
+python3 tools/sync_shared.py --check      sync_exit=0               sync_shared: 16 skills verified byte-identical to shared/
+python3 tools/build_examples.py --check   build_examples_exit=0     build_examples: 16 skills verified up-to-date
+python3 tools/verify_ukmc.py              verify_ukmc_exit=0
+```
+`ci.yml` parses (`ruby -ryaml`: jobs `verify`, `packaging`; the new step "Install the build backend the wheel-layout tests need" sits before "Run Full Unit & Golden Benchmark Test Suite"; only that 3-line change was made under `.github`).
+
+### AC4 re-sweep after the last code change
+
+Same method as before (`git archive main` vs the branch, 489 pairs = 978 texts x 4 modes = 3912 runs per tree, stdin, one driver process per tree):
+```
+runs per mode: {'plain': 978, 'plain-json': 978, 'domain-all': 978, 'domain-all-json': 978} total: 3912
+stdout differences: 0
+exit-code differences: 0
+stderr differences: 0
+exit-code histogram (main): {0: 3296, 1: 616}
+```
+Hints stay silent on every `*.md` in the repository (the regression test runs the Validator over all of them: more than 250 files, offenders `[]`), including the review's own repros: both READMEs, the HR skill's `context-matrix.md`, the meta sentence about `mày`/`tao`, the HR notice to candidates and the customer-service letter.
+
+### What changed, finding by finding
+
+- **B1** report path removed, false path-grep claim and the "gates after the last edit" claim corrected in place; path-hygiene test green.
+- **H1** `hết mình`, `về phần mình`, `các bạn <thực tập|sinh viên|trẻ|…>` and `bạn <Name>` are exempt; `của mình` is exempt in a sentence with a first-person subject (`tôi|em|con|cháu|chúng tôi|chúng em`). Done inside `writing_context.py`; the existing `PRONOUN_COMPOUND_EXEMPT_RE` (PRO001/PRO002) is untouched, so default behaviour is unchanged. `Sếp gửi giúp file của mình ạ.` is still `CTX001`.
+- **H2** for `chat` and `email` channels everything from the first quote marker (`>`, `Vào|Trên … đã viết:`, `On … wrote:`, `-----Original Message-----`, `----- Tin nhắn gốc -----`, also `Thư gốc`) is dropped before any rule. Documents are not cut: a `>` block there is the writer's text (a `> Tóm tắt` summary must count for `CTX005`).
+- **H3** lookahead `(?![\w/_@-]|\.\w)`, plus every `\S+@\S+` span blanked; a sentence-final `r.` is still caught.
+- **H4** ambiguous tokens are skipped for every `document` channel and for `technical` readers. `vs` now means `với / so với` and the hint reads `write it out in full: “với” or “so với”`.
+- **M1** greetings `Thưa`, `Kính thưa`, `Dạ chào`, `Dạ thưa` and name-first endings (`thân mến`, `thân yêu`, `kính mến`, new matrix table); closers `Em cảm ơn`, `Em cám ơn`, `Cám ơn`, `Xin cám ơn`, `Tôi (xin) (chân thành) cảm ơn`, `Rất cảm ơn`, `Best`, `Many thanks`, `Thank you`. Sign-off candidates = the last 6 body lines plus the 6 lines above the first contact line (e-mail, URL, phone, `Điện thoại:` …) in the last 12 lines.
+- **M2** `Đề nghị`, `Kiến nghị`, `Tóm lại`, `Nội dung chính`.
+- **M3** (provisional, owner confirms) `CTX002` returns early when the first body line starts with `Kính gửi`, `Kính thưa` or `Thưa` (new `formal-openers` matrix table). Existing CTX002 tests and pairs switched to a `Chào anh Nam,` opener.
+- **M4** suggestion moved to the new sibling `context_suggestion.py`: the pattern must start at the first non-empty line; silent for any text with markdown structure (`#`, `|`), organisation or meta markers (`chúng tôi`, `quý khách`, `đơn hàng`, `chăm sóc khách hàng`, `các ứng viên`, `ví dụ`, …), quoted or backticked `mày`/`tao`, naming verbs (`dùng|xưng|gọi tao`) and meta words (`tránh`, `quy tắc`, `người ta`, …); `job-application` needs a first-person apply verb (`tôi|em|mình (xin|muốn) ứng tuyển`); silent when `--register` is declared or the file disables any `CTX` rule.
+- **M5/M6** see Red; the corpus grew to 60 pairs and 26 clean rows, with varied templates (formal openers, signature blocks, quoted reply, `V/v:` header, executive docs with `vs`, `r`, `Đề nghị`).
+- **Q1** (provisional) `NUM002` removed from the `chat-colleague` disables, kept off for `chat-close-friend`; matrix rationale, both READMEs, CHANGELOG and the clean row updated (that row now exercises `NUM004`).
+- **Nits** done: N1 empty `--context=` exits 2 with the preset list; N2 ALL-CAPS teencode via a new `Caps` column (`KO`, `ĐC`; not for `DC`, `VS`, `NS`); N3 added `a/c`, `kn`, `tks`, `thx`, `nma` and `tui` (forbidden toward a superior); N4 documented next to the `5 ns` rule; N5 `V/v:` skipped; N6 a missing sibling module now reports "`--context` is unavailable: writing_context.py or context_matrix.py is missing" instead of blaming the matrix; N7 CHANGELOG names all three modules, "thay mặt công ty", the contrived tone row reworded. Not done: N3's `ông/bà` forbids and `chú/cô/giám đốc` as CTX002 address terms (honorific collisions: `ông Nam`, `bác sĩ`), single-letter `a/e/c`; N8 (CI smoke of `--context`), because `.github` edits beyond the one setuptools step were not allowed.
+
+### Deviations in this round
+
+- Third sibling module `context_suggestion.py` (the rules file would otherwise have grown past 300 lines); sync and wheel tests assert it ships.
+- The quote cut applies to `chat` and `email` only (see H2).
+- `ko` stays `Ambiguous = yes` (locale code), so teencode `ko` is not caught in `document` channels; the executive-document pair now uses `đc`.
+- A hint is also suppressed when the file disables CTX rules and when `--register` is given (review suggestion, M4).
+
+### Closing condition
+
+The gate block above was run on `cd599ee`. The commit that adds this section changes only this file; after it, the full gate set was rerun a third time and the exit codes are in the hand-off message of this round.
+
+Status: DONE_WITH_CONCERNS
+Summary: B1, H1-H4, M1-M6, Q1, nits and the CI step are fixed test-first; 143 tests green on Python 3.14 and 3.9 with the wheel tests running; AC4 re-sweep 0/0/0 over 3912 runs.
+Concerns/Blockers: M3 and Q1 are provisional rulings awaiting the owner; the word lists still need native-speaker review; N8 and a few word-list nits are left open on purpose.
