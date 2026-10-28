@@ -624,6 +624,35 @@ RULE_DOCS: Dict[str, str] = {
     "PRO002": "pronoun does not match the declared register",
 }
 
+
+
+def _load_writing_context_module():
+    """Load the sibling ``writing_context.py`` by file path (never via sys.path).
+
+    Returns None when the file is absent so a partial install degrades to "no
+    --context support" instead of breaking every other rule.
+    """
+    import importlib.util
+
+    path = SCRIPT_DIR / "writing_context.py"
+    if not path.is_file():
+        return None
+    spec = importlib.util.spec_from_file_location("writing_context", path)
+    if spec is None or spec.loader is None:
+        return None
+    module = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(module)
+    except Exception as exc:
+        print(f"warning: cannot load {path.name}: {exc}", file=sys.stderr)
+        return None
+    return module
+
+
+WRITING_CONTEXT = _load_writing_context_module()
+if WRITING_CONTEXT is not None:
+    RULE_DOCS.update(WRITING_CONTEXT.RULE_DOCS)
+
 BASE_RULE_DOCS: Dict[str, str] = dict(RULE_DOCS)
 DOMAIN_MODULES: List = []
 DOCTYPES: Dict[str, str] = {}
@@ -693,13 +722,41 @@ def load_domain_rules(directory: Optional[pathlib.Path] = None) -> List:
 load_domain_rules()
 
 
+def load_context_matrix(ref_dirs: Sequence[pathlib.Path] = ()):
+    """Parse ``context-matrix.md`` from the first reference dir that has it (then REF_DIR).
+
+    Returns None when the writing-context module or the matrix file is unavailable.
+    """
+    if WRITING_CONTEXT is None:
+        return None
+    for directory in [*ref_dirs, REF_DIR]:
+        try:
+            text = (directory / "context-matrix.md").read_text(encoding="utf-8")
+        except OSError:
+            continue
+        return WRITING_CONTEXT.parse_matrix(text, _table_with_header, _unwrap)
+    return None
+
+
 class Validator:
     def __init__(self, blocklists: Blocklists, register: Optional[str] = None,
-                 doctype: Optional[str] = None):
+                 doctype: Optional[str] = None, context: Optional[str] = None,
+                 context_matrix=None):
         self.bl = blocklists
         self.calques = list(blocklists.compiled_calques())
         self.register = register
         self.doctype = doctype
+        self.context_matrix = None
+        self.context_profile = None
+        # (path, preset id) hints for files checked without --context; printed to stderr only.
+        self.suggestions: List[Tuple[pathlib.Path, str]] = []
+        if context:
+            matrix = context_matrix or load_context_matrix()
+            profile = matrix.profiles.get(context) if matrix is not None else None
+            if profile is None:
+                known = ", ".join(sorted(matrix.profiles)) if matrix is not None else "none"
+                raise ValueError(f"unknown context {context!r}; available contexts: {known}")
+            self.context_matrix, self.context_profile = matrix, profile
 
     def check_file(self, path: pathlib.Path) -> List[Finding]:
         try:
@@ -712,6 +769,9 @@ class Validator:
         disabled = file_disabled_rules(text)
         if "ALL" in disabled:
             return []
+        if self.context_profile is not None:
+            # Context relaxations apply after domain rules are collected: every emit passes this gate.
+            disabled |= self.context_profile.disables
 
         raw_lines = text.splitlines()
         # Normalize to NFC in memory so decomposed NFD input cannot bypass linguistic & domain rules
@@ -739,6 +799,8 @@ class Validator:
         self._check_tone_consistency(masked, path, emit)
         self._check_pronouns(masked, path, emit)
         self._check_domain_rules(lines, masked, text_nfc, path, is_markdown, emit)
+        self._check_writing_context(masked, emit)
+        self._suggest_writing_context(text_nfc, path)
 
         findings.sort(key=lambda f: (f.line, f.col, f.rule))
         return findings
@@ -1000,6 +1062,23 @@ class Validator:
                         ),
                     )
 
+    def _check_writing_context(self, masked: Sequence[str], emit) -> None:
+        if self.context_profile is None or WRITING_CONTEXT is None:
+            return
+        cleaned = [
+            PRONOUN_COMPOUND_EXEMPT_RE.sub(lambda m: " " * len(m.group(0)), line)
+            for line in masked
+        ]
+        WRITING_CONTEXT.check(self.context_profile, self.context_matrix, masked, cleaned, emit)
+
+    def _suggest_writing_context(self, text: str, path: pathlib.Path) -> None:
+        """Record a context hint when none is declared. Never a finding; the caller prints it to stderr."""
+        if self.context_profile is not None or WRITING_CONTEXT is None:
+            return
+        suggestion = WRITING_CONTEXT.suggest_context(text)
+        if suggestion:
+            self.suggestions.append((path, suggestion))
+
     def _check_domain_rules(self, lines, masked, text, path, is_markdown, emit) -> None:
         if not DOMAIN_MODULES:
             return
@@ -1115,6 +1194,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         help="enable register-consistency check (PRO002); values defined in references/register-matrix.md",
     )
     ap.add_argument(
+        "--context",
+        default=None,
+        help="declare who is writing to whom (chat with friends, email to the boss, job application, ...); "
+        "applies CTX001-CTX005 and relaxes unsuitable rules; presets defined in references/context-matrix.md",
+    )
+    ap.add_argument(
         "--doctype",
         default=None,
         help="declare artifact type to activate structural domain rules"
@@ -1203,7 +1288,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         )
         return 2
 
-    validator = Validator(blocklists, args.register, args.doctype)
+    context_matrix = None
+    if args.context:
+        context_matrix = load_context_matrix(refs_dirs)
+        if context_matrix is None or args.context not in context_matrix.profiles:
+            available = ", ".join(sorted(context_matrix.profiles)) if context_matrix else "none (context-matrix.md not found)"
+            print(f"unknown context {args.context!r}; available contexts: {available}", file=sys.stderr)
+            return 2
+
+    validator = Validator(blocklists, args.register, args.doctype,
+                          context=args.context, context_matrix=context_matrix)
     findings: List[Finding] = []
 
     if args.paths == ["-"]:
@@ -1279,6 +1373,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         print(f"{files_checked_count} file(s) checked · {errors} error(s) · {warnings} warning(s)")
         if not findings:
             print("clean")
+
+    if validator.suggestions:
+        first_path, preset = validator.suggestions[0]
+        more = len(validator.suggestions) - 1
+        print(
+            f"hint: {first_path} reads like context '{preset}'"
+            + (f" (+{more} more file(s) with a likely context)" if more else "")
+            + f"; re-run with --context {preset} to apply it (nothing is applied on a guess)",
+            file=sys.stderr,
+        )
 
     if errors:
         return 1

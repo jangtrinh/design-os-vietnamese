@@ -17,6 +17,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SHARED_REFS = ROOT / "shared" / "references"
 SHARED_SYNC_REF_NAMES = (
     "compliance.md",
+    "context-matrix.md",
     "register-matrix.md",
     "locale-formatting.md",
     "typography-and-layout.md",
