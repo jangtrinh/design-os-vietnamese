@@ -2,7 +2,7 @@
 
 Run: `knowledge/_evidence/vn-design-os-261026`, extended through rounds 2–10. Researcher: claude-opus-5-5. Independent review is in §7.
 
-**Status after round 4 (see §13), the last round of this run: not STOP.** `kb gate` returns **DEEPEN** (exit 2). Hard gates pass. It is not STOP because saturation is 1/3, real probes remain open, and the latest independent review returned **passed=false**. That review was grok-4.7 run 9, full scope, on frozen commit 0520afa: 0 wrong, 50/51 atoms entailed, 1 minor overreach, 1 unsupported paragraph, 0 variant-table issues. `verify_ukmc.py` returns CONTINUE_GAP; that review is its only failure. No rounds were manufactured, and no pass was set by hand.
+**Status after round 5 (see §14): independent review passed; builder gate still DEEPEN.** grok-4.7 run 10, full scope, on frozen commit c9fa997 returned **passed=true**: 50/51 atoms entailed, 0 wrong, 1 minor overreach, 0 unsupported paragraphs, 0 variant-table issues. `verify_ukmc.py` now returns **STOP_SUFFICIENT** (exit 0). `kb gate` still returns **DEEPEN** (exit 2): hard gates pass, but saturation is 1/3 and real probes remain open. No rounds were manufactured, and no pass was set by hand.
 
 ## 1. Numbers (before → after)
 
@@ -507,3 +507,58 @@ The 7 commands were rerun by Haiku after the `review.json` update; Opus checked 
 | `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
 
 Screenshot: `knowledge-261028-2016-gates-terminal-r4.png`.
+
+## 14. Round 5 (owner ruling 2026-10-29: Grok as the only reviewer)
+
+**Rebase.** Nothing to do: `origin/main` is still 24d0146 (PR #5 not merged), and the branch was 0 behind.
+
+**The two run-9 fixes, nothing else** (freeze commit c9fa997):
+1. **Luật 56 / Điều 12.** Frozen source 25 settles it. Within Luật 56 Điều 1 (the Securities Law items), "Điều 12" occurs exactly once, at item 5 (khoản 3, market manipulation). Item 20 repeals Điều 23, khoản 3 Điều 48 and khoản 4–5 Điều 135, and inserts a phrase into Điều 7, 52 and 68. The "khoản 4 Điều 12" rewrite is item 4 of Luật 56 **Điều 2**, which amends the Accounting Law.
+   - The **FIN001 `citation_note` was the wrong side** and is corrected.
+   - Its stale "NĐ 38 not checked" sentence is also replaced with the frozen-source-24 finding the module already carries.
+   - The finance module paragraph (3.4.1) now anchors item 20 and adds one anchored sentence on the Điều 2 item.
+2. **`claim-med-no-medical-endorsement`.** The atom now names the instruments of Điều 27 khoản 2: images, equipment, attire, names, letters, thank-you letters and articles. The matching `MED005` sentence in the healthcare module (4.2.1) uses the same wording.
+
+No new probes or material were added. Anchors went from 122 to 126; claims stay at 65/65 and sources at 28.
+
+**Packet builder (mechanical, scratch tool).** Source 25's context now cuts at the amending law's own article headers. Before, a quoted inserted article ("Điều 31b.") truncated it. The context also prints a mechanical count of "Điều 12" next to "Điều 91". The healthcare section ends at the reworded `MED005` line, as before.
+
+### 14.1 Review run 10 (grok-4.7, read-only, frozen commit c9fa997)
+
+The verdict is recorded verbatim in `review.json` (`passed: true`, `post_review_edits: []`). The record is `reviews/grok-10-round5-full-scope.json`, with packet and prompt alongside.
+
+| | Run 9 | **Run 10** |
+|---|---|---|
+| Atoms entailed | 50/51 | **50/51** |
+| Wrong | 0 | 0 |
+| Overreach | 1 minor (med-endorsement) | **1 minor (`claim-pdpd-nd356-scope`, new)** |
+| Variant-table issues | 0 | 0 |
+| Unsupported paragraphs | 1 (finance Luật 56) | **0** (33 reviewed) |
+| passed | false | **true** |
+
+New minor item: `claim-pdpd-nd356-scope` adds the law number 91/2025/QH15, which NĐ 356 Điều 1 does not print. Run 9 passed that same atom. It is left unedited so the frozen review stays valid; the next ledger edit should narrow it.
+
+### 14.2 What changed in the tests
+
+`tests/test_ukmc_knowledge.py` now asserts the real state: `verify_ukmc` exit 0, no `FAIL:` lines, `failures: 0`, `Decision: STOP_SUFFICIENT`. The builder-gate expectation stays at DEEPEN (exit 2); only its comment was updated.
+
+### 14.3 Verification after the last edit (round 5)
+
+The 7 commands were rerun by Haiku after the `review.json` and test update; Opus checked the raw output. Exit codes:
+
+| Command | Exit | Result |
+|---|---|---|
+| `sync_shared --check` | 0 | 16 skills byte-identical |
+| `build_examples --check` | 0 | 16 skills up to date |
+| `verify_ukmc.py` | 0 | 65/65 claims, 28 sources, 126 anchors, 0 failures → **STOP_SUFFICIENT** |
+| `kb verify --claims` | 0 | 126 anchors, 0 failures |
+| `kb gate` | 2 (expected) | DEEPEN; Hard Gates Passed: True; saturation 1/3 (delta 1.2%); a viable probe remains |
+| unittest | 0 | 87 tests OK (5 skipped) |
+| `self_check.py` | 0 | 16 skills, 18 UKMC.v1 modules |
+
+Screenshot: `knowledge-261028-2016-gates-terminal-r5.png`.
+
+### 14.4 Still open
+- **`kb gate` DEEPEN.** It needs 2 more low-delta rounds plus the open probes: KDBĐS lost provisions, the NĐ 15 replacement, dictionaries. These are real research rounds, not reruns.
+- **Narrow `claim-pdpd-nd356-scope`**, then re-review.
+- **Owner-manual:** Codex re-login, for a second reviewer.
