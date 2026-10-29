@@ -93,9 +93,49 @@ class CalqueAndAdversityPassiveTests(unittest.TestCase):
             "Quý I đạt mục tiêu.",
             "Một món quà quý giá.",
             "Xem tài khoản của bạn đã được nâng cấp.",
+            # compound nouns / verbs that end in "bị" are not the passive marker
+            "Thiết bị kết nối thành công.",
+            "Chuẩn bị nâng cấp hệ thống.",
+            "Thiết bị cập nhật thành công.",
+            "Thiết bị nâng cấp lên iOS 18.",
+            "Trang bị nâng cấp cho xe.",
+            "Dự bị thăng chức cho đội hai.",
+            # negation with a hedge word or extra spaces
+            "Tài khoản không hề bị nâng cấp.",
+            "Tài khoản không  bị nâng cấp.",
+            "Tài khoản chưa từng bị nâng cấp.",
+            # noun compounds that end in an action verb, followed by "của bạn"
+            "Mọi thay đổi của bạn chưa được lưu.",
+            "Thu nhập của bạn tăng 10%.",
+            "Tệp tải lên của bạn quá lớn.",
+            "Lựa chọn của bạn đã được lưu.",
+            "Lựa chọn của bạn quyết định kết quả.",
+            "Tiền gửi của bạn đã về.",
+            "Tiền gửi của bạn sinh lãi hằng tháng.",
+            "Lượt xem của bạn hôm nay.",
+            "Lượt xem của bạn tăng mạnh.",
+            "Mã khôi phục của bạn.",
+            "Mã khôi phục của bạn hết hạn.",
+            "Dữ liệu nhập của bạn không hợp lệ.",
+            "Dữ liệu nhập của bạn sai định dạng.",
         ):
             with self.subTest(text=text):
                 self.assertEqual(self._rules(text), [])
+
+    def test_unrelated_table_hit_does_not_hide_lam_on_calque(self) -> None:
+        # "nhấn vào đây để xem chi tiết" is its own table calque; "Làm ơn nhấn" is a second defect.
+        findings = self.validator.check_text("Làm ơn nhấn vào đây để xem chi tiết.\n")
+        spans = sorted(f.message for f in findings if f.rule == "CAL001")
+        self.assertEqual(len(spans), 2, spans)
+        self.assertTrue(any("Làm ơn nhấn" in s and "vào đây" not in s for s in spans), spans)
+
+    def test_possessive_hint_keeps_the_whole_noun_phrase(self) -> None:
+        findings = self.validator.check_text("Vui lòng sửa của bạn hồ sơ.\n")
+        hints = [f.hint for f in findings if f.rule == "CAL001"]
+        self.assertEqual(len(hints), 1)
+        self.assertIn("noun phrase", hints[0])
+        self.assertNotIn("hồ của bạn", hints[0])
+        self.assertNotIn("sửa hồ ", hints[0])
 
     # -- Every skill ships the same behaviour -----------------------------------
     def test_every_skill_validator_reports_same_rules(self) -> None:
