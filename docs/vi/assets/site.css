@@ -1,0 +1,108 @@
+/* Visual system: elaya landing-page-design (spacing, radius, type scale, motion, dark surfaces).
+   Line heights and tracking follow this repo's vi-VN floors (design-tokens.vi.json): stacked
+   diacritics need >= 1.18 on display type and >= 1.5 on body, and tracking never below -0.01em. */
+:root {
+  --bg: #131209;
+  --surface: #1f1f1f;
+  --surface-2: #272727;
+  --line: #313131;
+  --text: #eceae4;
+  --muted: #a3a19a;
+  --faint: #706e68;
+  --err: #ff6b5e;
+  --warn: #e9b949;
+  --ok: #7fd4a0;
+
+  --s-25: 2px; --s-50: 4px; --s-75: 8px; --s-100: 12px; --s-200: 16px; --s-300: 24px;
+  --s-400: 32px; --s-500: 40px; --s-600: 48px; --s-700: 64px; --s-800: 80px; --s-900: 96px;
+
+  --r-md: 6px; --r-lg: 8px; --r-xl: 12px; --r-2xl: 16px; --r-full: 9999px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sans: "Manrope", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
+  --measure: 680px;
+  --wrap: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--s-900); }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16px; line-height: 1.55; font-weight: 400;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+::selection { background: var(--text); color: var(--bg); }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
+a { color: inherit; text-underline-offset: 3px; }
+code, pre, kbd, .mono { font-family: var(--mono); font-feature-settings: "tnum"; }
+code { font-size: 0.875em; }
+pre code { font-size: inherit; }
+img, svg { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: var(--r-md); }
+.ph { font-style: normal; }
+
+.skip {
+  position: absolute; left: var(--s-200); top: -100px; z-index: 50; min-height: 44px; display: inline-flex; align-items: center;
+  background: var(--text); color: var(--bg); padding: var(--s-75) var(--s-200);
+  border-radius: var(--r-full); font-weight: 600; font-size: 14px;
+}
+.skip:focus { top: var(--s-200); }
+
+.wrap { width: min(var(--wrap), 100% - 2 * var(--s-200)); margin-inline: auto; }
+.section { padding-block: var(--s-900); }
+.section-head { max-width: var(--measure); display: grid; gap: var(--s-200); margin-bottom: var(--s-700); }
+.h2 { font-size: 36px; line-height: 1.25; }
+.h2-xl { font-size: 48px; line-height: 1.2; }
+.lede { color: var(--muted); font-size: 18px; line-height: 1.55; }
+
+/* Buttons: padding 8px 12px (elaya B2). A full pill with 12px side padding crowds the corner arc, so main
+   buttons take 12px radius; the compact nav button keeps the pill because its padding is 16px. */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--s-75);
+  min-height: 44px; padding: var(--s-75) var(--s-100);
+  border-radius: var(--r-xl); border: 1px solid transparent;
+  font: 600 16px/1.5 var(--sans); text-decoration: none; cursor: pointer;
+  transition: background-color 300ms var(--ease), color 300ms var(--ease), transform 300ms var(--ease);
+}
+.btn-primary { background: var(--text); color: var(--bg); }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+/* Pressed feedback for every pointer target that is not already a .btn */
+.btn:active, .seg button:active, .nav-links a:active, .faq summary:active, .skill-list h3 a:active, .footer a:active { transform: scale(0.98); }
+.btn .ph { font-size: 18px; transition: transform 500ms var(--ease); }
+@media (hover: hover) {
+  .btn-primary:hover { background: #ffffff; }
+  .btn-ghost:hover { background: var(--surface); }
+  .btn:hover .ph-arrow-right { transform: translateX(4px); }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Rule chips: data, so monospace is functional */
+.chip {
+  display: inline-flex; align-items: center; padding: var(--s-25) var(--s-75);
+  border-radius: var(--r-full); font: 500 12px/1.5 var(--mono);
+  background: var(--surface-2); color: var(--muted); white-space: nowrap;
+}
+.chip.err { color: var(--err); }
+.chip.warn { color: var(--warn); }
+.chip.ok { color: var(--ok); }
+
+/* Scroll reveal: transform only, so text is never hidden at rest or mid scroll */
+.js [data-reveal] { transform: translateY(32px); transition: transform 700ms var(--ease); }
+.js [data-reveal].is-in { transform: none; }
+
+@media (max-width: 767px) {
+  .section { padding-block: var(--s-800); }
+  .h2 { font-size: 30px; line-height: 1.25; }
+  .h2-xl { font-size: 36px; line-height: 1.25; }
+  .lede { font-size: 16px; }
+  .section-head { margin-bottom: var(--s-600); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; }
+  .js [data-reveal] { transform: none; }
+}
