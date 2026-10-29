@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (af05a501ee68eb53) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (ce56ce8f3f8c8129) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -589,13 +589,19 @@ _CUA_BAN_NOT_NOUN = (
     r"thì|rất|đều|cũng|nhé|nha|ạ"
 )
 # “verb + của bạn + noun” is only a calque when the verb is an imperative: at the start
-# of a line or clause, or right after a modal (vui lòng, hãy, xin, cần, nên, phải, có thể).
-# Everywhere else the verb is the tail of a noun (thu nhập, lựa chọn, tiền gửi, lượt xem,
-# thay đổi, tệp tải lên, mã khôi phục, dữ liệu nhập) and “noun + của bạn” is correct.
+# of a line or clause, right after vui lòng / hãy / xin / làm ơn, or after a modal
+# (cần, nên, phải, có thể) that is itself clause-initial or directly follows “bạn”.
+# A modal after a noun opens a relative clause (“thông tin cần nhập của bạn …”) and is
+# not an anchor. Everywhere else the verb is the tail of a noun (thu nhập, lựa chọn, tiền
+# gửi, lượt xem, thay đổi, tệp tải lên, mã khôi phục, dữ liệu nhập) and
+# “noun + của bạn” is correct.
+_CLAUSE_START = r"(?:^[\s\-–—•*#>\d.)\"“‘'(\[]*|[.:;!?…,]\s+)"
+_MODAL = r"(?:cần|nên|phải|có\s+thể)\s+"
 IMPERATIVE_POSITION_PREFIX_RE = re.compile(
-    r"(?:^[\s\-–—•*#>\d.)\"“‘'(\[]*"
-    r"|[.:;!?…,]\s+"
-    r"|(?<!\w)(?:vui\s+lòng|hãy|xin|làm\s+ơn|cần|nên|phải|có\s+thể)\s+)$",
+    rf"(?:{_CLAUSE_START}"
+    rf"|(?<!\w)(?:vui\s+lòng|hãy|xin|làm\s+ơn)\s+"
+    rf"|{_CLAUSE_START}{_MODAL}"
+    rf"|(?<!\w)bạn\s+{_MODAL})$",
     re.IGNORECASE,
 )
 # (pattern, message, hint, required prefix or None). The optional ``core`` group marks the

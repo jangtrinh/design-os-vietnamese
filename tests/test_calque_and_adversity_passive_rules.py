@@ -54,6 +54,10 @@ class CalqueAndAdversityPassiveTests(unittest.TestCase):
             "Vui lòng nhập của bạn email.",
             "Xem của bạn đơn hàng.",
             "Chọn của bạn gói dịch vụ.",
+            "Bạn cần nhập của bạn email.",
+            "Bạn có thể xem của bạn đơn hàng.",
+            "Cần nhập của bạn email.",
+            "Để tiếp tục, phải nhập của bạn email.",
         ):
             with self.subTest(text=text):
                 self.assertEqual(self._rules(text), ["CAL001"])
@@ -118,6 +122,12 @@ class CalqueAndAdversityPassiveTests(unittest.TestCase):
             "Mã khôi phục của bạn hết hạn.",
             "Dữ liệu nhập của bạn không hợp lệ.",
             "Dữ liệu nhập của bạn sai định dạng.",
+            # modal inside a relative clause after a noun is not an imperative anchor
+            "Thông tin cần nhập của bạn gồm họ tên và email.",
+            "Các trường cần điền của bạn còn trống.",
+            "Số tiền phải gửi của bạn hôm nay là 5 triệu.",
+            "Hồ sơ cần sửa của bạn nằm ở mục Cài đặt.",
+            "Mục nên xem của bạn hôm nay.",
         ):
             with self.subTest(text=text):
                 self.assertEqual(self._rules(text), [])
