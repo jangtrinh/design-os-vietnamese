@@ -4,6 +4,8 @@ All notable changes to `design-os-vietnamese` are documented in this file.
 
 ## [Unreleased]
 
+## [5.2.0] — 2026-10-29
+
 ### Added
 - **Writing context (`--context <preset>`)**: a new dimension for one person writing to a specific person, next to `--register` (organisation to customer). Ten presets (`chat-close-friend`, `chat-colleague`, `chat-to-manager`, `email-to-manager`, `email-to-colleague`, `email-to-team`, `email-to-client`, `job-application`, `doc-for-executives`, `doc-for-engineers`) are bundles over five facets in the new `shared/references/context-matrix.md`, synced to every skill. New rules `CTX001`–`CTX005` (forbidden address terms, missing politeness particle, chat abbreviations, missing email greeting/sign-off, missing executive summary). Casual chat presets relax rules that do not suit them (`DIA001`, `CAL001`, `LAW001`, `SYN001`, `NUM004`, `TONE001`, plus `NUM002` for `chat-close-friend` only) while keeping `NFC001`, `ENC001` and `PRO001`. Logic lives in the new `shared/scripts/writing_context.py`, `context_matrix.py` and `context_suggestion.py`, loaded by file path from the repo script, every skill copy and the installed wheel. Presets and word lists are marked `proposed` (convention, not statute).
 - Without `--context`, the linter may print one stderr hint (never a finding, never in `--json` stdout, never an exit-code change) when strong signals appear, for example `Kính gửi anh/chị` plus `Em xin…`.
@@ -11,11 +13,13 @@ All notable changes to `design-os-vietnamese` are documented in this file.
 - **Installable console commands**: `pip install` / `uvx` now provides `vi-validate-copy`, `vi-i18n-parity` and `vi-font-coverage` (same flags and exit codes as the `shared/scripts/` checkers). `shared/` and `skills/` rule data ship inside the `vi_design_os` package as siblings, so domain rules and references resolve exactly as in a checkout. Runtime stays standard-library only.
 - CI job `packaging`: installs the package into a fresh virtualenv, smokes the three commands from outside the checkout, and runs all three hooks through `pre-commit try-repo` in a scratch consumer repository.
 - README (EN/VI): pip/uvx usage and a working `.pre-commit-config.yaml` snippet.
+- **Knowledge grounded in frozen statutory texts**: `knowledge/` is now backed by frozen primary and corroborating legal texts under `knowledge/_evidence/` (65 verified claims from 28 independent sources, 126 inline anchors, `python3 tools/verify_ukmc.py` → `STOP_SUFFICIENT`). New variant tables for `FIN001`, `MED002`, `REA001` and `REA002` carry evidence classes, negation cases and held-out candidates; a test re-checks every quote and hash against its frozen source. Personal-data fines are grounded in NĐ 330/2026.
 
 ### Fixed
 - **pre-commit hooks failed in every consumer repository**: hooks used `language: system` with `entry: python3 shared/scripts/...`, which pre-commit runs in the consumer's working directory (`can't open file`). Hooks now use `language: python` with the `vi-*` commands as entry; hook ids are unchanged.
 - **`pip install` installed no code and no commands**: `pyproject.toml` declared `py-modules = []` and no `[project.scripts]`.
 - **Personal-path hygiene test failed locally**: it walked untracked local worktrees under `.claude/`. It now scans only git-tracked files (filesystem walk skipping `.git` and `.claude` when git is unavailable).
+- **Expired PDPD citations**: `SEC001`/`SEC006`, `EDU010`, `LND002`, `PROD004` and `LEG007` now cite Luật 91/2025/QH15 and NĐ 356/2025/NĐ-CP (Mẫu số 08) instead of Nghị định 13/2023/NĐ-CP, and name the receiving body by its statutory term instead of the code A05; `SEC001` still accepts legacy "Cục A05" copy. `FIN001` is based on Luật Chứng khoán 2019 Điều 91 khoản 1 (Điều 12 and NĐ 38/2018 contain no guarantee ban). A guard test fails on any current-law citation of Decree 13/2023.
 
 ## [5.1.0] — 2026-10-27
 

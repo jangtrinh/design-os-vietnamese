@@ -1,11 +1,11 @@
-# DESIGN:OS Vietnamese (`vi-VN`) — Phiên bản v5.0 Đa Ngành Nghề (16 Kỹ Năng)
+# DESIGN:OS Vietnamese (`vi-VN`) — Phiên bản v5.2 Đa Ngành Nghề (16 Kỹ Năng)
 
 > **Hệ sinh thái 16 Kỹ năng Ngôn ngữ, Hệ thống Thiết kế Giao diện (Design System), Copywriting Đa Ngành, Sư phạm 7 Bậc học (Mầm non → Tiến sĩ) & Kiểm định Pháp lý Tự động cho AI Agent**
-> Xây dựng độc lập trên nền tảng **DESIGN:OS** và chuẩn tri thức **Universal Knowledge Master Contract (`UKMC.v1`)** với 16 kỹ năng chuyên sâu, 31 thanh điệu đối tượng (`registers`), 126 quy tắc kiểm định tĩnh, 489 cặp kiểm thử chuẩn (`golden pairs`) và 18 mô-đun tri thức xác thực mã hóa SHA-256.
+> Xây dựng độc lập trên nền tảng **DESIGN:OS** và chuẩn tri thức **Universal Knowledge Master Contract (`UKMC.v1`)** với 16 kỹ năng chuyên sâu, 31 thanh điệu đối tượng (`registers`), 131 quy tắc kiểm định tĩnh, 489 cặp kiểm thử chuẩn (`golden pairs`) và 18 mô-đun tri thức xác thực mã hóa SHA-256.
 
 [English Documentation (`README.md`)](README.md) · [Trang chủ GitHub Pages](https://jangtrinh.github.io/design-os-vietnamese/) · [Cookbook (`docs/cookbook.md`)](docs/cookbook.md) · [`llms.txt`](llms.txt)
 
-![DESIGN:OS Vietnamese v5.0 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
+![DESIGN:OS Vietnamese v5.2 Multi-Industry Architecture](assets/design-os-vietnamese-architecture.svg)
 
 ---
 
@@ -78,7 +78,7 @@ Dùng cùng bộ kiểm định dưới dạng hook [pre-commit](https://pre-com
 ```yaml
 repos:
   - repo: https://github.com/jangtrinh/design-os-vietnamese
-    rev: main   # ghim theo tag phát hành có lệnh vi-* khi tag đó được công bố
+    rev: v5.2.0
     hooks:
       - id: validate-copy
         args: [--domain, ux, --register, ux-microcopy]

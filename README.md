@@ -1,11 +1,11 @@
-# DESIGN:OS Vietnamese (`design-os-vietnamese`) — v5.1 Multi-Industry Suite
+# DESIGN:OS Vietnamese (`design-os-vietnamese`) — v5.2 Multi-Industry Suite
 
 **Sovereign Vietnamese (`vi-VN`) language, typography, UX design system, 7-tier pedagogy (Mầm non -> Tiến sĩ & GS/PGS), and 16-domain statutory compliance suite for AI coding agents.**
 
 Equip Claude Code, OpenAI Codex, Gemini CLI, and Google Antigravity with 16 production skills, 31 audience registers, 100+ deterministic AST/regex rules, 489 golden evaluation pairs, and 18 `UKMC.v1` cryptographically verified knowledge modules.
 
 <p align="center">
-  <img src="assets/design-os-vietnamese-architecture.svg" alt="DESIGN:OS Vietnamese v5.1 Multi-Industry Architecture and 16-Skill Matrix" width="840">
+  <img src="assets/design-os-vietnamese-architecture.svg" alt="DESIGN:OS Vietnamese v5.2 Multi-Industry Architecture and 16-Skill Matrix" width="840">
 </p>
 
 <p align="center">
@@ -92,7 +92,7 @@ Use the same checks as [pre-commit](https://pre-commit.com) hooks in your own re
 ```yaml
 repos:
   - repo: https://github.com/jangtrinh/design-os-vietnamese
-    rev: main   # pin a release tag that ships the vi-* commands once one is published
+    rev: v5.2.0
     hooks:
       - id: validate-copy
         args: [--domain, ux, --register, ux-microcopy]
