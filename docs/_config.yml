@@ -4,7 +4,7 @@
 # jekyll-seo-tag emits <title>, <meta name="description">, Open Graph and JSON-LD;
 # jekyll-sitemap emits sitemap.xml for Google Search Console.
 title: design-os-vietnamese
-description: 10 production skills, 24 audience registers, 90+ deterministic AST/regex rules, and 12 UKMC.v1 verified modules for Vietnamese software and regulated copy.
+description: 16 production skills, 31 audience registers, 131 deterministic AST/regex rules, and 18 UKMC.v1 verified modules for Vietnamese software and regulated copy.
 url: https://jangtrinh.github.io
 baseurl: /design-os-vietnamese
 lang: en
