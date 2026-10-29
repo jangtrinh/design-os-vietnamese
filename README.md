@@ -140,8 +140,8 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | :--- | :--- | :--- |
 | `NFC001` | `ERROR` | Detects decomposed Unicode `NFD` combining marks (`--fix` auto-normalizes to `NFC`) |
 | `ENC001` | `ERROR` | Detects UTF-8 Mojibake (`Ã¡`, `áº¡`, `Æ°`, `Ä‘`) and legacy VNI/TCVN3 corruption |
-| `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `như một...`, `thực hiện việc...`) |
-| `SYN001` | `WARN` | Flags syntactic translationese word order and passive `bị`/`được` misuse |
+| `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `làm ơn` + verb, verb + `của bạn` + noun, `tiến hành đăng nhập`) |
+| `SYN001` | `WARN` | Flags syntactic translationese word order (`như một..., tôi muốn`, `nó là quan trọng để`) and adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) |
 | `LAW001` | `ERROR` | Flags unsubstantiated superlatives (`số 1`, `tốt nhất`, `duy nhất`, `100%`) unless backed by `<!-- proof: ... -->` or negated |
 | `DIA001` | `ERROR` | Detects unaccented Vietnamese prose across 140+ multi-word phrases |
 | `TONE001` | `WARN` | Enforces document-wide consistency between `kiểu mới` (`hoà, thuỷ`) and `kiểu cũ` (`hòa, thủy`) (`--fix-tone new\|old`) |

@@ -544,6 +544,84 @@ SYNTACTIC_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
         "calque “lấy một hành động” (take an action)",
         "write “thực hiện hành động” or name the exact verb",
     ),
+    (
+        # “bị” marks an unwanted event; pairing it with a success marker or a
+        # benefit verb is the English passive carried over word by word.
+        # Compounds that end in “bị”, negation (with or without a hedge word) and
+        # clause breaks are screened by ADVERSITY_PASSIVE_BLOCKED_PREFIX_RE and the
+        # gap pattern below.
+        re.compile(
+            r"(?<!\w)bị\s+(?:"
+            r"(?:nâng\s+cấp|thăng\s+chức|khen\s+thưởng|trao\s+tặng|cộng\s+điểm)(?!\w)"
+            r"|(?:(?!(?:và|rồi|nhưng|nên|sau|khi|thì|để|mà|do|vì)(?!\w))\w+\s+){1,2}thành\s+công(?!\w)"
+            r")",
+            re.IGNORECASE,
+        ),
+        "adversity passive “bị” paired with a positive outcome (bị hủy thành công, bị nâng cấp)",
+        "use “được …” or an active verb (“đã hủy”, “đã nâng cấp”); keep “bị” for unwanted events",
+    ),
+)
+ADVERSITY_PASSIVE_RE = SYNTACTIC_CALQUES[-1][0]
+# Text right before a “bị” match that means it is not the passive marker:
+# compounds (thiết bị, chuẩn bị, trang bị, dự bị) or a negated passive.
+ADVERSITY_PASSIVE_BLOCKED_PREFIX_RE = re.compile(
+    r"(?<!\w)(?:thiết|chuẩn|trang|dự|hề|(?:không|chưa|chẳng|chả)(?:\s+(?:hề|từng|có))?)\s+$",
+    re.IGNORECASE,
+)
+
+# Regex-driven CAL001 calques that the literal tables cannot enumerate: the
+# English “Please …” and possessive “your …” carried over word by word. A match
+# that overlaps a literal table hit is dropped so each span yields one finding.
+_LAM_ON_VERBS = (
+    r"đăng\s+nhập|đăng\s+ký|xác\s+nhận|xác\s+minh|kiểm\s+tra|cập\s+nhật|quay\s+lại|"
+    r"đồng\s+ý|làm\s+mới|tải\s+lại|liên\s+hệ|cung\s+cấp|kích\s+hoạt|cài\s+đặt|"
+    r"nhập|chọn|nhấn|nhấp|bấm|điền|đợi|chờ|thử|tải|gửi|xem|đọc|lưu|thêm|xóa|tạo|mở|đóng"
+)
+_CUA_BAN_VERBS = (
+    r"tải\s+lên|tải\s+xuống|đặt\s+lại|khôi\s+phục|"
+    r"nhập|chọn|nhấn|nhấp|bấm|điền|xem|đổi|sửa|xóa|thêm|lưu|gửi|mở|tạo"
+)
+# Words that may legitimately follow “của bạn” (clause continuation, compounds
+# such as “bạn bè”, “bạn đọc”) and therefore never mark an inverted possessive.
+_CUA_BAN_NOT_NOUN = (
+    r"bè|đọc|hàng|đã|sẽ|đang|được|bị|là|và|hoặc|có|không|để|cho|với|tại|trong|ở|"
+    r"thì|rất|đều|cũng|nhé|nha|ạ"
+)
+# “verb + của bạn + noun” is only a calque when the verb is an imperative: at the start
+# of a line or clause, right after vui lòng / hãy / xin / làm ơn, or after a modal
+# (cần, nên, phải, có thể) that is itself clause-initial or directly follows “bạn”.
+# A modal after a noun opens a relative clause (“thông tin cần nhập của bạn …”) and is
+# not an anchor. Everywhere else the verb is the tail of a noun (thu nhập, lựa chọn, tiền
+# gửi, lượt xem, thay đổi, tệp tải lên, mã khôi phục, dữ liệu nhập) and
+# “noun + của bạn” is correct.
+_CLAUSE_START = r"(?:^[\s\-–—•*#>\d.)\"“‘'(\[]*|[.:;!?…,]\s+)"
+_MODAL = r"(?:cần|nên|phải|có\s+thể)\s+"
+IMPERATIVE_POSITION_PREFIX_RE = re.compile(
+    rf"(?:{_CLAUSE_START}"
+    rf"|(?<!\w)(?:vui\s+lòng|hãy|xin|làm\s+ơn)\s+"
+    rf"|{_CLAUSE_START}{_MODAL}"
+    rf"|(?<!\w)bạn\s+{_MODAL})$",
+    re.IGNORECASE,
+)
+# (pattern, message, hint, required prefix or None). The optional ``core`` group marks the
+# part of a match that a table hit may also cover (same defect, reported once).
+REGEX_CALQUES: Tuple[Tuple[re.Pattern, str, str, Optional[re.Pattern]], ...] = (
+    (
+        re.compile(rf"(?<!\w)làm\s+ơn\s+(?:{_LAM_ON_VERBS})(?!\w)", re.IGNORECASE),
+        "calque “Làm ơn + verb” (machine translation of “Please …”)",
+        "write “Vui lòng …” or a direct imperative",
+        None,
+    ),
+    (
+        re.compile(
+            rf"(?<!\w)(?P<v>{_CUA_BAN_VERBS})\s+(?P<core>của\s+bạn\s+"
+            rf"(?!(?:{_CUA_BAN_NOT_NOUN})(?!\w))\w+)",
+            re.IGNORECASE,
+        ),
+        "calque “verb + của bạn + noun” (English possessive order “your …”)",
+        r"put “của bạn” after the whole noun phrase: “\g<v> <noun phrase> của bạn”",
+        IMPERATIVE_POSITION_PREFIX_RE,
+    ),
 )
 
 # Case-aware Open-Syllable Tone Placement (oa / oe / uy)
@@ -873,9 +951,35 @@ class Validator:
                     hint += " (glossary.md)" if hint else "see glossary.md"
                 emit("CAL001", severity, i, start + 1, matched, f"calque “{matched}”", hint)
 
+            # 1b. Pattern calques (“Làm ơn + verb”, “verb + của bạn + noun”). A match nested
+            # with a reported span, or a table hit that starts inside the match's ``core``
+            # (the pattern keeps one noun word, the table hit holds the full noun), is the
+            # same defect and is reported once. An unrelated table hit that merely starts
+            # inside the match (“Làm ơn nhấn” + “nhấn vào đây để xem chi tiết”) is a second one.
+            reported_spans = [(s, e) for s, e, *_ in hits]
+            for cal_re, cal_msg, cal_hint, cal_prefix in REGEX_CALQUES:
+                for m in cal_re.finditer(line):
+                    if cal_prefix is not None and not cal_prefix.search(line[:m.start()]):
+                        continue
+                    core = (m.start("core"), m.end("core")) if "core" in cal_re.groupindex else None
+                    if any(
+                        (s <= m.start() and m.end() <= e)
+                        or (m.start() <= s and e <= m.end())
+                        or (core is not None and core[0] <= s < core[1])
+                        for s, e in reported_spans
+                    ):
+                        continue
+                    reported_spans.append((m.start(), m.end()))
+                    emit("CAL001", ERROR, i, m.start() + 1, m.group(0),
+                         f"{cal_msg}: “{m.group(0)}”", m.expand(cal_hint))
+
             # 2. Syntactic translationese
             for syn_re, msg, hint in SYNTACTIC_CALQUES:
                 for m in syn_re.finditer(line):
+                    if syn_re is ADVERSITY_PASSIVE_RE and ADVERSITY_PASSIVE_BLOCKED_PREFIX_RE.search(
+                        line[max(0, m.start() - 30):m.start()]
+                    ):
+                        continue
                     emit("SYN001", WARN, i, m.start() + 1, m.group(0), msg, hint)
 
             # 3. Advertising superlatives with multi-line proof window, negation & ordinal guard
