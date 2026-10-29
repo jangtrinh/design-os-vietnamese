@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (854dbd300f183817) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (23285bd0e82a41c0) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -545,6 +545,56 @@ SYNTACTIC_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
         "calque “lấy một hành động” (take an action)",
         "write “thực hiện hành động” or name the exact verb",
     ),
+    (
+        # “bị” marks an unwanted event; pairing it with a success marker or a
+        # benefit verb is the English passive carried over word by word.
+        # Negation (“không/chưa/chẳng bị”) and clause breaks (punctuation or a
+        # connector inside the gap) are left alone.
+        re.compile(
+            r"(?<!\w)(?<!không\s)(?<!chưa\s)(?<!chẳng\s)bị\s+(?:"
+            r"(?:nâng\s+cấp|thăng\s+chức|khen\s+thưởng|trao\s+tặng|cộng\s+điểm)(?!\w)"
+            r"|(?:(?!(?:và|rồi|nhưng|nên|sau|khi|thì|để|mà|do|vì)(?!\w))\w+\s+){1,2}thành\s+công(?!\w)"
+            r")",
+            re.IGNORECASE,
+        ),
+        "adversity passive “bị” paired with a positive outcome (bị hủy thành công, bị nâng cấp)",
+        "use “được …” or an active verb (“đã hủy”, “đã nâng cấp”); keep “bị” for unwanted events",
+    ),
+)
+
+# Regex-driven CAL001 calques that the literal tables cannot enumerate: the
+# English “Please …” and possessive “your …” carried over word by word. A match
+# that overlaps a literal table hit is dropped so each span yields one finding.
+_LAM_ON_VERBS = (
+    r"đăng\s+nhập|đăng\s+ký|xác\s+nhận|xác\s+minh|kiểm\s+tra|cập\s+nhật|quay\s+lại|"
+    r"đồng\s+ý|làm\s+mới|tải\s+lại|liên\s+hệ|cung\s+cấp|kích\s+hoạt|cài\s+đặt|"
+    r"nhập|chọn|nhấn|nhấp|bấm|điền|đợi|chờ|thử|tải|gửi|xem|đọc|lưu|thêm|xóa|tạo|mở|đóng"
+)
+_CUA_BAN_VERBS = (
+    r"tải\s+lên|tải\s+xuống|đặt\s+lại|khôi\s+phục|"
+    r"nhập|chọn|nhấn|nhấp|bấm|điền|xem|đổi|sửa|xóa|thêm|lưu|gửi|mở|tạo"
+)
+# Words that may legitimately follow “của bạn” (clause continuation, compounds
+# such as “bạn bè”, “bạn đọc”) and therefore never mark an inverted possessive.
+_CUA_BAN_NOT_NOUN = (
+    r"bè|đọc|hàng|đã|sẽ|đang|được|bị|là|và|hoặc|có|không|để|cho|với|tại|trong|ở|"
+    r"thì|rất|đều|cũng|nhé|nha|ạ"
+)
+REGEX_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
+    (
+        re.compile(rf"(?<!\w)làm\s+ơn\s+(?:{_LAM_ON_VERBS})(?!\w)", re.IGNORECASE),
+        "calque “Làm ơn + verb” (machine translation of “Please …”)",
+        "write “Vui lòng …” or a direct imperative",
+    ),
+    (
+        re.compile(
+            rf"(?<!\w)(?P<v>{_CUA_BAN_VERBS})\s+của\s+bạn\s+"
+            rf"(?!(?:{_CUA_BAN_NOT_NOUN})(?!\w))(?P<n>\w+)",
+            re.IGNORECASE,
+        ),
+        "calque “verb + của bạn + noun” (English possessive order “your …”)",
+        r"put the possessive after the noun: “\g<v> \g<n> của bạn”",
+    ),
 )
 
 # Case-aware Open-Syllable Tone Placement (oa / oe / uy)
@@ -873,6 +923,23 @@ class Validator:
                 if has_glossary:
                     hint += " (glossary.md)" if hint else "see glossary.md"
                 emit("CAL001", severity, i, start + 1, matched, f"calque “{matched}”", hint)
+
+            # 1b. Pattern calques (“Làm ơn + verb”, “verb + của bạn + noun”). A match inside a
+            # reported span, or one that swallows the start of a reported span (the pattern
+            # keeps only the first noun word, the table hit holds the full noun), is the same
+            # defect and is reported once. A match that merely begins inside an earlier span
+            # (“Làm ơn nhập” + “nhập của bạn email”) is a second defect.
+            reported_spans = [(s, e) for s, e, *_ in hits]
+            for cal_re, cal_msg, cal_hint in REGEX_CALQUES:
+                for m in cal_re.finditer(line):
+                    if any(
+                        (s <= m.start() and m.end() <= e) or (m.start() <= s < m.end())
+                        for s, e in reported_spans
+                    ):
+                        continue
+                    reported_spans.append((m.start(), m.end()))
+                    emit("CAL001", ERROR, i, m.start() + 1, m.group(0),
+                         f"{cal_msg}: “{m.group(0)}”", m.expand(cal_hint))
 
             # 2. Syntactic translationese
             for syn_re, msg, hint in SYNTACTIC_CALQUES:
