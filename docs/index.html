@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DESIGN:OS Vietnamese · Skill tiếng Việt cho AI agent</title>
+  <meta name="description" content="Sáu skill và một trình kiểm tra viết bằng Python, không cần cài thêm gói, giúp Claude Code, Codex và mọi agent đọc SKILL.md viết tiếng Việt đúng ngữ pháp, đúng định dạng và đúng Luật Quảng cáo.">
+  <link rel="canonical" href="https://jangtrinh.github.io/design-os-vietnamese/">
+  <meta name="theme-color" content="#131209">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="DESIGN:OS Vietnamese · Tiếng Việt chuẩn, không giọng dịch">
+  <meta property="og:description" content="Sáu skill tiếng Việt cho AI agent, kèm validate_copy.py bắt calque, từ so sánh tuyệt đối, tiền và ngày sai định dạng.">
+  <meta property="og:url" content="https://jangtrinh.github.io/design-os-vietnamese/">
+  <meta property="og:image" content="https://jangtrinh.github.io/design-os-vietnamese/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/sections.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"DESIGN:OS Vietnamese","codeRepository":"https://github.com/jangtrinh/design-os-vietnamese","programmingLanguage":"Python","license":"https://opensource.org/licenses/MIT","inLanguage":"vi","author":{"@type":"Person","name":"Jang Trinh"},"description":"Sáu skill tiếng Việt cho AI agent và trình kiểm tra validate_copy.py."}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Tôi có cần Claude Code không?","acceptedAnswer":{"@type":"Answer","text":"Không bắt buộc. Claude Code tự nạp skill trong ~/.claude/skills. Với Codex, Cursor hay Windsurf, bạn dán nội dung SKILL.md vào file quy tắc của dự án như AGENTS.md hoặc .cursor/rules."}},
+    {"@type":"Question","name":"validate_copy.py cần cài những gì?","acceptedAnswer":{"@type":"Answer","text":"Python 3.9 trở lên. Tất cả script chỉ dùng thư viện chuẩn, không cần pip."}},
+    {"@type":"Question","name":"Validator có bắt được mọi lỗi dịch máy không?","acceptedAnswer":{"@type":"Answer","text":"Không. Validator so khớp theo mẫu nên chỉ bắt được các lỗi đã mô tả. Skill giúp agent tránh lỗi ngay lúc viết, còn người đọc lại vẫn là bước cuối."}},
+    {"@type":"Question","name":"Dùng trong CI được không?","acceptedAnswer":{"@type":"Answer","text":"Được. Thêm --strict để lệnh trả mã khác 0 khi còn cảnh báo, và --json để đưa kết quả vào báo cáo của pipeline."}},
+    {"@type":"Question","name":"Nội dung pháp lý có cập nhật không?","acceptedAnswer":{"@type":"Answer","text":"Bộ tri thức đã gồm Luật 75/2025/QH15 và Thông tư 99/2025 của Bộ Tài chính có hiệu lực từ 01/01/2026, mỗi điểm đều có trích dẫn nguồn. Đây là công cụ hỗ trợ viết, không phải tư vấn pháp lý."}},
+    {"@type":"Question","name":"Vì sao chỗ xưng “bạn”, chỗ xưng “Quý khách”?","acceptedAnswer":{"@type":"Answer","text":"Tiếng Việt không có một chữ “you” trung tính. Skill dùng ma trận 18 ngữ vực: SaaS gọi “bạn”, bất động sản cao cấp gọi “Quý khách”, B2B gọi “Quý doanh nghiệp”. Trộn hai ngữ vực trong một trang sẽ bị PRO001 bắt."}},
+    {"@type":"Question","name":"Giấy phép là gì?","acceptedAnswer":{"@type":"Answer","text":"MIT. Bạn dùng, sửa và đưa vào sản phẩm thương mại được."}}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Chuyển đến nội dung chính</a>
+
+  <nav class="nav" aria-label="Điều hướng chính">
+    <a class="brand" href="#top">DESIGN:OS <span>Vietnamese</span></a>
+    <ul class="nav-links">
+      <li><a href="#van-de">Vấn đề</a></li>
+      <li><a href="#bo-skill">Bộ skill</a></li>
+      <li><a href="#cach-dung">Cách dùng</a></li>
+      <li><a href="#bang-chung">Bằng chứng</a></li>
+      <li><a href="#hoi-dap">Hỏi đáp</a></li>
+      <li><a href="#cai-dat">Cài đặt</a></li>
+    </ul>
+    <a class="btn btn-ghost btn-nav" href="https://github.com/jangtrinh/design-os-vietnamese"><span class="ph ph-github-logo" aria-hidden="true"></span>GitHub</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Mở menu"><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#van-de" style="--i:0">Vấn đề</a>
+    <a href="#bo-skill" style="--i:1">Bộ skill</a>
+    <a href="#cach-dung" style="--i:2">Cách dùng</a>
+    <a href="#bang-chung" style="--i:3">Bằng chứng</a>
+    <a href="#hoi-dap" style="--i:4">Hỏi đáp</a>
+    <a href="#cai-dat" style="--i:5">Cài đặt</a>
+    <a href="https://github.com/jangtrinh/design-os-vietnamese" style="--i:6">GitHub</a>
+  </div>
+
+  <main id="main">
+    <header class="hero wrap" id="top">
+      <div class="hero-copy">
+        <h1>Tiếng Việt chuẩn,<br> không <span class="redpen">giọng dịch</span></h1>
+        <p class="lede">Sáu skill và một trình kiểm tra giúp agent viết đúng từ bản nháp đầu.</p>
+        <a class="btn btn-primary" href="#cai-dat">Cài 6 skill miễn phí<span class="ph ph-arrow-right" aria-hidden="true"></span></a>
+        <p class="proof-line">
+          <span><span class="ph ph-check-circle" aria-hidden="true"></span>Giấy phép MIT</span>
+          <span><span class="ph ph-check-circle" aria-hidden="true"></span>189 cặp viết sai và viết đúng để đánh giá</span>
+          <span><span class="ph ph-check-circle" aria-hidden="true"></span>Không cần cài gói pip</span>
+        </p>
+      </div>
+
+      <figure class="demo" data-demo aria-label="Kết quả validate_copy.py trên một bản nháp landing page">
+        <div class="demo-bar">
+          <span class="demo-file">draft.md · đoạn hero do AI viết</span>
+          <div class="seg" role="group" aria-label="Chọn phiên bản">
+            <button type="button" data-show="draft" aria-pressed="true">Bản nháp AI</button>
+            <button type="button" data-show="fixed" aria-pressed="false">Sau khi sửa</button>
+          </div>
+        </div>
+        <div class="demo-body">
+          <div class="sheet">
+            <ol data-state="draft">
+              <li><div>Nền tảng <span class="mark err">được thiết kế bởi</span> đội ngũ kỹ sư Việt Nam.<div class="chips"><span class="chip err">CAL001</span><span class="chip warn">LND001</span></div></div></li>
+              <li><div>Trợ lý AI <span class="mark warn">tốt nhất</span> thị trường, chỉ <span class="mark warn">299000đ</span>/tháng.<div class="chips"><span class="chip warn">LAW001</span><span class="chip warn">NUM002</span></div></div></li>
+              <li><div><span class="mark warn">Nó là quan trọng để</span> bạn lưu lại mã ưu đãi.<div class="chips"><span class="chip warn">SYN001</span></div></div></li>
+              <li><div>Ưu đãi kết thúc vào <span class="mark err">12/25/2026</span>.<div class="chips"><span class="chip err">DATE001</span></div></div></li>
+            </ol>
+            <ol data-state="fixed" hidden>
+              <li><div>Nền tảng do đội ngũ kỹ sư Việt Nam thiết kế.</div></li>
+              <li><div>Trợ lý AI cho đội vận hành, chỉ 299.000 ₫/tháng.</div></li>
+              <li><div>Bạn nhớ lưu lại mã ưu đãi.</div></li>
+              <li><div>Ưu đãi kết thúc vào 25/12/2026.</div></li>
+            </ol>
+          </div>
+          <div class="term" aria-live="polite">
+            <p class="cmd">$ python3 validate_copy.py draft.md \
+    --register saas --doctype hero</p>
+            <div data-state="draft">
+              <p><span class="e">1:10  error CAL001</span>  calque “được thiết kế bởi”</p>
+              <p><span class="w">1:10  warn  LND001</span>  passive English construction</p>
+              <p><span class="w">2:11  warn  LAW001</span>  regulated superlative “tốt nhất”</p>
+              <p><span class="w">2:36  warn  NUM002</span>  ungrouped currency amount “299000đ”</p>
+              <p><span class="w">3:1   warn  SYN001</span>  dummy subject calque “Nó là quan trọng để”</p>
+              <p><span class="e">4:21  error DATE001</span>  date “12/25/2026” looks like MM/dd/yyyy</p>
+              <p class="sum">1 file(s) checked · 2 error(s) · 4 warning(s)</p>
+            </div>
+            <div data-state="fixed" hidden>
+              <p class="sum">1 file(s) checked · 0 error(s) · 0 warning(s)</p>
+              <p class="g">clean</p>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </header>
+
+    <section class="section wrap" id="van-de" aria-labelledby="van-de-h">
+      <div class="section-head section-head-wide" data-reveal>
+        <h2 class="h2 h2-xl" id="van-de-h">Năm lỗi AI lặp lại mỗi lần viết tiếng Việt</h2>
+        <p class="lede">Đọc lướt thì ổn, nhưng người Việt đọc là biết máy viết. Vài lỗi còn vi phạm luật hoặc làm hỏng dữ liệu.</p>
+      </div>
+      <div class="diff">
+        <article class="diff-row" data-reveal>
+          <div><h3>Văn phong dịch máy</h3><div class="chips"><span class="chip">CAL001</span> <span class="chip">SYN001</span> <span class="chip">LND001</span></div><p class="why">Câu bị động và chủ ngữ giả chép từ tiếng Anh, đúng ngữ pháp nhưng sai giọng.</p></div>
+          <div class="say bad"><small>AI viết</small><p>Nền tảng được thiết kế bởi đội ngũ kỹ sư.</p></div>
+          <div class="say"><small>Nên viết</small><p>Nền tảng do đội ngũ kỹ sư thiết kế.</p></div>
+        </article>
+        <article class="diff-row" data-reveal>
+          <div><h3>Từ so sánh tuyệt đối</h3><div class="chips"><span class="chip">LAW001</span></div><p class="why">Luật Quảng cáo Điều 8 khoản 11 cấm “tốt nhất”, “số 1”, “duy nhất” khi không có tài liệu chứng minh.</p></div>
+          <div class="say bad"><small>AI viết</small><p>Giải pháp tốt nhất thị trường.</p></div>
+          <div class="say"><small>Nên viết</small><p>Đối soát 3 kênh thanh toán trên một màn hình.</p></div>
+        </article>
+        <article class="diff-row" data-reveal>
+          <div><h3>Tiền và ngày kiểu Mỹ</h3><div class="chips"><span class="chip">NUM002</span> <span class="chip">DATE001</span></div><p class="why">Người Việt đọc 12/25 là tháng 25. Số tiền cần dấu chấm phân cách hàng nghìn.</p></div>
+          <div class="say bad"><small>AI viết</small><p>299000đ, hết hạn 12/25/2026</p></div>
+          <div class="say"><small>Nên viết</small><p>299.000 ₫, hết hạn 25/12/2026</p></div>
+        </article>
+        <article class="diff-row" data-reveal>
+          <div><h3>Dấu chồng tầng bị cắt</h3><div class="chips"><span class="chip">check_font_coverage.py</span></div><p class="why">Dấu mũ cộng dấu thanh cao hơn chữ hoa Latin từ 25% đến 38%. Line height kiểu tiếng Anh cắt mất dấu.</p></div>
+          <div class="say bad"><small>line-height 1, overflow hidden</small><b class="glyph clip">ỄỘỮ</b></div>
+          <div class="say"><small>line-height 1.2</small><b class="glyph safe">ỄỘỮ</b></div>
+        </article>
+        <article class="diff-row" data-reveal>
+          <div><h3>Unicode tổ hợp và lỗi mã hóa</h3><div class="chips"><span class="chip">NFC001</span> <span class="chip">ENC001</span></div><p class="why">Văn bản dán từ macOS, Google Docs hay PDF thường ở dạng NFD hoặc bị mã hóa hai lần. Tìm kiếm và so khớp đều hỏng.</p></div>
+          <div class="say bad"><small>AI viết</small><p lang="und">Thanh toÃ¡n thÃ nh cÃ´ng</p></div>
+          <div class="say"><small>Nên viết</small><p>Thanh toán thành công</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tagline wrap" aria-label="Tuyên bố" data-nav-for="van-de">
+      <p data-tagline>Tiếng Việt không phải là bản&nbsp;dịch. Agent của bạn cũng đừng viết như một bản&nbsp;dịch.</p>
+    </section>
+
+    <section class="section wrap" id="bo-skill" aria-labelledby="bo-skill-h">
+      <div class="split">
+        <div class="section-head">
+          <h2 class="h2" id="bo-skill-h">Sáu skill, mỗi skill một lĩnh vực</h2>
+          <p class="lede">Mỗi skill có đủ SKILL.md, tài liệu tham chiếu và bản validate_copy.py riêng. Ngoài quy tắc riêng, skill nào cũng chạy 17 quy tắc lõi: Unicode, mã hóa, calque, luật quảng cáo, số, ngày, ICU và xưng hô.</p>
+        </div>
+        <ul class="skill-list">
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vn-design-system-ux/SKILL.md">vn-design-system-ux</a></h3><p><b>Giao diện đọc như người Việt viết, không vỡ dấu.</b> Microcopy cho mọi trạng thái giao diện, token chữ cho Be Vietnam Pro, an toàn với bộ gõ Telex và VNI, đối soát en.json với vi.json.</p><div class="chips"><span class="chip">UX001…UX007</span><span class="chip">11 tài liệu</span></div></li>
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-landing-copy/SKILL.md">vietnamese-landing-copy</a></h3><p><b>Landing page đúng giọng, đúng luật ngay từ bản nháp đầu.</b> Dành cho SaaS và thương mại điện tử: công thức hero và CTA, bảng giá VND, form thu thập dữ liệu theo Nghị định 13/2023, footer theo Nghị định 52/2013.</p><div class="chips"><span class="chip">LND001…LND004</span><span class="chip">12 tài liệu</span></div></li>
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-tech-writing/SKILL.md">vietnamese-tech-writing</a></h3><p><b>Tài liệu kỹ thuật mà lập trình viên Việt đọc không vấp.</b> Tài liệu cho lập trình viên, API reference, ADR, runbook, postmortem và changelog, kèm quy tắc trộn thuật ngữ Anh và Việt.</p><div class="chips"><span class="chip">ENG001 ENG003 ENG007 ENG008</span><span class="chip">13 tài liệu</span></div></li>
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-business-comms/SKILL.md">vietnamese-business-comms</a></h3><p><b>Văn bản công việc gửi đi đúng chuẩn ngay lần đầu.</b> Công văn, tờ trình, quyết định và biên bản đúng thể thức Nghị định 30/2020, email B2B và tin nhắn Zalo ZNS.</p><div class="chips"><span class="chip">10 quy tắc ADMIN, MKT, SALES, SPAM, ZNS</span><span class="chip">13 tài liệu</span></div></li>
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-finance-copy/SKILL.md">vietnamese-finance-copy</a></h3><p><b>Nội dung tài chính dùng đúng thuật ngữ và đúng thông tư hiện hành.</b> Ngân hàng số, Napas 247 và VietQR, chứng khoán, bảo hiểm, kế toán theo Thông tư 99/2025 thay cho Thông tư 200/2014.</p><div class="chips"><span class="chip">7 quy tắc FIN</span><span class="chip">13 tài liệu</span></div></li>
+          <li data-reveal><h3><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/skills/vietnamese-education-copy/SKILL.md">vietnamese-education-copy</a></h3><p><b>Nội dung giáo dục ghi đúng mức đánh giá và đúng khung trình độ.</b> EdTech và LMS, học bạ số theo Thông tư 22/2021 với bốn mức Tốt, Khá, Đạt, Chưa đạt, đề cương đại học và khung VSTEP 6 bậc.</p><div class="chips"><span class="chip">8 quy tắc EDU</span><span class="chip">12 tài liệu</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section wrap" id="cach-dung" aria-labelledby="cach-dung-h">
+      <div class="section-head" data-reveal>
+        <h2 class="h2" id="cach-dung-h">Ba bước, không đổi quy trình đang có</h2>
+        <p class="lede">Skill định hướng agent lúc viết. Validator chặn lỗi lúc kiểm tra. Hai lớp dùng chung một bộ quy tắc.</p>
+      </div>
+      <div class="steps" data-reveal>
+        <div class="step"><span class="n">Bước 1</span><h3>Cài skill</h3><p>Chép thư mục skills vào nơi agent đọc quy tắc.</p><pre><code>cp -r design-os-vietnamese/skills/* ~/.claude/skills/</code></pre></div>
+        <div class="step"><span class="n">Bước 2</span><h3>Agent tự chọn skill</h3><p>Khi bạn nhờ viết landing page, công văn hay thông báo lỗi bằng tiếng Việt, agent đọc mô tả và nạp đúng skill. Bộ evals có 120 câu kiểm tra agent có chọn đúng skill không.</p></div>
+        <div class="step"><span class="n">Bước 3</span><h3>Kiểm tra trước khi phát hành</h3><p>Chạy trong CI. <code>--strict</code> trả mã lỗi khi còn cảnh báo, <code>--json</code> cho máy đọc.</p><pre><code>python3 validate_copy.py landing.md --register saas --strict</code></pre></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="bang-chung" aria-labelledby="bang-chung-h">
+      <div class="ledger" data-reveal>
+        <div class="ledger-head">
+          <h2 class="h2" id="bang-chung-h">Mọi con số ở đây đều kiểm chứng lại được</h2>
+          <p class="lede">Không có logo khách hàng hay lời khen dựng sẵn. Chỉ có lệnh và kết quả, chạy trên repo ngày 29/10/2026.</p>
+        </div>
+        <div class="ledger-row"><code>python3 -m unittest discover -s tests</code><span class="res">19 test · OK, 2 bỏ qua</span></div>
+        <div class="ledger-row"><code>cat evals/*/pairs.jsonl | wc -l</code><span class="res">189 cặp sai và đúng</span></div>
+        <div class="ledger-row"><code>validate_copy.py --list-rules</code><span class="res">17 lõi + 4 đến 10 riêng</span></div>
+        <div class="ledger-row"><code>grep -o "ease:source" knowledge/*.md | wc -l</code><span class="res">38 trích dẫn, 8 học phần</span><p class="note">Mỗi trích dẫn ghim nguồn bằng SHA-256 và được đối chiếu nguyên văn với hồ sơ nguồn trong knowledge/_evidence.</p></div>
+        <div class="ledger-row"><code>check_font_coverage.py fonts.css</code><span class="res">clean</span><p class="note">Font Manrope và Geist Mono của chính trang này, kiểm bằng công cụ trong repo.</p></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="hoi-dap" aria-labelledby="hoi-dap-h">
+      <div class="split">
+        <div class="section-head">
+          <h2 class="h2" id="hoi-dap-h">Câu hỏi thường gặp</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Tôi có cần Claude Code không?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Không bắt buộc. Claude Code tự nạp skill trong ~/.claude/skills. Với Codex, Cursor hay Windsurf, bạn dán nội dung SKILL.md vào file quy tắc của dự án như AGENTS.md hoặc .cursor/rules.</p></details>
+          <details><summary>validate_copy.py cần cài những gì?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Python 3.9 trở lên. Tất cả script chỉ dùng thư viện chuẩn, không cần pip.</p></details>
+          <details><summary>Validator có bắt được mọi lỗi dịch máy không?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Không. Validator so khớp theo mẫu nên chỉ bắt được các lỗi đã mô tả. Skill giúp agent tránh lỗi ngay lúc viết, còn người đọc lại vẫn là bước cuối.</p></details>
+          <details><summary>Dùng trong CI được không?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Được. Thêm --strict để lệnh trả mã khác 0 khi còn cảnh báo, và --json để đưa kết quả vào báo cáo của pipeline.</p></details>
+          <details><summary>Nội dung pháp lý có cập nhật không?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Bộ tri thức đã gồm Luật 75/2025/QH15 và Thông tư 99/2025 của Bộ Tài chính có hiệu lực từ 01/01/2026, mỗi điểm đều có trích dẫn nguồn. Đây là công cụ hỗ trợ viết, không phải tư vấn pháp lý.</p></details>
+          <details><summary>Vì sao chỗ xưng “bạn”, chỗ xưng “Quý khách”?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>Tiếng Việt không có một chữ “you” trung tính. Skill dùng ma trận 18 ngữ vực: SaaS gọi “bạn”, bất động sản cao cấp gọi “Quý khách”, B2B gọi “Quý doanh nghiệp”. Trộn hai ngữ vực trong một trang sẽ bị PRO001 bắt.</p></details>
+          <details><summary>Giấy phép là gì?<span class="ph ph-plus" aria-hidden="true"></span></summary><p>MIT. Bạn dùng, sửa và đưa vào sản phẩm thương mại được.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta wrap" id="cai-dat" aria-labelledby="cai-dat-h">
+      <div class="section-head" data-reveal>
+        <h2 class="h2" id="cai-dat-h">Cài 6 skill miễn phí</h2>
+        <p class="lede">Một lệnh cài đủ sáu skill. Mở lại Claude Code là agent dùng được ngay.</p>
+      </div>
+      <div class="install">
+        <pre><code id="install-cmd">mkdir -p ~/.claude/skills && git clone --depth 1 https://github.com/jangtrinh/design-os-vietnamese.git && cp -r design-os-vietnamese/skills/* ~/.claude/skills/</code></pre>
+        <button class="btn btn-primary" type="button" data-copy="install-cmd" data-status="copy-status"><span class="ph ph-copy" aria-hidden="true"></span><span data-label>Chép lệnh cài đặt</span></button>
+      </div>
+      <p class="copy-status" id="copy-status" role="status"></p>
+      <div class="cta-links">
+        <a class="btn btn-ghost" href="https://github.com/jangtrinh/design-os-vietnamese"><span class="ph ph-github-logo" aria-hidden="true"></span>Xem mã nguồn trên GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/README.vi.md">Đọc README tiếng Việt<span class="ph ph-arrow-up-right" aria-hidden="true"></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2026 Jang Trinh / DESIGN:OS. Trang này không dùng cookie hay công cụ theo dõi.</p>
+      <ul>
+        <li><a href="privacy.html">Quyền riêng tư</a></li>
+        <li><a href="https://github.com/jangtrinh/design-os-vietnamese/blob/main/LICENSE">Điều khoản sử dụng</a></li>
+        <li><a href="https://github.com/jangtrinh/design-os-vietnamese">GitHub</a></li>
+        <li><a href="https://github.com/jangtrinh/design-os-vietnamese/issues">Báo lỗi</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
