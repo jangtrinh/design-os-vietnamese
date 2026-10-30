@@ -23,6 +23,17 @@
 | đã được lưu thành công | Đã lưu | Rút gọn thông báo toast | error |
 | đã được xóa thành công | Đã xóa | Rút gọn thông báo toast | error |
 | nhấn vào đây để xem chi tiết | Xem chi tiết | Tránh anti-pattern liên kết click here | error |
+| viết ra giấy | ghi lại thành file / ghi thành luật | Calque “write it on paper” cho việc ghi quy tắc; nói rõ ghi vào đâu | warn |
+| nằm trên đường đi | gắn vào quy trình / gắn vào bước … | Calque “sits on the path”; nói bước hoặc quy trình cụ thể | error |
+| đặt lên đường đi | gắn vào quy trình / gắn vào bước … | Calque “place on the path”; nói bước hoặc quy trình cụ thể | error |
+| giết process | kill process | Giữ nguyên thuật ngữ kỹ thuật “kill process” | error |
+| giết tiến trình | kill process / dừng tiến trình | Giữ nguyên thuật ngữ kỹ thuật “kill process” | error |
+| lần thử mù | thử mò | Calque “blind attempt” | error |
+| khớp với danh tính | đúng chất | Calque “match the identity” | error |
+| đổi lại vậy | đánh đổi này | Calque “in return, so”; nói rõ cái được và cái mất | warn |
+| onboard được lên | mang sang / chuyển sang | Calque “get onboarded onto” | warn |
+| onboard vào | mang sang / chuyển sang | Calque “onboard into” | warn |
+| được giấu khỏi | phải giấu, … không được thấy | Calque “is hidden from”; dùng chủ động | warn |
 
 <!-- machine-readable: superlatives -->
 | Regex Pattern | Mô tả | Ghi chú pháp lý / Căn cứ |
