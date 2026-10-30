@@ -30,7 +30,6 @@
 | giết tiến trình | kill process / dừng tiến trình | Giữ nguyên thuật ngữ kỹ thuật “kill process” | error |
 | lần thử mù | thử mò | Calque “blind attempt” | error |
 | khớp với danh tính | đúng chất | Calque “match the identity” | error |
-| đổi lại vậy | đánh đổi này | Calque “in return, so”; nói rõ cái được và cái mất | warn |
 | onboard được lên | mang sang / chuyển sang | Calque “get onboarded onto” | warn |
 | onboard vào | mang sang / chuyển sang | Calque “onboard into” | warn |
 | được giấu khỏi | phải giấu, … không được thấy | Calque “is hidden from”; dùng chủ động | warn |

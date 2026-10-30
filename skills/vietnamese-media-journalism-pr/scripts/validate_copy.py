@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (d0f46d066571ce27) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (8bdf3ba2edafb8ba) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -716,6 +716,13 @@ CONTEXT_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
         ),
         "calque “sống cùng bài toán” (English “live with the problem”)",
         "write “gặp hằng ngày” or “xử lý hằng ngày”",
+    ),
+    (
+        # Only when it opens a sentence (“Đổi lại vậy mình đỡ tốn thời gian”, English “in return, so …”).
+        # Mid-sentence after a lead-in (“Với mình, đổi lại vậy vẫn đáng.”) is natural Vietnamese.
+        re.compile(r"(?:^\s*|(?<=[.!?;:…]\s))đổi\s+lại\s+vậy(?!\w)", re.IGNORECASE),
+        "calque “đổi lại vậy” opening a sentence (English “in return, so …”)",
+        "write “đánh đổi này” and say what is gained and what is lost",
     ),
     (
         re.compile(

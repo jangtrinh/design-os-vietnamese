@@ -717,6 +717,13 @@ CONTEXT_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
         "write “gặp hằng ngày” or “xử lý hằng ngày”",
     ),
     (
+        # Only when it opens a sentence (“Đổi lại vậy mình đỡ tốn thời gian”, English “in return, so …”).
+        # Mid-sentence after a lead-in (“Với mình, đổi lại vậy vẫn đáng.”) is natural Vietnamese.
+        re.compile(r"(?:^\s*|(?<=[.!?;:…]\s))đổi\s+lại\s+vậy(?!\w)", re.IGNORECASE),
+        "calque “đổi lại vậy” opening a sentence (English “in return, so …”)",
+        "write “đánh đổi này” and say what is gained and what is lost",
+    ),
+    (
         re.compile(
             r"(?<!\w)(?:(?:1|một)\s+dòng\s+chảy|dòng\s+chảy\s+(?:công\s+việc|làm\s+việc|quy\s+trình|này))(?!\w)",
             re.IGNORECASE,

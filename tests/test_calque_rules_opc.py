@@ -39,7 +39,6 @@ class CalqueRulesTests(unittest.TestCase):
             "Hệ thống giết tiến trình con khi thoát.": ["CAL001"],
             "Đó chỉ là một lần thử mù.": ["CAL001"],
             "Giá trị này khớp với danh tính thương hiệu.": ["CAL001"],
-            "Đổi lại vậy mình đỡ tốn thời gian hơn.": ["CAL001"],
             "Team mới onboard được lên quy trình này.": ["CAL001"],
             "Mình onboard vào quy trình mới.": ["CAL001"],
             "Khoá API được giấu khỏi người dùng.": ["CAL001"],
@@ -51,7 +50,7 @@ class CalqueRulesTests(unittest.TestCase):
     def test_cal001_table_row_severity(self) -> None:
         errors = {"nằm trên đường đi", "đặt lên đường đi", "giết process", "giết tiến trình",
                   "lần thử mù", "khớp với danh tính"}
-        warns = {"viết ra giấy", "đổi lại vậy", "onboard được lên", "onboard vào", "được giấu khỏi"}
+        warns = {"viết ra giấy", "onboard được lên", "onboard vào", "được giấu khỏi"}
         sev = {}
         for phrase in errors | warns:
             found = [f for f in self._findings(f"Ghi chú: {phrase} ở đây.") if f.rule == "CAL001"]
@@ -73,6 +72,8 @@ class CalqueRulesTests(unittest.TestCase):
             "Chất lượng không thương lượng.",
             "Đây là bài toán mình đang sống cùng.",
             "Mọi bước đi qua cùng 1 dòng chảy.",
+            "Đổi lại vậy mình đỡ tốn thời gian hơn.",
+            "Mình mất thêm một ngày. Đổi lại vậy mình đỡ lỗi hơn.",
             "Đạt 7 trên 11.",
             "Qua 7 trên 11 lần thử.",
         )
@@ -145,6 +146,8 @@ class CalqueRulesTests(unittest.TestCase):
     # -- must stay clean --------------------------------------------------------------
     def test_legitimate_vietnamese_stays_clean(self) -> None:
         clean = (
+            "Tóm lại ưu điểm là always on, nhược điểm là mình phải tự lo hạ tầng cho nó. Với mình, đổi lại vậy vẫn đáng.",
+            "Với mình, đổi lại vậy vẫn đáng.",
             "Chị ấy có mặt ở buổi họp.",
             "Anh Nam có mặt đúng giờ.",
             "Giữ vững tinh thần.",
