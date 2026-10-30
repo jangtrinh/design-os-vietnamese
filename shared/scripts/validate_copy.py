@@ -560,8 +560,37 @@ SYNTACTIC_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
         "adversity passive “bị” paired with a positive outcome (bị hủy thành công, bị nâng cấp)",
         "use “được …” or an active verb (“đã hủy”, “đã nâng cấp”); keep “bị” for unwanted events",
     ),
+    (
+        re.compile(r"(?<!\w)chỉ\s+vì\s+[^,.\n]{3,40}\s+nên\s+là(?!\w)", re.IGNORECASE),
+        "“chỉ vì … nên là …” (English “just because …, it is …”) leaves the claim half-built",
+        "state the cause and the result as two plain clauses: “… nên …” or “vì … nên …”",
+    ),
+    (
+        re.compile(r"(?<!\w)không\s+\w+(?:\s+\w+)?\s+được\s+mà\s+không(?!\w)", re.IGNORECASE),
+        "“không … được mà không …” (English “cannot … without …”) double negation",
+        "say it positively: “phải … trước khi …” or “muốn … thì phải …”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:trạng\s+thái|luật|logic|quy\s+tắc)\s+nằm\s+(?:trong|ở)"
+            r"(?!\s+(?:file|chat|prompt|code|ổ\s+đĩa)(?!\w))(?!\w)",
+            re.IGNORECASE,
+        ),
+        "“trạng thái/luật/logic nằm trong …” (English “lives in …”) uses a physical verb for an abstract thing",
+        "use “được lưu trong …”, “được định nghĩa ở …” or “thuộc về …”",
+    ),
+    (
+        re.compile(r"(?<!\w)(?:bắt\s+đầu|kết\s+thúc)\s+bằng\s+việc(?!\w)", re.IGNORECASE),
+        "“bắt đầu/kết thúc bằng việc …” (English “starting/ending with …ing”)",
+        "name the step directly: “bắt đầu bằng <danh từ>” or “đầu tiên, …”",
+    ),
+    (
+        re.compile(r"(?<!\w)ai\s+cần\s+[^,.\n]{3,40}\s+thì\s+bị(?!\w)", re.IGNORECASE),
+        "“ai cần … thì bị …” turns a requirement into an adversity passive",
+        "use an active clause: “ai cần … thì phải …”",
+    ),
 )
-ADVERSITY_PASSIVE_RE = SYNTACTIC_CALQUES[-1][0]
+ADVERSITY_PASSIVE_RE = next(t[0] for t in SYNTACTIC_CALQUES if t[1].startswith("adversity passive"))
 # Text right before a “bị” match that means it is not the passive marker:
 # compounds (thiết bị, chuẩn bị, trang bị, dự bị) or a negated passive.
 ADVERSITY_PASSIVE_BLOCKED_PREFIX_RE = re.compile(
@@ -624,6 +653,95 @@ REGEX_CALQUES: Tuple[Tuple[re.Pattern, str, str, Optional[re.Pattern]], ...] = (
     ),
 )
 
+# Context-restricted calques (WARN). The bare words here are ordinary Vietnamese on their own
+# (“có mặt” at a meeting, “giữ vững tinh thần”, “giá không thương lượng”, “dòng chảy của sông”,
+# “7 trên 11” as a rank), so a literal table row would flag good copy. Each pattern fires only in
+# the abstract sense where English “is present / hold / stand above / live in” was carried over.
+CONTEXT_CALQUES: Tuple[Tuple[re.Pattern, str, str], ...] = (
+    (
+        re.compile(r"(?<!\w)chạy\s+trên\s+(?:1|một)\s+hệ\s+thống(?!\w)", re.IGNORECASE),
+        "calque “chạy trên 1 hệ thống” (English “run on a system”) for a way of working",
+        "write “chạy theo 1 quy trình” or “vận hành theo luật”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:check|rule|luật|quy\s+tắc|file|script|test|lint|log|tài\s+liệu|quy\s+trình|phần\s+mềm)"
+            r"\s+(?:\w+\s+)?có\s+mặt\s+(?:trong|ở|tại)(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “có mặt” (English “be present”) for a thing, not a person",
+        "write “có” or “xuất hiện”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)giữ\s+vững\s+(?:chất\s+lượng|tiêu\s+chuẩn|chuẩn|quality|bar|luật|quy\s+trình|kỷ\s+luật)(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “giữ vững” (English “hold steady”) for quality, rules or a standard",
+        "write “giữ ổn định”, “không để tụt” or “giữ chuẩn”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:chất\s+lượng|an\s+toàn|tốc\s+độ|deadline|ưu\s+tiên|quality|safety|speed)"
+            r"\s+đứng\s+trên(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “đứng trên” (English “stand above”) for priority",
+        "write “quan trọng hơn” or “ưu tiên hơn”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:trạng\s+thái|state|logic|luật|quy\s+tắc|rule)\s+nằm\s+trong"
+            r"\s+(?:file|chat|prompt|code|ổ\s+đĩa)(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “nằm trong” (English “live in”) for state, logic or rules",
+        "write “lưu trong”, “nằm ở” or “được gắn vào”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:chất\s+lượng|tiêu\s+chuẩn|chuẩn|quality|standard|bar|craft)"
+            r"\s+(?:\w+\s+)?không\s+thương\s+lượng(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “không thương lượng” (English “non-negotiable”) for a standard",
+        "write “không thoả hiệp”",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:sống\s+cùng\s+(?:bài\s+toán|vấn\s+đề)"
+            r"|bài\s+toán\s+(?:\w+\s+){0,3}đang\s+sống\s+cùng)(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “sống cùng bài toán” (English “live with the problem”)",
+        "write “gặp hằng ngày” or “xử lý hằng ngày”",
+    ),
+    (
+        # Only when it opens a sentence (“Đổi lại vậy mình đỡ tốn thời gian”, English “in return, so …”).
+        # Mid-sentence after a lead-in (“Với mình, đổi lại vậy vẫn đáng.”) is natural Vietnamese.
+        re.compile(r"(?:^\s*|(?<=[.!?;:…]\s))đổi\s+lại\s+vậy(?!\w)", re.IGNORECASE),
+        "calque “đổi lại vậy” opening a sentence (English “in return, so …”)",
+        "write “đánh đổi này” and say what is gained and what is lost",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?:(?:1|một)\s+dòng\s+chảy|dòng\s+chảy\s+(?:công\s+việc|làm\s+việc|quy\s+trình|này))(?!\w)",
+            re.IGNORECASE,
+        ),
+        "calque “dòng chảy” (English “flow”) for a process",
+        "write “quy trình”; keep “dòng chảy” for water, traffic or data streams",
+    ),
+    (
+        re.compile(
+            r"(?<!\w)(?<![\d/])(?<!\d[.,])\d{1,3}\s+trên\s+\d{1,3}(?![\d/%]|[.,]\d)"
+            r"(?=\s*(?:[.,;:!?)]|$)|\s+(?:lần|case|bài|task|bước|check|test|lỗi|mục|điểm|trường\s+hợp|người|file|rule|luật)(?!\w))",
+            re.IGNORECASE,
+        ),
+        "calque “N trên M” (English “N out of M” read as a ratio)",
+        "write “N/M” or “N trong M”",
+    ),
+)
+
 # Case-aware Open-Syllable Tone Placement (oa / oe / uy)
 VN_CHAR = (
     r"a-zA-ZăâđêôơưĂÂĐÊÔƠƯ"
@@ -682,11 +800,47 @@ TRANSLATED_PLACEHOLDER_RE = re.compile(
     r"\{\{?\s*([a-zA-Z0-9_]*[ăâđêôơưĂÂĐÊÔƠƯáàảãạấầẩẫậắằẳẵặéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ][a-zA-Z0-9_\s]*)\s*\}?\}"
 )
 
+# CAL002 (warn only, heuristic): a sentence that hangs two or more abstract nouns on physical verbs
+# (“nằm trên đường đi”, “giữ danh tính”) reads as translated metaphor even when no single phrase is
+# in the calque table. A sentence with a digit, a path or a file name has a concrete object and is skipped.
+_CAL002_RE = re.compile(
+    r"(?<!\w)(?:nằm|đứng|đặt|giữ|mang|đi)\s+(?:(?!(?:nằm|đứng|đặt|giữ|mang|đi)(?!\w))\w+\s+){0,2}"
+    r"(?P<noun>đường\s+đi|dòng\s+chảy|danh\s+tính|vị\s+trí|tầng)(?!\w)",
+    re.IGNORECASE,
+)
+_CAL002_CONCRETE_RE = re.compile(r"\d|https?://|[\w-]+\.\w{2,4}(?!\w)|[\w.-]+/[\w.-]+")
+
+
+def _split_sentences(line: str) -> List[Tuple[int, str]]:
+    out: List[Tuple[int, str]] = []
+    pos = 0
+    for m in re.finditer(r"[.!?;…]+(?:\s+|$)|\s[—–-]\s", line):
+        out.append((pos, line[pos:m.start()]))
+        pos = m.end()
+    if pos < len(line):
+        out.append((pos, line[pos:]))
+    return out
+
+
+def _stacked_abstract_metaphors(sentence: str) -> List[Tuple[int, str]]:
+    if _CAL002_CONCRETE_RE.search(sentence):
+        return []
+    hits: List[Tuple[int, str]] = []
+    seen: set = set()
+    for m in _CAL002_RE.finditer(sentence):
+        noun = re.sub(r"\s+", " ", m.group("noun").lower())
+        if noun not in seen:
+            seen.add(noun)
+            hits.append((m.start(), m.group(0)))
+    return hits if len(hits) >= 2 else []
+
+
 RULE_DOCS: Dict[str, str] = {
     "NFC001": "Unicode is decomposed (NFD); emit precomposed NFC",
     "ENC001": "corrupted UTF-8 mojibake or legacy Vietnamese encoding detected",
     "CAL001": "English calque — use the conventional Vietnamese wording",
     "SYN001": "English syntactic translationese — recast with natural Vietnamese clause order",
+    "CAL002": "stacked physical-verb metaphors on abstract nouns (warn-only heuristic) — say the plain thing once",
     "LAW001": "regulated superlative — needs documented proof (Luật Quảng cáo Đ8 K11 & Luật 75/2025)",
     "DIA001": "Vietnamese text written without diacritics",
     "TONE001": "both tone-mark conventions (kiểu mới & kiểu cũ) mixed in one document",
@@ -972,6 +1126,16 @@ class Validator:
                     reported_spans.append((m.start(), m.end()))
                     emit("CAL001", ERROR, i, m.start() + 1, m.group(0),
                          f"{cal_msg}: “{m.group(0)}”", m.expand(cal_hint))
+            for ctx_re, ctx_msg, ctx_hint in CONTEXT_CALQUES:
+                for m in ctx_re.finditer(line):
+                    if any(
+                        (s <= m.start() and m.end() <= e) or (m.start() <= s and e <= m.end())
+                        for s, e in reported_spans
+                    ):
+                        continue
+                    reported_spans.append((m.start(), m.end()))
+                    emit("CAL001", WARN, i, m.start() + 1, m.group(0).strip(),
+                         f"{ctx_msg}: “{m.group(0).strip()}”", ctx_hint)
 
             # 2. Syntactic translationese
             for syn_re, msg, hint in SYNTACTIC_CALQUES:
@@ -981,6 +1145,15 @@ class Validator:
                     ):
                         continue
                     emit("SYN001", WARN, i, m.start() + 1, m.group(0), msg, hint)
+
+            # 2b. CAL002: stacked physical verbs on abstract nouns, one sentence at a time.
+            for sent_start, sentence in _split_sentences(line):
+                found = _stacked_abstract_metaphors(sentence)
+                if found:
+                    emit("CAL002", WARN, i, sent_start + found[0][0] + 1,
+                         " … ".join(f[1] for f in found),
+                         "stacked physical-verb metaphors on abstract nouns (" + ", ".join(f[1] for f in found) + ")",
+                         "say the plain thing once: “gắn vào quy trình”, “quan trọng hơn”, “giữ ổn định”")
 
             # 3. Advertising superlatives with multi-line proof window, negation & ordinal guard
             proof_window = any(

@@ -97,7 +97,7 @@ repos:
 
 | Preset | Tình huống | Quy tắc bật (`CTX`) | Nới lỏng (tắt) |
 | :--- | :--- | :--- | :--- |
-| `chat-close-friend` | Chat bạn thân | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-close-friend` | Chat bạn thân | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` |
 | `chat-colleague` | Chat đồng nghiệp (Slack/Zalo nhóm) | `CTX001` | như trên, trừ `NUM002` (số tiền giữa đồng nghiệp là dữ liệu công việc) |
 | `chat-to-manager` | Nhắn sếp | `CTX001` `CTX002` `CTX003` | — |
 | `email-to-manager` | Email gửi sếp/cấp trên | `CTX001` `CTX002` `CTX003` `CTX004` | — |

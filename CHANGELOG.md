@@ -4,6 +4,12 @@ All notable changes to `design-os-vietnamese` are documented in this file.
 
 ## [Unreleased]
 
+### Added
+- **`CAL001` — calques from real copy**: 10 literal table rows (`viết ra giấy`, `nằm trên đường đi`, `đặt lên đường đi`, `giết process`, `giết tiến trình`, `lần thử mù`, `khớp với danh tính`, `onboard được lên`, `onboard vào`, `được giấu khỏi`) and 10 context-restricted patterns that emit `WARN` only in the abstract sense (`chạy trên 1 hệ thống`, sentence-initial `đổi lại vậy`, `có mặt` for a thing, `giữ vững` + quality or rules, `đứng trên` for priority, `nằm trong` for state or logic, `không thương lượng` for a standard, `sống cùng bài toán`, `dòng chảy` for a process, `N trên M` as a ratio). Legitimate uses (`có mặt ở buổi họp`, `giữ vững tinh thần`, `giá không thương lượng`, `dòng chảy của sông`, `Với mình, đổi lại vậy vẫn đáng`, `nhà trên đường Lê Lợi`) stay clean.
+- **`SYN001` — 5 new patterns**: `chỉ vì … nên là`, `không … được mà không`, `trạng thái/luật/logic/quy tắc nằm trong/ở`, `bắt đầu/kết thúc bằng việc`, `ai cần … thì bị`.
+- **`CAL002`** (`WARN`, heuristic): two or more abstract nouns (`đường đi`, `dòng chảy`, `danh tính`, `vị trí`, `tầng`) on physical verbs (`nằm`, `đứng`, `đặt`, `giữ`, `mang`, `đi`) in one sentence with no concrete object. Disabled by the casual chat presets, like `CAL001` and `SYN001`. `--strict` still exits non-zero on any warning, `CAL002` included.
+- `tests/test_calque_rules_opc.py`: positive fixtures, must-stay-clean fixtures and per-rule severity checks for the rules above.
+
 ## [5.2.0] — 2026-10-29
 
 ### Added

@@ -140,8 +140,9 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | :--- | :--- | :--- |
 | `NFC001` | `ERROR` | Detects decomposed Unicode `NFD` combining marks (`--fix` auto-normalizes to `NFC`) |
 | `ENC001` | `ERROR` | Detects UTF-8 Mojibake (`Ã¡`, `áº¡`, `Æ°`, `Ä‘`) and legacy VNI/TCVN3 corruption |
-| `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `làm ơn` + verb, verb + `của bạn` + noun, `tiến hành đăng nhập`) |
-| `SYN001` | `WARN` | Flags syntactic translationese word order (`như một..., tôi muốn`, `nó là quan trọng để`) and adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) |
+| `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `làm ơn` + verb, verb + `của bạn` + noun, `tiến hành đăng nhập`, `viết ra giấy`, `chạy trên 1 hệ thống`, `giết process`, `lần thử mù`). Ambiguous words (`có mặt`, `giữ vững`, `nằm trong`, `dòng chảy`, `không thương lượng`, `7 trên 11`) are flagged as `WARN` only in the abstract sense |
+| `SYN001` | `WARN` | Flags syntactic translationese word order (`như một..., tôi muốn`, `nó là quan trọng để`, `chỉ vì … nên là`, `bắt đầu bằng việc`) and adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) |
+| `CAL002` | `WARN` | Heuristic: a sentence that hangs two or more abstract nouns (`đường đi`, `dòng chảy`, `danh tính`, `vị trí`, `tầng`) on physical verbs (`nằm`, `đứng`, `đặt`, `giữ`, `mang`, `đi`) and names no concrete object. Expect some false positives; silence with `<!-- vlc-disable: CAL002 -->` |
 | `LAW001` | `ERROR` | Flags unsubstantiated superlatives (`số 1`, `tốt nhất`, `duy nhất`, `100%`) unless backed by `<!-- proof: ... -->` or negated |
 | `DIA001` | `ERROR` | Detects unaccented Vietnamese prose across 140+ multi-word phrases |
 | `TONE001` | `WARN` | Enforces document-wide consistency between `kiểu mới` (`hoà, thuỷ`) and `kiểu cũ` (`hòa, thủy`) (`--fix-tone new\|old`) |
@@ -172,7 +173,7 @@ Inline suppression directives are supported for verified exceptions: `<!-- vncop
 
 | Preset | Situation | Rules on (`CTX`) | Relaxed (off) |
 | :--- | :--- | :--- | :--- |
-| `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` |
 | `chat-colleague` | Colleague chat (Slack/Zalo group) | `CTX001` | same as above except `NUM002` (amounts are business data between colleagues) |
 | `chat-to-manager` | Message to the boss | `CTX001` `CTX002` `CTX003` | — |
 | `email-to-manager` | Email to the boss / a superior | `CTX001` `CTX002` `CTX003` `CTX004` | — |
