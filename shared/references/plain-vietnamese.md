@@ -17,7 +17,7 @@ A reader with limited time looks for the decision, the number and the next step.
 
 ## 2. The rules
 
-A "word" is a space-separated token, which in Vietnamese is one syllable. Text inside backticks, fenced code blocks and URLs is ignored. Headings, table rows and front matter are not prose and are skipped. A sentence that wraps over several lines is measured as one sentence.
+A "word" is a space-separated token, which in Vietnamese is one syllable. Text inside backticks, fenced code blocks and URLs is ignored. Headings, table rows, quoted lines (`>`) and front matter are not prose and are skipped, and so is any sentence with no Vietnamese letter (an English paragraph). A sentence that wraps over several lines is measured as one sentence.
 
 | Rule | Checks | Default |
 |---|---|---|

@@ -1,4 +1,4 @@
-<!-- synced from shared/references/plain-vietnamese.md (d08588b47f5c1c8b) — edit shared/ source, not this copy -->
+<!-- synced from shared/references/plain-vietnamese.md (d88c3ca41833a00e) — edit shared/ source, not this copy -->
 <!-- vlc-disable: all -->
 
 # Plain Vietnamese — Viết ngắn, viết thẳng (`design-os-vietnamese`)
@@ -18,7 +18,7 @@ A reader with limited time looks for the decision, the number and the next step.
 
 ## 2. The rules
 
-A "word" is a space-separated token, which in Vietnamese is one syllable. Text inside backticks, fenced code blocks and URLs is ignored. Headings, table rows and front matter are not prose and are skipped. A sentence that wraps over several lines is measured as one sentence.
+A "word" is a space-separated token, which in Vietnamese is one syllable. Text inside backticks, fenced code blocks and URLs is ignored. Headings, table rows, quoted lines (`>`) and front matter are not prose and are skipped, and so is any sentence with no Vietnamese letter (an English paragraph). A sentence that wraps over several lines is measured as one sentence.
 
 | Rule | Checks | Default |
 |---|---|---|
