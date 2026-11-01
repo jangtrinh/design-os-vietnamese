@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/writing_context.py (edd433d82f1024f7) — edit shared/ source, not this copy
+# synced from shared/scripts/writing_context.py (5c04eb3a6db0c865) — edit shared/ source, not this copy
 """Writing-context rules CTX001-CTX005 for ``validate_copy.py --context``.
 
 Pure Python 3.9+ standard library. This is a sibling module, not a ``rules_*.py``
@@ -115,6 +115,9 @@ def _quote_start(lines: Sequence[str]) -> int:
         if any(marker.match(line) for marker in _QUOTE_MARKERS):
             return index
     return len(lines)
+
+
+quote_start = _quote_start  # public name for validate_copy.py's plain-tone check
 
 
 def _body_lines(lines: Sequence[str]) -> List[Tuple[int, str]]:
