@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (8bdf3ba2edafb8ba) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (a4ae83c18815cbd1) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -889,6 +889,11 @@ CONTEXT_SUGGESTION = _load_sibling_module("context_suggestion")
 if WRITING_CONTEXT is not None:
     RULE_DOCS.update(WRITING_CONTEXT.RULE_DOCS)
 
+# Plain-tone support: PLAIN001-PLAIN007 and the plain-vietnamese.md phrase table.
+PLAIN_TONE = _load_sibling_module("plain_tone")
+if PLAIN_TONE is not None:
+    RULE_DOCS.update(PLAIN_TONE.RULE_DOCS)
+
 BASE_RULE_DOCS: Dict[str, str] = dict(RULE_DOCS)
 DOMAIN_MODULES: List = []
 DOCTYPES: Dict[str, str] = {}
@@ -974,11 +979,37 @@ def load_context_matrix(ref_dirs: Sequence[pathlib.Path] = ()):
     return None
 
 
+NO_PLAIN_PHRASES = PLAIN_TONE.PlainPhrases() if PLAIN_TONE is not None else None
+
+
+def load_plain_phrases(ref_dirs: Sequence[pathlib.Path] = (), fallback: bool = True):
+    """Parse ``plain-vietnamese.md`` from the first reference dir that has it (then REF_DIR).
+
+    Returns None when the plain-tone module or the phrase file is unavailable; the
+    structural rules (PLAIN001, PLAIN005-PLAIN007) still run without a phrase table.
+    """
+    if PLAIN_TONE is None:
+        return None
+    for directory in [*ref_dirs, *([REF_DIR] if fallback else [])]:
+        try:
+            text = (directory / "plain-vietnamese.md").read_text(encoding="utf-8")
+        except OSError:
+            continue
+        return PLAIN_TONE.parse_phrases(text, _table_with_header, _unwrap)
+    return None
+
+
 class Validator:
     def __init__(self, blocklists: Blocklists, register: Optional[str] = None,
                  doctype: Optional[str] = None, context: Optional[str] = None,
-                 context_matrix=None):
+                 context_matrix=None, plain_phrases=None,
+                 max_sentence_words: Optional[int] = None):
         self.bl = blocklists
+        self.plain_phrases = plain_phrases if plain_phrases is not None else load_plain_phrases()
+        self.max_sentence_words = (
+            max_sentence_words if max_sentence_words is not None
+            else (PLAIN_TONE.DEFAULT_MAX_SENTENCE_WORDS if PLAIN_TONE is not None else 30)
+        )
         self.calques = list(blocklists.compiled_calques())
         self.register = register
         self.doctype = doctype
@@ -1036,6 +1067,8 @@ class Validator:
         self._check_pronouns(masked, path, emit)
         self._check_domain_rules(lines, masked, text_nfc, path, is_markdown, emit)
         self._check_writing_context(masked, emit)
+        if is_markdown or suffix == ".txt":
+            self._check_plain_tone(masked, emit)
         self._suggest_writing_context(text_nfc, path, disabled)
 
         findings.sort(key=lambda f: (f.line, f.col, f.rule))
@@ -1352,6 +1385,18 @@ class Validator:
         ]
         WRITING_CONTEXT.check(self.context_profile, self.context_matrix, masked, cleaned, emit)
 
+    def _check_plain_tone(self, masked: Sequence[str], emit) -> None:
+        """PLAIN001-PLAIN007: warnings, or errors when the declared reader is an executive."""
+        if PLAIN_TONE is None:
+            return
+        profile = self.context_profile
+        if profile is not None and profile.channel in ("chat", "email") and WRITING_CONTEXT is not None:
+            # A quoted reply thread is somebody else's text: judge only what the writer wrote.
+            masked = masked[:WRITING_CONTEXT.quote_start(masked)]
+        executive = profile is not None and profile.reader == "executive"
+        PLAIN_TONE.check(masked, emit, ERROR if executive else WARN,
+                         self.plain_phrases, self.max_sentence_words)
+
     def _suggest_writing_context(self, text: str, path: pathlib.Path, disabled: set) -> None:
         """Record a context hint when none is declared. Never a finding; the caller prints it to stderr.
 
@@ -1491,6 +1536,13 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         help="declare artifact type to activate structural domain rules"
         + ("; one of: " + ", ".join(sorted(DOCTYPES)) if DOCTYPES else ""),
     )
+    ap.add_argument(
+        "--max-sentence-words",
+        type=int,
+        default=None,
+        metavar="N",
+        help="PLAIN001 limit: flag prose sentences longer than N space-separated words (default 30)",
+    )
     ap.add_argument("--json", action="store_true", dest="as_json", help="emit findings as JSON")
     ap.add_argument("--strict", action="store_true", help="exit non-zero on warnings as well as errors")
     ap.add_argument("--fix", action="store_true", help="rewrite NFC violations in place, then re-check")
@@ -1509,6 +1561,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     ap.add_argument("--refs", default=None, help="directory holding reference markdown tables")
     ap.add_argument("--list-rules", action="store_true", help="print every rule this skill emits, then exit")
     args = ap.parse_args(argv)
+
+    if args.max_sentence_words is not None and args.max_sentence_words < 1:
+        print("validate_copy.py: error: argument --max-sentence-words: must be at least 1", file=sys.stderr)
+        return 2
 
     refs_dirs: List[pathlib.Path] = [pathlib.Path(args.refs)] if args.refs else [REF_DIR]
     if args.domain:
@@ -1590,7 +1646,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return 2
 
     validator = Validator(blocklists, args.register, args.doctype,
-                          context=args.context, context_matrix=context_matrix)
+                          context=args.context, context_matrix=context_matrix,
+                          plain_phrases=load_plain_phrases(refs_dirs),
+                          max_sentence_words=args.max_sentence_words)
     findings: List[Finding] = []
 
     if args.paths == ["-"]:

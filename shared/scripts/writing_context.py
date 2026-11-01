@@ -116,6 +116,9 @@ def _quote_start(lines: Sequence[str]) -> int:
     return len(lines)
 
 
+quote_start = _quote_start  # public name for validate_copy.py's plain-tone check
+
+
 def _body_lines(lines: Sequence[str]) -> List[Tuple[int, str]]:
     """Non-empty ``(lineno, text)`` pairs without leading header fields (Subject:, V/v:, ...)."""
     body = [(i, line) for i, line in enumerate(lines, 1) if line.strip()]
