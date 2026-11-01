@@ -10,7 +10,7 @@ Shared across every skill in `design-os-vietnamese`. A text can pass every mecha
 
 A reader with limited time looks for the decision, the number and the next step. Four habits push those out of sight:
 
-- **Long sentences.** Past about thirty words the reader loses the subject before the verb arrives.
+- **Long sentences.** Past about twenty-five words the reader loses the subject before the verb arrives.
 - **Announcing instead of saying.** "Bản đánh giá này cho thấy…" spends five words before the point.
 - **Filler.** "Điều này", "một cách", "thực hiện" and "tiến hành" add length and no information.
 - **Audit scaffolding.** Labels such as `FACT` or `ASSUMPTION` belong in working notes. In a finished text, say how sure you are in a plain clause ("chưa kiểm tra", "đã đo").
@@ -21,7 +21,7 @@ A "word" is a space-separated token, which in Vietnamese is one syllable. Text i
 
 | Rule | Checks | Default |
 |---|---|---|
-| `PLAIN001` | A sentence longer than 30 words (`--max-sentence-words N` changes the limit). | warning |
+| `PLAIN001` | A sentence longer than 25 words (`--max-sentence-words N` changes the limit). | warning |
 | `PLAIN002` | An audit label (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`, upper case, whole word) in prose. | warning |
 | `PLAIN003` | A meta opener at the start of a sentence, list item or bold lead-in (table below). | warning |
 | `PLAIN004` | A filler phrase anywhere in a sentence (table below). | warning |
@@ -29,7 +29,7 @@ A "word" is a space-separated token, which in Vietnamese is one syllable. Text i
 | `PLAIN006` | A spaced dash (`—` or `–`) used as an aside. One finding per sentence. Number ranges such as `10 – 20` are skipped. | warning |
 | `PLAIN007` | More than two parentheses in one sentence. | warning |
 
-**Severity.** All seven rules are warnings. They become errors when you declare an executive reader with `--context doc-for-executives`. The existing `--strict` flag makes any warning exit non-zero, `PLAIN` rules included. The rules run on prose files only (`.md`, `.mdx`, `.markdown`, `.txt` and stdin), not on string literals in code or JSON.
+**Severity.** All seven rules are warnings. They become errors when you declare an executive reader with `--context doc-for-executives`, and the casual chat presets switch them off. The existing `--strict` flag makes any warning exit non-zero, `PLAIN` rules included. The rules run on prose files only (`.md`, `.mdx`, `.markdown`, `.txt` and stdin), not on string literals in code or JSON.
 
 ```bash
 python3 shared/scripts/validate_copy.py report.md
@@ -83,4 +83,4 @@ Examples use a generic delivery app and a dashboard. This table is executed by t
 
 - A quoted source, a legal clause or a contract term must keep its wording. Use `<!-- vlc-disable-line: PLAIN001 -->` on that line.
 - A document that explains the audit labels themselves (such as this page) uses `<!-- vlc-disable: PLAIN002 -->` at the top.
-- Casual chat presets do not relax these rules. If a chat export triggers them, switch them off for that file.
+- The casual chat presets (`--context chat-close-friend`, `--context chat-colleague`) switch all seven rules off. Every other context keeps them.

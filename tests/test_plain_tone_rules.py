@@ -84,14 +84,14 @@ class RuleRegistryTests(PlainRuleTestCase):
 
 
 class LongSentenceTests(PlainRuleTestCase):
-    def test_limit_is_exclusive_at_thirty_words(self) -> None:
-        self.assertQuiet(sentence(30))
-        self.assertFires("PLAIN001", sentence(31))
+    def test_limit_is_exclusive_at_twenty_five_words(self) -> None:
+        self.assertQuiet(sentence(25))
+        self.assertFires("PLAIN001", sentence(26))
 
     def test_message_names_the_count_and_the_limit(self) -> None:
         (hit,) = self.check(sentence(36))
         self.assertIn("36", hit.message)
-        self.assertIn("30", hit.message)
+        self.assertIn("25", hit.message)
 
     def test_limit_is_configurable(self) -> None:
         self.assertFires("PLAIN001", sentence(12), max_sentence_words=10)
@@ -269,6 +269,41 @@ class ExecutiveContextTests(PlainRuleTestCase):
         self.assertEqual([(f.rule, f.severity) for f in found], [("PLAIN004", validate_copy.WARN)])
 
 
+class ChatPresetTests(PlainRuleTestCase):
+    """Casual chat presets switch the whole PLAIN family off; every other context keeps it."""
+
+    EVERY_RULE = (
+        sentence(40) + "\nFACT: Lưu ý: giao thực hiện một cách nhanh.\n"
+        "Bản đánh giá này không chỉ nhanh mà còn rẻ — kể cả giờ cao điểm (a) (b) (c).\n"
+    )
+
+    def plain_rules(self, context: str, text: str) -> set:
+        matrix = validate_copy.load_context_matrix()
+        validator = validate_copy.Validator(validate_copy.Blocklists(), context=context, context_matrix=matrix)
+        return {f.rule for f in plain(validator.check_text(text, FAKE_MD))}
+
+    def test_casual_chat_presets_report_no_plain_finding(self) -> None:
+        for context in ("chat-close-friend", "chat-colleague"):
+            with self.subTest(context=context):
+                self.assertEqual(self.plain_rules(context, self.EVERY_RULE), set())
+
+    def test_other_contexts_keep_every_plain_rule(self) -> None:
+        for context in ("chat-to-manager", "email-to-colleague", "doc-for-executives", "doc-for-engineers"):
+            with self.subTest(context=context):
+                self.assertEqual(self.plain_rules(context, self.EVERY_RULE), set(PLAIN_RULES))
+
+    def test_matrix_lists_all_seven_rules_as_disabled_for_the_chat_presets(self) -> None:
+        profiles = validate_copy.load_context_matrix().profiles
+        for context in ("chat-close-friend", "chat-colleague"):
+            self.assertTrue(set(PLAIN_RULES) <= profiles[context].disables, context)
+        for context in set(profiles) - {"chat-close-friend", "chat-colleague"}:
+            self.assertFalse(set(PLAIN_RULES) & profiles[context].disables, context)
+
+    def test_cli_chat_friend_exits_zero_even_with_strict(self) -> None:
+        r = cli(self, "--json", "--strict", "--context", "chat-close-friend", "-", stdin=self.EVERY_RULE, code=0)
+        self.assertEqual([f for f in json.loads(r.stdout)["findings"] if f["rule"].startswith("PLAIN")], [])
+
+
 class PhraseTableTests(PlainRuleTestCase):
     def test_reference_table_is_machine_readable_and_complete(self) -> None:
         phrases = validate_copy.load_plain_phrases()
@@ -358,6 +393,13 @@ class CliTests(unittest.TestCase):
         r = cli(self, "--json", "--context", "doc-for-executives", "-", stdin=text, code=1)
         severities = {f["rule"]: f["severity"] for f in json.loads(r.stdout)["findings"] if f["rule"].startswith("PLAIN")}
         self.assertEqual(severities, {"PLAIN001": "error", "PLAIN004": "error"})
+
+    def test_default_limit_is_twenty_five_words_on_the_command_line(self) -> None:
+        for count, expected in ((25, []), (26, ["PLAIN001"])):
+            with self.subTest(words=count):
+                r = cli(self, "--json", "-", stdin=sentence(count) + "\n", code=0)
+                self.assertEqual([f["rule"] for f in json.loads(r.stdout)["findings"]], expected)
+        self.assertIn("default 25", cli(self, "--help", code=0).stdout)
 
     def test_max_sentence_words_flag(self) -> None:
         text = sentence(12) + "\n"

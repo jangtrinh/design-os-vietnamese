@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/plain_tone.py (2866527c5d4c2eed) — edit shared/ source, not this copy
+# synced from shared/scripts/plain_tone.py (7569e5a8ac7c0b1f) — edit shared/ source, not this copy
 """Plain-tone rules PLAIN001-PLAIN007 for ``validate_copy.py``.
 
 Pure Python 3.9+ standard library. Sibling module of ``validate_copy.py``, loaded by
@@ -16,11 +16,11 @@ import bisect
 import re
 from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
-DEFAULT_MAX_SENTENCE_WORDS = 30
+DEFAULT_MAX_SENTENCE_WORDS = 25
 MAX_PARENTHESES = 2
 
 RULE_DOCS: Dict[str, str] = {
-    "PLAIN001": "sentence is too long to read in one pass (default > 30 words); split it",
+    "PLAIN001": "sentence is too long to read in one pass (default > 25 words); split it",
     "PLAIN002": "audit label (FACT / INFERENCE / ASSUMPTION / UNKNOWN) left in prose",
     "PLAIN003": "meta opener that announces the text instead of saying the point",
     "PLAIN004": "filler phrase that adds length and no meaning",

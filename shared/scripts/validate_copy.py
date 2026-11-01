@@ -1007,7 +1007,7 @@ class Validator:
         self.plain_phrases = plain_phrases if plain_phrases is not None else load_plain_phrases()
         self.max_sentence_words = (
             max_sentence_words if max_sentence_words is not None
-            else (PLAIN_TONE.DEFAULT_MAX_SENTENCE_WORDS if PLAIN_TONE is not None else 30)
+            else (PLAIN_TONE.DEFAULT_MAX_SENTENCE_WORDS if PLAIN_TONE is not None else 25)
         )
         self.calques = list(blocklists.compiled_calques())
         self.register = register
@@ -1540,7 +1540,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         type=int,
         default=None,
         metavar="N",
-        help="PLAIN001 limit: flag prose sentences longer than N space-separated words (default 30)",
+        help="PLAIN001 limit: flag prose sentences longer than N space-separated words (default 25)",
     )
     ap.add_argument("--json", action="store_true", dest="as_json", help="emit findings as JSON")
     ap.add_argument("--strict", action="store_true", help="exit non-zero on warnings as well as errors")

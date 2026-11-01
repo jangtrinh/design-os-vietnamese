@@ -97,7 +97,7 @@ Một văn bản có thể qua hết các quy tắc trên mà vẫn dài dòng, 
 
 | Quy tắc | Kích hoạt khi | Mặc định |
 | :--- | :--- | :--- |
-| `PLAIN001` | Câu dài hơn 30 từ (`--max-sentence-words N` đổi ngưỡng; một từ là một âm tiết cách nhau bởi dấu cách) | `WARN` |
+| `PLAIN001` | Câu dài hơn 25 từ (`--max-sentence-words N` đổi ngưỡng; một từ là một âm tiết cách nhau bởi dấu cách) | `WARN` |
 | `PLAIN002` | Nhãn kiểm chứng (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) còn nằm trong văn bản | `WARN` |
 | `PLAIN003` | Câu mở bằng cụm dẫn (`Bản đánh giá này`, `Phần mới:`, `Lưu ý:`, `Hệ quả:`) | `WARN` |
 | `PLAIN004` | Có từ đệm (`điều này`, `nhìn chung`, `đáng chú ý`, `một cách`, `thực hiện`, `tiến hành`) | `WARN` |
@@ -105,7 +105,7 @@ Một văn bản có thể qua hết các quy tắc trên mà vẫn dài dòng, 
 | `PLAIN006` | Dấu gạch ngang có khoảng trắng (`—`, `–`) dùng làm ý chêm; khoảng số như `10 – 20` được bỏ qua | `WARN` |
 | `PLAIN007` | Một câu có hơn hai cặp ngoặc đơn | `WARN` |
 
-Cả bảy quy tắc thành `error` khi khai báo người đọc là lãnh đạo (`--context doc-for-executives`). `--strict` vốn đã thoát với mã khác 0 khi có bất kỳ cảnh báo nào. Danh sách cụm từ cho `PLAIN002`–`PLAIN004` là một bảng trong [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), kèm các cặp trước/sau mà bộ test chạy thật; thêm một dòng vào bảng để mở rộng. Tắt một quy tắc bằng `<!-- vlc-disable: PLAIN001 -->` (cả tệp) hoặc `<!-- vlc-disable-line: PLAIN004 -->` (một dòng).
+Cả bảy quy tắc thành `error` khi khai báo người đọc là lãnh đạo (`--context doc-for-executives`) và bị tắt bởi các preset chat thân mật (`chat-close-friend`, `chat-colleague`). `--strict` vốn đã thoát với mã khác 0 khi có bất kỳ cảnh báo nào. Danh sách cụm từ cho `PLAIN002`–`PLAIN004` là một bảng trong [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), kèm các cặp trước/sau mà bộ test chạy thật; thêm một dòng vào bảng để mở rộng. Tắt một quy tắc bằng `<!-- vlc-disable: PLAIN001 -->` (cả tệp) hoặc `<!-- vlc-disable-line: PLAIN004 -->` (một dòng).
 
 ```bash
 python3 shared/scripts/validate_copy.py bao-cao.md
@@ -119,7 +119,7 @@ python3 shared/scripts/validate_copy.py bao-cao.md --strict --max-sentence-words
 
 | Preset | Tình huống | Quy tắc bật (`CTX`) | Nới lỏng (tắt) |
 | :--- | :--- | :--- | :--- |
-| `chat-close-friend` | Chat bạn thân | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-close-friend` | Chat bạn thân | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` `PLAIN001`–`PLAIN007` |
 | `chat-colleague` | Chat đồng nghiệp (Slack/Zalo nhóm) | `CTX001` | như trên, trừ `NUM002` (số tiền giữa đồng nghiệp là dữ liệu công việc) |
 | `chat-to-manager` | Nhắn sếp | `CTX001` `CTX002` `CTX003` | — |
 | `email-to-manager` | Email gửi sếp/cấp trên | `CTX001` `CTX002` `CTX003` `CTX004` | — |

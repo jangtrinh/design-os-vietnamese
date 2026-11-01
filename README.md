@@ -143,7 +143,7 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `làm ơn` + verb, verb + `của bạn` + noun, `tiến hành đăng nhập`, `viết ra giấy`, `chạy trên 1 hệ thống`, `giết process`, `lần thử mù`). Ambiguous words (`có mặt`, `giữ vững`, `nằm trong`, `dòng chảy`, `không thương lượng`, `7 trên 11`) are flagged as `WARN` only in the abstract sense |
 | `SYN001` | `WARN` | Flags syntactic translationese word order (`như một..., tôi muốn`, `nó là quan trọng để`, `chỉ vì … nên là`, `bắt đầu bằng việc`) and adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) |
 | `CAL002` | `WARN` | Heuristic: a sentence that hangs two or more abstract nouns (`đường đi`, `dòng chảy`, `danh tính`, `vị trí`, `tầng`) on physical verbs (`nằm`, `đứng`, `đặt`, `giữ`, `mang`, `đi`) and names no concrete object. Expect some false positives; silence with `<!-- vlc-disable: CAL002 -->` |
-| `PLAIN001`–`PLAIN007` | `WARN` (`ERROR` with `--context doc-for-executives`) | Plain-tone checks on prose files: sentences over 30 words, audit labels (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) left in prose, meta openers (`Bản đánh giá này`, `Lưu ý:`), filler (`điều này`, `một cách`, `thực hiện`, `tiến hành`), `không chỉ … mà còn`, dash asides and stacked parentheses. See [Plain Vietnamese](#plain-tone-plain001plain007) |
+| `PLAIN001`–`PLAIN007` | `WARN` (`ERROR` with `--context doc-for-executives`) | Plain-tone checks on prose files: sentences over 25 words, audit labels (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) left in prose, meta openers (`Bản đánh giá này`, `Lưu ý:`), filler (`điều này`, `một cách`, `thực hiện`, `tiến hành`), `không chỉ … mà còn`, dash asides and stacked parentheses. See [Plain Vietnamese](#plain-tone-plain001plain007) |
 | `LAW001` | `ERROR` | Flags unsubstantiated superlatives (`số 1`, `tốt nhất`, `duy nhất`, `100%`) unless backed by `<!-- proof: ... -->` or negated |
 | `DIA001` | `ERROR` | Detects unaccented Vietnamese prose across 140+ multi-word phrases |
 | `TONE001` | `WARN` | Enforces document-wide consistency between `kiểu mới` (`hoà, thuỷ`) and `kiểu cũ` (`hòa, thủy`) (`--fix-tone new\|old`) |
@@ -174,7 +174,7 @@ A text can pass every rule above and still read as long-winded and machine-writt
 
 | Rule | Fires when | Default |
 | :--- | :--- | :--- |
-| `PLAIN001` | A sentence is longer than 30 words (`--max-sentence-words N` changes the limit; a word is one space-separated syllable) | `WARN` |
+| `PLAIN001` | A sentence is longer than 25 words (`--max-sentence-words N` changes the limit; a word is one space-separated syllable) | `WARN` |
 | `PLAIN002` | An audit label (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) is left in prose | `WARN` |
 | `PLAIN003` | A sentence opens with a meta phrase (`Bản đánh giá này`, `Phần mới:`, `Lưu ý:`, `Hệ quả:`) | `WARN` |
 | `PLAIN004` | Filler appears (`điều này`, `nhìn chung`, `đáng chú ý`, `một cách`, `thực hiện`, `tiến hành`) | `WARN` |
@@ -182,7 +182,7 @@ A text can pass every rule above and still read as long-winded and machine-writt
 | `PLAIN006` | A spaced dash (`—`, `–`) is used as an aside; number ranges such as `10 – 20` are skipped | `WARN` |
 | `PLAIN007` | A sentence holds more than two parentheses | `WARN` |
 
-All seven become errors when you declare an executive reader (`--context doc-for-executives`). `--strict` already exits non-zero on any warning. The phrase list for `PLAIN002`–`PLAIN004` is a table in [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), together with before/after pairs that the test suite executes; add a row to extend it. Silence a rule with `<!-- vlc-disable: PLAIN001 -->` (file) or `<!-- vlc-disable-line: PLAIN004 -->` (line).
+All seven become errors when you declare an executive reader (`--context doc-for-executives`) and are switched off by the casual chat presets (`chat-close-friend`, `chat-colleague`). `--strict` already exits non-zero on any warning. The phrase list for `PLAIN002`–`PLAIN004` is a table in [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), together with before/after pairs that the test suite executes; add a row to extend it. Silence a rule with `<!-- vlc-disable: PLAIN001 -->` (file) or `<!-- vlc-disable-line: PLAIN004 -->` (line).
 
 ```bash
 python3 shared/scripts/validate_copy.py report.md
@@ -196,7 +196,7 @@ python3 shared/scripts/validate_copy.py report.md --strict --max-sentence-words 
 
 | Preset | Situation | Rules on (`CTX`) | Relaxed (off) |
 | :--- | :--- | :--- | :--- |
-| `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` |
+| `chat-close-friend` | Chat with a close friend | `CTX001` | `DIA001` `CAL001` `LAW001` `SYN001` `CAL002` `NUM002` `NUM004` `TONE001` `CTX003` `PLAIN001`–`PLAIN007` |
 | `chat-colleague` | Colleague chat (Slack/Zalo group) | `CTX001` | same as above except `NUM002` (amounts are business data between colleagues) |
 | `chat-to-manager` | Message to the boss | `CTX001` `CTX002` `CTX003` | — |
 | `email-to-manager` | Email to the boss / a superior | `CTX001` `CTX002` `CTX003` `CTX004` | — |

@@ -15,11 +15,11 @@ import bisect
 import re
 from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
-DEFAULT_MAX_SENTENCE_WORDS = 30
+DEFAULT_MAX_SENTENCE_WORDS = 25
 MAX_PARENTHESES = 2
 
 RULE_DOCS: Dict[str, str] = {
-    "PLAIN001": "sentence is too long to read in one pass (default > 30 words); split it",
+    "PLAIN001": "sentence is too long to read in one pass (default > 25 words); split it",
     "PLAIN002": "audit label (FACT / INFERENCE / ASSUMPTION / UNKNOWN) left in prose",
     "PLAIN003": "meta opener that announces the text instead of saying the point",
     "PLAIN004": "filler phrase that adds length and no meaning",
