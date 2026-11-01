@@ -170,7 +170,7 @@ Inline suppression directives are supported for verified exceptions: `<!-- vncop
 
 ### Plain tone (`PLAIN001`–`PLAIN007`)
 
-A text can pass every rule above and still read as long-winded and machine-written. The `PLAIN` family checks the habits behind that impression. It runs on prose files (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); text inside backticks, code fences and URLs is ignored, and headings, table rows, quoted lines and front matter are skipped.
+A text can pass every rule above and still read as long-winded and machine-written. The `PLAIN` family checks the habits behind that impression. It runs on prose files (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); text inside backticks, code fences and URLs is ignored, and headings, table rows, quoted lines and front matter are skipped. A sentence with no Vietnamese letter (an English paragraph) is not judged.
 
 | Rule | Fires when | Default |
 | :--- | :--- | :--- |

@@ -170,6 +170,11 @@ def count_words(sentence: str) -> int:
 # --------------------------------------------------------------------------- #
 # Rules
 # --------------------------------------------------------------------------- #
+# A sentence with none of these letters is not Vietnamese prose (an English paragraph, a
+# part number): the plain-tone rules leave it alone.
+_VI_LETTER_RE = re.compile(
+    "[ăâđêôơưàáạảãằắặẳẵầấậẩẫèéẹẻẽềếệểễìíịỉĩòóọỏõồốộổỗờớợởỡùúụủũừứựửữỳýỵỷỹ]", re.IGNORECASE
+)
 _NOT_ONLY_RE = re.compile(r"(?<!\w)không\s+(?:chỉ|những)(?!\w).*?(?<!\w)mà\s+còn(?!\w)", re.IGNORECASE)
 _DASH_RE = re.compile(r"(?<=\S)\s[—–]\s(?=\S)")
 
@@ -181,6 +186,9 @@ def _clip(text: str, limit: int = 60) -> str:
 
 def _check_sentence(block: _Block, offset: int, sentence: str, phrases: Optional[PlainPhrases],
                     max_words: int, severity: str, emit: Emit) -> None:
+    if not _VI_LETTER_RE.search(sentence):
+        return
+
     def at(position: int) -> Tuple[int, int]:
         return block.locate(offset + position)
 

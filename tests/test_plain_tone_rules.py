@@ -229,6 +229,11 @@ class SuppressionAndScopeTests(PlainRuleTestCase):
             with self.subTest(suffix=suffix):
                 self.assertTrue(self.check(text, pathlib.Path("sample" + suffix)))
 
+    def test_english_sentences_are_not_judged(self) -> None:
+        english = " ".join(["word"] * 40) + " — and (one) (two) (three), not only fast but also cheap."
+        self.assertQuiet(english)
+        self.assertFires("PLAIN001", english.replace("word", "từ", 1))
+
     def test_quoted_lines_keep_their_wording(self) -> None:
         self.assertQuiet("> " + sentence(40) + "\n> Đơn giao thực hiện xong.\n")
 

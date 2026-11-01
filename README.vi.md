@@ -93,7 +93,7 @@ repos:
 
 ### Giọng văn gọn (`PLAIN001`–`PLAIN007`)
 
-Một văn bản có thể qua hết các quy tắc trên mà vẫn dài dòng, nghe như máy viết. Nhóm `PLAIN` kiểm tra những thói quen gây ra cảm giác đó. Nhóm này chạy trên tệp văn xuôi (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); nội dung trong dấu backtick, khối code và URL bị bỏ qua, còn tiêu đề, dòng bảng, dòng trích dẫn và front matter được bỏ qua.
+Một văn bản có thể qua hết các quy tắc trên mà vẫn dài dòng, nghe như máy viết. Nhóm `PLAIN` kiểm tra những thói quen gây ra cảm giác đó. Nhóm này chạy trên tệp văn xuôi (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); nội dung trong dấu backtick, khối code và URL bị bỏ qua, còn tiêu đề, dòng bảng, dòng trích dẫn và front matter được bỏ qua. Câu không có chữ cái tiếng Việt nào (đoạn tiếng Anh) không bị kiểm tra.
 
 | Quy tắc | Kích hoạt khi | Mặc định |
 | :--- | :--- | :--- |
