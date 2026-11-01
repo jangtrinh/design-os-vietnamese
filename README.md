@@ -143,6 +143,7 @@ Every skill bundles three zero-dependency Python 3.9+ CLI tools synchronized fro
 | `CAL001` | `ERROR`/`WARN` | Flags literal English-to-Vietnamese calques (`làm ơn nhập của bạn mật khẩu`, `làm ơn` + verb, verb + `của bạn` + noun, `tiến hành đăng nhập`, `viết ra giấy`, `chạy trên 1 hệ thống`, `giết process`, `lần thử mù`). Ambiguous words (`có mặt`, `giữ vững`, `nằm trong`, `dòng chảy`, `không thương lượng`, `7 trên 11`) are flagged as `WARN` only in the abstract sense |
 | `SYN001` | `WARN` | Flags syntactic translationese word order (`như một..., tôi muốn`, `nó là quan trọng để`, `chỉ vì … nên là`, `bắt đầu bằng việc`) and adversity passive `bị` paired with a positive outcome (`bị hủy thành công`, `bị nâng cấp`) |
 | `CAL002` | `WARN` | Heuristic: a sentence that hangs two or more abstract nouns (`đường đi`, `dòng chảy`, `danh tính`, `vị trí`, `tầng`) on physical verbs (`nằm`, `đứng`, `đặt`, `giữ`, `mang`, `đi`) and names no concrete object. Expect some false positives; silence with `<!-- vlc-disable: CAL002 -->` |
+| `PLAIN001`–`PLAIN007` | `WARN` (`ERROR` with `--context doc-for-executives`) | Plain-tone checks on prose files: sentences over 30 words, audit labels (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) left in prose, meta openers (`Bản đánh giá này`, `Lưu ý:`), filler (`điều này`, `một cách`, `thực hiện`, `tiến hành`), `không chỉ … mà còn`, dash asides and stacked parentheses. See [Plain Vietnamese](#plain-tone-plain001plain007) |
 | `LAW001` | `ERROR` | Flags unsubstantiated superlatives (`số 1`, `tốt nhất`, `duy nhất`, `100%`) unless backed by `<!-- proof: ... -->` or negated |
 | `DIA001` | `ERROR` | Detects unaccented Vietnamese prose across 140+ multi-word phrases |
 | `TONE001` | `WARN` | Enforces document-wide consistency between `kiểu mới` (`hoà, thuỷ`) and `kiểu cũ` (`hòa, thủy`) (`--fix-tone new\|old`) |
@@ -166,6 +167,28 @@ python3 shared/scripts/check_i18n_parity.py android/values/strings.xml android/v
 ```
 
 Inline suppression directives are supported for verified exceptions: `<!-- vncopy-disable: LAW001 -->` (file/block), `<!-- vncopy-disable-line: LAW001 -->` (specific rule on line), or `<!-- vncopy-disable-line -->` (all rules on line; `vlc-disable` alias also supported).
+
+### Plain tone (`PLAIN001`–`PLAIN007`)
+
+A text can pass every rule above and still read as long-winded and machine-written. The `PLAIN` family checks the habits behind that impression. It runs on prose files (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); text inside backticks, code fences and URLs is ignored, and headings, table rows, quoted lines and front matter are skipped.
+
+| Rule | Fires when | Default |
+| :--- | :--- | :--- |
+| `PLAIN001` | A sentence is longer than 30 words (`--max-sentence-words N` changes the limit; a word is one space-separated syllable) | `WARN` |
+| `PLAIN002` | An audit label (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) is left in prose | `WARN` |
+| `PLAIN003` | A sentence opens with a meta phrase (`Bản đánh giá này`, `Phần mới:`, `Lưu ý:`, `Hệ quả:`) | `WARN` |
+| `PLAIN004` | Filler appears (`điều này`, `nhìn chung`, `đáng chú ý`, `một cách`, `thực hiện`, `tiến hành`) | `WARN` |
+| `PLAIN005` | `không chỉ … mà còn` sits inside one sentence | `WARN` |
+| `PLAIN006` | A spaced dash (`—`, `–`) is used as an aside; number ranges such as `10 – 20` are skipped | `WARN` |
+| `PLAIN007` | A sentence holds more than two parentheses | `WARN` |
+
+All seven become errors when you declare an executive reader (`--context doc-for-executives`). `--strict` already exits non-zero on any warning. The phrase list for `PLAIN002`–`PLAIN004` is a table in [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), together with before/after pairs that the test suite executes; add a row to extend it. Silence a rule with `<!-- vlc-disable: PLAIN001 -->` (file) or `<!-- vlc-disable-line: PLAIN004 -->` (line).
+
+```bash
+python3 shared/scripts/validate_copy.py report.md
+python3 shared/scripts/validate_copy.py report.md --context doc-for-executives
+python3 shared/scripts/validate_copy.py report.md --strict --max-sentence-words 25
+```
 
 ### Writing context (`--context`)
 

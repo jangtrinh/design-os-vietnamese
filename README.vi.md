@@ -91,6 +91,28 @@ repos:
 
 `check-i18n-parity` cần danh mục nguồn đứng trước, đích đứng sau, nhưng pre-commit chỉ truyền các tệp đã staged theo thứ tự đường dẫn; vì vậy `files:` chỉ là điều kiện kích hoạt còn `args:` chỉ rõ cặp nguồn/đích (nguồn trước, ví dụ `values/strings.xml` trước `values-vi/strings.xml` với Android). Mã hook: `validate-copy`, `check-i18n-parity`, `check-font-coverage`.
 
+### Giọng văn gọn (`PLAIN001`–`PLAIN007`)
+
+Một văn bản có thể qua hết các quy tắc trên mà vẫn dài dòng, nghe như máy viết. Nhóm `PLAIN` kiểm tra những thói quen gây ra cảm giác đó. Nhóm này chạy trên tệp văn xuôi (`.md`, `.mdx`, `.markdown`, `.txt`, stdin); nội dung trong dấu backtick, khối code và URL bị bỏ qua, còn tiêu đề, dòng bảng, dòng trích dẫn và front matter được bỏ qua.
+
+| Quy tắc | Kích hoạt khi | Mặc định |
+| :--- | :--- | :--- |
+| `PLAIN001` | Câu dài hơn 30 từ (`--max-sentence-words N` đổi ngưỡng; một từ là một âm tiết cách nhau bởi dấu cách) | `WARN` |
+| `PLAIN002` | Nhãn kiểm chứng (`FACT`, `INFERENCE`, `ASSUMPTION`, `UNKNOWN`) còn nằm trong văn bản | `WARN` |
+| `PLAIN003` | Câu mở bằng cụm dẫn (`Bản đánh giá này`, `Phần mới:`, `Lưu ý:`, `Hệ quả:`) | `WARN` |
+| `PLAIN004` | Có từ đệm (`điều này`, `nhìn chung`, `đáng chú ý`, `một cách`, `thực hiện`, `tiến hành`) | `WARN` |
+| `PLAIN005` | `không chỉ … mà còn` nằm trong một câu | `WARN` |
+| `PLAIN006` | Dấu gạch ngang có khoảng trắng (`—`, `–`) dùng làm ý chêm; khoảng số như `10 – 20` được bỏ qua | `WARN` |
+| `PLAIN007` | Một câu có hơn hai cặp ngoặc đơn | `WARN` |
+
+Cả bảy quy tắc thành `error` khi khai báo người đọc là lãnh đạo (`--context doc-for-executives`). `--strict` vốn đã thoát với mã khác 0 khi có bất kỳ cảnh báo nào. Danh sách cụm từ cho `PLAIN002`–`PLAIN004` là một bảng trong [`shared/references/plain-vietnamese.md`](shared/references/plain-vietnamese.md), kèm các cặp trước/sau mà bộ test chạy thật; thêm một dòng vào bảng để mở rộng. Tắt một quy tắc bằng `<!-- vlc-disable: PLAIN001 -->` (cả tệp) hoặc `<!-- vlc-disable-line: PLAIN004 -->` (một dòng).
+
+```bash
+python3 shared/scripts/validate_copy.py bao-cao.md
+python3 shared/scripts/validate_copy.py bao-cao.md --context doc-for-executives
+python3 shared/scripts/validate_copy.py bao-cao.md --strict --max-sentence-words 25
+```
+
 ### Ngữ cảnh viết (`--context`)
 
 `--register` mô hình hóa giọng **tổ chức → khách hàng**. `--context <preset>` mô hình hóa **một người viết cho một người cụ thể**: nhắn tin với bạn bè, email gửi sếp, thư xin việc, tài liệu cho lãnh đạo hoặc cho kỹ sư. Mỗi preset là một bộ năm trục (`relation`, `closeness`, `channel`, `purpose`, `reader`) khai báo trong [`shared/references/context-matrix.md`](shared/references/context-matrix.md). Preset bật các quy tắc `CTX001`–`CTX005` và **tắt** các quy tắc không hợp tình huống; lỗi thật (`NFC001`, `ENC001`, trộn `quý khách`/`bạn` theo `PRO001`) luôn được giữ. Danh sách từ và preset là quy ước, không phải luật (nhóm bằng chứng `proposed`).
