@@ -158,10 +158,26 @@ class ValidateCopyCoreEngineTests(unittest.TestCase):
         addressing_reader = (
             "Con hãy nhập mật khẩu để tiếp tục.",
             "Cảm ơn con đã gửi bài tập.",
+            # Neighbours that are verbs or school nouns must not hide the pronoun.
+            "Con cái gì cũng muốn thử.",
+            "Con lắc đầu nếu chưa hiểu.",
+            "Khóa con ở nhà khi vắng mặt.",
+            "Cô nhóm con lại trước cổng.",
+            "Khối con năm nay là khối 3.",
+            "Ra lệnh con đi ngủ sớm.",
+            "Hàm con bị sưng, cần đưa đi khám.",
+            # Listed compounds in an address frame.
+            "Con dấu bài vào cặp.",
+            "Con trỏ giúp mẹ bức tranh bên trái.",
+            "Lớp con học gì tuần này?",
+            "Tập con nộp chưa?",
         )
         for text in addressing_reader:
-            with self.subTest(text=text):
-                self.assertIn("PRO002", self._codes(text, register="eng-impersonal"))
+            for register in ("eng-impersonal", "edu-parent"):
+                with self.subTest(text=text, register=register):
+                    self.assertIn("PRO002", self._codes(text, register=register))
+        # Noun uses next to the narrowed compounds stay clean.
+        self.assertNotIn("PRO002", self._codes("Đóng con dấu vào công văn.", register="gov-admin"))
 
 
 class CheckFontAndI18nScriptsTests(unittest.TestCase):
