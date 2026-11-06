@@ -177,7 +177,17 @@ class ValidateCopyCoreEngineTests(unittest.TestCase):
                 with self.subTest(text=text, register=register):
                     self.assertIn("PRO002", self._codes(text, register=register))
         # Noun uses next to the narrowed compounds stay clean.
-        self.assertNotIn("PRO002", self._codes("Đóng con dấu vào công văn.", register="gov-admin"))
+        noun_frames = (
+            ("Đóng con dấu vào công văn.", "gov-admin"),
+            ("Công văn đóng con dấu đi kèm phụ lục.", "gov-admin"),
+            ("Di chuyển con trỏ cho đến cuối dòng.", "eng-impersonal"),
+            ("Tập con làm tăng sai số của ước lượng.", "edu-uni"),
+            ("Lớp con làm theo hợp đồng khung.", "eng-impersonal"),
+        )
+        for text, register in noun_frames:
+            with self.subTest(text=text, register=register):
+                self.assertNotIn("PRO002", self._codes(text, register=register))
+        self.assertIn("PRO002", self._codes("Con trỏ cho mẹ xem bức tranh.", register="edu-parent"))
 
 
 class CheckFontAndI18nScriptsTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (dfc52718b3f64258) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (1b9a50aaa5937592) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -92,8 +92,8 @@ PRONOUN_COMPOUND_EXEMPT_RE = re.compile(
     # Heads that are also verbs or school nouns (cái gì, lắc đầu, khóa, nhóm, lệnh, khối, hàm) are
     # left out on purpose; "con dấu bài", "con trỏ giúp", "lớp con học", "tập con nộp" are address.
     r"con\s+(?:số|người|đường|chip|bot|tem|mắt|vật|tàu|thuyền|sông|dao|dốc|ốc|vít|lăn|chuột|"
-    r"dấu(?!\s+(?:bài|đồ|đi)(?!\w))|trỏ(?!\s+(?:giúp|cho)(?!\w)))|"
-    r"(?:lớp|tập)\s+con(?!\s+(?:học|nộp|làm)(?!\w))|"
+    r"dấu(?!\s+bài(?!\w))|trỏ(?!\s+(?:giúp|cho\s+(?:mẹ|bố|ba|má|cô|thầy|bà|ông))(?!\w)))|"
+    r"lớp\s+con(?!\s+học(?!\w))|tập\s+con(?!\s+nộp(?!\w))|"
     r"(?:công\s+ty|tiến\s+trình|thư\s+mục|mục|bảng|chuỗi|nút|node|phần\s+tử|luồng|mạng|"
     r"tên\s+miền|miền|module|component|tác\s+vụ|task|trang|menu|cửa\s+sổ|nhánh|"
     r"đồ\s+thị|cây|quy\s+trình|danh\s+mục|tài\s+khoản|biểu\s+mẫu)\s+con|"
