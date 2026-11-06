@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (32bbb85512ed5c19) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (a1751943aec602f5) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -84,9 +84,15 @@ DEFAULT_REGISTERS: Dict[str, dict] = {
 FORMAL_PRONOUNS = ("quý khách", "quý vị", "quý phụ huynh")
 CASUAL_PRONOUNS = ("bạn",)
 
-# Non-pronoun compound words containing "bạn" or "quý" that must never trigger PRO001/PRO002.
+# Non-pronoun compound words containing "bạn", "quý" or "con" that must never trigger PRO001/PRO002.
+# "con" is a noun when it is a classifier ("con số", "con trỏ") or a "child/sub-" suffix
+# ("thư mục con", "tiến trình con"); it stays a pronoun when it addresses the reader ("Con hãy…").
 PRONOUN_COMPOUND_EXEMPT_RE = re.compile(
     r"(?<!\w)(?:"
+    r"con\s+(?:số|trỏ|người|đường|dấu|chip|bot|lắc|tem|mắt|vật|tàu|thuyền|sông|dao|dốc|ốc|vít|lăn|chuột|cái)|"
+    r"(?:công\s+ty|tiến\s+trình|thư\s+mục|mục|bảng|chuỗi|lớp|nút|node|phần\s+tử|luồng|tập|mạng|"
+    r"tên\s+miền|miền|module|component|tác\s+vụ|task|trang|menu|hàm|cửa\s+sổ|khối|nhánh|"
+    r"đồ\s+thị|cây|quy\s+trình|nhóm|danh\s+mục|tài\s+khoản|khóa|khoá|lệnh|biểu\s+mẫu)\s+con|"
     r"bạn\s+(?:bè|đọc|hàng|đời|học|đồng\s+hành|hữu|nhỏ|trai|gái|diễn|tình|thân|đường|cùng\s+phòng|cùng\s+lớp|tri\s+kỷ)|"
     r"(?:kết|tình|nhóm|hội|cùng|người|những\s+người|một\s+người|các\s+người)\s+bạn|"
     r"quý\s+(?:giá|hiếm|báu|trọng|mến|nhân|tộc|danh|tính|I|II|III|IV|1|2|3|4|đầu|cuối|này|trước|sau|tới|vừa\s+qua|cơ\s+quan|công\s+ty|doanh\s+nghiệp|đối\s+tác|đơn\s+vị)"
