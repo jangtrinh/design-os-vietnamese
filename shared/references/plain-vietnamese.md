@@ -2,7 +2,7 @@
 
 # Plain Vietnamese — Viết ngắn, viết thẳng (`design-os-vietnamese`)
 
-Shared across every skill in `design-os-vietnamese`. A text can pass every mechanical check (number format, calques, banned phrases, register, superlatives) and still read as long-winded and machine-written. This page describes the rule family `PLAIN001`–`PLAIN007`, which checks the habits behind that impression. The rules live in `plain_tone.py`; the phrase list is the machine-readable table below, so a team can extend it without touching Python.
+Shared across every skill in `design-os-vietnamese`. A text can pass every mechanical check (number format, calques, banned phrases, register, superlatives) and still read as long-winded and machine-written. This page describes the rule family `PLAIN001`–`PLAIN007`, which checks the habits behind that impression, and ends with a short reading check for what no rule can see (section 6). The rules live in `plain_tone.py`; the phrase list is the machine-readable table below, so a team can extend it without touching Python.
 
 > **Evidence class: `proposed`.** These are writing conventions, not statute. The thresholds are defaults you can change (`--max-sentence-words`), and every rule can be silenced with `<!-- vlc-disable: PLAINxxx -->`.
 
@@ -84,3 +84,18 @@ Examples use a generic delivery app and a dashboard. This table is executed by t
 - A quoted source, a legal clause or a contract term must keep its wording. Use `<!-- vlc-disable-line: PLAIN001 -->` on that line.
 - A document that explains the audit labels themselves (such as this page) uses `<!-- vlc-disable: PLAIN002 -->` at the top.
 - The casual chat presets (`--context chat-close-friend`, `--context chat-colleague`) switch all seven rules off. Every other context keeps them.
+
+## 6. Reading check: what a clean report cannot tell you
+
+`0 errors · 0 warnings` means the words follow the rules. It does not mean a reader understands them. Headings, captions and spoken lines are skipped or barely touched by the rules above, and they are where readers get lost. Before you publish one, read it once against the four questions below.
+
+> **Evidence class: `proposed`.** Taken from a human editor's corrections on a published Vietnamese data article (2026-11): clipped headings, captions that described the picture, and a voice-over that re-read the article all passed every validator with zero findings.
+
+| Check | Question to ask | Trước | Sau |
+|---|---|---|---|
+| Heading is a claim | Does the heading say who did what and what changed, in one full clause? A slogan built from parallel verbs or nouns makes the reader guess the link. | Đơn tăng, tài xế giảm, khách chờ | Số đơn tăng 20% nhưng tài xế ít đi, nên khách chờ lâu hơn |
+| Caption informs | Does the caption add a fact the picture alone cannot give, and point to where the text explains it? Describing what is visible adds nothing. | Một tài xế đứng chờ bên xe máy. | Giờ cao điểm, mỗi tài xế chờ món trung bình 12 phút. Phần 2 giải thích vì sao. |
+| Terms explained at first use | Would a reader outside the team know each term? Say what it means in plain words the first time, then keep the term. | Tỷ lệ SLA breach tăng. | Tỷ lệ đơn giao trễ so với cam kết (SLA) tăng. |
+| Spoken text is said, not read | Read the voice-over aloud. Does each sentence sound like a person explaining, with linking words, and no more than two numbers in a one-minute script, rounded the way people say them? | Số đơn tăng 18,7%, tài xế giảm 6,2%, thời gian chờ tăng 3,4 phút. | Đơn thì tăng gần một phần năm, mà tài xế lại ít đi, nên khách phải chờ lâu hơn. |
+
+**How to run it.** Read the text aloud, or give it to a second reader who has not seen the draft and ask them to say in one sentence what it means. If their sentence differs from what you meant, rewrite the line, then run `validate_copy.py` again.

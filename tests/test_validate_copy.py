@@ -142,6 +142,53 @@ class ValidateCopyCoreEngineTests(unittest.TestCase):
         collision = "Kính chào Quý khách, hệ thống đã cập nhật mật khẩu của bạn."
         self.assertIn("PRO001", self._codes(collision))
 
+    def test_pro002_exempts_con_used_as_classifier_or_child_suffix(self) -> None:
+        # "con" is the child pronoun only when it addresses the reader; as a classifier
+        # ("con số", "con trỏ") or a "child/sub-" suffix ("thư mục con") it is a plain noun.
+        noun_uses = (
+            "Bài có nguồn cho từng con số. Con trỏ trỏ vào nút con đầu tiên.",
+            "Tiến trình con ghi log vào thư mục con; công ty con dùng tập con của dữ liệu.",
+            "Lớp con kế thừa hàm khởi tạo, còn chuỗi con được cắt theo mạng con.",
+            "Những con số này cho thấy con người vẫn quyết định.",
+        )
+        for text in noun_uses:
+            for register in ("eng-impersonal", "edu-uni", "gov-admin"):
+                with self.subTest(text=text, register=register):
+                    self.assertNotIn("PRO002", self._codes(text, register=register))
+        addressing_reader = (
+            "Con hãy nhập mật khẩu để tiếp tục.",
+            "Cảm ơn con đã gửi bài tập.",
+            # Neighbours that are verbs or school nouns must not hide the pronoun.
+            "Con cái gì cũng muốn thử.",
+            "Con lắc đầu nếu chưa hiểu.",
+            "Khóa con ở nhà khi vắng mặt.",
+            "Cô nhóm con lại trước cổng.",
+            "Khối con năm nay là khối 3.",
+            "Ra lệnh con đi ngủ sớm.",
+            "Hàm con bị sưng, cần đưa đi khám.",
+            # Listed compounds in an address frame.
+            "Con dấu bài vào cặp.",
+            "Con trỏ giúp mẹ bức tranh bên trái.",
+            "Lớp con học gì tuần này?",
+            "Tập con nộp chưa?",
+        )
+        for text in addressing_reader:
+            for register in ("eng-impersonal", "edu-parent"):
+                with self.subTest(text=text, register=register):
+                    self.assertIn("PRO002", self._codes(text, register=register))
+        # Noun uses next to the narrowed compounds stay clean.
+        noun_frames = (
+            ("Đóng con dấu vào công văn.", "gov-admin"),
+            ("Công văn đóng con dấu đi kèm phụ lục.", "gov-admin"),
+            ("Di chuyển con trỏ cho đến cuối dòng.", "eng-impersonal"),
+            ("Tập con làm tăng sai số của ước lượng.", "edu-uni"),
+            ("Lớp con làm theo hợp đồng khung.", "eng-impersonal"),
+        )
+        for text, register in noun_frames:
+            with self.subTest(text=text, register=register):
+                self.assertNotIn("PRO002", self._codes(text, register=register))
+        self.assertIn("PRO002", self._codes("Con trỏ cho mẹ xem bức tranh.", register="edu-parent"))
+
 
 class CheckFontAndI18nScriptsTests(unittest.TestCase):
     """Tests for check_font_coverage.py and check_i18n_parity.py."""

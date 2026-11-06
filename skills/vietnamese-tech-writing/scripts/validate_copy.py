@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# synced from shared/scripts/validate_copy.py (32bbb85512ed5c19) — edit shared/ source, not this copy
+# synced from shared/scripts/validate_copy.py (1b9a50aaa5937592) — edit shared/ source, not this copy
 """DESIGN:OS Vietnamese Copy, Typography, & Compliance Validator (vi-VN).
 
 Pure Python 3.9+ standard library. Zero external pip dependencies.
@@ -84,9 +84,19 @@ DEFAULT_REGISTERS: Dict[str, dict] = {
 FORMAL_PRONOUNS = ("quý khách", "quý vị", "quý phụ huynh")
 CASUAL_PRONOUNS = ("bạn",)
 
-# Non-pronoun compound words containing "bạn" or "quý" that must never trigger PRO001/PRO002.
+# Non-pronoun compound words containing "bạn", "quý" or "con" that must never trigger PRO001/PRO002.
+# "con" is a noun when it is a classifier ("con số", "con trỏ") or a "child/sub-" suffix
+# ("thư mục con", "tiến trình con"); it stays a pronoun when it addresses the reader ("Con hãy…").
 PRONOUN_COMPOUND_EXEMPT_RE = re.compile(
     r"(?<!\w)(?:"
+    # Heads that are also verbs or school nouns (cái gì, lắc đầu, khóa, nhóm, lệnh, khối, hàm) are
+    # left out on purpose; "con dấu bài", "con trỏ giúp", "lớp con học", "tập con nộp" are address.
+    r"con\s+(?:số|người|đường|chip|bot|tem|mắt|vật|tàu|thuyền|sông|dao|dốc|ốc|vít|lăn|chuột|"
+    r"dấu(?!\s+bài(?!\w))|trỏ(?!\s+(?:giúp|cho\s+(?:mẹ|bố|ba|má|cô|thầy|bà|ông))(?!\w)))|"
+    r"lớp\s+con(?!\s+học(?!\w))|tập\s+con(?!\s+nộp(?!\w))|"
+    r"(?:công\s+ty|tiến\s+trình|thư\s+mục|mục|bảng|chuỗi|nút|node|phần\s+tử|luồng|mạng|"
+    r"tên\s+miền|miền|module|component|tác\s+vụ|task|trang|menu|cửa\s+sổ|nhánh|"
+    r"đồ\s+thị|cây|quy\s+trình|danh\s+mục|tài\s+khoản|biểu\s+mẫu)\s+con|"
     r"bạn\s+(?:bè|đọc|hàng|đời|học|đồng\s+hành|hữu|nhỏ|trai|gái|diễn|tình|thân|đường|cùng\s+phòng|cùng\s+lớp|tri\s+kỷ)|"
     r"(?:kết|tình|nhóm|hội|cùng|người|những\s+người|một\s+người|các\s+người)\s+bạn|"
     r"quý\s+(?:giá|hiếm|báu|trọng|mến|nhân|tộc|danh|tính|I|II|III|IV|1|2|3|4|đầu|cuối|này|trước|sau|tới|vừa\s+qua|cơ\s+quan|công\s+ty|doanh\s+nghiệp|đối\s+tác|đơn\s+vị)"
