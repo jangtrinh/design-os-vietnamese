@@ -166,6 +166,10 @@ Kết hợp: `--context` dùng chung với `--register`, `--domain`, `--doctype`
 
 ---
 
+## Tác giả
+
+Tác giả: [Jang Trịnh](https://www.jang.work/?utm_source=github&utm_medium=readme&utm_campaign=design-os-vietnamese). Dự án, case study và bài viết khác tại [jang.work](https://www.jang.work/?utm_source=github&utm_medium=readme&utm_campaign=design-os-vietnamese).
+
 ## Giấy phép (License)
 
 Phát hành theo giấy phép [PolyForm Shield License 1.0.0](LICENSE). Bản quyền © 2026 DESIGN:OS (Jang Trinh).
