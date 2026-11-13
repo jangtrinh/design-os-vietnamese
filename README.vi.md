@@ -113,6 +113,10 @@ python3 shared/scripts/validate_copy.py bao-cao.md --context doc-for-executives
 python3 shared/scripts/validate_copy.py bao-cao.md --strict --max-sentence-words 25
 ```
 
+### Bài viết dài và lời đọc voice-over
+
+Validator chỉ kiểm hình thức. Nó không biết một bài viết có nói được ý chính hay không. Nó cũng không biết một câu đọc lên có giống người đang nói hay không. Trang [`shared/references/long-form-and-voice-over.md`](shared/references/long-form-and-voice-over.md) lo phần đó cho bài viết, bài giải thích, data story và video có lời đọc. Trang này được đồng bộ sang mọi skill. Tiêu đề nêu luận điểm chứ không nêu ví dụ. Tiêu đề mục và chú thích là câu đủ. Các câu nối với nhau bằng từ nối có nghĩa thay vì dấu hai chấm. Thuật ngữ được giải thích ở lần đầu xuất hiện, và điều kiện của một con số nằm ngay cạnh con số đó. Lời voice-over giảng giải bằng câu đủ, viết sao cho giọng đọc máy đọc trơn, rồi được kiểm lại bằng speech-to-text. Mức bằng chứng `proposed`; trang này không thêm quy tắc nào vào validator.
+
 ### Ngữ cảnh viết (`--context`)
 
 `--register` mô hình hóa giọng **tổ chức → khách hàng**. `--context <preset>` mô hình hóa **một người viết cho một người cụ thể**: nhắn tin với bạn bè, email gửi sếp, thư xin việc, tài liệu cho lãnh đạo hoặc cho kỹ sư. Mỗi preset là một bộ năm trục (`relation`, `closeness`, `channel`, `purpose`, `reader`) khai báo trong [`shared/references/context-matrix.md`](shared/references/context-matrix.md). Preset bật các quy tắc `CTX001`–`CTX005` và **tắt** các quy tắc không hợp tình huống; lỗi thật (`NFC001`, `ENC001`, trộn `quý khách`/`bạn` theo `PRO001`) luôn được giữ. Danh sách từ và preset là quy ước, không phải luật (nhóm bằng chứng `proposed`).

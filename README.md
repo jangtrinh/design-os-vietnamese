@@ -190,6 +190,10 @@ python3 shared/scripts/validate_copy.py report.md --context doc-for-executives
 python3 shared/scripts/validate_copy.py report.md --strict --max-sentence-words 25
 ```
 
+### Articles and voice-over scripts
+
+The validator checks form. It cannot tell whether an article makes its point or whether a spoken line sounds like a person talking. [`shared/references/long-form-and-voice-over.md`](shared/references/long-form-and-voice-over.md), synced to every skill, covers that part for articles, explainers, data stories and narrated videos: the title carries the thesis rather than the example, headings and captions are full sentences, sentences link with real connectives instead of colons, terms are explained at first use, caveats sit next to their numbers, and voice-over lines explain in full sentences that a text-to-speech voice reads cleanly, checked afterwards with speech-to-text. Evidence class `proposed`; it adds no validator rule.
+
 ### Writing context (`--context`)
 
 `--register` models an **organisation → customer** voice. `--context <preset>` models **one person writing to a specific person**: a chat with friends, an email to the boss, a job application, a document for executives or for engineers. A preset is a bundle of five facets (`relation`, `closeness`, `channel`, `purpose`, `reader`) defined in [`shared/references/context-matrix.md`](shared/references/context-matrix.md). It turns on rules `CTX001`–`CTX005` and turns **off** rules that do not suit the situation; real defects (`NFC001`, `ENC001`, mixed `quý khách`/`bạn` via `PRO001`) always stay on. Word lists and presets are conventions, not statute (evidence class `proposed`).

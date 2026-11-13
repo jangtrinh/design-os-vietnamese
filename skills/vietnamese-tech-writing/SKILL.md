@@ -127,6 +127,12 @@ python scripts/validate_copy.py appstore-subtitle.txt --doctype app-store-subtit
 python scripts/validate_copy.py survey.md --doctype survey
 ```
 
+## 8. Articles, Explainers & Voice-Over Scripts
+
+Read **[references/long-form-and-voice-over.md](references/long-form-and-voice-over.md)** before writing a technical article, an explainer, a data story or the script a voice reads over a video. The validator checks form; that page covers what it cannot see: the title carries the thesis rather than the example, headings and captions are full sentences, sentences link with real connectives instead of colons, terms are explained at first use, and spoken lines explain in full sentences, written so a text-to-speech voice reads them cleanly.
+
+---
+
 ### Reference Documentation Library
 - **[references/code-switching.md](references/code-switching.md):** 100+ term engineering taxonomy across Git, Cloud, AI, and Product.
 - **[references/doc-registers.md](references/doc-registers.md):** Impersonal RFCs/ADRs, bare imperative runbooks, and blameless postmortems.
@@ -135,3 +141,4 @@ python scripts/validate_copy.py survey.md --doctype survey
 - **[references/glossary.md](references/glossary.md):** 55+ machine-readable engineering calques.
 - **[references/banned-phrases.md](references/banned-phrases.md):** Blocked engineering calques and superlatives.
 - **[references/qa-checklist.md](references/qa-checklist.md):** 7-milestone technical review rubric.
+- **[references/long-form-and-voice-over.md](references/long-form-and-voice-over.md):** Clarity, sentence rhythm and voice-over rules for articles, explainers and narrated videos.
