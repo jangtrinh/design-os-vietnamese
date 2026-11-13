@@ -20,6 +20,7 @@ SHARED_SYNC_REF_NAMES = (
     "context-matrix.md",
     "register-matrix.md",
     "locale-formatting.md",
+    "long-form-and-voice-over.md",
     "plain-vietnamese.md",
     "typography-and-layout.md",
     "unicode-and-tone.md",

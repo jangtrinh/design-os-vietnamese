@@ -99,3 +99,4 @@ To draft and publish compliant Vietnamese press and PR instruments, follow this 
 - [references/luat-bao-chi-2016-va-nd147-2024.md](references/luat-bao-chi-2016-va-nd147-2024.md) — Press Law 2016, Decree 147/2024/NĐ-CP, and Article 42 press correction procedures.
 - [references/suy-doan-vo-toi-va-bao-ve-tre-em.md](references/suy-doan-vo-toi-va-bao-ve-tre-em.md) — Constitutional presumption of innocence and child identity protection standards.
 - [references/press-release-and-crisis-pr.md](references/press-release-and-crisis-pr.md) — Press release architecture, journalism calques, and constructive crisis PR guidelines.
+- [references/long-form-and-voice-over.md](references/long-form-and-voice-over.md) — Clarity, sentence rhythm and voice-over rules for feature articles, explainers, data stories and narrated videos.
