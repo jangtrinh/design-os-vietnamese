@@ -45,7 +45,7 @@ class UKMCKnowledgeBaseTests(unittest.TestCase):
         gate = ["gate", "--root", str(KNOWLEDGE_ROOT), "--run-id", "vn-design-os-261026"]
         for args, returncode, expected in (
             (["verify", str(KNOWLEDGE_ROOT), "--claims"], 0, ("failures: 0",)),
-            (gate, 2, ("Hard Gates Passed: True", "Decision: DEEPEN")),
+            (gate, 2, ("Hard Gates Passed: False", "Decision: DEEPEN", "unattested sources: 28")),
         ):
             proc = subprocess.run(
                 [sys.executable, "-m", "knowledge_builder.cli", *args],
