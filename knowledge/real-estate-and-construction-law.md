@@ -44,7 +44,7 @@ Primary text (Luật KDBĐS 2023 Điều 23 khoản 5; the same wording is froze
 <!-- ease:source uri="_evidence/vn-design-os-261026/sources/15-mirror-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="f164f67b18cf928c32017f1d4890892a6dc216f944395326804fc014fd9e336e" quote="Chủ đầu tư dự án bất động sản chỉ được thu tiền đặt cọc không quá 5% giá bán, cho thuê mua nhà ở, công trình xây dựng, phần diện tích sàn xây dựng trong công trình xây dựng từ bên đặt cọc để mua, thuê mua khi nhà ở, công trình xây dựng đã có đủ các điều kiện đưa vào kinh doanh theo quy định của Luật này." -->
 
 Register status: vbpl.vn lists Luật 29/2023/QH15 as partially in force on 2026-10-28 and does not say which provisions lost force. Check Điều 23 and Điều 25 against the consolidated text before citing them in a contract.
-<!-- ease:source uri="_evidence/vn-design-os-261026/sources/26-vbpl-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="27ce1d4688eba7f9fc9d6f1130b06c9e679a7775a68a37f32444779aca338a0f" quote="legislationIdentifier=29/2023/QH15; legislationDate=2023-11-28; legislationLegalForce=PartiallyInForce" -->
+<!-- ease:source uri="_evidence/vn-design-os-261026/sources/26-vbpl-luat-29-2023-qh15-kinh-doanh-bat-dong-san.txt" sha256="27ce1d4688eba7f9fc9d6f1130b06c9e679a7775a68a37f32444779aca338a0f" quote="Legal-force metadata (schema.org JSON-LD on the vbpl.vn page, read 2026-10-28): legislationIdentifier=29/2023/QH15; legislationDate=2023-11-28; legislationLegalForce=PartiallyInForce" -->
 
 ### 2. Statutory Milestone Payment Caps (`REA002`)
 
